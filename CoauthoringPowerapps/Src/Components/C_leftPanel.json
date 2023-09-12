@@ -72,7 +72,7 @@
                 "Name": "Rectangle1",
                 "Parent": "Group 5772_1",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 836,
+                "PublishOrderIndex": 835,
                 "Rules": [
                   {
                     "Category": "Design",
@@ -166,7 +166,7 @@
                   },
                   {
                     "Category": "Behavior",
-                    "InvariantScript": "Set(SideLabelvar,1);\r\nNavigate(C_leftPanel.NavigateTo,ScreenTransition.Fade)",
+                    "InvariantScript": "Set(SideLabelvar,1);\nNavigate(C_leftPanel.NavigateTo,ScreenTransition.Fade)",
                     "Property": "OnSelect",
                     "RuleProviderType": "Unknown"
                   }
@@ -252,7 +252,7 @@
                     "Name": "Icon5",
                     "Parent": "Group 5771_7",
                     "PersistMetaDataIDKey": false,
-                    "PublishOrderIndex": 838,
+                    "PublishOrderIndex": 837,
                     "Rules": [
                       {
                         "Category": "Design",
@@ -485,7 +485,7 @@
                     "Name": "Home_2",
                     "Parent": "Group 5771_7",
                     "PersistMetaDataIDKey": false,
-                    "PublishOrderIndex": 839,
+                    "PublishOrderIndex": 838,
                     "Rules": [
                       {
                         "Category": "Data",
@@ -861,7 +861,7 @@
                 "Name": "Group 5771_7",
                 "Parent": "Group 5772_1",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 837,
+                "PublishOrderIndex": 836,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -1148,7 +1148,7 @@
             "Name": "Group 5772_1",
             "Parent": "Group_3",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 835,
+            "PublishOrderIndex": 834,
             "Rules": [
               {
                 "Category": "Data",
@@ -1212,7 +1212,7 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "//If(Not(SideLabelvar=1),RGBA(0, 0, 0, 0),RGBA(201,47,29,1))\r\nIf(!IsBlank(SideLabelvar),If(SideLabelvar=1,RGBA(201,47,29,1),RGBA(0, 0, 0, 0)),RGBA(201,47,29,1))",
+                "InvariantScript": "//If(Not(SideLabelvar=1),RGBA(0, 0, 0, 0),RGBA(201,47,29,1))\nIf(!IsBlank(SideLabelvar),If(SideLabelvar=1,RGBA(201,47,29,1),RGBA(0, 0, 0, 0)),RGBA(201,47,29,1))",
                 "Property": "Fill",
                 "RuleProviderType": "Unknown"
               },
@@ -1442,7 +1442,7 @@
                 "Name": "Rectangle2",
                 "Parent": "Group 8510_1",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 841,
+                "PublishOrderIndex": 840,
                 "Rules": [
                   {
                     "Category": "Design",
@@ -1536,7 +1536,7 @@
                   },
                   {
                     "Category": "Behavior",
-                    "InvariantScript": "Set(SideLabelvar,2);\r\nNavigate(C_leftPanel.NavigateTo,ScreenTransition.Fade)\r\n",
+                    "InvariantScript": "Set(SideLabelvar,2);\nNavigate(C_leftPanel.NavigateTo,ScreenTransition.Fade)\n",
                     "Property": "OnSelect",
                     "RuleProviderType": "Unknown"
                   }
@@ -1636,7 +1636,7 @@
                     "Name": "Icon7",
                     "Parent": "Group 5771_4",
                     "PersistMetaDataIDKey": false,
-                    "PublishOrderIndex": 843,
+                    "PublishOrderIndex": 842,
                     "Rules": [
                       {
                         "Category": "Design",
@@ -1876,7 +1876,7 @@
                     "Name": "Register_1",
                     "Parent": "Group 5771_4",
                     "PersistMetaDataIDKey": false,
-                    "PublishOrderIndex": 844,
+                    "PublishOrderIndex": 843,
                     "Rules": [
                       {
                         "Category": "Data",
@@ -2252,7 +2252,7 @@
                 "Name": "Group 5771_4",
                 "Parent": "Group 8510_1",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 842,
+                "PublishOrderIndex": 841,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -2539,7 +2539,7 @@
             "Name": "Group 8510_1",
             "Parent": "Group_3",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 840,
+            "PublishOrderIndex": 839,
             "Rules": [
               {
                 "Category": "Data",
@@ -2833,7 +2833,7 @@
                 "Name": "Rectangle3",
                 "Parent": "Group 8509_1",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 846,
+                "PublishOrderIndex": 845,
                 "Rules": [
                   {
                     "Category": "Design",
@@ -2927,7 +2927,7 @@
                   },
                   {
                     "Category": "Behavior",
-                    "InvariantScript": "Set(SideLabelvar,3);\r\nNavigate(C_leftPanel.NavigateTo,ScreenTransition.Fade)",
+                    "InvariantScript": "Set(SideLabelvar,3);\nNavigate(C_leftPanel.NavigateTo,ScreenTransition.Fade)",
                     "Property": "OnSelect",
                     "RuleProviderType": "Unknown"
                   }
@@ -3030,7 +3030,7 @@
                         "Name": "Icon8",
                         "Parent": "g2140_1",
                         "PersistMetaDataIDKey": false,
-                        "PublishOrderIndex": 849,
+                        "PublishOrderIndex": 848,
                         "Rules": [
                           {
                             "Category": "Design",
@@ -3287,7 +3287,7 @@
                     "Name": "g2140_1",
                     "Parent": "Group 5771_6",
                     "PersistMetaDataIDKey": false,
-                    "PublishOrderIndex": 848,
+                    "PublishOrderIndex": 847,
                     "Rules": [
                       {
                         "Category": "Data",
@@ -3599,7 +3599,7 @@
                     "Name": "Add New_1",
                     "Parent": "Group 5771_6",
                     "PersistMetaDataIDKey": false,
-                    "PublishOrderIndex": 850,
+                    "PublishOrderIndex": 849,
                     "Rules": [
                       {
                         "Category": "Data",
@@ -3975,7 +3975,7 @@
                 "Name": "Group 5771_6",
                 "Parent": "Group 8509_1",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 847,
+                "PublishOrderIndex": 846,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -4262,7 +4262,7 @@
             "Name": "Group 8509_1",
             "Parent": "Group_3",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 845,
+            "PublishOrderIndex": 844,
             "Rules": [
               {
                 "Category": "Data",
@@ -4564,7 +4564,7 @@
                 "Name": "Rectangle4",
                 "Parent": "Group 9075_1",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 852,
+                "PublishOrderIndex": 851,
                 "Rules": [
                   {
                     "Category": "Design",
@@ -4664,7 +4664,7 @@
                   },
                   {
                     "Category": "Behavior",
-                    "InvariantScript": "Set(SideLabelvar,4);\r\nNavigate(C_leftPanel.NavigateTo,ScreenTransition.Fade)",
+                    "InvariantScript": "Set(SideLabelvar,4);\nNavigate(C_leftPanel.NavigateTo,ScreenTransition.Fade)",
                     "Property": "OnSelect",
                     "RuleProviderType": "Unknown"
                   }
@@ -4764,7 +4764,7 @@
                     "Name": "Icon6",
                     "Parent": "Group 5771_5",
                     "PersistMetaDataIDKey": false,
-                    "PublishOrderIndex": 854,
+                    "PublishOrderIndex": 853,
                     "Rules": [
                       {
                         "Category": "Design",
@@ -5004,7 +5004,7 @@
                     "Name": "Analysis_1",
                     "Parent": "Group 5771_5",
                     "PersistMetaDataIDKey": false,
-                    "PublishOrderIndex": 855,
+                    "PublishOrderIndex": 854,
                     "Rules": [
                       {
                         "Category": "Data",
@@ -5380,7 +5380,7 @@
                 "Name": "Group 5771_5",
                 "Parent": "Group 9075_1",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 853,
+                "PublishOrderIndex": 852,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -5674,7 +5674,7 @@
             "Name": "Group 9075_1",
             "Parent": "Group_3",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 851,
+            "PublishOrderIndex": 850,
             "Rules": [
               {
                 "Category": "Data",
@@ -5982,7 +5982,7 @@
         "Name": "Group_3",
         "Parent": "C_leftPanel",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 834,
+        "PublishOrderIndex": 833,
         "Rules": [
           {
             "Category": "Data",
@@ -6243,7 +6243,7 @@
       },
       "NavigateTo"
     ],
-    "LastModifiedTimestamp": "638300913144521952",
+    "LastModifiedTimestamp": "638301225628803533",
     "Name": "C_leftPanel",
     "Rules": [
       {
@@ -6324,7 +6324,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638300913144521952",
+  "LastModifiedTimestamp": "638301225628803533",
   "Name": "470e83d2489f46a58e9ba807156b5c3a",
   "OverridableProperties": {},
   "Version": "638282907983282334"
