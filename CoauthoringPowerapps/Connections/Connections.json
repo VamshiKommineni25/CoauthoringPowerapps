@@ -124,24 +124,7 @@
       "parameterHintsV2": {}
     },
     "datasets": {},
-    "dataSources": [
-      "CertificationApp-Security_1",
-      "ExternalCertificationList",
-      "Certifications",
-      "BU-List",
-      "QuestionList",
-      "CertificationOrder",
-      "AnswerList",
-      "CertificationOrderHistory",
-      "Location List_Certification App",
-      "Location List_Certification App_1",
-      "CertificationRequest",
-      "NotificationList_CertificationApp",
-      "Target List",
-      "QuestionList_Admin",
-      "BU-CertificationList",
-      "AnswersList_Admin"
-    ],
+    "dataSources": [],
     "dependencies": {},
     "dependents": [
       "a9152d37-4162-4cea-ab43-c550ac89b9db"
