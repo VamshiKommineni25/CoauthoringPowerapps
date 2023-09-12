@@ -1,0 +1,179 @@
+Screen1 As screen:
+    LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+
+    RevisePopUp As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =7
+
+        Rectangle12 As rectangle:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Fill: =RGBA(0, 13, 75, 1)
+            Height: =361
+            Visible: =varRevise
+            Width: =664
+            X: =315
+            Y: =231
+            ZIndex: =1
+
+        rect_BG01 As rectangle:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Fill: =RGBA(186, 202, 226, 0.8)
+            Height: =361
+            Visible: =varRevise
+            Width: =664
+            X: =315
+            Y: =231
+            ZIndex: =2
+
+        TextInput4 As text:
+            AccessibleLabel: ="TextInput4"
+            BorderColor: =RGBA(0, 18, 107, 1)
+            BorderThickness: =2
+            Clear: =true
+            Color: =RGBA(0, 0, 0, 1)
+            Default: =
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            FocusedBorderThickness: =4
+            Height: =203
+            HintText: ="Enter Comment"
+            HoverBorderColor: =RGBA(0, 18, 107, 1)
+            HoverColor: =RGBA(0, 0, 0, 1)
+            HoverFill: =RGBA(186, 202, 226, 1)
+            Mode: =TextMode.MultiLine
+            RadiusBottomLeft: =20
+            RadiusBottomRight: =20
+            RadiusTopLeft: =20
+            RadiusTopRight: =20
+            Size: =13
+            Visible: =varRevise
+            Width: =632
+            X: =331
+            Y: =318
+            ZIndex: =3
+
+        Label45 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(0, 0, 0, 1)
+            Height: =46
+            Size: =13
+            Text: =If(varMngrReject=true,"Reason for Rejection", "Reason for Certification Proofs Revise")
+            Visible: =varRevise
+            Width: =664
+            X: =315
+            Y: =258
+            ZIndex: =4
+
+        Button10 As button:
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(215, 223, 240, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =35
+            HoverColor: =RGBA(0, 0, 0, 1)
+            HoverFill: =RGBA(215, 223, 240, 1)
+            OnSelect: |
+                =If(
+                    IsBlank(TextInput4.Text),
+                    Notify(
+                        "Fill the details",
+                        NotificationType.Error,
+                        3000
+                    ),
+                    If(
+                        Button7_2.Text = "Reject",
+                        Set(
+                            varReason,
+                            TextInput4.Text
+                        );
+                        ProofRevisionMail.Run(
+                            varRequestorEmail,
+                            varTitle,
+                            varTech,
+                            varProvider,
+                            varCost,
+                            varRole,
+                            varTentativeDate,
+                            varReason,
+                            varRequestorName,
+                            varMngrReject 
+                        );
+                        Notify(
+                            "Your Rejection mail has sent to Requestor",
+                            NotificationType.Success,
+                            3000
+                        );
+                        Set(varRevise,false) && Set(varMngrReject,false),
+                
+                        Set(
+                            varReason,
+                            TextInput4.Text
+                        );
+                        ProofRevisionMail.Run(
+                            varRequestorEmail,
+                            varTitle,
+                            varTech,
+                            varProvider,
+                            varCost,
+                            varRole,
+                            varTentativeDate,
+                            varReason,
+                            varRequestorName,
+                            varMngrReject 
+                        );
+                        Notify(
+                            "Proof Revision mail has sent to Requestor",
+                            NotificationType.Success,
+                            3000
+                        );
+                         Set(varRevise,false) && Set(varMngrReject,false)
+                    )
+                );
+            PressedColor: =RGBA(0, 0, 0, 1)
+            PressedFill: =RGBA(215, 223, 240, 1)
+            RadiusBottomLeft: =12
+            RadiusBottomRight: =12
+            RadiusTopLeft: =12
+            RadiusTopRight: =12
+            Size: =10
+            Text: ="Submit"
+            Visible: =varRevise
+            Width: =94
+            X: =748
+            Y: =535
+            ZIndex: =5
+
+        Button10_2 As button:
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(215, 223, 240, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =35
+            HoverColor: =RGBA(0, 0, 0, 1)
+            HoverFill: =RGBA(215, 223, 240, 1)
+            OnSelect: =Set(varRevise,false)
+            PressedColor: =RGBA(0, 0, 0, 1)
+            PressedFill: =RGBA(215, 223, 240, 1)
+            RadiusBottomLeft: =12
+            RadiusBottomRight: =12
+            RadiusTopLeft: =12
+            RadiusTopRight: =12
+            Size: =10
+            Text: ="Cancel"
+            Visible: =varRevise
+            Width: =94
+            X: =643
+            Y: =535
+            ZIndex: =6
+
