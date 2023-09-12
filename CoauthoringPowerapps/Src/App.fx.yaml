@@ -17,6 +17,11 @@ App As appinfo:
                 varUserLevel
             )
         );
+        ClearCollect(
+            myReports,
+            Office365Users.DirectReports(Office365Users.MyProfile().Id)
+        );
+        /*
         Set(
             varUserLevel,
             If(
@@ -28,7 +33,7 @@ App As appinfo:
                         ),
                         50
                     )
-                ) = 1,
+                ) = 1 || CountRows(myReports)>0,
                 "ADMIN",
                 varUserLevel
             )
@@ -49,11 +54,9 @@ App As appinfo:
                 varUserLevel
             )
         );
+        */
         //Set(varUserLevel,"USER");
-        ClearCollect(
-            myReports,
-            Office365Users.DirectReports(Office365Users.MyProfile().Id)
-        );
+        
         Set(
             MyProfile,
             Office365Users.MyProfile()
