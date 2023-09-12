@@ -206,6 +206,7 @@ Register_Screen As screen:
             BorderColor: =RGBA(51, 51, 51, 1)
             BorderStyle: =BorderStyle.None
             Color: =RGBA(51, 51, 51, 1)
+            Default: ="Paid"
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
             DisabledColor: =RGBA(166, 166, 166, 1)
             FocusedBorderThickness: =4
@@ -1163,28 +1164,4 @@ Register_Screen As screen:
         X: =621
         Y: =617
         ZIndex: =13
-
-    Label19 As label:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =2
-        Color: =RGBA(51, 51, 51, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        FocusedBorderThickness: =4
-        Font: =Font.'Segoe UI'
-        FontWeight: =FontWeight.Lighter
-        Size: =13
-        Text: |+
-            =/*CountRows(
-                Filter(
-                    Certification,
-                    cmbRole.Selected.Value in Role.Value && cmbTechnology.Selected.Value in Technology.Value && ((Price > 0) && rad_FreePaid.Selected.Value = "Paid" || (Price = 0) && rad_FreePaid.Selected.Value = "Free") && 'Exam Level' = radSkill.Selected.Value
-                )
-            )*/
-            CountRows(Gallery1.AllItems)
-            
-        X: =644
-        Y: =197
-        ZIndex: =14
 
