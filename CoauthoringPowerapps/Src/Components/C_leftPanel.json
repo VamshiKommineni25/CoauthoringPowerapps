@@ -166,7 +166,7 @@
                   },
                   {
                     "Category": "Behavior",
-                    "InvariantScript": "Set(SideLabelvar,1);\r\nNavigate(C_leftPanel.NavigateTo,ScreenTransition.Fade)",
+                    "InvariantScript": "Set(SideLabelvar,1);\nNavigate(C_leftPanel.NavigateTo,ScreenTransition.Fade)",
                     "Property": "OnSelect",
                     "RuleProviderType": "Unknown"
                   }
@@ -1212,7 +1212,7 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "//If(Not(SideLabelvar=1),RGBA(0, 0, 0, 0),RGBA(201,47,29,1))\r\nIf(!IsBlank(SideLabelvar),If(SideLabelvar=1,RGBA(201,47,29,1),RGBA(0, 0, 0, 0)),RGBA(201,47,29,1))",
+                "InvariantScript": "//If(Not(SideLabelvar=1),RGBA(0, 0, 0, 0),RGBA(201,47,29,1))\nIf(!IsBlank(SideLabelvar),If(SideLabelvar=1,RGBA(201,47,29,1),RGBA(0, 0, 0, 0)),RGBA(201,47,29,1))",
                 "Property": "Fill",
                 "RuleProviderType": "Unknown"
               },
@@ -1536,7 +1536,7 @@
                   },
                   {
                     "Category": "Behavior",
-                    "InvariantScript": "Set(SideLabelvar,2);\r\nNavigate(C_leftPanel.NavigateTo,ScreenTransition.Fade)\r\n",
+                    "InvariantScript": "Set(SideLabelvar,2);\nNavigate(C_leftPanel.NavigateTo,ScreenTransition.Fade)\n",
                     "Property": "OnSelect",
                     "RuleProviderType": "Unknown"
                   }
@@ -2927,7 +2927,7 @@
                   },
                   {
                     "Category": "Behavior",
-                    "InvariantScript": "Set(SideLabelvar,3);\r\nNavigate(C_leftPanel.NavigateTo,ScreenTransition.Fade)",
+                    "InvariantScript": "Set(SideLabelvar,3);\nNavigate(C_leftPanel.NavigateTo,ScreenTransition.Fade)",
                     "Property": "OnSelect",
                     "RuleProviderType": "Unknown"
                   }
@@ -4664,7 +4664,7 @@
                   },
                   {
                     "Category": "Behavior",
-                    "InvariantScript": "Set(SideLabelvar,4);\r\nNavigate(C_leftPanel.NavigateTo,ScreenTransition.Fade)",
+                    "InvariantScript": "Set(SideLabelvar,4);\nNavigate(C_leftPanel.NavigateTo,ScreenTransition.Fade)",
                     "Property": "OnSelect",
                     "RuleProviderType": "Unknown"
                   }
@@ -6243,7 +6243,7 @@
       },
       "NavigateTo"
     ],
-    "LastModifiedTimestamp": "638300913144521952",
+    "LastModifiedTimestamp": "638301229442474014",
     "Name": "C_leftPanel",
     "Rules": [
       {
@@ -6324,7 +6324,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638300913144521952",
+  "LastModifiedTimestamp": "638301229442474014",
   "Name": "470e83d2489f46a58e9ba807156b5c3a",
   "OverridableProperties": {},
   "Version": "638282907983282334"
