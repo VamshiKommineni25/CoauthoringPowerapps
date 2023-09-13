@@ -105,10 +105,9 @@
             RadiusBottomRight: =5
             RadiusTopLeft: =5
             RadiusTopRight: =5
-            Size: =11
+            Size: =9
             Text: ="VIEW RECENT REQUESTS"
             Visible: =If(glry_RS_header.Selected.ID=1,true,false)
-            Width: =187
             X: =1055
             Y: =12
             ZIndex: =2

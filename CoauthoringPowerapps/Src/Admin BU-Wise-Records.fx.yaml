@@ -1,7 +1,9 @@
 "'Admin BU-Wise-Records' As screen":
     Fill: =RGBA(241, 246, 246, 1)
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
-    OnVisible: = ClearCollect(Cert_Req,FirstN(CertificationRequest,2000));
+    OnVisible: |-
+        =Set(SideLabelvar,0);
+        ClearCollect(Cert_Req,FirstN(CertificationRequest,2000));
 
     con_Filter_1 As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Light

@@ -1,8 +1,10 @@
 "'Settings Screen' As screen":
-    Fill: =RGBA(241, 246, 246, 1)
+    Fill: |
+        =RGBA(241, 246, 246, 1)
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
     OnVisible: |-
-        =ClearCollect(
+        =Set(SideLabelvar,0);
+        ClearCollect(
             colflows,
             {
                 Name: "Approval Flow",

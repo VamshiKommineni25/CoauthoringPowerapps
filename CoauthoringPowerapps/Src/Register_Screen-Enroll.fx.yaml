@@ -1,7 +1,9 @@
 "'Register_Screen-Enroll' As screen":
     Fill: =RGBA(241, 246, 246, 1)
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
-    OnVisible: =Set(varProfileView,false)
+    OnVisible: |-
+        =Set(varProfileView,false);
+        Set(SideLabelvar,0);
 
     con_Buttons As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Light

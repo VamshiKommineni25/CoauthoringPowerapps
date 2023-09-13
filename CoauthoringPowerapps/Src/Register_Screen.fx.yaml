@@ -492,6 +492,7 @@ Register_Screen As screen:
                         'Provider Name' = "Amazon"
                     )
                 )*/
+                Search(
                 Switch(
                     Cmb_Sorting.Selected.Value,
                     "Alphabets",
@@ -608,7 +609,7 @@ Register_Screen As screen:
                         "CertificationID",
                         SortOrder.Descending
                     )
-                )
+                ),c_Header_3.TextOut,"Title")
             LoadingSpinner: =LoadingSpinner.Data
             NavigationStep: =5
             ShowNavigation: =true
@@ -924,8 +925,12 @@ Register_Screen As screen:
             BorderColor: =RGBA(166, 166, 166, 1)
             DelayItemLoading: =true
             Height: =157
-            Items: |
-                =Filter(BUCertList,'BU:Code'.Id=drp_BU.Selected.ID)
+            Items: |-
+                =
+                    Filter(
+                        BUCertList,
+                        'BU:Code'.Id = drp_BU.Selected.ID
+                    )
             Layout: =Layout.Vertical
             LoadingSpinner: =LoadingSpinner.Data
             ShowScrollbar: =false

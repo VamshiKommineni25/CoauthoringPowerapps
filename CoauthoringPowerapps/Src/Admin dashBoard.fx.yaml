@@ -1,6 +1,7 @@
 "'Admin dashBoard' As screen":
     Fill: =RGBA(241, 246, 246, 1)
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+    OnVisible: =Set(SideLabelvar,4);
 
     "'Cntr_Certifications per Provider/BU' As groupContainer.verticalAutoLayoutContainer":
         DropShadow: =DropShadow.Light

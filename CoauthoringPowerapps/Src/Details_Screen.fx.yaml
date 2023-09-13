@@ -1,7 +1,9 @@
 Details_Screen As screen:
     Fill: =RGBA(241, 246, 246, 1)
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
-    OnVisible: =Set(varProfileView,false)
+    OnVisible: |-
+        =Set(varProfileView,false);
+        Set(SideLabelvar,0);
 
     c_Header_7 As c_Header:
         CartOnselect: ='EnrollCertificate Screen'

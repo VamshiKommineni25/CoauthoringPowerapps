@@ -2,7 +2,8 @@ Home_Screen As screen:
     Fill: =RGBA(241, 246, 246, 1)
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
     OnVisible: |
-        =If(concVar=Boolean(1),Concurrent(
+        =Set(SideLabelvar,1);
+        If(concVar=Boolean(1),Concurrent(
         ClearCollect(
             MyReportList,
             ForAll(
