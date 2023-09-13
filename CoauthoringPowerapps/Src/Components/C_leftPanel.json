@@ -6243,7 +6243,7 @@
       },
       "NavigateTo"
     ],
-    "LastModifiedTimestamp": "638301936679241002",
+    "LastModifiedTimestamp": "638301935302042112",
     "Name": "C_leftPanel",
     "Rules": [
       {
@@ -6324,7 +6324,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638301936679241002",
+  "LastModifiedTimestamp": "638301935302042112",
   "Name": "470e83d2489f46a58e9ba807156b5c3a",
   "OverridableProperties": {},
   "Version": "638282907983282334"
