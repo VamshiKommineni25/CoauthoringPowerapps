@@ -915,7 +915,7 @@
                             }
                         );
                         Certification_Attachments_External_Flow.Run(
-                            Last(Attachments_7.Attachments).Name,
+                            Last(attach_RS_ECR.Attachments).Name,
                             varBase64Only,
                             Last(
                                 Filter(
@@ -1258,6 +1258,28 @@
                 Items: =
                 ItemSpacing: =12
                 NoAttachmentsColor: =RGBA(166, 166, 166, 1)
+                OnAddFile: |
+                    =Set(
+                        varDemoFromAttachmentcontrol,
+                        JSON(
+                            Image4.Image,
+                            JSONFormat.IncludeBinaryData
+                        )
+                    );
+                    Set(
+                        varBase64Only,
+                        Mid(
+                            varDemoFromAttachmentcontrol,
+                            Find(
+                                ",",
+                                varDemoFromAttachmentcontrol
+                            ) + 1,
+                            Len(varDemoFromAttachmentcontrol) - Find(
+                                ",",
+                                varDemoFromAttachmentcontrol
+                            ) - 1
+                        )
+                    );
                 PaddingBottom: =5
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 PaddingRight: =5
