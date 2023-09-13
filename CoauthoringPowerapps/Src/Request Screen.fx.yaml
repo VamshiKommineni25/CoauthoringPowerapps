@@ -928,18 +928,18 @@
                             "You have submitted form Successfully",
                             NotificationType.Success
                         );
-                        Reset(TextInput2);
-                        Reset(TextInput5);
-                        Reset(TextInput6);
-                        Reset(TextInput7);
-                        Reset(TextInput8);
-                        Reset(TextInput9);
-                        Reset(TextInput9_1);
-                        Reset(TextInput10);
-                        Reset(Radio3);
-                        Reset(Attachments_7);
-                        Reset(Dropdown2);
-                        Reset(Dropdown3);
+                        Reset(txtinp_RS_ECRname);
+                        Reset(txtinp_RS_ECRCname);
+                        Reset(txtinp_RS_ECRPname);
+                        Reset(txtinp_RS_ECRExamcode);
+                        Reset(txtinp_RS_ECRtech);
+                        Reset(txtinp_RS_ECRCV);
+                        Reset(txtinp_RS_ECRrole);
+                        Reset(drpdwn_RS_ECRBU);
+                        Reset(radio_RS_ECRprovider);
+                        Reset(attach_RS_ECR);
+                        Reset(drpdwn_RS_ECRexamlevel);
+                        Reset(drpdwn_RS_ECRrs);
                     );
                 PressedBorderColor: =RGBA(185, 29, 11, 1)
                 PressedColor: =RGBA(255, 255, 255, 1)
