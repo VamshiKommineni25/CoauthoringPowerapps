@@ -915,7 +915,7 @@
                             }
                         );
                         Certification_Attachments_External_Flow.Run(
-                            Last(Attachments_7.Attachments).Name,
+                            Last(attach_RS_ECR.Attachments).Name,
                             varBase64Only,
                             Last(
                                 Filter(
@@ -928,18 +928,18 @@
                             "You have submitted form Successfully",
                             NotificationType.Success
                         );
-                        Reset(TextInput2);
-                        Reset(TextInput5);
-                        Reset(TextInput6);
-                        Reset(TextInput7);
-                        Reset(TextInput8);
-                        Reset(TextInput9);
-                        Reset(TextInput9_1);
-                        Reset(TextInput10);
-                        Reset(Radio3);
-                        Reset(Attachments_7);
-                        Reset(Dropdown2);
-                        Reset(Dropdown3);
+                        Reset(txtinp_RS_ECRCname);
+                        Reset(txtinp_RS_ECRExamcode);
+                        Reset(txtinp_RS_ECRPname);
+                        Reset(txtinp_RS_ECRprice);
+                        Reset(txtinp_RS_ECRname);
+                        Reset(txtinp_RS_ECRCV);
+                        Reset(txtinp_RS_ECRtech);
+                        Reset(txtinp_RS_ECRrole);
+                        Reset(radio_RS_ECRprovider);
+                        Reset(attach_RS_ECR);
+                        Reset(drpdwn_RS_ECRrs);
+                        Reset(drpdwn_RS_ECRexamlevel);
                     );
                 PressedBorderColor: =RGBA(185, 29, 11, 1)
                 PressedColor: =RGBA(255, 255, 255, 1)
@@ -1258,6 +1258,28 @@
                 Items: =
                 ItemSpacing: =12
                 NoAttachmentsColor: =RGBA(166, 166, 166, 1)
+                OnAddFile: |
+                    =Set(
+                        varDemoFromAttachmentcontrol,
+                        JSON(
+                            Image4.Image,
+                            JSONFormat.IncludeBinaryData
+                        )
+                    );
+                    Set(
+                        varBase64Only,
+                        Mid(
+                            varDemoFromAttachmentcontrol,
+                            Find(
+                                ",",
+                                varDemoFromAttachmentcontrol
+                            ) + 1,
+                            Len(varDemoFromAttachmentcontrol) - Find(
+                                ",",
+                                varDemoFromAttachmentcontrol
+                            ) - 1
+                        )
+                    );
                 PaddingBottom: =5
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 PaddingRight: =5
@@ -1269,6 +1291,20 @@
                 X: =442
                 Y: =drpdwn_RS_ECRBU.Y
                 ZIndex: =33
+
+            Image4 As image:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledFill: =RGBA(0, 0, 0, 0)
+                FocusedBorderThickness: =4
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverFill: =RGBA(0, 0, 0, 0)
+                Image: =Last(attach_RS_ECR.Attachments).Value
+                PressedBorderColor: =RGBA(0, 0, 0, 0)
+                PressedFill: =RGBA(0, 0, 0, 0)
+                ZIndex: =34
 
     Cont_NCR_popup As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Light
