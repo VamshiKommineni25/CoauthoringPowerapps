@@ -439,7 +439,7 @@
                 ChevronHoverBackground: =RGBA(212, 212, 212, 1)
                 ChevronHoverFill: =RGBA(33, 33, 33, 1)
                 Color: =RGBA(51, 51, 51, 1)
-                DefaultSelectedItems: =LookUp(Choices([@CertificationRequest].Requestor),Email=User().Email)
+                DefaultSelectedItems: =//LookUp(Choices([@CertificationRequest].Requestor),Email=User().Email)
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
@@ -479,7 +479,7 @@
                 HoverBorderColor: =RGBA(185, 29, 11, 1)
                 HoverColor: =RGBA(255, 255, 255, 1)
                 HoverFill: =RGBA(185, 29, 11, 1)
-                OnSelect: |-
+                OnSelect: |
                     =/*
                     Patch(CertificationRequest,Defaults(CertificationRequest),{
                         Description: txtinp_RS_NCRdesc.Text,
@@ -489,9 +489,9 @@
                         Provider:txtinp_RS_NCRprovider.Text
                     })
                     */
-                    /*
+                    
                     If(
-                        IsBlank(txtinp_RS_NCRdesc.Text) || IsBlank(txtinp_RS_NCRtitle.Text) || IsBlank(txtinp_RS_NCRURL.Text) || IsBlank(txtinp_RS_NCRcost.Text) || IsBlank(txtinp_RS_NCRprovider.Text) || IsBlank(drpdwn_RS_NCRBU.SelectedText) || IsBlank(txtinp_RS_NCRexamcode.Text),
+                        IsBlank(txtinp_RS_NCRdesc.Text) || IsBlank(txtinp_RS_NCRtitle.Text) || IsBlank(txtinp_RS_NCRURL.Text) || IsBlank(txtinp_RS_NCRcost.Text) || IsBlank(txtinp_RS_NCRprovider.Text) || IsBlank(drpdwn_RS_NCRBU.SelectedText) || IsBlank(txtinp_RS_NCRexamcode.Text) || IsEmpty(Cmb_RS_NCRrequestor.SelectedItems),
                         Notify(
                             "Please Fill the Required Fields",
                             NotificationType.Error
@@ -509,10 +509,9 @@
                         Reset(txtinp_RS_NCRcost),
                         Reset(txtinp_RS_NCRprovider),
                         Reset(drpdwn_RS_NCRBU),
-                        Reset(txtinp_RS_NCRexamcode)
+                        Reset(txtinp_RS_NCRexamcode),
+                        Reset(Cmb_RS_NCRrequestor)
                     )
-                    */
-                    SubmitForm(Form2)
                 PressedBorderColor: =RGBA(185, 29, 11, 1)
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(185, 29, 11, 1)
@@ -578,11 +577,11 @@
                 Size: =10
                 Text: ="Invalid URL"
                 Visible: |-
-                    =If(IsBlank(txtinp_RS_NCRURL.Text )||
-                        IsMatch(
+                    =If(
+                        IsBlank(txtinp_RS_NCRURL.Text) || IsMatch(
                             txtinp_RS_NCRURL.Text,
                             "(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]%@!\$&’\(\)\*\+,;=.]+$"
-                        ),
+                        ) || Len(txtinp_RS_NCRURL.Text) < 255,
                         false,
                         true
                     )
@@ -2099,8 +2098,7 @@
                 ChevronHoverBackground: =RGBA(212, 212, 212, 1)
                 ChevronHoverFill: =RGBA(33, 33, 33, 1)
                 Color: =RGBA(51, 51, 51, 1)
-                DefaultSelectedItems: |
-                    =Filter(Choices([@CertificationRequest].Requestor),Email=User().Email)
+                DefaultSelectedItems: =Cmb_RS_NCRrequestor.SelectedItems
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
@@ -2110,15 +2108,13 @@
                 HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
                 HoverColor: =RGBA(51, 51, 51, 1)
                 HoverFill: =RGBA(212, 212, 212, 1)
-                Items: |-
-                    =Office365Users.SearchUser({searchTerm:Office365Users.MyProfile().Mail})
+                Items: =Choices([@CertificationRequest].Requestor)
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(0, 120, 212, 1)
                 SearchFields: =["DisplayName"]
-                SearchItems: |-
-                    =Search(Office365Users.SearchUser({searchTerm:Office365Users.MyProfile().Mail}),DataCardValue26.SearchText,"DisplayName")
+                SearchItems: =Choices(CertificationRequest.Requestor,DataCardValue26.SearchText)
                 SelectionFill: =RGBA(0, 120, 212, 1)
                 SelectMultiple: =false
                 Size: =13
