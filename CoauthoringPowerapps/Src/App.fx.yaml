@@ -17,7 +17,7 @@ App As appinfo:
                 varUserLevel
             )
         );
-        /*ClearCollect(
+        ClearCollect(
             myReports,
             Office365Users.DirectReports(Office365Users.MyProfile().Id)
         );
@@ -157,10 +157,10 @@ App As appinfo:
                 ),
                 (Title = Office365Users.MyProfile().DisplayName && "been approved by your manager " & varMngrname in Notification) || ("has requested for" in Notification && Manager = User().FullName) || (Title = Office365Users.MyProfile().DisplayName && "been approved by ILD" in Notification) || (IsDeleted = false And Title = Office365Users.MyProfile().DisplayName)
             )
-        );*/
+        );
         
-    StartScreen: |-
-        =/*If (
+    StartScreen: |
+        =If (
             !IsBlank(Param("View")),
             Details_Screen,
            If(Param("ScreenName"),'FAQ Screen',
@@ -174,8 +174,7 @@ App As appinfo:
                  'Admin dashBoard',Home_Screen)
             )
             
-        )*/
-        Screen1
+        )
     Theme: =PowerAppsTheme
 
     Host As hostControl.DefaultHostControlVariant:
