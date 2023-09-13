@@ -159,21 +159,27 @@ App As appinfo:
             )
         );
         
-    StartScreen: |
+    StartScreen: |-
         =If (
             !IsBlank(Param("View")),
             Details_Screen,
-           If(Param("ScreenName"),'FAQ Screen',
             If(
-                CountRows(
-                    Filter(
-                        FirstN('CertificationApp-Security_1',100),
-                        Title = "Certification-Admin"
-                    )
-                ) = 1,
-                 Details_Screen,Home_Screen)
+                Param("ScreenName"),
+                'FAQ Screen',
+                If(
+                    CountRows(
+                        Filter(
+                            FirstN(
+                                'CertificationApp-Security_1',
+                                100
+                            ),
+                            Title = "Certification-Admin"
+                        )
+                    ) = 1,
+                    'Admin dashBoard',
+                    Home_Screen
+                )
             )
-            
         )
     Theme: =PowerAppsTheme
 
