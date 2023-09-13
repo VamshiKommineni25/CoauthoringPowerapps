@@ -413,9 +413,8 @@
             HoverBorderColor: =RGBA(185, 29, 11, 1)
             HoverColor: =RGBA(185, 29, 11, 1)
             HoverFill: =
-            OnSelect: |+
-                =UpdateContext({varNewCert:true})
-                
+            OnSelect: |-
+                =UpdateContext({varNewCert: true})
             PressedBorderColor: =RGBA(185, 29, 11, 1)
             PressedColor: =RGBA(185, 29, 11, 1)
             PressedFill: =
@@ -2114,8 +2113,7 @@
         RadiusBottomRight: =8
         RadiusTopLeft: =8
         RadiusTopRight: =8
-        Visible: |
-            =varNewCert
+        Visible: =varNewCert
         Width: =400
         X: =Parent.Width-Self.Width
         ZIndex: =26

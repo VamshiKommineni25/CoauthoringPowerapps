@@ -439,25 +439,23 @@
                 ChevronHoverBackground: =RGBA(212, 212, 212, 1)
                 ChevronHoverFill: =RGBA(33, 33, 33, 1)
                 Color: =RGBA(51, 51, 51, 1)
-                DefaultSelectedItems: |-
-                    =Office365Users.SearchUser({searchTerm:Office365Users.MyProfile().Mail})
+                DefaultSelectedItems: =LookUp(Choices([@CertificationRequest].Requestor),Email=User().Email)
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
                 DisplayFields: =["DisplayName"]
-                DisplayMode: =DisplayMode.Disabled
                 Font: ="Poppins"
                 HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
                 HoverColor: =RGBA(51, 51, 51, 1)
                 HoverFill: =RGBA(212, 212, 212, 1)
-                Items: |-
-                    =Office365Users.SearchUser({searchTerm:Self.SearchText,top:999})
+                Items: |
+                    =//Office365Users.SearchUser({searchTerm:Self.SearchText,top:999})
+                    Choices([@CertificationRequest].Requestor)
                 PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(0, 120, 212, 1)
                 SearchFields: =["DisplayName"]
-                SearchItems: |-
-                    =Search(Office365Users.SearchUser({searchTerm:Self.SearchText,top:999}),Cmb_RS_NCRrequestor.SearchText,"DisplayName")
+                SearchItems: =Choices(CertificationRequest.Requestor,Cmb_RS_NCRrequestor.SearchText)
                 SelectionFill: =RGBA(245, 223, 220, 1)
                 SelectionTagFill: =RGBA(245, 223, 220, 1)
                 SelectMultiple: =false
@@ -491,6 +489,7 @@
                         Provider:txtinp_RS_NCRprovider.Text
                     })
                     */
+                    /*
                     If(
                         IsBlank(txtinp_RS_NCRdesc.Text) || IsBlank(txtinp_RS_NCRtitle.Text) || IsBlank(txtinp_RS_NCRURL.Text) || IsBlank(txtinp_RS_NCRcost.Text) || IsBlank(txtinp_RS_NCRprovider.Text) || IsBlank(drpdwn_RS_NCRBU.SelectedText) || IsBlank(txtinp_RS_NCRexamcode.Text),
                         Notify(
@@ -512,6 +511,8 @@
                         Reset(drpdwn_RS_NCRBU),
                         Reset(txtinp_RS_NCRexamcode)
                     )
+                    */
+                    SubmitForm(Form2)
                 PressedBorderColor: =RGBA(185, 29, 11, 1)
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(185, 29, 11, 1)
@@ -2098,7 +2099,8 @@
                 ChevronHoverBackground: =RGBA(212, 212, 212, 1)
                 ChevronHoverFill: =RGBA(33, 33, 33, 1)
                 Color: =RGBA(51, 51, 51, 1)
-                DefaultSelectedItems: =//Filter(Choices([@CertificationRequest].Requestor),Email=User().Email)
+                DefaultSelectedItems: |
+                    =Filter(Choices([@CertificationRequest].Requestor),Email=User().Email)
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
@@ -2109,14 +2111,14 @@
                 HoverColor: =RGBA(51, 51, 51, 1)
                 HoverFill: =RGBA(212, 212, 212, 1)
                 Items: |-
-                    =Office365Users.SearchUser({searchTerm:Self.SearchText,top:999})
+                    =Office365Users.SearchUser({searchTerm:Office365Users.MyProfile().Mail})
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(0, 120, 212, 1)
                 SearchFields: =["DisplayName"]
                 SearchItems: |-
-                    =Search(Office365Users.SearchUser({searchTerm:Self.SearchText,top:999}),DataCardValue26.SearchText,"DisplayName")
+                    =Search(Office365Users.SearchUser({searchTerm:Office365Users.MyProfile().Mail}),DataCardValue26.SearchText,"DisplayName")
                 SelectionFill: =RGBA(0, 120, 212, 1)
                 SelectMultiple: =false
                 Size: =13
