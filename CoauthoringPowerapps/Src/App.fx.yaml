@@ -159,8 +159,8 @@ App As appinfo:
             )
         );
         
-    StartScreen: |-
-        =/*If (
+    StartScreen: |
+        =If (
             !IsBlank(Param("View")),
             Details_Screen,
            If(Param("ScreenName"),'FAQ Screen',
@@ -174,8 +174,7 @@ App As appinfo:
                  'Admin dashBoard',Home_Screen)
             )
             
-        )*/
-        Screen1
+        )
     Theme: =PowerAppsTheme
 
     Host As hostControl.DefaultHostControlVariant:
