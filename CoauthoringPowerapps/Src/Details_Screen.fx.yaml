@@ -122,6 +122,22 @@ Details_Screen As screen:
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
             DisabledColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
+            DisplayMode: |-
+                =If(
+                    (varCertificateDetails.Status = "Proofs Uploaded" And (varCertificateDetails.PaymentMode <> "Cash") And (varCertificateDetails.PaymentMode <> "Advance Payment") And (varCertificateDetails.PaymentMode <> "Voucher") And varUserLevel in [
+                        "SUPER-ADMIN",
+                        "ADMIN"
+                    ]),
+                    DisplayMode.Edit,
+                    If(
+                        (varCertificateDetails.Status = "Enrolled"/* And User().Email = Office365Users.Manager(varCertificateDetails.Requestor.Email).Mail)*/) || (varCertificateDetails.Status = "Proofs Uploaded" && varCertificateDetails.'Has attachments' And varUserLevel in [
+                            "SUPER-ADMIN",
+                            "ADMIN"
+                        ]),
+                        DisplayMode.Edit,
+                        DisplayMode.Disabled
+                    )
+                )
             Fill: =RGBA(23, 151, 49, 1)
             FocusedBorderColor: =ColorFade(Self.Fill, -75%)
             Font: =Font.'Segoe UI'

@@ -21,7 +21,7 @@ App As appinfo:
             myReports,
             Office365Users.DirectReports(Office365Users.MyProfile().Id)
         );
-        /*
+        
         Set(
             varUserLevel,
             If(
@@ -54,7 +54,7 @@ App As appinfo:
                 varUserLevel
             )
         );
-        */
+        
         //Set(varUserLevel,"USER");
         
         Set(
