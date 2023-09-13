@@ -1201,7 +1201,7 @@ Home_Screen As screen:
                     OnSelect: =Select(Parent)
                     Size: =8
                     Text: =ThisItem.Created
-                    Width: =103
+                    Width: =108
                     X: =233
                     Y: =7
                     ZIndex: =7
@@ -1220,7 +1220,7 @@ Home_Screen As screen:
                     OnSelect: =Select(Parent)
                     Size: =8
                     Text: =ThisItem.Modified
-                    Width: =103
+                    Width: =108
                     X: =363
                     Y: =6
                     ZIndex: =8
@@ -1432,7 +1432,7 @@ Home_Screen As screen:
                     HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
                     HoverFill: =RGBA(0, 0, 0, 0)
                     Icon: =Icon.View
-                    OnSelect: =Select(Parent)
+                    OnSelect: =Launch(First(ThisItem.Attachments).AbsoluteUri)
                     PressedBorderColor: =RGBA(0, 0, 0, 0)
                     PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
                     PressedFill: =RGBA(0, 0, 0, 0)

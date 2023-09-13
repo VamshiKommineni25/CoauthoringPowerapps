@@ -887,9 +887,61 @@
                 FocusedBorderThickness: =2
                 Font: ="Poppins"
                 FontWeight: =FontWeight.Semibold
+                Height: =25
                 HoverBorderColor: =RGBA(185, 29, 11, 1)
                 HoverColor: =RGBA(255, 255, 255, 1)
                 HoverFill: =RGBA(185, 29, 11, 1)
+                OnSelect: |
+                    =If(
+                        IsBlank(txtinp_RS_ECRname.Text) || IsBlank(txtinp_RS_ECRCname.Text) || IsBlank(txtinp_RS_ECRPname.Text) || IsBlank(drpdwn_RS_ECRBU.SelectedText) || IsBlank(txtinp_RS_ECRExamcode.Text) || IsBlank(txtinp_RS_ECRtech.Text) || IsBlank(txtinp_RS_ECRCV.Text) || IsBlank(drpdwn_RS_ECRexamlevel.SelectedText) || IsBlank(drpdwn_RS_ECRrs.SelectedText.Value) || IsBlank(DatePicker_RS_ECRcmpdate.SelectedDate) || IsBlank(radio_RS_ECRprovider.SelectedText.Value) || IsEmpty(attach_RS_ECR.Attachments) || IsBlank(txtinp_RS_ECRrole.Text),
+                        Notify(
+                            "Please fill all the entries",
+                            NotificationType.Error
+                        ),
+                        Patch(
+                            ExternalCertificationList,
+                            Defaults(ExternalCertificationList),
+                            {
+                                Title: txtinp_RS_ECRname.Text,
+                                ExamCode: txtinp_RS_ECRExamcode.Text,
+                                ExamLevel: drpdwn_RS_ECRexamlevel.SelectedText.Value,
+                                CertificationName: txtinp_RS_ECRCname.Text,
+                                CompletionDate: DatePicker_RS_ECRcmpdate.SelectedDate,
+                                Price: drpdwn_RS_ECRrs.SelectedText.Value & txtinp_RS_ECRprice.Text,
+                                ProviderName: txtinp_RS_ECRPname.Text,
+                                Technology: txtinp_RS_ECRtech.Text,
+                                Role: txtinp_RS_ECRrole.Text,
+                                ReimbursementStatus: btn_RS_ECRsubmit.Text,
+                                BU: drpdwn_RS_ECRBU.SelectedText.Value
+                            }
+                        );
+                        Certification_Attachments_External_Flow.Run(
+                            Last(Attachments_7.Attachments).Name,
+                            varBase64Only,
+                            Last(
+                                Filter(
+                                    ExternalCertificationList,
+                                    Boolean(1)
+                                )
+                            ).ID
+                        ).result;
+                        Notify(
+                            "You have submitted form Successfully",
+                            NotificationType.Success
+                        );
+                        Reset(TextInput2);
+                        Reset(TextInput5);
+                        Reset(TextInput6);
+                        Reset(TextInput7);
+                        Reset(TextInput8);
+                        Reset(TextInput9);
+                        Reset(TextInput9_1);
+                        Reset(TextInput10);
+                        Reset(Radio3);
+                        Reset(Attachments_7);
+                        Reset(Dropdown2);
+                        Reset(Dropdown3);
+                    );
                 PressedBorderColor: =RGBA(185, 29, 11, 1)
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(185, 29, 11, 1)
@@ -897,8 +949,9 @@
                 RadiusBottomRight: =3
                 RadiusTopLeft: =3
                 RadiusTopRight: =3
-                Size: =15
+                Size: =10
                 Text: ="Submit"
+                Width: =120
                 X: =1052
                 Y: =515
                 ZIndex: =19
@@ -914,6 +967,7 @@
                 FocusedBorderThickness: =2
                 Font: ="Poppins"
                 FontWeight: =FontWeight.Semibold
+                Height: =25
                 HoverBorderColor: =RGBA(185, 29, 11, 1)
                 HoverColor: =RGBA(185, 29, 11, 1)
                 HoverFill: =RGBA(255, 255, 255, 1)
@@ -924,9 +978,10 @@
                 RadiusBottomRight: =3
                 RadiusTopLeft: =3
                 RadiusTopRight: =3
-                Size: =15
+                Size: =10
                 Text: ="Clear"
-                X: =852
+                Width: =120
+                X: =912
                 Y: =515
                 ZIndex: =20
 
