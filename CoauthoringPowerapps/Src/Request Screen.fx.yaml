@@ -915,7 +915,7 @@
                             }
                         );
                         Certification_Attachments_External_Flow.Run(
-                            Last(Attachments_7.Attachments).Name,
+                            Last(attach_RS_ECR.Attachments).Name,
                             varBase64Only,
                             Last(
                                 Filter(
