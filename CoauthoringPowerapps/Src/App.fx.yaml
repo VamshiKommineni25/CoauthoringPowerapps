@@ -17,7 +17,7 @@ App As appinfo:
                 varUserLevel
             )
         );
-        ClearCollect(
+        /*ClearCollect(
             myReports,
             Office365Users.DirectReports(Office365Users.MyProfile().Id)
         );
@@ -157,30 +157,25 @@ App As appinfo:
                 ),
                 (Title = Office365Users.MyProfile().DisplayName && "been approved by your manager " & varMngrname in Notification) || ("has requested for" in Notification && Manager = User().FullName) || (Title = Office365Users.MyProfile().DisplayName && "been approved by ILD" in Notification) || (IsDeleted = false And Title = Office365Users.MyProfile().DisplayName)
             )
-        );
+        );*/
         
     StartScreen: |-
-        =If (
+        =/*If (
             !IsBlank(Param("View")),
             Details_Screen,
+           If(Param("ScreenName"),'FAQ Screen',
             If(
-                Param("ScreenName"),
-                'FAQ Screen',
-                If(
-                    CountRows(
-                        FirstN(
-                            Filter(
-                                'CertificationApp-Security_1',
-                                Title = "Certification-SuperAdmin"
-                            ),
-                            50
-                        )
-                    ) = 1,
-                    'Admin dashBoard',
-                    Home_Screen
-                )
+                CountRows(
+                    Filter(
+                        FirstN('CertificationApp-Security_1',100),
+                        Title = "Certification-Admin"
+                    )
+                ) = 1,
+                 'Admin dashBoard',Home_Screen)
             )
-        )
+            
+        )*/
+        Screen1
     Theme: =PowerAppsTheme
 
     Host As hostControl.DefaultHostControlVariant:
