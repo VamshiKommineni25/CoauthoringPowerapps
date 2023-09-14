@@ -215,7 +215,7 @@
             FocusedBorderThickness: =4
             Font: ="Poppins"
             Height: =27
-            Size: =13
+            Size: =12
             Text: |-
                 ="Payment:"
             Width: =90
@@ -270,7 +270,7 @@
             FocusedBorderThickness: =4
             Font: ="Poppins"
             Height: =27
-            Size: =13
+            Size: =12
             Text: |-
                 ="Status:"
             Width: =77
@@ -776,19 +776,19 @@
                     )
                 );*/
                 Refresh(CertificationOrder);
-                        /*Set(
+                        Set(
                             varfileLink,
                             ProcessWithFinance.Run(
-                                StatusDropDown.SelectedText.Value,
+                                drp_status.SelectedText.Value,
                                 Trim(varData.Title),
                                 drp_Payment.SelectedText.Value,
                                 Date_From.SelectedDate,
                                 "Finance",
                                 Date_To.SelectedDate,
-                                Drp_Location List.SelectedText.Value
+                                'Drp_Location List'.SelectedText.Value
                             ).link
                         );
-                        Download(varfileLink);*/
+                        Download(varfileLink);
                         UpdateRows.Run(
                             "Proofs Approved",
                             Date_From.SelectedDate,
@@ -1201,8 +1201,8 @@
                 Tooltip: =
                 Visible: =varExcelUpload
                 Width: =375
-                X: =6
-                Y: =24
+                X: =10
+                Y: =30
                 ZIndex: =2
 
             Button22 As button:
