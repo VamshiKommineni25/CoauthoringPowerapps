@@ -2361,7 +2361,7 @@ Details_Screen As screen:
                                             colfiles,
                                             JSONFormat.IndentFour
                                         ),
-                                        varCertificateDetails.ID,varCertificateDetails.ID,varCertificateDetails.ID).links
+                                        varCertificateDetails.ID,varCertificateDetails.ID,varCertificateDetails.ID,varCertificateDetails.ID,varCertificateDetails.ID).links
                             );
                                 If(
                                     varCertificateDetails.Status in ["Enrolled"],
@@ -2437,7 +2437,7 @@ Details_Screen As screen:
                                             colfiles,
                                             JSONFormat.IndentFour
                                         ),
-                                        varCertificateDetails.ID,varCertificateDetails.ID,varCertificateDetails.ID).links
+                                        varCertificateDetails.ID,varCertificateDetails.ID,varCertificateDetails.ID,varCertificateDetails.ID,varCertificateDetails.ID).links
                             );
                             If(
                                 varCertificateDetails.Status in [
@@ -2539,7 +2539,7 @@ Details_Screen As screen:
                                             colfiles,
                                             JSONFormat.IndentFour
                                         ),
-                                        varCertificateDetails.ID,varCertificateDetails.ID,varCertificateDetails.ID).links
+                                        varCertificateDetails.ID,varCertificateDetails.ID,varCertificateDetails.ID,varCertificateDetails.ID,varCertificateDetails.ID).links
                             );
                                 If(
                                     varCertificateDetails.Status in ["Enrolled"],
@@ -2615,7 +2615,7 @@ Details_Screen As screen:
                                             colfiles,
                                             JSONFormat.IndentFour
                                         ),
-                                        varCertificateDetails.ID,varCertificateDetails.ID,varCertificateDetails.ID).links
+                                        varCertificateDetails.ID,varCertificateDetails.ID,varCertificateDetails.ID,varCertificateDetails.ID,varCertificateDetails.ID).links
                             );
                             If(
                                 varCertificateDetails.Status in [
@@ -2716,7 +2716,7 @@ Details_Screen As screen:
                                             colfiles,
                                             JSONFormat.IndentFour
                                         ),
-                                        varCertificateDetails.ID,varCertificateDetails.ID,varCertificateDetails.ID).links
+                                        varCertificateDetails.ID,varCertificateDetails.ID,varCertificateDetails.ID,varCertificateDetails.ID,varCertificateDetails.ID).links
                             );
                                 If(
                                     varCertificateDetails.Status in ["Enrolled"],
@@ -2792,7 +2792,7 @@ Details_Screen As screen:
                                             colfiles,
                                             JSONFormat.IndentFour
                                         ),
-                                        varCertificateDetails.ID,varCertificateDetails.ID,varCertificateDetails.ID).links
+                                        varCertificateDetails.ID,varCertificateDetails.ID,varCertificateDetails.ID,varCertificateDetails.ID,varCertificateDetails.ID).links
                             );
                             If(
                                 varCertificateDetails.Status in [
@@ -2893,7 +2893,7 @@ Details_Screen As screen:
                                             colfiles,
                                             JSONFormat.IndentFour
                                         ),
-                                        varCertificateDetails.ID,varCertificateDetails.ID,varCertificateDetails.ID).links
+                                        varCertificateDetails.ID,varCertificateDetails.ID,varCertificateDetails.ID,varCertificateDetails.ID,varCertificateDetails.ID).links
                             );
                                 If(
                                     varCertificateDetails.Status in ["Enrolled"],
@@ -2969,7 +2969,7 @@ Details_Screen As screen:
                                             colfiles,
                                             JSONFormat.IndentFour
                                         ),
-                                        varCertificateDetails.ID,varCertificateDetails.ID,varCertificateDetails.ID).links
+                                        varCertificateDetails.ID,varCertificateDetails.ID,varCertificateDetails.ID,varCertificateDetails.ID,varCertificateDetails.ID).links
                             );
                             If(
                                 varCertificateDetails.Status in [
@@ -3070,7 +3070,7 @@ Details_Screen As screen:
                                             colfiles,
                                             JSONFormat.IndentFour
                                         ),
-                                        varCertificateDetails.ID,varCertificateDetails.ID,varCertificateDetails.ID).links
+                                        varCertificateDetails.ID,varCertificateDetails.ID,varCertificateDetails.ID,varCertificateDetails.ID,varCertificateDetails.ID).links
                             );
                                 If(
                                     varCertificateDetails.Status in ["Enrolled"],
@@ -3146,7 +3146,7 @@ Details_Screen As screen:
                                             colfiles,
                                             JSONFormat.IndentFour
                                         ),
-                                        varCertificateDetails.ID,varCertificateDetails.ID,varCertificateDetails.ID).links
+                                        varCertificateDetails.ID,varCertificateDetails.ID,varCertificateDetails.ID,varCertificateDetails.ID,varCertificateDetails.ID).links
                             );
                             If(
                                 varCertificateDetails.Status in [

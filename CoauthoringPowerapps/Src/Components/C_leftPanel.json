@@ -72,7 +72,7 @@
                 "Name": "Rectangle1",
                 "Parent": "Group 5772_1",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 947,
+                "PublishOrderIndex": 57,
                 "Rules": [
                   {
                     "Category": "Design",
@@ -252,7 +252,7 @@
                     "Name": "Icon5",
                     "Parent": "Group 5771_7",
                     "PersistMetaDataIDKey": false,
-                    "PublishOrderIndex": 949,
+                    "PublishOrderIndex": 59,
                     "Rules": [
                       {
                         "Category": "Design",
@@ -485,7 +485,7 @@
                     "Name": "Home_2",
                     "Parent": "Group 5771_7",
                     "PersistMetaDataIDKey": false,
-                    "PublishOrderIndex": 950,
+                    "PublishOrderIndex": 60,
                     "Rules": [
                       {
                         "Category": "Data",
@@ -861,7 +861,7 @@
                 "Name": "Group 5771_7",
                 "Parent": "Group 5772_1",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 948,
+                "PublishOrderIndex": 58,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -1148,7 +1148,7 @@
             "Name": "Group 5772_1",
             "Parent": "Group_3",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 946,
+            "PublishOrderIndex": 53,
             "Rules": [
               {
                 "Category": "Data",
@@ -1442,7 +1442,7 @@
                 "Name": "Rectangle2",
                 "Parent": "Group 8510_1",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 952,
+                "PublishOrderIndex": 61,
                 "Rules": [
                   {
                     "Category": "Design",
@@ -1636,7 +1636,7 @@
                     "Name": "Icon7",
                     "Parent": "Group 5771_4",
                     "PersistMetaDataIDKey": false,
-                    "PublishOrderIndex": 954,
+                    "PublishOrderIndex": 63,
                     "Rules": [
                       {
                         "Category": "Design",
@@ -1876,7 +1876,7 @@
                     "Name": "Register_1",
                     "Parent": "Group 5771_4",
                     "PersistMetaDataIDKey": false,
-                    "PublishOrderIndex": 955,
+                    "PublishOrderIndex": 64,
                     "Rules": [
                       {
                         "Category": "Data",
@@ -2252,7 +2252,7 @@
                 "Name": "Group 5771_4",
                 "Parent": "Group 8510_1",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 953,
+                "PublishOrderIndex": 62,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -2539,7 +2539,7 @@
             "Name": "Group 8510_1",
             "Parent": "Group_3",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 951,
+            "PublishOrderIndex": 54,
             "Rules": [
               {
                 "Category": "Data",
@@ -2833,7 +2833,7 @@
                 "Name": "Rectangle3",
                 "Parent": "Group 8509_1",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 957,
+                "PublishOrderIndex": 65,
                 "Rules": [
                   {
                     "Category": "Design",
@@ -3030,7 +3030,7 @@
                         "Name": "Icon8",
                         "Parent": "g2140_1",
                         "PersistMetaDataIDKey": false,
-                        "PublishOrderIndex": 960,
+                        "PublishOrderIndex": 69,
                         "Rules": [
                           {
                             "Category": "Design",
@@ -3287,7 +3287,7 @@
                     "Name": "g2140_1",
                     "Parent": "Group 5771_6",
                     "PersistMetaDataIDKey": false,
-                    "PublishOrderIndex": 959,
+                    "PublishOrderIndex": 67,
                     "Rules": [
                       {
                         "Category": "Data",
@@ -3599,7 +3599,7 @@
                     "Name": "Add New_1",
                     "Parent": "Group 5771_6",
                     "PersistMetaDataIDKey": false,
-                    "PublishOrderIndex": 961,
+                    "PublishOrderIndex": 68,
                     "Rules": [
                       {
                         "Category": "Data",
@@ -3975,7 +3975,7 @@
                 "Name": "Group 5771_6",
                 "Parent": "Group 8509_1",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 958,
+                "PublishOrderIndex": 66,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -4262,7 +4262,7 @@
             "Name": "Group 8509_1",
             "Parent": "Group_3",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 956,
+            "PublishOrderIndex": 55,
             "Rules": [
               {
                 "Category": "Data",
@@ -4564,7 +4564,7 @@
                 "Name": "Rectangle4",
                 "Parent": "Group 9075_1",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 963,
+                "PublishOrderIndex": 70,
                 "Rules": [
                   {
                     "Category": "Design",
@@ -4764,7 +4764,7 @@
                     "Name": "Icon6",
                     "Parent": "Group 5771_5",
                     "PersistMetaDataIDKey": false,
-                    "PublishOrderIndex": 965,
+                    "PublishOrderIndex": 72,
                     "Rules": [
                       {
                         "Category": "Design",
@@ -5004,7 +5004,7 @@
                     "Name": "Analysis_1",
                     "Parent": "Group 5771_5",
                     "PersistMetaDataIDKey": false,
-                    "PublishOrderIndex": 966,
+                    "PublishOrderIndex": 73,
                     "Rules": [
                       {
                         "Category": "Data",
@@ -5380,7 +5380,7 @@
                 "Name": "Group 5771_5",
                 "Parent": "Group 9075_1",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 964,
+                "PublishOrderIndex": 71,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -5674,7 +5674,7 @@
             "Name": "Group 9075_1",
             "Parent": "Group_3",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 962,
+            "PublishOrderIndex": 56,
             "Rules": [
               {
                 "Category": "Data",
@@ -5982,7 +5982,7 @@
         "Name": "Group_3",
         "Parent": "C_leftPanel",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 945,
+        "PublishOrderIndex": 52,
         "Rules": [
           {
             "Category": "Data",
@@ -6243,7 +6243,7 @@
       },
       "NavigateTo"
     ],
-    "LastModifiedTimestamp": "638302824779321315",
+    "LastModifiedTimestamp": "638302754435865055",
     "Name": "C_leftPanel",
     "Rules": [
       {
@@ -6324,7 +6324,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638302824779321315",
+  "LastModifiedTimestamp": "638302754435865055",
   "Name": "470e83d2489f46a58e9ba807156b5c3a",
   "OverridableProperties": {},
   "Version": "638282907983282334"

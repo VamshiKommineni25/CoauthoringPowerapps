@@ -116,7 +116,7 @@
                 "Name": "Label4_1",
                 "Parent": "Container17_1",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 905,
+                "PublishOrderIndex": 11,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -453,7 +453,7 @@
                 "Name": "Icon16_1",
                 "Parent": "Container17_1",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 906,
+                "PublishOrderIndex": 12,
                 "Rules": [
                   {
                     "Category": "Design",
@@ -817,7 +817,7 @@
                 "Name": "Button3_1",
                 "Parent": "Container17_1",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 907,
+                "PublishOrderIndex": 13,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -1031,7 +1031,7 @@
                   },
                   {
                     "Category": "Behavior",
-                    "InvariantScript": "Switch(\n    varUserLevel,\n    \"USER\",\n    ForAll(\n        Notify_gal.AllItems As MyPatch,\n        Patch(\n            NotificationList_CertificationApp,\n            {ID: MyPatch.ID},\n            {\n                Title: MyPatch.Title,\n                UserDeleted: true\n            }\n        )\n    ),\n    \"ADMIN\",\n    ForAll(\n        Notify_gal.AllItems As MyPatch,\n        Patch(\n            NotificationList_CertificationApp,\n            {ID: MyPatch.ID},\n            {\n                Title: MyPatch.Title,\n                ManagerDeleted:true\n            }\n        )\n    ),\n    \"SUPER-ADMIN\",\n    ForAll(\n        Notify_gal.AllItems As MyPatch,\n        Patch(\n            NotificationList_CertificationApp,\n            {ID: MyPatch.ID},\n            {\n                Title: MyPatch.Title,\n                AdminDeleted: true\n            }\n        )\n    )\n);\nClear(col_Notification);\nClear(mngr_notify_Col);",
+                    "InvariantScript": "Switch(\n    varUserLevel,\n    \"USER\",\n    ForAll(\n        Notify_gal.AllItems As MyPatch,\n        Patch(\n            NotificationList_CertificationApp,\n            {ID: MyPatch.ID},\n            {\n                Title: MyPatch.Title,\n                IsDeleted: true\n            }\n        )\n    ),\n    \"ADMIN\",\n    ForAll(\n        Notify_gal.AllItems As MyPatch,\n        Patch(\n            NotificationList_CertificationApp,\n            {ID: MyPatch.ID},\n            {\n                Title: MyPatch.Title,\n                IsDeleted: true\n            }\n        )\n    ),\n    \"SUPER-ADMIN\",\n    ForAll(\n        Notify_gal.AllItems As MyPatch,\n        Patch(\n            NotificationList_CertificationApp,\n            {ID: MyPatch.ID},\n            {\n                Title: MyPatch.Title,\n                IsDeleted: true\n            }\n        )\n    )\n);\nClear(col_Notification);\nClear(mngr_notify_Col);",
                     "Property": "OnSelect",
                     "RuleProviderType": "Unknown"
                   }
@@ -1074,7 +1074,7 @@
                     "Name": "galleryTemplate1_8",
                     "Parent": "Notify_gal",
                     "PersistMetaDataIDKey": false,
-                    "PublishOrderIndex": 909,
+                    "PublishOrderIndex": 16,
                     "Rules": [
                       {
                         "Category": "Design",
@@ -1142,14 +1142,7 @@
                       "LineHeight",
                       "BorderThickness",
                       "FocusedBorderThickness",
-                      {
-                        "AFDDataSourceName": "",
-                        "AutoRuleBindingEnabled": false,
-                        "AutoRuleBindingString": "",
-                        "InvariantPropertyName": "Size",
-                        "IsLockable": false,
-                        "NameMapSourceSchema": "?"
-                      },
+                      "Size",
                       "Italic",
                       "Underline",
                       "Strikethrough",
@@ -1171,7 +1164,7 @@
                     "Name": "Label6",
                     "Parent": "Notify_gal",
                     "PersistMetaDataIDKey": false,
-                    "PublishOrderIndex": 910,
+                    "PublishOrderIndex": 17,
                     "Rules": [
                       {
                         "Category": "Data",
@@ -1319,7 +1312,7 @@
                       },
                       {
                         "Category": "Design",
-                        "InvariantScript": "290",
+                        "InvariantScript": "345",
                         "Property": "Width",
                         "RuleProviderType": "Unknown"
                       },
@@ -1361,7 +1354,7 @@
                       },
                       {
                         "Category": "Design",
-                        "InvariantScript": "10",
+                        "InvariantScript": "13",
                         "Property": "Size",
                         "RuleProviderType": "Unknown"
                       },
@@ -1434,239 +1427,6 @@
                     "AllowAccessToGlobals": true,
                     "Children": [],
                     "ControlPropertyState": [
-                      "Icon",
-                      {
-                        "AFDDataSourceName": "",
-                        "AutoRuleBindingEnabled": false,
-                        "AutoRuleBindingString": "",
-                        "InvariantPropertyName": "Color",
-                        "IsLockable": false,
-                        "NameMapSourceSchema": "?"
-                      },
-                      "DisabledColor",
-                      "PressedColor",
-                      "HoverColor",
-                      "Fill",
-                      "DisabledFill",
-                      "PressedFill",
-                      "HoverFill",
-                      "DisplayMode",
-                      "X",
-                      "Y",
-                      {
-                        "AFDDataSourceName": "",
-                        "AutoRuleBindingEnabled": false,
-                        "AutoRuleBindingString": "",
-                        "InvariantPropertyName": "Width",
-                        "IsLockable": false,
-                        "NameMapSourceSchema": "?"
-                      },
-                      {
-                        "AFDDataSourceName": "",
-                        "AutoRuleBindingEnabled": false,
-                        "AutoRuleBindingString": "",
-                        "InvariantPropertyName": "Height",
-                        "IsLockable": false,
-                        "NameMapSourceSchema": "?"
-                      },
-                      "BorderStyle",
-                      "BorderColor",
-                      "DisabledBorderColor",
-                      "PressedBorderColor",
-                      "HoverBorderColor",
-                      "FocusedBorderColor",
-                      {
-                        "AFDDataSourceName": "",
-                        "AutoRuleBindingEnabled": false,
-                        "AutoRuleBindingString": "Select(Parent)",
-                        "InvariantPropertyName": "OnSelect",
-                        "IsLockable": false,
-                        "NameMapSourceSchema": "?"
-                      },
-                      "ZIndex",
-                      "BorderThickness",
-                      "FocusedBorderThickness"
-                    ],
-                    "ControlUniqueId": "998",
-                    "HasDynamicProperties": false,
-                    "Index": 0,
-                    "IsAutoGenerated": false,
-                    "IsDataControl": false,
-                    "IsFromScreenLayout": false,
-                    "IsGroupControl": false,
-                    "IsLocked": false,
-                    "LayoutName": "",
-                    "MetaDataIDKey": "",
-                    "Name": "Icon17",
-                    "Parent": "Notify_gal",
-                    "PersistMetaDataIDKey": false,
-                    "PublishOrderIndex": 911,
-                    "Rules": [
-                      {
-                        "Category": "Design",
-                        "InvariantScript": "Icon.Cancel",
-                        "Property": "Icon",
-                        "RuleProviderType": "Unknown"
-                      },
-                      {
-                        "Category": "Design",
-                        "InvariantScript": "RGBA(151, 0, 0, 1)",
-                        "Property": "Color",
-                        "RuleProviderType": "Unknown"
-                      },
-                      {
-                        "Category": "Design",
-                        "InvariantScript": "RGBA(220, 220, 220, 1)",
-                        "Property": "DisabledColor",
-                        "RuleProviderType": "Unknown"
-                      },
-                      {
-                        "Category": "Design",
-                        "InvariantScript": "ColorFade(RGBA(0, 120, 212, 1), -30%)",
-                        "Property": "PressedColor",
-                        "RuleProviderType": "Unknown"
-                      },
-                      {
-                        "Category": "Design",
-                        "InvariantScript": "ColorFade(RGBA(0, 120, 212, 1), -30%)",
-                        "Property": "HoverColor",
-                        "RuleProviderType": "Unknown"
-                      },
-                      {
-                        "Category": "Design",
-                        "InvariantScript": "RGBA(0, 0, 0, 0)",
-                        "Property": "Fill",
-                        "RuleProviderType": "Unknown"
-                      },
-                      {
-                        "Category": "Design",
-                        "InvariantScript": "RGBA(0, 0, 0, 0)",
-                        "Property": "DisabledFill",
-                        "RuleProviderType": "Unknown"
-                      },
-                      {
-                        "Category": "Design",
-                        "InvariantScript": "RGBA(0, 0, 0, 0)",
-                        "Property": "PressedFill",
-                        "RuleProviderType": "Unknown"
-                      },
-                      {
-                        "Category": "Design",
-                        "InvariantScript": "RGBA(0, 0, 0, 0)",
-                        "Property": "HoverFill",
-                        "RuleProviderType": "Unknown"
-                      },
-                      {
-                        "Category": "Design",
-                        "InvariantScript": "DisplayMode.Edit",
-                        "Property": "DisplayMode",
-                        "RuleProviderType": "Unknown"
-                      },
-                      {
-                        "Category": "Design",
-                        "InvariantScript": "303",
-                        "Property": "X",
-                        "RuleProviderType": "Unknown"
-                      },
-                      {
-                        "Category": "Design",
-                        "InvariantScript": "21",
-                        "Property": "Y",
-                        "RuleProviderType": "Unknown"
-                      },
-                      {
-                        "Category": "Design",
-                        "InvariantScript": "20",
-                        "Property": "Width",
-                        "RuleProviderType": "Unknown"
-                      },
-                      {
-                        "Category": "Design",
-                        "InvariantScript": "20",
-                        "Property": "Height",
-                        "RuleProviderType": "Unknown"
-                      },
-                      {
-                        "Category": "Design",
-                        "InvariantScript": "BorderStyle.Solid",
-                        "Property": "BorderStyle",
-                        "RuleProviderType": "Unknown"
-                      },
-                      {
-                        "Category": "Design",
-                        "InvariantScript": "RGBA(166, 166, 166, 1)",
-                        "Property": "BorderColor",
-                        "RuleProviderType": "Unknown"
-                      },
-                      {
-                        "Category": "Design",
-                        "InvariantScript": "RGBA(0, 0, 0, 0)",
-                        "Property": "DisabledBorderColor",
-                        "RuleProviderType": "Unknown"
-                      },
-                      {
-                        "Category": "Design",
-                        "InvariantScript": "RGBA(0, 0, 0, 0)",
-                        "Property": "PressedBorderColor",
-                        "RuleProviderType": "Unknown"
-                      },
-                      {
-                        "Category": "Design",
-                        "InvariantScript": "RGBA(0, 0, 0, 0)",
-                        "Property": "HoverBorderColor",
-                        "RuleProviderType": "Unknown"
-                      },
-                      {
-                        "Category": "Design",
-                        "InvariantScript": "Self.BorderColor",
-                        "Property": "FocusedBorderColor",
-                        "RuleProviderType": "Unknown"
-                      },
-                      {
-                        "Category": "Design",
-                        "InvariantScript": "4",
-                        "Property": "ZIndex",
-                        "RuleProviderType": "Unknown"
-                      },
-                      {
-                        "Category": "Design",
-                        "InvariantScript": "0",
-                        "Property": "BorderThickness",
-                        "RuleProviderType": "Unknown"
-                      },
-                      {
-                        "Category": "Design",
-                        "InvariantScript": "4",
-                        "Property": "FocusedBorderThickness",
-                        "RuleProviderType": "Unknown"
-                      },
-                      {
-                        "Category": "Behavior",
-                        "InvariantScript": "UpdateIf(\n    NotificationList_CertificationApp,\n    ID = ThisItem.ID,\n    {AdminDeleted: Boolean(1)}\n)\n",
-                        "Property": "OnSelect",
-                        "RuleProviderType": "Unknown"
-                      }
-                    ],
-                    "StyleName": "defaultIconStyle",
-                    "Template": {
-                      "CustomGroupControlTemplateName": "",
-                      "FirstParty": true,
-                      "Id": "http://microsoft.com/appmagic/icon",
-                      "IsComponentDefinition": false,
-                      "IsCustomGroupControlTemplate": false,
-                      "IsPremiumPcfControl": false,
-                      "LastModifiedTimestamp": "0",
-                      "Name": "icon",
-                      "OverridableProperties": {},
-                      "Version": "2.5.0"
-                    },
-                    "Type": "ControlInfo",
-                    "VariantName": "Cancel"
-                  },
-                  {
-                    "AllowAccessToGlobals": true,
-                    "Children": [],
-                    "ControlPropertyState": [
                       {
                         "AFDDataSourceName": "",
                         "AutoRuleBindingEnabled": false,
@@ -1704,7 +1464,7 @@
                     "Name": "Separator1_3",
                     "Parent": "Notify_gal",
                     "PersistMetaDataIDKey": false,
-                    "PublishOrderIndex": 912,
+                    "PublishOrderIndex": 18,
                     "Rules": [
                       {
                         "Category": "Design",
@@ -1868,11 +1628,11 @@
                 "Name": "Notify_gal",
                 "Parent": "Container17_1",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 908,
+                "PublishOrderIndex": 14,
                 "Rules": [
                   {
                     "Category": "Data",
-                    "InvariantScript": "Switch(\n    varUserLevel ,\n     \"USER\",\n    Sort(\n        col_Notification,\n        Created,\n        SortOrder.Descending\n    ),\n     \"ADMIN\",\n    Sort(\n        mngr_notify_Col,\n        Created,\n        SortOrder.Descending\n    ),\n     \"SUPER-ADMIN\",\n    Sort(\n        Filter(\n            FirstN(\n                NotificationList_CertificationApp,\n                2000\n            ),\n            \"has uploaded proofs\" in Notification And AdminDeleted = false\n        ),\n        Created,\n        SortOrder.Descending\n    )\n)",
+                    "InvariantScript": "Switch(\n    varUserLevel ,\n     \"USER\",\n    Sort(\n        col_Notification,\n        Created,\n        SortOrder.Descending\n    ),\n     \"ADMIN\",\n    Sort(\n        mngr_notify_Col,\n        Created,\n        SortOrder.Descending\n    ),\n     \"SUPER-ADMIN\",\n    Sort(\n        Filter(\n            FirstN(\n                NotificationList_CertificationApp,\n                2000\n            ),\n            \"has uploaded proofs\" = Notification And IsDeleted = false\n        ),\n        Created,\n        SortOrder.Descending\n    )\n)",
                     "Property": "Items",
                     "RuleProviderType": "Unknown"
                   },
@@ -2115,7 +1875,7 @@
                 "Name": "Label20",
                 "Parent": "Container17_1",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 913,
+                "PublishOrderIndex": 15,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -2433,7 +2193,7 @@
             "Name": "Container17_1",
             "Parent": "Container16_1",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 904,
+            "PublishOrderIndex": 10,
             "Rules": [
               {
                 "Category": "Design",
@@ -2637,7 +2397,7 @@
         "Name": "Container16_1",
         "Parent": "C_AlertPanel",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 903,
+        "PublishOrderIndex": 9,
         "Rules": [
           {
             "Category": "Design",
@@ -2832,7 +2592,7 @@
         "NameMapSourceSchema": "?"
       }
     ],
-    "LastModifiedTimestamp": "638302880391097389",
+    "LastModifiedTimestamp": "638302754435860447",
     "Name": "C_AlertPanel",
     "Rules": [
       {
@@ -2907,7 +2667,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638302880391097389",
+  "LastModifiedTimestamp": "638302754435860447",
   "Name": "51ee6d33d33c4d2bbcb4c3de22be71f3",
   "OverridableProperties": {},
   "Version": "638284518019750650"
