@@ -59,8 +59,7 @@ C_AlertPanel As CanvasComponent:
                 HoverFill: =RGBA(0, 0, 0, 0)
                 Icon: =Icon.Cancel
                 OnSelect: |
-                    =//Set(varAlert,false);
-                    If(
+                    =Set(varAlert,false);
                 PressedBorderColor: =RGBA(0, 0, 0, 0)
                 PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
                 PressedFill: =RGBA(0, 0, 0, 0)
@@ -119,10 +118,32 @@ C_AlertPanel As CanvasComponent:
                 BorderColor: =RGBA(166, 166, 166, 1)
                 DelayItemLoading: =true
                 Items: |-
-                    =Sort(
-                        col_Notification,
-                        Created,
-                        SortOrder.Descending
+                    =Switch(
+                        varUserLevel,
+                        "USER",
+                        Sort(
+                            col_Notification,
+                            Created,
+                            SortOrder.Descending
+                        ),
+                        "ADMIN",
+                        Sort(
+                            mngr_notify_Col,
+                            Created,
+                            SortOrder.Descending
+                        ),
+                        "SUPER-ADMIN",
+                        Sort(
+                            Filter(
+                                FirstN(
+                                    NotificationList_CertificationApp,
+                                    2000
+                                ),
+                                "has uploaded proofs" = Notification And IsDeleted = false
+                            ),
+                            Created,
+                            SortOrder.Descending
+                        )
                     )
                 Layout: =Layout.Vertical
                 LoadingSpinner: =LoadingSpinner.Data
