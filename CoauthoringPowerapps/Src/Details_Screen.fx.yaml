@@ -845,7 +845,7 @@ Details_Screen As screen:
                 HoverColor: =Parent.BorderColor
                 HoverFill: =Parent.Fill
                 OnSelect: |
-                    ='DeleteAttachments-CertificationApp'.Run();
+                    ='DeleteAttachments-CertificationApp'.Run(varCertificateDetails.ID,varCertificateDetails.ID);
                     Refresh(CertificationOrder);
                     Notify("Attachments Deleted Successfully", NotificationType.Success,1700);
                     //Set(varCertificationDetails1,varCertificationDetails);
@@ -1228,7 +1228,7 @@ Details_Screen As screen:
                             OnSelect: |-
                                 =//Select(Parent);
                                 //'DeleteAttachments-CertificationApp'.Run(varCertificateStatus.ID,varCertificateStatus.ID);
-                                First(LookUp(CertificationOrder,'DeleteAttachments-CertificationApp'.Run()).Attachments);
+                                First(LookUp(CertificationOrder,'DeleteAttachments-CertificationApp'.Run(varCertificateDetails.ID,varCertificateDetails.ID)).Attachments);
                                 Set(varattach,true);
                                 
                                 Refresh(CertificationOrder);
@@ -1481,7 +1481,7 @@ Details_Screen As screen:
                             Icon: =Icon.Cancel
                             OnSelect: |
                                 =//Select(Parent);
-                                Last(FirstN(LookUp(CertificationOrder,'DeleteAttachments-CertificationApp'.Run()).Attachments,2));
+                                Last(FirstN(LookUp(CertificationOrder,'DeleteAttachments-CertificationApp'.Run(varCertificateDetails.ID,varCertificateDetails.ID)).Attachments,4));
                                 
                                 Refresh(CertificationOrder)
                             Visible: =false
@@ -1732,7 +1732,7 @@ Details_Screen As screen:
                             Icon: =Icon.Cancel
                             OnSelect: |
                                 =//Select(Parent);
-                                Last(FirstN(LookUp(CertificationOrder,'DeleteAttachments-CertificationApp'.Run()).Attachments,3));
+                                Last(FirstN(LookUp(CertificationOrder,'DeleteAttachments-CertificationApp'.Run(varCertificateDetails.ID,varCertificateDetails.ID)).Attachments,3));
                                 
                                 Refresh(CertificationOrder)
                             Visible: =false
@@ -1983,7 +1983,7 @@ Details_Screen As screen:
                             Icon: =Icon.Cancel
                             OnSelect: |
                                 =//Select(Parent);
-                                Last(FirstN(LookUp(CertificationOrder,'DeleteAttachments-CertificationApp'.Run()).Attachments,4));
+                                Last(FirstN(LookUp(CertificationOrder,'DeleteAttachments-CertificationApp'.Run(varCertificateDetails.ID,varCertificateDetails.ID)).Attachments,4));
                                 
                                 Refresh(CertificationOrder)
                             Visible: =false
@@ -2234,7 +2234,7 @@ Details_Screen As screen:
                             Icon: =Icon.Cancel
                             OnSelect: |
                                 =//Select(Parent);
-                                LookUp(CertificationOrder,'DeleteAttachments-CertificationApp'.Run()).Attachments;
+                                Last(FirstN(LookUp(CertificationOrder,'DeleteAttachments-CertificationApp'.Run(varCertificateDetails.ID,varCertificateDetails.ID)).Attachments,5));
                                 
                                 Refresh(CertificationOrder)
                             Visible: =false
@@ -4383,11 +4383,12 @@ Details_Screen As screen:
                             DisabledColor: =RGBA(244, 244, 244, 1)
                             Height: =17
                             Icon: =Icon.Cancel
-                            OnSelect: |
+                            OnSelect: |+
                                 =//Select(Parent);
-                                LookUp(CertificationOrder,'DeleteAttachments-CertificationApp'.Run()).Attachments;
+                                LookUp(CertificationOrder,'DeleteAttachments-CertificationApp'.Run(varCertificateDetails.ID,varCertificateDetails.ID)).Attachments;
                                 
                                 Refresh(CertificationOrder)
+                                
                             Visible: =false
                             Width: =1
                             Y: =9
