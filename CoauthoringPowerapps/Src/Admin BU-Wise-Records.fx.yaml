@@ -818,8 +818,8 @@
             Text: ="Process with Finance"
             Width: =178
             X: =1005
-            Y: =560
-            ZIndex: =11
+            Y: =550
+            ZIndex: =9
 
     con_ViewReqCertDetails As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Light
