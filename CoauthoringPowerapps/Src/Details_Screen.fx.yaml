@@ -2339,15 +2339,10 @@ Details_Screen As screen:
                                     )
                                 );
                                 Set(
-                                    varProofsLinks,
-                                    'Attachment-ProofsUpload'.Run(
-                                        JSON(
-                                            colfiles,
-                                            JSONFormat.IndentFour
-                                        ),
-                                        varCertificateDetails.ID
-                                    ).links
-                                );
+                                varProofsLinks,
+                                 'Attachment-ProofsUpload'.Run(
+                                ).links
+                            );
                                 If(
                                     varCertificateDetails.Status in ["Enrolled"],
                                     UpdateIf(
@@ -2419,11 +2414,6 @@ Details_Screen As screen:
                             Set(
                                 varProofsLinks,
                                  'Attachment-ProofsUpload'.Run(
-                                    JSON(
-                                        colfiles,
-                                        JSONFormat.IndentFour
-                                    ),
-                                    varCertificateDetails.ID
                                 ).links
                             );
                             If(
@@ -2521,15 +2511,10 @@ Details_Screen As screen:
                                     )
                                 );
                                 Set(
-                                    varProofsLinks,
-                                     'Attachment-ProofsUpload'.Run(
-                                        JSON(
-                                            colfiles,
-                                            JSONFormat.IndentFour
-                                        ),
-                                        varCertificateDetails.ID
-                                    ).links
-                                );
+                                varProofsLinks,
+                                 'Attachment-ProofsUpload'.Run(
+                                ).links
+                            );
                                 If(
                                     varCertificateDetails.Status in ["Enrolled"],
                                     UpdateIf(
@@ -2598,14 +2583,9 @@ Details_Screen As screen:
                                     "Name"
                                 )
                             );
-                            Set(
+                           Set(
                                 varProofsLinks,
                                  'Attachment-ProofsUpload'.Run(
-                                    JSON(
-                                        colfiles,
-                                        JSONFormat.IndentFour
-                                    ),
-                                    varCertificateDetails.ID
                                 ).links
                             );
                             If(
@@ -2702,15 +2682,10 @@ Details_Screen As screen:
                                     )
                                 );
                                 Set(
-                                    varProofsLinks,
-                                     'Attachment-ProofsUpload'.Run(
-                                        JSON(
-                                            colfiles,
-                                            JSONFormat.IndentFour
-                                        ),
-                                        varCertificateDetails.ID
-                                    ).links
-                                );
+                                varProofsLinks,
+                                 'Attachment-ProofsUpload'.Run(
+                                ).links
+                            );
                                 If(
                                     varCertificateDetails.Status in ["Enrolled"],
                                     UpdateIf(
@@ -2782,11 +2757,6 @@ Details_Screen As screen:
                             Set(
                                 varProofsLinks,
                                  'Attachment-ProofsUpload'.Run(
-                                    JSON(
-                                        colfiles,
-                                        JSONFormat.IndentFour
-                                    ),
-                                    varCertificateDetails.ID
                                 ).links
                             );
                             If(
@@ -2883,15 +2853,10 @@ Details_Screen As screen:
                                     )
                                 );
                                 Set(
-                                    varProofsLinks,
-                                     'Attachment-ProofsUpload'.Run(
-                                        JSON(
-                                            colfiles,
-                                            JSONFormat.IndentFour
-                                        ),
-                                        varCertificateDetails.ID
-                                    ).links
-                                );
+                                varProofsLinks,
+                                 'Attachment-ProofsUpload'.Run(
+                                ).links
+                            );
                                 If(
                                     varCertificateDetails.Status in ["Enrolled"],
                                     UpdateIf(
@@ -2963,11 +2928,6 @@ Details_Screen As screen:
                             Set(
                                 varProofsLinks,
                                  'Attachment-ProofsUpload'.Run(
-                                    JSON(
-                                        colfiles,
-                                        JSONFormat.IndentFour
-                                    ),
-                                    varCertificateDetails.ID
                                 ).links
                             );
                             If(
@@ -3064,15 +3024,10 @@ Details_Screen As screen:
                                     )
                                 );
                                 Set(
-                                    varProofsLinks,
-                                     'Attachment-ProofsUpload'.Run(
-                                        JSON(
-                                            colfiles,
-                                            JSONFormat.IndentFour
-                                        ),
-                                        varCertificateDetails.ID
-                                    ).links
-                                );
+                                varProofsLinks,
+                                 'Attachment-ProofsUpload'.Run(
+                                ).links
+                            );
                                 If(
                                     varCertificateDetails.Status in ["Enrolled"],
                                     UpdateIf(
@@ -3144,11 +3099,6 @@ Details_Screen As screen:
                             Set(
                                 varProofsLinks,
                                  'Attachment-ProofsUpload'.Run(
-                                    JSON(
-                                        colfiles,
-                                        JSONFormat.IndentFour
-                                    ),
-                                    varCertificateDetails.ID
                                 ).links
                             );
                             If(
