@@ -447,7 +447,7 @@
                     !IsBlank(txt_SearchBar.Text),
                     Filter(
                          FirstN(
-                                            CertificationOrder,
+                                            new_col_certorder,
                                             5000
                             ),
                         PaymentMode = drp_Payment.SelectedText.Value && Status = drp_status.SelectedText.Value && Created >= Date_From.SelectedDate And Created <= Date_To.SelectedDate
@@ -459,7 +459,7 @@
                     )*/
                         Filter(
                              FirstN(
-                                            CertificationOrder,
+                                            new_col_certorder,
                                             5000
                             ),
                             PaymentMode = drp_Payment.SelectedText.Value && Status = drp_status.SelectedText.Value && Created >= Date_From.SelectedDate And Created <= Date_To.SelectedDate
@@ -530,7 +530,6 @@
                 ZIndex: =3
 
             glry_lbl_certName As label:
-                Align: =Align.Center
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =2

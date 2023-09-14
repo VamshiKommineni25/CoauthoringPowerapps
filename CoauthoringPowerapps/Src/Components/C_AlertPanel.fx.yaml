@@ -124,7 +124,8 @@ C_AlertPanel As CanvasComponent:
                             )
                         )
                     );
-                    Clear(col_Notification)
+                    Clear(col_Notification);
+                    Clear(mngr_notify_Col);
                 PressedBorderColor: =ColorFade(RGBA(185, 29, 11, 1), -50%)
                 PressedColor: =RGBA(185, 29, 11, 1)
                 PressedFill: =RGBA(0, 0, 0, 0)
