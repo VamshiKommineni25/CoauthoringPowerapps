@@ -57,6 +57,20 @@
     "dependents": [],
     "id": "0a161502-c33c-44e6-a076-81b4ab9ec644"
   },
+  "1a916735-900c-4d45-afd2-e9bd036e8df3": {
+    "connectionRef": {
+      "displayName": "Excel Online (Business)",
+      "iconUri": "https://connectoricons-prod.azureedge.net/u/henryorsborn/partial-builds/asev3migrations-with-resourceTemplate/1.0.1653.3403/excelonlinebusiness/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_excelonlinebusiness"
+    },
+    "datasets": {},
+    "dataSources": [],
+    "dependencies": {},
+    "dependents": [
+      "ec0a1e43-86a8-41f0-abce-8540e59b8d6d"
+    ],
+    "id": "1a916735-900c-4d45-afd2-e9bd036e8df3"
+  },
   "1d1757c5-20c0-46f7-bb17-6eccdc9bdd02": {
     "connectionRef": {
       "displayName": "Logic flows",
@@ -166,7 +180,8 @@
     "dependents": [
       "92417228-d96e-4487-b432-7e6fa6b02e79",
       "0a161502-c33c-44e6-a076-81b4ab9ec644",
-      "75bd49e9-29e9-4749-8a24-272a47e3fdf8"
+      "75bd49e9-29e9-4749-8a24-272a47e3fdf8",
+      "ec0a1e43-86a8-41f0-abce-8540e59b8d6d"
     ],
     "id": "391fb67a-599b-4e22-91d8-775183783e5f"
   },
@@ -385,6 +400,39 @@
     "dependencies": {},
     "dependents": [],
     "id": "cabe7177-762e-4e71-8a44-1a25223cfa14"
+  },
+  "ec0a1e43-86a8-41f0-abce-8540e59b8d6d": {
+    "connectionRef": {
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1653/1.0.1653.3403/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "workflowEntityId": {
+          "value": "57332871-5a24-ed11-b83e-000d3a37f0f9"
+        },
+        "workflowName": {
+          "value": "d0861f7a-64ae-7f36-ec42-9f44456907c1"
+        }
+      },
+      "parameterHintsV2": {
+        "workflowEntityId": {
+          "value": "57332871-5a24-ed11-b83e-000d3a37f0f9"
+        },
+        "workflowName": {
+          "value": "d0861f7a-64ae-7f36-ec42-9f44456907c1"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "Upload"
+    ],
+    "dependencies": {
+      "shared_excelonlinebusiness": "1a916735-900c-4d45-afd2-e9bd036e8df3",
+      "shared_sharepointonline": "391fb67a-599b-4e22-91d8-775183783e5f"
+    },
+    "dependents": [],
+    "id": "ec0a1e43-86a8-41f0-abce-8540e59b8d6d"
   },
   "fe562a7f-370a-4ce3-842a-29312f33217b": {
     "connectionRef": {
