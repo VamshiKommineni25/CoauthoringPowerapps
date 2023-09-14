@@ -1016,13 +1016,12 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "09/14/2023 07:22:55",
+  "HeaderLastSavedDateTimeUTC": "09/14/2023 07:43:18",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "097e9fa4-7ace-42a6-961b-6fdbaf8177e9": "\"/providers/microsoft.powerapps/apis/shared_office365/connections/4b5059090b30402da44c8636ba5a3546\"",
     "1d1757c5-20c0-46f7-bb17-6eccdc9bdd02": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/9a227058cc129bde3002db9b55280fbf-98ace1eadc88c31c\"",
     "1ffb2080-16a4-4f7c-8883-b373b72e135d": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/74b63f24b71f861e51644705adfc7c3a-98ace1eadc88c31c\"",
-    "2ef9b654-bc19-4c91-a3b1-1dabb176fd45": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/9cdf677e676b244b869d09f02705546c-98ace1eadc88c31c\"",
     "391fb67a-599b-4e22-91d8-775183783e5f": "\"/providers/microsoft.powerapps/apis/shared_sharepointonline/connections/71eca21ad0ee40d2978d6664ebe37943\"",
     "49149bfd-f47f-4d66-8afd-128764a3dfd3": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/837f1108c69c7411a1701a00ee546ab2-98ace1eadc88c31c\"",
     "4b347268-777c-4f67-a3dc-02a0bbcb4745": "\"/providers/microsoft.powerapps/apis/shared_sharepointonline/connections/71eca21ad0ee40d2978d6664ebe37943\"",
@@ -1031,6 +1030,7 @@
     "94d4fe3a-edd3-4317-b358-bcd5fe4d4307": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/5953c4af41a64b4fa811052b3e24447d\"",
     "b3723050-baac-4678-9f58-15696eee08c8": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/d8b351071626a44bb2e81da47b839182-98ace1eadc88c31c\"",
     "cabe7177-762e-4e71-8a44-1a25223cfa14": "\"/providers/microsoft.powerapps/apis/shared_office365users/connections/2c58cb0eda34459490bba05254943bec\"",
+    "e7be6e5d-8154-4559-bb0d-238891d400d6": "\"/providers/Microsoft.PowerApps/apis/shared_logicflows/connections/9CDF677E676B244B869D09F02705546C-98ACE1EADC88C31C\"",
     "fe562a7f-370a-4ce3-842a-29312f33217b": "\"/providers/microsoft.powerapps/apis/shared_sharepointonline/connections/71eca21ad0ee40d2978d6664ebe37943\""
   },
   "LocalDatabaseReferencesAsEmpty": false,
