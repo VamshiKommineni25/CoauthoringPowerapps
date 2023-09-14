@@ -165,7 +165,7 @@ C_AlertPanel As CanvasComponent:
                                     NotificationList_CertificationApp,
                                     2000
                                 ),
-                                "has uploaded proofs" = Notification And UserDeleted = false
+                                "has uploaded proofs" in Notification And AdminDeleted = false
                             ),
                             Created,
                             SortOrder.Descending
@@ -190,9 +190,9 @@ C_AlertPanel As CanvasComponent:
                     Font: =Font.'Segoe UI'
                     Height: =86
                     OnSelect: =Select(Parent)
-                    Size: =13
+                    Size: =10
                     Text: =ThisItem.Notification
-                    Width: =345
+                    Width: =290
                     ZIndex: =1
 
                 Separator1_3 As rectangle:
@@ -203,6 +203,32 @@ C_AlertPanel As CanvasComponent:
                     Width: =Parent.TemplateWidth
                     Y: =Parent.TemplateHeight - Self.Height
                     ZIndex: =3
+
+                Icon17 As icon.Cancel:
+                    BorderColor: =RGBA(166, 166, 166, 1)
+                    Color: =RGBA(151, 0, 0, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(220, 220, 220, 1)
+                    DisabledFill: =RGBA(0, 0, 0, 0)
+                    FocusedBorderThickness: =4
+                    Height: =20
+                    HoverBorderColor: =RGBA(0, 0, 0, 0)
+                    HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                    HoverFill: =RGBA(0, 0, 0, 0)
+                    Icon: =Icon.Cancel
+                    OnSelect: |
+                        =UpdateIf(
+                            NotificationList_CertificationApp,
+                            ID = ThisItem.ID,
+                            {AdminDeleted: Boolean(1)}
+                        )
+                    PressedBorderColor: =RGBA(0, 0, 0, 0)
+                    PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                    PressedFill: =RGBA(0, 0, 0, 0)
+                    Width: =20
+                    X: =303
+                    Y: =21
+                    ZIndex: =4
 
             Label20 As label:
                 BorderColor: =RGBA(0, 0, 0, 0)

@@ -742,7 +742,16 @@ Details_Screen As screen:
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
             Color: =RGBA(51, 51, 51, 1)
-            Default: =Switch(varCertificateDetails.PaymentMode,"Cash","Paid with Cash","Voucher","Paid with Voucher","Advance Payment","Advance Payment")
+            Default: |-
+                =Switch(
+                    varCertificateDetails.PaymentMode,
+                    "Cash",
+                    "Paid with Cash",
+                    "Voucher",
+                    "Paid with Voucher",
+                    "Advance Payment",
+                    "Advance Payment"
+                )
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
             DisabledColor: =RGBA(166, 166, 166, 1)
             DisplayMode: =DisplayMode.View
