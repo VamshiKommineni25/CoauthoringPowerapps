@@ -156,10 +156,10 @@
                     },
                     {
                         Provider: "Other",
-                        Count: (CountRows(FirstN(Certifications,100000)) - CountRows(
+                        Count: (CountRows(
                             Filter(
                                 FirstN(Certifications,100000),(DateValue(Created)>=Date_FromDate.SelectedDate && DateValue(Created)<=Date_ToDate.SelectedDate) &&
-                                'Provider Name' in [
+                                !'Provider Name' in [
                                     "Amazon",
                                     "Microsoft",
                                     "Gooogle"
@@ -264,7 +264,7 @@
                 RadioSelectionFill: =If(ThisItem.IsSelected=true,RGBA(185, 29, 11, 1),RGBA(136, 147, 176, 1))
                 RadioSize: =20
                 Size: =8
-                Width: =242
+                Width: =245
                 ZIndex: =1
 
         Date_FromDate As datepicker:
