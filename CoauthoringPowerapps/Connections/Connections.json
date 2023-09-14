@@ -180,8 +180,7 @@
     "dependents": [
       "92417228-d96e-4487-b432-7e6fa6b02e79",
       "0a161502-c33c-44e6-a076-81b4ab9ec644",
-      "75bd49e9-29e9-4749-8a24-272a47e3fdf8",
-      "ec0a1e43-86a8-41f0-abce-8540e59b8d6d"
+      "75bd49e9-29e9-4749-8a24-272a47e3fdf8"
     ],
     "id": "391fb67a-599b-4e22-91d8-775183783e5f"
   },
@@ -400,6 +399,28 @@
     "dependencies": {},
     "dependents": [],
     "id": "cabe7177-762e-4e71-8a44-1a25223cfa14"
+  },
+  "d6c46d85-9dd5-42fb-8680-c7f9f3ee95e7": {
+    "connectionRef": {
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/u/henryorsborn/partial-builds/asev3migrations-with-resourceTemplate/1.0.1653.3403/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline"
+    },
+    "datasets": {
+      "https://ilinksystemsinc449.sharepoint.com/sites/CertificationApp": {
+        "dataSources": {
+          "CertificationApp-Security": {
+            "tableName": "90d46ce2-33b9-406a-b527-52d7c4a982a4"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "CertificationApp-Security"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "d6c46d85-9dd5-42fb-8680-c7f9f3ee95e7"
   },
   "ec0a1e43-86a8-41f0-abce-8540e59b8d6d": {
     "connectionRef": {
