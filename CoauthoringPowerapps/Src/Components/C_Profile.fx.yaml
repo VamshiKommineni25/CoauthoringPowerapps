@@ -101,7 +101,7 @@ C_Profile As CanvasComponent:
                 FontWeight: =FontWeight.Semibold
                 Height: =23.4
                 Size: =10
-                Text: ="Employee"
+                Text: =Switch(varUserLevel,"USER","Employee","ADMIN","Manager","SUPER-ADMIN","Admin")
                 Width: =97.11
                 X: =98
                 Y: =105
