@@ -74,7 +74,7 @@ Details_Screen As screen:
             Y: =13
             ZIndex: =1
 
-        Button4_2 As button:
+        Btn_AddDocs As button:
             BorderColor: =RGBA(189, 25, 11, 1)
             BorderThickness: =1
             Color: =RGBA(189, 25, 11, 1)
@@ -106,7 +106,7 @@ Details_Screen As screen:
             Y: =13
             ZIndex: =2
 
-        Button4_3 As button:
+        Btn_ReviseCert As button:
             BorderColor: =RGBA(189, 25, 11, 1)
             BorderThickness: =1
             Color: =RGBA(189, 25, 11, 1)
@@ -133,11 +133,11 @@ Details_Screen As screen:
             Text: ="Revise"
             Visible: =If(varApprove,true,false)
             Width: =84
-            X: =993
+            X: =867
             Y: =13
             ZIndex: =3
 
-        Button2 As button:
+        Btn_ApproveCert As button:
             BorderColor: =RGBA(0, 0, 0, 0)
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
             DisabledColor: =RGBA(166, 166, 166, 1)
@@ -238,9 +238,41 @@ Details_Screen As screen:
             Text: ="Approve"
             Visible: =If(varApprove,true,false)
             Width: =84
-            X: =1110
+            X: =966
             Y: =13
             ZIndex: =4
+
+        Btn_ViewDocs As button:
+            BorderColor: =RGBA(189, 25, 11, 1)
+            BorderThickness: =1
+            Color: =RGBA(189, 25, 11, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(0, 0, 0, 0)
+            FocusedBorderColor: =RGBA(189, 25, 11, 1)
+            FocusedBorderThickness: =1
+            Font: ="Poppins"
+            FontWeight: =FontWeight.Semibold
+            Height: =26
+            HoverBorderColor: =RGBA(189, 25, 11, 1)
+            HoverColor: =RGBA(189, 25, 11, 1)
+            HoverFill: =ColorFade(RGBA(0, 0, 0, 0), -10%)
+            OnSelect: =Set(var_LnD_PanelView,true)
+            PressedBorderColor: =RGBA(189, 25, 11, 1)
+            PressedColor: =RGBA(189, 25, 11, 1)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            RadiusBottomLeft: =5
+            RadiusBottomRight: =5
+            RadiusTopLeft: =5
+            RadiusTopRight: =5
+            Size: =8
+            Text: ="View Proofs"
+            Visible: =If(varApprove And varUserLevel="SUPER-ADMIN",true,false)
+            Width: =123
+            X: =1074
+            Y: =13
+            ZIndex: =5
 
     Container17_3 As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Light
@@ -713,6 +745,7 @@ Details_Screen As screen:
             Default: =Switch(varCertificateDetails.PaymentMode,"Cash","Paid with Cash","Voucher","Paid with Voucher","Advance Payment","Advance Payment")
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
             DisabledColor: =RGBA(166, 166, 166, 1)
+            DisplayMode: =DisplayMode.View
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Lighter
@@ -3237,4 +3270,1182 @@ Details_Screen As screen:
             X: =763
             Y: =460
             ZIndex: =9
+
+    Container16_6 As groupContainer.manualLayoutContainer:
+        Height: =768
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Visible: =var_LnD_PanelView
+        Width: =390
+        X: =976
+        ZIndex: =10
+
+        Container17_5 As groupContainer.manualLayoutContainer:
+            DropShadow: =DropShadow.ExtraBold
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =768
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            Width: =348
+            X: =42
+            ZIndex: =1
+
+            Label4_10 As label:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: ="Poppins"
+                FontWeight: =FontWeight.Bold
+                Height: =32
+                Text: ="Supported Documents"
+                Width: =250
+                X: =21.98
+                Y: =18
+                ZIndex: =1
+
+            Icon16_4 As icon.Cancel:
+                BorderColor: =RGBA(166, 166, 166, 1)
+                Color: =RGBA(116, 116, 116, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(220, 220, 220, 1)
+                DisabledFill: =RGBA(0, 0, 0, 0)
+                FocusedBorderThickness: =4
+                Height: =20
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                HoverFill: =RGBA(0, 0, 0, 0)
+                Icon: =Icon.Cancel
+                OnSelect: |
+                    =Set(var_LnD_PanelView,false)
+                PressedBorderColor: =RGBA(0, 0, 0, 0)
+                PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                PressedFill: =RGBA(0, 0, 0, 0)
+                Width: =20
+                X: =315
+                Y: =26
+                ZIndex: =2
+
+            Container16_7 As groupContainer.verticalAutoLayoutContainer:
+                Height: =687
+                LayoutAlignItems: =LayoutAlignItems.Stretch
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutGap: =10
+                LayoutJustifyContent: =LayoutJustifyContent.End
+                LayoutMode: =LayoutMode.Auto
+                LayoutOverflowX: =LayoutOverflow.Scroll
+                LayoutOverflowY: =LayoutOverflow.Scroll
+                PaddingBottom: =10
+                PaddingLeft: =10
+                PaddingRight: =10
+                PaddingTop: =10
+                Width: =348
+                Y: =81
+                ZIndex: =4
+
+                Container17_9 As groupContainer.manualLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    Fill: =RGBA(242, 242, 242, 1)
+                    FillPortions: =0.2
+                    LayoutMinHeight: =5
+                    LayoutMinWidth: =150
+                    Width: =Parent.Width
+                    X: =40
+                    Y: =40
+                    ZIndex: =2
+
+                    Attachments_2 As attachments:
+                        AccessibleLabel: ="Attachments"
+                        BorderColor: =RGBA(202, 202, 202, 1)
+                        BorderThickness: =0.1
+                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        DisabledFill: =RGBA(244, 244, 244, 1)
+                        DropTargetBorderColor: =RGBA(219, 219, 219, 1)
+                        DropTargetBorderThickness: =0
+                        FocusedBorderThickness: =4
+                        Height: =75
+                        HoverColor: =RGBA(0, 0, 0, 1)
+                        HoverFill: =RGBA(186, 202, 226, 1)
+                        IsInDataCard: =true
+                        ItemColor: =RGBA(255, 255, 255, 1)
+                        ItemFill: =RGBA(56, 96, 178, 1)
+                        ItemHoverColor: =RGBA(0, 0, 0, 1)
+                        ItemHoverFill: =RGBA(186, 202, 226, 1)
+                        Items: =
+                        OnAddFile: |-
+                            =/*Set(
+                                VarAttachmentControl,
+                                JSON(
+                                    Image9.Image,
+                                    IncludeBinaryData
+                                )
+                            );
+                            Set(
+                                VarBase64Only,
+                                Mid(
+                                    VarAttachmentControl,
+                                    Find(
+                                        ",",
+                                        VarAttachmentControl
+                                    ) + 1,
+                                    Len(VarAttachmentControl) - Find(
+                                        ",",
+                                        VarAttachmentControl
+                                    ) - 1
+                                )
+                            );
+                            Attachments_1.Run(
+                                varCertificateStatus.ID,
+                                Last(Attachments.Attachments).Name,
+                                VarBase64Only
+                            );
+                            */
+                            Refresh(CertificationOrder)
+                        PressedColor: =RGBA(255, 255, 255, 1)
+                        PressedFill: =RGBA(0, 18, 107, 1)
+                        Size: =10
+                        Tooltip: ="Upload 5 Documents"
+                        Visible: =varattach
+                        Width: =Parent.Width
+                        Y: =38
+                        ZIndex: =1
+
+                    "Gallery8_3 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+                        AccessibleLabel: ="Gallery8"
+                        BorderColor: =RGBA(0, 18, 107, 1)
+                        Height: =70
+                        Items: =Attachments_2.Attachments
+                        Layout: =Layout.Vertical
+                        ShowScrollbar: =false
+                        TemplatePadding: =0
+                        TemplateSize: =Min(160, Self.Height - 60)
+                        Visible: =false
+                        Width: =Parent.Width
+                        Y: =48
+                        ZIndex: =3
+
+                        Image10_11 As image:
+                            BorderColor: =RGBA(0, 18, 107, 1)
+                            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            Height: =1
+                            Image: =ThisItem.Value
+                            OnSelect: =Select(Parent)
+                            Width: =1
+                            ZIndex: =1
+
+                        Title6_11 As label:
+                            Color: =RGBA(0, 0, 0, 1)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FontWeight: =FontWeight.Semibold
+                            Height: =1
+                            OnSelect: =Select(Parent)
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Size: =20
+                            Text: =ThisItem.Name
+                            VerticalAlign: =VerticalAlign.Top
+                            Width: =Parent.TemplateWidth - Image10_11.Width - 104
+                            X: =1
+                            ZIndex: =2
+
+                        Subtitle1_4 As label:
+                            Color: =RGBA(0, 0, 0, 1)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            Height: =1
+                            OnSelect: =Select(Parent)
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Size: =18
+                            Text: =ThisItem.Value
+                            VerticalAlign: =VerticalAlign.Top
+                            Width: =Title6_11.Width
+                            X: =1
+                            ZIndex: =3
+
+                        NextArrow2_11 As icon.ChevronRight:
+                            AccessibleLabel: =Self.Tooltip
+                            BorderColor: =RGBA(0, 18, 107, 1)
+                            Color: =RGBA(0, 18, 107, 1)
+                            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                            DisabledColor: =RGBA(244, 244, 244, 1)
+                            Height: =1
+                            Icon: =Icon.ChevronRight
+                            OnSelect: =Select(Parent)
+                            PaddingBottom: =10
+                            PaddingLeft: =10
+                            PaddingRight: =10
+                            PaddingTop: =10
+                            TabIndex: =0
+                            Tooltip: ="View item details"
+                            Width: =1
+                            ZIndex: =4
+
+                        Separator6_11 As rectangle:
+                            BorderColor: =RGBA(0, 18, 107, 1)
+                            Fill: =RGBA(0, 18, 107, 1)
+                            Height: =1
+                            OnSelect: =Select(Parent)
+                            Width: =Parent.TemplateWidth
+                            Y: =Parent.TemplateHeight - 1
+                            ZIndex: =5
+
+                    "Gallery13_11 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+                        AccessibleLabel: ="Gallery13"
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderThickness: =0.1
+                        Fill: =RGBA(255, 255, 255, 1)
+                        Height: =75
+                        Items: =First(LookUp(CertificationOrder,ID=varCertificateDetails.ID).Attachments)
+                        Layout: =Layout.Vertical
+                        OnSelect: =Launch(ThisItem.AbsoluteUri)
+                        ShowScrollbar: =false
+                        TemplatePadding: =0
+                        TemplateSize: =38
+                        Visible: =varattach1
+                        Width: =Parent.Width
+                        Y: =38
+                        ZIndex: =6
+
+                        Separator9_11 As rectangle:
+                            BorderColor: =RGBA(0, 18, 107, 1)
+                            Fill: =RGBA(179, 179, 179, 1)
+                            Height: =1
+                            OnSelect: =Select(Parent)
+                            Visible: =false
+                            Width: =Parent.TemplateWidth
+                            Y: =Parent.TemplateHeight - 1
+                            ZIndex: =5
+
+                        Label78_11 As label:
+                            BorderColor: =RGBA(0, 18, 107, 1)
+                            Color: =RGBA(0, 0, 0, 1)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            Fill: =RGBA(255, 255, 255, 1)
+                            Height: =38
+                            OnSelect: =Select(Parent)
+                            Size: =8
+                            Text: =ThisItem.DisplayName
+                            Width: =Gallery13_11.Width
+                            ZIndex: =6
+
+                        RemoveAttachment_11 As icon.Cancel:
+                            AccessibleLabel: ="RemoveAttachment"
+                            BorderColor: =RGBA(0, 18, 107, 1)
+                            Color: =RGBA(0, 18, 107, 1)
+                            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                            DisabledColor: =RGBA(244, 244, 244, 1)
+                            Height: =17
+                            Icon: =Icon.Cancel
+                            OnSelect: |-
+                                =//Select(Parent);
+                                //'DeleteAttachments-CertificationApp'.Run(varCertificateStatus.ID,varCertificateStatus.ID);
+                                First(LookUp(CertificationOrder,'DeleteAttachments-CertificationApp'.Run(varCertificateDetails.ID,varCertificateDetails.ID)).Attachments);
+                                Set(varattach,true);
+                                
+                                Refresh(CertificationOrder);
+                            Visible: =false
+                            Width: =1
+                            Y: =9
+                            ZIndex: =7
+
+                    Label15_5 As label:
+                        Color: =RGBA(0, 0, 0, 1)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        FontWeight: =FontWeight.Semibold
+                        Height: =38
+                        Size: =8
+                        Text: |-
+                            ="Microsoft account for Association Screenshot :"
+                        Width: =148
+                        ZIndex: =7
+
+                Container17_10 As groupContainer.manualLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    Fill: =RGBA(242, 242, 242, 1)
+                    FillPortions: =0.2
+                    Height: =62
+                    LayoutMinHeight: =5
+                    LayoutMinWidth: =250
+                    Width: =Parent.Width
+                    ZIndex: =3
+
+                    Attachments_10 As attachments:
+                        AccessibleLabel: ="Attachments_4"
+                        BorderColor: =RGBA(202, 202, 202, 1)
+                        BorderThickness: =0.1
+                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        DisabledFill: =RGBA(244, 244, 244, 1)
+                        DropTargetBorderColor: =RGBA(219, 219, 219, 1)
+                        DropTargetBorderThickness: =0
+                        FocusedBorderThickness: =4
+                        Height: =75
+                        HoverColor: =RGBA(0, 0, 0, 1)
+                        HoverFill: =RGBA(186, 202, 226, 1)
+                        IsInDataCard: =true
+                        ItemColor: =RGBA(255, 255, 255, 1)
+                        ItemFill: =RGBA(56, 96, 178, 1)
+                        ItemHoverColor: =RGBA(0, 0, 0, 1)
+                        ItemHoverFill: =RGBA(186, 202, 226, 1)
+                        Items: =
+                        OnAddFile: |-
+                            =/*Set(
+                                VarAttachmentControl,
+                                JSON(
+                                    Image9.Image,
+                                    IncludeBinaryData
+                                )
+                            );
+                            Set(
+                                VarBase64Only,
+                                Mid(
+                                    VarAttachmentControl,
+                                    Find(
+                                        ",",
+                                        VarAttachmentControl
+                                    ) + 1,
+                                    Len(VarAttachmentControl) - Find(
+                                        ",",
+                                        VarAttachmentControl
+                                    ) - 1
+                                )
+                            );
+                            Attachments_1.Run(
+                                varCertificateStatus.ID,
+                                Last(Attachments.Attachments).Name,
+                                VarBase64Only
+                            );
+                            */
+                            Refresh(CertificationOrder)
+                        PressedColor: =RGBA(255, 255, 255, 1)
+                        PressedFill: =RGBA(0, 18, 107, 1)
+                        Size: =10
+                        Tooltip: ="Upload 5 Documents"
+                        Visible: =varattach2
+                        Width: =Parent.Width
+                        Y: =38
+                        ZIndex: =1
+
+                    "Gallery8_11 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+                        AccessibleLabel: ="Gallery8_1"
+                        BorderColor: =RGBA(0, 18, 107, 1)
+                        Height: =75
+                        Items: =Attachments_10.Attachments
+                        Layout: =Layout.Vertical
+                        ShowScrollbar: =false
+                        TemplatePadding: =0
+                        TemplateSize: =Min(160, Self.Height - 60)
+                        Visible: =false
+                        Width: =Parent.Width
+                        Y: =38
+                        ZIndex: =3
+
+                        Image10_12 As image:
+                            BorderColor: =RGBA(0, 18, 107, 1)
+                            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            Height: =1
+                            Image: =ThisItem.Value
+                            OnSelect: =Select(Parent)
+                            Width: =1
+                            ZIndex: =1
+
+                        Title6_12 As label:
+                            Color: =RGBA(0, 0, 0, 1)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FontWeight: =FontWeight.Semibold
+                            Height: =1
+                            OnSelect: =Select(Parent)
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Size: =20
+                            Text: =ThisItem.Name
+                            VerticalAlign: =VerticalAlign.Top
+                            Width: =Parent.TemplateWidth - Image10_12.Width - 104
+                            X: =1
+                            ZIndex: =2
+
+                        Subtitle1_12 As label:
+                            Color: =RGBA(0, 0, 0, 1)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            Height: =1
+                            OnSelect: =Select(Parent)
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Size: =18
+                            Text: =ThisItem.Value
+                            VerticalAlign: =VerticalAlign.Top
+                            Width: =Title6_12.Width
+                            X: =1
+                            ZIndex: =3
+
+                        NextArrow2_12 As icon.ChevronRight:
+                            AccessibleLabel: =Self.Tooltip
+                            BorderColor: =RGBA(0, 18, 107, 1)
+                            Color: =RGBA(0, 18, 107, 1)
+                            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                            DisabledColor: =RGBA(244, 244, 244, 1)
+                            Height: =1
+                            Icon: =Icon.ChevronRight
+                            OnSelect: =Select(Parent)
+                            PaddingBottom: =10
+                            PaddingLeft: =10
+                            PaddingRight: =10
+                            PaddingTop: =10
+                            TabIndex: =0
+                            Tooltip: ="View item details"
+                            Width: =1
+                            ZIndex: =4
+
+                        Separator6_12 As rectangle:
+                            BorderColor: =RGBA(0, 18, 107, 1)
+                            Fill: =RGBA(0, 18, 107, 1)
+                            Height: =1
+                            OnSelect: =Select(Parent)
+                            Width: =Parent.TemplateWidth
+                            Y: =Parent.TemplateHeight - 1
+                            ZIndex: =5
+
+                    "Gallery13_12 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+                        AccessibleLabel: ="Gallery13_1"
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderThickness: =0.1
+                        Fill: =RGBA(255, 255, 255, 1)
+                        Height: =75
+                        Items: =Last(FirstN(LookUp(CertificationOrder,ID=varCertificateDetails.ID).Attachments,2))
+                        Layout: =Layout.Vertical
+                        OnSelect: =Launch(ThisItem.AbsoluteUri)
+                        ShowScrollbar: =false
+                        TemplatePadding: =0
+                        TemplateSize: =38
+                        Visible: =varattach3
+                        Width: =Parent.Width
+                        Y: =38
+                        ZIndex: =6
+
+                        Separator9_12 As rectangle:
+                            BorderColor: =RGBA(0, 18, 107, 1)
+                            Fill: =RGBA(179, 179, 179, 1)
+                            Height: =1
+                            OnSelect: =Select(Parent)
+                            Visible: =false
+                            Width: =Parent.TemplateWidth
+                            Y: =Parent.TemplateHeight - 1
+                            ZIndex: =5
+
+                        Label78_12 As label:
+                            BorderColor: =RGBA(0, 18, 107, 1)
+                            Color: =RGBA(0, 0, 0, 1)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            Fill: =RGBA(255, 255, 255, 1)
+                            Height: =38
+                            OnSelect: =Select(Parent)
+                            Size: =8
+                            Text: =ThisItem.DisplayName
+                            Width: |
+                                =Gallery13_12.Width
+                            ZIndex: =6
+
+                        RemoveAttachment_12 As icon.Cancel:
+                            AccessibleLabel: ="RemoveAttachment_1"
+                            BorderColor: =RGBA(0, 18, 107, 1)
+                            Color: =RGBA(0, 18, 107, 1)
+                            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                            DisabledColor: =RGBA(244, 244, 244, 1)
+                            Height: =17
+                            Icon: =Icon.Cancel
+                            OnSelect: |
+                                =//Select(Parent);
+                                Last(FirstN(LookUp(CertificationOrder,'DeleteAttachments-CertificationApp'.Run(varCertificateDetails.ID,varCertificateDetails.ID)).Attachments,2));
+                                
+                                Refresh(CertificationOrder)
+                            Visible: =false
+                            Width: =1
+                            Y: =9
+                            ZIndex: =7
+
+                    Label15_7 As label:
+                        Color: =RGBA(0, 0, 0, 1)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        FontWeight: =FontWeight.Semibold
+                        Height: =38
+                        Size: =8
+                        Text: |-
+                            ="Certification Receipt Bill :"
+                        Width: =164
+                        ZIndex: =7
+
+                Container17_20 As groupContainer.manualLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    Fill: =RGBA(242, 242, 242, 1)
+                    FillPortions: =0.2
+                    Height: =62
+                    LayoutMinHeight: =5
+                    LayoutMinWidth: =250
+                    Width: =Parent.Width
+                    ZIndex: =4
+
+                    Attachments_11 As attachments:
+                        AccessibleLabel: ="Attachments_5"
+                        BorderColor: =RGBA(202, 202, 202, 1)
+                        BorderThickness: =0.1
+                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        DisabledFill: =RGBA(244, 244, 244, 1)
+                        DropTargetBorderColor: =RGBA(219, 219, 219, 1)
+                        DropTargetBorderThickness: =0
+                        FocusedBorderThickness: =4
+                        Height: =75
+                        HoverColor: =RGBA(0, 0, 0, 1)
+                        HoverFill: =RGBA(186, 202, 226, 1)
+                        IsInDataCard: =true
+                        ItemColor: =RGBA(255, 255, 255, 1)
+                        ItemFill: =RGBA(56, 96, 178, 1)
+                        ItemHoverColor: =RGBA(0, 0, 0, 1)
+                        ItemHoverFill: =RGBA(186, 202, 226, 1)
+                        Items: =
+                        OnAddFile: |-
+                            =/*Set(
+                                VarAttachmentControl,
+                                JSON(
+                                    Image9.Image,
+                                    IncludeBinaryData
+                                )
+                            );
+                            Set(
+                                VarBase64Only,
+                                Mid(
+                                    VarAttachmentControl,
+                                    Find(
+                                        ",",
+                                        VarAttachmentControl
+                                    ) + 1,
+                                    Len(VarAttachmentControl) - Find(
+                                        ",",
+                                        VarAttachmentControl
+                                    ) - 1
+                                )
+                            );
+                            Attachments_1.Run(
+                                varCertificateStatus.ID,
+                                Last(Attachments.Attachments).Name,
+                                VarBase64Only
+                            );
+                            */
+                            Refresh(CertificationOrder)
+                        PressedColor: =RGBA(255, 255, 255, 1)
+                        PressedFill: =RGBA(0, 18, 107, 1)
+                        Size: =10
+                        Tooltip: ="Upload 5 Documents"
+                        Visible: =varattach4
+                        Width: =Parent.Width
+                        Y: =38
+                        ZIndex: =1
+
+                    "Gallery8_12 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+                        AccessibleLabel: ="Gallery8_3"
+                        BorderColor: =RGBA(0, 18, 107, 1)
+                        Height: =75
+                        Items: =Attachments_11.Attachments
+                        Layout: =Layout.Vertical
+                        ShowScrollbar: =false
+                        TemplatePadding: =0
+                        TemplateSize: =Min(160, Self.Height - 60)
+                        Visible: =false
+                        Width: =Parent.Width
+                        Y: =43
+                        ZIndex: =3
+
+                        Image10_13 As image:
+                            BorderColor: =RGBA(0, 18, 107, 1)
+                            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            Height: =1
+                            Image: =ThisItem.Value
+                            OnSelect: =Select(Parent)
+                            Width: =1
+                            ZIndex: =1
+
+                        Title6_13 As label:
+                            Color: =RGBA(0, 0, 0, 1)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FontWeight: =FontWeight.Semibold
+                            Height: =1
+                            OnSelect: =Select(Parent)
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Size: =20
+                            Text: =ThisItem.Name
+                            VerticalAlign: =VerticalAlign.Top
+                            Width: =Parent.TemplateWidth - Image10_13.Width - 104
+                            X: =1
+                            ZIndex: =2
+
+                        Subtitle1_13 As label:
+                            Color: =RGBA(0, 0, 0, 1)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            Height: =1
+                            OnSelect: =Select(Parent)
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Size: =18
+                            Text: =ThisItem.Value
+                            VerticalAlign: =VerticalAlign.Top
+                            Width: =Title6_13.Width
+                            X: =1
+                            ZIndex: =3
+
+                        NextArrow2_13 As icon.ChevronRight:
+                            AccessibleLabel: =Self.Tooltip
+                            BorderColor: =RGBA(0, 18, 107, 1)
+                            Color: =RGBA(0, 18, 107, 1)
+                            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                            DisabledColor: =RGBA(244, 244, 244, 1)
+                            Height: =1
+                            Icon: =Icon.ChevronRight
+                            OnSelect: =Select(Parent)
+                            PaddingBottom: =10
+                            PaddingLeft: =10
+                            PaddingRight: =10
+                            PaddingTop: =10
+                            TabIndex: =0
+                            Tooltip: ="View item details"
+                            Width: =1
+                            ZIndex: =4
+
+                        Separator6_13 As rectangle:
+                            BorderColor: =RGBA(0, 18, 107, 1)
+                            Fill: =RGBA(0, 18, 107, 1)
+                            Height: =1
+                            OnSelect: =Select(Parent)
+                            Width: =Parent.TemplateWidth
+                            Y: =Parent.TemplateHeight - 1
+                            ZIndex: =5
+
+                    "Gallery13_13 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+                        AccessibleLabel: ="Gallery13_2"
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderThickness: =0.1
+                        Fill: =RGBA(255, 255, 255, 1)
+                        Height: =75
+                        Items: =Last(FirstN(LookUp(CertificationOrder,ID=varCertificateDetails.ID).Attachments,3))
+                        Layout: =Layout.Vertical
+                        OnSelect: =Launch(ThisItem.AbsoluteUri)
+                        ShowScrollbar: =false
+                        TemplatePadding: =0
+                        TemplateSize: =26
+                        Visible: =varattach5
+                        Width: =Parent.Width
+                        Y: =38
+                        ZIndex: =6
+
+                        Separator9_13 As rectangle:
+                            BorderColor: =RGBA(0, 18, 107, 1)
+                            Fill: =RGBA(179, 179, 179, 1)
+                            Height: =1
+                            OnSelect: =Select(Parent)
+                            Visible: =false
+                            Width: =Parent.TemplateWidth
+                            Y: =Parent.TemplateHeight - 1
+                            ZIndex: =5
+
+                        Label78_13 As label:
+                            BorderColor: =RGBA(0, 18, 107, 1)
+                            Color: =RGBA(0, 0, 0, 1)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            Fill: =RGBA(255, 255, 255, 1)
+                            Height: =26
+                            OnSelect: =Select(Parent)
+                            Size: =8
+                            Text: =ThisItem.DisplayName
+                            Width: =Gallery13_13.Width
+                            ZIndex: =6
+
+                        RemoveAttachment_13 As icon.Cancel:
+                            AccessibleLabel: ="RemoveAttachment_2"
+                            BorderColor: =RGBA(0, 18, 107, 1)
+                            Color: =RGBA(0, 18, 107, 1)
+                            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                            DisabledColor: =RGBA(244, 244, 244, 1)
+                            Height: =17
+                            Icon: =Icon.Cancel
+                            OnSelect: |
+                                =//Select(Parent);
+                                Last(FirstN(LookUp(CertificationOrder,'DeleteAttachments-CertificationApp'.Run(varCertificateDetails.ID,varCertificateDetails.ID)).Attachments,3));
+                                
+                                Refresh(CertificationOrder)
+                            Visible: =false
+                            Width: =1
+                            Y: =9
+                            ZIndex: =7
+
+                    Label15_18 As label:
+                        Color: =RGBA(0, 0, 0, 1)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        FontWeight: =FontWeight.Semibold
+                        Height: =38
+                        Size: =8
+                        Text: |-
+                            ="Reimbursement form Filled :"
+                        Width: =158
+                        ZIndex: =7
+
+                Container17_21 As groupContainer.manualLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    Fill: =RGBA(242, 242, 242, 1)
+                    FillPortions: =0.2
+                    Height: =62
+                    LayoutMinHeight: =5
+                    LayoutMinWidth: =250
+                    Width: =Parent.Width
+                    ZIndex: =5
+
+                    Attachments_13 As attachments:
+                        AccessibleLabel: ="Attachments_6"
+                        BorderColor: =RGBA(202, 202, 202, 1)
+                        BorderThickness: =0.1
+                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        DisabledFill: =RGBA(244, 244, 244, 1)
+                        DropTargetBorderColor: =RGBA(219, 219, 219, 1)
+                        DropTargetBorderThickness: =0
+                        FocusedBorderThickness: =4
+                        Height: =75
+                        HoverColor: =RGBA(0, 0, 0, 1)
+                        HoverFill: =RGBA(186, 202, 226, 1)
+                        IsInDataCard: =true
+                        ItemColor: =RGBA(255, 255, 255, 1)
+                        ItemFill: =RGBA(56, 96, 178, 1)
+                        ItemHoverColor: =RGBA(0, 0, 0, 1)
+                        ItemHoverFill: =RGBA(186, 202, 226, 1)
+                        Items: =
+                        OnAddFile: |-
+                            =/*Set(
+                                VarAttachmentControl,
+                                JSON(
+                                    Image9.Image,
+                                    IncludeBinaryData
+                                )
+                            );
+                            Set(
+                                VarBase64Only,
+                                Mid(
+                                    VarAttachmentControl,
+                                    Find(
+                                        ",",
+                                        VarAttachmentControl
+                                    ) + 1,
+                                    Len(VarAttachmentControl) - Find(
+                                        ",",
+                                        VarAttachmentControl
+                                    ) - 1
+                                )
+                            );
+                            Attachments_1.Run(
+                                varCertificateStatus.ID,
+                                Last(Attachments.Attachments).Name,
+                                VarBase64Only
+                            );
+                            */
+                            Refresh(CertificationOrder)
+                        PressedColor: =RGBA(255, 255, 255, 1)
+                        PressedFill: =RGBA(0, 18, 107, 1)
+                        Size: =10
+                        Tooltip: ="Upload 5 Documents"
+                        Visible: =varattach6
+                        Width: =Parent.Width
+                        Y: =38
+                        ZIndex: =1
+
+                    "Gallery8_13 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+                        AccessibleLabel: ="Gallery8_4"
+                        BorderColor: =RGBA(0, 18, 107, 1)
+                        Height: =75
+                        Items: =Attachments_13.Attachments
+                        Layout: =Layout.Vertical
+                        ShowScrollbar: =false
+                        TemplatePadding: =0
+                        TemplateSize: =Min(160, Self.Height - 60)
+                        Visible: =false
+                        Width: =Parent.Width
+                        Y: =18
+                        ZIndex: =3
+
+                        Image10_14 As image:
+                            BorderColor: =RGBA(0, 18, 107, 1)
+                            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            Height: =1
+                            Image: =ThisItem.Value
+                            OnSelect: =Select(Parent)
+                            Width: =1
+                            ZIndex: =1
+
+                        Title6_14 As label:
+                            Color: =RGBA(0, 0, 0, 1)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FontWeight: =FontWeight.Semibold
+                            Height: =1
+                            OnSelect: =Select(Parent)
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Size: =20
+                            Text: =ThisItem.Name
+                            VerticalAlign: =VerticalAlign.Top
+                            Width: =Parent.TemplateWidth - Image10_14.Width - 104
+                            X: =1
+                            ZIndex: =2
+
+                        Subtitle1_14 As label:
+                            Color: =RGBA(0, 0, 0, 1)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            Height: =1
+                            OnSelect: =Select(Parent)
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Size: =18
+                            Text: =ThisItem.Value
+                            VerticalAlign: =VerticalAlign.Top
+                            Width: =Title6_14.Width
+                            X: =1
+                            ZIndex: =3
+
+                        NextArrow2_14 As icon.ChevronRight:
+                            AccessibleLabel: =Self.Tooltip
+                            BorderColor: =RGBA(0, 18, 107, 1)
+                            Color: =RGBA(0, 18, 107, 1)
+                            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                            DisabledColor: =RGBA(244, 244, 244, 1)
+                            Height: =1
+                            Icon: =Icon.ChevronRight
+                            OnSelect: =Select(Parent)
+                            PaddingBottom: =10
+                            PaddingLeft: =10
+                            PaddingRight: =10
+                            PaddingTop: =10
+                            TabIndex: =0
+                            Tooltip: ="View item details"
+                            Width: =1
+                            ZIndex: =4
+
+                        Separator6_14 As rectangle:
+                            BorderColor: =RGBA(0, 18, 107, 1)
+                            Fill: =RGBA(0, 18, 107, 1)
+                            Height: =1
+                            OnSelect: =Select(Parent)
+                            Width: =Parent.TemplateWidth
+                            Y: =Parent.TemplateHeight - 1
+                            ZIndex: =5
+
+                    "Gallery13_14 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+                        AccessibleLabel: ="Gallery13_3"
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderThickness: =0.1
+                        Fill: =RGBA(255, 255, 255, 1)
+                        Height: =75
+                        Items: =Last(FirstN(LookUp(CertificationOrder,ID=varCertificateDetails.ID).Attachments,4))
+                        Layout: =Layout.Vertical
+                        OnSelect: =Launch(ThisItem.AbsoluteUri)
+                        ShowScrollbar: =false
+                        TemplatePadding: =0
+                        TemplateSize: =26
+                        Visible: =varattach7
+                        Width: =Parent.Width
+                        Y: =38
+                        ZIndex: =6
+
+                        Separator9_14 As rectangle:
+                            BorderColor: =RGBA(0, 18, 107, 1)
+                            Fill: =RGBA(179, 179, 179, 1)
+                            Height: =1
+                            OnSelect: =Select(Parent)
+                            Visible: =false
+                            Width: =Parent.TemplateWidth
+                            Y: =Parent.TemplateHeight - 1
+                            ZIndex: =5
+
+                        Label78_14 As label:
+                            BorderColor: =RGBA(0, 18, 107, 1)
+                            Color: =RGBA(0, 0, 0, 1)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            Fill: =RGBA(255, 255, 255, 1)
+                            Height: =26
+                            OnSelect: =Select(Parent)
+                            Size: =8
+                            Text: =ThisItem.DisplayName
+                            Width: =Gallery13_14.Width
+                            ZIndex: =6
+
+                        RemoveAttachment_14 As icon.Cancel:
+                            AccessibleLabel: ="RemoveAttachment_3"
+                            BorderColor: =RGBA(0, 18, 107, 1)
+                            Color: =RGBA(0, 18, 107, 1)
+                            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                            DisabledColor: =RGBA(244, 244, 244, 1)
+                            Height: =17
+                            Icon: =Icon.Cancel
+                            OnSelect: |
+                                =//Select(Parent);
+                                Last(FirstN(LookUp(CertificationOrder,'DeleteAttachments-CertificationApp'.Run(varCertificateDetails.ID,varCertificateDetails.ID)).Attachments,4));
+                                
+                                Refresh(CertificationOrder)
+                            Visible: =false
+                            Width: =1
+                            Y: =9
+                            ZIndex: =7
+
+                    Label15_19 As label:
+                        Color: =RGBA(0, 0, 0, 1)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        FontWeight: =FontWeight.Semibold
+                        Height: =38
+                        Size: =8
+                        Text: |-
+                            ="Copy of Certification :"
+                        Width: =154
+                        ZIndex: =7
+
+                Container17_22 As groupContainer.manualLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    Fill: =RGBA(242, 242, 242, 1)
+                    FillPortions: =0.2
+                    Height: =62
+                    LayoutMinHeight: =5
+                    LayoutMinWidth: =250
+                    Width: =Parent.Width
+                    ZIndex: =6
+
+                    Attachments_14 As attachments:
+                        AccessibleLabel: ="Attachments_11"
+                        BorderColor: =RGBA(202, 202, 202, 1)
+                        BorderThickness: =0.1
+                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        DisabledFill: =RGBA(244, 244, 244, 1)
+                        DropTargetBorderColor: =RGBA(219, 219, 219, 1)
+                        DropTargetBorderThickness: =0
+                        FocusedBorderThickness: =4
+                        Height: =75
+                        HoverColor: =RGBA(0, 0, 0, 1)
+                        HoverFill: =RGBA(186, 202, 226, 1)
+                        IsInDataCard: =true
+                        ItemColor: =RGBA(255, 255, 255, 1)
+                        ItemFill: =RGBA(56, 96, 178, 1)
+                        ItemHoverColor: =RGBA(0, 0, 0, 1)
+                        ItemHoverFill: =RGBA(186, 202, 226, 1)
+                        Items: =
+                        OnAddFile: |-
+                            =/*Set(
+                                VarAttachmentControl,
+                                JSON(
+                                    Image9.Image,
+                                    IncludeBinaryData
+                                )
+                            );
+                            Set(
+                                VarBase64Only,
+                                Mid(
+                                    VarAttachmentControl,
+                                    Find(
+                                        ",",
+                                        VarAttachmentControl
+                                    ) + 1,
+                                    Len(VarAttachmentControl) - Find(
+                                        ",",
+                                        VarAttachmentControl
+                                    ) - 1
+                                )
+                            );
+                            Attachments_1.Run(
+                                varCertificateStatus.ID,
+                                Last(Attachments.Attachments).Name,
+                                VarBase64Only
+                            );
+                            */
+                            Refresh(CertificationOrder)
+                        PressedColor: =RGBA(255, 255, 255, 1)
+                        PressedFill: =RGBA(0, 18, 107, 1)
+                        Size: =10
+                        Tooltip: ="Upload 5 Documents"
+                        Visible: =varattach8
+                        Width: =Parent.Width
+                        Y: =38
+                        ZIndex: =1
+
+                    "Gallery8_14 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+                        AccessibleLabel: ="Gallery8_5"
+                        BorderColor: =RGBA(0, 18, 107, 1)
+                        Height: =75
+                        Items: =Attachments_14.Attachments
+                        Layout: =Layout.Vertical
+                        ShowScrollbar: =false
+                        TemplatePadding: =0
+                        TemplateSize: =Min(160, Self.Height - 60)
+                        Visible: =false
+                        Width: =Parent.Width
+                        Y: =18
+                        ZIndex: =3
+
+                        Image10_15 As image:
+                            BorderColor: =RGBA(0, 18, 107, 1)
+                            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            Height: =1
+                            Image: =ThisItem.Value
+                            OnSelect: =Select(Parent)
+                            Width: =1
+                            ZIndex: =1
+
+                        Title6_15 As label:
+                            Color: =RGBA(0, 0, 0, 1)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FontWeight: =FontWeight.Semibold
+                            Height: =1
+                            OnSelect: =Select(Parent)
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Size: =20
+                            Text: =ThisItem.Name
+                            VerticalAlign: =VerticalAlign.Top
+                            Width: =Parent.TemplateWidth - Image10_15.Width - 104
+                            X: =1
+                            ZIndex: =2
+
+                        Subtitle1_15 As label:
+                            Color: =RGBA(0, 0, 0, 1)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            Height: =1
+                            OnSelect: =Select(Parent)
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Size: =18
+                            Text: =ThisItem.Value
+                            VerticalAlign: =VerticalAlign.Top
+                            Width: =Title6_15.Width
+                            X: =1
+                            ZIndex: =3
+
+                        NextArrow2_15 As icon.ChevronRight:
+                            AccessibleLabel: =Self.Tooltip
+                            BorderColor: =RGBA(0, 18, 107, 1)
+                            Color: =RGBA(0, 18, 107, 1)
+                            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                            DisabledColor: =RGBA(244, 244, 244, 1)
+                            Height: =1
+                            Icon: =Icon.ChevronRight
+                            OnSelect: =Select(Parent)
+                            PaddingBottom: =10
+                            PaddingLeft: =10
+                            PaddingRight: =10
+                            PaddingTop: =10
+                            TabIndex: =0
+                            Tooltip: ="View item details"
+                            Width: =1
+                            ZIndex: =4
+
+                        Separator6_15 As rectangle:
+                            BorderColor: =RGBA(0, 18, 107, 1)
+                            Fill: =RGBA(0, 18, 107, 1)
+                            Height: =1
+                            OnSelect: =Select(Parent)
+                            Width: =Parent.TemplateWidth
+                            Y: =Parent.TemplateHeight - 1
+                            ZIndex: =5
+
+                    "Gallery13_15 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+                        AccessibleLabel: ="Gallery13_4"
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderThickness: =0.1
+                        Fill: =RGBA(255, 255, 255, 1)
+                        Height: =75
+                        Items: =Last(LookUp(CertificationOrder,ID=varCertificateDetails.ID).Attachments)
+                        Layout: =Layout.Vertical
+                        OnSelect: =Launch(ThisItem.AbsoluteUri)
+                        ShowScrollbar: =false
+                        TemplatePadding: =0
+                        TemplateSize: =26
+                        Visible: =varattach9
+                        Width: =Parent.Width
+                        Y: =38
+                        ZIndex: =6
+
+                        Separator9_15 As rectangle:
+                            BorderColor: =RGBA(0, 18, 107, 1)
+                            Fill: =RGBA(179, 179, 179, 1)
+                            Height: =1
+                            OnSelect: =Select(Parent)
+                            Visible: =false
+                            Width: =Parent.TemplateWidth
+                            Y: =Parent.TemplateHeight - 1
+                            ZIndex: =5
+
+                        Label78_15 As label:
+                            BorderColor: =RGBA(0, 18, 107, 1)
+                            Color: =RGBA(0, 0, 0, 1)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            Fill: =RGBA(255, 255, 255, 1)
+                            Height: =26
+                            OnSelect: =Select(Parent)
+                            Size: =8
+                            Text: =ThisItem.DisplayName
+                            Width: =Gallery13_15.Width
+                            ZIndex: =6
+
+                        RemoveAttachment_15 As icon.Cancel:
+                            AccessibleLabel: ="RemoveAttachment_4"
+                            BorderColor: =RGBA(0, 18, 107, 1)
+                            Color: =RGBA(0, 18, 107, 1)
+                            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                            DisabledColor: =RGBA(244, 244, 244, 1)
+                            Height: =17
+                            Icon: =Icon.Cancel
+                            OnSelect: |
+                                =//Select(Parent);
+                                LookUp(CertificationOrder,'DeleteAttachments-CertificationApp'.Run(varCertificateDetails.ID,varCertificateDetails.ID)).Attachments;
+                                
+                                Refresh(CertificationOrder)
+                            Visible: =false
+                            Width: =1
+                            Y: =9
+                            ZIndex: =7
+
+                    Label15_20 As label:
+                        Color: =RGBA(0, 0, 0, 1)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        FontWeight: =FontWeight.Semibold
+                        Height: =38
+                        Size: =8
+                        Text: |-
+                            ="Manager Approval Mail :"
+                        Width: =165
+                        ZIndex: =7
 

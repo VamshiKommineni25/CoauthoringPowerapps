@@ -39,7 +39,7 @@
     "EncodeDataset": true,
     "IsSampleData": false,
     "IsWritable": true,
-    "Name": "CertificationApp-Security_1",
+    "Name": "CertificationApp-Security",
     "Type": "ConnectedDataSourceInfo"
   }
 ]

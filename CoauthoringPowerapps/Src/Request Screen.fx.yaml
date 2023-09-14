@@ -364,7 +364,7 @@
                 BorderColor: =RGBA(154, 154, 154, 1)
                 BorderThickness: =2
                 Color: =RGBA(154, 154, 154, 1)
-                Default: =""
+                Default: =
                 DisabledBorderColor: =RGBA(154, 154, 154, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
@@ -511,6 +511,10 @@
                         Reset(drpdwn_RS_NCRBU),
                         Reset(txtinp_RS_NCRexamcode),
                         Reset(Cmb_RS_NCRrequestor)
+                    );
+                    ClearCollect(
+                        Cert_Req,
+                        CertificationRequest
                     )
                 PressedBorderColor: =RGBA(185, 29, 11, 1)
                 PressedColor: =RGBA(255, 255, 255, 1)
@@ -577,13 +581,22 @@
                 Size: =10
                 Text: ="Invalid URL"
                 Visible: |-
-                    =If(
+                    =/*If(
                         IsBlank(txtinp_RS_NCRURL.Text) || IsMatch(
                             txtinp_RS_NCRURL.Text,
                             "(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]%@!\$&’\(\)\*\+,;=.]+$"
                         ) || Len(txtinp_RS_NCRURL.Text) < 255,
                         false,
                         true
+                    )
+                    */
+                    If(
+                        (!IsBlank(txtinp_RS_NCRURL.Text) And !IsMatch(
+                            txtinp_RS_NCRURL.Text,
+                            "^https?://[\w\-]+(\.[\w\-]+)+[/#?]?.*$"
+                        )) Or Len(txtinp_RS_NCRURL.Text) > 255,
+                        true,
+                        false
                     )
                 Width: =299
                 X: =844

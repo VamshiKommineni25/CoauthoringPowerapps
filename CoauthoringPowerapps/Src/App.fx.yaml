@@ -1,13 +1,14 @@
 App As appinfo:
     BackEnabled: =false
     OnStart: |+
-        =Set(
+        =Collect(COL_CertificationSecurity,'CertificationApp-Security');
+        Set(
             varUserLevel,
             If(
                 CountRows(
                     FirstN(
                         Filter(
-                            'CertificationApp-Security_1',
+                            COL_CertificationSecurity,
                             Title = "Certification-User"
                         ),
                         50
@@ -28,7 +29,7 @@ App As appinfo:
                 CountRows(
                     FirstN(
                         Filter(
-                            'CertificationApp-Security_1',
+                            COL_CertificationSecurity,
                             Title = "Certification-Admin"
                         ),
                         50
@@ -44,7 +45,7 @@ App As appinfo:
                 CountRows(
                     FirstN(
                         Filter(
-                            'CertificationApp-Security_1',
+                            COL_CertificationSecurity,
                             Title = "Certification-SuperAdmin"
                         ),
                         50
@@ -177,7 +178,7 @@ App As appinfo:
                         )
                     ) = 1,
                     'Admin dashBoard',
-                    Home_Screen
+                    'Splash Screen'
                 )
             )
         )
