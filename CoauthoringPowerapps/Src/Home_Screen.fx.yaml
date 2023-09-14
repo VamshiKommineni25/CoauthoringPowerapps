@@ -2381,7 +2381,7 @@ Home_Screen As screen:
             HoverBorderColor: =RGBA(241,246,246, 1)
             HoverColor: =RGBA(51, 51, 51, 1)
             HoverFill: =RGBA(241,246,246, 1)
-            Items: =["All","Completed","Enrolled","Manager Approved","Processing with Finance","Proofs Approved","Proofs Uploaded","Rejected"]
+            Items: =["All","Reimbursed","Enrolled","Manager Approved","Processing with Finance","Proofs Approved","Proofs Uploaded","Rejected"]
             PaddingBottom: =5
             PaddingLeft: =12
             PaddingRight: =5
