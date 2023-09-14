@@ -84,15 +84,7 @@
       "parameterHints": {},
       "parameterHintsV2": {}
     },
-    "datasets": {
-      "https://ilinksystemsinc449.sharepoint.com/sites/CertificationApp": {
-        "dataSources": {
-          "CertificationApp-Security": {
-            "tableName": "90d46ce2-33b9-406a-b527-52d7c4a982a4"
-          }
-        }
-      }
-    },
+    "datasets": {},
     "dataSources": [
       "AnswersList_Admin",
       "BU-List",
@@ -109,8 +101,7 @@
       "QuestionList_Admin",
       "CertificationOrderHistory",
       "BU-CertificationList",
-      "Target List",
-      "CertificationApp-Security"
+      "Target List"
     ],
     "dependencies": {},
     "dependents": [
@@ -232,6 +223,9 @@
           "BU-CertificationList": {
             "tableName": "d00ea486-35da-4770-9145-85659c5c0e87"
           },
+          "CertificationApp-Security_1": {
+            "tableName": "90d46ce2-33b9-406a-b527-52d7c4a982a4"
+          },
           "CertificationOrder": {
             "tableName": "11e037ff-5836-44d0-a4f3-c06141179344"
           },
@@ -260,6 +254,7 @@
       }
     },
     "dataSources": [
+      "CertificationApp-Security_1",
       "Certifications",
       "ExternalCertificationList",
       "CertificationOrder",
