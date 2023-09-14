@@ -678,7 +678,7 @@
                             )
                         );
                         
-                        //Launch(TotalCertification_flow_excel.Run(JSON(col_certorder,JSONFormat.IncludeBinaryData)).filelink);
+                        Launch(YearCertification_Flow_Excel.Run(JSON(col_certorder,JSONFormat.IncludeBinaryData)).filelink);
                     PressedBorderColor: =RGBA(0, 0, 0, 0)
                     PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
                     PressedFill: =RGBA(0, 0, 0, 0)
@@ -1969,9 +1969,8 @@
             RadiusTopRight: =5
             Size: =10
             Text: ="EXPORT IN EXCEL"
-            Visible: |-
-                =//If('Glry_Total Cert/Year Cert'.Selected.Name="Total Certifications",true,false)
-                true
+            Visible: |
+                =If('Glry_Total Cert/Year Cert'.Selected.Name="Year Certifications",true,false)
             X: =898
             Y: =443
             ZIndex: =17
@@ -2010,9 +2009,8 @@
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             PressedFill: =RGBA(0, 0, 0, 0)
-            Visible: |-
-                =//If('Glry_Total Cert/Year Cert'.Selected.Name="Total Certifications",true,false)
-                true
+            Visible: |
+                =If('Glry_Total Cert/Year Cert'.Selected.Name="Year Certifications",true,false)
             Width: =24
             X: =898
             Y: =448

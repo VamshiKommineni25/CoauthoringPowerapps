@@ -85,19 +85,44 @@ C_AlertPanel As CanvasComponent:
                 HoverColor: =RGBA(151, 0, 0, 1)
                 HoverFill: =RGBA(0, 0, 0, 0)
                 OnSelect: |-
-                    =    If(
-                            varUser = true,
-                            ForAll(
-                                User_gal.AllItems As MyPatch,
-                                Patch(
-                                    NotificationList_CertificationApp,
-                                    {ID: MyPatch.ID},
-                                    {
-                                        Title: MyPatch.Title,
-                                        IsDeleted: true
-                                    }
-                                )
+                    =Switch(
+                        varUserLevel,
+                        "USER",
+                        ForAll(
+                            Notify_gal.AllItems As MyPatch,
+                            Patch(
+                                NotificationList_CertificationApp,
+                                {ID: MyPatch.ID},
+                                {
+                                    Title: MyPatch.Title,
+                                    IsDeleted: true
+                                }
                             )
+                        ),
+                        "ADMIN",
+                        ForAll(
+                            Notify_gal.AllItems As MyPatch,
+                            Patch(
+                                NotificationList_CertificationApp,
+                                {ID: MyPatch.ID},
+                                {
+                                    Title: MyPatch.Title,
+                                    IsDeleted: true
+                                }
+                            )
+                        ),
+                        "SUPER-ADMIN",
+                        ForAll(
+                            Notify_gal.AllItems As MyPatch,
+                            Patch(
+                                NotificationList_CertificationApp,
+                                {ID: MyPatch.ID},
+                                {
+                                    Title: MyPatch.Title,
+                                    IsDeleted: true
+                                }
+                            )
+                        )
                     );
                     Clear(col_Notification)
                 PressedBorderColor: =ColorFade(RGBA(185, 29, 11, 1), -50%)
@@ -114,25 +139,25 @@ C_AlertPanel As CanvasComponent:
                 Y: =75
                 ZIndex: =3
 
-            "User_gal As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+            "Notify_gal As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
                 BorderColor: =RGBA(166, 166, 166, 1)
                 DelayItemLoading: =true
                 Items: |-
                     =Switch(
-                        varUserLevel,
-                        "USER",
+                        varUserLevel ,
+                         "USER",
                         Sort(
                             col_Notification,
                             Created,
                             SortOrder.Descending
                         ),
-                        "ADMIN",
+                         "ADMIN",
                         Sort(
                             mngr_notify_Col,
                             Created,
                             SortOrder.Descending
                         ),
-                        "SUPER-ADMIN",
+                         "SUPER-ADMIN",
                         Sort(
                             Filter(
                                 FirstN(
@@ -149,109 +174,11 @@ C_AlertPanel As CanvasComponent:
                 LoadingSpinner: =LoadingSpinner.Data
                 TemplatePadding: =0
                 TemplateSize: =104
-                Visible: =varUser
-                Width: =348
-                Y: =135
-                ZIndex: =4
-
-            "Manager_gal As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
-                BorderColor: =RGBA(166, 166, 166, 1)
-                DelayItemLoading: =true
-                Items: |-
-                    =Sort(
-                        mngr_notify_Col,
-                        Created,
-                        SortOrder.Descending
-                    )
-                Layout: =Layout.Vertical
-                LoadingSpinner: =LoadingSpinner.Data
-                TemplatePadding: =0
-                TemplateSize: =104
-                Visible: =varMngr
-                Width: =348
-                Y: =135
-                ZIndex: =5
-
-                Separator3_2 As rectangle:
-                    BorderColor: =RGBA(0, 0, 0, 0)
-                    Fill: =RGBA(255, 255, 255, 1)
-                    Height: =8
-                    OnSelect: =Select(Parent)
-                    Width: =Parent.TemplateWidth
-                    Y: =Parent.TemplateHeight - Self.Height
-                    ZIndex: =5
-
-                Rectangle5_3 As rectangle:
-                    BorderColor: =RGBA(0, 0, 0, 0)
-                    Fill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-                    Height: =Parent.TemplateHeight - Separator3_2.Height
-                    OnSelect: =Select(Parent)
-                    Visible: =ThisItem.IsSelected
-                    Width: =4
-                    ZIndex: =6
-
-                Label6_1 As label:
-                    BorderColor: =RGBA(0, 0, 0, 0)
-                    BorderStyle: =BorderStyle.None
-                    BorderThickness: =2
-                    Color: =RGBA(51, 51, 51, 1)
-                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    FocusedBorderThickness: =4
-                    Font: ="poppins"
-                    Height: =71
-                    OnSelect: =Select(Parent)
-                    Size: =10
-                    Text: =ThisItem.Notification
-                    VerticalAlign: =VerticalAlign.Top
-                    Width: =306
-                    X: =21
-                    Y: =12
-                    ZIndex: =7
-
-            "ILD_gal As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
-                BorderColor: =RGBA(166, 166, 166, 1)
-                DelayItemLoading: =true
-                Items: |-
-                    =Sort(
-                        Filter(
-                            FirstN(
-                                NotificationList_CertificationApp,
-                                2000
-                            ),
-                            "has uploaded proofs" = Notification And IsDeleted = false
-                        ),
-                        Created,
-                        SortOrder.Descending
-                    )
-                Layout: =Layout.Vertical
-                LoadingSpinner: =LoadingSpinner.Data
-                TemplatePadding: =0
-                TemplateSize: =104
-                Visible: =varAdmin
                 Width: =348
                 Y: =135
                 ZIndex: =6
 
-                Separator3_3 As rectangle:
-                    BorderColor: =RGBA(0, 0, 0, 0)
-                    Fill: =RGBA(255, 255, 255, 1)
-                    Height: =8
-                    OnSelect: =Select(Parent)
-                    Width: =Parent.TemplateWidth
-                    Y: =Parent.TemplateHeight - Self.Height
-                    ZIndex: =5
-
-                Rectangle5_14 As rectangle:
-                    BorderColor: =RGBA(0, 0, 0, 0)
-                    Fill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-                    Height: =Parent.TemplateHeight - Separator3_3.Height
-                    OnSelect: =Select(Parent)
-                    Visible: =ThisItem.IsSelected
-                    Width: =4
-                    ZIndex: =6
-
-                Label6_2 As label:
+                Label6 As label:
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =2
@@ -259,16 +186,22 @@ C_AlertPanel As CanvasComponent:
                     DisabledBorderColor: =RGBA(0, 0, 0, 0)
                     DisabledColor: =RGBA(166, 166, 166, 1)
                     FocusedBorderThickness: =4
-                    Font: ="poppins"
-                    Height: =71
+                    Font: =Font.'Segoe UI'
+                    Height: =86
                     OnSelect: =Select(Parent)
-                    Size: =10
+                    Size: =13
                     Text: =ThisItem.Notification
-                    VerticalAlign: =VerticalAlign.Top
-                    Width: =306
-                    X: =21
-                    Y: =12
-                    ZIndex: =7
+                    Width: =345
+                    ZIndex: =1
+
+                Separator1_3 As rectangle:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    Fill: =RGBA(255, 255, 255, 1)
+                    Height: =8
+                    OnSelect: =Select(Parent)
+                    Width: =Parent.TemplateWidth
+                    Y: =Parent.TemplateHeight - Self.Height
+                    ZIndex: =3
 
             Label20 As label:
                 BorderColor: =RGBA(0, 0, 0, 0)
@@ -283,19 +216,9 @@ C_AlertPanel As CanvasComponent:
                 Text: ="No Notifications"
                 Visible: |-
                     =If(
-                        CountRows(User_gal.AllItems) = 0 && varUser = true,
+                        CountRows(Notify_gal.AllItems) = 0,
                         true,
-                        false,
-                        If(
-                            CountRows(Manager_gal.AllItems) = 0 && varMngr = true,
-                            true,
-                            false,
-                            If(
-                                CountRows(ILD_gal.AllItems) = 0 && varAdmin = true,
-                                true,
-                                false
-                            )
-                        )
+                        false
                     )
                 X: =99
                 Y: =343
