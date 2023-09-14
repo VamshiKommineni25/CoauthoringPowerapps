@@ -105,15 +105,7 @@
       "parameterHints": {},
       "parameterHintsV2": {}
     },
-    "datasets": {
-      "https://ilinksystemsinc449.sharepoint.com/sites/CertificationApp": {
-        "dataSources": {
-          "CertificationApp-Security": {
-            "tableName": "90d46ce2-33b9-406a-b527-52d7c4a982a4"
-          }
-        }
-      }
-    },
+    "datasets": {},
     "dataSources": [
       "AnswersList_Admin",
       "BU-List",
@@ -130,8 +122,7 @@
       "QuestionList_Admin",
       "CertificationOrderHistory",
       "BU-CertificationList",
-      "Target List",
-      "CertificationApp-Security"
+      "Target List"
     ],
     "dependencies": {},
     "dependents": [
@@ -357,7 +348,7 @@
     "dependents": [],
     "id": "cabe7177-762e-4e71-8a44-1a25223cfa14"
   },
-  "eda48692-7b6e-4730-91cb-2ff79b447dd0": {
+  "efe02e2d-1cf6-4fba-bcd8-c0e58fccb65a": {
     "connectionRef": {
       "displayName": "Logic flows",
       "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1653/1.0.1653.3403/logicflows/icon.png",
@@ -393,7 +384,7 @@
       "shared_sharepointonline": "391fb67a-599b-4e22-91d8-775183783e5f"
     },
     "dependents": [],
-    "id": "eda48692-7b6e-4730-91cb-2ff79b447dd0"
+    "id": "efe02e2d-1cf6-4fba-bcd8-c0e58fccb65a"
   },
   "fe562a7f-370a-4ce3-842a-29312f33217b": {
     "connectionRef": {

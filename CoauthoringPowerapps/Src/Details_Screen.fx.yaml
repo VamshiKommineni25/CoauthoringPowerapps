@@ -845,124 +845,135 @@ Details_Screen As screen:
                 HoverColor: =Parent.BorderColor
                 HoverFill: =Parent.Fill
                 OnSelect: |
-                    ='DeleteAttachments-CertificationApp'.Run(varCertificateDetails.ID,varCertificateDetails.ID);
+                    ='DeleteAttachments-CertificationApp'.Run(
+                        varCertificateDetails.ID,
+                        varCertificateDetails.ID
+                    );
                     Refresh(CertificationOrder);
-                    Notify("Attachments Deleted Successfully", NotificationType.Success,1700);
+                    Notify(
+                        "Attachments Deleted Successfully",
+                        NotificationType.Success,
+                        1700
+                    );
                     //Set(varCertificationDetails1,varCertificationDetails);
                     //UpdateContext( { varCertificationDetails1: Patch(varCertificationDetails1, {Status: "Manager Approved" } ) } );
-                    
-                     Set(
-                            varattach,
-                            false
-                        );
-                        Set(
-                            varattach1,
-                            true
-                        );
-                        Set(
-                            varattach2,
-                            false
-                        );
-                        Set(
-                            varattach3,
-                            true
-                        );
-                        Set(
-                            varattach4,
-                            false
-                        );
-                        Set(
-                            varattach5,
-                            true
-                        );
-                        Set(
-                            varattach6,
-                            false
-                        );
-                        Set(
-                            varattach7,
-                            true
-                        );
-                        Set(
-                            varattach8,
-                            false
-                        );
-                        Set(
-                            varattach9,
-                            true
-                        );
-                        Set(
-                            varattach,
-                            true
-                        );
-                        Set(
-                            varattach1,
-                            false
-                        );
-                        Set(
-                            varattach2,
-                            false
-                        );
-                        Set(
-                            varattach3,
-                            true
-                        );
-                        Set(
-                            varattach2,
-                            true
-                        );
-                        Set(
-                            varattach3,
-                            false
-                        );
-                        Set(
-                            varattach4,
-                            false
-                        );
-                        Set(
-                            varattach5,
-                            true
-                        );
-                        Set(
-                            varattach4,
-                            true
-                        );
-                        Set(
-                            varattach5,
-                            false
-                        );
-                        Set(
-                            varattach6,
-                            false
-                        );
-                        Set(
-                            varattach7,
-                            true
-                        );
-                        Set(
-                            varattach6,
-                            true
-                        );
-                        Set(
-                            varattach7,
-                            false
-                        );
-                        Set(
-                            varattach8,
-                            false
-                        );
-                        Set(
-                            varattach9,
-                            true
-                        );
-                        Set(
-                            varattach8,
-                            true
-                        );
-                        Set(
-                            varattach9,
-                            false
-                        );
+                    Set(
+                        varattach,
+                        false
+                    );
+                    Set(
+                        varattach1,
+                        true
+                    );
+                    Set(
+                        varattach2,
+                        false
+                    );
+                    Set(
+                        varattach3,
+                        true
+                    );
+                    Set(
+                        varattach4,
+                        false
+                    );
+                    Set(
+                        varattach5,
+                        true
+                    );
+                    Set(
+                        varattach6,
+                        false
+                    );
+                    Set(
+                        varattach7,
+                        true
+                    );
+                    Set(
+                        varattach8,
+                        false
+                    );
+                    Set(
+                        varattach9,
+                        true
+                    );
+                    Set(
+                        varattach,
+                        true
+                    );
+                    Set(
+                        varattach1,
+                        false
+                    );
+                    Set(
+                        varattach2,
+                        false
+                    );
+                    Set(
+                        varattach3,
+                        true
+                    );
+                    Set(
+                        varattach2,
+                        true
+                    );
+                    Set(
+                        varattach3,
+                        false
+                    );
+                    Set(
+                        varattach4,
+                        false
+                    );
+                    Set(
+                        varattach5,
+                        true
+                    );
+                    Set(
+                        varattach4,
+                        true
+                    );
+                    Set(
+                        varattach5,
+                        false
+                    );
+                    Set(
+                        varattach6,
+                        false
+                    );
+                    Set(
+                        varattach7,
+                        true
+                    );
+                    Set(
+                        varattach6,
+                        true
+                    );
+                    Set(
+                        varattach7,
+                        false
+                    );
+                    Set(
+                        varattach8,
+                        false
+                    );
+                    Set(
+                        varattach9,
+                        true
+                    );
+                    Set(
+                        varattach8,
+                        true
+                    );
+                    Set(
+                        varattach9,
+                        false
+                    );
+                    UpdateIf(
+                        CertificationOrder,
+                        ID = varCertificateDetails.ID,
+                        {Status: "Manager Approved"}
+                    );
                 PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
@@ -2337,13 +2348,7 @@ Details_Screen As screen:
                                 );
                                 Set(
                                     varProofsLinks,
-                                    'Attachment-ProofsUpload'.Run(
-                                        JSON(
-                                            colfiles,
-                                            JSONFormat.IndentFour
-                                        ),
-                                        varCertificateDetails.ID
-                                    ).links
+                                    'Attachment-ProofsUpload'.Run().links
                                 );
                                 If(
                                     varCertificateDetails.Status in ["Enrolled"],
@@ -2416,11 +2421,6 @@ Details_Screen As screen:
                             Set(
                                 varProofsLinks,
                                  'Attachment-ProofsUpload'.Run(
-                                    JSON(
-                                        colfiles,
-                                        JSONFormat.IndentFour
-                                    ),
-                                    varCertificateDetails.ID
                                 ).links
                             );
                             If(
@@ -2519,13 +2519,7 @@ Details_Screen As screen:
                                 );
                                 Set(
                                     varProofsLinks,
-                                     'Attachment-ProofsUpload'.Run(
-                                        JSON(
-                                            colfiles,
-                                            JSONFormat.IndentFour
-                                        ),
-                                        varCertificateDetails.ID
-                                    ).links
+                                    'Attachment-ProofsUpload'.Run().links
                                 );
                                 If(
                                     varCertificateDetails.Status in ["Enrolled"],
@@ -2595,16 +2589,10 @@ Details_Screen As screen:
                                     "Name"
                                 )
                             );
-                            Set(
-                                varProofsLinks,
-                                 'Attachment-ProofsUpload'.Run(
-                                    JSON(
-                                        colfiles,
-                                        JSONFormat.IndentFour
-                                    ),
-                                    varCertificateDetails.ID
-                                ).links
-                            );
+                             Set(
+                                    varProofsLinks,
+                                    'Attachment-ProofsUpload'.Run().links
+                                );
                             If(
                                 varCertificateDetails.Status in [
                                     "Manager Approved",
@@ -2698,15 +2686,9 @@ Details_Screen As screen:
                                         "Name"
                                     )
                                 );
-                                Set(
+                                 Set(
                                     varProofsLinks,
-                                     'Attachment-ProofsUpload'.Run(
-                                        JSON(
-                                            colfiles,
-                                            JSONFormat.IndentFour
-                                        ),
-                                        varCertificateDetails.ID
-                                    ).links
+                                    'Attachment-ProofsUpload'.Run().links
                                 );
                                 If(
                                     varCertificateDetails.Status in ["Enrolled"],
@@ -2776,16 +2758,10 @@ Details_Screen As screen:
                                     "Name"
                                 )
                             );
-                            Set(
-                                varProofsLinks,
-                                 'Attachment-ProofsUpload'.Run(
-                                    JSON(
-                                        colfiles,
-                                        JSONFormat.IndentFour
-                                    ),
-                                    varCertificateDetails.ID
-                                ).links
-                            );
+                             Set(
+                                    varProofsLinks,
+                                    'Attachment-ProofsUpload'.Run().links
+                                );
                             If(
                                 varCertificateDetails.Status in [
                                     "Manager Approved",
@@ -2879,15 +2855,9 @@ Details_Screen As screen:
                                         "Name"
                                     )
                                 );
-                                Set(
+                                 Set(
                                     varProofsLinks,
-                                     'Attachment-ProofsUpload'.Run(
-                                        JSON(
-                                            colfiles,
-                                            JSONFormat.IndentFour
-                                        ),
-                                        varCertificateDetails.ID
-                                    ).links
+                                    'Attachment-ProofsUpload'.Run().links
                                 );
                                 If(
                                     varCertificateDetails.Status in ["Enrolled"],
@@ -2957,16 +2927,10 @@ Details_Screen As screen:
                                     "Name"
                                 )
                             );
-                            Set(
-                                varProofsLinks,
-                                 'Attachment-ProofsUpload'.Run(
-                                    JSON(
-                                        colfiles,
-                                        JSONFormat.IndentFour
-                                    ),
-                                    varCertificateDetails.ID
-                                ).links
-                            );
+                             Set(
+                                    varProofsLinks,
+                                    'Attachment-ProofsUpload'.Run().links
+                                );
                             If(
                                 varCertificateDetails.Status in [
                                     "Manager Approved",
@@ -3060,15 +3024,9 @@ Details_Screen As screen:
                                         "Name"
                                     )
                                 );
-                                Set(
+                                 Set(
                                     varProofsLinks,
-                                     'Attachment-ProofsUpload'.Run(
-                                        JSON(
-                                            colfiles,
-                                            JSONFormat.IndentFour
-                                        ),
-                                        varCertificateDetails.ID
-                                    ).links
+                                    'Attachment-ProofsUpload'.Run().links
                                 );
                                 If(
                                     varCertificateDetails.Status in ["Enrolled"],
@@ -3138,16 +3096,10 @@ Details_Screen As screen:
                                     "Name"
                                 )
                             );
-                            Set(
-                            varProofsLinks,
-                            'Attachment-ProofsUpload'.Run(
-                                JSON(
-                                    colfiles,
-                                    JSONFormat.IndentFour
-                                ),
-                                 varCertificateDetails.ID
-                            ).links
-                        );
+                             Set(
+                                    varProofsLinks,
+                                    'Attachment-ProofsUpload'.Run().links
+                                );
                             If(
                                 varCertificateDetails.Status in [
                                     "Manager Approved",
