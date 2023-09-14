@@ -1031,7 +1031,7 @@
                   },
                   {
                     "Category": "Behavior",
-                    "InvariantScript": "Switch(\n    varUserLevel,\n    \"USER\",\n    ForAll(\n        Notify_gal.AllItems As MyPatch,\n        Patch(\n            NotificationList_CertificationApp,\n            {ID: MyPatch.ID},\n            {\n                Title: MyPatch.Title,\n                UserDeleted: true\n            }\n        )\n    ),\n    \"ADMIN\",\n    ForAll(\n        Notify_gal.AllItems As MyPatch,\n        Patch(\n            NotificationList_CertificationApp,\n            {ID: MyPatch.ID},\n            {\n                Title: MyPatch.Title,\n                ManagerDeleted:true\n            }\n        )\n    ),\n    \"SUPER-ADMIN\",\n    ForAll(\n        Notify_gal.AllItems As MyPatch,\n        Patch(\n            NotificationList_CertificationApp,\n            {ID: MyPatch.ID},\n            {\n                Title: MyPatch.Title,\n                AdminDeleted: true\n            }\n        )\n    )\n);\nClear(col_Notification);\nClear(mngr_notify_Col);",
+                    "InvariantScript": "Switch(\n    varUserLevel,\n    \"USER\",\n    ForAll(\n        Notify_gal.AllItems As MyPatch,\n        Patch(\n            NotificationList_CertificationApp,\n            {ID: MyPatch.ID},\n            {\n                Title: MyPatch.Title,\n                IsDeleted: true\n            }\n        )\n    ),\n    \"ADMIN\",\n    ForAll(\n        Notify_gal.AllItems As MyPatch,\n        Patch(\n            NotificationList_CertificationApp,\n            {ID: MyPatch.ID},\n            {\n                Title: MyPatch.Title,\n                IsDeleted: true\n            }\n        )\n    ),\n    \"SUPER-ADMIN\",\n    ForAll(\n        Notify_gal.AllItems As MyPatch,\n        Patch(\n            NotificationList_CertificationApp,\n            {ID: MyPatch.ID},\n            {\n                Title: MyPatch.Title,\n                IsDeleted: true\n            }\n        )\n    )\n);\nClear(col_Notification);\nClear(mngr_notify_Col);",
                     "Property": "OnSelect",
                     "RuleProviderType": "Unknown"
                   }
@@ -1632,7 +1632,7 @@
                 "Rules": [
                   {
                     "Category": "Data",
-                    "InvariantScript": "Switch(\n    varUserLevel ,\n     \"USER\",\n    Sort(\n        col_Notification,\n        Created,\n        SortOrder.Descending\n    ),\n     \"ADMIN\",\n    Sort(\n        mngr_notify_Col,\n        Created,\n        SortOrder.Descending\n    ),\n     \"SUPER-ADMIN\",\n    Sort(\n        Filter(\n            FirstN(\n                NotificationList_CertificationApp,\n                2000\n            ),\n            \"has uploaded proofs\" = Notification And UserDeleted = false\n        ),\n        Created,\n        SortOrder.Descending\n    )\n)",
+                    "InvariantScript": "Switch(\n    varUserLevel ,\n     \"USER\",\n    Sort(\n        col_Notification,\n        Created,\n        SortOrder.Descending\n    ),\n     \"ADMIN\",\n    Sort(\n        mngr_notify_Col,\n        Created,\n        SortOrder.Descending\n    ),\n     \"SUPER-ADMIN\",\n    Sort(\n        Filter(\n            FirstN(\n                NotificationList_CertificationApp,\n                2000\n            ),\n            \"has uploaded proofs\" = Notification And IsDeleted = false\n        ),\n        Created,\n        SortOrder.Descending\n    )\n)",
                     "Property": "Items",
                     "RuleProviderType": "Unknown"
                   },
@@ -2592,7 +2592,7 @@
         "NameMapSourceSchema": "?"
       }
     ],
-    "LastModifiedTimestamp": "638302800655192221",
+    "LastModifiedTimestamp": "638302749673643559",
     "Name": "C_AlertPanel",
     "Rules": [
       {
@@ -2667,7 +2667,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638302800655192221",
+  "LastModifiedTimestamp": "638302749673643559",
   "Name": "51ee6d33d33c4d2bbcb4c3de22be71f3",
   "OverridableProperties": {},
   "Version": "638284518019750650"
