@@ -38,7 +38,7 @@
                 ClearCollect(
                     questiondetails,
                     Filter(
-                        QuestionList,CertificationName.Id=varCertificationData.CertificationID
+                        FirstN(QuestionList,5000),CertificationName.Id=varCertificationData.CertificationID
                     )
                 )
             PressedBorderColor: =RGBA(185, 29, 11, 1)
