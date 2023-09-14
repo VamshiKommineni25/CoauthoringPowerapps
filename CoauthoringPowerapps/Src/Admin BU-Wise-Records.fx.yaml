@@ -1152,11 +1152,11 @@
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(255, 255, 255, 1)
                 DisabledFill: =RGBA(213,39,26,1)
-                Fill: =RGBA(213,39,26,1)
+                Fill: =RGBA(185, 29, 11, 1)
                 FontWeight: =FontWeight.Semibold
                 Height: =17
                 HoverColor: =RGBA(255, 255, 255, 1)
-                HoverFill: =RGBA(213,39,26,1)
+                HoverFill: =RGBA(185, 29, 11, 1)
                 OnSelect: |
                     =Set(
                         varAttachmentcontrol1,
@@ -1181,8 +1181,7 @@
                     );
                     Set(
                         varResultFlow,
-                        UploadDwnxcl.Run(
-                            varBase64Only,
+                        Upload.Run(varBase64Only,
                             Last(Attachments_3.Attachments).Name
                         );
                         Notify(
@@ -1192,7 +1191,7 @@
                         )
                     );
                     If(
-                        varResultFlow = "success",
+                        varResultFlow in "success",
                         Notify(
                             "File Uploaded successfully",
                             NotificationType.Success
@@ -1207,7 +1206,7 @@
                         ScreenTransition.Fade
                     );
                 PressedColor: =RGBA(255, 255, 255, 1)
-                PressedFill: =RGBA(213,39,26,1)
+                PressedFill: =RGBA(185, 29, 11, 1)
                 RadiusBottomLeft: =7
                 RadiusBottomRight: =7
                 RadiusTopLeft: =7
