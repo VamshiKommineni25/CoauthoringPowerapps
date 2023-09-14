@@ -46,7 +46,7 @@ Home_Screen As screen:
                     NotificationList_CertificationApp,
                     5000
                 ),
-                (Title = User().FullName && "been approved by your manager " & varMngrname in Notification) || ("has requested for" in Notification && Manager = User().FullName) || (Title = User().FullName && "been approved by ILD" in Notification) || IsDeleted = false
+                (Title = User().FullName && "been approved by your manager " & varMngrname in Notification) || ("has requested for" in Notification && Manager = User().FullName) || (Title = User().FullName && "been approved by ILD" in Notification) || UserDeleted = false
             )
         ),
         ClearCollect(
@@ -56,7 +56,7 @@ Home_Screen As screen:
                     NotificationList_CertificationApp,
                     5000
                 ),
-                Title = User().FullName && ("been approved by your manager " & varMngrname in Notification || "been approved by ILD" in Notification) && IsDeleted = false
+                Title = User().FullName && ("been approved by your manager " & varMngrname in Notification || "been approved by ILD" in Notification) && UserDeleted = false
             )
         ),
         ClearCollect(
@@ -1064,7 +1064,7 @@ Home_Screen As screen:
                     Icon: =Icon.Trash
                     OnSelect: |-
                         =If(
-                            ThisItem.Status = "Enrolled",
+                            ThisItem.Status = "Enrolled" || ThisItem.Status = "Rejected",
                             Remove(
                                 CertificationOrder,
                                 ThisItem

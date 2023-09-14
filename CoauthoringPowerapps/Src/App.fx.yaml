@@ -1,6 +1,6 @@
 App As appinfo:
     BackEnabled: =false
-    OnStart: |+
+    OnStart: |
         =Collect(COL_CertificationSecurity,'CertificationApp-Security');
         Set(
             varUserLevel,
@@ -156,10 +156,19 @@ App As appinfo:
                     NotificationList_CertificationApp,
                     5000
                 ),
-                (Title = Office365Users.MyProfile().DisplayName && "been approved by your manager " & varMngrname in Notification) || ("has requested for" in Notification && Manager = User().FullName) || (Title = Office365Users.MyProfile().DisplayName && "been approved by ILD" in Notification) || (IsDeleted = false And Title = Office365Users.MyProfile().DisplayName)
+                (Title = Office365Users.MyProfile().DisplayName && "been approved by your manager " & varMngrname in Notification) || ("has requested for" in Notification && Manager = User().FullName) || (Title = Office365Users.MyProfile().DisplayName && "been approved by ILD" in Notification) || (UserDeleted = false And Title = Office365Users.MyProfile().DisplayName)
             )
         );
-        
+        ClearCollect(
+            mngr_notify_Col,
+            Filter(
+                LastN(
+                    NotificationList_CertificationApp,
+                    5000
+                ),
+                Title = Office365Users.MyProfile().DisplayName && ("been approved by your manager " & varMngrname in Notification || "been approved by ILD" in Notification) && (UserDeleted = false And Title = Office365Users.MyProfile().DisplayName)
+            )
+        );
     StartScreen: |-
         =If (
             !IsBlank(Param("View")),

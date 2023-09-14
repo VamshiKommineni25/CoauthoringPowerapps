@@ -767,16 +767,16 @@
 
     con_ViewReqCertDetails As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Light
-        Fill: =Color.White
-        Height: =376
-        RadiusBottomLeft: =4
-        RadiusBottomRight: =4
-        RadiusTopLeft: =4
-        RadiusTopRight: =4
+        Fill: =RGBA(241, 246, 246, 1)
+        Height: =590
+        RadiusBottomLeft: =10
+        RadiusBottomRight: =10
+        RadiusTopLeft: =10
+        RadiusTopRight: =10
         Visible: =varvarViewThisItemVisiblity
         Width: =877
-        X: =245
-        Y: =140
+        X: =244
+        Y: =101
         ZIndex: =3
 
         lbl_Details As label:
@@ -791,8 +791,8 @@
             FontWeight: =FontWeight.Bold
             Size: =15
             Text: ="Details"
-            X: =8
-            Y: =12
+            X: =78
+            Y: =2
             ZIndex: =1
 
         ico_Cancel As icon.Cancel:
@@ -840,12 +840,12 @@
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             Height: =16
-            Size: =13
+            Size: =10
             Text: |-
                 ="BU                                        :              " & varViewThisItem.BU.Value
             Width: =432
             X: =78
-            Y: =95
+            Y: =113
             ZIndex: =5
 
         lbl_ReqName As label:
@@ -857,11 +857,11 @@
             DisabledColor: =RGBA(166, 166, 166, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
-            Height: =16
-            Size: =13
+            Height: =24
+            Size: =10
             Text: |-
                 ="Name                                   :              " & varViewThisItem.Name
-            Width: =432
+            Width: =750
             X: =78
             Y: =67
             ZIndex: =6
@@ -876,12 +876,12 @@
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             Height: =28
-            Size: =13
+            Size: =10
             Text: |-
                 ="Examination Date                :              " & varViewThisItem.'Examination Date'
             Width: =518
             X: =78
-            Y: =228
+            Y: =349
             ZIndex: =7
 
         lbl_CertPract As label:
@@ -894,12 +894,12 @@
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             Height: =29
-            Size: =13
+            Size: =10
             Text: |-
                 ="Certification Practitioner     :             " & varViewThisItem.'Certification:Title'.Value
             Width: =568
             X: =78
-            Y: =117
+            Y: =145
             ZIndex: =8
 
         lbl_PayMentMode As label:
@@ -912,12 +912,12 @@
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             Height: =20
-            Size: =13
+            Size: =10
             Text: |-
                 ="Payment Mode                    :              " & varViewThisItem.PaymentMode
             Width: =487
             X: =78
-            Y: =149
+            Y: =200
             ZIndex: =9
 
         lbl_Manager As label:
@@ -930,12 +930,12 @@
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             Height: =25
-            Size: =13
+            Size: =10
             Text: |-
                 ="Manager                              :              " & "Vedarethina Sozhan M"
             Width: =487
             X: =78
-            Y: =176
+            Y: =251
             ZIndex: =10
 
         lbl_recordCreated As label:
@@ -948,12 +948,12 @@
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             Height: =20
-            Size: =13
+            Size: =10
             Text: |-
                 ="Record Created                   :              " & varViewThisItem.Created
             Width: =518
             X: =78
-            Y: =206
+            Y: =301
             ZIndex: =11
 
         lbl_ProofsUpload As label:
@@ -966,12 +966,12 @@
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             Height: =23
-            Size: =13
+            Size: =10
             Text: |-
                 ="Proofs Uploaded                 :              " & varViewThisItem.'Proofs Uploaded on'
             Width: =568
             X: =78
-            Y: =260
+            Y: =407
             ZIndex: =12
 
         lbl_docLink As label:
@@ -984,12 +984,12 @@
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             Height: =56
-            Size: =13
+            Size: =10
             Text: |-
                 ="Document Link                    :    " & varViewThisItem.Documents_Link
             Width: =799
             X: =78
-            Y: =283
+            Y: =453
             ZIndex: =13
 
         lbl_enrolled As label:
@@ -1007,7 +1007,7 @@
                 ="Enrolled                               :              " 
             Width: =243
             X: =78
-            Y: =339
+            Y: =530
             ZIndex: =14
 
         "'lbl_apprv/reject' As label":
@@ -1020,11 +1020,14 @@
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             Height: =23
+            OnSelect: |-
+                =Navigate(Details_Screen,ScreenTransition.Fade,{varCertificateDetails:varViewThisItem,varApprove:true});
+                Set(varvarViewThisItemVisiblity,false)
             Size: =13
             Text: ="Approve/Reject"
             Underline: =true
             X: =321
-            Y: =339
+            Y: =530
             ZIndex: =15
 
         img_Requester As image:

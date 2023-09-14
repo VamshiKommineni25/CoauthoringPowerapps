@@ -38,8 +38,7 @@
                 ClearCollect(
                     questiondetails,
                     Filter(
-                        QuestionList,
-                        CertificationName.Value = "AWS Certified Cloud Practitioner"
+                        QuestionList,CertificationName.Id=varCertificationData.CertificationID
                     )
                 )
             PressedBorderColor: =RGBA(185, 29, 11, 1)
@@ -241,11 +240,8 @@
                     Set(
                         QuestionID,
                         Last(
-                            Filter(
-                                QuestionList,
-                                  Boolean(1)
-                            )
-                        ).ID
+                                QuestionList
+                            ).ID
                     );
                     ClearCollect(
                         Questions,
@@ -1608,7 +1604,16 @@
             BorderStyle: =BorderStyle.None
             DelayItemLoading: =true
             Height: =610
-            Items: =Search(Sort(questiondetails,Created,SortOrder.Descending),txtinp_recent_textbox.Text,"QuestionTitle","Description")
+            Items: |-
+                =Search(
+                    Sort(questiondetails,
+                        Created,
+                        SortOrder.Descending
+                    ),
+                    txtinp_recent_textbox.Text,
+                    "QuestionTitle",
+                    "Description"
+                )
             Layout: =Layout.Vertical
             LoadingSpinner: =LoadingSpinner.Data
             TabIndex: =0
@@ -1629,7 +1634,7 @@
                 Font: ="Poppins"
                 Height: =35
                 OnSelect: =Select(Parent)
-                Size: =12
+                Size: =10
                 Text: =ThisItem.Requestors.DisplayName
                 Width: =Parent.Width-100
                 X: =img_requestor_recntqns.X+img_requestor_recntqns.Width
@@ -1647,7 +1652,7 @@
                 Font: ="Poppins"
                 Height: =26
                 OnSelect: =Select(Parent)
-                Size: =12
+                Size: =10
                 Text: |-
                     ="Department : " &ThisItem.Requestors.Department
                 Width: =357
@@ -1685,7 +1690,7 @@
                 Height: =50
                 OnSelect: =Select(Parent)
                 Overflow: =Overflow.Scroll
-                Size: =12
+                Size: =10
                 Text: =ThisItem.QuestionTitle
                 Width: =Parent.Width-25
                 Y: =lbl_recentqnsheader.Y+lbl_recentqnsheader.Height+3
@@ -1714,6 +1719,7 @@
                 ZIndex: =8
 
             lbl_recentqnscreated As label:
+                Align: =Align.Center
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =2
@@ -1722,13 +1728,13 @@
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 FocusedBorderThickness: =4
                 Font: ="Poppins"
-                Height: =61
+                Height: =37
                 OnSelect: =Select(Parent)
                 Overflow: =Overflow.Scroll
-                Size: =12
+                Size: =8
                 Text: =ThisItem.Created
-                Width: =120
-                X: =237
+                Width: =72
+                X: =283
                 Y: =5
                 ZIndex: =9
 

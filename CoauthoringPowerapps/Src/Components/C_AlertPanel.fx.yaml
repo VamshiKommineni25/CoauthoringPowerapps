@@ -95,7 +95,7 @@ C_AlertPanel As CanvasComponent:
                                 {ID: MyPatch.ID},
                                 {
                                     Title: MyPatch.Title,
-                                    IsDeleted: true
+                                    UserDeleted: true
                                 }
                             )
                         ),
@@ -107,7 +107,7 @@ C_AlertPanel As CanvasComponent:
                                 {ID: MyPatch.ID},
                                 {
                                     Title: MyPatch.Title,
-                                    IsDeleted: true
+                                    ManagerDeleted:true
                                 }
                             )
                         ),
@@ -119,7 +119,7 @@ C_AlertPanel As CanvasComponent:
                                 {ID: MyPatch.ID},
                                 {
                                     Title: MyPatch.Title,
-                                    IsDeleted: true
+                                    AdminDeleted: true
                                 }
                             )
                         )
@@ -165,7 +165,7 @@ C_AlertPanel As CanvasComponent:
                                     NotificationList_CertificationApp,
                                     2000
                                 ),
-                                "has uploaded proofs" = Notification And IsDeleted = false
+                                "has uploaded proofs" = Notification And UserDeleted = false
                             ),
                             Created,
                             SortOrder.Descending
