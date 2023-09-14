@@ -170,6 +170,22 @@ App As appinfo:
             )
         );
         
+        Switch(
+            varUserLevel ,
+             "USER",
+            Set(varNotifyCount,CountRows(col_Notification)),
+             "ADMIN",
+            Set(varNotifyCount,CountRows(mngr_notify_Col)),
+             "SUPER-ADMIN",
+                CountRows(Filter(
+                    FirstN(
+                        NotificationList_CertificationApp,
+                        2000
+                    ),
+                    "has uploaded proofs" in Notification And AdminDeleted = false
+                ))
+        )
+        
         
     StartScreen: |-
         =If (

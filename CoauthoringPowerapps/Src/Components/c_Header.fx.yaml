@@ -417,7 +417,7 @@ c_Header As CanvasComponent:
                 OnSelect: =Set(varAlert,true)
                 PressedBorderColor: =RGBA(0, 0, 0, 0)
                 PressedFill: =RGBA(0, 0, 0, 0)
-                Visible: =If(CountRows(col_Notification)>0,true,false)
+                Visible: =If(varNotifyCount>0,true,false)
                 Width: =10
                 X: =1148
                 Y: =20

@@ -84,7 +84,7 @@ C_AlertPanel As CanvasComponent:
                 HoverBorderColor: =RGBA(151, 0, 0, 1)
                 HoverColor: =RGBA(151, 0, 0, 1)
                 HoverFill: =RGBA(0, 0, 0, 0)
-                OnSelect: |-
+                OnSelect: |
                     =Switch(
                         varUserLevel,
                         "USER",
@@ -221,6 +221,42 @@ C_AlertPanel As CanvasComponent:
                             NotificationList_CertificationApp,
                             ID = ThisItem.ID,
                             {AdminDeleted: Boolean(1)}
+                        );
+                        ClearCollect(
+                            col_Notification,
+                            Filter(
+                                LastN(
+                                    NotificationList_CertificationApp,
+                                    5000
+                                ),
+                                (Title = Office365Users.MyProfile().DisplayName && "been approved by your manager " & varMngrname in Notification) || ("has requested for" in Notification && Manager = User().FullName) || (Title = Office365Users.MyProfile().DisplayName && "been approved by ILD" in Notification) || (UserDeleted = false And Title = Office365Users.MyProfile().DisplayName)
+                            )
+                        );
+                        ClearCollect(
+                            mngr_notify_Col,
+                            Filter(
+                                LastN(
+                                    NotificationList_CertificationApp,
+                                    5000
+                                ),
+                                Title = User().FullName && ("been approved by your manager " & varMngrname in Notification || "been approved by ILD" in Notification) && ManagerDeleted = false
+                            )
+                        );
+                        
+                        Switch(
+                            varUserLevel ,
+                             "USER",
+                            Set(varNotifyCount,CountRows(col_Notification)),
+                             "ADMIN",
+                            Set(varNotifyCount,CountRows(mngr_notify_Col)),
+                             "SUPER-ADMIN",
+                                CountRows(Filter(
+                                    FirstN(
+                                        NotificationList_CertificationApp,
+                                        2000
+                                    ),
+                                    "has uploaded proofs" in Notification And AdminDeleted = false
+                                ))
                         )
                     PressedBorderColor: =RGBA(0, 0, 0, 0)
                     PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
