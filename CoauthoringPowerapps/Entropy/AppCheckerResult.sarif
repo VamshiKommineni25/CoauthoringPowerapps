@@ -20739,36 +20739,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "App.varExcelUpload"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "App.varExcelUpload",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "varExcelUpload",
-                "module": "App",
-                "type": "App"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 7
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "App.image89172"
                 }
               ],
