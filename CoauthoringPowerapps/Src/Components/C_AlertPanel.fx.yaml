@@ -59,7 +59,8 @@ C_AlertPanel As CanvasComponent:
                 HoverFill: =RGBA(0, 0, 0, 0)
                 Icon: =Icon.Cancel
                 OnSelect: |
-                    =Set(varAlert,false);
+                    =//Set(varAlert,false);
+                    If(
                 PressedBorderColor: =RGBA(0, 0, 0, 0)
                 PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
                 PressedFill: =RGBA(0, 0, 0, 0)
@@ -284,4 +285,35 @@ C_AlertPanel As CanvasComponent:
                     X: =21
                     Y: =12
                     ZIndex: =7
+
+            Label20 As label:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                Size: =13
+                Text: ="No Notifications"
+                Visible: |-
+                    =If(
+                        CountRows(User_gal.AllItems) = 0 && varUser = true,
+                        true,
+                        false,
+                        If(
+                            CountRows(Manager_gal.AllItems) = 0 && varMngr = true,
+                            true,
+                            false,
+                            If(
+                                CountRows(ILD_gal.AllItems) = 0 && varAdmin = true,
+                                true,
+                                false
+                            )
+                        )
+                    )
+                X: =99
+                Y: =343
+                ZIndex: =7
 
