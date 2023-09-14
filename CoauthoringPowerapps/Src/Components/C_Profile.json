@@ -1161,7 +1161,7 @@
                   },
                   {
                     "Category": "Data",
-                    "InvariantScript": "Switch(varUserLevel,\"USER\",\"Employee\",\"ADMIN\",\"Manager\",\"SUPER-ADMIN\",\"Admin\")",
+                    "InvariantScript": "\"Employee\"",
                     "Property": "Text",
                     "RuleProviderType": "Unknown"
                   },
@@ -3638,7 +3638,7 @@
       },
       "NavigateTo"
     ],
-    "LastModifiedTimestamp": "638302823266474274",
+    "LastModifiedTimestamp": "638302754435867785",
     "Name": "C_Profile",
     "Rules": [
       {
@@ -3728,7 +3728,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638302823266474274",
+  "LastModifiedTimestamp": "638302754435867785",
   "Name": "5469d31a355b4cc3886bfc3e84679b37",
   "OverridableProperties": {},
   "Version": "638285491065897170"

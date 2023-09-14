@@ -50,16 +50,6 @@ Home_Screen As screen:
             )
         ),
         ClearCollect(
-            mngr_notify_Col,
-            Filter(
-                LastN(
-                    NotificationList_CertificationApp,
-                    5000
-                ),
-                Title = User().FullName && ("been approved by your manager " & varMngrname in Notification || "been approved by ILD" in Notification) && UserDeleted = false
-            )
-        ),
-        ClearCollect(
             Cert_Req,
             Filter(
                 CertificationRequest,
