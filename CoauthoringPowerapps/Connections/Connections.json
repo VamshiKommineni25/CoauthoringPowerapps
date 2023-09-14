@@ -105,13 +105,20 @@
       "parameterHints": {},
       "parameterHintsV2": {}
     },
-    "datasets": {},
+    "datasets": {
+      "https://ilinksystemsinc449.sharepoint.com/sites/CertificationApp": {
+        "dataSources": {
+          "CertificationApp-Security": {
+            "tableName": "90d46ce2-33b9-406a-b527-52d7c4a982a4"
+          }
+        }
+      }
+    },
     "dataSources": [
       "AnswersList_Admin",
       "BU-List",
       "Location List_Certification App",
       "Location List_Certification App_1",
-      "CertificationApp-Security_1",
       "CertificationRequest",
       "NotificationList_CertificationApp",
       "Certifications",
@@ -122,12 +129,13 @@
       "QuestionList_Admin",
       "CertificationOrderHistory",
       "BU-CertificationList",
-      "Target List"
+      "Target List",
+      "CertificationApp-Security"
     ],
     "dependencies": {},
     "dependents": [
       "b3723050-baac-4678-9f58-15696eee08c8",
-      "2ef9b654-bc19-4c91-a3b1-1dabb176fd45"
+      "e7be6e5d-8154-4559-bb0d-238891d400d6"
     ],
     "id": "391fb67a-599b-4e22-91d8-775183783e5f"
   },
@@ -371,6 +379,9 @@
       "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1653/1.0.1653.3403/logicflows/icon.png",
       "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
       "parameterHints": {
+        "391fb67a-599b-4e22-91d8-775183783e5f": {
+          "value": "shared_sharepointonline"
+        },
         "workflowEntityId": {
           "value": "d0467fe4-ca52-ee11-be6f-000d3a5c61dd"
         },
@@ -379,6 +390,9 @@
         }
       },
       "parameterHintsV2": {
+        "shared_sharepointonline": {
+          "value": "391fb67a-599b-4e22-91d8-775183783e5f"
+        },
         "workflowEntityId": {
           "value": "d0467fe4-ca52-ee11-be6f-000d3a5c61dd"
         },
