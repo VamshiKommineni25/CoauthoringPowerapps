@@ -2340,7 +2340,7 @@ Details_Screen As screen:
                                 );
                                 Set(
                                     varProofsLinks,
-                                    Attachment2.Run(
+                                    'Attachment-ProofsUpload'.Run(
                                         JSON(
                                             colfiles,
                                             JSONFormat.IndentFour
@@ -2418,7 +2418,7 @@ Details_Screen As screen:
                             );
                             Set(
                                 varProofsLinks,
-                                Attachment2.Run(
+                                 'Attachment-ProofsUpload'.Run(
                                     JSON(
                                         colfiles,
                                         JSONFormat.IndentFour
@@ -2522,7 +2522,7 @@ Details_Screen As screen:
                                 );
                                 Set(
                                     varProofsLinks,
-                                    Attachment2.Run(
+                                     'Attachment-ProofsUpload'.Run(
                                         JSON(
                                             colfiles,
                                             JSONFormat.IndentFour
@@ -2600,7 +2600,7 @@ Details_Screen As screen:
                             );
                             Set(
                                 varProofsLinks,
-                                Attachment2.Run(
+                                 'Attachment-ProofsUpload'.Run(
                                     JSON(
                                         colfiles,
                                         JSONFormat.IndentFour
@@ -2703,7 +2703,7 @@ Details_Screen As screen:
                                 );
                                 Set(
                                     varProofsLinks,
-                                    Attachment2.Run(
+                                     'Attachment-ProofsUpload'.Run(
                                         JSON(
                                             colfiles,
                                             JSONFormat.IndentFour
@@ -2781,7 +2781,7 @@ Details_Screen As screen:
                             );
                             Set(
                                 varProofsLinks,
-                                Attachment2.Run(
+                                 'Attachment-ProofsUpload'.Run(
                                     JSON(
                                         colfiles,
                                         JSONFormat.IndentFour
@@ -2884,7 +2884,7 @@ Details_Screen As screen:
                                 );
                                 Set(
                                     varProofsLinks,
-                                    Attachment2.Run(
+                                     'Attachment-ProofsUpload'.Run(
                                         JSON(
                                             colfiles,
                                             JSONFormat.IndentFour
@@ -2962,7 +2962,7 @@ Details_Screen As screen:
                             );
                             Set(
                                 varProofsLinks,
-                                Attachment2.Run(
+                                 'Attachment-ProofsUpload'.Run(
                                     JSON(
                                         colfiles,
                                         JSONFormat.IndentFour
@@ -3065,7 +3065,7 @@ Details_Screen As screen:
                                 );
                                 Set(
                                     varProofsLinks,
-                                    Attachment2.Run(
+                                     'Attachment-ProofsUpload'.Run(
                                         JSON(
                                             colfiles,
                                             JSONFormat.IndentFour
@@ -3143,7 +3143,7 @@ Details_Screen As screen:
                             );
                             Set(
                                 varProofsLinks,
-                                Attachment2.Run(
+                                 'Attachment-ProofsUpload'.Run(
                                     JSON(
                                         colfiles,
                                         JSONFormat.IndentFour
