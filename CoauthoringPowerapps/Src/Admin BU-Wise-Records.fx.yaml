@@ -752,6 +752,62 @@
             Height: =25
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverFill: =Self.Fill
+            OnSelect: |
+                =If(
+                    CountRows(glry_Cert_Req_details.AllItems) = 0,
+                    Notify(
+                        "No records to download",
+                        NotificationType.Error,
+                        1700
+                    ),
+                    If(
+                        drp_status.SelectedText.Value = "Proofs Approved",
+                        Refresh(CertificationOrder);
+                        
+                /*ForAll(
+                    Gallery8_2.AllItems,
+                    If(
+                    ThisRecord.Status = "Proofs Approved" And StatusDropDown.SelectedText.Value = "Proofs Approved" And Created>=DatePicker1_AdminDB.SelectedDate,
+                       UpdateIf(
+                            CertificationOrder,
+                            ID = ThisRecord.ID,
+                            {Status: "Processing with Finance"}
+                        )
+                    )
+                );*/
+                Refresh(CertificationOrder);
+                        /*Set(
+                            varfileLink,
+                            ProcessWithFinance.Run(
+                                StatusDropDown.SelectedText.Value,
+                                Trim(varData.Title),
+                                drp_Payment.SelectedText.Value,
+                                Date_From.SelectedDate,
+                                "Finance",
+                                Date_To.SelectedDate,
+                                Drp_Location List.SelectedText.Value
+                            ).link
+                        );
+                        Download(varfileLink);*/
+                        UpdateRows.Run(
+                            "Proofs Approved",
+                            Date_From.SelectedDate,
+                            drp_Payment.SelectedText.Value,
+                            Trim(varData.Title),
+                            Date_To.SelectedDate,
+                            'Drp_Location List'.SelectedText.Value
+                        );
+                        Notify("Excel sheet downloaded successfully",NotificationType.Success);
+                         Navigate('Admin dashBoard');
+                        Refresh(CertificationOrder),
+                        Notify(
+                            "Select Proofs Approved to download Excel file",
+                            NotificationType.Error,
+                            1700
+                        )
+                    );
+                    
+                );
             PressedBorderColor: =Self.BorderColor
             PressedFill: =Color.White
             RadiusBottomLeft: =8
@@ -1097,7 +1153,7 @@
                 DropTargetBorderColor: =RGBA(219, 219, 219, 1)
                 DropTargetBorderThickness: =0
                 FocusedBorderThickness: =4
-                Height: =157
+                Height: =126
                 HoverColor: =RGBA(0, 0, 0, 1)
                 HoverFill: =RGBA(186, 202, 226, 1)
                 IsInDataCard: =true
@@ -1144,8 +1200,9 @@
                 Size: =8
                 Tooltip: =
                 Visible: =varExcelUpload
-                Width: =396
-                Y: =23
+                Width: =375
+                X: =6
+                Y: =24
                 ZIndex: =2
 
             Button22 As button:
@@ -1154,7 +1211,7 @@
                 DisabledFill: =RGBA(213,39,26,1)
                 Fill: =RGBA(185, 29, 11, 1)
                 FontWeight: =FontWeight.Semibold
-                Height: =17
+                Height: =18
                 HoverColor: =RGBA(255, 255, 255, 1)
                 HoverFill: =RGBA(185, 29, 11, 1)
                 OnSelect: |
@@ -1217,7 +1274,7 @@
                 Visible: =varExcelUpload
                 Width: =70
                 X: =326
-                Y: =166
+                Y: =170
                 ZIndex: =3
 
             Icon24 As icon.Cancel:
@@ -1226,14 +1283,14 @@
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(244, 244, 244, 1)
                 Fill: =RGBA(255, 0, 0, 1)
-                Height: =15
+                Height: =16
                 Icon: =Icon.Cancel
                 OnSelect: |-
                     =UpdateContext({varExcelUpload:false})
                 Visible: =varExcelUpload
                 Width: =15
-                X: =381
-                Y: =23
+                X: =368
+                Y: =24
                 ZIndex: =4
 
         Image5 As image:
