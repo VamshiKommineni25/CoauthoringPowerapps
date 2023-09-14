@@ -19,22 +19,37 @@
     ],
     "id": "097e9fa4-7ace-42a6-961b-6fdbaf8177e9"
   },
-  "0c0e839c-5426-4d6c-b9f2-5a42f4ee2882": {
+  "1d1757c5-20c0-46f7-bb17-6eccdc9bdd02": {
     "connectionRef": {
-      "apiTier": "Standard",
-      "displayName": "OneDrive for Business",
-      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1647/1.0.1647.3361/onedriveforbusiness/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_onedriveforbusiness",
-      "parameterHints": {},
-      "parameterHintsV2": {}
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1653/1.0.1653.3403/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "workflowEntityId": {
+          "value": "e7d7456e-6766-ed11-9561-000d3a5a8fad"
+        },
+        "workflowName": {
+          "value": "9a227058-cc12-9bde-3002-db9b55280fbf"
+        }
+      },
+      "parameterHintsV2": {
+        "workflowEntityId": {
+          "value": "e7d7456e-6766-ed11-9561-000d3a5a8fad"
+        },
+        "workflowName": {
+          "value": "9a227058-cc12-9bde-3002-db9b55280fbf"
+        }
+      }
     },
     "datasets": {},
-    "dataSources": [],
-    "dependencies": {},
-    "dependents": [
-      "43560cf4-ff15-49e9-ab34-9d361fc87574"
+    "dataSources": [
+      "YearCertification_Flow_Excel"
     ],
-    "id": "0c0e839c-5426-4d6c-b9f2-5a42f4ee2882"
+    "dependencies": {
+      "shared_onedriveforbusiness_1": "73858b79-9876-4472-af67-64ea23094f51"
+    },
+    "dependents": [],
+    "id": "1d1757c5-20c0-46f7-bb17-6eccdc9bdd02"
   },
   "1ffb2080-16a4-4f7c-8883-b373b72e135d": {
     "connectionRef": {
@@ -111,45 +126,6 @@
     ],
     "id": "391fb67a-599b-4e22-91d8-775183783e5f"
   },
-  "43560cf4-ff15-49e9-ab34-9d361fc87574": {
-    "connectionRef": {
-      "apiTier": "Standard",
-      "displayName": "Logic flows",
-      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1653/1.0.1653.3403/logicflows/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
-      "parameterHints": {
-        "0c0e839c-5426-4d6c-b9f2-5a42f4ee2882": {
-          "value": "shared_onedriveforbusiness_1"
-        },
-        "workflowEntityId": {
-          "value": "e7d7456e-6766-ed11-9561-000d3a5a8fad"
-        },
-        "workflowName": {
-          "value": "9a227058-cc12-9bde-3002-db9b55280fbf"
-        }
-      },
-      "parameterHintsV2": {
-        "shared_onedriveforbusiness_1": {
-          "value": "0c0e839c-5426-4d6c-b9f2-5a42f4ee2882"
-        },
-        "workflowEntityId": {
-          "value": "e7d7456e-6766-ed11-9561-000d3a5a8fad"
-        },
-        "workflowName": {
-          "value": "9a227058-cc12-9bde-3002-db9b55280fbf"
-        }
-      }
-    },
-    "datasets": {},
-    "dataSources": [
-      "YearCertification_Flow_Excel"
-    ],
-    "dependencies": {
-      "shared_onedriveforbusiness_1": "0c0e839c-5426-4d6c-b9f2-5a42f4ee2882"
-    },
-    "dependents": [],
-    "id": "43560cf4-ff15-49e9-ab34-9d361fc87574"
-  },
   "49149bfd-f47f-4d66-8afd-128764a3dfd3": {
     "connectionRef": {
       "apiTier": "Standard",
@@ -212,6 +188,9 @@
       "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1653/1.0.1653.3403/logicflows/icon.png",
       "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
       "parameterHints": {
+        "391fb67a-599b-4e22-91d8-775183783e5f": {
+          "value": "shared_sharepointonline"
+        },
         "workflowEntityId": {
           "value": "d0467fe4-ca52-ee11-be6f-000d3a5c61dd"
         },
@@ -220,6 +199,9 @@
         }
       },
       "parameterHintsV2": {
+        "shared_sharepointonline": {
+          "value": "391fb67a-599b-4e22-91d8-775183783e5f"
+        },
         "workflowEntityId": {
           "value": "d0467fe4-ca52-ee11-be6f-000d3a5c61dd"
         },
@@ -237,6 +219,20 @@
     },
     "dependents": [],
     "id": "53a94d66-d706-4b4d-87a1-0403572047bf"
+  },
+  "73858b79-9876-4472-af67-64ea23094f51": {
+    "connectionRef": {
+      "displayName": "OneDrive for Business",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1647/1.0.1647.3361/onedriveforbusiness/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_onedriveforbusiness"
+    },
+    "datasets": {},
+    "dataSources": [],
+    "dependencies": {},
+    "dependents": [
+      "1d1757c5-20c0-46f7-bb17-6eccdc9bdd02"
+    ],
+    "id": "73858b79-9876-4472-af67-64ea23094f51"
   },
   "8d3e70d7-e256-498c-bde9-fb68b6135a12": {
     "connectionRef": {
