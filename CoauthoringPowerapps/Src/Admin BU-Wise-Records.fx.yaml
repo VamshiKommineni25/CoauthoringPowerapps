@@ -245,7 +245,7 @@
             HoverBorderColor: =RGBA(241,246,246, 1)
             HoverColor: =RGBA(51, 51, 51, 1)
             HoverFill: =RGBA(241,246,246, 1)
-            Items: =["Enrolled","Proofs Approved","Proofs Uploaded","Processing with Finance","Manager Approved"]
+            Items: =["All","Reimbursed","Enrolled","Manager Approved","Processing with Finance","Proofs Approved","Proofs Uploaded"]
             OnSelect: =Set(varNewCert,true)
             PaddingBottom: =5
             PaddingLeft: =12
