@@ -166,7 +166,7 @@
             HoverColor: =RGBA(185, 29, 11, 1)
             HoverFill: =
             OnSelect: |-
-                =UpdateContext({varNewCert:true})
+                =UpdateContext({varExcelUpload:true})
             PressedBorderColor: =RGBA(185, 29, 11, 1)
             PressedColor: =RGBA(185, 29, 11, 1)
             PressedFill: =
@@ -1073,4 +1073,184 @@
         Visible: =varAlert
         X: =976
         ZIndex: =7
+
+    Container85 As groupContainer.manualLayoutContainer:
+        Visible: =varExcelUpload
+        Width: =396
+        X: =953
+        Y: =152
+        ZIndex: =8
+
+        "'attachment group' As group":
+            Height: =5
+            Width: =5
+            X: =-875
+            Y: =-485
+            ZIndex: =1
+
+            Attachments_3 As attachments:
+                BorderColor: =RGBA(202, 202, 202, 1)
+                BorderThickness: =0.1
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                DropTargetBorderColor: =RGBA(219, 219, 219, 1)
+                DropTargetBorderThickness: =0
+                FocusedBorderThickness: =4
+                Height: =157
+                HoverColor: =RGBA(0, 0, 0, 1)
+                HoverFill: =RGBA(186, 202, 226, 1)
+                IsInDataCard: =true
+                ItemColor: =RGBA(255, 255, 255, 1)
+                ItemFill: =RGBA(56, 96, 178, 1)
+                ItemHoverColor: =RGBA(0, 0, 0, 1)
+                ItemHoverFill: =RGBA(186, 202, 226, 1)
+                Items: =
+                OnAddFile: |-
+                    =/*Set(
+                        VarAttachmentControl,
+                        JSON(
+                            Image9.Image,
+                            IncludeBinaryData
+                        )
+                    );
+                    Set(
+                        VarBase64Only,
+                        Mid(
+                            VarAttachmentControl,
+                            Find(
+                                ",",
+                                VarAttachmentControl
+                            ) + 1,
+                            Len(VarAttachmentControl) - Find(
+                                ",",
+                                VarAttachmentControl
+                            ) - 1
+                        )
+                    );
+                    Attachments_1.Run(
+                        varCertificateStatus.ID,
+                        Last(Attachments.Attachments).Name,
+                        VarBase64Only
+                    );
+                    */
+                    Refresh(CertificationOrder)
+                PaddingBottom: =5
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                PaddingRight: =5
+                PaddingTop: =5
+                PressedColor: =RGBA(255, 255, 255, 1)
+                PressedFill: =RGBA(0, 18, 107, 1)
+                Size: =8
+                Tooltip: =
+                Visible: =varExcelUpload
+                Width: =396
+                Y: =23
+                ZIndex: =2
+
+            Button22 As button:
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(255, 255, 255, 1)
+                DisabledFill: =RGBA(213,39,26,1)
+                Fill: =RGBA(213,39,26,1)
+                FontWeight: =FontWeight.Semibold
+                Height: =17
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =RGBA(213,39,26,1)
+                OnSelect: |
+                    =Set(
+                        varAttachmentcontrol1,
+                        JSON(
+                            Image5.Image,
+                            JSONFormat.IncludeBinaryData
+                        )
+                    );
+                    Set(
+                        varBase64Only,
+                        Mid(
+                            varAttachmentcontrol1,
+                            Find(
+                                ",",
+                                varAttachmentcontrol1
+                            ) + 1,
+                            Len(varAttachmentcontrol1) - Find(
+                                ",",
+                                varAttachmentcontrol1
+                            ) - 1
+                        )
+                    );
+                    Set(
+                        varResultFlow,
+                        UploadDwnxcl.Run(
+                            varBase64Only,
+                            Last(Attachments_3.Attachments).Name
+                        );
+                        Notify(
+                            "File Uploaded Successfully",
+                            NotificationType.Success,
+                            1700
+                        )
+                    );
+                    If(
+                        varResultFlow = "success",
+                        Notify(
+                            "File Uploaded successfully",
+                            NotificationType.Success
+                        );
+                        Notify(
+                            "File Uploaded failed",
+                            NotificationType.Error
+                        )
+                    );
+                    Navigate(
+                        'Admin dashBoard',
+                        ScreenTransition.Fade
+                    );
+                PressedColor: =RGBA(255, 255, 255, 1)
+                PressedFill: =RGBA(213,39,26,1)
+                RadiusBottomLeft: =7
+                RadiusBottomRight: =7
+                RadiusTopLeft: =7
+                RadiusTopRight: =7
+                Size: =10
+                Text: ="Upload"
+                Tooltip: =
+                Visible: =varExcelUpload
+                Width: =70
+                X: =326
+                Y: =166
+                ZIndex: =3
+
+            Icon24 As icon.Cancel:
+                BorderColor: =RGBA(0, 18, 107, 1)
+                Color: =RGBA(255, 255, 255, 1)
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(244, 244, 244, 1)
+                Fill: =RGBA(255, 0, 0, 1)
+                Height: =15
+                Icon: =Icon.Cancel
+                OnSelect: |-
+                    =UpdateContext({varExcelUpload:false})
+                Visible: =varExcelUpload
+                Width: =15
+                X: =381
+                Y: =23
+                ZIndex: =4
+
+        Image5 As image:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Image: =Last(Attachments_3.Attachments).Value
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Visible: =false
+            X: =40
+            Y: =40
+            ZIndex: =5
 
