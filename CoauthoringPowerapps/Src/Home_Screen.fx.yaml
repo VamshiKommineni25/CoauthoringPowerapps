@@ -1064,7 +1064,7 @@ Home_Screen As screen:
                     Icon: =Icon.Trash
                     OnSelect: |-
                         =If(
-                            ThisItem.Status = "Enrolled",
+                            ThisItem.Status = "Enrolled" || ThisItem.Status = "Rejected",
                             Remove(
                                 CertificationOrder,
                                 ThisItem

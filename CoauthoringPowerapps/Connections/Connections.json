@@ -105,7 +105,15 @@
       "parameterHints": {},
       "parameterHintsV2": {}
     },
-    "datasets": {},
+    "datasets": {
+      "https://ilinksystemsinc449.sharepoint.com/sites/CertificationApp": {
+        "dataSources": {
+          "CertificationApp-Security": {
+            "tableName": "90d46ce2-33b9-406a-b527-52d7c4a982a4"
+          }
+        }
+      }
+    },
     "dataSources": [
       "AnswersList_Admin",
       "BU-List",
@@ -122,7 +130,8 @@
       "QuestionList_Admin",
       "CertificationOrderHistory",
       "BU-CertificationList",
-      "Target List"
+      "Target List",
+      "CertificationApp-Security"
     ],
     "dependencies": {},
     "dependents": [
