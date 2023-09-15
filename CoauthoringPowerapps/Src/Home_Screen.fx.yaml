@@ -580,6 +580,26 @@ Home_Screen As screen:
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
             Height: =20
+            OnSelect: |-
+                =Switch(
+                    NoRecord,
+                    "My Certifications",
+                    Refresh(CertificationOrder);
+                    ClearCollect(
+                        userCertifications,
+                        Filter(
+                            CertificationOrder,
+                            Requestor.Email = User().Email And Created > DateAdd(
+                                Today(),
+                                -365
+                            )
+                        )
+                    ),
+                    "My Team Certifications",
+                    Refresh(CertificationOrder),
+                    "External Certifications",
+                    Refresh(ExternalCertificationList)
+                )
             Size: =10
             Text: ="Refresh"
             Width: =77
