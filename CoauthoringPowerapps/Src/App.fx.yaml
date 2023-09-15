@@ -184,7 +184,8 @@ App As appinfo:
                     ),
                     "has uploaded proofs" in Notification And AdminDeleted = false
                 ))
-        )
+        );
+        Set(NoRecord,"My Certifications");
         
         
     StartScreen: |-
