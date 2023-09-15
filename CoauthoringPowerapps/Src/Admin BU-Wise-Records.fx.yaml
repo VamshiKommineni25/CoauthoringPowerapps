@@ -821,6 +821,22 @@
             Y: =550
             ZIndex: =9
 
+        Label18_4 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(255, 0, 0, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            Size: =13
+            Text: ="No records found"
+            Visible: =If(CountRows(glry_Cert_Req_details.AllItems) = 0, true,false)
+            X: =512
+            Y: =252
+            ZIndex: =10
+
     con_ViewReqCertDetails As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Light
         Fill: =RGBA(241, 246, 246, 1)
