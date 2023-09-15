@@ -415,7 +415,7 @@
             HoverFill: =
             OnSelect: |-
                 =Set(varNewCert,true);
-                UpdateContext({varNewCert:true})
+                //UpdateContext({varNewCert:true})
             PressedBorderColor: =RGBA(185, 29, 11, 1)
             PressedColor: =RGBA(185, 29, 11, 1)
             PressedFill: =
@@ -2386,7 +2386,8 @@
                         ThisItem
                     );
                     UpdateContext({varNewCertVisible: true});
-                    UpdateContext({varNewCert: false})
+                    
+                    Set(varNewCert,false)
                 PressedBorderColor: =RGBA(0, 0, 0, 0)
                 PressedColor: =Color.Black
                 PressedFill: =RGBA(0, 0, 0, 0)

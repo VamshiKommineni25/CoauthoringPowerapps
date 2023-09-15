@@ -11982,6 +11982,18 @@
               "message": {
                 "text": "Error occurred running rule app-InefficientDelayLoading."
               }
+            },
+            {
+              "associatedRule": {
+                "id": "app-InefficientDelayLoading",
+                "index": 10
+              },
+              "descriptor": {
+                "id": "app-InefficientDelayLoading"
+              },
+              "message": {
+                "text": "Error occurred running rule app-InefficientDelayLoading."
+              }
             }
           ]
         }
@@ -12001,10 +12013,10 @@
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 284,
-                  "charOffset": 1463,
+                  "charLength": 222,
+                  "charOffset": 1470,
                   "snippet": {
-                    "text": "'Attachment-ProofsUpload'.Run(JSON(\n                        colfiles,\n                        JSONFormat.IndentFour\n                    ),\n                    varCertificateDetails.ID,varCertificateDetails.ID,varCertificateDetails.ID,varCertificateDetails.ID,varCertificateDetails.ID)"
+                    "text": "'Attachment-ProofsUpload'.Run(\n                    JSON(\n                        colfiles,\n                        JSONFormat.IndentFour\n                    ),\n                    varCertificateDetails.ID\n                )"
                   }
                 }
               },
@@ -12017,7 +12029,7 @@
           ],
           "message": {
             "arguments": [
-              "6",
+              "2",
               "0"
             ],
             "id": "issue"
@@ -12042,10 +12054,10 @@
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 284,
-                  "charOffset": 3989,
+                  "charLength": 198,
+                  "charOffset": 3925,
                   "snippet": {
-                    "text": "'Attachment-ProofsUpload'.Run(JSON(\n                        colfiles,\n                        JSONFormat.IndentFour\n                    ),\n                    varCertificateDetails.ID,varCertificateDetails.ID,varCertificateDetails.ID,varCertificateDetails.ID,varCertificateDetails.ID)"
+                    "text": "'Attachment-ProofsUpload'.Run(\n                JSON(\n                    colfiles,\n                    JSONFormat.IndentFour\n                ),\n                varCertificateDetails.ID\n            )"
                   }
                 }
               },
@@ -12058,7 +12070,7 @@
           ],
           "message": {
             "arguments": [
-              "6",
+              "2",
               "0"
             ],
             "id": "issue"
@@ -12083,10 +12095,10 @@
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 284,
-                  "charOffset": 7249,
+                  "charLength": 222,
+                  "charOffset": 7024,
                   "snippet": {
-                    "text": "'Attachment-ProofsUpload'.Run(JSON(\n                        colfiles,\n                        JSONFormat.IndentFour\n                    ),\n                    varCertificateDetails.ID,varCertificateDetails.ID,varCertificateDetails.ID,varCertificateDetails.ID,varCertificateDetails.ID)"
+                    "text": "'Attachment-ProofsUpload'.Run(\n                    JSON(\n                        colfiles,\n                        JSONFormat.IndentFour\n                    ),\n                    varCertificateDetails.ID\n                )"
                   }
                 }
               },
@@ -12099,7 +12111,7 @@
           ],
           "message": {
             "arguments": [
-              "6",
+              "2",
               "0"
             ],
             "id": "issue"
@@ -12124,10 +12136,10 @@
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 284,
-                  "charOffset": 9776,
+                  "charLength": 198,
+                  "charOffset": 9479,
                   "snippet": {
-                    "text": "'Attachment-ProofsUpload'.Run(JSON(\n                        colfiles,\n                        JSONFormat.IndentFour\n                    ),\n                    varCertificateDetails.ID,varCertificateDetails.ID,varCertificateDetails.ID,varCertificateDetails.ID,varCertificateDetails.ID)"
+                    "text": "'Attachment-ProofsUpload'.Run(\n                JSON(\n                    colfiles,\n                    JSONFormat.IndentFour\n                ),\n                varCertificateDetails.ID\n            )"
                   }
                 }
               },
@@ -12140,7 +12152,7 @@
           ],
           "message": {
             "arguments": [
-              "6",
+              "2",
               "0"
             ],
             "id": "issue"
@@ -12165,10 +12177,10 @@
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 284,
-                  "charOffset": 13036,
+                  "charLength": 222,
+                  "charOffset": 12578,
                   "snippet": {
-                    "text": "'Attachment-ProofsUpload'.Run(JSON(\n                        colfiles,\n                        JSONFormat.IndentFour\n                    ),\n                    varCertificateDetails.ID,varCertificateDetails.ID,varCertificateDetails.ID,varCertificateDetails.ID,varCertificateDetails.ID)"
+                    "text": "'Attachment-ProofsUpload'.Run(\n                    JSON(\n                        colfiles,\n                        JSONFormat.IndentFour\n                    ),\n                    varCertificateDetails.ID\n                )"
                   }
                 }
               },
@@ -12181,7 +12193,7 @@
           ],
           "message": {
             "arguments": [
-              "6",
+              "2",
               "0"
             ],
             "id": "issue"
@@ -12206,10 +12218,10 @@
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 284,
-                  "charOffset": 15563,
+                  "charLength": 198,
+                  "charOffset": 15033,
                   "snippet": {
-                    "text": "'Attachment-ProofsUpload'.Run(JSON(\n                        colfiles,\n                        JSONFormat.IndentFour\n                    ),\n                    varCertificateDetails.ID,varCertificateDetails.ID,varCertificateDetails.ID,varCertificateDetails.ID,varCertificateDetails.ID)"
+                    "text": "'Attachment-ProofsUpload'.Run(\n                JSON(\n                    colfiles,\n                    JSONFormat.IndentFour\n                ),\n                varCertificateDetails.ID\n            )"
                   }
                 }
               },
@@ -12222,7 +12234,7 @@
           ],
           "message": {
             "arguments": [
-              "6",
+              "2",
               "0"
             ],
             "id": "issue"
@@ -12247,10 +12259,10 @@
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 284,
-                  "charOffset": 18823,
+                  "charLength": 222,
+                  "charOffset": 18132,
                   "snippet": {
-                    "text": "'Attachment-ProofsUpload'.Run(JSON(\n                        colfiles,\n                        JSONFormat.IndentFour\n                    ),\n                    varCertificateDetails.ID,varCertificateDetails.ID,varCertificateDetails.ID,varCertificateDetails.ID,varCertificateDetails.ID)"
+                    "text": "'Attachment-ProofsUpload'.Run(\n                    JSON(\n                        colfiles,\n                        JSONFormat.IndentFour\n                    ),\n                    varCertificateDetails.ID\n                )"
                   }
                 }
               },
@@ -12263,7 +12275,7 @@
           ],
           "message": {
             "arguments": [
-              "6",
+              "2",
               "0"
             ],
             "id": "issue"
@@ -12288,10 +12300,10 @@
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 284,
-                  "charOffset": 21350,
+                  "charLength": 198,
+                  "charOffset": 20587,
                   "snippet": {
-                    "text": "'Attachment-ProofsUpload'.Run(JSON(\n                        colfiles,\n                        JSONFormat.IndentFour\n                    ),\n                    varCertificateDetails.ID,varCertificateDetails.ID,varCertificateDetails.ID,varCertificateDetails.ID,varCertificateDetails.ID)"
+                    "text": "'Attachment-ProofsUpload'.Run(\n                JSON(\n                    colfiles,\n                    JSONFormat.IndentFour\n                ),\n                varCertificateDetails.ID\n            )"
                   }
                 }
               },
@@ -12304,7 +12316,7 @@
           ],
           "message": {
             "arguments": [
-              "6",
+              "2",
               "0"
             ],
             "id": "issue"
@@ -12329,10 +12341,10 @@
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 284,
-                  "charOffset": 24613,
+                  "charLength": 222,
+                  "charOffset": 23689,
                   "snippet": {
-                    "text": "'Attachment-ProofsUpload'.Run(JSON(\n                        colfiles,\n                        JSONFormat.IndentFour\n                    ),\n                    varCertificateDetails.ID,varCertificateDetails.ID,varCertificateDetails.ID,varCertificateDetails.ID,varCertificateDetails.ID)"
+                    "text": "'Attachment-ProofsUpload'.Run(\n                    JSON(\n                        colfiles,\n                        JSONFormat.IndentFour\n                    ),\n                    varCertificateDetails.ID\n                )"
                   }
                 }
               },
@@ -12345,7 +12357,7 @@
           ],
           "message": {
             "arguments": [
-              "6",
+              "2",
               "0"
             ],
             "id": "issue"
@@ -12370,10 +12382,10 @@
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 284,
-                  "charOffset": 27144,
+                  "charLength": 198,
+                  "charOffset": 26148,
                   "snippet": {
-                    "text": "'Attachment-ProofsUpload'.Run(JSON(\n                        colfiles,\n                        JSONFormat.IndentFour\n                    ),\n                    varCertificateDetails.ID,varCertificateDetails.ID,varCertificateDetails.ID,varCertificateDetails.ID,varCertificateDetails.ID)"
+                    "text": "'Attachment-ProofsUpload'.Run(\n                JSON(\n                    colfiles,\n                    JSONFormat.IndentFour\n                ),\n                varCertificateDetails.ID\n            )"
                   }
                 }
               },
@@ -12386,7 +12398,7 @@
           ],
           "message": {
             "arguments": [
-              "6",
+              "2",
               "0"
             ],
             "id": "issue"
@@ -22354,36 +22366,6 @@
           },
           "ruleId": "app-DataSourceDefaultMaxRowsLimit",
           "ruleIndex": 8
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Admin dashBoard'.varNewCert"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Admin dashBoard'.varNewCert",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "varNewCert",
-                "module": "Admin dashBoard",
-                "type": "'Admin dashBoard'"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 5
         },
         {
           "locations": [
