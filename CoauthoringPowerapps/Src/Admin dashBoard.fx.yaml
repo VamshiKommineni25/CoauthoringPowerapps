@@ -1,7 +1,102 @@
 "'Admin dashBoard' As screen":
     Fill: =RGBA(241, 246, 246, 1)
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
-    OnVisible: =Set(SideLabelvar,4);
+    OnVisible: |-
+        =Set(SideLabelvar,4);
+        ClearCollect(ColPiechart,Table(
+            {
+                Status: "Enrolled",
+                Count: CountRows(
+                    Filter(
+                        FirstN(
+                            CertificationOrder,
+                            100000
+                        ),
+                        (DateValue(Created) >= Date_FromDate.SelectedDate && DateValue(Created) <= Date_ToDate.SelectedDate) && BU.Value = Drp_BUList.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BCode',
+                        Status = "Enrolled"
+                    )
+                )
+            },
+            {
+                Status: "Manager Approved",
+                Count: CountRows(
+                    Filter(
+                        FirstN(
+                            CertificationOrder,
+                            100000
+                        ),
+                        (DateValue(Created) >= Date_FromDate.SelectedDate && DateValue(Created) <= Date_ToDate.SelectedDate) && BU.Value = Drp_BUList.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BCode',
+                        Status = "Manager Approved"
+                    )
+                )
+            },
+            {
+                Status: "Proofs Uploaded",
+                Count: CountRows(
+                    Filter(
+                        FirstN(
+                            CertificationOrder,
+                            100000
+                        ),
+                        (DateValue(Created) >= Date_FromDate.SelectedDate && DateValue(Created) <= Date_ToDate.SelectedDate) && BU.Value = Drp_BUList.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BCode',
+                        Status = "Proofs Uploaded"
+                    )
+                )
+            },
+            {
+                Status: "Proofs Approved",
+                Count: CountRows(
+                    Filter(
+                        FirstN(
+                            CertificationOrder,
+                            100000
+                        ),
+                        (DateValue(Created) >= Date_FromDate.SelectedDate && DateValue(Created) <= Date_ToDate.SelectedDate) && BU.Value = Drp_BUList.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BCode',
+                        Status = "Proofs Approved"
+                    )
+                )
+            },
+            {
+                Status: "Reimbursed",
+                Count: CountRows(
+                    Filter(
+                        FirstN(
+                            CertificationOrder,
+                            100000
+                        ),
+                        (DateValue(Created) >= Date_FromDate.SelectedDate && DateValue(Created) <= Date_ToDate.SelectedDate) && BU.Value = Drp_BUList.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BCode',
+                        Status = "Reimbursed"
+                    )
+                )
+            },
+            {
+                Status: "Voucher Based",
+                Count: CountRows(
+                    Filter(
+                        FirstN(
+                            CertificationOrder,
+                            100000
+                        ),
+                        (DateValue(Created) >= Date_FromDate.SelectedDate && DateValue(Created) <= Date_ToDate.SelectedDate) && BU.Value = Drp_BUList.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BCode',
+                        Status = "Completed Using Voucher"
+                    )
+                )
+            },
+            {
+                Status: "With finance Team",
+                Count: CountRows(
+                    Filter(
+                        FirstN(
+                            CertificationOrder,
+                            100000
+                        ),
+                        (DateValue(Created) >= Date_FromDate.SelectedDate && DateValue(Created) <= Date_ToDate.SelectedDate) && BU.Value = Drp_BUList.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BCode',
+                        Status = "Processing with Finance"
+                    )
+                )
+            }
+        )
+        )
 
     "'Cntr_Certifications per Provider/BU' As groupContainer.verticalAutoLayoutContainer":
         DropShadow: =DropShadow.Light
@@ -35,7 +130,11 @@
                         Status: "Enrolled",
                         Count: CountRows(
                             Filter(
-                                FirstN(CertificationOrder,100000),(DateValue(Created)>=Date_FromDate.SelectedDate && DateValue(Created)<=Date_ToDate.SelectedDate) &&               BU.Value = Drp_BUList.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BCode',
+                                FirstN(
+                                    CertificationOrder,
+                                    100000
+                                ),
+                                (DateValue(Created) >= Date_FromDate.SelectedDate && DateValue(Created) <= Date_ToDate.SelectedDate) && BU.Value = Drp_BUList.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BCode',
                                 Status = "Enrolled"
                             )
                         )
@@ -44,8 +143,11 @@
                         Status: "Manager Approved",
                         Count: CountRows(
                             Filter(
-                                FirstN(CertificationOrder,100000),(DateValue(Created)>=Date_FromDate.SelectedDate && DateValue(Created)<=Date_ToDate.SelectedDate) &&
-                                BU.Value = Drp_BUList.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BCode',
+                                FirstN(
+                                    CertificationOrder,
+                                    100000
+                                ),
+                                (DateValue(Created) >= Date_FromDate.SelectedDate && DateValue(Created) <= Date_ToDate.SelectedDate) && BU.Value = Drp_BUList.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BCode',
                                 Status = "Manager Approved"
                             )
                         )
@@ -54,8 +156,11 @@
                         Status: "Proofs Uploaded",
                         Count: CountRows(
                             Filter(
-                                FirstN(CertificationOrder,100000),(DateValue(Created)>=Date_FromDate.SelectedDate && DateValue(Created)<=Date_ToDate.SelectedDate) &&
-                                BU.Value = Drp_BUList.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BCode',
+                                FirstN(
+                                    CertificationOrder,
+                                    100000
+                                ),
+                                (DateValue(Created) >= Date_FromDate.SelectedDate && DateValue(Created) <= Date_ToDate.SelectedDate) && BU.Value = Drp_BUList.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BCode',
                                 Status = "Proofs Uploaded"
                             )
                         )
@@ -64,8 +169,11 @@
                         Status: "Proofs Approved",
                         Count: CountRows(
                             Filter(
-                                FirstN(CertificationOrder,100000),(DateValue(Created)>=Date_FromDate.SelectedDate && DateValue(Created)<=Date_ToDate.SelectedDate) &&
-                                BU.Value = Drp_BUList.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BCode',
+                                FirstN(
+                                    CertificationOrder,
+                                    100000
+                                ),
+                                (DateValue(Created) >= Date_FromDate.SelectedDate && DateValue(Created) <= Date_ToDate.SelectedDate) && BU.Value = Drp_BUList.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BCode',
                                 Status = "Proofs Approved"
                             )
                         )
@@ -74,8 +182,11 @@
                         Status: "Reimbursed",
                         Count: CountRows(
                             Filter(
-                                FirstN(CertificationOrder,100000),(DateValue(Created)>=Date_FromDate.SelectedDate && DateValue(Created)<=Date_ToDate.SelectedDate) &&
-                                BU.Value = Drp_BUList.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BCode',
+                                FirstN(
+                                    CertificationOrder,
+                                    100000
+                                ),
+                                (DateValue(Created) >= Date_FromDate.SelectedDate && DateValue(Created) <= Date_ToDate.SelectedDate) && BU.Value = Drp_BUList.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BCode',
                                 Status = "Reimbursed"
                             )
                         )
@@ -84,8 +195,11 @@
                         Status: "Voucher Based",
                         Count: CountRows(
                             Filter(
-                               FirstN(CertificationOrder,100000),(DateValue(Created)>=Date_FromDate.SelectedDate && DateValue(Created)<=Date_ToDate.SelectedDate) &&
-                                BU.Value = Drp_BUList.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BCode',
+                                FirstN(
+                                    CertificationOrder,
+                                    100000
+                                ),
+                                (DateValue(Created) >= Date_FromDate.SelectedDate && DateValue(Created) <= Date_ToDate.SelectedDate) && BU.Value = Drp_BUList.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BCode',
                                 Status = "Completed Using Voucher"
                             )
                         )
@@ -94,21 +208,21 @@
                         Status: "With finance Team",
                         Count: CountRows(
                             Filter(
-                                FirstN(CertificationOrder,100000),(DateValue(Created)>=Date_FromDate.SelectedDate && DateValue(Created)<=Date_ToDate.SelectedDate) &&
-                                BU.Value = Drp_BUList.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BCode',
+                                FirstN(
+                                    CertificationOrder,
+                                    100000
+                                ),
+                                (DateValue(Created) >= Date_FromDate.SelectedDate && DateValue(Created) <= Date_ToDate.SelectedDate) && BU.Value = Drp_BUList.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BCode',
                                 Status = "Processing with Finance"
                             )
                         )
                     }
                 )
-                
-                
-                
-                
                 //CountRows(Filter(CertificationOrder,BU.Id=ThisItem.ID,Status="Proofs Approved"))
             LayoutMinHeight: =250
             PressedBorderColor: =RGBA(0, 0, 0, 0)
-            Visible: =If('Glry_Total Cert per BU/Provider'.Selected.Name="Total Certifications Per BU",true,false)
+            Visible: |
+                =If('Glry_Total Cert per BU/Provider'.Selected.Name="Total Certifications Per BU",true,false)
             Width: =600
             X: =40
             Y: =70
@@ -2815,4 +2929,124 @@
             X: =16
             Y: =395
             ZIndex: =14
+
+    Label21 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(128, 128, 128, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Height: =50
+        Size: =13
+        Text: ="There is no data to display"
+        Visible: |-
+            =If(
+                CountRows(
+                    ForAll(
+                        Table(
+                            {
+                                Status: "Enrolled",
+                                Count: CountRows(
+                                    Filter(
+                                        FirstN(
+                                            CertificationOrder,
+                                            100000
+                                        ),
+                                        (DateValue(Created) >= Date_FromDate.SelectedDate && DateValue(Created) <= Date_ToDate.SelectedDate) && BU.Value = Drp_BUList.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BCode',
+                                        Status = "Enrolled"
+                                    )
+                                )
+                            },
+                            {
+                                Status: "Manager Approved",
+                                Count: CountRows(
+                                    Filter(
+                                        FirstN(
+                                            CertificationOrder,
+                                            100000
+                                        ),
+                                        (DateValue(Created) >= Date_FromDate.SelectedDate && DateValue(Created) <= Date_ToDate.SelectedDate) && BU.Value = Drp_BUList.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BCode',
+                                        Status = "Manager Approved"
+                                    )
+                                )
+                            },
+                            {
+                                Status: "Proofs Uploaded",
+                                Count: CountRows(
+                                    Filter(
+                                        FirstN(
+                                            CertificationOrder,
+                                            100000
+                                        ),
+                                        (DateValue(Created) >= Date_FromDate.SelectedDate && DateValue(Created) <= Date_ToDate.SelectedDate) && BU.Value = Drp_BUList.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BCode',
+                                        Status = "Proofs Uploaded"
+                                    )
+                                )
+                            },
+                            {
+                                Status: "Proofs Approved",
+                                Count: CountRows(
+                                    Filter(
+                                        FirstN(
+                                            CertificationOrder,
+                                            100000
+                                        ),
+                                        (DateValue(Created) >= Date_FromDate.SelectedDate && DateValue(Created) <= Date_ToDate.SelectedDate) && BU.Value = Drp_BUList.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BCode',
+                                        Status = "Proofs Approved"
+                                    )
+                                )
+                            },
+                            {
+                                Status: "Reimbursed",
+                                Count: CountRows(
+                                    Filter(
+                                        FirstN(
+                                            CertificationOrder,
+                                            100000
+                                        ),
+                                        (DateValue(Created) >= Date_FromDate.SelectedDate && DateValue(Created) <= Date_ToDate.SelectedDate) && BU.Value = Drp_BUList.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BCode',
+                                        Status = "Reimbursed"
+                                    )
+                                )
+                            },
+                            {
+                                Status: "Voucher Based",
+                                Count: CountRows(
+                                    Filter(
+                                        FirstN(
+                                            CertificationOrder,
+                                            100000
+                                        ),
+                                        (DateValue(Created) >= Date_FromDate.SelectedDate && DateValue(Created) <= Date_ToDate.SelectedDate) && BU.Value = Drp_BUList.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BCode',
+                                        Status = "Completed Using Voucher"
+                                    )
+                                )
+                            },
+                            {
+                                Status: "With finance Team",
+                                Count: CountRows(
+                                    Filter(
+                                        FirstN(
+                                            CertificationOrder,
+                                            100000
+                                        ),
+                                        (DateValue(Created) >= Date_FromDate.SelectedDate && DateValue(Created) <= Date_ToDate.SelectedDate) && BU.Value = Drp_BUList.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BCode',
+                                        Status = "Processing with Finance"
+                                    )
+                                )
+                            }
+                        ),
+                        Count = 0
+                    )
+                ) = 6,
+                true,
+                false
+            )
+        Width: =290
+        X: =561
+        Y: =272
+        ZIndex: =28
 
