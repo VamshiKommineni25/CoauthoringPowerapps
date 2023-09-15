@@ -2356,13 +2356,15 @@ Details_Screen As screen:
                                     )
                                 );
                                 Set(
-                                varProofsLinks,
-                                 'Attachment-ProofsUpload'.Run(JSON(
+                                    varProofsLinks,
+                                    'Attachment-ProofsUpload'.Run(
+                                        JSON(
                                             colfiles,
                                             JSONFormat.IndentFour
                                         ),
-                                        varCertificateDetails.ID,varCertificateDetails.ID,varCertificateDetails.ID,varCertificateDetails.ID,varCertificateDetails.ID).links
-                            );
+                                        varCertificateDetails.ID
+                                    ).links
+                                );
                                 If(
                                     varCertificateDetails.Status in ["Enrolled"],
                                     UpdateIf(
@@ -2376,13 +2378,12 @@ Details_Screen As screen:
                                                 TextInput1.Text & "% Voucher",
                                                 "Cash"
                                             ),
-                                            'Proofs Uploaded on':Today()
+                                            'Proofs Uploaded on': Today()
                                         }
                                     )
                                 );
                                 Refresh(CertificationOrder);
                                 Reset(Attachments_1);
-                                
                                 Notify(
                                     "Proofs Uploaded Successfully",
                                     NotificationType.Success,
@@ -2433,11 +2434,13 @@ Details_Screen As screen:
                             );
                             Set(
                                 varProofsLinks,
-                                 'Attachment-ProofsUpload'.Run(JSON(
-                                            colfiles,
-                                            JSONFormat.IndentFour
-                                        ),
-                                        varCertificateDetails.ID,varCertificateDetails.ID,varCertificateDetails.ID,varCertificateDetails.ID,varCertificateDetails.ID).links
+                                'Attachment-ProofsUpload'.Run(
+                                    JSON(
+                                        colfiles,
+                                        JSONFormat.IndentFour
+                                    ),
+                                    varCertificateDetails.ID
+                                ).links
                             );
                             If(
                                 varCertificateDetails.Status in [
@@ -2455,13 +2458,12 @@ Details_Screen As screen:
                                             TextInput1.Text & "% Voucher",
                                             "Cash"
                                         ),
-                                        'Proofs Uploaded on':Today()
+                                        'Proofs Uploaded on': Today()
                                     }
                                 )
                             );
                             Refresh(CertificationOrder);
                             Reset(Attachments_1);
-                            
                             Notify(
                                 "Proofs Uploaded Successfully",
                                 NotificationType.Success,
@@ -2478,20 +2480,14 @@ Details_Screen As screen:
                             )
                         )
                     );
-                    
                     Patch(
-                                   NotificationList_CertificationApp,
-                                    Defaults(NotificationList_CertificationApp),
-                                    {
-                                        Title:varCertificateDetails.Requestor.DisplayName,
-                                        Notification:varCertificateDetails.Requestor.DisplayName &" has uploaded proofs for the certification " & varCertificateDetails.'Certification:Title'.Value
-                                    }
+                        NotificationList_CertificationApp,
+                        Defaults(NotificationList_CertificationApp),
+                        {
+                            Title: varCertificateDetails.Requestor.DisplayName,
+                            Notification: varCertificateDetails.Requestor.DisplayName & " has uploaded proofs for the certification " & varCertificateDetails.'Certification:Title'.Value
+                        }
                     );
-                    
-                    
-                    
-                    
-                    
                     If(
                         varCertificateDetails.PaymentMode <> "Cash",
                         If(
@@ -2534,13 +2530,15 @@ Details_Screen As screen:
                                     )
                                 );
                                 Set(
-                                varProofsLinks,
-                                 'Attachment-ProofsUpload'.Run(JSON(
+                                    varProofsLinks,
+                                    'Attachment-ProofsUpload'.Run(
+                                        JSON(
                                             colfiles,
                                             JSONFormat.IndentFour
                                         ),
-                                        varCertificateDetails.ID,varCertificateDetails.ID,varCertificateDetails.ID,varCertificateDetails.ID,varCertificateDetails.ID).links
-                            );
+                                        varCertificateDetails.ID
+                                    ).links
+                                );
                                 If(
                                     varCertificateDetails.Status in ["Enrolled"],
                                     UpdateIf(
@@ -2554,13 +2552,12 @@ Details_Screen As screen:
                                                 TextInput1.Text & "% Voucher",
                                                 "Cash"
                                             ),
-                                            'Proofs Uploaded on':Today()
+                                            'Proofs Uploaded on': Today()
                                         }
                                     )
                                 );
                                 Refresh(CertificationOrder);
                                 Reset(Attachments_7);
-                                
                                 Notify(
                                     "Proofs Uploaded Successfully",
                                     NotificationType.Success,
@@ -2609,13 +2606,15 @@ Details_Screen As screen:
                                     "Name"
                                 )
                             );
-                             Set(
+                            Set(
                                 varProofsLinks,
-                                 'Attachment-ProofsUpload'.Run(JSON(
-                                            colfiles,
-                                            JSONFormat.IndentFour
-                                        ),
-                                        varCertificateDetails.ID,varCertificateDetails.ID,varCertificateDetails.ID,varCertificateDetails.ID,varCertificateDetails.ID).links
+                                'Attachment-ProofsUpload'.Run(
+                                    JSON(
+                                        colfiles,
+                                        JSONFormat.IndentFour
+                                    ),
+                                    varCertificateDetails.ID
+                                ).links
                             );
                             If(
                                 varCertificateDetails.Status in [
@@ -2633,13 +2632,12 @@ Details_Screen As screen:
                                             TextInput1.Text & "% Voucher",
                                             "Cash"
                                         ),
-                                        'Proofs Uploaded on':Today()
+                                        'Proofs Uploaded on': Today()
                                     }
                                 )
                             );
                             Refresh(CertificationOrder);
                             Reset(Attachments_7);
-                            
                             Notify(
                                 "Proofs Uploaded Successfully",
                                 NotificationType.Success,
@@ -2656,19 +2654,14 @@ Details_Screen As screen:
                             )
                         )
                     );
-                    
                     Patch(
-                                   NotificationList_CertificationApp,
-                                    Defaults(NotificationList_CertificationApp),
-                                    {
-                                        Title:varCertificateDetails.Requestor.DisplayName,
-                                        Notification:varCertificateDetails.Requestor.DisplayName &" has uploaded proofs for the certification " & varCertificateDetails.'Certification:Title'.Value
-                                    }
+                        NotificationList_CertificationApp,
+                        Defaults(NotificationList_CertificationApp),
+                        {
+                            Title: varCertificateDetails.Requestor.DisplayName,
+                            Notification: varCertificateDetails.Requestor.DisplayName & " has uploaded proofs for the certification " & varCertificateDetails.'Certification:Title'.Value
+                        }
                     );
-                    
-                    
-                    
-                    
                     If(
                         varCertificateDetails.PaymentMode <> "Cash",
                         If(
@@ -2710,14 +2703,16 @@ Details_Screen As screen:
                                         "Name"
                                     )
                                 );
-                                 Set(
-                                varProofsLinks,
-                                 'Attachment-ProofsUpload'.Run(JSON(
+                                Set(
+                                    varProofsLinks,
+                                    'Attachment-ProofsUpload'.Run(
+                                        JSON(
                                             colfiles,
                                             JSONFormat.IndentFour
                                         ),
-                                        varCertificateDetails.ID,varCertificateDetails.ID,varCertificateDetails.ID,varCertificateDetails.ID,varCertificateDetails.ID).links
-                            );
+                                        varCertificateDetails.ID
+                                    ).links
+                                );
                                 If(
                                     varCertificateDetails.Status in ["Enrolled"],
                                     UpdateIf(
@@ -2731,13 +2726,12 @@ Details_Screen As screen:
                                                 TextInput1.Text & "% Voucher",
                                                 "Cash"
                                             ),
-                                            'Proofs Uploaded on':Today()
+                                            'Proofs Uploaded on': Today()
                                         }
                                     )
                                 );
                                 Refresh(CertificationOrder);
                                 Reset(Attachments_8);
-                                
                                 Notify(
                                     "Proofs Uploaded Successfully",
                                     NotificationType.Success,
@@ -2786,13 +2780,15 @@ Details_Screen As screen:
                                     "Name"
                                 )
                             );
-                             Set(
+                            Set(
                                 varProofsLinks,
-                                 'Attachment-ProofsUpload'.Run(JSON(
-                                            colfiles,
-                                            JSONFormat.IndentFour
-                                        ),
-                                        varCertificateDetails.ID,varCertificateDetails.ID,varCertificateDetails.ID,varCertificateDetails.ID,varCertificateDetails.ID).links
+                                'Attachment-ProofsUpload'.Run(
+                                    JSON(
+                                        colfiles,
+                                        JSONFormat.IndentFour
+                                    ),
+                                    varCertificateDetails.ID
+                                ).links
                             );
                             If(
                                 varCertificateDetails.Status in [
@@ -2810,13 +2806,12 @@ Details_Screen As screen:
                                             TextInput1.Text & "% Voucher",
                                             "Cash"
                                         ),
-                                        'Proofs Uploaded on':Today()
+                                        'Proofs Uploaded on': Today()
                                     }
                                 )
                             );
                             Refresh(CertificationOrder);
                             Reset(Attachments_8);
-                            
                             Notify(
                                 "Proofs Uploaded Successfully",
                                 NotificationType.Success,
@@ -2833,19 +2828,14 @@ Details_Screen As screen:
                             )
                         )
                     );
-                    
                     Patch(
-                                   NotificationList_CertificationApp,
-                                    Defaults(NotificationList_CertificationApp),
-                                    {
-                                        Title:varCertificateDetails.Requestor.DisplayName,
-                                        Notification:varCertificateDetails.Requestor.DisplayName &" has uploaded proofs for the certification " & varCertificateDetails.'Certification:Title'.Value
-                                    }
+                        NotificationList_CertificationApp,
+                        Defaults(NotificationList_CertificationApp),
+                        {
+                            Title: varCertificateDetails.Requestor.DisplayName,
+                            Notification: varCertificateDetails.Requestor.DisplayName & " has uploaded proofs for the certification " & varCertificateDetails.'Certification:Title'.Value
+                        }
                     );
-                    
-                    
-                    
-                    
                     If(
                         varCertificateDetails.PaymentMode <> "Cash",
                         If(
@@ -2887,14 +2877,16 @@ Details_Screen As screen:
                                         "Name"
                                     )
                                 );
-                                 Set(
-                                varProofsLinks,
-                                 'Attachment-ProofsUpload'.Run(JSON(
+                                Set(
+                                    varProofsLinks,
+                                    'Attachment-ProofsUpload'.Run(
+                                        JSON(
                                             colfiles,
                                             JSONFormat.IndentFour
                                         ),
-                                        varCertificateDetails.ID,varCertificateDetails.ID,varCertificateDetails.ID,varCertificateDetails.ID,varCertificateDetails.ID).links
-                            );
+                                        varCertificateDetails.ID
+                                    ).links
+                                );
                                 If(
                                     varCertificateDetails.Status in ["Enrolled"],
                                     UpdateIf(
@@ -2908,13 +2900,12 @@ Details_Screen As screen:
                                                 TextInput1.Text & "% Voucher",
                                                 "Cash"
                                             ),
-                                            'Proofs Uploaded on':Today()
+                                            'Proofs Uploaded on': Today()
                                         }
                                     )
                                 );
                                 Refresh(CertificationOrder);
                                 Reset(Attachments_9);
-                                
                                 Notify(
                                     "Proofs Uploaded Successfully",
                                     NotificationType.Success,
@@ -2963,13 +2954,15 @@ Details_Screen As screen:
                                     "Name"
                                 )
                             );
-                             Set(
+                            Set(
                                 varProofsLinks,
-                                 'Attachment-ProofsUpload'.Run(JSON(
-                                            colfiles,
-                                            JSONFormat.IndentFour
-                                        ),
-                                        varCertificateDetails.ID,varCertificateDetails.ID,varCertificateDetails.ID,varCertificateDetails.ID,varCertificateDetails.ID).links
+                                'Attachment-ProofsUpload'.Run(
+                                    JSON(
+                                        colfiles,
+                                        JSONFormat.IndentFour
+                                    ),
+                                    varCertificateDetails.ID
+                                ).links
                             );
                             If(
                                 varCertificateDetails.Status in [
@@ -2987,13 +2980,12 @@ Details_Screen As screen:
                                             TextInput1.Text & "% Voucher",
                                             "Cash"
                                         ),
-                                        'Proofs Uploaded on':Today()
+                                        'Proofs Uploaded on': Today()
                                     }
                                 )
                             );
                             Refresh(CertificationOrder);
                             Reset(Attachments_9);
-                            
                             Notify(
                                 "Proofs Uploaded Successfully",
                                 NotificationType.Success,
@@ -3010,19 +3002,14 @@ Details_Screen As screen:
                             )
                         )
                     );
-                    
                     Patch(
-                                   NotificationList_CertificationApp,
-                                    Defaults(NotificationList_CertificationApp),
-                                    {
-                                        Title:varCertificateDetails.Requestor.DisplayName,
-                                        Notification:varCertificateDetails.Requestor.DisplayName &" has uploaded proofs for the certification " & varCertificateDetails.'Certification:Title'.Value
-                                    }
+                        NotificationList_CertificationApp,
+                        Defaults(NotificationList_CertificationApp),
+                        {
+                            Title: varCertificateDetails.Requestor.DisplayName,
+                            Notification: varCertificateDetails.Requestor.DisplayName & " has uploaded proofs for the certification " & varCertificateDetails.'Certification:Title'.Value
+                        }
                     );
-                    
-                    
-                    
-                    
                     If(
                         varCertificateDetails.PaymentMode <> "Cash",
                         If(
@@ -3064,14 +3051,16 @@ Details_Screen As screen:
                                         "Name"
                                     )
                                 );
-                                 Set(
-                                varProofsLinks,
-                                 'Attachment-ProofsUpload'.Run(JSON(
+                                Set(
+                                    varProofsLinks,
+                                    'Attachment-ProofsUpload'.Run(
+                                        JSON(
                                             colfiles,
                                             JSONFormat.IndentFour
                                         ),
-                                        varCertificateDetails.ID,varCertificateDetails.ID,varCertificateDetails.ID,varCertificateDetails.ID,varCertificateDetails.ID).links
-                            );
+                                        varCertificateDetails.ID
+                                    ).links
+                                );
                                 If(
                                     varCertificateDetails.Status in ["Enrolled"],
                                     UpdateIf(
@@ -3085,13 +3074,12 @@ Details_Screen As screen:
                                                 TextInput1.Text & "% Voucher",
                                                 "Cash"
                                             ),
-                                            'Proofs Uploaded on':Today()
+                                            'Proofs Uploaded on': Today()
                                         }
                                     )
                                 );
                                 Refresh(CertificationOrder);
                                 Reset(Attachments_12);
-                                
                                 Notify(
                                     "Proofs Uploaded Successfully",
                                     NotificationType.Success,
@@ -3140,13 +3128,15 @@ Details_Screen As screen:
                                     "Name"
                                 )
                             );
-                             Set(
+                            Set(
                                 varProofsLinks,
-                                 'Attachment-ProofsUpload'.Run(JSON(
-                                            colfiles,
-                                            JSONFormat.IndentFour
-                                        ),
-                                        varCertificateDetails.ID,varCertificateDetails.ID,varCertificateDetails.ID,varCertificateDetails.ID,varCertificateDetails.ID).links
+                                'Attachment-ProofsUpload'.Run(
+                                    JSON(
+                                        colfiles,
+                                        JSONFormat.IndentFour
+                                    ),
+                                    varCertificateDetails.ID
+                                ).links
                             );
                             If(
                                 varCertificateDetails.Status in [
@@ -3164,13 +3154,12 @@ Details_Screen As screen:
                                             TextInput1.Text & "% Voucher",
                                             "Cash"
                                         ),
-                                        'Proofs Uploaded on':Today()
+                                        'Proofs Uploaded on': Today()
                                     }
                                 )
                             );
                             Refresh(CertificationOrder);
                             Reset(Attachments_12);
-                           
                             Notify(
                                 "Proofs Uploaded Successfully",
                                 NotificationType.Success,
@@ -3187,18 +3176,18 @@ Details_Screen As screen:
                             )
                         )
                     );
-                    
                     Patch(
-                                   NotificationList_CertificationApp,
-                                    Defaults(NotificationList_CertificationApp),
-                                    {
-                                        Title:varCertificateDetails.Requestor.DisplayName,
-                                        Notification:varCertificateDetails.Requestor.DisplayName &" has uploaded proofs for the certification " & varCertificateDetails.'Certification:Title'.Value
-                                    }
+                        NotificationList_CertificationApp,
+                        Defaults(NotificationList_CertificationApp),
+                        {
+                            Title: varCertificateDetails.Requestor.DisplayName,
+                            Notification: varCertificateDetails.Requestor.DisplayName & " has uploaded proofs for the certification " & varCertificateDetails.'Certification:Title'.Value
+                        }
                     );
-                    
-                    Set(varAttachpopUp,false);
-                    
+                    Set(
+                        varAttachpopUp,
+                        false
+                    );
                     Reset(TextInput1);
                 PressedBorderColor: =Self.BorderColor
                 PressedFill: =Color.White
