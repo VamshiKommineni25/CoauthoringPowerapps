@@ -413,7 +413,9 @@
             HoverBorderColor: =RGBA(185, 29, 11, 1)
             HoverColor: =RGBA(185, 29, 11, 1)
             HoverFill: =
-            OnSelect: =Set(varNewCert, true)
+            OnSelect: |-
+                =Set(varNewCert,true);
+                UpdateContext({varNewCert:true})
             PressedBorderColor: =RGBA(185, 29, 11, 1)
             PressedColor: =RGBA(185, 29, 11, 1)
             PressedFill: =
@@ -2443,6 +2445,22 @@
                 X: =158
                 Y: =43
                 ZIndex: =7
+
+        Label18_5 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            Size: =13
+            Text: ="No records found"
+            Visible: =If(CountRows(Glry_ViewRequest.AllItems)=0,true,false)
+            X: =122
+            Y: =380
+            ZIndex: =6
 
     Cntr_TargetCert As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Semibold

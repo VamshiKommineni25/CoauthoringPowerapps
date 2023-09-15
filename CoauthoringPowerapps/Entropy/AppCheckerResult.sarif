@@ -11982,6 +11982,18 @@
               "message": {
                 "text": "Error occurred running rule app-InefficientDelayLoading."
               }
+            },
+            {
+              "associatedRule": {
+                "id": "app-InefficientDelayLoading",
+                "index": 10
+              },
+              "descriptor": {
+                "id": "app-InefficientDelayLoading"
+              },
+              "message": {
+                "text": "Error occurred running rule app-InefficientDelayLoading."
+              }
             }
           ]
         }
@@ -20351,6 +20363,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "App.varNewCert"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.varNewCert",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "varNewCert",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App.varAttachpopUp"
                 }
               ],
@@ -22354,36 +22396,6 @@
           },
           "ruleId": "app-DataSourceDefaultMaxRowsLimit",
           "ruleIndex": 8
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Admin dashBoard'.varNewCert"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Admin dashBoard'.varNewCert",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "varNewCert",
-                "module": "Admin dashBoard",
-                "type": "'Admin dashBoard'"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 5
         },
         {
           "locations": [
