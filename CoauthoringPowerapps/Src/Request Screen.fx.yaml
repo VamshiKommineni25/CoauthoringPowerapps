@@ -2446,7 +2446,7 @@
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(0, 120, 212, 1)
                 Tooltip: =Parent.DisplayName
-                Width: =236
+                Width: =357
                 ZIndex: =2
 
             ErrorMessage24 As label:
