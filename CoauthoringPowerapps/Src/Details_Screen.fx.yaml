@@ -113,6 +113,15 @@ Details_Screen As screen:
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
             DisabledColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
+            DisplayMode: |
+                =If(
+                    (varCertificateDetails.Status = "Enrolled" /* And User().Email = Office365Users.Manager(varCertificateDetails.Requestor.Email).Mail)*/ )|| (varCertificateDetails.Status = "Proofs Uploaded" && varCertificateDetails.'Has attachments' And varUserLevel in [
+                        "SUPER-ADMIN",
+                        "ADMIN"
+                    ]),
+                    DisplayMode.Edit,
+                    DisplayMode.Disabled
+                )
             Fill: =RGBA(0, 0, 0, 0)
             FocusedBorderColor: =RGBA(189, 25, 11, 1)
             FocusedBorderThickness: =1
@@ -130,10 +139,10 @@ Details_Screen As screen:
             RadiusTopLeft: =5
             RadiusTopRight: =5
             Size: =8
-            Text: ="Revise"
+            Text: =If(varCertificateDetails.Status="Enrolled" And varCertificateDetails.PaymentMode="Cash","Reject","Revise")
             Visible: =If(varApprove,true,false)
             Width: =84
-            X: =867
+            X: =993
             Y: =13
             ZIndex: =3
 
