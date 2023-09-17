@@ -3215,39 +3215,6 @@ Details_Screen As screen:
                 Y: =75
                 ZIndex: =5
 
-            Button2 As button:
-                BorderColor: =RGBA(0, 0, 0, 0)
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                DisabledFill: =RGBA(244, 244, 244, 1)
-                Fill: =RGBA(0, 120, 212, 1)
-                FocusedBorderColor: =ColorFade(Self.Fill, -75%)
-                Font: =Font.'Segoe UI'
-                FontWeight: =FontWeight.Semibold
-                Height: =30
-                HoverBorderColor: =RGBA(0, 0, 0, 0)
-                HoverColor: =RGBA(255, 255, 255, 1)
-                HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
-                OnSelect: |-
-                    =UpdateIf(
-                        CertificationOrder,
-                        ID = varCertificateDetails.ID,
-                        {Status: "Manager Approved"}
-                    );
-                PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
-                PressedColor: =RGBA(255, 255, 255, 1)
-                PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-                RadiusBottomLeft: =0
-                RadiusBottomRight: =0
-                RadiusTopLeft: =0
-                RadiusTopRight: =0
-                Size: =10
-                Text: ="upload"
-                Width: =78
-                X: =135
-                Y: =71
-                ZIndex: =6
-
     C_AlertPanel_2 As C_AlertPanel:
         Visible: =varAlert
         X: =976
