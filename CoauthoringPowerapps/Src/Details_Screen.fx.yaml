@@ -131,6 +131,121 @@ Details_Screen As screen:
             HoverBorderColor: =RGBA(189, 25, 11, 1)
             HoverColor: =RGBA(189, 25, 11, 1)
             HoverFill: =ColorFade(RGBA(0, 0, 0, 0), -10%)
+            OnSelect: |-
+                =If(
+                    Btn_ReviseCert.Text = "Reject",
+                    Set(
+                        varRevise,
+                        true
+                    ) && Set(
+                        varMngrReject,
+                        true
+                    );
+                    Set(
+                        varProvider,
+                        LookUp(
+                            Certifications,
+                            ID = varCertificateDetails.CertificationID.Id
+                        ).'Provider Name'
+                    );
+                    Set(
+                        varTitle,
+                        LookUp(
+                            Certifications,
+                            ID = varCertificateDetails.CertificationID.Id
+                        ).'Certification Name'
+                    );
+                    Set(
+                        varTech,
+                        LookUp(
+                            Certifications,
+                            ID = varCertificateDetails.CertificationID.Id
+                        ).Technology.Value
+                    );
+                    Set(
+                        varCost,
+                        LookUp(
+                            Certifications,
+                            ID = varCertificateDetails.CertificationID.Id
+                        ).Price & " USD"
+                    );
+                    Set(
+                        varRole,
+                        LookUp(
+                            Certifications,
+                            ID = varCertificateDetails.CertificationID.Id
+                        ).Role.Value
+                    );
+                    Set(
+                        varTentativeDate,
+                        varCertificateDetails.'Examination Date'
+                    );
+                    Set(
+                        varRequestorEmail,
+                        varCertificateDetails.Requestor.Email
+                    );
+                    Set(
+                        varRequestorName,
+                        varCertificateDetails.Requestor.DisplayName
+                    ),
+                    //Reset(TextInput4);
+                    Set(
+                        varRevise,
+                        true
+                    );
+                    Set(
+                        varMngrReject,
+                        false
+                    );
+                    Set(
+                        varProvider,
+                        LookUp(
+                            Certifications,
+                            ID = varCertificateDetails.CertificationID.Id
+                        ).'Provider Name'
+                    );
+                    Set(
+                        varTitle,
+                        LookUp(
+                            Certifications,
+                            ID = varCertificateDetails.CertificationID.Id
+                        ).'Certification Name'
+                    );
+                    Set(
+                        varTech,
+                        LookUp(
+                            Certifications,
+                            ID = varCertificateDetails.CertificationID.Id
+                        ).Technology.Value
+                    );
+                    Set(
+                        varCost,
+                        LookUp(
+                            Certifications,
+                            ID = varCertificateDetails.CertificationID.Id
+                        ).Price & " USD"
+                    );
+                    Set(
+                        varRole,
+                        LookUp(
+                            Certifications,
+                            ID = varCertificateDetails.CertificationID.Id
+                        ).Role.Value
+                    );
+                    Set(
+                        varTentativeDate,
+                        varCertificateDetails.'Examination Date'
+                    );
+                    Set(
+                        varRequestorEmail,
+                        varCertificateDetails.Requestor.Email
+                    );
+                    Set(
+                        varRequestorName,
+                        varCertificateDetails.Requestor.DisplayName
+                    );
+                    
+                )
             PressedBorderColor: =RGBA(189, 25, 11, 1)
             PressedColor: =RGBA(189, 25, 11, 1)
             PressedFill: =RGBA(0, 0, 0, 0)
