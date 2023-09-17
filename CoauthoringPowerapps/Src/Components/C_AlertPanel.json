@@ -116,7 +116,7 @@
                 "Name": "Label4_1",
                 "Parent": "Container17_1",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 912,
+                "PublishOrderIndex": 919,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -453,7 +453,7 @@
                 "Name": "Icon16_1",
                 "Parent": "Container17_1",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 913,
+                "PublishOrderIndex": 920,
                 "Rules": [
                   {
                     "Category": "Design",
@@ -817,7 +817,7 @@
                 "Name": "Button3_1",
                 "Parent": "Container17_1",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 914,
+                "PublishOrderIndex": 921,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -1074,7 +1074,7 @@
                     "Name": "galleryTemplate1_8",
                     "Parent": "Notify_gal",
                     "PersistMetaDataIDKey": false,
-                    "PublishOrderIndex": 916,
+                    "PublishOrderIndex": 923,
                     "Rules": [
                       {
                         "Category": "Design",
@@ -1164,7 +1164,7 @@
                     "Name": "Label6",
                     "Parent": "Notify_gal",
                     "PersistMetaDataIDKey": false,
-                    "PublishOrderIndex": 917,
+                    "PublishOrderIndex": 924,
                     "Rules": [
                       {
                         "Category": "Data",
@@ -1493,7 +1493,7 @@
                     "Name": "Icon17",
                     "Parent": "Notify_gal",
                     "PersistMetaDataIDKey": false,
-                    "PublishOrderIndex": 918,
+                    "PublishOrderIndex": 925,
                     "Rules": [
                       {
                         "Category": "Design",
@@ -1697,7 +1697,7 @@
                     "Name": "Separator1_3",
                     "Parent": "Notify_gal",
                     "PersistMetaDataIDKey": false,
-                    "PublishOrderIndex": 919,
+                    "PublishOrderIndex": 926,
                     "Rules": [
                       {
                         "Category": "Design",
@@ -1861,7 +1861,7 @@
                 "Name": "Notify_gal",
                 "Parent": "Container17_1",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 915,
+                "PublishOrderIndex": 922,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -2108,7 +2108,7 @@
                 "Name": "Label20",
                 "Parent": "Container17_1",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 920,
+                "PublishOrderIndex": 927,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -2426,7 +2426,7 @@
             "Name": "Container17_1",
             "Parent": "Container16_1",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 911,
+            "PublishOrderIndex": 918,
             "Rules": [
               {
                 "Category": "Design",
@@ -2630,7 +2630,7 @@
         "Name": "Container16_1",
         "Parent": "C_AlertPanel",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 910,
+        "PublishOrderIndex": 917,
         "Rules": [
           {
             "Category": "Design",
