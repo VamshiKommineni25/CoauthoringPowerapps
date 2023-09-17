@@ -144,7 +144,8 @@ Details_Screen As screen:
             DisabledFill: =RGBA(244, 244, 244, 1)
             DisplayMode: |-
                 =If(
-                    (varCertificateDetails.Status = "Proofs Uploaded" And (varCertificateDetails.PaymentMode <> "Cash") And (varCertificateDetails.PaymentMode <> "Advance Payment") And (varCertificateDetails.PaymentMode <> "Voucher") And varUserLevel in [
+                    (varCertificateDetails.Status = "Proofs Uploaded" And (varCertificateDetails.PaymentMode <> "Cash") And (varCertificateDetails.PaymentMode <> "Advance Payment") And (varCertificateDetails.PaymentMode <> "Voucher")And 
+                    varUserLevel in [
                         "SUPER-ADMIN",
                         "ADMIN"
                     ]),
@@ -153,7 +154,7 @@ Details_Screen As screen:
                         (varCertificateDetails.Status = "Enrolled"/* And User().Email = Office365Users.Manager(varCertificateDetails.Requestor.Email).Mail)*/) || (varCertificateDetails.Status = "Proofs Uploaded" && varCertificateDetails.'Has attachments' And varUserLevel in [
                             "SUPER-ADMIN",
                             "ADMIN"
-                        ]),
+                        ]) ,
                         DisplayMode.Edit,
                         DisplayMode.Disabled
                     )
@@ -245,10 +246,10 @@ Details_Screen As screen:
             RadiusTopLeft: =5
             RadiusTopRight: =5
             Size: =10
-            Text: ="Approve"
+            Text: =If(varCertificateDetails.Status="Enrolled",If((varCertificateDetails.PaymentMode <> "Cash") And (varCertificateDetails.PaymentMode <> "Advance Payment") And (varCertificateDetails.PaymentMode <> "Voucher")  ,"Approve Proofs","Approve Certification"),"Approve Proofs")
             Visible: =If(varApprove,true,false)
-            Width: =84
-            X: =966
+            Width: =If(Btn_ApproveCert.Text="Approve Certification",146,120)
+            X: =If(Btn_ApproveCert.Text="Approve Certification",1100,1110)
             Y: =13
             ZIndex: =4
 

@@ -5412,7 +5412,14 @@
         "FontWeight",
         "Align",
         "VerticalAlign",
-        "X",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "966",
+          "InvariantPropertyName": "X",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "Y",
         {
           "AFDDataSourceName": "",
