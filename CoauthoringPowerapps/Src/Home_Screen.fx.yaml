@@ -714,7 +714,7 @@ Home_Screen As screen:
                                                 Value
                                             )
                                         ),
-                                        {Rownumber: Value}
+                                        {Rownumberusercert: Value}
                                     )
                                 )
                             ),
@@ -724,19 +724,51 @@ Home_Screen As screen:
                         ),
                         If(
                             Drp_FilterDate_1.SelectedText.Value = "All",
-                            Filter(
-                                userCertifications,
-                                DateValue(Created) >= DateValue(FromDatePicker.SelectedDate) And DateValue(Created) <= DateValue(ToDatePicker.SelectedDate)
+                            With(
+                                {
+                                    records: Filter(
+                                        userCertifications,
+                                        DateValue(Created) >= DateValue(FromDatePicker.SelectedDate) And DateValue(Created) <= DateValue(ToDatePicker.SelectedDate)
+                                    )
+                                },
+                                ForAll(
+                                    Sequence(CountRows(records)),
+                                    Patch(
+                                        Last(
+                                            FirstN(
+                                                records,
+                                                Value
+                                            )
+                                        ),
+                                        {Rownumberusercert: Value}
+                                    )
+                                )
                             ),
-                            Filter(
-                                userCertifications,
-                                DateValue(Created) >= DateValue(FromDatePicker.SelectedDate) And DateValue(Created) <= DateValue(ToDatePicker.SelectedDate) && Status = Drp_FilterDate_1.SelectedText.Value
+                            With(
+                                {
+                                    records: Filter(
+                                        userCertifications,
+                                        DateValue(Created) >= DateValue(FromDatePicker.SelectedDate) And DateValue(Created) <= DateValue(ToDatePicker.SelectedDate) && Status = Drp_FilterDate_1.SelectedText.Value
+                                    )
+                                },
+                                ForAll(
+                                    Sequence(CountRows(records)),
+                                    Patch(
+                                        Last(
+                                            FirstN(
+                                                records,
+                                                Value
+                                            )
+                                        ),
+                                        {Rownumberusercert: Value}
+                                    )
+                                )
                             )
                         )
                     )
                 Layout: =Layout.Vertical
                 LoadingSpinner: =LoadingSpinner.Data
-                TemplateFill: =
+                TemplateFill: =If(!Mod(ThisItem.Rownumberusercert,2),RGBA(0, 0, 0, 0),RGBA(245,245,245,1))
                 TemplatePadding: =0
                 TemplateSize: =44
                 Visible: =If(Glry_CertType.Selected.lbl_CertName.Text="My Certifications",true,false)
@@ -1132,35 +1164,67 @@ Home_Screen As screen:
                                                 Value
                                             )
                                         ),
-                                        {Rownumber: Value}
+                                        {Rownumbermyteamcert: Value}
                                     )
                                 )
                             ),
                             c_Header_2.TextOut,
                             "Status",
-                            "Title","PaymentMode"
+                            "Title"
                         ),
                         If(
                             Drp_FilterDate_1.SelectedText.Value = "All",
-                            Filter(
-                                FirstN(
-                                                CertificationOrder,
-                                                5000
-                                ),
-                                DateValue(Created) >= DateValue(FromDatePicker.SelectedDate) And DateValue(Created) <= DateValue(ToDatePicker.SelectedDate)
+                            With(
+                                {
+                                    records: Filter(
+                                        FirstN(
+                                            CertificationOrder,
+                                            5000
+                                        ),
+                                        DateValue(Created) >= DateValue(FromDatePicker.SelectedDate) And DateValue(Created) <= DateValue(ToDatePicker.SelectedDate)
+                                    )
+                                },
+                                ForAll(
+                                    Sequence(CountRows(records)),
+                                    Patch(
+                                        Last(
+                                            FirstN(
+                                                records,
+                                                Value
+                                            )
+                                        ),
+                                        {Rownumbermyteamcert: Value}
+                                    )
+                                )
                             ),
-                            Filter(
-                                 FirstN(
-                                                CertificationOrder,
-                                                5000
-                                ),
-                                DateValue(Created) >= DateValue(FromDatePicker.SelectedDate) And DateValue(Created) <= DateValue(ToDatePicker.SelectedDate) && Status = Drp_FilterDate_1.SelectedText.Value
+                            With(
+                                {
+                                    records: Filter(
+                                        FirstN(
+                                            CertificationOrder,
+                                            5000
+                                        ),
+                                        DateValue(Created) >= DateValue(FromDatePicker.SelectedDate) And DateValue(Created) <= DateValue(ToDatePicker.SelectedDate) && Status = Drp_FilterDate_1.SelectedText.Value
+                                    )
+                                },
+                                ForAll(
+                                    Sequence(CountRows(records)),
+                                    Patch(
+                                        Last(
+                                            FirstN(
+                                                records,
+                                                Value
+                                            )
+                                        ),
+                                        {Rownumbermyteamcert: Value}
+                                    )
+                                )
                             )
                         )
                     )
                 Layout: =Layout.Vertical
                 LoadingSpinner: =LoadingSpinner.Data
-                TemplateFill: =
+                TemplateFill: =If(!Mod(ThisItem.Rownumbermyteamcert,2),RGBA(0, 0, 0, 0),RGBA(245,245,245,1))
                 TemplatePadding: =0
                 TemplateSize: =50
                 Visible: =If(Glry_CertType.Selected.lbl_CertName.Text="My Team Certifications",true,false)
@@ -1346,7 +1410,7 @@ Home_Screen As screen:
                                             Value
                                         )
                                     ),
-                                    {rowNumber: Value}
+                                    {Rownumber: Value}
                                 )
                             )
                         ),
@@ -1359,7 +1423,7 @@ Home_Screen As screen:
                     )
                 Layout: =Layout.Vertical
                 LoadingSpinner: =LoadingSpinner.Data
-                TemplateFill: =If(!Mod(ThisItem.rowNumber,2),RGBA(0, 0, 0, 0),RGBA(245,245,245,1))
+                TemplateFill: =If(!Mod(ThisItem.Rownumber,2),RGBA(0, 0, 0, 0),RGBA(245,245,245,1))
                 TemplatePadding: =0
                 TemplateSize: =44
                 Visible: |
