@@ -1189,7 +1189,7 @@
             RadiusTopRight: =12
             Size: =10
             Text: ="Cancel"
-            Visible: =varRevise
+            Visible: =varvarViewThisItemVisiblity
             Width: =94
             X: =710
             Y: =482
