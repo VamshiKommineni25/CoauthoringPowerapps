@@ -1096,6 +1096,24 @@
             Size: =13
             Text: |-
                 ="Enrolled                               :              " 
+            Visible: |-
+                =If(
+                    (varViewThisItem.Status = "Reimbursed"),
+                    false,
+                    If(
+                        varViewThisItem.Status = "Processing with Finance",
+                        false,
+                        If(
+                            varViewThisItem.Status = "Manager Approved",
+                            false,
+                            If(
+                                varViewThisItem.Status = "Proofs Uploaded",
+                                false,
+                                true
+                            )
+                        )
+                    )
+                )
             Width: =243
             X: =188
             Y: |
@@ -1118,6 +1136,24 @@
             Size: =13
             Text: ="Approve/Reject"
             Underline: =true
+            Visible: |-
+                =If(
+                    (varViewThisItem.Status = "Reimbursed"),
+                    false,
+                    If(
+                        varViewThisItem.Status = "Processing with Finance",
+                        false,
+                        If(
+                            varViewThisItem.Status = "Manager Approved",
+                            false,
+                            If(
+                                varViewThisItem.Status = "Proofs Uploaded",
+                                false,
+                                true
+                            )
+                        )
+                    )
+                )
             X: =431
             Y: |
                 =lbl_docLink.Y+lbl_docLink.Height+10
