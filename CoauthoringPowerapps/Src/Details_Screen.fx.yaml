@@ -257,7 +257,7 @@ Details_Screen As screen:
             Text: =If(varCertificateDetails.Status="Enrolled" And varCertificateDetails.PaymentMode="Cash","Reject","Revise")
             Visible: =If(varApprove,true,false)
             Width: =84
-            X: =1008
+            X: =990
             Y: =13
             ZIndex: =3
 
