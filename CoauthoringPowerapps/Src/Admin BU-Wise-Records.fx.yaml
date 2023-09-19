@@ -852,6 +852,7 @@
         ZIndex: =3
 
         lbl_Details As label:
+            Align: =Align.Center
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
@@ -861,9 +862,8 @@
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Bold
-            Size: =15
             Text: ="Details"
-            X: =78
+            Width: =con_ViewReqCertDetails.Width-50
             Y: =2
             ZIndex: =1
 
@@ -883,8 +883,8 @@
             PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             PressedFill: =RGBA(0, 0, 0, 0)
             Width: =40
-            X: =808
-            Y: =22
+            X: =827
+            Y: =12
             ZIndex: =2
 
         rect_header As rectangle:
@@ -1056,11 +1056,11 @@
             DisabledColor: =RGBA(166, 166, 166, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
-            Height: =56
+            Height: =24
             Size: =10
             Text: |-
-                ="Document Link                    :    " & varViewThisItem.Documents_Link
-            Width: =799
+                ="Document Link                    :    " 
+            Width: =243
             X: =78
             Y: =lbl_ProofsUpload.Y+lbl_ProofsUpload.Height+10
             ZIndex: =13
@@ -1124,6 +1124,12 @@
             X: =8
             Y: =70
             ZIndex: =16
+
+        HtmlText1 As htmlViewer:
+            OnSelect: =Launch(varViewThisItem.Documents_Link)
+            X: =300
+            Y: =lbl_docLink.Y
+            ZIndex: =17
 
     c_Header_1 As c_Header:
         CartOnselect: ='EnrollCertificate Screen'
