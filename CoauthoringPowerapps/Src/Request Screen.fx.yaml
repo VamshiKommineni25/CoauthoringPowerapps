@@ -1544,9 +1544,10 @@
                 FontWeight: =FontWeight.Semibold
                 Height: =30
                 OnSelect: =Select(Parent)
+                Overflow: =Overflow.Scroll
                 Size: =10
                 Text: =ThisItem.Title
-                Width: =274
+                Width: =250
                 X: =8
                 Y: =6
                 ZIndex: =1
@@ -1652,7 +1653,7 @@
                 Size: =10
                 Text: =If(ThisItem.Admin_Approval=true,"Approved","Pending")
                 Width: =85
-                X: =234
+                X: =245
                 Y: =6
                 ZIndex: =6
 
@@ -1664,7 +1665,7 @@
                 FocusedBorderThickness: =4
                 Height: =24
                 HoverBorderColor: =RGBA(0, 0, 0, 0)
-                HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                HoverColor: =RGBA(0, 0, 0, 1)
                 HoverFill: =RGBA(0, 0, 0, 0)
                 Icon: =Icon.Download
                 OnSelect: =Select(Parent)
