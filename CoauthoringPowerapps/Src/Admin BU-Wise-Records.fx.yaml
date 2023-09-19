@@ -839,8 +839,8 @@
 
     con_ViewReqCertDetails As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Light
-        Fill: =RGBA(241, 246, 246, 1)
-        Height: =595
+        Fill: =RGBA(247, 222, 218, 1)
+        Height: =527
         RadiusBottomLeft: =10
         RadiusBottomRight: =10
         RadiusTopLeft: =10
@@ -851,29 +851,48 @@
         Y: =173
         ZIndex: =3
 
+        Rectangle8 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            DisabledFill: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderThickness: =4
+            Height: =416
+            HoverFill: =RGBA(255, 255, 255, 1)
+            PressedFill: =RGBA(255, 255, 255, 1)
+            Width: =807
+            X: =34
+            Y: =54
+            ZIndex: =1
+
         lbl_Details As label:
             Align: =Align.Center
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
-            Color: =RGBA(51, 51, 51, 1)
+            Color: =RGBA(255, 255, 255, 1)
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
             DisabledColor: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(0, 0, 0, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Bold
+            Height: =50
             Text: ="Details"
-            Width: =con_ViewReqCertDetails.Width-50
+            Width: =con_ViewReqCertDetails.Width
             Y: =2
-            ZIndex: =1
+            ZIndex: =2
 
         ico_Cancel As icon.Cancel:
             BorderColor: =RGBA(166, 166, 166, 1)
+            Color: =RGBA(255, 255, 255, 1)
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
             DisabledColor: =RGBA(220, 220, 220, 1)
             DisabledFill: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(255, 0, 0, 1)
             FocusedBorderThickness: =4
-            Height: =20
+            Height: =50
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =//ColorFade(RGBA(0, 120, 212, 1), -30%)
             HoverFill: =RGBA(0, 0, 0, 0)
@@ -882,10 +901,10 @@
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             PressedFill: =RGBA(0, 0, 0, 0)
-            Width: =40
+            Visible: =false
+            Width: =50
             X: =827
-            Y: =12
-            ZIndex: =2
+            ZIndex: =3
 
         rect_header As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -900,7 +919,7 @@
             Width: =840
             X: =8
             Y: =55
-            ZIndex: =3
+            ZIndex: =4
 
         lbl_BU_Title As label:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -916,9 +935,8 @@
             Text: |-
                 ="BU                                        :              " & varViewThisItem.BU.Value
             Width: =lbl_ReqName.Width
-            X: =78
-            Y: |
-                =lbl_ReqName.Y+lbl_ReqName.Height+10
+            X: =188
+            Y: =104
             ZIndex: =5
 
         lbl_ReqName As label:
@@ -934,9 +952,9 @@
             Size: =10
             Text: |-
                 ="Name                                   :              " & varViewThisItem.Name
-            Width: =750
-            X: =78
-            Y: =68
+            Width: =500
+            X: =188
+            Y: =70
             ZIndex: =6
 
         lbl_ExamDate As label:
@@ -953,7 +971,7 @@
             Text: |-
                 ="Examination Date                :              " & varViewThisItem.'Examination Date'
             Width: =lbl_recordCreated.Width
-            X: =78
+            X: =188
             Y: =lbl_recordCreated.Y+lbl_recordCreated.Height+10
             ZIndex: =7
 
@@ -971,7 +989,7 @@
             Text: |-
                 ="Certification                         :             " & varViewThisItem.'Certification:Title'.Value
             Width: =lbl_ReqName.Width
-            X: =78
+            X: =188
             Y: =lbl_BU_Title.Y+lbl_BU_Title.Height+10
             ZIndex: =8
 
@@ -989,7 +1007,7 @@
             Text: |-
                 ="Payment Mode                    :              " & varViewThisItem.PaymentMode
             Width: =lbl_CertPract.Width
-            X: =78
+            X: =188
             Y: =lbl_CertPract.Y+lbl_CertPract.Height+10
             ZIndex: =9
 
@@ -1007,7 +1025,7 @@
             Text: |-
                 ="Manager                              :              " & "Vedarethina Sozhan M"
             Width: =lbl_PayMentMode.Width
-            X: =78
+            X: =188
             Y: =lbl_PayMentMode.Y+lbl_PayMentMode.Height+10
             ZIndex: =10
 
@@ -1025,7 +1043,7 @@
             Text: |-
                 ="Record Created                   :              " & varViewThisItem.Created
             Width: =lbl_Manager.Width
-            X: =78
+            X: =188
             Y: =lbl_Manager.Y+lbl_Manager.Height+10
             ZIndex: =11
 
@@ -1043,7 +1061,7 @@
             Text: |-
                 ="Proofs Uploaded                 :              " & varViewThisItem.'Proofs Uploaded on'
             Width: =lbl_ExamDate.Width
-            X: =78
+            X: =188
             Y: =lbl_ExamDate.Y+lbl_ExamDate.Height+10
             ZIndex: =12
 
@@ -1061,7 +1079,7 @@
             Text: |-
                 ="Document Link                    :    " 
             Width: =243
-            X: =78
+            X: =188
             Y: =lbl_ProofsUpload.Y+lbl_ProofsUpload.Height+10
             ZIndex: =13
 
@@ -1074,13 +1092,32 @@
             DisabledColor: =RGBA(166, 166, 166, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
-            Height: =23
+            Height: =24
             Size: =13
             Text: |-
                 ="Enrolled                               :              " 
+            Visible: |-
+                =If(
+                    (varViewThisItem.Status = "Reimbursed"),
+                    false,
+                    If(
+                        varViewThisItem.Status = "Processing with Finance",
+                        false,
+                        If(
+                            varViewThisItem.Status = "Manager Approved",
+                            false,
+                            If(
+                                varViewThisItem.Status = "Proofs Uploaded",
+                                false,
+                                true
+                            )
+                        )
+                    )
+                )
             Width: =243
-            X: =78
-            Y: =530
+            X: =188
+            Y: |
+                =lbl_docLink.Y+lbl_docLink.Height+10
             ZIndex: =14
 
         "'lbl_apprv/reject' As label":
@@ -1092,15 +1129,34 @@
             DisabledColor: =RGBA(166, 166, 166, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
-            Height: =23
+            Height: =24
             OnSelect: |-
                 =Navigate(Details_Screen,ScreenTransition.Fade,{varCertificateDetails:varViewThisItem,varApprove:true});
                 Set(varvarViewThisItemVisiblity,false)
             Size: =13
             Text: ="Approve/Reject"
             Underline: =true
-            X: =321
-            Y: =530
+            Visible: |-
+                =If(
+                    (varViewThisItem.Status = "Reimbursed"),
+                    false,
+                    If(
+                        varViewThisItem.Status = "Processing with Finance",
+                        false,
+                        If(
+                            varViewThisItem.Status = "Manager Approved",
+                            false,
+                            If(
+                                varViewThisItem.Status = "Proofs Uploaded",
+                                false,
+                                true
+                            )
+                        )
+                    )
+                )
+            X: =431
+            Y: |
+                =lbl_docLink.Y+lbl_docLink.Height+10
             ZIndex: =15
 
         img_Requester As image:
@@ -1121,14 +1177,18 @@
             RadiusTopLeft: =30
             RadiusTopRight: =30
             Width: =50
-            X: =8
-            Y: =70
+            X: =78
+            Y: =77
             ZIndex: =16
 
         HtmlText1 As htmlViewer:
+            AutoHeight: =true
+            Height: =30
             HtmlText: ="<b><font color=blue><U>Click here to View</U></font></b>"
             OnSelect: =Launch(varViewThisItem.Documents_Link)
-            X: =300
+            Size: =10
+            Visible: =!IsBlank(varViewThisItem.Documents_Link)
+            X: =410
             Y: =lbl_docLink.Y
             ZIndex: =17
 
