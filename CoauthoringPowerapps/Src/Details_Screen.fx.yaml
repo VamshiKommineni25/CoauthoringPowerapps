@@ -3739,7 +3739,7 @@ Details_Screen As screen:
             Text: ="*"
             Visible: =Radio1_1.Selected.Value="Paid with Voucher" And varPAY1
             Width: =14
-            X: =763
+            X: =755
             Y: =453
             ZIndex: =9
 
