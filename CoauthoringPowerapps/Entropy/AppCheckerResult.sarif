@@ -4634,19 +4634,49 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Details_Screen.Container16_6.Container17_5.Container16_7.Gallery1.AccessibleLabel"
+                  "fullyQualifiedName": "Details_Screen.Container16_6.Container17_5.Gallery1.Icon18.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Details_Screen.Container16_6.Container17_5.Container16_7.Gallery1.AccessibleLabel",
+                  "fullyQualifiedName": "Details_Screen.Container16_6.Container17_5.Gallery1.Icon18.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Details_Screen",
+                "type": "Details_Screen.Container16_6.Container17_5.Gallery1.Icon18"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Details_Screen.Container16_6.Container17_5.Gallery1.Icon18.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Details_Screen.Container16_6.Container17_5.Gallery1.Icon18.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Details_Screen",
-                "type": "Details_Screen.Container16_6.Container17_5.Container16_7.Gallery1"
+                "type": "Details_Screen.Container16_6.Container17_5.Gallery1.Icon18"
               }
             }
           ],
@@ -4664,19 +4694,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Details_Screen.Container16_6.Container17_5.Container16_7.Gallery1.TabIndex"
+                  "fullyQualifiedName": "Details_Screen.Container16_6.Container17_5.Gallery1.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Details_Screen.Container16_6.Container17_5.Container16_7.Gallery1.TabIndex",
+                  "fullyQualifiedName": "Details_Screen.Container16_6.Container17_5.Gallery1.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "Details_Screen",
-                "type": "Details_Screen.Container16_6.Container17_5.Container16_7.Gallery1"
+                "type": "Details_Screen.Container16_6.Container17_5.Gallery1"
               }
             }
           ],
@@ -4688,6 +4718,36 @@
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
           "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Details_Screen.Container16_6.Container17_5.Gallery1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Details_Screen.Container16_6.Container17_5.Gallery1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Details_Screen",
+                "type": "Details_Screen.Container16_6.Container17_5.Gallery1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -6553,7 +6613,7 @@
                 ],
                 "level": "Medium",
                 "primaryCategory": "performance",
-                "whyFix": "Each control consumes resources, and an app may become slow or unresponsive if a screen has too many controls. The estimated complexity of \"Details_Screen\" is 352, which exceeds the maximum threshold recommended (300)."
+                "whyFix": "Each control consumes resources, and an app may become slow or unresponsive if a screen has too many controls. The estimated complexity of \"Details_Screen\" is 356, which exceeds the maximum threshold recommended (300)."
               }
             }
           ],
