@@ -175,7 +175,6 @@
             FocusedBorderColor: =RGBA(185, 29, 11, 1)
             FocusedBorderThickness: =2
             Font: ="Poppins"
-            FontWeight: =FontWeight.Semibold
             Height: =26
             HoverBorderColor: =RGBA(185, 29, 11, 1)
             HoverColor: =RGBA(255, 255, 255, 1)
@@ -188,9 +187,9 @@
             RadiusBottomRight: =3
             RadiusTopLeft: =3
             RadiusTopRight: =3
-            Size: =12
+            Size: =10
             Text: ="< Back"
-            Width: =100
+            Width: =75
             X: =12
             Y: =12
             ZIndex: =2

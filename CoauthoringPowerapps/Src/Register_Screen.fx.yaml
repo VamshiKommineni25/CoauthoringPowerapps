@@ -619,6 +619,126 @@ Register_Screen As screen:
             Y: =80
             ZIndex: =6
 
+            Img_Cert1 As image:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledFill: =RGBA(0, 0, 0, 0)
+                FocusedBorderThickness: =4
+                Height: =79
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverFill: =RGBA(0, 0, 0, 0)
+                Image: =ThisItem.Logo
+                OnSelect: |
+                    =Navigate('Register_Screen-Enroll', BorderStyle.None, { varCertificationData : ThisItem } );
+                PressedBorderColor: =RGBA(0, 0, 0, 0)
+                PressedFill: =RGBA(0, 0, 0, 0)
+                RadiusBottomLeft: =8
+                RadiusBottomRight: =8
+                RadiusTopLeft: =8
+                RadiusTopRight: =8
+                TabIndex: =
+                Width: =79
+                X: =83
+                Y: =7
+                ZIndex: =1
+
+            Title1_3 As label:
+                Align: =Align.Center
+                Color: =RGBA(50, 49, 48, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Font: |-
+                    =//Font.'Segoe UI'
+                    "Poppins"
+                FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                Height: =Self.Size * 1.8
+                OnSelect: =Select(Parent)
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =9
+                Text: |
+                    =ThisItem.Title
+                VerticalAlign: =VerticalAlign.Top
+                Width: =Parent.TemplateWidth - 64
+                X: =32
+                Y: =101
+                ZIndex: =2
+
+            Btn_BuEnroll_1 As button:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderThickness: =0
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledBorderColor: =//RGBA(0, 0, 0, 0)
+                DisabledColor: =//RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                DisplayMode: |-
+                    =If(IsBlank(First( Filter(
+                                userCertifications,
+                                CertificationID.Id=ThisItem.ID
+                            ))),DisplayMode.Edit,DisplayMode.Disabled)
+                Fill: =RGBA(247, 222, 218, 1)
+                FocusedBorderColor: =RGBA(0,0,0,0)
+                FocusedBorderThickness: =2
+                Font: |-
+                    =//Font.'Segoe UI'
+                    "Popins"
+                FontWeight: =FontWeight.Semibold
+                Height: =24
+                HoverBorderColor: =//RGBA(0, 0, 0, 0)
+                HoverColor: =//RGBA(0, 0, 0, 0)
+                HoverFill: =//ColorFade(RGBA(0, 120, 212, 1), -10%)
+                OnSelect: |-
+                    =If(
+                        IsBlankOrError(
+                            Filter(
+                                CertificationOrder,
+                                ThisItem.Title = 'Certification:Title'.Value And Requestor.DisplayName = User().FullName
+                            )
+                        ),
+                        Notify(
+                            "You have already enrolled for this certificate",
+                            NotificationType.Information
+                        ),
+                        If(
+                            CountRows(
+                                Filter(
+                                    EnrollList,
+                                    CertificationID = ThisItem.CertificationID
+                                )
+                            ) > 0,
+                            Notify(
+                                "Certification already added",
+                                NotificationType.Information,
+                                1000
+                            ), 
+                            Collect(
+                                EnrollList,
+                                ThisItem
+                            );
+                            Notify(
+                                "Certification Added to your cart",
+                                NotificationType.Success,
+                                1000
+                            )
+                        )
+                    )
+                PressedBorderColor: =//ColorFade(RGBA(0, 120, 212, 1), -50%)
+                PressedColor: =RGBA(57, 57, 57, 1)
+                PressedFill: =//ColorFade(RGBA(0, 120, 212, 1), -30%)
+                RadiusBottomLeft: =5
+                RadiusBottomRight: =5
+                RadiusTopLeft: =5
+                RadiusTopRight: =5
+                Size: =10
+                Text: ="Enroll"
+                Width: =100
+                X: =72
+                Y: =140
+                ZIndex: =3
+
     lbl_BU_Recommended_Cert As label:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
@@ -828,7 +948,7 @@ Register_Screen As screen:
             Y: =45
             ZIndex: =3
 
-            Image1_1 As image:
+            Img_Cert As image:
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =2
@@ -861,7 +981,7 @@ Register_Screen As screen:
                 X: =75
                 ZIndex: =1
 
-            Title1_1 As label:
+            lbl_BuRecordTitle As label:
                 Align: =Align.Center
                 Color: =RGBA(50, 49, 48, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -1004,7 +1124,7 @@ Register_Screen As screen:
         X: =976
         ZIndex: =11
 
-    Label18_2 As label:
+    Lbl_NoRecords As label:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
         BorderThickness: =2
@@ -1041,7 +1161,7 @@ Register_Screen As screen:
         Y: =296
         ZIndex: =12
 
-    Label18_3 As label:
+    Lbl_NoRecords2 As label:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
         BorderThickness: =2
