@@ -863,7 +863,7 @@
             PressedFill: =RGBA(255, 255, 255, 1)
             Width: =807
             X: =34
-            Y: =58
+            Y: =54
             ZIndex: =1
 
         lbl_Details As label:
@@ -878,6 +878,7 @@
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Bold
+            Height: =50
             Text: ="Details"
             Width: =con_ViewReqCertDetails.Width
             Y: =2
@@ -885,11 +886,13 @@
 
         ico_Cancel As icon.Cancel:
             BorderColor: =RGBA(166, 166, 166, 1)
+            Color: =RGBA(255, 255, 255, 1)
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
             DisabledColor: =RGBA(220, 220, 220, 1)
             DisabledFill: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(255, 0, 0, 1)
             FocusedBorderThickness: =4
-            Height: =20
+            Height: =50
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =//ColorFade(RGBA(0, 120, 212, 1), -30%)
             HoverFill: =RGBA(0, 0, 0, 0)
@@ -898,9 +901,9 @@
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             PressedFill: =RGBA(0, 0, 0, 0)
-            Width: =40
+            Visible: =false
+            Width: =50
             X: =827
-            Y: =12
             ZIndex: =3
 
         rect_header As rectangle:
@@ -1148,6 +1151,7 @@
             HtmlText: ="<b><font color=blue><U>Click here to View</U></font></b>"
             OnSelect: =Launch(varViewThisItem.Documents_Link)
             Size: =10
+            Visible: =!IsBlank(varViewThisItem.Documents_Link)
             X: =410
             Y: =lbl_docLink.Y
             ZIndex: =17
