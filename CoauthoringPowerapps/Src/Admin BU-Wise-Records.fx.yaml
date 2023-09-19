@@ -1126,6 +1126,7 @@
             ZIndex: =16
 
         HtmlText1 As htmlViewer:
+            HtmlText: ="<b><font color=blue><U>Click here to View</U></font></b>"
             OnSelect: =Launch(varViewThisItem.Documents_Link)
             X: =300
             Y: =lbl_docLink.Y
