@@ -255,7 +255,7 @@ Details_Screen As screen:
             RadiusTopLeft: =5
             RadiusTopRight: =5
             Size: =8
-            Text: =If(varCertificateDetails.Status="Enrolled" And varCertificateDetails.PaymentMode="Cash","Reject","Revise")
+            Text: =If(varCertificateDetails.Status="Enrolled" And (varCertificateDetails.PaymentMode="Cash" Or varCertificateDetails.PaymentMode="Voucher" Or varCertificateDetails.PaymentMode="Advance Payment") ,"Reject","Revise")
             Visible: =If(varApprove,true,false)
             Width: =84
             X: =990
