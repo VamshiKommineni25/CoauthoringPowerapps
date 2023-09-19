@@ -1355,6 +1355,7 @@ Home_Screen As screen:
                     DisabledBorderColor: =RGBA(0, 0, 0, 0)
                     DisabledColor: =RGBA(220, 220, 220, 1)
                     DisabledFill: =RGBA(0, 0, 0, 0)
+                    FocusedBorderColor: =RGBA(0,0,0,0)
                     FocusedBorderThickness: =4
                     Height: =15
                     HoverBorderColor: =RGBA(0, 0, 0, 0)
