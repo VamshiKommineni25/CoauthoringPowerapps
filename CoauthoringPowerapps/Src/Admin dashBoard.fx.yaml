@@ -629,7 +629,7 @@
                 Height: =158
                 Items: |-
                     =With(
-                        {records: Sort('BU-List',Title,SortOrder.Ascending)},
+                        {records: Sort(BUList,Title,SortOrder.Ascending)},
                         ForAll(
                             Sequence(CountRows(records)),Patch(
                             Last(
