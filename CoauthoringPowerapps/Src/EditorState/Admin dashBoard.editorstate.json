@@ -2751,7 +2751,7 @@
       },
       "MetaDataIDKey": "",
       "Name": "C_AlertPanel_9",
-      "ParentIndex": 2,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3097,7 +3097,7 @@
       },
       "MetaDataIDKey": "",
       "Name": "C_Profile_9",
-      "ParentIndex": 3,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3929,7 +3929,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Cntr_TargetCert",
-      "ParentIndex": 4,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -5007,7 +5007,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "ColumnChart_TotalCertification per Provider",
-      "ParentIndex": 0,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -20253,7 +20253,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Icon_Add",
-      "ParentIndex": 27,
+      "ParentIndex": 26,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -21396,7 +21396,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Icon_Dwnlod_1",
-      "ParentIndex": 26,
+      "ParentIndex": 27,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -35094,7 +35094,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "PieChart_TotalCertifications per BU",
-      "ParentIndex": 1,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
