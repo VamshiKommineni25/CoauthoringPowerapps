@@ -2949,16 +2949,20 @@
         Size: =10
         Text: ="No data to display"
         Visible: |-
-            =If(CountRows(
-                Filter(
-                    FirstN(
-                        CertificationOrder,
-                        100000
-                    ),
-                    (DateValue(Created) >= Date_FromDate.SelectedDate && DateValue(Created) <= Date_ToDate.SelectedDate) && BU.Value = Drp_BUList.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BCode',
-                    Status = "Enrolled"
-                )
-            )=0,true,false)
+            =If(
+                (CountRows(
+                    Filter(
+                        FirstN(
+                            CertificationOrder,
+                            100000
+                        ),
+                        (DateValue(Created) >= Date_FromDate.SelectedDate && DateValue(Created) <= Date_ToDate.SelectedDate) && BU.Value = Drp_BUList.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BCode',
+                        Status = "Enrolled"
+                    )
+                ) = 0) && ('Glry_Total Cert per BU/Provider'.Selected.Name = "Total Certifications Per BU"),
+                true,
+                false
+            )
         X: =276
         Y: =238
         ZIndex: =28
