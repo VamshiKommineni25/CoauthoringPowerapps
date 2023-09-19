@@ -120,7 +120,7 @@
                 "Name": "Image2",
                 "Parent": "Container4",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 834,
+                "PublishOrderIndex": 829,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -419,7 +419,7 @@
                 "Name": "Label14",
                 "Parent": "Container4",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 835,
+                "PublishOrderIndex": 830,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -778,7 +778,7 @@
                 "Name": "Label14_2",
                 "Parent": "Container4",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 837,
+                "PublishOrderIndex": 832,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -1151,7 +1151,7 @@
                 "Name": "Label16",
                 "Parent": "Container4",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 838,
+                "PublishOrderIndex": 833,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -1466,7 +1466,7 @@
                 "Name": "Rectangle5",
                 "Parent": "Container4",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 839,
+                "PublishOrderIndex": 834,
                 "Rules": [
                   {
                     "Category": "Design",
@@ -1718,7 +1718,7 @@
                 "Name": "Label14_3",
                 "Parent": "Container4",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 840,
+                "PublishOrderIndex": 835,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -2075,7 +2075,7 @@
                 "Name": "Icon16",
                 "Parent": "Container4",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 841,
+                "PublishOrderIndex": 836,
                 "Rules": [
                   {
                     "Category": "Design",
@@ -2312,7 +2312,7 @@
                 "Name": "Rectangle5_2",
                 "Parent": "Container4",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 842,
+                "PublishOrderIndex": 837,
                 "Rules": [
                   {
                     "Category": "Design",
@@ -2587,7 +2587,7 @@
                 "Name": "Button1",
                 "Parent": "Container4",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 843,
+                "PublishOrderIndex": 838,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -2905,7 +2905,7 @@
                 "Name": "Icon11",
                 "Parent": "Container4",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 844,
+                "PublishOrderIndex": 839,
                 "Rules": [
                   {
                     "Category": "Design",
@@ -3095,7 +3095,7 @@
                 "Name": "Grp_Setting",
                 "Parent": "Container4",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 836,
+                "PublishOrderIndex": 831,
                 "Rules": [
                   {
                     "Category": "Design",
@@ -3238,7 +3238,7 @@
             "Name": "Container4",
             "Parent": "Container3",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 833,
+            "PublishOrderIndex": 828,
             "Rules": [
               {
                 "Category": "Design",
@@ -3470,7 +3470,7 @@
         "Name": "Container3",
         "Parent": "C_Profile",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 832,
+        "PublishOrderIndex": 827,
         "Rules": [
           {
             "Category": "Design",
@@ -3659,7 +3659,7 @@
       },
       "NavigateTo"
     ],
-    "LastModifiedTimestamp": "638307237024257255",
+    "LastModifiedTimestamp": "638307169077677272",
     "Name": "C_Profile",
     "Rules": [
       {
@@ -3749,7 +3749,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638307237024257255",
+  "LastModifiedTimestamp": "638307169077677272",
   "Name": "5469d31a355b4cc3886bfc3e84679b37",
   "OverridableProperties": {},
   "Version": "638285491065897170"
