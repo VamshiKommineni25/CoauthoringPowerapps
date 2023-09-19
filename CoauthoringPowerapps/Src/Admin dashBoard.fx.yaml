@@ -2937,3 +2937,33 @@
             Y: =395
             ZIndex: =14
 
+    Label19 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Size: =10
+        Text: ="No data to display"
+        Visible: |-
+            =If(
+                (CountRows(
+                    Filter(
+                        FirstN(
+                            CertificationOrder,
+                            100000
+                        ),
+                        (DateValue(Created) >= Date_FromDate.SelectedDate && DateValue(Created) <= Date_ToDate.SelectedDate) && BU.Value = Drp_BUList.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BCode',
+                        Status = "Enrolled"
+                    )
+                ) = 0) && ('Glry_Total Cert per BU/Provider'.Selected.Name = "Total Certifications Per BU"),
+                true,
+                false
+            )
+        X: =276
+        Y: =238
+        ZIndex: =28
+
