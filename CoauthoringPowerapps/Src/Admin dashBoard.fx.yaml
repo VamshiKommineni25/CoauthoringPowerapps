@@ -2200,6 +2200,7 @@
     c_Header_10 As c_Header:
         CartOnselect: ='EnrollCertificate Screen'
         FAQOnselect: ='FAQ Screen'
+        Height: =97
         ZIndex: =22
 
     C_leftPanel_10 As C_leftPanel:

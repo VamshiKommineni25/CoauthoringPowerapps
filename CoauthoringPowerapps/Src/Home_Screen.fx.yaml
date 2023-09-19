@@ -173,6 +173,7 @@ Home_Screen As screen:
     c_Header_2 As c_Header:
         CartOnselect: ='EnrollCertificate Screen'
         FAQOnselect: ='FAQ Screen'
+        Height: =100
 
     Label1 As label:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -1695,7 +1696,7 @@ Home_Screen As screen:
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
-            Color: =RGBA(255, 0, 0, 1)
+            Color: =RGBA(153, 153, 153, 1)
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
             DisabledColor: =RGBA(166, 166, 166, 1)
             FocusedBorderThickness: =4
@@ -1870,7 +1871,7 @@ Home_Screen As screen:
                 ZIndex: =18
 
     Container2 As groupContainer.manualLayoutContainer:
-        DropShadow: =DropShadow.Light
+        DropShadow: =DropShadow.Bold
         Fill: =RGBA(255, 255, 255, 1)
         Height: =649
         RadiusBottomLeft: =8
@@ -2290,7 +2291,7 @@ Home_Screen As screen:
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
-            Color: =RGBA(201, 47, 29, 1)
+            Color: =RGBA(153, 153, 153, 1)
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
             DisabledColor: =RGBA(166, 166, 166, 1)
             FocusedBorderThickness: =4
