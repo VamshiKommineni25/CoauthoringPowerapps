@@ -196,6 +196,7 @@
                 PressedBorderColor: =RGBA(0, 0, 0, 0)
                 PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
                 PressedFill: =RGBA(0, 0, 0, 0)
+                TabIndex: =0
                 Width: =30
                 X: =16
                 Y: =21
@@ -222,6 +223,7 @@
             Items: =varCertificationData
             Layout: =Layout.Vertical
             LoadingSpinner: =LoadingSpinner.Data
+            TabIndex: =0
             TemplatePadding: =0
             TemplateSize: =377
             Width: =1230
@@ -289,7 +291,7 @@
                 DisabledFill: =RGBA(244, 244, 244, 1)
                 Fill: =RGBA(247, 222, 218, 1)
                 FocusedBorderColor: =ColorFade(Self.Fill, -75%)
-                FocusedBorderThickness: =0
+                FocusedBorderThickness: =0.5
                 Font: =Font.'Segoe UI'
                 FontWeight: =FontWeight.Semibold
                 Height: =29
@@ -552,6 +554,7 @@
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             PressedFill: =RGBA(0, 0, 0, 0)
+            TabIndex: =0
             Width: =32
             X: =301
             Y: =17
@@ -661,6 +664,7 @@
             Items: =CertDetails
             Layout: =Layout.Vertical
             LoadingSpinner: =LoadingSpinner.Data
+            TabIndex: =0
             TemplatePadding: =0
             TemplateSize: =104
             Width: =348

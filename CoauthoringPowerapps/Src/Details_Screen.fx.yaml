@@ -405,7 +405,7 @@ Details_Screen As screen:
             Text: ="View Proofs"
             Visible: =If(varApprove And varUserLevel="SUPER-ADMIN",true,false)
             Width: =124
-            X: =866
+            X: =838
             Y: =13
             ZIndex: =5
 
@@ -839,7 +839,7 @@ Details_Screen As screen:
             Y: =551
             ZIndex: =27
 
-        Button4_4 As button:
+        Btn_Price As button:
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderThickness: =0
             Color: =RGBA(57, 57, 57, 1)
@@ -847,8 +847,8 @@ Details_Screen As screen:
             DisabledColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
             Fill: =RGBA(247, 222, 218, 1)
-            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
-            FocusedBorderThickness: =0
+            FocusedBorderColor: =RGBA(0,0,0,0)
+            FocusedBorderThickness: =2
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
             Height: =29
@@ -1148,6 +1148,7 @@ Details_Screen As screen:
                 PressedBorderColor: =RGBA(0, 0, 0, 0)
                 PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
                 PressedFill: =RGBA(0, 0, 0, 0)
+                TabIndex: =1
                 Width: =20
                 X: =315
                 Y: =26
@@ -1390,7 +1391,7 @@ Details_Screen As screen:
                             Refresh(CertificationOrder)
                         PressedColor: =RGBA(255, 255, 255, 1)
                         PressedFill: =RGBA(0, 18, 107, 1)
-                        Size: =10
+                        Size: =8
                         Tooltip: ="Upload 5 Documents"
                         Visible: =varattach
                         Width: =Parent.Width
@@ -1404,6 +1405,7 @@ Details_Screen As screen:
                         Items: =Attachments_1.Attachments
                         Layout: =Layout.Vertical
                         ShowScrollbar: =false
+                        TabIndex: =1
                         TemplatePadding: =0
                         TemplateSize: =Min(160, Self.Height - 60)
                         Visible: =false
@@ -1481,13 +1483,14 @@ Details_Screen As screen:
                             Y: =Parent.TemplateHeight - 1
                             ZIndex: =5
 
-                    Toggle1_6 As toggleSwitch:
+                    "'Tog_Add_Doc 3' As toggleSwitch":
                         AccessibleLabel: ="Toggle1"
                         BorderColor: =RGBA(0, 18, 107, 1)
                         Color: =RGBA(0, 0, 0, 1)
                         FalseFill: =RGBA(128, 130, 133, 1)
                         FalseText: ="Add More"
-                        FocusedBorderThickness: =0
+                        FocusedBorderColor: =RGBA(0,0,0,0)
+                        FocusedBorderThickness: =1
                         FontWeight: =FontWeight.Bold
                         HandleFill: =RGBA(255, 255, 255, 1)
                         Height: =18
@@ -1523,6 +1526,7 @@ Details_Screen As screen:
                         Layout: =Layout.Vertical
                         OnSelect: =Launch(ThisItem.AbsoluteUri)
                         ShowScrollbar: =false
+                        TabIndex: =1
                         TemplatePadding: =0
                         TemplateSize: =38
                         Visible: =varattach1
@@ -1567,6 +1571,7 @@ Details_Screen As screen:
                                 Set(varattach,true);
                                 
                                 Refresh(CertificationOrder);
+                            TabIndex: =1
                             Visible: =false
                             Width: =1
                             Y: =9
@@ -1576,11 +1581,12 @@ Details_Screen As screen:
                         Color: =RGBA(0, 0, 0, 1)
                         DisabledColor: =RGBA(166, 166, 166, 1)
                         FontWeight: =FontWeight.Semibold
-                        Height: =38
-                        Size: =8
+                        Height: =28
+                        Size: =9
                         Text: |-
                             ="Microsoft account for Association Screenshot :"
-                        Width: =148
+                        Width: =178
+                        Y: =5
                         ZIndex: =7
 
                 Container17_8 As groupContainer.manualLayoutContainer:
@@ -1643,7 +1649,7 @@ Details_Screen As screen:
                             Refresh(CertificationOrder)
                         PressedColor: =RGBA(255, 255, 255, 1)
                         PressedFill: =RGBA(0, 18, 107, 1)
-                        Size: =10
+                        Size: =8
                         Tooltip: ="Upload 5 Documents"
                         Visible: =varattach2
                         Width: =Parent.Width
@@ -1657,6 +1663,7 @@ Details_Screen As screen:
                         Items: =Attachments_7.Attachments
                         Layout: =Layout.Vertical
                         ShowScrollbar: =false
+                        TabIndex: =1
                         TemplatePadding: =0
                         TemplateSize: =Min(160, Self.Height - 60)
                         Visible: =false
@@ -1734,13 +1741,13 @@ Details_Screen As screen:
                             Y: =Parent.TemplateHeight - 1
                             ZIndex: =5
 
-                    Toggle1_7 As toggleSwitch:
+                    "'Tog_AddDoc 2' As toggleSwitch":
                         AccessibleLabel: ="Toggle1_1"
                         BorderColor: =RGBA(0, 18, 107, 1)
                         Color: =RGBA(0, 0, 0, 1)
                         FalseFill: =RGBA(128, 130, 133, 1)
                         FalseText: ="Add More"
-                        FocusedBorderThickness: =0
+                        FocusedBorderColor: =RGBA(0,0,0,0)
                         FontWeight: =FontWeight.Bold
                         HandleFill: =RGBA(255, 255, 255, 1)
                         Height: =18
@@ -1776,6 +1783,7 @@ Details_Screen As screen:
                         Layout: =Layout.Vertical
                         OnSelect: =Launch(ThisItem.AbsoluteUri)
                         ShowScrollbar: =false
+                        TabIndex: =1
                         TemplatePadding: =0
                         TemplateSize: =38
                         Visible: =varattach3
@@ -1819,6 +1827,7 @@ Details_Screen As screen:
                                 Last(FirstN(LookUp(CertificationOrder,'DeleteAttachments-CertificationApp'.Run(varCertificateDetails.ID,varCertificateDetails.ID)).Attachments,4));
                                 
                                 Refresh(CertificationOrder)
+                            TabIndex: =1
                             Visible: =false
                             Width: =40
                             Y: =9
@@ -1828,11 +1837,12 @@ Details_Screen As screen:
                         Color: =RGBA(0, 0, 0, 1)
                         DisabledColor: =RGBA(166, 166, 166, 1)
                         FontWeight: =FontWeight.Semibold
-                        Height: =38
-                        Size: =8
+                        Height: =28
+                        Size: =10
                         Text: |-
                             ="Certification Receipt Bill :"
-                        Width: =164
+                        Width: =177
+                        Y: =5
                         ZIndex: =7
 
                 Container17_17 As groupContainer.manualLayoutContainer:
@@ -1895,7 +1905,7 @@ Details_Screen As screen:
                             Refresh(CertificationOrder)
                         PressedColor: =RGBA(255, 255, 255, 1)
                         PressedFill: =RGBA(0, 18, 107, 1)
-                        Size: =10
+                        Size: =8
                         Tooltip: ="Upload 5 Documents"
                         Visible: =varattach4
                         Width: =Parent.Width
@@ -1909,6 +1919,7 @@ Details_Screen As screen:
                         Items: =Attachments_8.Attachments
                         Layout: =Layout.Vertical
                         ShowScrollbar: =false
+                        TabIndex: =1
                         TemplatePadding: =0
                         TemplateSize: =Min(160, Self.Height - 60)
                         Visible: =false
@@ -1986,13 +1997,14 @@ Details_Screen As screen:
                             Y: =Parent.TemplateHeight - 1
                             ZIndex: =5
 
-                    Toggle1_8 As toggleSwitch:
+                    Tog_AddDoc1 As toggleSwitch:
                         AccessibleLabel: ="Toggle1_2"
                         BorderColor: =RGBA(0, 18, 107, 1)
                         Color: =RGBA(0, 0, 0, 1)
                         FalseFill: =RGBA(128, 130, 133, 1)
                         FalseText: ="Add More"
-                        FocusedBorderThickness: =0
+                        FocusedBorderColor: =RGBA(0,0,0,0)
+                        FocusedBorderThickness: =1
                         FontWeight: =FontWeight.Bold
                         HandleFill: =RGBA(255, 255, 255, 1)
                         Height: =18
@@ -2028,6 +2040,7 @@ Details_Screen As screen:
                         Layout: =Layout.Vertical
                         OnSelect: =Launch(ThisItem.AbsoluteUri)
                         ShowScrollbar: =false
+                        TabIndex: =1
                         TemplatePadding: =0
                         TemplateSize: =26
                         Visible: =varattach5
@@ -2070,6 +2083,7 @@ Details_Screen As screen:
                                 Last(FirstN(LookUp(CertificationOrder,'DeleteAttachments-CertificationApp'.Run(varCertificateDetails.ID,varCertificateDetails.ID)).Attachments,3));
                                 
                                 Refresh(CertificationOrder)
+                            TabIndex: =1
                             Visible: =false
                             Width: =1
                             Y: =9
@@ -2080,10 +2094,10 @@ Details_Screen As screen:
                         DisabledColor: =RGBA(166, 166, 166, 1)
                         FontWeight: =FontWeight.Semibold
                         Height: =38
-                        Size: =8
+                        Size: =10
                         Text: |-
                             ="Reimbursement form Filled :"
-                        Width: =158
+                        Width: =206
                         ZIndex: =7
 
                 Container17_18 As groupContainer.manualLayoutContainer:
@@ -2146,7 +2160,7 @@ Details_Screen As screen:
                             Refresh(CertificationOrder)
                         PressedColor: =RGBA(255, 255, 255, 1)
                         PressedFill: =RGBA(0, 18, 107, 1)
-                        Size: =10
+                        Size: =8
                         Tooltip: ="Upload 5 Documents"
                         Visible: =varattach6
                         Width: =Parent.Width
@@ -2160,6 +2174,7 @@ Details_Screen As screen:
                         Items: =Attachments_9.Attachments
                         Layout: =Layout.Vertical
                         ShowScrollbar: =false
+                        TabIndex: =1
                         TemplatePadding: =0
                         TemplateSize: =Min(160, Self.Height - 60)
                         Visible: =false
@@ -2237,13 +2252,13 @@ Details_Screen As screen:
                             Y: =Parent.TemplateHeight - 1
                             ZIndex: =5
 
-                    Toggle1_9 As toggleSwitch:
+                    Tog_AddDoc4 As toggleSwitch:
                         AccessibleLabel: ="Toggle1_3"
                         BorderColor: =RGBA(0, 18, 107, 1)
                         Color: =RGBA(0, 0, 0, 1)
                         FalseFill: =RGBA(128, 130, 133, 1)
                         FalseText: ="Add More"
-                        FocusedBorderThickness: =0
+                        FocusedBorderColor: =RGBA(0,0,0,0)
                         FontWeight: =FontWeight.Bold
                         HandleFill: =RGBA(255, 255, 255, 1)
                         Height: =18
@@ -2279,6 +2294,7 @@ Details_Screen As screen:
                         Layout: =Layout.Vertical
                         OnSelect: =Launch(ThisItem.AbsoluteUri)
                         ShowScrollbar: =false
+                        TabIndex: =1
                         TemplatePadding: =0
                         TemplateSize: =26
                         Visible: =varattach7
@@ -2321,6 +2337,7 @@ Details_Screen As screen:
                                 Last(FirstN(LookUp(CertificationOrder,'DeleteAttachments-CertificationApp'.Run(varCertificateDetails.ID,varCertificateDetails.ID)).Attachments,4));
                                 
                                 Refresh(CertificationOrder)
+                            TabIndex: =1
                             Visible: =false
                             Width: =1
                             Y: =9
@@ -2331,7 +2348,7 @@ Details_Screen As screen:
                         DisabledColor: =RGBA(166, 166, 166, 1)
                         FontWeight: =FontWeight.Semibold
                         Height: =38
-                        Size: =8
+                        Size: =10
                         Text: |-
                             ="Copy of Certification :"
                         Width: =154
@@ -2397,7 +2414,7 @@ Details_Screen As screen:
                             Refresh(CertificationOrder)
                         PressedColor: =RGBA(255, 255, 255, 1)
                         PressedFill: =RGBA(0, 18, 107, 1)
-                        Size: =10
+                        Size: =8
                         Tooltip: ="Upload 5 Documents"
                         Visible: =varattach8
                         Width: =Parent.Width
@@ -2411,6 +2428,7 @@ Details_Screen As screen:
                         Items: =Attachments_12.Attachments
                         Layout: =Layout.Vertical
                         ShowScrollbar: =false
+                        TabIndex: =1
                         TemplatePadding: =0
                         TemplateSize: =Min(160, Self.Height - 60)
                         Visible: =false
@@ -2488,13 +2506,13 @@ Details_Screen As screen:
                             Y: =Parent.TemplateHeight - 1
                             ZIndex: =5
 
-                    Toggle1_10 As toggleSwitch:
+                    Tog_AddDoc5 As toggleSwitch:
                         AccessibleLabel: ="Toggle1_4"
                         BorderColor: =RGBA(0, 18, 107, 1)
                         Color: =RGBA(0, 0, 0, 1)
                         FalseFill: =RGBA(128, 130, 133, 1)
                         FalseText: ="Add More"
-                        FocusedBorderThickness: =0
+                        FocusedBorderColor: =RGBA(0,0,0,0)
                         FontWeight: =FontWeight.Bold
                         HandleFill: =RGBA(255, 255, 255, 1)
                         Height: =18
@@ -2530,6 +2548,7 @@ Details_Screen As screen:
                         Layout: =Layout.Vertical
                         OnSelect: =Launch(ThisItem.AbsoluteUri)
                         ShowScrollbar: =false
+                        TabIndex: =1
                         TemplatePadding: =0
                         TemplateSize: =26
                         Visible: =varattach9
@@ -2572,6 +2591,7 @@ Details_Screen As screen:
                                 Last(FirstN(LookUp(CertificationOrder,'DeleteAttachments-CertificationApp'.Run(varCertificateDetails.ID,varCertificateDetails.ID)).Attachments,5));
                                 
                                 Refresh(CertificationOrder)
+                            TabIndex: =1
                             Visible: =false
                             Width: =1
                             Y: =9
@@ -2581,11 +2601,12 @@ Details_Screen As screen:
                         Color: =RGBA(0, 0, 0, 1)
                         DisabledColor: =RGBA(166, 166, 166, 1)
                         FontWeight: =FontWeight.Semibold
-                        Height: =38
-                        Size: =8
+                        Height: =28
+                        Size: =10
                         Text: |-
                             ="Manager Approval Mail :"
-                        Width: =165
+                        Width: =189
+                        Y: =5
                         ZIndex: =7
 
             Btn_Home_2 As button:
@@ -3587,6 +3608,7 @@ Details_Screen As screen:
                 PressedBorderColor: =RGBA(0, 0, 0, 0)
                 PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
                 PressedFill: =RGBA(0, 0, 0, 0)
+                TabIndex: =1
                 Width: =20
                 X: =315
                 Y: =26
@@ -3684,6 +3706,7 @@ Details_Screen As screen:
                         Items: =Attachments_2.Attachments
                         Layout: =Layout.Vertical
                         ShowScrollbar: =false
+                        TabIndex: =1
                         TemplatePadding: =0
                         TemplateSize: =Min(160, Self.Height - 60)
                         Visible: =false
@@ -3771,6 +3794,7 @@ Details_Screen As screen:
                         Layout: =Layout.Vertical
                         OnSelect: =Launch(ThisItem.AbsoluteUri)
                         ShowScrollbar: =false
+                        TabIndex: =1
                         TemplatePadding: =0
                         TemplateSize: =38
                         Visible: =varattach1
@@ -3815,6 +3839,7 @@ Details_Screen As screen:
                                 Set(varattach,true);
                                 
                                 Refresh(CertificationOrder);
+                            TabIndex: =1
                             Visible: =false
                             Width: =1
                             Y: =9
@@ -3905,6 +3930,7 @@ Details_Screen As screen:
                         Items: =Attachments_10.Attachments
                         Layout: =Layout.Vertical
                         ShowScrollbar: =false
+                        TabIndex: =1
                         TemplatePadding: =0
                         TemplateSize: =Min(160, Self.Height - 60)
                         Visible: =false
@@ -3992,6 +4018,7 @@ Details_Screen As screen:
                         Layout: =Layout.Vertical
                         OnSelect: =Launch(ThisItem.AbsoluteUri)
                         ShowScrollbar: =false
+                        TabIndex: =1
                         TemplatePadding: =0
                         TemplateSize: =38
                         Visible: =varattach3
@@ -4035,6 +4062,7 @@ Details_Screen As screen:
                                 Last(FirstN(LookUp(CertificationOrder,'DeleteAttachments-CertificationApp'.Run(varCertificateDetails.ID,varCertificateDetails.ID)).Attachments,2));
                                 
                                 Refresh(CertificationOrder)
+                            TabIndex: =1
                             Visible: =false
                             Width: =1
                             Y: =9
@@ -4125,6 +4153,7 @@ Details_Screen As screen:
                         Items: =Attachments_11.Attachments
                         Layout: =Layout.Vertical
                         ShowScrollbar: =false
+                        TabIndex: =1
                         TemplatePadding: =0
                         TemplateSize: =Min(160, Self.Height - 60)
                         Visible: =false
@@ -4212,6 +4241,7 @@ Details_Screen As screen:
                         Layout: =Layout.Vertical
                         OnSelect: =Launch(ThisItem.AbsoluteUri)
                         ShowScrollbar: =false
+                        TabIndex: =1
                         TemplatePadding: =0
                         TemplateSize: =26
                         Visible: =varattach5
@@ -4254,6 +4284,7 @@ Details_Screen As screen:
                                 Last(FirstN(LookUp(CertificationOrder,'DeleteAttachments-CertificationApp'.Run(varCertificateDetails.ID,varCertificateDetails.ID)).Attachments,3));
                                 
                                 Refresh(CertificationOrder)
+                            TabIndex: =1
                             Visible: =false
                             Width: =1
                             Y: =9
@@ -4344,6 +4375,7 @@ Details_Screen As screen:
                         Items: =Attachments_13.Attachments
                         Layout: =Layout.Vertical
                         ShowScrollbar: =false
+                        TabIndex: =1
                         TemplatePadding: =0
                         TemplateSize: =Min(160, Self.Height - 60)
                         Visible: =false
@@ -4431,6 +4463,7 @@ Details_Screen As screen:
                         Layout: =Layout.Vertical
                         OnSelect: =Launch(ThisItem.AbsoluteUri)
                         ShowScrollbar: =false
+                        TabIndex: =1
                         TemplatePadding: =0
                         TemplateSize: =26
                         Visible: =varattach7
@@ -4473,6 +4506,7 @@ Details_Screen As screen:
                                 Last(FirstN(LookUp(CertificationOrder,'DeleteAttachments-CertificationApp'.Run(varCertificateDetails.ID,varCertificateDetails.ID)).Attachments,4));
                                 
                                 Refresh(CertificationOrder)
+                            TabIndex: =1
                             Visible: =false
                             Width: =1
                             Y: =9
@@ -4563,6 +4597,7 @@ Details_Screen As screen:
                         Items: =Attachments_14.Attachments
                         Layout: =Layout.Vertical
                         ShowScrollbar: =false
+                        TabIndex: =1
                         TemplatePadding: =0
                         TemplateSize: =Min(160, Self.Height - 60)
                         Visible: =false
@@ -4650,6 +4685,7 @@ Details_Screen As screen:
                         Layout: =Layout.Vertical
                         OnSelect: =Launch(ThisItem.AbsoluteUri)
                         ShowScrollbar: =false
+                        TabIndex: =1
                         TemplatePadding: =0
                         TemplateSize: =26
                         Visible: =varattach9
@@ -4693,6 +4729,7 @@ Details_Screen As screen:
                                 
                                 Refresh(CertificationOrder)
                                 
+                            TabIndex: =1
                             Visible: =false
                             Width: =1
                             Y: =9

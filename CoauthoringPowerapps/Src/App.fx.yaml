@@ -1,7 +1,7 @@
 App As appinfo:
     BackEnabled: =false
     OnStart: |+
-        =ClearCollect(COL_CertificationSecurity,'CertificationApp-Security');
+        =Collect(COL_CertificationSecurity,FirstN('CertificationApp-Security',100));
         Set(
             varUserLevel,
             If(
@@ -14,7 +14,7 @@ App As appinfo:
                         50
                     )
                 ) = 1,
-                "SUPER-ADMIN",
+                "USER",
                 varUserLevel
             )
         );
@@ -85,12 +85,19 @@ App As appinfo:
             Certifications
         );
         ClearCollect(
+            col_filtercert2,
+            Filter(
+                CertificationOrder,
+                Location = 'Drp_Location List'.SelectedText.Value
+            )
+        );
+        ClearCollect(
             Cert_Req,
             CertificationRequest
         );
         ClearCollect(
             BUList,
-            'BU-List'
+           FirstN('BU-List',200)
         );
         Collect(
             CalendarLocalizedLabel,

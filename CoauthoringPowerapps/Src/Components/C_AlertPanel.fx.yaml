@@ -46,7 +46,8 @@ C_AlertPanel As CanvasComponent:
                 Y: =18
                 ZIndex: =1
 
-            Icon16_1 As icon.Cancel:
+            icn_notify_exit As icon.Cancel:
+                AccessibleLabel: ="exit notification"
                 BorderColor: =RGBA(166, 166, 166, 1)
                 Color: =RGBA(116, 116, 116, 1)
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -63,6 +64,7 @@ C_AlertPanel As CanvasComponent:
                 PressedBorderColor: =RGBA(0, 0, 0, 0)
                 PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
                 PressedFill: =RGBA(0, 0, 0, 0)
+                TabIndex: =1
                 Width: =20
                 X: =315
                 Y: =26
@@ -141,6 +143,7 @@ C_AlertPanel As CanvasComponent:
                 ZIndex: =3
 
             "Notify_gal As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+                AccessibleLabel: ="Nofitication Gallery"
                 BorderColor: =RGBA(166, 166, 166, 1)
                 DelayItemLoading: =true
                 Items: |-
@@ -173,6 +176,7 @@ C_AlertPanel As CanvasComponent:
                     )
                 Layout: =Layout.Vertical
                 LoadingSpinner: =LoadingSpinner.Data
+                TabIndex: =
                 TemplatePadding: =0
                 TemplateSize: =104
                 Width: =348
@@ -204,7 +208,8 @@ C_AlertPanel As CanvasComponent:
                     Y: =Parent.TemplateHeight - Self.Height
                     ZIndex: =3
 
-                Icon17 As icon.Cancel:
+                icn_exit As icon.Cancel:
+                    AccessibleLabel: ="exit"
                     BorderColor: =RGBA(166, 166, 166, 1)
                     Color: =RGBA(151, 0, 0, 1)
                     DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -261,6 +266,7 @@ C_AlertPanel As CanvasComponent:
                     PressedBorderColor: =RGBA(0, 0, 0, 0)
                     PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
                     PressedFill: =RGBA(0, 0, 0, 0)
+                    TabIndex: =0
                     Width: =20
                     X: =303
                     Y: =21
