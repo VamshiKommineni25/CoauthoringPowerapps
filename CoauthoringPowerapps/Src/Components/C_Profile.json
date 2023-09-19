@@ -2250,7 +2250,14 @@
                   },
                   "BorderColor",
                   "DisabledBorderColor",
-                  "PressedBorderColor",
+                  {
+                    "AFDDataSourceName": "",
+                    "AutoRuleBindingEnabled": false,
+                    "AutoRuleBindingString": "ColorFade(RGBA(0, 120, 212, 1), -50%)",
+                    "InvariantPropertyName": "PressedBorderColor",
+                    "IsLockable": false,
+                    "NameMapSourceSchema": "?"
+                  },
                   "HoverBorderColor",
                   "BorderStyle",
                   "FocusedBorderColor",
@@ -2411,7 +2418,7 @@
                   },
                   {
                     "Category": "Design",
-                    "InvariantScript": "ColorFade(RGBA(0, 120, 212, 1), -50%)",
+                    "InvariantScript": "ColorFade(RGBA(185, 29, 11, 1), -10%)",
                     "Property": "PressedBorderColor",
                     "RuleProviderType": "Unknown"
                   },
@@ -3638,7 +3645,7 @@
       },
       "NavigateTo"
     ],
-    "LastModifiedTimestamp": "638305608316700919",
+    "LastModifiedTimestamp": "638306951603245803",
     "Name": "C_Profile",
     "Rules": [
       {
@@ -3728,7 +3735,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638305608316700919",
+  "LastModifiedTimestamp": "638306951603245803",
   "Name": "5469d31a355b4cc3886bfc3e84679b37",
   "OverridableProperties": {},
   "Version": "638285491065897170"
