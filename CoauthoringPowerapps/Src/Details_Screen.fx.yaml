@@ -3742,3 +3742,203 @@ Details_Screen As screen:
             Y: =453
             ZIndex: =9
 
+    Button2 As button:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(0, 120, 212, 1)
+        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+        OnSelect: |
+            =If(
+                varCertificateDetails.PaymentMode <> "Cash",
+                If(
+                    Value(Inp_voucher.Text) > 100 Or IsBlank(Inp_voucher.Text),
+                    Notify(
+                        "Please Re-Check your voucher percentage ",
+                        NotificationType.Error,
+                        1000
+                    ),
+                    If(
+                        !IsBlank(Attachments_1),
+                        ClearCollect(
+                            colfiles,
+                            ShowColumns(
+                                AddColumns(
+                                    Gallery8_2.AllItems,
+                                    "base64",
+                                    With(
+                                        {
+                                            varAttachment: JSON(
+                                                Image10_6.Image,
+                                                JSONFormat.IncludeBinaryData
+                                            )
+                                        },
+                                        Mid(
+                                            varAttachment,
+                                            Find(
+                                                ",",
+                                                varAttachment
+                                            ) + 1,
+                                            Len(varAttachment) - Find(
+                                                ",",
+                                                varAttachment
+                                            ) - 1
+                                        )
+                                    )
+                                ),
+                                "base64",
+                                "Name"
+                            )
+                        );
+                        Set(
+                            varProofsLinks,
+                            'Attachment-ProofsUpload'.Run(
+                                JSON(
+                                    colfiles,
+                                    JSONFormat.IndentFour
+                                ),
+                                varCertificateDetails.ID
+                            ).links
+                        );
+                        If(
+                            varCertificateDetails.Status in ["Enrolled"],
+                            UpdateIf(
+                                CertificationOrder,
+                                ID = varCertificateDetails.ID,
+                                {
+                                    Status: "Proofs Uploaded",
+                                    Documents_Link: varProofsLinks,
+                                    PaymentMode: If(
+                                        Radio1_1.Selected.Value = "Paid with Voucher",
+                                        Inp_voucher.Text & "% Voucher",
+                                        "Cash"
+                                    ),
+                                    'Proofs Uploaded on': Today()
+                                }
+                            )
+                        );
+                        Refresh(CertificationOrder);
+                        Reset(Attachments_1);
+                        Notify(
+                            "Proofs Uploaded Successfully",
+                            NotificationType.Success,
+                            2000
+                        );
+                        Navigate(
+                            Home_Screen,
+                            ScreenTransition.Fade
+                        ),
+                        Notify(
+                            "No Files Attached",
+                            NotificationType.Error,
+                            1000
+                        )
+                    )
+                ),
+                If(
+                    !IsBlank(Attachments_1),
+                    ClearCollect(
+                        colfiles,
+                        ShowColumns(
+                            AddColumns(
+                                Gallery8_2.AllItems,
+                                "base64",
+                                With(
+                                    {
+                                        varAttachment: JSON(
+                                            Image10_6.Image,
+                                            JSONFormat.IncludeBinaryData
+                                        )
+                                    },
+                                    Mid(
+                                        varAttachment,
+                                        Find(
+                                            ",",
+                                            varAttachment
+                                        ) + 1,
+                                        Len(varAttachment) - Find(
+                                            ",",
+                                            varAttachment
+                                        ) - 1
+                                    )
+                                )
+                            ),
+                            "base64",
+                            "Name"
+                        )
+                    );
+                    Set(
+                        varProofsLinks,
+                        'Attachment-ProofsUpload'.Run(
+                            JSON(
+                                colfiles,
+                                JSONFormat.IndentFour
+                            ),
+                            varCertificateDetails.ID
+                        ).links
+                    );
+                    If(
+                        varCertificateDetails.Status in [
+                            "Manager Approved",
+                            "Proofs Uploaded"
+                        ],
+                        UpdateIf(
+                            CertificationOrder,
+                            ID = varCertificateDetails.ID,
+                            {
+                                Status: "Proofs Uploaded",
+                                Documents_Link: varProofsLinks,
+                                PaymentMode: If(
+                                    Radio1_1.Selected.Value = "Paid with Voucher",
+                                    Inp_voucher.Text & "% Voucher",
+                                    "Cash"
+                                ),
+                                'Proofs Uploaded on': Today()
+                            }
+                        )
+                    );
+                    Refresh(CertificationOrder);
+                    Reset(Attachments_1);
+                    Notify(
+                        "Proofs Uploaded Successfully",
+                        NotificationType.Success,
+                        2000
+                    );
+                    Navigate(
+                        Home_Screen,
+                        ScreenTransition.Fade
+                    ),
+                    Notify(
+                        "No Files Attached",
+                        NotificationType.Error,
+                        1000
+                    )
+                )
+            );
+            Patch(
+                NotificationList_CertificationApp,
+                Defaults(NotificationList_CertificationApp),
+                {
+                    Title: varCertificateDetails.Requestor.DisplayName,
+                    Notification: varCertificateDetails.Requestor.DisplayName & " has uploaded proofs for the certification " & varCertificateDetails.'Certification:Title'.Value
+                }
+            );
+        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =15
+        Text: ="Button"
+        X: =64
+        Y: =45
+        ZIndex: =11
+
