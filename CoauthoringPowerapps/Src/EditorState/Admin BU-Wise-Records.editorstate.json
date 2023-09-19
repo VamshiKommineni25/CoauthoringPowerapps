@@ -9229,7 +9229,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "img_Requester",
-      "ParentIndex": 5,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -10029,7 +10029,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lbl_apprv/reject",
-      "ParentIndex": 15,
+      "ParentIndex": 16,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -10322,7 +10322,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lbl_BU_Title",
-      "ParentIndex": 6,
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -11171,7 +11171,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lbl_CertPract",
-      "ParentIndex": 7,
+      "ParentIndex": 8,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -12034,7 +12034,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lbl_docLink",
-      "ParentIndex": 13,
+      "ParentIndex": 14,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -12304,7 +12304,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lbl_enrolled",
-      "ParentIndex": 14,
+      "ParentIndex": 15,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -12592,7 +12592,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lbl_ExamDate",
-      "ParentIndex": 11,
+      "ParentIndex": 12,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -13234,7 +13234,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lbl_Manager",
-      "ParentIndex": 9,
+      "ParentIndex": 10,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -13517,7 +13517,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lbl_PayMentMode",
-      "ParentIndex": 8,
+      "ParentIndex": 9,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -14352,7 +14352,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lbl_ProofsUpload",
-      "ParentIndex": 12,
+      "ParentIndex": 13,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -14635,7 +14635,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lbl_recordCreated",
-      "ParentIndex": 10,
+      "ParentIndex": 11,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -15511,7 +15511,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lbl_ReqName",
-      "ParentIndex": 4,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -16290,14 +16290,7 @@
         "BorderStyle",
         "FocusedBorderColor",
         "DisplayMode",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "",
-          "InvariantPropertyName": "X",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "X",
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
@@ -16306,14 +16299,7 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "840",
-          "InvariantPropertyName": "Width",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "Width",
         "Height",
         "ZIndex",
         "BorderThickness",
@@ -16329,7 +16315,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "rect_header",
-      "ParentIndex": 3,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

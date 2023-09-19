@@ -3224,6 +3224,66 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "'Admin BU-Wise-Records'.con_ViewReqCertDetails.ico_Cancel.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Admin BU-Wise-Records'.con_ViewReqCertDetails.ico_Cancel.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Admin BU-Wise-Records",
+                "type": "'Admin BU-Wise-Records'.con_ViewReqCertDetails.ico_Cancel"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Admin BU-Wise-Records'.con_ViewReqCertDetails.ico_Cancel.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Admin BU-Wise-Records'.con_ViewReqCertDetails.ico_Cancel.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Admin BU-Wise-Records",
+                "type": "'Admin BU-Wise-Records'.con_ViewReqCertDetails.ico_Cancel"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "'Admin BU-Wise-Records'.con_ViewReqCertDetails.'lbl_apprv/reject'.TabIndex"
                 }
               ],

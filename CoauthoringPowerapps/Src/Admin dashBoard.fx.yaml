@@ -252,8 +252,11 @@
                         Provider: "Amazon",
                         Count: CountRows(
                             Filter(
-                                FirstN(Certifications,100000),(DateValue(Created)>=Date_FromDate.SelectedDate && DateValue(Created)<=Date_ToDate.SelectedDate) && 
-                                'Provider Name' = "Amazon"
+                                FirstN(
+                                    Certifications,
+                                    100000
+                                ),
+                                (DateValue(Created) >= Date_FromDate.SelectedDate && DateValue(Created) <= Date_ToDate.SelectedDate) && 'Provider Name' = "Amazon"
                             )
                         )
                     },
@@ -261,8 +264,11 @@
                         Provider: "Microsoft",
                         Count: CountRows(
                             Filter(
-                                FirstN(Certifications,100000),(DateValue(Created)>=Date_FromDate.SelectedDate && DateValue(Created)<=Date_ToDate.SelectedDate) &&
-                                'Provider Name' = "Microsoft"
+                                FirstN(
+                                    Certifications,
+                                    100000
+                                ),
+                                (DateValue(Created) >= Date_FromDate.SelectedDate && DateValue(Created) <= Date_ToDate.SelectedDate) && 'Provider Name' = "Microsoft"
                             )
                         )
                     },
@@ -270,8 +276,11 @@
                         Provider: "Google",
                         Count: CountRows(
                             Filter(
-                                FirstN(Certifications,100000),(DateValue(Created)>=Date_FromDate.SelectedDate && DateValue(Created)<=Date_ToDate.SelectedDate) &&
-                                'Provider Name' = "Google"
+                                FirstN(
+                                    Certifications,
+                                    100000
+                                ),
+                                (DateValue(Created) >= Date_FromDate.SelectedDate && DateValue(Created) <= Date_ToDate.SelectedDate) && 'Provider Name' = "Google"
                             )
                         )
                     },
@@ -279,8 +288,11 @@
                         Provider: "Other",
                         Count: (CountRows(
                             Filter(
-                                FirstN(Certifications,100000),(DateValue(Created)>=Date_FromDate.SelectedDate && DateValue(Created)<=Date_ToDate.SelectedDate) &&
-                                !'Provider Name' in [
+                                FirstN(
+                                    Certifications,
+                                    100000
+                                ),
+                                (DateValue(Created) >= Date_FromDate.SelectedDate && DateValue(Created) <= Date_ToDate.SelectedDate) && !'Provider Name' in [
                                     "Amazon",
                                     "Microsoft",
                                     "Gooogle"
@@ -2946,6 +2958,7 @@
         DisabledColor: =RGBA(166, 166, 166, 1)
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
+        Height: =36
         Size: =10
         Text: ="No data to display"
         Visible: |-
@@ -2956,14 +2969,15 @@
                             CertificationOrder,
                             100000
                         ),
-                        (DateValue(Created) >= Date_FromDate.SelectedDate && DateValue(Created) <= Date_ToDate.SelectedDate) && BU.Value = Drp_BUList.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BCode',
-                        Status = "Enrolled"
+                        (DateValue(Created) >= Date_FromDate.SelectedDate && DateValue(Created) <= Date_ToDate.SelectedDate) && BU.Value = Drp_BUList.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BCode'  
+                        
                     )
                 ) = 0) && ('Glry_Total Cert per BU/Provider'.Selected.Name = "Total Certifications Per BU"),
                 true,
                 false
             )
-        X: =276
-        Y: =238
+        Width: =280
+        X: =607
+        Y: =278
         ZIndex: =28
 
