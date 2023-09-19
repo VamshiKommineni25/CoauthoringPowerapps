@@ -884,28 +884,6 @@
             Y: =2
             ZIndex: =2
 
-        ico_Cancel As icon.Cancel:
-            BorderColor: =RGBA(166, 166, 166, 1)
-            Color: =RGBA(255, 255, 255, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(220, 220, 220, 1)
-            DisabledFill: =RGBA(0, 0, 0, 0)
-            Fill: =RGBA(255, 0, 0, 1)
-            FocusedBorderThickness: =4
-            Height: =50
-            HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverColor: =//ColorFade(RGBA(0, 120, 212, 1), -30%)
-            HoverFill: =RGBA(0, 0, 0, 0)
-            Icon: =Icon.Cancel
-            OnSelect: =Set(varvarViewThisItemVisiblity,false)
-            PressedBorderColor: =RGBA(0, 0, 0, 0)
-            PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-            PressedFill: =RGBA(0, 0, 0, 0)
-            Visible: =false
-            Width: =50
-            X: =827
-            ZIndex: =3
-
         rect_header As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
@@ -916,8 +894,7 @@
             Height: =3
             HoverFill: =RGBA(0, 120, 212, 1)
             PressedFill: =RGBA(0, 120, 212, 1)
-            Width: =840
-            X: =8
+            Width: =con_ViewReqCertDetails.Width
             Y: =55
             ZIndex: =4
 
@@ -1191,6 +1168,32 @@
             X: =410
             Y: =lbl_docLink.Y
             ZIndex: =17
+
+        Button10_3 As button:
+            BorderColor: =RGBA(189, 25, 11, 1)
+            Color: =RGBA(189, 25, 11, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =35
+            HoverColor: =RGBA(189, 25, 11, 1)
+            HoverFill: =RGBA(255, 255, 255, 1)
+            OnSelect: =Set(varvarViewThisItemVisiblity,false)
+            PressedColor: =RGBA(189, 25, 11, 1)
+            PressedFill: =RGBA(255, 255, 255, 1)
+            RadiusBottomLeft: =12
+            RadiusBottomRight: =12
+            RadiusTopLeft: =12
+            RadiusTopRight: =12
+            Size: =10
+            Text: ="Cancel"
+            Visible: =varRevise
+            Width: =94
+            X: =710
+            Y: =482
+            ZIndex: =18
 
     c_Header_1 As c_Header:
         CartOnselect: ='EnrollCertificate Screen'
