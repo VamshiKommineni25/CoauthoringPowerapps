@@ -647,7 +647,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Btn_Approve/Pending",
-      "ParentIndex": 4,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2751,7 +2751,7 @@
       },
       "MetaDataIDKey": "",
       "Name": "C_AlertPanel_9",
-      "ParentIndex": 4,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2994,7 +2994,7 @@
       },
       "MetaDataIDKey": "",
       "Name": "C_leftPanel_10",
-      "ParentIndex": 6,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3097,7 +3097,7 @@
       },
       "MetaDataIDKey": "",
       "Name": "C_Profile_9",
-      "ParentIndex": 5,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3457,7 +3457,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Cntr_NewReq.Cert",
-      "ParentIndex": 17,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3693,7 +3693,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Cntr_Recent_Request",
-      "ParentIndex": 2,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3929,7 +3929,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Cntr_TargetCert",
-      "ParentIndex": 3,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -5007,7 +5007,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "ColumnChart_TotalCertification per Provider",
-      "ParentIndex": 1,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -12467,7 +12467,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Glry_Lbl_Requestor",
-      "ParentIndex": 3,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -22489,7 +22489,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label19",
-      "ParentIndex": 1,
+      "ParentIndex": 18,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -22771,7 +22771,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label22",
-      "ParentIndex": 18,
+      "ParentIndex": 17,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -35094,7 +35094,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "PieChart_TotalCertifications per BU",
-      "ParentIndex": 0,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
