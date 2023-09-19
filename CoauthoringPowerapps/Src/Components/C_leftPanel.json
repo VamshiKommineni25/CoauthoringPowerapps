@@ -57,7 +57,8 @@
                     "InvariantPropertyName": "OnSelect",
                     "IsLockable": false,
                     "NameMapSourceSchema": "?"
-                  }
+                  },
+                  "TabIndex"
                 ],
                 "ControlUniqueId": "72",
                 "HasDynamicProperties": false,
@@ -74,6 +75,12 @@
                 "PersistMetaDataIDKey": false,
                 "PublishOrderIndex": 58,
                 "Rules": [
+                  {
+                    "Category": "Design",
+                    "InvariantScript": "0",
+                    "Property": "TabIndex",
+                    "RuleProviderType": "Unknown"
+                  },
                   {
                     "Category": "Design",
                     "InvariantScript": "RGBA(0, 0, 0, 0)",
@@ -759,7 +766,7 @@
                       },
                       {
                         "Category": "Design",
-                        "InvariantScript": "-1",
+                        "InvariantScript": "0",
                         "Property": "TabIndex",
                         "RuleProviderType": "Unknown"
                       },
@@ -1427,7 +1434,8 @@
                     "InvariantPropertyName": "OnSelect",
                     "IsLockable": false,
                     "NameMapSourceSchema": "?"
-                  }
+                  },
+                  "TabIndex"
                 ],
                 "ControlUniqueId": "77",
                 "HasDynamicProperties": false,
@@ -1444,6 +1452,12 @@
                 "PersistMetaDataIDKey": false,
                 "PublishOrderIndex": 62,
                 "Rules": [
+                  {
+                    "Category": "Design",
+                    "InvariantScript": "0",
+                    "Property": "TabIndex",
+                    "RuleProviderType": "Unknown"
+                  },
                   {
                     "Category": "Design",
                     "InvariantScript": "RGBA(0, 0, 0, 0)",
@@ -2150,7 +2164,7 @@
                       },
                       {
                         "Category": "Design",
-                        "InvariantScript": "-1",
+                        "InvariantScript": "0",
                         "Property": "TabIndex",
                         "RuleProviderType": "Unknown"
                       },
@@ -2818,7 +2832,8 @@
                     "InvariantPropertyName": "OnSelect",
                     "IsLockable": false,
                     "NameMapSourceSchema": "?"
-                  }
+                  },
+                  "TabIndex"
                 ],
                 "ControlUniqueId": "82",
                 "HasDynamicProperties": false,
@@ -2835,6 +2850,12 @@
                 "PersistMetaDataIDKey": false,
                 "PublishOrderIndex": 66,
                 "Rules": [
+                  {
+                    "Category": "Design",
+                    "InvariantScript": "1",
+                    "Property": "TabIndex",
+                    "RuleProviderType": "Unknown"
+                  },
                   {
                     "Category": "Design",
                     "InvariantScript": "RGBA(0, 0, 0, 0)",
@@ -3873,7 +3894,7 @@
                       },
                       {
                         "Category": "Design",
-                        "InvariantScript": "-1",
+                        "InvariantScript": "0",
                         "Property": "TabIndex",
                         "RuleProviderType": "Unknown"
                       },
@@ -4549,7 +4570,8 @@
                     "InvariantPropertyName": "Visible",
                     "IsLockable": false,
                     "NameMapSourceSchema": "?"
-                  }
+                  },
+                  "TabIndex"
                 ],
                 "ControlUniqueId": "88",
                 "HasDynamicProperties": false,
@@ -4566,6 +4588,12 @@
                 "PersistMetaDataIDKey": false,
                 "PublishOrderIndex": 71,
                 "Rules": [
+                  {
+                    "Category": "Design",
+                    "InvariantScript": "0",
+                    "Property": "TabIndex",
+                    "RuleProviderType": "Unknown"
+                  },
                   {
                     "Category": "Design",
                     "InvariantScript": "RGBA(0, 0, 0, 0)",
@@ -5278,7 +5306,7 @@
                       },
                       {
                         "Category": "Design",
-                        "InvariantScript": "-1",
+                        "InvariantScript": "0",
                         "Property": "TabIndex",
                         "RuleProviderType": "Unknown"
                       },
@@ -6243,7 +6271,7 @@
       },
       "NavigateTo"
     ],
-    "LastModifiedTimestamp": "638307036767826649",
+    "LastModifiedTimestamp": "638307041065823638",
     "Name": "C_leftPanel",
     "Rules": [
       {
@@ -6324,7 +6352,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638307036767826649",
+  "LastModifiedTimestamp": "638307041065823638",
   "Name": "470e83d2489f46a58e9ba807156b5c3a",
   "OverridableProperties": {},
   "Version": "638282907983282334"

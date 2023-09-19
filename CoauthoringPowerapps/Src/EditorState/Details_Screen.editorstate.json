@@ -13639,7 +13639,8 @@
           "InvariantPropertyName": "AccessibleLabel",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
-        }
+        },
+        "TabIndex"
       ],
       "GalleryTemplateChildName": "galleryTemplate14_10",
       "HasDynamicProperties": false,
@@ -13668,6 +13669,11 @@
         {
           "Category": "Data",
           "PropertyName": "AccessibleLabel",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "TabIndex",
           "RuleProviderType": "Unknown"
         },
         {
@@ -13899,7 +13905,8 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        "AccessibleLabel"
+        "AccessibleLabel",
+        "TabIndex"
       ],
       "GalleryTemplateChildName": "galleryTemplate14_11",
       "HasDynamicProperties": false,
@@ -13928,6 +13935,11 @@
         {
           "Category": "Data",
           "PropertyName": "WrapCount",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "TabIndex",
           "RuleProviderType": "Unknown"
         },
         {
@@ -14159,7 +14171,8 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        "AccessibleLabel"
+        "AccessibleLabel",
+        "TabIndex"
       ],
       "GalleryTemplateChildName": "galleryTemplate14_12",
       "HasDynamicProperties": false,
@@ -14188,6 +14201,11 @@
         {
           "Category": "Data",
           "PropertyName": "WrapCount",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "TabIndex",
           "RuleProviderType": "Unknown"
         },
         {
@@ -14419,7 +14437,8 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        "AccessibleLabel"
+        "AccessibleLabel",
+        "TabIndex"
       ],
       "GalleryTemplateChildName": "galleryTemplate14_13",
       "HasDynamicProperties": false,
@@ -14448,6 +14467,11 @@
         {
           "Category": "Data",
           "PropertyName": "WrapCount",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "TabIndex",
           "RuleProviderType": "Unknown"
         },
         {
@@ -14686,7 +14710,8 @@
           "InvariantPropertyName": "AccessibleLabel",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
-        }
+        },
+        "TabIndex"
       ],
       "GalleryTemplateChildName": "galleryTemplate14_14",
       "HasDynamicProperties": false,
@@ -14715,6 +14740,11 @@
         {
           "Category": "Data",
           "PropertyName": "AccessibleLabel",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "TabIndex",
           "RuleProviderType": "Unknown"
         },
         {
@@ -14953,7 +14983,8 @@
           "InvariantPropertyName": "AccessibleLabel",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
-        }
+        },
+        "TabIndex"
       ],
       "GalleryTemplateChildName": "galleryTemplate14_15",
       "HasDynamicProperties": false,
@@ -14982,6 +15013,11 @@
         {
           "Category": "Data",
           "PropertyName": "AccessibleLabel",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "TabIndex",
           "RuleProviderType": "Unknown"
         },
         {
@@ -15213,7 +15249,8 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        "AccessibleLabel"
+        "AccessibleLabel",
+        "TabIndex"
       ],
       "GalleryTemplateChildName": "galleryTemplate14_6",
       "HasDynamicProperties": false,
@@ -15242,6 +15279,11 @@
         {
           "Category": "Data",
           "PropertyName": "WrapCount",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "TabIndex",
           "RuleProviderType": "Unknown"
         },
         {
@@ -15473,7 +15515,8 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        "AccessibleLabel"
+        "AccessibleLabel",
+        "TabIndex"
       ],
       "GalleryTemplateChildName": "galleryTemplate14_7",
       "HasDynamicProperties": false,
@@ -15502,6 +15545,11 @@
         {
           "Category": "Data",
           "PropertyName": "WrapCount",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "TabIndex",
           "RuleProviderType": "Unknown"
         },
         {
@@ -15733,7 +15781,8 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        "AccessibleLabel"
+        "AccessibleLabel",
+        "TabIndex"
       ],
       "GalleryTemplateChildName": "galleryTemplate14_8",
       "HasDynamicProperties": false,
@@ -15762,6 +15811,11 @@
         {
           "Category": "Data",
           "PropertyName": "WrapCount",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "TabIndex",
           "RuleProviderType": "Unknown"
         },
         {
@@ -16000,7 +16054,8 @@
           "InvariantPropertyName": "AccessibleLabel",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
-        }
+        },
+        "TabIndex"
       ],
       "GalleryTemplateChildName": "galleryTemplate14_9",
       "HasDynamicProperties": false,
@@ -16029,6 +16084,11 @@
         {
           "Category": "Data",
           "PropertyName": "AccessibleLabel",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "TabIndex",
           "RuleProviderType": "Unknown"
         },
         {
@@ -16231,7 +16291,8 @@
           "InvariantPropertyName": "AccessibleLabel",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
-        }
+        },
+        "TabIndex"
       ],
       "GalleryTemplateChildName": "galleryTemplate11_10",
       "HasDynamicProperties": false,
@@ -16260,6 +16321,11 @@
         {
           "Category": "Data",
           "PropertyName": "AccessibleLabel",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "TabIndex",
           "RuleProviderType": "Unknown"
         },
         {
@@ -16450,7 +16516,8 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        "AccessibleLabel"
+        "AccessibleLabel",
+        "TabIndex"
       ],
       "GalleryTemplateChildName": "galleryTemplate11_12",
       "HasDynamicProperties": false,
@@ -16479,6 +16546,11 @@
         {
           "Category": "Data",
           "PropertyName": "WrapCount",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "TabIndex",
           "RuleProviderType": "Unknown"
         },
         {
@@ -16669,7 +16741,8 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        "AccessibleLabel"
+        "AccessibleLabel",
+        "TabIndex"
       ],
       "GalleryTemplateChildName": "galleryTemplate11_13",
       "HasDynamicProperties": false,
@@ -16698,6 +16771,11 @@
         {
           "Category": "Data",
           "PropertyName": "WrapCount",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "TabIndex",
           "RuleProviderType": "Unknown"
         },
         {
@@ -16895,7 +16973,8 @@
           "InvariantPropertyName": "AccessibleLabel",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
-        }
+        },
+        "TabIndex"
       ],
       "GalleryTemplateChildName": "galleryTemplate11_14",
       "HasDynamicProperties": false,
@@ -16924,6 +17003,11 @@
         {
           "Category": "Data",
           "PropertyName": "AccessibleLabel",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "TabIndex",
           "RuleProviderType": "Unknown"
         },
         {
@@ -17121,7 +17205,8 @@
           "InvariantPropertyName": "AccessibleLabel",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
-        }
+        },
+        "TabIndex"
       ],
       "GalleryTemplateChildName": "galleryTemplate11_15",
       "HasDynamicProperties": false,
@@ -17150,6 +17235,11 @@
         {
           "Category": "Data",
           "PropertyName": "AccessibleLabel",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "TabIndex",
           "RuleProviderType": "Unknown"
         },
         {
@@ -17340,7 +17430,8 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        "AccessibleLabel"
+        "AccessibleLabel",
+        "TabIndex"
       ],
       "GalleryTemplateChildName": "galleryTemplate11_6",
       "HasDynamicProperties": false,
@@ -17369,6 +17460,11 @@
         {
           "Category": "Data",
           "PropertyName": "WrapCount",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "TabIndex",
           "RuleProviderType": "Unknown"
         },
         {
@@ -17559,7 +17655,8 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        "AccessibleLabel"
+        "AccessibleLabel",
+        "TabIndex"
       ],
       "GalleryTemplateChildName": "galleryTemplate11_11",
       "HasDynamicProperties": false,
@@ -17588,6 +17685,11 @@
         {
           "Category": "Data",
           "PropertyName": "WrapCount",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "TabIndex",
           "RuleProviderType": "Unknown"
         },
         {
@@ -17778,7 +17880,8 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        "AccessibleLabel"
+        "AccessibleLabel",
+        "TabIndex"
       ],
       "GalleryTemplateChildName": "galleryTemplate11_7",
       "HasDynamicProperties": false,
@@ -17807,6 +17910,11 @@
         {
           "Category": "Data",
           "PropertyName": "WrapCount",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "TabIndex",
           "RuleProviderType": "Unknown"
         },
         {
@@ -17997,7 +18105,8 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        "AccessibleLabel"
+        "AccessibleLabel",
+        "TabIndex"
       ],
       "GalleryTemplateChildName": "galleryTemplate11_8",
       "HasDynamicProperties": false,
@@ -18026,6 +18135,11 @@
         {
           "Category": "Data",
           "PropertyName": "WrapCount",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "TabIndex",
           "RuleProviderType": "Unknown"
         },
         {
@@ -18223,7 +18337,8 @@
           "InvariantPropertyName": "AccessibleLabel",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
-        }
+        },
+        "TabIndex"
       ],
       "GalleryTemplateChildName": "galleryTemplate11_9",
       "HasDynamicProperties": false,
@@ -18252,6 +18367,11 @@
         {
           "Category": "Data",
           "PropertyName": "AccessibleLabel",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "TabIndex",
           "RuleProviderType": "Unknown"
         },
         {
@@ -19393,7 +19513,8 @@
           "InvariantPropertyName": "OnSelect",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
-        }
+        },
+        "TabIndex"
       ],
       "HasDynamicProperties": false,
       "IsAutoGenerated": false,
@@ -19408,6 +19529,11 @@
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
+        {
+          "Category": "Design",
+          "PropertyName": "TabIndex",
+          "RuleProviderType": "Unknown"
+        },
         {
           "Category": "Design",
           "PropertyName": "Icon",
@@ -19600,7 +19726,8 @@
           "InvariantPropertyName": "OnSelect",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
-        }
+        },
+        "TabIndex"
       ],
       "HasDynamicProperties": false,
       "IsAutoGenerated": false,
@@ -19615,6 +19742,11 @@
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
+        {
+          "Category": "Design",
+          "PropertyName": "TabIndex",
+          "RuleProviderType": "Unknown"
+        },
         {
           "Category": "Design",
           "PropertyName": "Icon",
@@ -37951,7 +38083,8 @@
           "InvariantPropertyName": "AccessibleLabel",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
-        }
+        },
+        "TabIndex"
       ],
       "HasDynamicProperties": false,
       "IsAutoGenerated": false,
@@ -37969,6 +38102,11 @@
         {
           "Category": "Data",
           "PropertyName": "AccessibleLabel",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "TabIndex",
           "RuleProviderType": "Unknown"
         },
         {
@@ -38149,7 +38287,8 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        "AccessibleLabel"
+        "AccessibleLabel",
+        "TabIndex"
       ],
       "HasDynamicProperties": false,
       "IsAutoGenerated": false,
@@ -38167,6 +38306,11 @@
         {
           "Category": "Data",
           "PropertyName": "AccessibleLabel",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "TabIndex",
           "RuleProviderType": "Unknown"
         },
         {
@@ -38354,7 +38498,8 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        "AccessibleLabel"
+        "AccessibleLabel",
+        "TabIndex"
       ],
       "HasDynamicProperties": false,
       "IsAutoGenerated": false,
@@ -38372,6 +38517,11 @@
         {
           "Category": "Data",
           "PropertyName": "AccessibleLabel",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "TabIndex",
           "RuleProviderType": "Unknown"
         },
         {
@@ -38552,7 +38702,8 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        "AccessibleLabel"
+        "AccessibleLabel",
+        "TabIndex"
       ],
       "HasDynamicProperties": false,
       "IsAutoGenerated": false,
@@ -38570,6 +38721,11 @@
         {
           "Category": "Data",
           "PropertyName": "AccessibleLabel",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "TabIndex",
           "RuleProviderType": "Unknown"
         },
         {
@@ -38757,7 +38913,8 @@
           "InvariantPropertyName": "AccessibleLabel",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
-        }
+        },
+        "TabIndex"
       ],
       "HasDynamicProperties": false,
       "IsAutoGenerated": false,
@@ -38775,6 +38932,11 @@
         {
           "Category": "Data",
           "PropertyName": "AccessibleLabel",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "TabIndex",
           "RuleProviderType": "Unknown"
         },
         {
@@ -38962,7 +39124,8 @@
           "InvariantPropertyName": "AccessibleLabel",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
-        }
+        },
+        "TabIndex"
       ],
       "HasDynamicProperties": false,
       "IsAutoGenerated": false,
@@ -38980,6 +39143,11 @@
         {
           "Category": "Data",
           "PropertyName": "AccessibleLabel",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "TabIndex",
           "RuleProviderType": "Unknown"
         },
         {
@@ -39160,7 +39328,8 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        "AccessibleLabel"
+        "AccessibleLabel",
+        "TabIndex"
       ],
       "HasDynamicProperties": false,
       "IsAutoGenerated": false,
@@ -39178,6 +39347,11 @@
         {
           "Category": "Data",
           "PropertyName": "AccessibleLabel",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "TabIndex",
           "RuleProviderType": "Unknown"
         },
         {
@@ -39365,7 +39539,8 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        "AccessibleLabel"
+        "AccessibleLabel",
+        "TabIndex"
       ],
       "HasDynamicProperties": false,
       "IsAutoGenerated": false,
@@ -39383,6 +39558,11 @@
         {
           "Category": "Data",
           "PropertyName": "AccessibleLabel",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "TabIndex",
           "RuleProviderType": "Unknown"
         },
         {
@@ -39563,7 +39743,8 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        "AccessibleLabel"
+        "AccessibleLabel",
+        "TabIndex"
       ],
       "HasDynamicProperties": false,
       "IsAutoGenerated": false,
@@ -39581,6 +39762,11 @@
         {
           "Category": "Data",
           "PropertyName": "AccessibleLabel",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "TabIndex",
           "RuleProviderType": "Unknown"
         },
         {
@@ -39768,7 +39954,8 @@
           "InvariantPropertyName": "AccessibleLabel",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
-        }
+        },
+        "TabIndex"
       ],
       "HasDynamicProperties": false,
       "IsAutoGenerated": false,
@@ -39786,6 +39973,11 @@
         {
           "Category": "Data",
           "PropertyName": "AccessibleLabel",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "TabIndex",
           "RuleProviderType": "Unknown"
         },
         {

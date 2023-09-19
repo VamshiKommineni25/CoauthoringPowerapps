@@ -86,7 +86,7 @@
                       },
                       {
                         "Category": "Data",
-                        "InvariantScript": "\"\"",
+                        "InvariantScript": "\"image\"",
                         "Property": "AccessibleLabel",
                         "RuleProviderType": "Unknown"
                       },
@@ -314,7 +314,7 @@
                       },
                       {
                         "Category": "Design",
-                        "InvariantScript": "-1",
+                        "InvariantScript": "0",
                         "Property": "TabIndex",
                         "RuleProviderType": "Unknown"
                       },
@@ -452,7 +452,7 @@
                       },
                       {
                         "Category": "Data",
-                        "InvariantScript": "\"\"",
+                        "InvariantScript": "\"image\"",
                         "Property": "AccessibleLabel",
                         "RuleProviderType": "Unknown"
                       },
@@ -680,7 +680,7 @@
                       },
                       {
                         "Category": "Design",
-                        "InvariantScript": "-1",
+                        "InvariantScript": "0",
                         "Property": "TabIndex",
                         "RuleProviderType": "Unknown"
                       },
@@ -1722,7 +1722,7 @@
                       },
                       {
                         "Category": "Data",
-                        "InvariantScript": "\"\"",
+                        "InvariantScript": "\"image\"",
                         "Property": "AccessibleLabel",
                         "RuleProviderType": "Unknown"
                       },
@@ -1950,7 +1950,7 @@
                       },
                       {
                         "Category": "Design",
-                        "InvariantScript": "-1",
+                        "InvariantScript": "1",
                         "Property": "TabIndex",
                         "RuleProviderType": "Unknown"
                       },
@@ -2128,7 +2128,8 @@
                         "InvariantPropertyName": "HintText",
                         "IsLockable": false,
                         "NameMapSourceSchema": "?"
-                      }
+                      },
+                      "AccessibleLabel"
                     ],
                     "ControlUniqueId": "47",
                     "HasDynamicProperties": false,
@@ -2145,6 +2146,12 @@
                     "PersistMetaDataIDKey": false,
                     "PublishOrderIndex": 49,
                     "Rules": [
+                      {
+                        "Category": "Data",
+                        "InvariantScript": "\"textinputbox for search \"",
+                        "Property": "AccessibleLabel",
+                        "RuleProviderType": "Unknown"
+                      },
                       {
                         "Category": "Data",
                         "InvariantScript": "false",
@@ -2765,7 +2772,7 @@
                       },
                       {
                         "Category": "Data",
-                        "InvariantScript": "\"\"",
+                        "InvariantScript": "\"search icon\"",
                         "Property": "AccessibleLabel",
                         "RuleProviderType": "Unknown"
                       },
@@ -2993,7 +3000,7 @@
                       },
                       {
                         "Category": "Design",
-                        "InvariantScript": "-1",
+                        "InvariantScript": "0",
                         "Property": "TabIndex",
                         "RuleProviderType": "Unknown"
                       },
@@ -3903,7 +3910,7 @@
               },
               {
                 "Category": "Data",
-                "InvariantScript": "\"\"",
+                "InvariantScript": "\"notification icon\"",
                 "Property": "AccessibleLabel",
                 "RuleProviderType": "Unknown"
               },
@@ -4131,7 +4138,7 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "-1",
+                "InvariantScript": "1",
                 "Property": "TabIndex",
                 "RuleProviderType": "Unknown"
               },
@@ -4504,7 +4511,7 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "-1",
+                "InvariantScript": "1",
                 "Property": "TabIndex",
                 "RuleProviderType": "Unknown"
               },
@@ -4870,7 +4877,7 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "-1",
+                "InvariantScript": "1",
                 "Property": "TabIndex",
                 "RuleProviderType": "Unknown"
               },
@@ -5243,7 +5250,7 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "-1",
+                "InvariantScript": "1",
                 "Property": "TabIndex",
                 "RuleProviderType": "Unknown"
               },
@@ -5602,7 +5609,7 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "-1",
+                "InvariantScript": "1",
                 "Property": "TabIndex",
                 "RuleProviderType": "Unknown"
               },
@@ -5996,7 +6003,7 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "-1",
+                "InvariantScript": "1",
                 "Property": "TabIndex",
                 "RuleProviderType": "Unknown"
               },
@@ -6348,7 +6355,7 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "-1",
+                "InvariantScript": "1",
                 "Property": "TabIndex",
                 "RuleProviderType": "Unknown"
               },
@@ -6707,7 +6714,7 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "-1",
+                "InvariantScript": "1",
                 "Property": "TabIndex",
                 "RuleProviderType": "Unknown"
               },
@@ -7066,7 +7073,7 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "-1",
+                "InvariantScript": "1",
                 "Property": "TabIndex",
                 "RuleProviderType": "Unknown"
               },
@@ -7467,7 +7474,7 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "-1",
+                "InvariantScript": "1",
                 "Property": "TabIndex",
                 "RuleProviderType": "Unknown"
               },
@@ -7868,7 +7875,7 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "-1",
+                "InvariantScript": "1",
                 "Property": "TabIndex",
                 "RuleProviderType": "Unknown"
               },
@@ -7974,7 +7981,8 @@
                 "InvariantPropertyName": "OnSelect",
                 "IsLockable": false,
                 "NameMapSourceSchema": "?"
-              }
+              },
+              "TabIndex"
             ],
             "ControlUniqueId": "62",
             "HasDynamicProperties": false,
@@ -7991,6 +7999,12 @@
             "PersistMetaDataIDKey": false,
             "PublishOrderIndex": 35,
             "Rules": [
+              {
+                "Category": "Design",
+                "InvariantScript": "1",
+                "Property": "TabIndex",
+                "RuleProviderType": "Unknown"
+              },
               {
                 "Category": "Design",
                 "InvariantScript": "Icon.QuestionMark",
@@ -8502,7 +8516,7 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "-1",
+                "InvariantScript": "1",
                 "Property": "TabIndex",
                 "RuleProviderType": "Unknown"
               },
@@ -8861,7 +8875,7 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "-1",
+                "InvariantScript": "1",
                 "Property": "TabIndex",
                 "RuleProviderType": "Unknown"
               },
@@ -9556,7 +9570,7 @@
         "NameMapSourceSchema": "?"
       }
     ],
-    "LastModifiedTimestamp": "638307036767823357",
+    "LastModifiedTimestamp": "638307041065820455",
     "Name": "c_Header",
     "Rules": [
       {
@@ -9702,7 +9716,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638307036767823357",
+  "LastModifiedTimestamp": "638307041065820455",
   "Name": "4e347dfcdde94913bd34c97cc0728f3c",
   "OverridableProperties": {},
   "Version": "638282056663502263"

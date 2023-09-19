@@ -1702,7 +1702,8 @@
                     "InvariantPropertyName": "Visible",
                     "IsLockable": false,
                     "NameMapSourceSchema": "?"
-                  }
+                  },
+                  "TabIndex"
                 ],
                 "ControlUniqueId": "12",
                 "HasDynamicProperties": false,
@@ -1735,6 +1736,12 @@
                     "Category": "Data",
                     "InvariantScript": "TextRole.Default",
                     "Property": "Role",
+                    "RuleProviderType": "Unknown"
+                  },
+                  {
+                    "Category": "Design",
+                    "InvariantScript": "1",
+                    "Property": "TabIndex",
                     "RuleProviderType": "Unknown"
                   },
                   {
@@ -2052,7 +2059,8 @@
                     "InvariantPropertyName": "Visible",
                     "IsLockable": false,
                     "NameMapSourceSchema": "?"
-                  }
+                  },
+                  "TabIndex"
                 ],
                 "ControlUniqueId": "13",
                 "HasDynamicProperties": false,
@@ -2069,6 +2077,12 @@
                 "PersistMetaDataIDKey": false,
                 "PublishOrderIndex": 95,
                 "Rules": [
+                  {
+                    "Category": "Design",
+                    "InvariantScript": "1",
+                    "Property": "TabIndex",
+                    "RuleProviderType": "Unknown"
+                  },
                   {
                     "Category": "Design",
                     "InvariantScript": "Icon.Settings",
@@ -3645,7 +3659,7 @@
       },
       "NavigateTo"
     ],
-    "LastModifiedTimestamp": "638307036767828900",
+    "LastModifiedTimestamp": "638307041065826064",
     "Name": "C_Profile",
     "Rules": [
       {
@@ -3735,7 +3749,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638307036767828900",
+  "LastModifiedTimestamp": "638307041065826064",
   "Name": "5469d31a355b4cc3886bfc3e84679b37",
   "OverridableProperties": {},
   "Version": "638285491065897170"
