@@ -2444,6 +2444,7 @@
                 HoverBorderColor: =RGBA(185, 29, 11, 1)
                 HoverColor: =RGBA(185, 29, 11, 1)
                 HoverFill: =
+                OnSelect: =If(varUserLevel="ADMIN" ||varUserLevel="SUPER-ADMIN",true,false)
                 PressedBorderColor: =RGBA(185, 29, 11, 1)
                 PressedColor: =RGBA(185, 29, 11, 1)
                 PressedFill: =
@@ -2507,6 +2508,7 @@
                 RadiusTopRight: =0
                 Size: =12
                 Text: =If(VarviewselectedCertdata.Admin_Approval=false,"Approve","Approved")
+                Visible: =If(varUserLevel="ADMIN" ||varUserLevel="SUPER-ADMIN",true,false)
                 Width: =102
                 X: |
                     =Btn_Revise.X+Btn_Revise.Width+ 40
