@@ -815,12 +815,12 @@
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
-            Color: =RGBA(255, 0, 0, 1)
+            Color: =RGBA(153, 153, 153, 1)
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
             DisabledColor: =RGBA(166, 166, 166, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
-            Size: =13
+            Size: =10
             Text: ="No records found"
             Visible: =If(CountRows(glry_Cert_Req_details.AllItems) = 0, true,false)
             X: =512
