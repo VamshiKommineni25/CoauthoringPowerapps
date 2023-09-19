@@ -370,7 +370,16 @@ Details_Screen As screen:
             RadiusTopLeft: =5
             RadiusTopRight: =5
             Size: =10
-            Text: =If(varCertificateDetails.Status="Enrolled",If((varCertificateDetails.PaymentMode <> "Cash") And (varCertificateDetails.PaymentMode <> "Advance Payment") And (varCertificateDetails.PaymentMode <> "Voucher")  ,"Approve Proofs","Approve Certification"),"Approve Proofs")
+            Text: |-
+                =If(
+                    varCertificateDetails.Status = "Enrolled",
+                    If(
+                        (varCertificateDetails.PaymentMode <> "Cash") And (varCertificateDetails.PaymentMode <> "Advance Payment") And (varCertificateDetails.PaymentMode <> "Voucher"),
+                        "Approve Proofs",
+                        "Approve Certification"
+                    ),
+                    "Approve Proofs"
+                )
             Visible: =If(varApprove,true,false)
             Width: =If(Btn_ApproveCert.Text="Approve Certification",146,120)
             X: =If(Btn_ApproveCert.Text="Approve Certification",1100,1110)
@@ -403,7 +412,7 @@ Details_Screen As screen:
             RadiusTopRight: =5
             Size: =8
             Text: ="View Proofs"
-            Visible: =If(varApprove And varUserLevel="SUPER-ADMIN",true,false)
+            Visible: =If(varApprove And varUserLevel="SUPER-ADMIN" And Btn_ApproveCert.Text="Approve Proofs",true,false)
             Width: =124
             X: =838
             Y: =13
