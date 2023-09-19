@@ -293,7 +293,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Btn_AddTargetCertifcations",
-      "ParentIndex": 22,
+      "ParentIndex": 20,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1402,7 +1402,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Btn_Export_TotalCertifications",
-      "ParentIndex": 21,
+      "ParentIndex": 19,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2739,7 +2739,7 @@
       },
       "MetaDataIDKey": "",
       "Name": "C_AlertPanel_9",
-      "ParentIndex": 2,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3085,7 +3085,7 @@
       },
       "MetaDataIDKey": "",
       "Name": "C_Profile_9",
-      "ParentIndex": 3,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3917,7 +3917,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Cntr_TargetCert",
-      "ParentIndex": 4,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4332,7 +4332,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Cntr_Total/Year Certifications",
-      "ParentIndex": 28,
+      "ParentIndex": 26,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4944,14 +4944,6 @@
           "InvariantPropertyName": "XLabelAngle",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
-        },
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "",
-          "InvariantPropertyName": "Visible",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
         }
       ],
       "DynamicProperties": [
@@ -5002,7 +4994,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "ColumnChart_TotalCertification per Provider",
-      "ParentIndex": 0,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -5104,11 +5096,6 @@
         {
           "Category": "Design",
           "PropertyName": "XLabelAngle",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Design",
-          "PropertyName": "Visible",
           "RuleProviderType": "Unknown"
         }
       ],
@@ -6909,7 +6896,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Drp_Location List",
-      "ParentIndex": 23,
+      "ParentIndex": 21,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -7858,7 +7845,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Filter_Lbl_1",
-      "ParentIndex": 24,
+      "ParentIndex": 22,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -18652,7 +18639,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Glry_Total Cert/Year Cert",
-      "ParentIndex": 20,
+      "ParentIndex": 18,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -19667,7 +19654,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Grp_AddTargetBtn",
-      "ParentIndex": 32,
+      "ParentIndex": 30,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -19718,7 +19705,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Grp_ExportBtn",
-      "ParentIndex": 31,
+      "ParentIndex": 29,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -19769,7 +19756,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Grp_Filter_Analysis",
-      "ParentIndex": 29,
+      "ParentIndex": 27,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -19820,7 +19807,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Grp_Filter_Analysis_1",
-      "ParentIndex": 30,
+      "ParentIndex": 28,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -20158,7 +20145,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Icon_Add",
-      "ParentIndex": 27,
+      "ParentIndex": 25,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -21276,7 +21263,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Icon_Dwnlod_1",
-      "ParentIndex": 26,
+      "ParentIndex": 24,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -22352,7 +22339,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label19",
-      "ParentIndex": 18,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -29441,7 +29428,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Lbl_Location",
-      "ParentIndex": 25,
+      "ParentIndex": 23,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -34933,7 +34920,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "PieChart_TotalCertifications per BU",
-      "ParentIndex": 1,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -36012,7 +35999,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Rect_Filter_2",
-      "ParentIndex": 19,
+      "ParentIndex": 17,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

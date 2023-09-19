@@ -361,6 +361,7 @@
                     PressedBorderColor: =RGBA(0, 0, 0, 0)
                     PressedColor: =RGBA(154, 154, 154, 1)
                     PressedFill: =RGBA(0, 0, 0, 0)
+                    TabIndex: =1
                     Width: =25
                     X: =1140
                     Y: =10

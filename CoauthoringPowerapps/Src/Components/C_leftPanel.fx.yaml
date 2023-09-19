@@ -62,6 +62,7 @@ C_leftPanel As CanvasComponent:
                     PaddingRight: =0
                     PaddingTop: =0
                     Size: =9
+                    TabIndex: =0
                     Text: ="Home"
                     VerticalAlign: =VerticalAlign.Top
                     Width: =36
@@ -116,6 +117,7 @@ C_leftPanel As CanvasComponent:
                     =Set(SideLabelvar,1);
                     Navigate(C_leftPanel.NavigateTo,ScreenTransition.Fade)
                 PressedFill: =RGBA(0, 0, 0, 0)
+                TabIndex: =0
                 Width: =75
                 ZIndex: =129
 
@@ -150,6 +152,7 @@ C_leftPanel As CanvasComponent:
                     PaddingRight: =0
                     PaddingTop: =0
                     Size: =9
+                    TabIndex: =0
                     Text: ="Add New"
                     VerticalAlign: =VerticalAlign.Top
                     Width: =54
@@ -203,6 +206,7 @@ C_leftPanel As CanvasComponent:
                     =Set(SideLabelvar,3);
                     Navigate(C_leftPanel.NavigateTo,ScreenTransition.Fade)
                 PressedFill: =RGBA(0, 0, 0, 0)
+                TabIndex: =1
                 Width: =75
                 ZIndex: =134
 
@@ -238,6 +242,7 @@ C_leftPanel As CanvasComponent:
                     PaddingRight: =0
                     PaddingTop: =0
                     Size: =9
+                    TabIndex: =0
                     Text: ="Analysis"
                     VerticalAlign: =VerticalAlign.Top
                     Width: =50
@@ -277,6 +282,7 @@ C_leftPanel As CanvasComponent:
                     =Set(SideLabelvar,4);
                     Navigate(C_leftPanel.NavigateTo,ScreenTransition.Fade)
                 PressedFill: =RGBA(0, 0, 0, 0)
+                TabIndex: =0
                 Visible: =If(varUserLevel="ADMIN" || varUserLevel= "SUPER-ADMIN",true,false)
                 Width: =75
                 ZIndex: =141
@@ -312,6 +318,7 @@ C_leftPanel As CanvasComponent:
                     PaddingRight: =0
                     PaddingTop: =0
                     Size: =9
+                    TabIndex: =0
                     Text: ="Register"
                     VerticalAlign: =VerticalAlign.Top
                     Width: =49
@@ -350,6 +357,7 @@ C_leftPanel As CanvasComponent:
                     =Set(SideLabelvar,2);
                     Navigate(C_leftPanel.NavigateTo,ScreenTransition.Fade)
                 PressedFill: =RGBA(0, 0, 0, 0)
+                TabIndex: =0
                 Width: =75
                 ZIndex: =146
 

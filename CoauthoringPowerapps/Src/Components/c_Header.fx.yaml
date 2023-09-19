@@ -31,6 +31,7 @@ c_Header As CanvasComponent:
                 ZIndex: =11
 
                 Vector_14 As image:
+                    AccessibleLabel: ="image"
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =2
@@ -43,10 +44,12 @@ c_Header As CanvasComponent:
                     Image: =image89179
                     PressedBorderColor: =RGBA(0, 0, 0, 0)
                     PressedFill: =RGBA(0, 0, 0, 0)
+                    TabIndex: =0
                     Width: =1366
                     ZIndex: =2
 
                 Vector_17 As image:
+                    AccessibleLabel: ="image"
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =2
@@ -59,6 +62,7 @@ c_Header As CanvasComponent:
                     Image: =image89180
                     PressedBorderColor: =RGBA(0, 0, 0, 0)
                     PressedFill: =RGBA(0, 0, 0, 0)
+                    TabIndex: =0
                     Width: =1365
                     X: =1
                     Y: =1
@@ -97,6 +101,7 @@ c_Header As CanvasComponent:
                 ZIndex: =15
 
                 Vector_16 As image:
+                    AccessibleLabel: ="image"
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =2
@@ -109,10 +114,12 @@ c_Header As CanvasComponent:
                     Image: =image89183
                     PressedBorderColor: =RGBA(0, 0, 0, 0)
                     PressedFill: =RGBA(0, 0, 0, 0)
+                    TabIndex: =1
                     Width: =395
                     ZIndex: =16
 
                 txtSearch As text:
+                    AccessibleLabel: ="textinputbox for search "
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderThickness: =0
                     Color: =RGBA(0, 0, 0, 1)
@@ -148,6 +155,7 @@ c_Header As CanvasComponent:
                 ZIndex: =18
 
                 "'Rectangle 779_1' As image":
+                    AccessibleLabel: ="search icon"
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =2
@@ -161,6 +169,7 @@ c_Header As CanvasComponent:
                     OnSelect: =Set(searchtxt,txtSearch.Text)
                     PressedBorderColor: =RGBA(0, 0, 0, 0)
                     PressedFill: =RGBA(0, 0, 0, 0)
+                    TabIndex: =0
                     Width: =28
                     ZIndex: =19
 
@@ -197,6 +206,7 @@ c_Header As CanvasComponent:
             Image: =
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedFill: =RGBA(0, 0, 0, 0)
+            TabIndex: =1
             Width: =154
             X: =24
             Y: =26
@@ -214,6 +224,7 @@ c_Header As CanvasComponent:
             Image: =image814581
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedFill: =RGBA(0, 0, 0, 0)
+            TabIndex: =1
             Width: =154
             X: =21
             Y: =26
@@ -240,6 +251,7 @@ c_Header As CanvasComponent:
                 OnSelect: =Navigate(c_Header.FAQOnselect)
                 PressedBorderColor: =RGBA(0, 0, 0, 0)
                 PressedFill: =RGBA(0, 0, 0, 0)
+                TabIndex: =1
                 Width: =26.6393127441
                 X: =959
                 Y: =23
@@ -261,6 +273,7 @@ c_Header As CanvasComponent:
                 PressedBorderColor: =RGBA(0, 0, 0, 0)
                 PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
                 PressedFill: =RGBA(0, 0, 0, 0)
+                TabIndex: =1
                 Width: =10
                 X: =967
                 Y: =29
@@ -282,6 +295,7 @@ c_Header As CanvasComponent:
                 PaddingRight: =0
                 PaddingTop: =0
                 Size: =9
+                TabIndex: =1
                 Text: ="FAQ's"
                 VerticalAlign: =VerticalAlign.Top
                 Width: =36
@@ -310,6 +324,7 @@ c_Header As CanvasComponent:
                 OnSelect: =Navigate(c_Header.CartOnselect)
                 PressedBorderColor: =RGBA(0, 0, 0, 0)
                 PressedFill: =RGBA(0, 0, 0, 0)
+                TabIndex: =1
                 Width: =23.7480163574219
                 X: =1054
                 Y: =26
@@ -329,6 +344,7 @@ c_Header As CanvasComponent:
                 OnSelect: =Navigate(c_Header.CartOnselect)
                 PressedBorderColor: =RGBA(0, 0, 0, 0)
                 PressedFill: =RGBA(0, 0, 0, 0)
+                TabIndex: =1
                 Visible: =If(CountRows(EnrollList)>0,true,false)
                 Width: =10
                 X: =1070
@@ -351,6 +367,7 @@ c_Header As CanvasComponent:
                 PaddingRight: =0
                 PaddingTop: =0
                 Size: =9
+                TabIndex: =1
                 Text: ="Cart"
                 VerticalAlign: =VerticalAlign.Top
                 Width: =30
@@ -379,6 +396,7 @@ c_Header As CanvasComponent:
                 OnSelect: =Set(varAlert,true)
                 PressedBorderColor: =RGBA(0, 0, 0, 0)
                 PressedFill: =RGBA(0, 0, 0, 0)
+                TabIndex: =1
                 Width: =27
                 X: =1131
                 Y: =22
@@ -398,12 +416,14 @@ c_Header As CanvasComponent:
                 OnSelect: =Set(varAlert,true)
                 PressedBorderColor: =RGBA(0, 0, 0, 0)
                 PressedFill: =RGBA(0, 0, 0, 0)
+                TabIndex: =1
                 Width: =19.1240005493164
                 X: =1134
                 Y: =24
                 ZIndex: =57
 
             "'Rectangle 1697_1' As image":
+                AccessibleLabel: ="notification icon"
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =2
@@ -417,6 +437,7 @@ c_Header As CanvasComponent:
                 OnSelect: =Set(varAlert,true)
                 PressedBorderColor: =RGBA(0, 0, 0, 0)
                 PressedFill: =RGBA(0, 0, 0, 0)
+                TabIndex: =1
                 Visible: =If(varNotifyCount>0,true,false)
                 Width: =10
                 X: =1148
@@ -439,6 +460,7 @@ c_Header As CanvasComponent:
                 PaddingRight: =0
                 PaddingTop: =0
                 Size: =9
+                TabIndex: =1
                 Text: ="Alerts"
                 VerticalAlign: =VerticalAlign.Top
                 Width: =37
@@ -467,6 +489,7 @@ c_Header As CanvasComponent:
                 OnSelect: =Set(varProfileView,true)
                 PressedBorderColor: =RGBA(0, 0, 0, 0)
                 PressedFill: =RGBA(0, 0, 0, 0)
+                TabIndex: =1
                 Width: =8.4921875
                 X: =1316
                 Y: =36
@@ -490,6 +513,7 @@ c_Header As CanvasComponent:
                 RadiusBottomRight: =30
                 RadiusTopLeft: =30
                 RadiusTopRight: =30
+                TabIndex: =1
                 Width: =28
                 X: =1280
                 Y: =24

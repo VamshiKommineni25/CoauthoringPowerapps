@@ -8,18 +8,9 @@ Register_Screen As screen:
         );
         ClearCollect(
             BUCertList,
-            'BU-CertificationList'
+            FirstN('BU-CertificationList',2000)
         );
-        Set(
-            FilteredCertifications,
-            Filter(
-                Certification,
-                IsBlank(cmbRole.Selected.Value) || cmbRole.Selected.Value in Role.Value,
-                IsBlank(cmbTechnology.Selected.Value) || cmbTechnology.Selected.Value in Technology.Value,
-                (Price > 0) && rad_FreePaid.Selected.Value = "Paid" || (Price = 0) && rad_FreePaid.Selected.Value = "Free",
-                IsBlank(radSkill.Selected.Value) || ('Exam Level' = "Intermediate") && radSkill.Selected.Value = "Intermediate" || ('Exam Level' = "Beginner") && radSkill.Selected.Value = "Beginner" || ('Exam Level' = "Advanced") && radSkill.Selected.Value = "Advanced"
-            )
-        );
+        
         Set(NoRecord,"All Certifications");
         
 
@@ -252,7 +243,8 @@ Register_Screen As screen:
                 =DisplayMode.Edit
                 //If(glry_certificationsTypes.Selected.Value = "All Certifications",DisplayMode.Disabled,DisplayMode.Edit)
             Fill: =RGBA(241,246,246,1)
-            FocusedBorderThickness: =0
+            FocusedBorderColor: =RGBA(0,0,0,0)
+            FocusedBorderThickness: =1
             Font: =Font.'Segoe UI'
             Height: =27
             HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
@@ -296,7 +288,8 @@ Register_Screen As screen:
                 =DisplayMode.Edit
                 //If(glry_certificationsTypes.Selected.Value = "All Certifications",DisplayMode.Disabled,DisplayMode.Edit)
             Fill: =RGBA(241,246,246,1)
-            FocusedBorderThickness: =0
+            FocusedBorderColor: =RGBA(0,0,0,0)
+            FocusedBorderThickness: =2
             Font: =Font.'Segoe UI'
             Height: =29
             HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
@@ -337,7 +330,8 @@ Register_Screen As screen:
             DisabledFill: =RGBA(244, 244, 244, 1)
             DisplayFields: =["Value"]
             Fill: =RGBA(241,246,246,1)
-            FocusedBorderThickness: =0
+            FocusedBorderColor: =RGBA(0,0,0,0)
+            FocusedBorderThickness: =2
             Font: =Font.'Segoe UI'
             Height: =27
             HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
@@ -378,7 +372,8 @@ Register_Screen As screen:
             DisabledFill: =RGBA(244, 244, 244, 1)
             DisplayFields: =["Value"]
             Fill: =RGBA(241,246,246,1)
-            FocusedBorderThickness: =0
+            FocusedBorderColor: =RGBA(0,0,0,0)
+            FocusedBorderThickness: =2
             Font: =Font.'Segoe UI'
             Height: =27
             HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
@@ -435,6 +430,7 @@ Register_Screen As screen:
             BorderColor: =RGBA(0, 18, 107, 1)
             Height: =54
             Items: =["All Certifications","Microsoft Provided","Amazon Provided"]
+            TabIndex: =0
             TemplateSize: =150
             Width: =973
             X: =16
@@ -471,10 +467,11 @@ Register_Screen As screen:
                 Y: =41
                 ZIndex: =2
 
-        "Gallery1 As gallery.'BrowseLayout_Horizontal_TwoTextOneImageVariant_ver5.0'":
+        "Glry_Certifications As gallery.'BrowseLayout_Horizontal_TwoTextOneImageVariant_ver5.0'":
             BorderColor: =RGBA(166, 166, 166, 1)
             DelayItemLoading: =true
-            FocusedBorderThickness: =0
+            FocusedBorderColor: =RGBA(0,0,0,0)
+            FocusedBorderThickness: =2
             Height: =166
             Items: |-
                 =/*Switch(
@@ -614,126 +611,13 @@ Register_Screen As screen:
             NavigationStep: =5
             ShowNavigation: =true
             ShowScrollbar: =false
+            TabIndex: =0
             TemplatePadding: =0
             TemplateSize: =245
             Width: =1238
             X: =16
             Y: =80
             ZIndex: =6
-
-            Image1 As image:
-                BorderColor: =RGBA(0, 0, 0, 0)
-                BorderStyle: =BorderStyle.None
-                BorderThickness: =2
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledFill: =RGBA(0, 0, 0, 0)
-                FocusedBorderThickness: =4
-                Height: =79
-                HoverBorderColor: =RGBA(0, 0, 0, 0)
-                HoverFill: =RGBA(0, 0, 0, 0)
-                Image: =ThisItem.Logo
-                ImagePosition: =ImagePosition.Fill
-                OnSelect: |
-                    =Navigate('Register_Screen-Enroll', BorderStyle.None, { varCertificationData : ThisItem } );
-                PressedBorderColor: =RGBA(0, 0, 0, 0)
-                PressedFill: =RGBA(0, 0, 0, 0)
-                RadiusBottomLeft: =8
-                RadiusBottomRight: =8
-                RadiusTopLeft: =8
-                RadiusTopRight: =8
-                Width: =79
-                X: =83
-                Y: =7
-                ZIndex: =1
-
-            Title1 As label:
-                Align: =Align.Center
-                Color: =RGBA(50, 49, 48, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                Font: =Font.'Segoe UI'
-                FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-                Height: =Self.Size * 1.8
-                OnSelect: =Select(Parent)
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Size: =10
-                Text: |
-                    =ThisItem.Title
-                VerticalAlign: =VerticalAlign.Top
-                Width: =Parent.TemplateWidth - 64
-                X: =32
-                Y: =101
-                ZIndex: =2
-
-            Button3 As button:
-                BorderColor: =RGBA(0, 0, 0, 0)
-                Color: =RGBA(0, 0, 0, 1)
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                DisabledFill: =RGBA(244, 244, 244, 1)
-                DisplayMode: |-
-                    =If(IsBlank(First( Filter(
-                                userCertifications,
-                                CertificationID.Id=ThisItem.ID
-                            ))),DisplayMode.Edit,DisplayMode.Disabled)
-                Fill: =RGBA(247, 222, 218, 1)
-                FocusedBorderColor: =ColorFade(Self.Fill, -75%)
-                Font: =Font.'Segoe UI'
-                FontWeight: =FontWeight.Semibold
-                Height: =23.4
-                HoverBorderColor: =RGBA(0, 0, 0, 0)
-                HoverFill: =Self.Fill
-                OnSelect: |-
-                    =
-                    If(
-                        IsBlankOrError(
-                            Filter(
-                                CertificationOrder,
-                                ThisItem.Title = 'Certification:Title'.Value And Requestor.DisplayName = User().FullName
-                            )
-                        ),
-                        Notify(
-                            "You have already enrolled for this certificate",
-                            NotificationType.Information
-                        ),
-                        If(
-                            CountRows(
-                                Filter(
-                                    EnrollList,
-                                    CertificationID = ThisItem.CertificationID
-                                )
-                            ) > 0,
-                            Notify(
-                                "Certification already added",
-                                NotificationType.Information,
-                                1000
-                            ), 
-                            Collect(
-                                EnrollList,
-                                ThisItem
-                            );
-                            Notify(
-                                "Certification Added to your cart",
-                                NotificationType.Success,
-                                1000
-                            )
-                        )
-                    )
-                PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
-                PressedColor: =Self.Color
-                PressedFill: =ColorFade(Self.Fill, -30%)
-                RadiusBottomLeft: =5
-                RadiusBottomRight: =5
-                RadiusTopLeft: =5
-                RadiusTopRight: =5
-                Size: =10
-                Text: ="Enroll"
-                Width: =97.11
-                X: =74
-                Y: =137
-                ZIndex: =3
 
     lbl_BU_Recommended_Cert As label:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -871,7 +755,8 @@ Register_Screen As screen:
             DisabledColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
             Fill: =RGBA(241, 246, 246, 1)
-            FocusedBorderThickness: =0
+            FocusedBorderColor: =RGBA(0,0,0,0)
+            FocusedBorderThickness: =2
             Font: =Font.'Segoe UI'
             Height: =27
             HoverBorderColor: =RGBA(241,246,246, 1)
@@ -934,6 +819,7 @@ Register_Screen As screen:
             Layout: =Layout.Vertical
             LoadingSpinner: =LoadingSpinner.Data
             ShowScrollbar: =false
+            TabIndex: =0
             TemplatePadding: =0
             TemplateSize: =157
             Width: =1166
@@ -970,6 +856,7 @@ Register_Screen As screen:
                 RadiusBottomRight: =8
                 RadiusTopLeft: =8
                 RadiusTopRight: =8
+                TabIndex: =
                 Width: =79
                 X: =75
                 ZIndex: =1
@@ -995,7 +882,7 @@ Register_Screen As screen:
                 Y: =85
                 ZIndex: =2
 
-            Button1_1 As button:
+            Btn_BuEnroll As button:
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderThickness: =0
                 Color: =RGBA(0, 0, 0, 1)
@@ -1008,8 +895,8 @@ Register_Screen As screen:
                                 CertificationID.Id=ThisItem.CertificationID.Id
                             ))),DisplayMode.Edit,DisplayMode.Disabled)
                 Fill: =RGBA(247, 222, 218, 1)
-                FocusedBorderColor: =ColorFade(Self.Fill, -75%)
-                FocusedBorderThickness: =0
+                FocusedBorderColor: =RGBA(0,0,0,0)
+                FocusedBorderThickness: =2
                 Font: |-
                     =//Font.'Segoe UI'
                     "Popins"
@@ -1133,19 +1020,19 @@ Register_Screen As screen:
                 NoRecord,
                 "All Certifications",
                 If(
-                    IsEmpty(Gallery1.AllItems),
+                    IsEmpty(Glry_Certifications.AllItems),
                     true,
                     false
                 ),
                 "Microsoft Provided",
                 If(
-                    IsEmpty(Gallery1.AllItems),
+                    IsEmpty(Glry_Certifications.AllItems),
                     true,
                     false
                 ),
                 "Amazon Provided",
                 If(
-                    IsEmpty(Gallery1.AllItems),
+                    IsEmpty(Glry_Certifications.AllItems),
                     true,
                     false
                 )

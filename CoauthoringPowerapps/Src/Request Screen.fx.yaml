@@ -238,7 +238,7 @@
                 PressedBorderColor: =RGBA(154, 154, 154, 1)
                 PressedColor: =RGBA(154, 154, 154, 1)
                 PressedFill: =RGBA(255, 255, 255, 1)
-                Size: =13
+                Size: =10
                 Width: =360
                 X: =txtinp_RS_NCRtitle.X+txtinp_RS_NCRtitle.Width+50
                 Y: =HT_RS_NCRtitleheader.Y+45
@@ -264,7 +264,7 @@
                 PressedBorderColor: =RGBA(154, 154, 154, 1)
                 PressedColor: =RGBA(154, 154, 154, 1)
                 PressedFill: =RGBA(255, 255, 255, 1)
-                Size: =13
+                Size: =10
                 Width: =360
                 X: =txtinp_RS_NCRtitle.X+txtinp_RS_NCRtitle.Width+50
                 Y: =HT_RS_NCRcostheader.Y+HT_RS_NCRcostheader.Height
@@ -379,7 +379,7 @@
                 PressedBorderColor: =RGBA(154, 154, 154, 1)
                 PressedColor: =RGBA(154, 154, 154, 1)
                 PressedFill: =RGBA(255, 255, 255, 1)
-                Size: =13
+                Size: =10
                 Width: =360
                 X: =txtinp_RS_NCRdesc.X+txtinp_RS_NCRdesc.Width+50
                 Y: =209
@@ -414,7 +414,7 @@
                 PressedBorderColor: =RGBA(154, 154, 154, 1)
                 PressedColor: =RGBA(154, 154, 154, 1)
                 PressedFill: =RGBA(255, 255, 255, 1)
-                Size: =13
+                Size: =10
                 Width: =360
                 X: =txtinp_RS_NCRdesc.X+txtinp_RS_NCRdesc.Width+50
                 Y: =HT_RS_NCRproviderheader.Y+HT_RS_NCRproviderheader.Height
@@ -692,7 +692,7 @@
                 PressedBorderColor: =RGBA(154, 154, 154, 1)
                 PressedColor: =RGBA(154, 154, 154, 1)
                 PressedFill: =RGBA(255, 255, 255, 1)
-                Size: =13
+                Size: =10
                 Width: =360
                 X: =32
                 Y: =HT_RS_ECRnameheader.Y+HT_RS_ECRnameheader.Height+5
@@ -720,7 +720,7 @@
                 PressedBorderColor: =RGBA(154, 154, 154, 1)
                 PressedColor: =RGBA(154, 154, 154, 1)
                 PressedFill: =RGBA(255, 255, 255, 1)
-                Size: =13
+                Size: =10
                 Width: =360
                 X: =442
                 Y: =HT_RS_ECRexamcodeheader.Y+HT_RS_ECRexamcodeheader.Height+5
@@ -776,7 +776,7 @@
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(154, 154, 154, 0.5)
                 SelectionFill: =RGBA(154, 154, 154, 1)
-                Size: =13
+                Size: =10
                 Width: =360
                 X: =32
                 Y: =HT_RS_ECRBUheader.Y+HT_RS_ECRBUheader.Height
@@ -802,7 +802,7 @@
                 PressedBorderColor: =RGBA(154, 154, 154, 1)
                 PressedColor: =RGBA(154, 154, 154, 1)
                 PressedFill: =RGBA(255, 255, 255, 1)
-                Size: =13
+                Size: =10
                 Width: =360
                 X: =32
                 Y: =HT_RS_ECRPNheader.Y+HT_RS_ECRPNheader.Height
@@ -837,7 +837,7 @@
                 PressedBorderColor: =RGBA(154, 154, 154, 1)
                 PressedColor: =RGBA(154, 154, 154, 1)
                 PressedFill: =RGBA(255, 255, 255, 1)
-                Size: =13
+                Size: =10
                 Width: =257
                 X: =955
                 Y: =txtinp_RS_ECRCname.Y
@@ -873,7 +873,7 @@
                 PressedBorderColor: =RGBA(154, 154, 154, 1)
                 PressedColor: =RGBA(154, 154, 154, 1)
                 PressedFill: =RGBA(255, 255, 255, 1)
-                Size: =13
+                Size: =10
                 Width: =360
                 X: =852
                 Y: =HT_RS_ECRroleheader.Y+HT_RS_ECRroleheader.Height
@@ -1017,7 +1017,7 @@
                 PressedBorderColor: =RGBA(154, 154, 154, 1)
                 PressedColor: =RGBA(154, 154, 154, 1)
                 PressedFill: =RGBA(255, 255, 255, 1)
-                Size: =13
+                Size: =10
                 Width: =360
                 X: =32
                 Y: =HT_RS_ECRCertname.Y+HT_RS_ECRCertname.Height
@@ -1063,7 +1063,7 @@
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(154, 154, 154, 0.5)
                 SelectionFill: =RGBA(154, 154, 154, 1)
-                Size: =13
+                Size: =10
                 Width: =360
                 X: =852
                 Y: =txtinp_RS_ECRExamcode.Y
@@ -1099,7 +1099,7 @@
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(154, 154, 154, 0.5)
                 SelectionFill: =RGBA(154, 154, 154, 1)
-                Size: =13
+                Size: =10
                 Width: =93
                 X: =852
                 Y: =txtinp_RS_ECRCname.Y
@@ -1125,7 +1125,7 @@
                 PressedBorderColor: =RGBA(154, 154, 154, 1)
                 PressedColor: =RGBA(154, 154, 154, 1)
                 PressedFill: =RGBA(255, 255, 255, 1)
-                Size: =13
+                Size: =10
                 Width: =360
                 X: =852
                 Y: =HT_RS_ECRCV.Y+HT_RS_ECRCV.Height
@@ -1161,7 +1161,7 @@
                 PressedBorderColor: =RGBA(154, 154, 154, 1)
                 PressedColor: =RGBA(154, 154, 154, 1)
                 PressedFill: =RGBA(255, 255, 255, 1)
-                Size: =13
+                Size: =10
                 Width: =360
                 X: =442
                 Y: =HT_RS_ECRtechheader.Y+HT_RS_ECRtechheader.Height
@@ -1213,7 +1213,7 @@
                 IconFill: =RGBA(154, 154, 154, 1)
                 PaddingTop: =5
                 SelectedDateFill: =RGBA(0, 120, 212, 1)
-                Size: =13
+                Size: =10
                 Width: =360
                 X: =442
                 Y: =HT_RS_ECRCDateheader.Y+HT_RS_ECRCDateheader.Height
@@ -1299,6 +1299,7 @@
                 PaddingTop: =5
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(0, 120, 212, 1)
+                Size: =10
                 Tooltip: =
                 Width: =360
                 X: =442
@@ -2083,6 +2084,7 @@
                 PaddingTop: =5
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(0, 120, 212, 1)
+                Size: =10
                 Tooltip: =Parent.DisplayName
                 Width: =357
                 ZIndex: =2
@@ -2209,6 +2211,7 @@
                 PressedBorderColor: =RGBA(0, 0, 0, 0)
                 PressedColor: =RGBA(70, 70, 70, 1)
                 PressedFill: =RGBA(0, 0, 0, 0)
+                TabIndex: =0
                 Width: =21.87
                 X: =800
                 Y: =33
@@ -2244,6 +2247,7 @@
                 Height: =30
                 OnSelect: =Launch(VarviewselectedCertdata.URL)
                 Size: =10
+                TabIndex: =1
                 Text: ="Visit This Certification Page"
                 Underline: =true
                 Width: =500
@@ -2402,6 +2406,7 @@
                 Height: =30
                 OnSelect: =Launch(VarviewselectedCertdata.URL)
                 Size: =10
+                TabIndex: =
                 Text: =If(VarviewselectedCertdata.Admin_Approval=true,"Approved","Pending")
                 Width: =200
                 X: |

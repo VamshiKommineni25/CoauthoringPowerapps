@@ -35,10 +35,7 @@ Home_Screen As screen:
                 Requestor.Email = User().Email
             ));
             */
-        Collect(
-            BUList,
-            'BU-List'
-        ),
+        
         ClearCollect(
             col_Notification,
             Filter(
@@ -229,6 +226,7 @@ Home_Screen As screen:
         PressedBorderColor: =RGBA(0, 0, 0, 0)
         PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         PressedFill: =RGBA(0, 0, 0, 0)
+        TabIndex: =0
         Width: =15
         X: =105
         Y: =134
@@ -291,7 +289,7 @@ Home_Screen As screen:
                         CountRows(Glry_ExternalCertification.AllItems)
                     )
                 )*/
-                CountRows(Filter(userCertifications,Status="Completed"))
+                CountRows(Filter(userCertifications,Status="Reimbursed"))
             Width: =48
             X: =18
             Y: =26
@@ -515,6 +513,7 @@ Home_Screen As screen:
                         Table({Name: "My Certifications"})
                     )
                 )
+            TabIndex: =0
             TemplateSize: =152
             Width: =641
             X: =12
@@ -525,6 +524,8 @@ Home_Screen As screen:
                 BorderColor: =RGBA(0, 18, 107, 1)
                 Color: =If(ThisItem.IsSelected,RGBA(184, 0, 0, 1),RGBA(38,50,56,1))
                 DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderColor: =RGBA(0,0,0,0)
+                FocusedBorderThickness: =2
                 Font: ="Montserrat"
                 FontWeight: =FontWeight.Bold
                 Height: =31
@@ -534,6 +535,7 @@ Home_Screen As screen:
                 OnSelect: |
                     =Set(NoRecord,ThisItem.Name);
                 Size: =8
+                TabIndex: =0
                 Text: =ThisItem.Name
                 VerticalAlign: =VerticalAlign.Bottom
                 Width: =156
@@ -601,6 +603,7 @@ Home_Screen As screen:
                     Refresh(ExternalCertificationList)
                 )
             Size: =10
+            TabIndex: =0
             Text: ="Refresh"
             Width: =77
             X: =508
@@ -642,6 +645,7 @@ Home_Screen As screen:
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             PressedFill: =RGBA(0, 0, 0, 0)
+            TabIndex: =0
             Width: =15
             X: =497
             Y: =18
@@ -768,6 +772,7 @@ Home_Screen As screen:
                     )
                 Layout: =Layout.Vertical
                 LoadingSpinner: =LoadingSpinner.Data
+                TabIndex: =0
                 TemplateFill: =If(!Mod(ThisItem.Rownumberusercert,2),RGBA(0, 0, 0, 0),RGBA(245,245,245,1))
                 TemplatePadding: =0
                 TemplateSize: =44
@@ -1087,6 +1092,7 @@ Home_Screen As screen:
                     PressedBorderColor: =RGBA(0, 0, 0, 0)
                     PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
                     PressedFill: =RGBA(0, 0, 0, 0)
+                    TabIndex: =0
                     Width: =15
                     X: =715
                     Y: =13
@@ -1128,6 +1134,7 @@ Home_Screen As screen:
                     PressedBorderColor: =RGBA(0, 0, 0, 0)
                     PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
                     PressedFill: =RGBA(0, 0, 0, 0)
+                    TabIndex: =0
                     Width: =17
                     X: =735
                     Y: =12
@@ -1224,6 +1231,7 @@ Home_Screen As screen:
                     )
                 Layout: =Layout.Vertical
                 LoadingSpinner: =LoadingSpinner.Data
+                TabIndex: =0
                 TemplateFill: =If(!Mod(ThisItem.Rownumbermyteamcert,2),RGBA(0, 0, 0, 0),RGBA(245,245,245,1))
                 TemplatePadding: =0
                 TemplateSize: =50
@@ -1357,6 +1365,7 @@ Home_Screen As screen:
                     PressedBorderColor: =RGBA(0, 0, 0, 0)
                     PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
                     PressedFill: =RGBA(0, 0, 0, 0)
+                    TabIndex: =0
                     Width: =15
                     X: =720
                     Y: =12
@@ -1423,6 +1432,7 @@ Home_Screen As screen:
                     )
                 Layout: =Layout.Vertical
                 LoadingSpinner: =LoadingSpinner.Data
+                TabIndex: =
                 TemplateFill: =If(!Mod(ThisItem.Rownumber,2),RGBA(0, 0, 0, 0),RGBA(245,245,245,1))
                 TemplatePadding: =0
                 TemplateSize: =44
@@ -1532,6 +1542,7 @@ Home_Screen As screen:
                     PressedBorderColor: =RGBA(0, 0, 0, 0)
                     PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
                     PressedFill: =RGBA(0, 0, 0, 0)
+                    TabIndex: =0
                     Width: =15
                     X: =720
                     Y: =13
@@ -1912,6 +1923,7 @@ Home_Screen As screen:
                   
             Layout: =Layout.Vertical
             LoadingSpinner: =LoadingSpinner.Data
+            TabIndex: =
             TemplatePadding: =0
             TemplateSize: =104
             Width: =361
@@ -2026,6 +2038,7 @@ Home_Screen As screen:
                     BorderColor: =RGBA(0, 18, 107, 1)
                     Fill: =Color.White
                     Height: =197
+                    TabIndex: =1
                     Width: =301
                     X: =18
                     Y: =57
@@ -2035,9 +2048,12 @@ Home_Screen As screen:
                     Align: =Align.Center
                     Color: =RGBA(184, 0, 0, 1)
                     DisabledColor: =RGBA(166, 166, 166, 1)
+                    FocusedBorderColor: =RGBA(0,0,0,0)
+                    FocusedBorderThickness: =2
                     FontWeight: =FontWeight.Bold
                     Height: =24
                     Size: =10
+                    TabIndex: =1
                     Text: =Text(_firstDayOfMonth, "mmmm yyyy")
                     Width: =301
                     Wrap: =false
@@ -2065,7 +2081,7 @@ Home_Screen As screen:
                     PaddingLeft: =7
                     PaddingRight: =7
                     PaddingTop: =7
-                    TabIndex: =0
+                    TabIndex: =1
                     Tooltip: ="View previous month"
                     Width: =24
                     X: =61
@@ -2092,7 +2108,7 @@ Home_Screen As screen:
                     PaddingLeft: =7
                     PaddingRight: =7
                     PaddingTop: =7
-                    TabIndex: =0
+                    TabIndex: =1
                     Tooltip: ="View next month"
                     Width: =24
                     X: =257
@@ -2105,6 +2121,7 @@ Home_Screen As screen:
                     Height: =26
                     Items: =Calendar.WeekdaysShort()
                     ShowScrollbar: =false
+                    TabIndex: =1
                     TemplatePadding: =0
                     TemplateSize: =43
                     Width: =295
@@ -2131,6 +2148,7 @@ Home_Screen As screen:
                     Items: =[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19, 20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41]
                     Layout: =Layout.Vertical
                     ShowScrollbar: =false
+                    TabIndex: =1
                     TemplatePadding: =0
                     TemplateSize: =33
                     Width: =289
@@ -2459,7 +2477,8 @@ Home_Screen As screen:
             DisabledColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
             Fill: =RGBA(241,246,246, 1)
-            FocusedBorderThickness: =0
+            FocusedBorderColor: =RGBA(0,0,0,0)
+            FocusedBorderThickness: =2
             Font: =Font.'Segoe UI'
             Height: =27
             HoverBorderColor: =RGBA(241,246,246, 1)
@@ -2489,7 +2508,8 @@ Home_Screen As screen:
             DisabledColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
             Fill: =RGBA(241,246,246, 1)
-            FocusedBorderThickness: =0
+            FocusedBorderColor: =RGBA(0,0,0,0)
+            FocusedBorderThickness: =2
             Font: =Font.'Segoe UI'
             Height: =27
             HoverDateFill: =RGBA(200, 200, 200, 1)
@@ -2513,7 +2533,8 @@ Home_Screen As screen:
             DisabledColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
             Fill: =RGBA(241,246,246, 1)
-            FocusedBorderThickness: =0
+            FocusedBorderColor: =RGBA(0,0,0,0)
+            FocusedBorderThickness: =2
             Font: =Font.'Segoe UI'
             Height: =27
             HoverDateFill: =RGBA(200, 200, 200, 1)
