@@ -5049,7 +5049,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "ColumnChart_TotalCertification per Provider",
-      "ParentIndex": 1,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -20295,7 +20295,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Icon_Add",
-      "ParentIndex": 26,
+      "ParentIndex": 27,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -21438,7 +21438,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Icon_Dwnlod_1",
-      "ParentIndex": 27,
+      "ParentIndex": 26,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -35136,7 +35136,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "PieChart_TotalCertifications per BU",
-      "ParentIndex": 0,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
