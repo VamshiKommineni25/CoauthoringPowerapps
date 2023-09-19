@@ -3647,9 +3647,9 @@ Details_Screen As screen:
                     Fill: =RGBA(255, 255, 255, 1)
                     FocusedBorderThickness: =4
                     Height: =52
-                    HoverFill: =RGBA(0, 120, 212, 1)
+                    HoverFill: =RGBA(255, 255, 255, 1)
                     OnSelect: =Select(Parent)
-                    PressedFill: =RGBA(0, 120, 212, 1)
+                    PressedFill: =RGBA(255, 255, 255, 1)
                     Width: =294
                     X: =12
                     Y: =10
