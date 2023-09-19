@@ -26,6 +26,7 @@ Details_Screen As screen:
     c_Header_7 As c_Header:
         CartOnselect: ='EnrollCertificate Screen'
         FAQOnselect: ='FAQ Screen'
+        Height: =101
 
     C_leftPanel_6 As C_leftPanel:
         NavigateTo: =Switch(SideLabelvar,1,Home_Screen,2,Register_Screen,3,'Request Screen',4,'Admin dashBoard')
@@ -369,7 +370,7 @@ Details_Screen As screen:
             RadiusBottomRight: =5
             RadiusTopLeft: =5
             RadiusTopRight: =5
-            Size: =10
+            Size: =8
             Text: |-
                 =If(
                     varCertificateDetails.Status = "Enrolled",
@@ -380,6 +381,7 @@ Details_Screen As screen:
                     ),
                     "Approve Proofs"
                 )
+            VerticalAlign: =VerticalAlign.Top
             Visible: =If(varApprove,true,false)
             Width: =If(Btn_ApproveCert.Text="Approve Certification",146,120)
             X: =If(Btn_ApproveCert.Text="Approve Certification",1100,1110)
@@ -2662,7 +2664,7 @@ Details_Screen As screen:
                     =If(
                         varCertificateDetails.PaymentMode <> "Cash",
                         If(
-                            Value(TextInput1.Text) > 100 Or IsBlank(TextInput1.Text),
+                            Value(Inp_voucher.Text) > 100 Or IsBlank(Inp_voucher.Text),
                             Notify(
                                 "Please Re-Check your voucher percentage ",
                                 NotificationType.Error,
@@ -2720,7 +2722,7 @@ Details_Screen As screen:
                                             Documents_Link: varProofsLinks,
                                             PaymentMode: If(
                                                 Radio1_1.Selected.Value = "Paid with Voucher",
-                                                TextInput1.Text & "% Voucher",
+                                                Inp_voucher.Text & "% Voucher",
                                                 "Cash"
                                             ),
                                             'Proofs Uploaded on': Today()
@@ -2800,7 +2802,7 @@ Details_Screen As screen:
                                         Documents_Link: varProofsLinks,
                                         PaymentMode: If(
                                             Radio1_1.Selected.Value = "Paid with Voucher",
-                                            TextInput1.Text & "% Voucher",
+                                            Inp_voucher.Text & "% Voucher",
                                             "Cash"
                                         ),
                                         'Proofs Uploaded on': Today()
@@ -2836,7 +2838,7 @@ Details_Screen As screen:
                     If(
                         varCertificateDetails.PaymentMode <> "Cash",
                         If(
-                            Value(TextInput1.Text) > 100 Or IsBlank(TextInput1.Text),
+                            Value(Inp_voucher.Text) > 100 Or IsBlank(Inp_voucher.Text),
                             Notify(
                                 "Please Re-Check your voucher percentage ",
                                 NotificationType.Error,
@@ -2894,7 +2896,7 @@ Details_Screen As screen:
                                             Documents_Link: varProofsLinks,
                                             PaymentMode: If(
                                                 Radio1_1.Selected.Value = "Paid with Voucher",
-                                                TextInput1.Text & "% Voucher",
+                                                Inp_voucher.Text & "% Voucher",
                                                 "Cash"
                                             ),
                                             'Proofs Uploaded on': Today()
@@ -2974,7 +2976,7 @@ Details_Screen As screen:
                                         Documents_Link: varProofsLinks,
                                         PaymentMode: If(
                                             Radio1_1.Selected.Value = "Paid with Voucher",
-                                            TextInput1.Text & "% Voucher",
+                                            Inp_voucher.Text & "% Voucher",
                                             "Cash"
                                         ),
                                         'Proofs Uploaded on': Today()
@@ -3010,7 +3012,7 @@ Details_Screen As screen:
                     If(
                         varCertificateDetails.PaymentMode <> "Cash",
                         If(
-                            Value(TextInput1.Text) > 100 Or IsBlank(TextInput1.Text),
+                            Value(Inp_voucher.Text) > 100 Or IsBlank(Inp_voucher.Text),
                             Notify(
                                 "Please Re-Check your voucher percentage ",
                                 NotificationType.Error,
@@ -3068,7 +3070,7 @@ Details_Screen As screen:
                                             Documents_Link: varProofsLinks,
                                             PaymentMode: If(
                                                 Radio1_1.Selected.Value = "Paid with Voucher",
-                                                TextInput1.Text & "% Voucher",
+                                                Inp_voucher.Text & "% Voucher",
                                                 "Cash"
                                             ),
                                             'Proofs Uploaded on': Today()
@@ -3148,7 +3150,7 @@ Details_Screen As screen:
                                         Documents_Link: varProofsLinks,
                                         PaymentMode: If(
                                             Radio1_1.Selected.Value = "Paid with Voucher",
-                                            TextInput1.Text & "% Voucher",
+                                            Inp_voucher.Text & "% Voucher",
                                             "Cash"
                                         ),
                                         'Proofs Uploaded on': Today()
@@ -3184,7 +3186,7 @@ Details_Screen As screen:
                     If(
                         varCertificateDetails.PaymentMode <> "Cash",
                         If(
-                            Value(TextInput1.Text) > 100 Or IsBlank(TextInput1.Text),
+                            Value(Inp_voucher.Text) > 100 Or IsBlank(Inp_voucher.Text),
                             Notify(
                                 "Please Re-Check your voucher percentage ",
                                 NotificationType.Error,
@@ -3242,7 +3244,7 @@ Details_Screen As screen:
                                             Documents_Link: varProofsLinks,
                                             PaymentMode: If(
                                                 Radio1_1.Selected.Value = "Paid with Voucher",
-                                                TextInput1.Text & "% Voucher",
+                                                Inp_voucher.Text & "% Voucher",
                                                 "Cash"
                                             ),
                                             'Proofs Uploaded on': Today()
@@ -3322,7 +3324,7 @@ Details_Screen As screen:
                                         Documents_Link: varProofsLinks,
                                         PaymentMode: If(
                                             Radio1_1.Selected.Value = "Paid with Voucher",
-                                            TextInput1.Text & "% Voucher",
+                                            Inp_voucher.Text & "% Voucher",
                                             "Cash"
                                         ),
                                         'Proofs Uploaded on': Today()
@@ -3358,7 +3360,7 @@ Details_Screen As screen:
                     If(
                         varCertificateDetails.PaymentMode <> "Cash",
                         If(
-                            Value(TextInput1.Text) > 100 Or IsBlank(TextInput1.Text),
+                            Value(Inp_voucher.Text) > 100 Or IsBlank(Inp_voucher.Text),
                             Notify(
                                 "Please Re-Check your voucher percentage ",
                                 NotificationType.Error,
@@ -3416,7 +3418,7 @@ Details_Screen As screen:
                                             Documents_Link: varProofsLinks,
                                             PaymentMode: If(
                                                 Radio1_1.Selected.Value = "Paid with Voucher",
-                                                TextInput1.Text & "% Voucher",
+                                                Inp_voucher.Text & "% Voucher",
                                                 "Cash"
                                             ),
                                             'Proofs Uploaded on': Today()
@@ -3496,7 +3498,7 @@ Details_Screen As screen:
                                         Documents_Link: varProofsLinks,
                                         PaymentMode: If(
                                             Radio1_1.Selected.Value = "Paid with Voucher",
-                                            TextInput1.Text & "% Voucher",
+                                            Inp_voucher.Text & "% Voucher",
                                             "Cash"
                                         ),
                                         'Proofs Uploaded on': Today()
@@ -3533,7 +3535,7 @@ Details_Screen As screen:
                         varAttachpopUp,
                         false
                     );
-                    Reset(TextInput1);
+                    Reset(Inp_voucher);
                 PressedBorderColor: =Self.BorderColor
                 PressedFill: =Color.White
                 RadiusBottomLeft: =8
@@ -3623,59 +3625,6 @@ Details_Screen As screen:
                 Y: =26
                 ZIndex: =2
 
-            "Gallery1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
-                BorderColor: =RGBA(166, 166, 166, 1)
-                DelayItemLoading: =true
-                Height: =488
-                Items: =LookUp(CertificationOrder,ID=varCertificateDetails.ID).Attachments
-                Layout: =Layout.Vertical
-                LoadingSpinner: =LoadingSpinner.Data
-                TemplatePadding: =0
-                TemplateSize: =80
-                Width: =348
-                Y: =96
-                ZIndex: =5
-
-                Subtitle2 As label:
-                    Color: =RGBA(189, 25, 11, 1)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    Font: =Font.'Segoe UI'
-                    FontWeight: =FontWeight.Bold
-                    Height: =35
-                    OnSelect: =Select(Parent)
-                    Overflow: =Overflow.Scroll
-                    PaddingBottom: =0
-                    PaddingLeft: =0
-                    PaddingRight: =0
-                    PaddingTop: =0
-                    Size: =10
-                    Text: =ThisItem.DisplayName
-                    VerticalAlign: =VerticalAlign.Top
-                    Width: =300
-                    X: =10
-                    Y: =20
-                    ZIndex: =2
-
-                Icon18 As icon.Download:
-                    BorderColor: =RGBA(166, 166, 166, 1)
-                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                    DisabledColor: =RGBA(220, 220, 220, 1)
-                    DisabledFill: =RGBA(0, 0, 0, 0)
-                    FocusedBorderThickness: =4
-                    Height: =24
-                    HoverBorderColor: =RGBA(0, 0, 0, 0)
-                    HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-                    HoverFill: =RGBA(0, 0, 0, 0)
-                    Icon: =Icon.Download
-                    OnSelect: =Launch(ThisItem.AbsoluteUri)
-                    PressedBorderColor: =RGBA(0, 0, 0, 0)
-                    PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-                    PressedFill: =RGBA(0, 0, 0, 0)
-                    Width: =24
-                    X: =290
-                    Y: =16
-                    ZIndex: =3
-
     Group8_4 As group:
         Height: =5
         Width: =5
@@ -3683,7 +3632,7 @@ Details_Screen As screen:
         Y: =-145
         ZIndex: =10
 
-        TextInput1 As text:
+        Inp_voucher As text:
             AccessibleLabel: ="TextInput1"
             BorderColor: =RGBA(153, 153, 153, 1)
             BorderThickness: =0.1
@@ -3695,15 +3644,14 @@ Details_Screen As screen:
             FocusedBorderThickness: =4
             Height: =20
             HintText: ="% of Voucher"
-            HoverBorderColor: =RGBA(166, 166, 166, 1)
+            HoverBorderColor: =RGBA(0, 18, 107, 1)
             HoverColor: =RGBA(0, 0, 0, 1)
-            HoverFill: =RGBA(255, 255, 255, 1)
-            PressedBorderColor: =RGBA(166, 166, 166, 1)
+            HoverFill: =RGBA(186, 202, 226, 1)
             Size: =9
             Visible: =Radio1_1.Selected.Value="Paid with Voucher" And varPAY1
             Width: =102
-            X: =789
-            Y: =460
+            X: =777
+            Y: =453
             ZIndex: =8
 
         Label43 As label:
@@ -3716,6 +3664,6 @@ Details_Screen As screen:
             Visible: =Radio1_1.Selected.Value="Paid with Voucher" And varPAY1
             Width: =14
             X: =763
-            Y: =450
+            Y: =453
             ZIndex: =9
 
