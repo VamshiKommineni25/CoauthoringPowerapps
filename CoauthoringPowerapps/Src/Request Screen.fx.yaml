@@ -1544,7 +1544,7 @@
                 FontWeight: =FontWeight.Semibold
                 Height: =30
                 OnSelect: =Select(Parent)
-                Size: =12
+                Size: =10
                 Text: =ThisItem.Title
                 Width: =274
                 X: =8
@@ -1561,7 +1561,7 @@
                 Font: ="Poppins"
                 Height: =30
                 OnSelect: =Select(Parent)
-                Size: =12
+                Size: =10
                 Text: =ThisItem.Requestor.DisplayName
                 Width: =200
                 X: =8
@@ -1578,7 +1578,7 @@
                 Font: ="Poppins"
                 Height: =20
                 OnSelect: =Select(Parent)
-                Size: =12
+                Size: =10
                 Text: |-
                     = "BU: " & ThisItem.BU.Value
                 X: =8
@@ -1621,8 +1621,8 @@
                 PressedFill: =RGBA(0, 0, 0, 0)
                 TabIndex: =0
                 Width: =24
-                X: =190
-                Y: =lbl_NCR_certname.Y+lbl_NCR_certname.Height
+                X: =282
+                Y: =46
                 ZIndex: =5
 
             btn_NCR_status As button:
@@ -1649,12 +1649,32 @@
                 RadiusBottomRight: =4
                 RadiusTopLeft: =4
                 RadiusTopRight: =4
-                Size: =12
+                Size: =10
                 Text: =If(ThisItem.Admin_Approval=true,"Approved","Pending")
                 Width: =85
-                X: =237
-                Y: =lbl_NCR_certname.Y+lbl_NCR_certname.Height
+                X: =234
+                Y: =6
                 ZIndex: =6
+
+            Icon17 As icon.Download:
+                BorderColor: =RGBA(166, 166, 166, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(220, 220, 220, 1)
+                DisabledFill: =RGBA(0, 0, 0, 0)
+                FocusedBorderThickness: =4
+                Height: =24
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                HoverFill: =RGBA(0, 0, 0, 0)
+                Icon: =Icon.Download
+                OnSelect: =Select(Parent)
+                PressedBorderColor: =RGBA(0, 0, 0, 0)
+                PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                PressedFill: =RGBA(0, 0, 0, 0)
+                Width: =24
+                X: =250
+                Y: =46
+                ZIndex: =7
 
     Form2 As form:
         BorderColor: =RGBA(166, 166, 166, 1)
