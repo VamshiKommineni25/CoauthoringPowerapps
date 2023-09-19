@@ -6,6 +6,7 @@ Register_Screen As screen:
             varProfileView,
             false
         );
+        Set(SideLabelvar,2);
         ClearCollect(
             BUCertList,
             FirstN('BU-CertificationList',2000)
@@ -1128,7 +1129,7 @@ Register_Screen As screen:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
         BorderThickness: =2
-        Color: =RGBA(255, 0, 0, 1)
+        Color: =RGBA(179, 179, 179, 1)
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(166, 166, 166, 1)
         FocusedBorderThickness: =4
@@ -1165,7 +1166,7 @@ Register_Screen As screen:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
         BorderThickness: =2
-        Color: =RGBA(255, 0, 0, 1)
+        Color: =RGBA(153, 153, 153, 1)
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(166, 166, 166, 1)
         FocusedBorderThickness: =4
@@ -1173,7 +1174,7 @@ Register_Screen As screen:
         Size: =13
         Text: ="No records found"
         Visible: =If(IsEmpty(glry_certDetails.AllItems),true,false)
-        X: =621
+        X: =644
         Y: =617
         ZIndex: =13
 

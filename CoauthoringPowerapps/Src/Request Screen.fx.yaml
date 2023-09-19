@@ -1528,25 +1528,23 @@
             LoadingSpinner: =LoadingSpinner.Data
             TabIndex: =0
             TemplateSize: =112
-            Width: =rect_NCR_certrequests.Width
+            Width: =360
             X: =23
             Y: =135
             ZIndex: =5
 
             lbl_NCR_certname As label:
-                BorderColor: =RGBA(0, 0, 0, 0)
-                BorderStyle: =BorderStyle.None
-                BorderThickness: =2
                 Color: =RGBA(185, 29, 11, 1)
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 Font: ="Poppins"
                 FontWeight: =FontWeight.Semibold
-                Height: =30
+                Height: =35
                 OnSelect: =Select(Parent)
-                Size: =12
+                Overflow: =Overflow.Scroll
+                Size: =10
                 Text: =ThisItem.Title
-                Width: =274
+                Width: =236
                 X: =8
                 Y: =6
                 ZIndex: =1
@@ -1561,11 +1559,11 @@
                 Font: ="Poppins"
                 Height: =30
                 OnSelect: =Select(Parent)
-                Size: =12
+                Size: =10
                 Text: =ThisItem.Requestor.DisplayName
                 Width: =200
                 X: =8
-                Y: =lbl_NCR_certname.Y+lbl_NCR_certname.Height
+                Y: =46
                 ZIndex: =2
 
             lbl_NCR_depart As label:
@@ -1578,7 +1576,7 @@
                 Font: ="Poppins"
                 Height: =20
                 OnSelect: =Select(Parent)
-                Size: =12
+                Size: =10
                 Text: |-
                     = "BU: " & ThisItem.BU.Value
                 X: =8
@@ -1621,8 +1619,8 @@
                 PressedFill: =RGBA(0, 0, 0, 0)
                 TabIndex: =0
                 Width: =24
-                X: =190
-                Y: =lbl_NCR_certname.Y+lbl_NCR_certname.Height
+                X: =282
+                Y: =46
                 ZIndex: =5
 
             btn_NCR_status As button:
@@ -1645,16 +1643,36 @@
                 PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-                RadiusBottomLeft: =4
-                RadiusBottomRight: =4
-                RadiusTopLeft: =4
-                RadiusTopRight: =4
-                Size: =12
+                RadiusBottomLeft: =30
+                RadiusBottomRight: =30
+                RadiusTopLeft: =30
+                RadiusTopRight: =30
+                Size: =10
                 Text: =If(ThisItem.Admin_Approval=true,"Approved","Pending")
                 Width: =85
-                X: =237
-                Y: =lbl_NCR_certname.Y+lbl_NCR_certname.Height
+                X: =245
+                Y: =6
                 ZIndex: =6
+
+            Icon17 As icon.Download:
+                BorderColor: =RGBA(166, 166, 166, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(220, 220, 220, 1)
+                DisabledFill: =RGBA(0, 0, 0, 0)
+                FocusedBorderThickness: =4
+                Height: =24
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverColor: =RGBA(0, 0, 0, 1)
+                HoverFill: =RGBA(0, 0, 0, 0)
+                Icon: =Icon.Download
+                OnSelect: =Select(Parent)
+                PressedBorderColor: =RGBA(0, 0, 0, 0)
+                PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                PressedFill: =RGBA(0, 0, 0, 0)
+                Width: =24
+                X: =250
+                Y: =46
+                ZIndex: =7
 
     Form2 As form:
         BorderColor: =RGBA(166, 166, 166, 1)
@@ -2424,13 +2442,10 @@
                 HoverBorderColor: =RGBA(185, 29, 11, 1)
                 HoverColor: =RGBA(185, 29, 11, 1)
                 HoverFill: =
+                OnSelect: =If(varUserLevel="ADMIN" ||varUserLevel="SUPER-ADMIN",true,false)
                 PressedBorderColor: =RGBA(185, 29, 11, 1)
                 PressedColor: =RGBA(185, 29, 11, 1)
                 PressedFill: =
-                RadiusBottomLeft: =0
-                RadiusBottomRight: =0
-                RadiusTopLeft: =0
-                RadiusTopRight: =0
                 Size: =12
                 Text: ="Revise"
                 Width: =102
@@ -2481,12 +2496,9 @@
                 PressedBorderColor: =RGBA(23, 151, 49, 1)
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =
-                RadiusBottomLeft: =0
-                RadiusBottomRight: =0
-                RadiusTopLeft: =0
-                RadiusTopRight: =0
                 Size: =12
                 Text: =If(VarviewselectedCertdata.Admin_Approval=false,"Approve","Approved")
+                Visible: =If(varUserLevel="ADMIN" ||varUserLevel="SUPER-ADMIN",true,false)
                 Width: =102
                 X: |
                     =Btn_Revise.X+Btn_Revise.Width+ 40
