@@ -2498,11 +2498,12 @@
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 Font: ="Poppins"
                 FontWeight: =FontWeight.Semibold
-                Height: =30
+                Height: =43
                 OnSelect: =Select(Parent)
+                Overflow: =Overflow.Scroll
                 Size: =10
                 Text: =ThisItem.Title
-                Width: =274
+                Width: =237
                 X: =8
                 Y: =6
                 ZIndex: =1
@@ -2515,13 +2516,13 @@
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 Font: ="Poppins"
-                Height: =30
+                Height: =25
                 OnSelect: =Select(Parent)
                 Size: =10
                 Text: =ThisItem.Requestor.DisplayName
-                Width: =221
+                Width: =220
                 X: =8
-                Y: =Glry_Lbl_Title.Y+Glry_Lbl_Title.Height
+                Y: =45
                 ZIndex: =2
 
             Glry_Lbl_BU As label:

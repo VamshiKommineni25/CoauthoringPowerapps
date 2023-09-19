@@ -1528,26 +1528,23 @@
             LoadingSpinner: =LoadingSpinner.Data
             TabIndex: =0
             TemplateSize: =112
-            Width: =rect_NCR_certrequests.Width
+            Width: =360
             X: =23
             Y: =135
             ZIndex: =5
 
             lbl_NCR_certname As label:
-                BorderColor: =RGBA(0, 0, 0, 0)
-                BorderStyle: =BorderStyle.None
-                BorderThickness: =2
                 Color: =RGBA(185, 29, 11, 1)
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 Font: ="Poppins"
                 FontWeight: =FontWeight.Semibold
-                Height: =30
+                Height: =35
                 OnSelect: =Select(Parent)
                 Overflow: =Overflow.Scroll
                 Size: =10
                 Text: =ThisItem.Title
-                Width: =250
+                Width: =236
                 X: =8
                 Y: =6
                 ZIndex: =1
@@ -1566,7 +1563,7 @@
                 Text: =ThisItem.Requestor.DisplayName
                 Width: =200
                 X: =8
-                Y: =lbl_NCR_certname.Y+lbl_NCR_certname.Height
+                Y: =46
                 ZIndex: =2
 
             lbl_NCR_depart As label:
