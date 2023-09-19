@@ -96,6 +96,13 @@
                 )
             }
         )
+        );
+        ClearCollect(
+            col_filtercert2,
+            Filter(
+                CertificationOrder,
+                Location = 'Drp_Location List'.SelectedText.Value
+            )
         )
 
     "'Cntr_Certifications per Provider/BU' As groupContainer.verticalAutoLayoutContainer":
