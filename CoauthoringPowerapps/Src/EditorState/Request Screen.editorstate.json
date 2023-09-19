@@ -1153,7 +1153,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "btn_NCR_status",
-      "ParentIndex": 6,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -12755,7 +12755,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "galleryTemplate3_2",
-      "ParentIndex": 1,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -18082,7 +18082,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "icon_NCR_certview",
-      "ParentIndex": 5,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -18465,7 +18465,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Icon17",
-      "ParentIndex": 0,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -20795,7 +20795,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lbl_NCR_certname",
-      "ParentIndex": 3,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -26166,7 +26166,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "rect_NCR_status",
-      "ParentIndex": 2,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
