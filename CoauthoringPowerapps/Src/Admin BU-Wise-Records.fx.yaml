@@ -840,7 +840,7 @@
     con_ViewReqCertDetails As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Light
         Fill: =RGBA(241, 246, 246, 1)
-        Height: =590
+        Height: =595
         RadiusBottomLeft: =10
         RadiusBottomRight: =10
         RadiusTopLeft: =10
@@ -848,10 +848,11 @@
         Visible: =varvarViewThisItemVisiblity
         Width: =877
         X: =244
-        Y: =101
+        Y: =173
         ZIndex: =3
 
         lbl_Details As label:
+            Align: =Align.Center
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
@@ -861,9 +862,8 @@
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Bold
-            Size: =15
             Text: ="Details"
-            X: =78
+            Width: =con_ViewReqCertDetails.Width-50
             Y: =2
             ZIndex: =1
 
@@ -883,8 +883,8 @@
             PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             PressedFill: =RGBA(0, 0, 0, 0)
             Width: =40
-            X: =808
-            Y: =22
+            X: =827
+            Y: =12
             ZIndex: =2
 
         rect_header As rectangle:
@@ -911,13 +911,14 @@
             DisabledColor: =RGBA(166, 166, 166, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
-            Height: =16
+            Height: =24
             Size: =10
             Text: |-
                 ="BU                                        :              " & varViewThisItem.BU.Value
-            Width: =432
+            Width: =lbl_ReqName.Width
             X: =78
-            Y: =113
+            Y: |
+                =lbl_ReqName.Y+lbl_ReqName.Height+10
             ZIndex: =5
 
         lbl_ReqName As label:
@@ -935,7 +936,7 @@
                 ="Name                                   :              " & varViewThisItem.Name
             Width: =750
             X: =78
-            Y: =67
+            Y: =68
             ZIndex: =6
 
         lbl_ExamDate As label:
@@ -947,13 +948,13 @@
             DisabledColor: =RGBA(166, 166, 166, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
-            Height: =28
+            Height: =24
             Size: =10
             Text: |-
                 ="Examination Date                :              " & varViewThisItem.'Examination Date'
-            Width: =518
+            Width: =lbl_recordCreated.Width
             X: =78
-            Y: =349
+            Y: =lbl_recordCreated.Y+lbl_recordCreated.Height+10
             ZIndex: =7
 
         lbl_CertPract As label:
@@ -965,13 +966,13 @@
             DisabledColor: =RGBA(166, 166, 166, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
-            Height: =29
+            Height: =24
             Size: =10
             Text: |-
-                ="Certification Practitioner     :             " & varViewThisItem.'Certification:Title'.Value
-            Width: =568
+                ="Certification                         :             " & varViewThisItem.'Certification:Title'.Value
+            Width: =lbl_ReqName.Width
             X: =78
-            Y: =145
+            Y: =lbl_BU_Title.Y+lbl_BU_Title.Height+10
             ZIndex: =8
 
         lbl_PayMentMode As label:
@@ -983,13 +984,13 @@
             DisabledColor: =RGBA(166, 166, 166, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
-            Height: =20
+            Height: =24
             Size: =10
             Text: |-
                 ="Payment Mode                    :              " & varViewThisItem.PaymentMode
-            Width: =487
+            Width: =lbl_CertPract.Width
             X: =78
-            Y: =200
+            Y: =lbl_CertPract.Y+lbl_CertPract.Height+10
             ZIndex: =9
 
         lbl_Manager As label:
@@ -1001,13 +1002,13 @@
             DisabledColor: =RGBA(166, 166, 166, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
-            Height: =25
+            Height: =24
             Size: =10
             Text: |-
                 ="Manager                              :              " & "Vedarethina Sozhan M"
-            Width: =487
+            Width: =lbl_PayMentMode.Width
             X: =78
-            Y: =251
+            Y: =lbl_PayMentMode.Y+lbl_PayMentMode.Height+10
             ZIndex: =10
 
         lbl_recordCreated As label:
@@ -1019,13 +1020,13 @@
             DisabledColor: =RGBA(166, 166, 166, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
-            Height: =20
+            Height: =24
             Size: =10
             Text: |-
                 ="Record Created                   :              " & varViewThisItem.Created
-            Width: =518
+            Width: =lbl_Manager.Width
             X: =78
-            Y: =301
+            Y: =lbl_Manager.Y+lbl_Manager.Height+10
             ZIndex: =11
 
         lbl_ProofsUpload As label:
@@ -1037,13 +1038,13 @@
             DisabledColor: =RGBA(166, 166, 166, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
-            Height: =23
+            Height: =24
             Size: =10
             Text: |-
                 ="Proofs Uploaded                 :              " & varViewThisItem.'Proofs Uploaded on'
-            Width: =568
+            Width: =lbl_ExamDate.Width
             X: =78
-            Y: =407
+            Y: =lbl_ExamDate.Y+lbl_ExamDate.Height+10
             ZIndex: =12
 
         lbl_docLink As label:
@@ -1055,13 +1056,13 @@
             DisabledColor: =RGBA(166, 166, 166, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
-            Height: =56
+            Height: =24
             Size: =10
             Text: |-
-                ="Document Link                    :    " & varViewThisItem.Documents_Link
-            Width: =799
+                ="Document Link                    :    " 
+            Width: =243
             X: =78
-            Y: =453
+            Y: =lbl_ProofsUpload.Y+lbl_ProofsUpload.Height+10
             ZIndex: =13
 
         lbl_enrolled As label:
@@ -1112,7 +1113,7 @@
             Height: =50
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverFill: =RGBA(0, 0, 0, 0)
-            Image: =User().Image
+            Image: =varViewThisItem.Requestor.Picture
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedFill: =RGBA(0, 0, 0, 0)
             RadiusBottomLeft: =30
@@ -1123,6 +1124,13 @@
             X: =8
             Y: =70
             ZIndex: =16
+
+        HtmlText1 As htmlViewer:
+            HtmlText: ="<b><font color=blue><U>Click here to View</U></font></b>"
+            OnSelect: =Launch(varViewThisItem.Documents_Link)
+            X: =300
+            Y: =lbl_docLink.Y
+            ZIndex: =17
 
     c_Header_1 As c_Header:
         CartOnselect: ='EnrollCertificate Screen'

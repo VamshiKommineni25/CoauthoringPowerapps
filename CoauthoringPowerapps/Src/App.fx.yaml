@@ -85,13 +85,6 @@ App As appinfo:
             Certifications
         );
         ClearCollect(
-            col_filtercert2,
-            Filter(
-                CertificationOrder,
-                Location = 'Drp_Location List'.SelectedText.Value
-            )
-        );
-        ClearCollect(
             Cert_Req,
             CertificationRequest
         );
