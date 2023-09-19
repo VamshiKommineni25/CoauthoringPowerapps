@@ -840,7 +840,7 @@
     con_ViewReqCertDetails As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Light
         Fill: =RGBA(247, 222, 218, 1)
-        Height: =595
+        Height: =527
         RadiusBottomLeft: =10
         RadiusBottomRight: =10
         RadiusTopLeft: =10
