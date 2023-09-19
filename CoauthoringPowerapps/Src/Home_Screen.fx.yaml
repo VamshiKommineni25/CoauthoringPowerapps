@@ -492,7 +492,7 @@ Home_Screen As screen:
         ZIndex: =17
 
         Glry_CertType As gallery.galleryHorizontal:
-            BorderColor: =RGBA(0, 18, 107, 1)
+            BorderColor: =RGBA(0, 0, 0, 0)
             Height: =54
             Items: |-
                 =//Table({Name:"My Certifications"},{Name:"Assigned to"})
@@ -521,7 +521,7 @@ Home_Screen As screen:
             ZIndex: =1
 
             lbl_CertName As label:
-                BorderColor: =RGBA(0, 18, 107, 1)
+                BorderColor: =RGBA(0, 0, 0, 0)
                 Color: =If(ThisItem.IsSelected,RGBA(184, 0, 0, 1),RGBA(38,50,56,1))
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 FocusedBorderColor: =RGBA(0,0,0,0)

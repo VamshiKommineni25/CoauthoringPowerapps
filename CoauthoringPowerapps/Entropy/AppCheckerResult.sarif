@@ -1244,6 +1244,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "Register_Screen.con_CertificationDetails.Glry_Certifications.Img_Cert1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Register_Screen.con_CertificationDetails.Glry_Certifications.Img_Cert1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Register_Screen",
+                "type": "Register_Screen.con_CertificationDetails.Glry_Certifications.Img_Cert1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "Register_Screen.con_BU_Recommended_Cert_Filter.drp_BU.AccessibleLabel"
                 }
               ],
@@ -5937,36 +5967,6 @@
                 "member": "AccessibleLabel",
                 "module": "Register_Screen-Enroll",
                 "type": "'Register_Screen-Enroll'.con_Buttons.Ico_back"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Register_Screen.con_CertificationDetails.Glry_Certifications.Img_Cert1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Register_Screen.con_CertificationDetails.Glry_Certifications.Img_Cert1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Register_Screen",
-                "type": "Register_Screen.con_CertificationDetails.Glry_Certifications.Img_Cert1"
               }
             }
           ],

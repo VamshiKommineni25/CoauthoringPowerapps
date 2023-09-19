@@ -122,13 +122,14 @@ c_Header As CanvasComponent:
                     AccessibleLabel: ="textinputbox for search "
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderThickness: =0
-                    Color: =RGBA(0, 0, 0, 1)
+                    Color: =RGBA(153, 153, 153, 1)
                     Default: =
                     DisabledBorderColor: =RGBA(0, 0, 0, 0)
                     DisabledColor: =RGBA(0, 0, 0, 1)
                     DisabledFill: =RGBA(244, 244, 244, 1)
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Lighter
                     Height: =32
                     HintText: ="Search"
                     HoverBorderColor: =
@@ -142,7 +143,7 @@ c_Header As CanvasComponent:
                     RadiusBottomRight: =0
                     RadiusTopLeft: =0
                     RadiusTopRight: =0
-                    Size: =13
+                    Size: =10
                     Width: =363
                     ZIndex: =17
 

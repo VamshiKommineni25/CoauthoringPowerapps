@@ -427,7 +427,7 @@ Register_Screen As screen:
             ZIndex: =1
 
         glry_certificationsTypes As gallery.galleryHorizontal:
-            BorderColor: =RGBA(0, 18, 107, 1)
+            BorderColor: =RGBA(0, 0, 0, 0)
             Height: =54
             Items: =["All Certifications","Microsoft Provided","Amazon Provided"]
             TabIndex: =0
