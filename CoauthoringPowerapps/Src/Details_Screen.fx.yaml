@@ -1036,6 +1036,11 @@ Details_Screen As screen:
                                 NotificationType.Success,
                                 3000
                             );
+                            UpdateIf(
+                                    CertificationOrder,
+                                    ID = varCertificateDetails.ID,
+                                    {Status: "Rejected"}
+                                );
                             Set(varRevise,false) && Set(varMngrReject,false),
                     
                             Set(
