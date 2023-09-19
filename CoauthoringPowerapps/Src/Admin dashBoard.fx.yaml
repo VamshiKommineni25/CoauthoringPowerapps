@@ -3079,9 +3079,9 @@
                         ),
                         (DateValue(Created) >= Date_FromDate.SelectedDate && DateValue(Created) <= Date_ToDate.SelectedDate)
                     )
-                )= 0 ) && ('Glry_Total Cert per BU/Provider'.Selected.Name = "Total Certifications Per Provider"),
-                
-                true, false
+                ) = 0) && ('Glry_Total Cert per BU/Provider'.Selected.Name = "Total Certifications Per Provider"),
+                true,
+                false
             )
         Width: =226
         X: =580
