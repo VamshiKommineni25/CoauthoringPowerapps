@@ -193,7 +193,6 @@
             txtinp_RS_NCRtitle As text:
                 AccessibleLabel: ="txtinp_RS_NCRtitle"
                 BorderColor: =RGBA(154, 154, 154, 1)
-                BorderThickness: =2
                 Color: =RGBA(154, 154, 154, 1)
                 Default: =""
                 DisabledBorderColor: =RGBA(154, 154, 154, 1)
@@ -219,7 +218,6 @@
             txtinp_RS_NCRdesc As text:
                 AccessibleLabel: ="txtinp_RS_NCRdesc"
                 BorderColor: =RGBA(154, 154, 154, 1)
-                BorderThickness: =2
                 Color: =RGBA(154, 154, 154, 1)
                 Default: =""
                 DisabledBorderColor: =RGBA(154, 154, 154, 1)
@@ -247,7 +245,6 @@
             txtinp_RS_NCRcost As text:
                 AccessibleLabel: ="txtinp_RS_NCRcost"
                 BorderColor: =RGBA(154, 154, 154, 1)
-                BorderThickness: =2
                 Color: =RGBA(154, 154, 154, 1)
                 Default: =""
                 DisabledBorderColor: =RGBA(154, 154, 154, 1)
@@ -291,6 +288,7 @@
             drpdwn_RS_NCRBU As dropdown:
                 AccessibleLabel: ="drpdwn_RS_NCRBU"
                 BorderColor: =RGBA(154, 154, 154, 1)
+                BorderThickness: =1
                 ChevronBackground: =RGBA(255, 255, 255, 1)
                 ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
                 ChevronDisabledFill: =RGBA(166, 166, 166, 1)
@@ -327,7 +325,6 @@
             txtinp_RS_NCRexamcode As text:
                 AccessibleLabel: ="txtinp_RS_NCRexamcode"
                 BorderColor: =RGBA(154, 154, 154, 1)
-                BorderThickness: =2
                 Color: =RGBA(154, 154, 154, 1)
                 Default: =""
                 DisabledBorderColor: =RGBA(154, 154, 154, 1)
@@ -362,7 +359,6 @@
             txtinp_RS_NCRURL As text:
                 AccessibleLabel: ="txtinp_RS_NCRURL"
                 BorderColor: =RGBA(154, 154, 154, 1)
-                BorderThickness: =2
                 Color: =RGBA(154, 154, 154, 1)
                 Default: =
                 DisabledBorderColor: =RGBA(154, 154, 154, 1)
@@ -397,7 +393,6 @@
             txtinp_RS_NCRprovider As text:
                 AccessibleLabel: ="txtinp_RS_NCRprovider"
                 BorderColor: =RGBA(154, 154, 154, 1)
-                BorderThickness: =2
                 Color: =RGBA(154, 154, 154, 1)
                 Default: =""
                 DisabledBorderColor: =RGBA(154, 154, 154, 1)
@@ -432,6 +427,7 @@
             Cmb_RS_NCRrequestor As combobox:
                 AccessibleLabel: ="Cmb_RS_NCRrequestor"
                 BorderColor: =RGBA(166, 166, 166, 1)
+                BorderThickness: =1
                 ChevronBackground: =RGBA(255, 255, 255, 1)
                 ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
                 ChevronDisabledFill: =RGBA(166, 166, 166, 1)
@@ -675,7 +671,6 @@
             txtinp_RS_ECRname As text:
                 AccessibleLabel: ="txtinp_RS_ECRname"
                 BorderColor: =RGBA(154, 154, 154, 1)
-                BorderThickness: =2
                 Color: =RGBA(154, 154, 154, 1)
                 Default: =""
                 DisabledBorderColor: =RGBA(154, 154, 154, 1)
@@ -701,7 +696,6 @@
             txtinp_RS_ECRExamcode As text:
                 AccessibleLabel: ="txtinp_RS_ECRExamcode"
                 BorderColor: =RGBA(154, 154, 154, 1)
-                BorderThickness: =2
                 Color: =RGBA(154, 154, 154, 1)
                 Default: =""
                 DisabledBorderColor: =RGBA(154, 154, 154, 1)
@@ -749,6 +743,7 @@
             drpdwn_RS_ECRBU As dropdown:
                 AccessibleLabel: ="drpdwn_RS_ECRBU"
                 BorderColor: =RGBA(154, 154, 154, 1)
+                BorderThickness: =1
                 ChevronBackground: =RGBA(255, 255, 255, 1)
                 ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
                 ChevronDisabledFill: =RGBA(166, 166, 166, 1)
@@ -785,7 +780,6 @@
             txtinp_RS_ECRPname As text:
                 AccessibleLabel: ="txtinp_RS_ECRPname"
                 BorderColor: =RGBA(154, 154, 154, 1)
-                BorderThickness: =2
                 Color: =RGBA(154, 154, 154, 1)
                 Default: =""
                 DisabledBorderColor: =RGBA(154, 154, 154, 1)
@@ -820,7 +814,6 @@
 
             txtinp_RS_ECRprice As text:
                 BorderColor: =RGBA(154, 154, 154, 1)
-                BorderThickness: =2
                 Color: =RGBA(154, 154, 154, 1)
                 Default: =""
                 DisabledBorderColor: =RGBA(154, 154, 154, 1)
@@ -856,7 +849,6 @@
             txtinp_RS_ECRrole As text:
                 AccessibleLabel: ="txtinp_RS_ECRrole"
                 BorderColor: =RGBA(154, 154, 154, 1)
-                BorderThickness: =2
                 Color: =RGBA(154, 154, 154, 1)
                 Default: =""
                 DisabledBorderColor: =RGBA(154, 154, 154, 1)
@@ -1000,7 +992,6 @@
             txtinp_RS_ECRCname As text:
                 AccessibleLabel: ="txtinp_RS_ECRCname"
                 BorderColor: =RGBA(154, 154, 154, 1)
-                BorderThickness: =2
                 Color: =RGBA(154, 154, 154, 1)
                 Default: =""
                 DisabledBorderColor: =RGBA(154, 154, 154, 1)
@@ -1036,6 +1027,7 @@
             drpdwn_RS_ECRexamlevel As dropdown:
                 AccessibleLabel: ="drpdwn_RS_ECRexamlevel"
                 BorderColor: =RGBA(154, 154, 154, 1)
+                BorderThickness: =1
                 ChevronBackground: =RGBA(255, 255, 255, 1)
                 ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
                 ChevronDisabledFill: =RGBA(166, 166, 166, 1)
@@ -1072,6 +1064,7 @@
             drpdwn_RS_ECRrs As dropdown:
                 AccessibleLabel: ="drpdwn_RS_ECRrs"
                 BorderColor: =RGBA(154, 154, 154, 1)
+                BorderThickness: =1
                 ChevronBackground: =RGBA(255, 255, 255, 1)
                 ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
                 ChevronDisabledFill: =RGBA(166, 166, 166, 1)
@@ -1108,7 +1101,6 @@
             txtinp_RS_ECRCV As text:
                 AccessibleLabel: ="txtinp_RS_ECRCV"
                 BorderColor: =RGBA(154, 154, 154, 1)
-                BorderThickness: =2
                 Color: =RGBA(154, 154, 154, 1)
                 Default: =""
                 DisabledBorderColor: =RGBA(154, 154, 154, 1)
@@ -1144,7 +1136,6 @@
             txtinp_RS_ECRtech As text:
                 AccessibleLabel: ="txtinp_RS_ECRtech"
                 BorderColor: =RGBA(154, 154, 154, 1)
-                BorderThickness: =2
                 Color: =RGBA(154, 154, 154, 1)
                 Default: =""
                 DisabledBorderColor: =RGBA(154, 154, 154, 1)
@@ -1200,6 +1191,7 @@
             DatePicker_RS_ECRcmpdate As datepicker:
                 AccessibleLabel: ="DatePicker_RS_ECRcmpdate"
                 BorderColor: =RGBA(154, 154, 154, 1)
+                BorderThickness: =1
                 CalendarHeaderFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
                 Color: =RGBA(154, 154, 154, 1)
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -2065,6 +2057,7 @@
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
                 DisplayMode: =Parent.DisplayMode
+                DropTargetBorderThickness: =1
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
                 Height: =132
