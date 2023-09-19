@@ -1,7 +1,7 @@
 App As appinfo:
     BackEnabled: =false
     OnStart: |+
-        =Collect(COL_CertificationSecurity,'CertificationApp-Security');
+        =ClearCollect(COL_CertificationSecurity,'CertificationApp-Security');
         Set(
             varUserLevel,
             If(
@@ -14,7 +14,7 @@ App As appinfo:
                         50
                     )
                 ) = 1,
-                "USER",
+                "SUPER-ADMIN",
                 varUserLevel
             )
         );
