@@ -1,7 +1,7 @@
 App As appinfo:
     BackEnabled: =false
     OnStart: |+
-        =Collect(COL_CertificationSecurity,'CertificationApp-Security');
+        =Collect(COL_CertificationSecurity,FirstN('CertificationApp-Security',100));
         Set(
             varUserLevel,
             If(
@@ -97,7 +97,7 @@ App As appinfo:
         );
         ClearCollect(
             BUList,
-            'BU-List'
+           FirstN('BU-List',200)
         );
         Collect(
             CalendarLocalizedLabel,

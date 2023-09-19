@@ -28,7 +28,8 @@
             DisabledColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
             Fill: =RGBA(241,246,246, 1)
-            FocusedBorderThickness: =0
+            FocusedBorderColor: =RGBA(0,0,0,0)
+            FocusedBorderThickness: =2
             Font: =Font.'Segoe UI'
             Format: ="dd/mm/yyyy"
             Height: =27
@@ -54,7 +55,8 @@
             DisabledColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
             Fill: =RGBA(241,246,246, 1)
-            FocusedBorderThickness: =0
+            FocusedBorderColor: =RGBA(0,0,0,0)
+            FocusedBorderThickness: =1
             Font: =Font.'Segoe UI'
             Format: ="dd/mm/yyyy"
             Height: =27
@@ -86,7 +88,8 @@
             DisabledColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
             Fill: =RGBA(241,246,246, 1)
-            FocusedBorderThickness: =0
+            FocusedBorderColor: =RGBA(0,0,0,0)
+            FocusedBorderThickness: =2
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
             Height: =27
@@ -122,6 +125,7 @@
             Height: =20
             OnSelect: =Set(varNewCert,true)
             Size: =10
+            TabIndex: =0
             Text: ="Refresh"
             Width: =77
             X: =1051
@@ -144,6 +148,7 @@
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             PressedFill: =RGBA(0, 0, 0, 0)
+            TabIndex: =1
             Width: =15
             X: =1039
             Y: =17
@@ -156,9 +161,8 @@
             DisabledColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
             Fill: =RGBA(255, 255, 255, 1)
-            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
-            FocusedBorderThickness: |
-                =0
+            FocusedBorderColor: =RGBA(0,0,0,0)
+            FocusedBorderThickness: =2
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Bold
             Height: =26
@@ -199,6 +203,7 @@
             PaddingRight: =2
             PaddingTop: =2
             Size: =10
+            TabIndex: =0
             Text: ="Filter"
             Width: =69
             X: =90
@@ -238,7 +243,8 @@
             DisabledColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
             Fill: =RGBA(241,246,246, 1)
-            FocusedBorderThickness: =0
+            FocusedBorderColor: =RGBA(0,0,0,0)
+            FocusedBorderThickness: =2
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
             Height: =27
@@ -312,8 +318,8 @@
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
                 Fill: =RGBA(201,47,29,1)
-                FocusedBorderColor: =ColorFade(Self.Fill, -75%)
-                FocusedBorderThickness: =0
+                FocusedBorderColor: =RGBA(0,0,0,0)
+                FocusedBorderThickness: =2
                 Font: =Font.'Segoe UI'
                 Height: =26
                 HoverBorderColor: =RGBA(0, 0, 0, 0)
@@ -326,6 +332,7 @@
                 RadiusTopLeft: =5
                 RadiusTopRight: =5
                 Size: =10
+                TabIndex: =1
                 Text: ="Back"
                 Width: =69
                 X: =6
@@ -338,7 +345,7 @@
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(220, 220, 220, 1)
                 DisabledFill: =RGBA(0, 0, 0, 0)
-                FocusedBorderThickness: =4
+                FocusedBorderColor: =RGBA(0,0,0,0)
                 Height: =11
                 HoverBorderColor: =RGBA(0, 0, 0, 0)
                 HoverColor: |-
@@ -350,6 +357,7 @@
                 PressedBorderColor: =RGBA(0, 0, 0, 0)
                 PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
                 PressedFill: =RGBA(0, 0, 0, 0)
+                TabIndex: =1
                 Width: =29
                 X: =6
                 Y: =21
@@ -440,7 +448,8 @@
         "glry_Cert_Req_details As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
             BorderColor: =RGBA(166, 166, 166, 1)
             DelayItemLoading: =true
-            FocusedBorderThickness: =0
+            FocusedBorderColor: =RGBA(0,0,0,0)
+            FocusedBorderThickness: =2
             Height: =452
             Items: |-
                 =Search(
@@ -474,6 +483,7 @@
             NavigationStep: =9
             ShowNavigation: =true
             ShowScrollbar: =false
+            TabIndex: =1
             TemplatePadding: =0
             TemplateSize: =50
             Width: =1202
@@ -583,7 +593,7 @@
                 DisabledColor: =RGBA(220, 220, 220, 1)
                 DisabledFill: =RGBA(0, 0, 0, 0)
                 FocusedBorderThickness: =4
-                Height: =24
+                Height: =15
                 HoverBorderColor: =RGBA(0, 0, 0, 0)
                 HoverColor: =RGBA(138, 138, 138, 1)
                 HoverFill: =RGBA(0, 0, 0, 0)
@@ -594,31 +604,11 @@
                 PressedBorderColor: =RGBA(0, 0, 0, 0)
                 PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
                 PressedFill: =RGBA(0, 0, 0, 0)
-                Width: =24
-                X: =1094
-                Y: =8
+                TabIndex: =1
+                Width: =15
+                X: =1110
+                Y: =12
                 ZIndex: =7
-
-            Icon15_1 As icon.Download:
-                BorderColor: =RGBA(166, 166, 166, 1)
-                Color: =RGBA(138, 138, 138, 1)
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(220, 220, 220, 1)
-                DisabledFill: =RGBA(0, 0, 0, 0)
-                FocusedBorderThickness: =4
-                Height: =24
-                HoverBorderColor: =RGBA(0, 0, 0, 0)
-                HoverColor: =RGBA(138, 138, 138, 1)
-                HoverFill: =RGBA(0, 0, 0, 0)
-                Icon: =Icon.Download
-                OnSelect: =Select(Parent)
-                PressedBorderColor: =RGBA(0, 0, 0, 0)
-                PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-                PressedFill: =RGBA(0, 0, 0, 0)
-                Width: =24
-                X: =1130
-                Y: =8
-                ZIndex: =8
 
         lbl_req As label:
             Align: =Align.Center
@@ -746,8 +736,8 @@
             DisabledFill: =RGBA(244, 244, 244, 1)
             DisplayMode: =If(drp_status.SelectedText.Value="Proofs Approved",DisplayMode.Edit,DisplayMode.Disabled)
             Fill: =RGBA(201,47,29,1)
-            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
-            FocusedBorderThickness: =0
+            FocusedBorderColor: =RGBA(0,0,0,0)
+            FocusedBorderThickness: =2
             Font: =Font.'Segoe UI'
             Height: =25
             HoverBorderColor: =RGBA(0, 0, 0, 0)
@@ -882,6 +872,7 @@
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             PressedFill: =RGBA(0, 0, 0, 0)
+            TabIndex: =1
             Width: =40
             X: =808
             Y: =22
@@ -1096,6 +1087,7 @@
                 =Navigate(Details_Screen,ScreenTransition.Fade,{varCertificateDetails:varViewThisItem,varApprove:true});
                 Set(varvarViewThisItemVisiblity,false)
             Size: =13
+            TabIndex: =1
             Text: ="Approve/Reject"
             Underline: =true
             X: =321
@@ -1214,6 +1206,7 @@
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(0, 18, 107, 1)
                 Size: =8
+                TabIndex: =1
                 Tooltip: =
                 Visible: =varExcelUpload
                 Width: =375
@@ -1284,7 +1277,8 @@
                 RadiusBottomRight: =7
                 RadiusTopLeft: =7
                 RadiusTopRight: =7
-                Size: =10
+                Size: =8
+                TabIndex: =1
                 Text: ="Upload"
                 Tooltip: =
                 Visible: =varExcelUpload
@@ -1303,10 +1297,11 @@
                 Icon: =Icon.Cancel
                 OnSelect: |-
                     =UpdateContext({varExcelUpload:false})
+                TabIndex: =1
                 Visible: =varExcelUpload
                 Width: =15
-                X: =368
-                Y: =24
+                X: =370
+                Y: =14
                 ZIndex: =4
 
         Image5 As image:
