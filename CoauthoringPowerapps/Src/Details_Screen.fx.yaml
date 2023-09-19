@@ -3611,7 +3611,7 @@ Details_Screen As screen:
                 FocusedBorderThickness: =4
                 Height: =20
                 HoverBorderColor: =RGBA(0, 0, 0, 0)
-                HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                HoverColor: =RGBA(0, 0, 0, 1)
                 HoverFill: =RGBA(0, 0, 0, 0)
                 Icon: =Icon.Cancel
                 OnSelect: |
@@ -3629,6 +3629,7 @@ Details_Screen As screen:
                 BorderColor: =RGBA(166, 166, 166, 1)
                 DelayItemLoading: =true
                 Fill: =RGBA(241, 246, 246, 1)
+                Height: =463
                 Items: =LookUp(CertificationOrder,ID=varCertificateDetails.ID).Attachments
                 Layout: =Layout.Vertical
                 LoadingSpinner: =LoadingSpinner.Data
@@ -3650,7 +3651,7 @@ Details_Screen As screen:
                     OnSelect: =Select(Parent)
                     PressedFill: =RGBA(0, 120, 212, 1)
                     Width: =294
-                    X: =16
+                    X: =12
                     Y: =10
                     ZIndex: =1
 
@@ -3682,7 +3683,7 @@ Details_Screen As screen:
                     FocusedBorderThickness: =4
                     Height: =24
                     HoverBorderColor: =RGBA(0, 0, 0, 0)
-                    HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                    HoverColor: =RGBA(0, 0, 0, 1)
                     HoverFill: =RGBA(0, 0, 0, 0)
                     Icon: =Icon.Download
                     OnSelect: =Launch(ThisItem.AbsoluteUri)
@@ -3691,7 +3692,7 @@ Details_Screen As screen:
                     PressedFill: =RGBA(0, 0, 0, 0)
                     Width: =24
                     X: =264
-                    Y: =55
+                    Y: =60
                     ZIndex: =3
 
     Group8_4 As group:
