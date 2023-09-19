@@ -1060,9 +1060,8 @@
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             Height: =24
-            Size: =13
-            Text: |-
-                ="Enrolled                               :              " 
+            Size: =10
+            Text: =varViewThisItem.Status
             Visible: |-
                 =If(
                     (varViewThisItem.Status = "Reimbursed"),
@@ -1074,7 +1073,7 @@
                             varViewThisItem.Status = "Manager Approved",
                             false,
                             If(
-                                varViewThisItem.Status = "Proofs Uploaded",
+                                varViewThisItem.Status = "Proofs Approved",
                                 false,
                                 true
                             )
@@ -1100,7 +1099,7 @@
             OnSelect: |-
                 =Navigate(Details_Screen,ScreenTransition.Fade,{varCertificateDetails:varViewThisItem,varApprove:true});
                 Set(varvarViewThisItemVisiblity,false)
-            Size: =13
+            Size: =10
             TabIndex: =1
             Text: ="Approve/Reject"
             Underline: =true
@@ -1115,14 +1114,14 @@
                             varViewThisItem.Status = "Manager Approved",
                             false,
                             If(
-                                varViewThisItem.Status = "Proofs Uploaded",
+                                varViewThisItem.Status = "Proofs Approved",
                                 false,
                                 true
                             )
                         )
                     )
                 )
-            X: =431
+            X: =410
             Y: |
                 =lbl_docLink.Y+lbl_docLink.Height+10
             ZIndex: =15
