@@ -57,14 +57,6 @@
                     "InvariantPropertyName": "OnSelect",
                     "IsLockable": false,
                     "NameMapSourceSchema": "?"
-                  },
-                  {
-                    "AFDDataSourceName": "",
-                    "AutoRuleBindingEnabled": false,
-                    "AutoRuleBindingString": "-1",
-                    "InvariantPropertyName": "TabIndex",
-                    "IsLockable": false,
-                    "NameMapSourceSchema": "?"
                   }
                 ],
                 "ControlUniqueId": "72",
@@ -80,7 +72,7 @@
                 "Name": "Rectangle1",
                 "Parent": "Group 5772_1",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 960,
+                "PublishOrderIndex": 961,
                 "Rules": [
                   {
                     "Category": "Design",
@@ -173,12 +165,6 @@
                     "RuleProviderType": "Unknown"
                   },
                   {
-                    "Category": "Design",
-                    "InvariantScript": "0",
-                    "Property": "TabIndex",
-                    "RuleProviderType": "Unknown"
-                  },
-                  {
                     "Category": "Behavior",
                     "InvariantScript": "Set(SideLabelvar,1);\nNavigate(C_leftPanel.NavigateTo,ScreenTransition.Fade)",
                     "Property": "OnSelect",
@@ -266,7 +252,7 @@
                     "Name": "Icon5",
                     "Parent": "Group 5771_7",
                     "PersistMetaDataIDKey": false,
-                    "PublishOrderIndex": 962,
+                    "PublishOrderIndex": 963,
                     "Rules": [
                       {
                         "Category": "Design",
@@ -478,14 +464,7 @@
                       "Height",
                       "Visible",
                       "DisplayMode",
-                      {
-                        "AFDDataSourceName": "",
-                        "AutoRuleBindingEnabled": false,
-                        "AutoRuleBindingString": "-1",
-                        "InvariantPropertyName": "TabIndex",
-                        "IsLockable": false,
-                        "NameMapSourceSchema": "?"
-                      },
+                      "TabIndex",
                       "OnSelect",
                       "minimumWidth",
                       "minimumHeight",
@@ -506,7 +485,7 @@
                     "Name": "Home_2",
                     "Parent": "Group 5771_7",
                     "PersistMetaDataIDKey": false,
-                    "PublishOrderIndex": 963,
+                    "PublishOrderIndex": 964,
                     "Rules": [
                       {
                         "Category": "Data",
@@ -780,7 +759,7 @@
                       },
                       {
                         "Category": "Design",
-                        "InvariantScript": "0",
+                        "InvariantScript": "-1",
                         "Property": "TabIndex",
                         "RuleProviderType": "Unknown"
                       },
@@ -882,7 +861,7 @@
                 "Name": "Group 5771_7",
                 "Parent": "Group 5772_1",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 961,
+                "PublishOrderIndex": 962,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -1169,7 +1148,7 @@
             "Name": "Group 5772_1",
             "Parent": "Group_3",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 959,
+            "PublishOrderIndex": 960,
             "Rules": [
               {
                 "Category": "Data",
@@ -1448,14 +1427,6 @@
                     "InvariantPropertyName": "OnSelect",
                     "IsLockable": false,
                     "NameMapSourceSchema": "?"
-                  },
-                  {
-                    "AFDDataSourceName": "",
-                    "AutoRuleBindingEnabled": false,
-                    "AutoRuleBindingString": "-1",
-                    "InvariantPropertyName": "TabIndex",
-                    "IsLockable": false,
-                    "NameMapSourceSchema": "?"
                   }
                 ],
                 "ControlUniqueId": "77",
@@ -1471,7 +1442,7 @@
                 "Name": "Rectangle2",
                 "Parent": "Group 8510_1",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 965,
+                "PublishOrderIndex": 966,
                 "Rules": [
                   {
                     "Category": "Design",
@@ -1561,12 +1532,6 @@
                     "Category": "Design",
                     "InvariantScript": "4",
                     "Property": "FocusedBorderThickness",
-                    "RuleProviderType": "Unknown"
-                  },
-                  {
-                    "Category": "Design",
-                    "InvariantScript": "0",
-                    "Property": "TabIndex",
                     "RuleProviderType": "Unknown"
                   },
                   {
@@ -1671,7 +1636,7 @@
                     "Name": "Icon7",
                     "Parent": "Group 5771_4",
                     "PersistMetaDataIDKey": false,
-                    "PublishOrderIndex": 967,
+                    "PublishOrderIndex": 968,
                     "Rules": [
                       {
                         "Category": "Design",
@@ -1890,14 +1855,7 @@
                       "Height",
                       "Visible",
                       "DisplayMode",
-                      {
-                        "AFDDataSourceName": "",
-                        "AutoRuleBindingEnabled": false,
-                        "AutoRuleBindingString": "-1",
-                        "InvariantPropertyName": "TabIndex",
-                        "IsLockable": false,
-                        "NameMapSourceSchema": "?"
-                      },
+                      "TabIndex",
                       "OnSelect",
                       "minimumWidth",
                       "minimumHeight",
@@ -1918,7 +1876,7 @@
                     "Name": "Register_1",
                     "Parent": "Group 5771_4",
                     "PersistMetaDataIDKey": false,
-                    "PublishOrderIndex": 968,
+                    "PublishOrderIndex": 969,
                     "Rules": [
                       {
                         "Category": "Data",
@@ -2192,7 +2150,7 @@
                       },
                       {
                         "Category": "Design",
-                        "InvariantScript": "0",
+                        "InvariantScript": "-1",
                         "Property": "TabIndex",
                         "RuleProviderType": "Unknown"
                       },
@@ -2294,7 +2252,7 @@
                 "Name": "Group 5771_4",
                 "Parent": "Group 8510_1",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 966,
+                "PublishOrderIndex": 967,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -2581,7 +2539,7 @@
             "Name": "Group 8510_1",
             "Parent": "Group_3",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 964,
+            "PublishOrderIndex": 965,
             "Rules": [
               {
                 "Category": "Data",
@@ -2860,14 +2818,6 @@
                     "InvariantPropertyName": "OnSelect",
                     "IsLockable": false,
                     "NameMapSourceSchema": "?"
-                  },
-                  {
-                    "AFDDataSourceName": "",
-                    "AutoRuleBindingEnabled": false,
-                    "AutoRuleBindingString": "-1",
-                    "InvariantPropertyName": "TabIndex",
-                    "IsLockable": false,
-                    "NameMapSourceSchema": "?"
                   }
                 ],
                 "ControlUniqueId": "82",
@@ -2883,7 +2833,7 @@
                 "Name": "Rectangle3",
                 "Parent": "Group 8509_1",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 970,
+                "PublishOrderIndex": 971,
                 "Rules": [
                   {
                     "Category": "Design",
@@ -2973,12 +2923,6 @@
                     "Category": "Design",
                     "InvariantScript": "4",
                     "Property": "FocusedBorderThickness",
-                    "RuleProviderType": "Unknown"
-                  },
-                  {
-                    "Category": "Design",
-                    "InvariantScript": "1",
-                    "Property": "TabIndex",
                     "RuleProviderType": "Unknown"
                   },
                   {
@@ -3086,7 +3030,7 @@
                         "Name": "Icon8",
                         "Parent": "g2140_1",
                         "PersistMetaDataIDKey": false,
-                        "PublishOrderIndex": 973,
+                        "PublishOrderIndex": 974,
                         "Rules": [
                           {
                             "Category": "Design",
@@ -3343,7 +3287,7 @@
                     "Name": "g2140_1",
                     "Parent": "Group 5771_6",
                     "PersistMetaDataIDKey": false,
-                    "PublishOrderIndex": 972,
+                    "PublishOrderIndex": 973,
                     "Rules": [
                       {
                         "Category": "Data",
@@ -3634,14 +3578,7 @@
                       "Height",
                       "Visible",
                       "DisplayMode",
-                      {
-                        "AFDDataSourceName": "",
-                        "AutoRuleBindingEnabled": false,
-                        "AutoRuleBindingString": "-1",
-                        "InvariantPropertyName": "TabIndex",
-                        "IsLockable": false,
-                        "NameMapSourceSchema": "?"
-                      },
+                      "TabIndex",
                       "OnSelect",
                       "minimumWidth",
                       "minimumHeight",
@@ -3662,7 +3599,7 @@
                     "Name": "Add New_1",
                     "Parent": "Group 5771_6",
                     "PersistMetaDataIDKey": false,
-                    "PublishOrderIndex": 974,
+                    "PublishOrderIndex": 975,
                     "Rules": [
                       {
                         "Category": "Data",
@@ -3936,7 +3873,7 @@
                       },
                       {
                         "Category": "Design",
-                        "InvariantScript": "0",
+                        "InvariantScript": "-1",
                         "Property": "TabIndex",
                         "RuleProviderType": "Unknown"
                       },
@@ -4038,7 +3975,7 @@
                 "Name": "Group 5771_6",
                 "Parent": "Group 8509_1",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 971,
+                "PublishOrderIndex": 972,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -4325,7 +4262,7 @@
             "Name": "Group 8509_1",
             "Parent": "Group_3",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 969,
+            "PublishOrderIndex": 970,
             "Rules": [
               {
                 "Category": "Data",
@@ -4612,14 +4549,6 @@
                     "InvariantPropertyName": "Visible",
                     "IsLockable": false,
                     "NameMapSourceSchema": "?"
-                  },
-                  {
-                    "AFDDataSourceName": "",
-                    "AutoRuleBindingEnabled": false,
-                    "AutoRuleBindingString": "-1",
-                    "InvariantPropertyName": "TabIndex",
-                    "IsLockable": false,
-                    "NameMapSourceSchema": "?"
                   }
                 ],
                 "ControlUniqueId": "88",
@@ -4635,7 +4564,7 @@
                 "Name": "Rectangle4",
                 "Parent": "Group 9075_1",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 976,
+                "PublishOrderIndex": 977,
                 "Rules": [
                   {
                     "Category": "Design",
@@ -4731,12 +4660,6 @@
                     "Category": "Design",
                     "InvariantScript": "If(varUserLevel=\"ADMIN\" || varUserLevel= \"SUPER-ADMIN\",true,false)",
                     "Property": "Visible",
-                    "RuleProviderType": "Unknown"
-                  },
-                  {
-                    "Category": "Design",
-                    "InvariantScript": "0",
-                    "Property": "TabIndex",
                     "RuleProviderType": "Unknown"
                   },
                   {
@@ -4841,7 +4764,7 @@
                     "Name": "Icon6",
                     "Parent": "Group 5771_5",
                     "PersistMetaDataIDKey": false,
-                    "PublishOrderIndex": 978,
+                    "PublishOrderIndex": 979,
                     "Rules": [
                       {
                         "Category": "Design",
@@ -5060,14 +4983,7 @@
                       "Height",
                       "Visible",
                       "DisplayMode",
-                      {
-                        "AFDDataSourceName": "",
-                        "AutoRuleBindingEnabled": false,
-                        "AutoRuleBindingString": "-1",
-                        "InvariantPropertyName": "TabIndex",
-                        "IsLockable": false,
-                        "NameMapSourceSchema": "?"
-                      },
+                      "TabIndex",
                       "OnSelect",
                       "minimumWidth",
                       "minimumHeight",
@@ -5088,7 +5004,7 @@
                     "Name": "Analysis_1",
                     "Parent": "Group 5771_5",
                     "PersistMetaDataIDKey": false,
-                    "PublishOrderIndex": 979,
+                    "PublishOrderIndex": 980,
                     "Rules": [
                       {
                         "Category": "Data",
@@ -5362,7 +5278,7 @@
                       },
                       {
                         "Category": "Design",
-                        "InvariantScript": "0",
+                        "InvariantScript": "-1",
                         "Property": "TabIndex",
                         "RuleProviderType": "Unknown"
                       },
@@ -5464,7 +5380,7 @@
                 "Name": "Group 5771_5",
                 "Parent": "Group 9075_1",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 977,
+                "PublishOrderIndex": 978,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -5758,7 +5674,7 @@
             "Name": "Group 9075_1",
             "Parent": "Group_3",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 975,
+            "PublishOrderIndex": 976,
             "Rules": [
               {
                 "Category": "Data",
@@ -6066,7 +5982,7 @@
         "Name": "Group_3",
         "Parent": "C_leftPanel",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 958,
+        "PublishOrderIndex": 959,
         "Rules": [
           {
             "Category": "Data",
@@ -6327,7 +6243,7 @@
       },
       "NavigateTo"
     ],
-    "LastModifiedTimestamp": "638307013362402122",
+    "LastModifiedTimestamp": "638305608316703256",
     "Name": "C_leftPanel",
     "Rules": [
       {
@@ -6408,7 +6324,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638307013362402122",
+  "LastModifiedTimestamp": "638305608316703256",
   "Name": "470e83d2489f46a58e9ba807156b5c3a",
   "OverridableProperties": {},
   "Version": "638282907983282334"

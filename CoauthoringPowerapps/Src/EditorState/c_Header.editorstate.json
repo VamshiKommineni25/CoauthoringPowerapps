@@ -47,14 +47,7 @@
         "Height",
         "Visible",
         "DisplayMode",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "-1",
-          "InvariantPropertyName": "TabIndex",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "TabIndex",
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
@@ -509,14 +502,7 @@
         "Height",
         "Visible",
         "DisplayMode",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "-1",
-          "InvariantPropertyName": "TabIndex",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "TabIndex",
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
@@ -952,14 +938,7 @@
         "Height",
         "Visible",
         "DisplayMode",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "-1",
-          "InvariantPropertyName": "TabIndex",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "TabIndex",
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
@@ -2051,14 +2030,6 @@
           "InvariantPropertyName": "OnSelect",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
-        },
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "-1",
-          "InvariantPropertyName": "TabIndex",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
         }
       ],
       "HasDynamicProperties": false,
@@ -2187,11 +2158,6 @@
         {
           "Category": "Design",
           "PropertyName": "FocusedBorderThickness",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Design",
-          "PropertyName": "TabIndex",
           "RuleProviderType": "Unknown"
         },
         {
@@ -2417,14 +2383,7 @@
         "PaddingBottom",
         "PaddingLeft",
         "DisplayMode",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "-1",
-          "InvariantPropertyName": "TabIndex",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "TabIndex",
         "OnSelect",
         "minimumWidth",
         "minimumHeight",
@@ -2722,14 +2681,7 @@
         "PaddingBottom",
         "PaddingLeft",
         "DisplayMode",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "-1",
-          "InvariantPropertyName": "TabIndex",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "TabIndex",
         "OnSelect",
         "minimumWidth",
         "minimumHeight",
@@ -3317,14 +3269,7 @@
         "PaddingBottom",
         "PaddingLeft",
         "DisplayMode",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "-1",
-          "InvariantPropertyName": "TabIndex",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "TabIndex",
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
@@ -3622,14 +3567,7 @@
         "PaddingBottom",
         "PaddingLeft",
         "DisplayMode",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "-1",
-          "InvariantPropertyName": "TabIndex",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "TabIndex",
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
@@ -3934,14 +3872,7 @@
         "PaddingBottom",
         "PaddingLeft",
         "DisplayMode",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "-1",
-          "InvariantPropertyName": "TabIndex",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "TabIndex",
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
@@ -4239,14 +4170,7 @@
         "PaddingBottom",
         "PaddingLeft",
         "DisplayMode",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "-1",
-          "InvariantPropertyName": "TabIndex",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "TabIndex",
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
@@ -4579,14 +4503,7 @@
         "PaddingBottom",
         "PaddingLeft",
         "DisplayMode",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "-1",
-          "InvariantPropertyName": "TabIndex",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "TabIndex",
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
@@ -5180,14 +5097,7 @@
         "PaddingBottom",
         "PaddingLeft",
         "DisplayMode",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "-1",
-          "InvariantPropertyName": "TabIndex",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "TabIndex",
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
@@ -5455,14 +5365,7 @@
         "FlipHorizontal",
         "FlipVertical",
         "ApplyEXIFOrientation",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "\"\"",
-          "InvariantPropertyName": "AccessibleLabel",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "AccessibleLabel",
         "Tooltip",
         "ContentLanguage",
         "AutoDisableOnSelect",
@@ -5499,14 +5402,7 @@
         "PaddingBottom",
         "PaddingLeft",
         "DisplayMode",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "-1",
-          "InvariantPropertyName": "TabIndex",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "TabIndex",
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
@@ -6005,14 +5901,7 @@
         "FlipHorizontal",
         "FlipVertical",
         "ApplyEXIFOrientation",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "\"\"",
-          "InvariantPropertyName": "AccessibleLabel",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "AccessibleLabel",
         "Tooltip",
         "ContentLanguage",
         "AutoDisableOnSelect",
@@ -6042,14 +5931,7 @@
         "PaddingBottom",
         "PaddingLeft",
         "DisplayMode",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "-1",
-          "InvariantPropertyName": "TabIndex",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "TabIndex",
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
@@ -6663,14 +6545,6 @@
           "InvariantPropertyName": "HintText",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
-        },
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "\"\"",
-          "InvariantPropertyName": "AccessibleLabel",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
         }
       ],
       "HasDynamicProperties": false,
@@ -6699,11 +6573,6 @@
         {
           "Category": "Data",
           "PropertyName": "HintText",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Data",
-          "PropertyName": "AccessibleLabel",
           "RuleProviderType": "Unknown"
         },
         {
@@ -6950,14 +6819,7 @@
         "PaddingBottom",
         "PaddingLeft",
         "DisplayMode",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "-1",
-          "InvariantPropertyName": "TabIndex",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "TabIndex",
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
@@ -7225,14 +7087,7 @@
         "FlipHorizontal",
         "FlipVertical",
         "ApplyEXIFOrientation",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "\"\"",
-          "InvariantPropertyName": "AccessibleLabel",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "AccessibleLabel",
         "Tooltip",
         "ContentLanguage",
         "AutoDisableOnSelect",
@@ -7262,14 +7117,7 @@
         "PaddingBottom",
         "PaddingLeft",
         "DisplayMode",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "-1",
-          "InvariantPropertyName": "TabIndex",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "TabIndex",
         "OnSelect",
         "minimumWidth",
         "minimumHeight",
@@ -7530,14 +7378,7 @@
         "FlipHorizontal",
         "FlipVertical",
         "ApplyEXIFOrientation",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "\"\"",
-          "InvariantPropertyName": "AccessibleLabel",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "AccessibleLabel",
         "Tooltip",
         "ContentLanguage",
         "AutoDisableOnSelect",
@@ -7567,14 +7408,7 @@
         "PaddingBottom",
         "PaddingLeft",
         "DisplayMode",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "-1",
-          "InvariantPropertyName": "TabIndex",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "TabIndex",
         "OnSelect",
         "minimumWidth",
         "minimumHeight",
@@ -7835,14 +7669,7 @@
         "FlipHorizontal",
         "FlipVertical",
         "ApplyEXIFOrientation",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "\"\"",
-          "InvariantPropertyName": "AccessibleLabel",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "AccessibleLabel",
         "Tooltip",
         "ContentLanguage",
         "AutoDisableOnSelect",
@@ -7886,14 +7713,7 @@
         "PaddingBottom",
         "PaddingLeft",
         "DisplayMode",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "-1",
-          "InvariantPropertyName": "TabIndex",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "TabIndex",
         "OnSelect",
         "minimumWidth",
         "minimumHeight",

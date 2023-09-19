@@ -257,7 +257,7 @@ Details_Screen As screen:
             Text: =If(varCertificateDetails.Status="Enrolled" And varCertificateDetails.PaymentMode="Cash","Reject","Revise")
             Visible: =If(varApprove,true,false)
             Width: =84
-            X: =993
+            X: =1008
             Y: =13
             ZIndex: =3
 
@@ -404,7 +404,7 @@ Details_Screen As screen:
             Size: =8
             Text: ="View Proofs"
             Visible: =If(varApprove And varUserLevel="SUPER-ADMIN",true,false)
-            Width: =123
+            Width: =124
             X: =838
             Y: =13
             ZIndex: =5

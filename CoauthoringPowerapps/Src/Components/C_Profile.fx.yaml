@@ -123,7 +123,7 @@ C_Profile As CanvasComponent:
                 OnSelect: |-
                     =//Set(isToggled,!isToggled)
                     Set(varProfileView,false)
-                PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+                PressedBorderColor: =ColorFade(RGBA(185, 29, 11, 1), -10%)
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =ColorFade(RGBA(185, 29, 11, 1), -10%)
                 RadiusBottomLeft: =8

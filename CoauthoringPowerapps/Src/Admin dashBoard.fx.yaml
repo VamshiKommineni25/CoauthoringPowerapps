@@ -96,6 +96,13 @@
                 )
             }
         )
+        );
+        ClearCollect(
+            col_filtercert2,
+            Filter(
+                CertificationOrder,
+                Location = 'Drp_Location List'.SelectedText.Value
+            )
         )
 
     "'Cntr_Certifications per Provider/BU' As groupContainer.verticalAutoLayoutContainer":
@@ -246,8 +253,11 @@
                         Provider: "Amazon",
                         Count: CountRows(
                             Filter(
-                                FirstN(Certifications,100000),(DateValue(Created)>=Date_FromDate.SelectedDate && DateValue(Created)<=Date_ToDate.SelectedDate) && 
-                                'Provider Name' = "Amazon"
+                                FirstN(
+                                    Certifications,
+                                    100000
+                                ),
+                                (DateValue(Created) >= Date_FromDate.SelectedDate && DateValue(Created) <= Date_ToDate.SelectedDate) && 'Provider Name' = "Amazon"
                             )
                         )
                     },
@@ -255,8 +265,11 @@
                         Provider: "Microsoft",
                         Count: CountRows(
                             Filter(
-                                FirstN(Certifications,100000),(DateValue(Created)>=Date_FromDate.SelectedDate && DateValue(Created)<=Date_ToDate.SelectedDate) &&
-                                'Provider Name' = "Microsoft"
+                                FirstN(
+                                    Certifications,
+                                    100000
+                                ),
+                                (DateValue(Created) >= Date_FromDate.SelectedDate && DateValue(Created) <= Date_ToDate.SelectedDate) && 'Provider Name' = "Microsoft"
                             )
                         )
                     },
@@ -264,8 +277,11 @@
                         Provider: "Google",
                         Count: CountRows(
                             Filter(
-                                FirstN(Certifications,100000),(DateValue(Created)>=Date_FromDate.SelectedDate && DateValue(Created)<=Date_ToDate.SelectedDate) &&
-                                'Provider Name' = "Google"
+                                FirstN(
+                                    Certifications,
+                                    100000
+                                ),
+                                (DateValue(Created) >= Date_FromDate.SelectedDate && DateValue(Created) <= Date_ToDate.SelectedDate) && 'Provider Name' = "Google"
                             )
                         )
                     },
@@ -273,8 +289,11 @@
                         Provider: "Other",
                         Count: (CountRows(
                             Filter(
-                                FirstN(Certifications,100000),(DateValue(Created)>=Date_FromDate.SelectedDate && DateValue(Created)<=Date_ToDate.SelectedDate) &&
-                                !'Provider Name' in [
+                                FirstN(
+                                    Certifications,
+                                    100000
+                                ),
+                                (DateValue(Created) >= Date_FromDate.SelectedDate && DateValue(Created) <= Date_ToDate.SelectedDate) && !'Provider Name' in [
                                     "Amazon",
                                     "Microsoft",
                                     "Gooogle"
@@ -2964,4 +2983,36 @@
             X: =16
             Y: =395
             ZIndex: =14
+
+    Label19 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Height: =36
+        Size: =10
+        Text: ="No data to display"
+        Visible: |-
+            =If(
+                (CountRows(
+                    Filter(
+                        FirstN(
+                            CertificationOrder,
+                            100000
+                        ),
+                        (DateValue(Created) >= Date_FromDate.SelectedDate && DateValue(Created) <= Date_ToDate.SelectedDate) && BU.Value = Drp_BUList.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BCode'  
+                        
+                    )
+                ) = 0) && ('Glry_Total Cert per BU/Provider'.Selected.Name = "Total Certifications Per BU"),
+                true,
+                false
+            )
+        Width: =280
+        X: =607
+        Y: =278
+        ZIndex: =28
 
