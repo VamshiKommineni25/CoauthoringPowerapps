@@ -2448,10 +2448,6 @@
                 PressedBorderColor: =RGBA(185, 29, 11, 1)
                 PressedColor: =RGBA(185, 29, 11, 1)
                 PressedFill: =
-                RadiusBottomLeft: =0
-                RadiusBottomRight: =0
-                RadiusTopLeft: =0
-                RadiusTopRight: =0
                 Size: =12
                 Text: ="Revise"
                 Width: =102
@@ -2502,10 +2498,6 @@
                 PressedBorderColor: =RGBA(23, 151, 49, 1)
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =
-                RadiusBottomLeft: =0
-                RadiusBottomRight: =0
-                RadiusTopLeft: =0
-                RadiusTopRight: =0
                 Size: =12
                 Text: =If(VarviewselectedCertdata.Admin_Approval=false,"Approve","Approved")
                 Visible: =If(varUserLevel="ADMIN" ||varUserLevel="SUPER-ADMIN",true,false)
