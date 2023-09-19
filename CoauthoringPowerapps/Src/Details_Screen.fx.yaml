@@ -3625,6 +3625,58 @@ Details_Screen As screen:
                 Y: =26
                 ZIndex: =2
 
+            "Gallery1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+                BorderColor: =RGBA(166, 166, 166, 1)
+                DelayItemLoading: =true
+                Items: =LookUp(CertificationOrder,ID=varCertificateDetails.ID).Attachments
+                Layout: =Layout.Vertical
+                LoadingSpinner: =LoadingSpinner.Data
+                TemplatePadding: =0
+                TemplateSize: =86
+                Width: =348
+                Y: =78
+                ZIndex: =3
+
+                Title1 As label:
+                    Color: =RGBA(189, 25, 11, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Bold
+                    Height: =38
+                    OnSelect: =Select(Parent)
+                    Overflow: =Overflow.Scroll
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =10
+                    Text: =ThisItem.DisplayName
+                    VerticalAlign: =VerticalAlign.Top
+                    Width: =307
+                    X: =10
+                    Y: =18
+                    ZIndex: =2
+
+                Icon18 As icon.Download:
+                    BorderColor: =RGBA(166, 166, 166, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(220, 220, 220, 1)
+                    DisabledFill: =RGBA(0, 0, 0, 0)
+                    FocusedBorderThickness: =4
+                    Height: =24
+                    HoverBorderColor: =RGBA(0, 0, 0, 0)
+                    HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                    HoverFill: =RGBA(0, 0, 0, 0)
+                    Icon: =Icon.Download
+                    OnSelect: =Launch(ThisItem.AbsoluteUri)
+                    PressedBorderColor: =RGBA(0, 0, 0, 0)
+                    PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                    PressedFill: =RGBA(0, 0, 0, 0)
+                    Width: =24
+                    X: =264
+                    Y: =55
+                    ZIndex: =3
+
     Group8_4 As group:
         Height: =5
         Width: =5
