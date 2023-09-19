@@ -302,6 +302,27 @@
                     }
                 )
             PressedBorderColor: =RGBA(0, 0, 0, 0)
+            Visible: |-
+                =If(
+                    CountRows(
+                        Filter(
+                            FirstN(
+                                Certifications,
+                                100000
+                            ),
+                            ((DateValue(Created) >= Date_FromDate.SelectedDate && DateValue(Created) <= Date_ToDate.SelectedDate) && 'Provider Name' = "Amazon") || 
+                            ((DateValue(Created) >= Date_FromDate.SelectedDate && DateValue(Created) <= Date_ToDate.SelectedDate) && 'Provider Name' = "Microsoft") || 
+                            ((DateValue(Created) >= Date_FromDate.SelectedDate && DateValue(Created) <= Date_ToDate.SelectedDate) && 'Provider Name' = "Google") ||
+                             (DateValue(Created) >= Date_FromDate.SelectedDate && DateValue(Created) <= Date_ToDate.SelectedDate) && !'Provider Name' in [
+                                "Amazon",
+                                "Microsoft",
+                                "Gooogle"
+                            ]
+                        )
+                    ) = 0,
+                    false,
+                    true
+                )
             Width: =1256
             X: =40
             XLabelAngle: =0
@@ -2980,4 +3001,39 @@
         X: =607
         Y: =278
         ZIndex: =28
+
+    Label22 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Height: =38
+        Size: =10
+        Text: ="No data to display"
+        Visible: |-
+            =If(
+                (CountRows(
+                    Filter(
+                        FirstN(
+                            Certifications,
+                            100000
+                        ),
+                        ((DateValue(Created) >= Date_FromDate.SelectedDate && DateValue(Created) <= Date_ToDate.SelectedDate) && 'Provider Name' = "Amazon") || ((DateValue(Created) >= Date_FromDate.SelectedDate && DateValue(Created) <= Date_ToDate.SelectedDate) && 'Provider Name' = "Microsoft") || ((DateValue(Created) >= Date_FromDate.SelectedDate && DateValue(Created) <= Date_ToDate.SelectedDate) && 'Provider Name' = "Google") || (DateValue(Created) >= Date_FromDate.SelectedDate && DateValue(Created) <= Date_ToDate.SelectedDate) && !'Provider Name' in [
+                            "Amazon",
+                            "Microsoft",
+                            "Gooogle"
+                        ]
+                    )
+                ) = 0) && ('Glry_Total Cert per BU/Provider'.Selected.Name = "Total Certifications Per Provider"),
+                true,
+                false
+            )
+        Width: =226
+        X: =580
+        Y: =276
+        ZIndex: =29
 
