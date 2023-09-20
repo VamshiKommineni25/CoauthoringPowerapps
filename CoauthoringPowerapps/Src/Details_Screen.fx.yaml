@@ -101,7 +101,7 @@ Details_Screen As screen:
             RadiusTopRight: =5
             Size: =8
             Text: ="+Add Documents"
-            Visible: =If(IsBlank(varApprove)|| varApprove=false,true,false)
+            Visible: =If(IsBlank(varApprove)|| varApprove=false,true,If(varCertificateDetails.Status="Rejected",false,true))
             Width: =123
             X: =1110
             Y: =13
