@@ -779,7 +779,6 @@
                             ).link
                         );
                         Download(varfileLink);
-                        /*
                         UpdateRows.Run(
                             "Proofs Approved",
                             Date_From.SelectedDate,
@@ -788,7 +787,6 @@
                             Date_To.SelectedDate,
                             'Drp_Location List'.SelectedText.Value
                         );
-                        */
                         Notify("Excel sheet downloaded successfully",NotificationType.Success);
                          Navigate('Admin dashBoard');
                         Refresh(CertificationOrder),

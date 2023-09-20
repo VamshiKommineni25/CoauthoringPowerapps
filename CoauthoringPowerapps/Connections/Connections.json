@@ -175,7 +175,8 @@
       "QuestionList_Admin",
       "CertificationOrderHistory",
       "BU-CertificationList",
-      "Target List"
+      "Target List",
+      "CertificationApp-Security"
     ],
     "dependencies": {},
     "dependents": [
