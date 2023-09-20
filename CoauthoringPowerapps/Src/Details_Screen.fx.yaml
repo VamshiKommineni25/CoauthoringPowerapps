@@ -383,8 +383,8 @@ Details_Screen As screen:
                 )
             VerticalAlign: =VerticalAlign.Top
             Visible: =If(varApprove,true,false)
-            Width: =If(Btn_ApproveCert.Text="Approve Certification",146,120)
-            X: =If(Btn_ApproveCert.Text="Approve Certification",1100,1110)
+            Width: =If(Btn_ApproveCert.Text="Approve Certification",146,130)
+            X: =1110
             Y: =13
             ZIndex: =4
 
@@ -3657,14 +3657,14 @@ Details_Screen As screen:
                 BorderColor: =RGBA(166, 166, 166, 1)
                 DelayItemLoading: =true
                 Fill: =RGBA(241, 246, 246, 1)
-                Height: =463
+                Height: =682
                 Items: =LookUp(CertificationOrder,ID=varCertificateDetails.ID).Attachments
                 Layout: =Layout.Vertical
                 LoadingSpinner: =LoadingSpinner.Data
                 TemplatePadding: =0
                 TemplateSize: =86
                 Width: =348
-                Y: =78
+                Y: =80
                 ZIndex: =3
 
                 Rectangle10 As rectangle:
@@ -3674,20 +3674,20 @@ Details_Screen As screen:
                     DisabledFill: =RGBA(166, 166, 166, 1)
                     Fill: =RGBA(255, 255, 255, 1)
                     FocusedBorderThickness: =4
-                    Height: =52
+                    Height: =69
                     HoverFill: =RGBA(255, 255, 255, 1)
                     OnSelect: =Select(Parent)
                     PressedFill: =RGBA(255, 255, 255, 1)
-                    Width: =294
+                    Width: =322
                     X: =12
-                    Y: =10
+                    Y: =9
                     ZIndex: =1
 
                 Title1 As label:
                     Color: =RGBA(189, 25, 11, 1)
                     DisabledColor: =RGBA(166, 166, 166, 1)
                     Font: =Font.'Segoe UI'
-                    FontWeight: =FontWeight.Bold
+                    FontWeight: =FontWeight.Semibold
                     Height: =26
                     OnSelect: =Select(Parent)
                     Overflow: =Overflow.Scroll
@@ -3697,10 +3697,10 @@ Details_Screen As screen:
                     PaddingTop: =0
                     Size: =10
                     Text: =ThisItem.DisplayName
-                    VerticalAlign: =VerticalAlign.Top
+                    VerticalAlign: =VerticalAlign.Bottom
                     Width: =300
-                    X: =14
-                    Y: =18
+                    X: =34
+                    Y: =28
                     ZIndex: =2
 
                 Icon18 As icon.Download:
@@ -3719,8 +3719,8 @@ Details_Screen As screen:
                     PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
                     PressedFill: =RGBA(0, 0, 0, 0)
                     Width: =24
-                    X: =264
-                    Y: =60
+                    X: =288
+                    Y: =29
                     ZIndex: =3
 
     Group8_4 As group:
