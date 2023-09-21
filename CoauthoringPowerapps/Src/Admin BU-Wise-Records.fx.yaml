@@ -185,31 +185,6 @@
             Y: =12
             ZIndex: =6
 
-        lbl_filter_2 As label:
-            Align: =Align.Center
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(148, 148, 148, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            Fill: =RGBA(241, 246, 246, 1)
-            FocusedBorderThickness: =4
-            Font: =Font.'Segoe UI'
-            Height: =26
-            OnSelect: =Set(varNewCert,true)
-            PaddingBottom: =2
-            PaddingLeft: =2
-            PaddingRight: =2
-            PaddingTop: =2
-            Size: =10
-            TabIndex: =0
-            Text: ="Filter"
-            Width: =69
-            X: =90
-            Y: =12
-            ZIndex: =9
-
         lbl_paymnt As label:
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
@@ -430,6 +405,75 @@
                 X: =354
                 Y: =17
                 ZIndex: =12
+
+        grp_Filter_2 As group:
+            Height: =5
+            Width: =5
+            X: =24
+            Y: =13
+            ZIndex: =20
+
+            lbl_filter_6 As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(149, 149, 149, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Fill: =RGBA(241,246,246, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =26
+                Size: =10
+                Text: ="Filter"
+                Width: =69
+                X: =90
+                Y: =13
+                ZIndex: =17
+
+            ico_filter1_5 As icon.ArrowRight:
+                BorderColor: =RGBA(166, 166, 166, 1)
+                Color: |-
+                    =//RGBA(184, 0, 0, 1)
+                    RGBA(201,47,29,1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(220, 220, 220, 1)
+                DisabledFill: =RGBA(0, 0, 0, 0)
+                FocusedBorderThickness: =4
+                Height: =10
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                HoverFill: =RGBA(0, 0, 0, 0)
+                Icon: =Icon.ArrowRight
+                PressedBorderColor: =RGBA(0, 0, 0, 0)
+                PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                PressedFill: =RGBA(0, 0, 0, 0)
+                Width: =14
+                X: =94
+                Y: =18
+                ZIndex: =18
+
+            ico_Filter_5 As icon.ArrowLeft:
+                BorderColor: =RGBA(166, 166, 166, 1)
+                Color: =RGBA(201,47,29,1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(220, 220, 220, 1)
+                DisabledFill: =RGBA(0, 0, 0, 0)
+                FocusedBorderThickness: =4
+                Height: =10
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                HoverFill: =RGBA(0, 0, 0, 0)
+                Icon: =Icon.ArrowLeft
+                PressedBorderColor: =RGBA(0, 0, 0, 0)
+                PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                PressedFill: =RGBA(0, 0, 0, 0)
+                Width: =14
+                X: =94
+                Y: =24
+                ZIndex: =19
 
     con_CertRequestorDetails As groupContainer.manualLayoutContainer:
         ContentLanguage: =

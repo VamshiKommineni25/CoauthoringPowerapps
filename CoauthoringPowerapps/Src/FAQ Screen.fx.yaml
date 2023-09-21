@@ -20,6 +20,7 @@
 
         btn_FAQ_recntQns As button:
             BorderColor: =RGBA(185, 29, 11, 1)
+            BorderThickness: =0.5
             Color: =RGBA(185, 29, 11, 1)
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
             DisabledColor: =RGBA(166, 166, 166, 1)
@@ -101,7 +102,7 @@
 
         cont_FAQ_Qnscontent As groupContainer.manualLayoutContainer:
             AlignInContainer: =AlignInContainer.SetByContainer
-            DropShadow: =DropShadow.Light
+            DropShadow: =DropShadow.Bold
             FillPortions: =0
             Height: =Parent.Height
             LayoutMinHeight: =100
@@ -126,7 +127,7 @@
             txtinp_FAQ_Qns_desc As text:
                 AccessibleLabel: ="txtinp_FAQ_Qns_desc"
                 BorderColor: =RGBA(154, 154, 154, 1)
-                BorderThickness: =2
+                BorderThickness: =0.5
                 Color: =RGBA(154, 154, 154, 1)
                 Default: =""
                 DisabledBorderColor: =RGBA(154, 154, 154, 1)
@@ -163,7 +164,7 @@
             txtinp_FAQ_Qnsqn As text:
                 AccessibleLabel: ="txtinp_FAQ_Qnsqn"
                 BorderColor: =RGBA(154, 154, 154, 1)
-                BorderThickness: =2
+                BorderThickness: =0.5
                 Color: =RGBA(154, 154, 154, 1)
                 Default: =""
                 DisabledBorderColor: =RGBA(154, 154, 154, 1)
@@ -308,6 +309,7 @@
 
             btn_FAQ_Qnsclear As button:
                 BorderColor: =RGBA(185, 29, 11, 1)
+                BorderThickness: =0.5
                 Color: =RGBA(185, 29, 11, 1)
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -1415,7 +1417,7 @@
         BorderColor: =RGBA(154, 154, 154, 1)
         BorderStyle: =BorderStyle.None
         BorderThickness: =1
-        DropShadow: =DropShadow.Light
+        DropShadow: =DropShadow.ExtraBold
         Fill: =RGBA(255, 255, 255, 1)
         Height: =768
         RadiusBottomLeft: =4
@@ -1734,7 +1736,7 @@
                 Size: =8
                 Text: =ThisItem.Created
                 Width: =72
-                X: =283
+                X: =275
                 Y: =5
                 ZIndex: =9
 
