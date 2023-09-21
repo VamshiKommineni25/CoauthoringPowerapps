@@ -384,7 +384,7 @@ Details_Screen As screen:
                 )
             VerticalAlign: =VerticalAlign.Top
             Visible: =If(varApprove,true,false)
-            Width: =If(Btn_ApproveCert.Text="Approve Certification",146,130)
+            Width: =If(Btn_ApproveCert.Text="Approve Certification",142,130)
             X: =1110
             Y: =13
             ZIndex: =4
