@@ -3144,6 +3144,7 @@
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
         Fill: =RGBA(241,246,246, 1)
+        FocusedBorderThickness: =0
         Font: =Font.'Segoe UI'
         Height: =27
         HoverDateFill: =RGBA(200, 200, 200, 1)
@@ -3166,6 +3167,8 @@
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
         Fill: =RGBA(241,246,246, 1)
+        FocusedBorderColor: =RGBA(0,0,0,0)
+        FocusedBorderThickness: =1
         Font: =Font.'Segoe UI'
         Height: =27
         HoverDateFill: =RGBA(200, 200, 200, 1)
@@ -3182,20 +3185,22 @@
     Drp_BUList As dropdown:
         BorderColor: =RGBA(166, 166, 166, 1)
         BorderThickness: =0
-        ChevronBackground: =RGBA(255, 255, 255, 1)
+        ChevronBackground: =RGBA(241,246,246, 1)
         ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
         ChevronDisabledFill: =RGBA(166, 166, 166, 1)
         ChevronFill: =RGBA(33, 33, 33, 1)
-        ChevronHoverBackground: =RGBA(212, 212, 212, 1)
+        ChevronHoverBackground: =RGBA(241,246,246, 1)
         ChevronHoverFill: =RGBA(33, 33, 33, 1)
         Color: =RGBA(51, 51, 51, 1)
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
         Fill: =RGBA(241,246,246, 1)
+        FocusedBorderColor: =RGBA(0,0,0,0)
+        FocusedBorderThickness: =0.5
         Font: =Font.'Segoe UI'
         Height: =27
-        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        HoverBorderColor: =RGBA(241,246,246, 1)
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(241,246,246, 1)
         Items: =Sort('BU-List',Title,SortOrder.Ascending)
@@ -3203,10 +3208,9 @@
         PaddingLeft: =12
         PaddingRight: =5
         PaddingTop: =5
-        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =RGBA(0, 120, 212, 1)
-        SelectionFill: =RGBA(0, 120, 212, 1)
+        PressedBorderColor: =RGBA(241,246,246, 1)
+        PressedFill: =Self.Fill
+        SelectionFill: =RGBA(241,246,246, 1)
         Size: =10
         Width: =91
         X: =957

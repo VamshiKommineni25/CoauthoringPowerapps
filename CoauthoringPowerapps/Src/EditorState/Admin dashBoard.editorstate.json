@@ -21,7 +21,7 @@
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "Set(SideLabelvar,4);\nClearCollect(ColPiechart,Table(\n    {\n        Status: \"Enrolled\",\n        Count: CountRows(\n            Filter(\n                FirstN(\n                    CertificationOrder,\n                    100000\n                ),\n                (DateValue(Created) >= Date_FromDate.SelectedDate && DateValue(Created) <= Date_ToDate.SelectedDate) && BU.Value = Drp_BUList.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BCode',\n                Status = \"Enrolled\"\n            )\n        )\n    },\n    {\n        Status: \"Manager Approved\",\n        Count: CountRows(\n            Filter(\n                FirstN(\n                    CertificationOrder,\n                    100000\n                ),\n                (DateValue(Created) >= Date_FromDate.SelectedDate && DateValue(Created) <= Date_ToDate.SelectedDate) && BU.Value = Drp_BUList.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BCode',\n                Status = \"Manager Approved\"\n            )\n        )\n    },\n    {\n        Status: \"Proofs Uploaded\",\n        Count: CountRows(\n            Filter(\n                FirstN(\n                    CertificationOrder,\n                    100000\n                ),\n                (DateValue(Created) >= Date_FromDate.SelectedDate && DateValue(Created) <= Date_ToDate.SelectedDate) && BU.Value = Drp_BUList.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BCode',\n                Status = \"Proofs Uploaded\"\n            )\n        )\n    },\n    {\n        Status: \"Proofs Approved\",\n        Count: CountRows(\n            Filter(\n                FirstN(\n                    CertificationOrder,\n                    100000\n                ),\n                (DateValue(Created) >= Date_FromDate.SelectedDate && DateValue(Created) <= Date_ToDate.SelectedDate) && BU.Value = Drp_BUList.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BCode',\n                Status = \"Proofs Approved\"\n            )\n        )\n    },\n    {\n        Status: \"Reimbursed\",\n        Count: CountRows(\n            Filter(\n                FirstN(\n                    CertificationOrder,\n                    100000\n                ),\n                (DateValue(Created) >= Date_FromDate.SelectedDate && DateValue(Created) <= Date_ToDate.SelectedDate) && BU.Value = Drp_BUList.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BCode',\n                Status = \"Reimbursed\"\n            )\n        )\n    },\n    {\n        Status: \"Voucher Based\",\n        Count: CountRows(\n            Filter(\n                FirstN(\n                    CertificationOrder,\n                    100000\n                ),\n                (DateValue(Created) >= Date_FromDate.SelectedDate && DateValue(Created) <= Date_ToDate.SelectedDate) && BU.Value = Drp_BUList.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BCode',\n                Status = \"Completed Using Voucher\"\n            )\n        )\n    },\n    {\n        Status: \"With finance Team\",\n        Count: CountRows(\n            Filter(\n                FirstN(\n                    CertificationOrder,\n                    100000\n                ),\n                (DateValue(Created) >= Date_FromDate.SelectedDate && DateValue(Created) <= Date_ToDate.SelectedDate) && BU.Value = Drp_BUList.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BCode',\n                Status = \"Processing with Finance\"\n            )\n        )\n    }\n)\n);\nClearCollect(\n    col_filtercert2,\n    Filter(\n        CertificationOrder,\n        Location = 'Drp_Location List'.SelectedText.Value\n    )\n);\nUpdateContext({varNewCertVisible:false})",
+          "AutoRuleBindingString": "Set(SideLabelvar,4);\nClearCollect(ColPiechart,Table(\n    {\n        Status: \"Enrolled\",\n        Count: CountRows(\n            Filter(\n                FirstN(\n                    CertificationOrder,\n                    100000\n                ),\n                (DateValue(Created) >= Date_FromDate.SelectedDate && DateValue(Created) <= Date_ToDate.SelectedDate) && BU.Value = Drp_BUList.SelectedText.Code,\n                Status = \"Enrolled\"\n            )\n        )\n    },\n    {\n        Status: \"Manager Approved\",\n        Count: CountRows(\n            Filter(\n                FirstN(\n                    CertificationOrder,\n                    100000\n                ),\n                (DateValue(Created) >= Date_FromDate.SelectedDate && DateValue(Created) <= Date_ToDate.SelectedDate) && BU.Value = Drp_BUList.SelectedText.Code,\n                Status = \"Manager Approved\"\n            )\n        )\n    },\n    {\n        Status: \"Proofs Uploaded\",\n        Count: CountRows(\n            Filter(\n                FirstN(\n                    CertificationOrder,\n                    100000\n                ),\n                (DateValue(Created) >= Date_FromDate.SelectedDate && DateValue(Created) <= Date_ToDate.SelectedDate) && BU.Value = Drp_BUList.SelectedText.Code,\n                Status = \"Proofs Uploaded\"\n            )\n        )\n    },\n    {\n        Status: \"Proofs Approved\",\n        Count: CountRows(\n            Filter(\n                FirstN(\n                    CertificationOrder,\n                    100000\n                ),\n                (DateValue(Created) >= Date_FromDate.SelectedDate && DateValue(Created) <= Date_ToDate.SelectedDate) && BU.Value = Drp_BUList.SelectedText.Code,\n                Status = \"Proofs Approved\"\n            )\n        )\n    },\n    {\n        Status: \"Reimbursed\",\n        Count: CountRows(\n            Filter(\n                FirstN(\n                    CertificationOrder,\n                    100000\n                ),\n                (DateValue(Created) >= Date_FromDate.SelectedDate && DateValue(Created) <= Date_ToDate.SelectedDate) && BU.Value = Drp_BUList.SelectedText.Code,\n                Status = \"Reimbursed\"\n            )\n        )\n    },\n    {\n        Status: \"Voucher Based\",\n        Count: CountRows(\n            Filter(\n                FirstN(\n                    CertificationOrder,\n                    100000\n                ),\n                (DateValue(Created) >= Date_FromDate.SelectedDate && DateValue(Created) <= Date_ToDate.SelectedDate) && BU.Value = Drp_BUList.SelectedText.Code,\n                Status = \"Completed Using Voucher\"\n            )\n        )\n    },\n    {\n        Status: \"With finance Team\",\n        Count: CountRows(\n            Filter(\n                FirstN(\n                    CertificationOrder,\n                    100000\n                ),\n                (DateValue(Created) >= Date_FromDate.SelectedDate && DateValue(Created) <= Date_ToDate.SelectedDate) && BU.Value = Drp_BUList.SelectedText.Code,\n                Status = \"Processing with Finance\"\n            )\n        )\n    }\n)\n);\nClearCollect(\n    col_filtercert2,\n    Filter(\n        CertificationOrder,\n        Location = 'Drp_Location List'.SelectedText.Value\n    )\n);\nUpdateContext({varNewCertVisible:false})",
           "InvariantPropertyName": "OnVisible",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
@@ -5856,7 +5856,14 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        "FocusedBorderThickness",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "4",
+          "InvariantPropertyName": "FocusedBorderThickness",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
@@ -6149,7 +6156,14 @@
         "HoverBorderColor",
         "DisabledBorderColor",
         "BorderStyle",
-        "FocusedBorderColor",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "Self.BorderColor",
+          "InvariantPropertyName": "FocusedBorderColor",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
@@ -6190,7 +6204,14 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        "FocusedBorderThickness",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "4",
+          "InvariantPropertyName": "FocusedBorderThickness",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
@@ -6457,20 +6478,69 @@
         "ChevronFill",
         "ChevronHoverFill",
         "ChevronDisabledFill",
-        "ChevronBackground",
-        "ChevronHoverBackground",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "RGBA(255, 255, 255, 1)",
+          "InvariantPropertyName": "ChevronBackground",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "RGBA(212, 212, 212, 1)",
+          "InvariantPropertyName": "ChevronHoverBackground",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "ChevronDisabledBackground",
-        "SelectionFill",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "RGBA(0, 120, 212, 1)",
+          "InvariantPropertyName": "SelectionFill",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "Color",
         "HoverColor",
-        "PressedColor",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "RGBA(255, 255, 255, 1)",
+          "InvariantPropertyName": "PressedColor",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "DisabledColor",
         "BorderColor",
         "DisabledBorderColor",
-        "HoverBorderColor",
-        "PressedBorderColor",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "ColorFade(RGBA(0, 120, 212, 1), -30%)",
+          "InvariantPropertyName": "HoverBorderColor",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "ColorFade(RGBA(0, 120, 212, 1), -30%)",
+          "InvariantPropertyName": "PressedBorderColor",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "BorderStyle",
-        "FocusedBorderColor",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "Self.BorderColor",
+          "InvariantPropertyName": "FocusedBorderColor",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
@@ -6480,7 +6550,14 @@
           "NameMapSourceSchema": "?"
         },
         "DisabledFill",
-        "PressedFill",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "RGBA(0, 120, 212, 1)",
+          "InvariantPropertyName": "PressedFill",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
@@ -6519,7 +6596,14 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        "FocusedBorderThickness",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "4",
+          "InvariantPropertyName": "FocusedBorderThickness",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
