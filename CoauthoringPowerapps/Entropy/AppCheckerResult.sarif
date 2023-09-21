@@ -3014,36 +3014,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Admin dashBoard'.'Glry_Total Cert per BU/Provider'.'Radio_Total Cert per BU/Provider'.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Admin dashBoard'.'Glry_Total Cert per BU/Provider'.'Radio_Total Cert per BU/Provider'.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Admin dashBoard",
-                "type": "'Admin dashBoard'.'Glry_Total Cert per BU/Provider'.'Radio_Total Cert per BU/Provider'"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "'Admin dashBoard'.Date_FromDate.AccessibleLabel"
                 }
               ],
@@ -6449,7 +6419,7 @@
                 ],
                 "level": "Medium",
                 "primaryCategory": "performance",
-                "whyFix": "Each control consumes resources, and an app may become slow or unresponsive if a screen has too many controls. The estimated complexity of \"Admin dashBoard\" is 308, which exceeds the maximum threshold recommended (300)."
+                "whyFix": "Each control consumes resources, and an app may become slow or unresponsive if a screen has too many controls. The estimated complexity of \"Admin dashBoard\" is 303, which exceeds the maximum threshold recommended (300)."
               }
             }
           ],

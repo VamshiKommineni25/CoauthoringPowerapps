@@ -23,16 +23,33 @@ Details_Screen As screen:
             )
         );
 
+    Inp_voucher As text:
+        AccessibleLabel: ="TextInput1"
+        BorderColor: =RGBA(153, 153, 153, 1)
+        BorderThickness: =0.1
+        Color: =RGBA(0, 0, 0, 1)
+        Default: =""
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
+        Height: =20
+        HintText: ="% of Voucher"
+        HoverBorderColor: =RGBA(0, 18, 107, 1)
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(186, 202, 226, 1)
+        Size: =9
+        Visible: =Rad_PaidBy.Selected.Value="Paid with Voucher" And varPAY1
+        Width: =102
+        X: =777
+        Y: =453
+        ZIndex: =1
+
     c_Header_7 As c_Header:
         CartOnselect: ='EnrollCertificate Screen'
         FAQOnselect: ='FAQ Screen'
         Height: =101
-
-    C_leftPanel_6 As C_leftPanel:
-        NavigateTo: =Switch(SideLabelvar,1,Home_Screen,2,Register_Screen,3,'Request Screen',4,'Admin dashBoard')
-        Width: =93
-        Y: =85
-        ZIndex: =2
+        ZIndex: =3
 
     Cntr_OperationBtns As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Semibold
@@ -45,7 +62,7 @@ Details_Screen As screen:
         Width: =1256
         X: =93
         Y: =101
-        ZIndex: =2
+        ZIndex: =4
 
         Button3_3 As button:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -102,7 +119,16 @@ Details_Screen As screen:
             RadiusTopRight: =5
             Size: =8
             Text: ="+Add Documents"
-            Visible: =If(IsBlank(varApprove)|| varApprove=false,true,If(varCertificateDetails.Status="Rejected",false,true))
+            Visible: |-
+                =If(
+                    IsBlank(varApprove) || varApprove = false And varCertificateDetails.Status <> "Rejected",
+                    true,
+                    If(
+                        varCertificateDetails.Status = "Rejected",
+                        false,
+                        true
+                    )
+                )
             Width: =123
             X: =1110
             Y: =13
@@ -421,6 +447,12 @@ Details_Screen As screen:
             Y: =13
             ZIndex: =5
 
+    C_leftPanel_6 As C_leftPanel:
+        NavigateTo: =Switch(SideLabelvar,1,Home_Screen,2,Register_Screen,3,'Request Screen',4,'Admin dashBoard')
+        Width: =93
+        Y: =85
+        ZIndex: =5
+
     Container17_3 As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Semibold
         Fill: =RGBA(255, 255, 255, 1)
@@ -432,7 +464,7 @@ Details_Screen As screen:
         Width: =1256
         X: =93
         Y: =162
-        ZIndex: =3
+        ZIndex: =6
 
         Img_Certificate As image:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -450,7 +482,7 @@ Details_Screen As screen:
             Width: =52
             X: =24
             Y: =17
-            ZIndex: =3
+            ZIndex: =1
 
         Lbl_CertName As label:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -469,7 +501,7 @@ Details_Screen As screen:
             Width: = (Len (Self.Text)*14)
             X: =88
             Y: =30
-            ZIndex: =5
+            ZIndex: =2
 
         Cntr_CertDetails As groupContainer.manualLayoutContainer:
             Height: =170
@@ -480,7 +512,7 @@ Details_Screen As screen:
             Width: =600
             X: =31
             Y: =81
-            ZIndex: =6
+            ZIndex: =3
 
             C_Parameters_2 As C_Parameters:
                 Height: =200
@@ -593,7 +625,7 @@ Details_Screen As screen:
             Width: =500
             X: =30
             Y: =493
-            ZIndex: =8
+            ZIndex: =4
 
         Rect_Blueline3 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -608,7 +640,7 @@ Details_Screen As screen:
             Width: =1197
             X: =24.5
             Y: =252
-            ZIndex: =13
+            ZIndex: =5
 
         Lbl_txtPaymentinfo As label:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -626,7 +658,7 @@ Details_Screen As screen:
             Width: =185
             X: =31
             Y: =264
-            ZIndex: =14
+            ZIndex: =6
 
         Lbl_txtPaidBy As label:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -643,7 +675,7 @@ Details_Screen As screen:
             Text: ="Paid with"
             X: =31
             Y: =293
-            ZIndex: =15
+            ZIndex: =7
 
         Label22_15 As label:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -661,7 +693,7 @@ Details_Screen As screen:
             Width: =10
             X: =180
             Y: =293
-            ZIndex: =16
+            ZIndex: =8
 
         Label22_16 As label:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -679,7 +711,7 @@ Details_Screen As screen:
             Width: =10
             X: =180
             Y: =319
-            ZIndex: =17
+            ZIndex: =9
 
         Lbl_txtPaymentDate As label:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -696,7 +728,7 @@ Details_Screen As screen:
             Text: ="Date"
             X: =31
             Y: =320
-            ZIndex: =18
+            ZIndex: =10
 
         Lbl_PaymentDate As label:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -713,7 +745,7 @@ Details_Screen As screen:
             Text: =varCertificateDetails.'Examination Date'
             X: =209
             Y: =321
-            ZIndex: =19
+            ZIndex: =11
 
         Rect_Blueline2 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -728,7 +760,7 @@ Details_Screen As screen:
             Width: =1197
             X: =24
             Y: =358
-            ZIndex: =20
+            ZIndex: =12
 
         Lbl_txtDescription As label:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -746,7 +778,7 @@ Details_Screen As screen:
             Width: =185
             X: =31
             Y: =370
-            ZIndex: =21
+            ZIndex: =13
 
         Lbl_DetailDecsription As label:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -765,7 +797,7 @@ Details_Screen As screen:
             Width: =1157
             X: =36
             Y: =395
-            ZIndex: =22
+            ZIndex: =14
 
         Rect_Blueline As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -780,7 +812,7 @@ Details_Screen As screen:
             Width: =1197
             X: =24.5
             Y: =448
-            ZIndex: =23
+            ZIndex: =15
 
         Lbl_statusInformation As label:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -798,7 +830,7 @@ Details_Screen As screen:
             Width: =185
             X: =31
             Y: =462
-            ZIndex: =24
+            ZIndex: =16
 
         Lbl_certStatus As label:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -815,7 +847,7 @@ Details_Screen As screen:
             Text: =varCertificateDetails.Status
             X: =204
             Y: =496
-            ZIndex: =25
+            ZIndex: =17
 
         Lbl_StatusInfo As label:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -832,7 +864,7 @@ Details_Screen As screen:
             Text: =If(IsBlank(varCertificateDetails.'Proofs Uploaded on'),"Not Uploaded","Completed")
             X: =204
             Y: =524
-            ZIndex: =26
+            ZIndex: =18
 
         Lbl_ReimburesedDate As label:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -849,7 +881,7 @@ Details_Screen As screen:
             Text: =varCertificateDetails.Created
             X: =204
             Y: =551
-            ZIndex: =27
+            ZIndex: =19
 
         Btn_Price As button:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -882,7 +914,7 @@ Details_Screen As screen:
             Width: =150
             X: =Lbl_CertName.X+Lbl_CertName.Width
             Y: =26
-            ZIndex: =28
+            ZIndex: =20
 
         Rad_PaidBy As radio:
             BorderColor: =RGBA(51, 51, 51, 1)
@@ -924,189 +956,47 @@ Details_Screen As screen:
             Width: =556
             X: =204
             Y: =283
+            ZIndex: =21
+
+        Label3 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            Height: =17
+            Size: =10
+            Text: |-
+                ="Reason : ("&"" &")"
+            Visible: =If(varCertificateDetails.Status="Rejected",true,false)
+            Width: =942
+            X: =294
+            Y: =496
+            ZIndex: =22
+
+        Container1 As groupContainer.manualLayoutContainer:
+            DropShadow: =DropShadow.ExtraBold
+            Fill: =RGBA(241, 246, 246, 1)
+            Height: =361
+            RadiusBottomLeft: =10
+            RadiusBottomRight: =10
+            RadiusTopLeft: =10
+            RadiusTopRight: =10
+            Visible: =varRevise
+            Width: =664
+            X: =572
+            Y: =17
             ZIndex: =29
 
-        RevisePopUp As group:
-            Height: =5
-            Width: =5
-            X: =-284
-            Y: =-38
-            ZIndex: =36
-
-            Rectangle12 As rectangle:
-                BorderColor: =RGBA(0, 18, 107, 1)
-                Fill: =RGBA(247, 222, 218, 1)
-                Height: =361
-                Visible: =varRevise
-                Width: =664
-                X: =290
-                Y: =81
-                ZIndex: =30
-
-            rect_BG01 As rectangle:
-                BorderColor: =RGBA(0, 18, 107, 1)
-                Fill: =RGBA(247, 222, 218, 1)
-                Height: =361
-                Visible: =varRevise
-                Width: =664
-                X: =290
-                Y: =83
-                ZIndex: =31
-
-            TextInput4 As text:
-                AccessibleLabel: ="TextInput4"
-                BorderColor: =RGBA(247, 222, 218, 1)
-                BorderThickness: =2
-                Clear: =true
-                Color: =RGBA(0, 0, 0, 1)
-                Default: =
-                DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                DisabledFill: =RGBA(244, 244, 244, 1)
-                FocusedBorderColor: =RGBA(247, 222, 218, 1)
-                FocusedBorderThickness: =2
-                Height: =203
-                HintText: ="Enter Comment"
-                HoverBorderColor: =RGBA(247, 222, 218, 1)
-                HoverColor: =RGBA(0, 0, 0, 1)
-                HoverFill: =RGBA(255, 255, 255, 1)
-                Mode: =TextMode.MultiLine
-                RadiusBottomLeft: =20
-                RadiusBottomRight: =20
-                RadiusTopLeft: =20
-                RadiusTopRight: =20
-                Size: =10
-                Visible: =varRevise
-                Width: =632
-                X: =306
-                Y: =168
-                ZIndex: =32
-
-            Label45 As label:
-                Align: =Align.Center
-                BorderColor: =RGBA(0, 18, 107, 1)
-                Color: =RGBA(255, 255, 255, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                Fill: =RGBA(0, 0, 0, 1)
-                Height: =46
-                Size: =13
-                Text: =If(varMngrReject=true,"Reason for Rejection", "Reason for Certification Proofs Revise")
-                Visible: =varRevise
-                Width: =664
-                X: =290
-                Y: =81
-                ZIndex: =33
-
-            Button10 As button:
-                DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                DisabledFill: =RGBA(244, 244, 244, 1)
-                Fill: =RGBA(23, 151, 49, 1)
-                FontWeight: =FontWeight.Semibold
-                Height: =35
-                HoverColor: =RGBA(255, 255, 255, 1)
-                HoverFill: =RGBA(23, 151, 49, 1)
-                OnSelect: |
-                    =If(
-                        IsBlank(TextInput4.Text),
-                        Notify(
-                            "Fill the details",
-                            NotificationType.Error,
-                            3000
-                        ),
-                        If(
-                            Btn_ReviseCert.Text = "Reject",
-                            Set(
-                                varReason,
-                                TextInput4.Text
-                            );
-                            ProofsRevisionMail.Run(
-                                varRequestorEmail,
-                                varTitle,
-                                varTech,
-                                varProvider,
-                                varCost,
-                                varRole,
-                                Text(varTentativeDate,"yyyy-mm-dd"),
-                                varReason,
-                                varRequestorName,
-                                varMngrReject 
-                            );
-                            Notify(
-                                "Your Rejection mail has sent to Requestor",
-                                NotificationType.Success,
-                                3000
-                            );
-                            UpdateIf(
-                                    CertificationOrder,
-                                    ID = varCertificateDetails.ID,
-                                    {Status: "Rejected"}
-                                );
-                            Set(varRevise,false) && Set(varMngrReject,false),
-                    
-                            Set(
-                                varReason,
-                                TextInput4.Text
-                            );
-                            ProofsRevisionMail.Run(
-                                varRequestorEmail,
-                                varTitle,
-                                varTech,
-                                varProvider,
-                                varCost,
-                                varRole,
-                                varTentativeDate,
-                                varReason,
-                                varRequestorName,
-                                varMngrReject 
-                            );
-                            Notify(
-                                "Proof Revision mail has sent to Requestor",
-                                NotificationType.Success,
-                                3000
-                            );
-                             Set(varRevise,false) && Set(varMngrReject,false)
-                        )
-                    );
-                PressedColor: =RGBA(255, 255, 255, 1)
-                PressedFill: =RGBA(23, 151, 49, 1)
-                RadiusBottomLeft: =12
-                RadiusBottomRight: =12
-                RadiusTopLeft: =12
-                RadiusTopRight: =12
-                Size: =10
-                Text: ="Submit"
-                Visible: =varRevise
-                Width: =94
-                X: =723
-                Y: =385
-                ZIndex: =34
-
-            Button10_2 As button:
-                BorderColor: =RGBA(189, 25, 11, 1)
-                Color: =RGBA(189, 25, 11, 1)
-                DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                DisabledFill: =RGBA(244, 244, 244, 1)
-                Fill: =RGBA(255, 255, 255, 1)
-                FontWeight: =FontWeight.Semibold
-                Height: =35
-                HoverColor: =RGBA(189, 25, 11, 1)
-                HoverFill: =RGBA(255, 255, 255, 1)
-                OnSelect: =Set(varRevise,false)
-                PressedColor: =RGBA(189, 25, 11, 1)
-                PressedFill: =RGBA(255, 255, 255, 1)
-                RadiusBottomLeft: =12
-                RadiusBottomRight: =12
-                RadiusTopLeft: =12
-                RadiusTopRight: =12
-                Size: =10
-                Text: ="Cancel"
-                Visible: =varRevise
-                Width: =94
-                X: =618
-                Y: =385
-                ZIndex: =35
+            RevisePopUp As group:
+                Height: =5
+                Width: =5
+                X: =-250
+                Y: =-41
+                ZIndex: =7
 
     Cntr_AttachDocs As groupContainer.manualLayoutContainer:
         Height: =768
@@ -1117,7 +1007,7 @@ Details_Screen As screen:
         Visible: =Doc_PanelView
         Width: =390
         X: =976
-        ZIndex: =5
+        ZIndex: =7
 
         Container17_4 As groupContainer.manualLayoutContainer:
             DropShadow: =DropShadow.ExtraBold
@@ -3559,7 +3449,7 @@ Details_Screen As screen:
     C_AlertPanel_2 As C_AlertPanel:
         Visible: =varAlert
         X: =976
-        ZIndex: =6
+        ZIndex: =8
 
     C_Profile_2 As C_Profile:
         Height: =244
@@ -3567,29 +3457,7 @@ Details_Screen As screen:
         Visible: =varProfileView
         Width: =392
         X: =974
-        ZIndex: =7
-
-    Inp_voucher As text:
-        AccessibleLabel: ="TextInput1"
-        BorderColor: =RGBA(153, 153, 153, 1)
-        BorderThickness: =0.1
-        Color: =RGBA(0, 0, 0, 1)
-        Default: =""
-        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        FocusedBorderThickness: =4
-        Height: =20
-        HintText: ="% of Voucher"
-        HoverBorderColor: =RGBA(0, 18, 107, 1)
-        HoverColor: =RGBA(0, 0, 0, 1)
-        HoverFill: =RGBA(186, 202, 226, 1)
-        Size: =9
-        Visible: =Rad_PaidBy.Selected.Value="Paid with Voucher" And varPAY1
-        Width: =102
-        X: =777
-        Y: =453
-        ZIndex: =8
+        ZIndex: =9
 
     Container16_6 As groupContainer.manualLayoutContainer:
         Height: =768
@@ -3742,5 +3610,5 @@ Details_Screen As screen:
             Width: =14
             X: =755
             Y: =453
-            ZIndex: =9
+            ZIndex: =2
 
