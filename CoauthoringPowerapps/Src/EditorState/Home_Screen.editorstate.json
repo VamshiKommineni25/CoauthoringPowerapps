@@ -1138,7 +1138,7 @@
       },
       "MetaDataIDKey": "",
       "Name": "C_Loadingspinner_2",
-      "ParentIndex": 1,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1236,7 +1236,7 @@
       },
       "MetaDataIDKey": "",
       "Name": "C_Profile_1",
-      "ParentIndex": 2,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3404,7 +3404,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Cntr_Details",
-      "ParentIndex": 22,
+      "ParentIndex": 20,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -7203,7 +7203,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "ico_Filter_2",
-      "ParentIndex": 21,
+      "ParentIndex": 22,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -7397,7 +7397,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "ico_filter1_2",
-      "ParentIndex": 20,
+      "ParentIndex": 21,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
