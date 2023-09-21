@@ -103,7 +103,8 @@
                 CertificationOrder,
                 Location = 'Drp_Location List'.SelectedText.Value
             )
-        )
+        );
+        UpdateContext({varNewCertVisible:false})
 
     Rectangle9 As rectangle:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -2065,38 +2066,6 @@
             Y: =395
             ZIndex: =14
 
-    Label19 As label:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =2
-        Color: =RGBA(51, 51, 51, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        FocusedBorderThickness: =4
-        Font: =Font.'Segoe UI'
-        Height: =36
-        Size: =10
-        Text: ="No data to display"
-        Visible: |-
-            =If(
-                (CountRows(
-                    Filter(
-                        FirstN(
-                            CertificationOrder,
-                            100000
-                        ),
-                        (DateValue(Created) >= Date_FromDate.SelectedDate && DateValue(Created) <= Date_ToDate.SelectedDate) && BU.Value = Drp_BUList.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BCode'  
-                        
-                    )
-                ) = 0) && ('Glry_Total Cert per BU/Provider'.Selected.Name = "Total Certifications Per BU"),
-                true,
-                false
-            )
-        Width: =280
-        X: =607
-        Y: =278
-        ZIndex: =18
-
     Grp_Filter_Analysis_1 As group:
         Height: =5
         Width: =5
@@ -2224,6 +2193,38 @@
             X: =670
             Y: =448
             ZIndex: =6
+
+    Label19 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Height: =36
+        Size: =10
+        Text: ="No data to display"
+        Visible: |-
+            =If(
+                (CountRows(
+                    Filter(
+                        FirstN(
+                            CertificationOrder,
+                            100000
+                        ),
+                        (DateValue(Created) >= Date_FromDate.SelectedDate && DateValue(Created) <= Date_ToDate.SelectedDate) && BU.Value = Drp_BUList.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BCode'  
+                        
+                    )
+                ) = 0) && ('Glry_Total Cert per BU/Provider'.Selected.Name = "Total Certifications Per BU"),
+                true,
+                false
+            )
+        Width: =280
+        X: =607
+        Y: =278
+        ZIndex: =18
 
     Label22 As label:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -2445,75 +2446,6 @@
             Y: =449
             ZIndex: =11
 
-    grp_Filter_1 As group:
-        Height: =5
-        Width: =5
-        X: =40
-        Y: =40
-        ZIndex: =36
-
-        lbl_filter_5 As label:
-            Align: =Align.Center
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(149, 149, 149, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            Fill: =RGBA(241,246,246, 1)
-            FocusedBorderThickness: =4
-            Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Semibold
-            Height: =34
-            Size: =10
-            Text: ="Filter"
-            Width: =69
-            X: =106
-            Y: =443
-            ZIndex: =26
-
-        ico_filter1_4 As icon.ArrowRight:
-            BorderColor: =RGBA(166, 166, 166, 1)
-            Color: |-
-                =//RGBA(184, 0, 0, 1)
-                RGBA(201,47,29,1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(220, 220, 220, 1)
-            DisabledFill: =RGBA(0, 0, 0, 0)
-            FocusedBorderThickness: =4
-            Height: =10
-            HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-            HoverFill: =RGBA(0, 0, 0, 0)
-            Icon: =Icon.ArrowRight
-            PressedBorderColor: =RGBA(0, 0, 0, 0)
-            PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-            PressedFill: =RGBA(0, 0, 0, 0)
-            Width: =14
-            X: =106
-            Y: =453
-            ZIndex: =28
-
-        ico_Filter_4 As icon.ArrowLeft:
-            BorderColor: =RGBA(166, 166, 166, 1)
-            Color: =RGBA(201,47,29,1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(220, 220, 220, 1)
-            DisabledFill: =RGBA(0, 0, 0, 0)
-            FocusedBorderThickness: =4
-            Height: =10
-            HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-            HoverFill: =RGBA(0, 0, 0, 0)
-            Icon: =Icon.ArrowLeft
-            PressedBorderColor: =RGBA(0, 0, 0, 0)
-            PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-            PressedFill: =RGBA(0, 0, 0, 0)
-            Width: =14
-            X: =106
-            Y: =459
-            ZIndex: =30
-
     RevisePopUp_1 As group:
         Height: =5
         Width: =5
@@ -2662,6 +2594,75 @@
             X: =572
             Y: =565
             ZIndex: =31
+
+    grp_Filter_1 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =36
+
+        lbl_filter_5 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(149, 149, 149, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(241,246,246, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =34
+            Size: =10
+            Text: ="Filter"
+            Width: =69
+            X: =106
+            Y: =443
+            ZIndex: =26
+
+        ico_filter1_4 As icon.ArrowRight:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            Color: |-
+                =//RGBA(184, 0, 0, 1)
+                RGBA(201,47,29,1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(220, 220, 220, 1)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
+            Height: =10
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Icon: =Icon.ArrowRight
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Width: =14
+            X: =106
+            Y: =453
+            ZIndex: =28
+
+        ico_Filter_4 As icon.ArrowLeft:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            Color: =RGBA(201,47,29,1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(220, 220, 220, 1)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
+            Height: =10
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Icon: =Icon.ArrowLeft
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Width: =14
+            X: =106
+            Y: =459
+            ZIndex: =30
 
     Cntr_Recent_Request As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.ExtraBold
@@ -2996,7 +2997,6 @@
 
             Dwn_Icon As icon.Download:
                 BorderColor: =RGBA(166, 166, 166, 1)
-                Color: =RGBA(0, 108, 191, 1)
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(220, 220, 220, 1)
                 DisabledFill: =RGBA(0, 0, 0, 0)
@@ -3038,148 +3038,6 @@
         X: =40
         Y: =40
         ZIndex: =39
-
-        lbl_filter_4 As label:
-            Align: =Align.Center
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(149, 149, 149, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            Fill: =RGBA(241,246,246, 1)
-            FocusedBorderThickness: =4
-            Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Semibold
-            Height: =26
-            Size: =10
-            Text: ="Filter"
-            Width: =69
-            X: =106
-            Y: =111
-            ZIndex: =20
-
-        ico_filter1_3 As icon.ArrowRight:
-            BorderColor: =RGBA(166, 166, 166, 1)
-            Color: |-
-                =//RGBA(184, 0, 0, 1)
-                RGBA(201,47,29,1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(220, 220, 220, 1)
-            DisabledFill: =RGBA(0, 0, 0, 0)
-            FocusedBorderThickness: =4
-            Height: =10
-            HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-            HoverFill: =RGBA(0, 0, 0, 0)
-            Icon: =Icon.ArrowRight
-            PressedBorderColor: =RGBA(0, 0, 0, 0)
-            PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-            PressedFill: =RGBA(0, 0, 0, 0)
-            Width: =14
-            X: =110
-            Y: =116
-            ZIndex: =22
-
-        ico_Filter_3 As icon.ArrowLeft:
-            BorderColor: =RGBA(166, 166, 166, 1)
-            Color: =RGBA(201,47,29,1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(220, 220, 220, 1)
-            DisabledFill: =RGBA(0, 0, 0, 0)
-            FocusedBorderThickness: =4
-            Height: =10
-            HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-            HoverFill: =RGBA(0, 0, 0, 0)
-            Icon: =Icon.ArrowLeft
-            PressedBorderColor: =RGBA(0, 0, 0, 0)
-            PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-            PressedFill: =RGBA(0, 0, 0, 0)
-            Width: =14
-            X: =110
-            Y: =122
-            ZIndex: =24
-
-        Date_FromDate As datepicker:
-            BorderColor: =RGBA(166, 166, 166, 1)
-            BorderThickness: =0
-            CalendarHeaderFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-            Color: =RGBA(51, 51, 51, 1)
-            DefaultDate: =Today()-90
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
-            Fill: =RGBA(241,246,246, 1)
-            Font: =Font.'Segoe UI'
-            Height: =27
-            HoverDateFill: =RGBA(200, 200, 200, 1)
-            IconBackground: =RGBA(0, 0, 0, 0)
-            IconFill: =RGBA(153, 153, 153, 1)
-            PaddingTop: =5
-            SelectedDateFill: =RGBA(0, 120, 212, 1)
-            Size: =10
-            Width: =113
-            X: =670
-            Y: =110
-            ZIndex: =32
-
-        Date_ToDate As datepicker:
-            BorderColor: =RGBA(166, 166, 166, 1)
-            BorderThickness: =0
-            CalendarHeaderFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
-            Fill: =RGBA(241,246,246, 1)
-            Font: =Font.'Segoe UI'
-            Height: =27
-            HoverDateFill: =RGBA(200, 200, 200, 1)
-            IconBackground: =RGBA(0, 0, 0, 0)
-            IconFill: =RGBA(153, 153, 153, 1)
-            PaddingTop: =5
-            SelectedDateFill: =RGBA(0, 120, 212, 1)
-            Size: =10
-            Width: =113
-            X: =790
-            Y: =110
-            ZIndex: =33
-
-        Drp_BUList As dropdown:
-            BorderColor: =RGBA(166, 166, 166, 1)
-            BorderThickness: =0
-            ChevronBackground: =RGBA(255, 255, 255, 1)
-            ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
-            ChevronDisabledFill: =RGBA(166, 166, 166, 1)
-            ChevronFill: =RGBA(33, 33, 33, 1)
-            ChevronHoverBackground: =RGBA(212, 212, 212, 1)
-            ChevronHoverFill: =RGBA(33, 33, 33, 1)
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
-            Fill: =RGBA(241,246,246, 1)
-            FocusedBorderColor: =RGBA(0,0,0,0)
-            Font: =Font.'Segoe UI'
-            Height: =27
-            HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-            HoverColor: =RGBA(51, 51, 51, 1)
-            HoverFill: =RGBA(212, 212, 212, 1)
-            Items: =Sort('BU-List',Title,SortOrder.Ascending)
-            PaddingBottom: =5
-            PaddingLeft: =12
-            PaddingRight: =5
-            PaddingTop: =5
-            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-            PressedColor: =RGBA(255, 255, 255, 1)
-            PressedFill: =RGBA(0, 120, 212, 1)
-            SelectionFill: =RGBA(0, 120, 212, 1)
-            Size: =10
-            Width: =91
-            X: =922
-            Y: =110
-            ZIndex: =34
 
         Label1 As label:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -3228,47 +3086,10 @@
             Y: =109
             ZIndex: =36
 
-        "'Glry_Total Cert per BU/Provider' As gallery.galleryHorizontal":
-            BorderColor: =RGBA(166, 166, 166, 1)
-            DelayItemLoading: =true
-            Height: =51
-            Items: |-
-                =//Table({Name:"My Certifications"},{Name:"Assigned to"})
-                Table({Name:"Total Certifications Per Provider"},{Name:"Total Certifications Per BU"})
-            LoadingSpinner: =LoadingSpinner.Data
-            ShowScrollbar: =false
-            TemplateSize: =219
-            Width: =452
-            X: =175
-            Y: =98
-            ZIndex: =37
-
-            "'Radio_Total Cert per BU/Provider' As radio":
-                BorderColor: =RGBA(51, 51, 51, 1)
-                BorderStyle: =BorderStyle.None
-                BorderThickness: =2
-                Color: =RGBA(185, 29, 11, 1)
-                Default: ="Total Certifications Per Provider"
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                Fill: =RGBA(241,246,246, 1)
-                FocusedBorderThickness: =4
-                Font: =Font.'Segoe UI'
-                Height: =36
-                HoverColor: =RGBA(51, 51, 51, 1)
-                HoverFill: =RGBA(0, 0, 0, 0)
-                Items: =ThisItem
-                OnSelect: =Select(Parent)
-                PaddingBottom: =5
-                PaddingTop: =5
-                PressedColor: =RGBA(51, 51, 51, 1)
-                PressedFill: =RGBA(0, 0, 0, 0)
-                RadioBorderColor: =RGBA(51, 51, 51, 1)
-                RadioSelectionFill: =If(ThisItem.IsSelected=true,RGBA(185, 29, 11, 1),RGBA(136, 147, 176, 1))
-                RadioSize: =20
-                Size: =8
-                Width: =198
-                X: =15
-                Y: =5
-                ZIndex: =1
+    Grp_Filter_Analysis As group:
+        Height: =5
+        Width: =5
+        X: =-53
+        Y: =-57
+        ZIndex: =45
 
