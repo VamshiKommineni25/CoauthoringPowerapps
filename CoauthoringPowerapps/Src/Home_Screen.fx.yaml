@@ -623,6 +623,7 @@ Home_Screen As screen:
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
             DisabledColor: =RGBA(220, 220, 220, 1)
             DisabledFill: =RGBA(0, 0, 0, 0)
+            FocusedBorderColor: =RGBA(0,0,0,0)
             FocusedBorderThickness: =4
             Height: =15
             HoverBorderColor: =RGBA(0, 0, 0, 0)
@@ -656,7 +657,7 @@ Home_Screen As screen:
             PressedFill: =RGBA(0, 0, 0, 0)
             TabIndex: =0
             Width: =15
-            X: =497
+            X: =490
             Y: =18
             ZIndex: =4
 
@@ -907,6 +908,7 @@ Home_Screen As screen:
                     DisabledBorderColor: =RGBA(0, 0, 0, 0)
                     DisabledColor: =RGBA(220, 220, 220, 1)
                     DisabledFill: =RGBA(0, 0, 0, 0)
+                    FocusedBorderColor: =RGBA(0,0,0,0)
                     FocusedBorderThickness: =4
                     Height: =15
                     HoverBorderColor: =RGBA(0, 0, 0, 0)
@@ -2416,6 +2418,7 @@ Home_Screen As screen:
 
         Btn_DwnForm_1 As button:
             BorderColor: =RGBA(201,47,29,1)
+            BorderThickness: =1
             Color: =RGBA(201,47,29,1)
             DisabledBorderColor: =Self.BorderColor
             DisabledColor: =RGBA(166, 166, 166, 1)

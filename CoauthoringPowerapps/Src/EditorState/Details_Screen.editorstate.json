@@ -2701,7 +2701,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Btn_AddDocs",
-      "ParentIndex": 3,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2945,7 +2945,14 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        "Y",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "Y",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
@@ -3035,7 +3042,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Btn_ApproveCert",
-      "ParentIndex": 4,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4221,7 +4228,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Btn_ReviseCert",
-      "ParentIndex": 2,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4639,7 +4646,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Btn_ViewDocs",
-      "ParentIndex": 1,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -5703,7 +5710,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Button3_3",
-      "ParentIndex": 0,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

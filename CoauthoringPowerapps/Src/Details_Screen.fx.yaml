@@ -121,10 +121,10 @@ Details_Screen As screen:
             Text: ="+Add Documents"
             Visible: |-
                 =If(
-                    IsBlank(varApprove) || varApprove = false And varCertificateDetails.Status <> "Rejected",
+                    IsBlank(varApprove) || (varApprove = false And varCertificateDetails.Status <> "Rejected" And varCertificateDetails.Status <> "Enrolled"),
                     true,
                     If(
-                        varCertificateDetails.Status = "Rejected",
+                        varCertificateDetails.Status = "Rejected" || varCertificateDetails.Status = "Enrolled",
                         false,
                         true
                     )
@@ -296,8 +296,7 @@ Details_Screen As screen:
             DisabledFill: =RGBA(244, 244, 244, 1)
             DisplayMode: |-
                 =If(
-                    (varCertificateDetails.Status = "Proofs Uploaded" And (varCertificateDetails.PaymentMode <> "Cash") And (varCertificateDetails.PaymentMode <> "Advance Payment") And (varCertificateDetails.PaymentMode <> "Voucher")And 
-                    varUserLevel in [
+                    (varCertificateDetails.Status = "Proofs Uploaded" And (varCertificateDetails.PaymentMode <> "Cash") And (varCertificateDetails.PaymentMode <> "Advance Payment") And (varCertificateDetails.PaymentMode <> "Voucher") And varUserLevel in [
                         "SUPER-ADMIN",
                         "ADMIN"
                     ]),
@@ -306,7 +305,7 @@ Details_Screen As screen:
                         (varCertificateDetails.Status = "Enrolled"/* And User().Email = Office365Users.Manager(varCertificateDetails.Requestor.Email).Mail)*/) || (varCertificateDetails.Status = "Proofs Uploaded" && varCertificateDetails.'Has attachments' And varUserLevel in [
                             "SUPER-ADMIN",
                             "ADMIN"
-                        ]) ,
+                        ]),
                         DisplayMode.Edit,
                         DisplayMode.Disabled
                     )
@@ -315,7 +314,7 @@ Details_Screen As screen:
             FocusedBorderColor: =ColorFade(Self.Fill, -75%)
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
-            Height: =26
+            Height: =28
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =Self.Fill
@@ -411,8 +410,8 @@ Details_Screen As screen:
             VerticalAlign: =VerticalAlign.Top
             Visible: =If(varApprove,true,false)
             Width: =If(Btn_ApproveCert.Text="Approve Certification",142,130)
-            X: =1110
-            Y: =13
+            X: =1106
+            Y: =12
             ZIndex: =4
 
         Btn_ViewDocs As button:
@@ -441,7 +440,12 @@ Details_Screen As screen:
             RadiusTopRight: =5
             Size: =8
             Text: ="View Proofs"
-            Visible: =If(varApprove And varUserLevel="SUPER-ADMIN" And Btn_ApproveCert.Text="Approve Proofs",true,false)
+            Visible: |-
+                =If(
+                    varApprove And varUserLevel = "SUPER-ADMIN" And (varCertificateDetails.Status <> "Enrolled" And varCertificateDetails.Status <> "Manager Approved"),
+                    true,
+                    false
+                )
             Width: =124
             X: =838
             Y: =13
