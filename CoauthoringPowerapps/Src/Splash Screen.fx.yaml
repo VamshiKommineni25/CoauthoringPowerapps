@@ -15,7 +15,9 @@
         HoverBorderColor: =Self.BorderColor
         HoverFill: =Self.Fill
         OnSelect: |-
-            =Launch("https://ilinksystemsinc449-my.sharepoint.com/personal/shakeel_ahmed_ilink-systems_com/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fshakeel%5Fahmed%5Filink%2Dsystems%5Fcom%2FDocuments%2FCertification%20Reimbursement%20documents%2FCertification%20Policy%2FLatest%20Certification%20reimbursement%20Policy%20%2D%20Aug%20%2D4%2FiLink%5FCertification%20Reimbursement%20Policy%5FVer%201%2Epdf&parent=%2Fpersonal%2Fshakeel%5Fahmed%5Filink%2Dsystems%5Fcom%2FDocuments%2FCertification%20Reimbursement%20documents%2FCertification%20Policy%2FLatest%20Certification%20reimbursement%20Policy%20%2D%20Aug%20%2D4&ct=1692706761598&or=Outlook%2DBody&cid=A1FC8818%2DD34C%2D4EA2%2D9093%2D0490B06479C8&ga=1&WSL=1")
+            =Set(VarSpinner,true);
+            Launch("https://ilinksystemsinc449-my.sharepoint.com/personal/shakeel_ahmed_ilink-systems_com/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fshakeel%5Fahmed%5Filink%2Dsystems%5Fcom%2FDocuments%2FCertification%20Reimbursement%20documents%2FCertification%20Policy%2FLatest%20Certification%20reimbursement%20Policy%20%2D%20Aug%20%2D4%2FiLink%5FCertification%20Reimbursement%20Policy%5FVer%201%2Epdf&parent=%2Fpersonal%2Fshakeel%5Fahmed%5Filink%2Dsystems%5Fcom%2FDocuments%2FCertification%20Reimbursement%20documents%2FCertification%20Policy%2FLatest%20Certification%20reimbursement%20Policy%20%2D%20Aug%20%2D4&ct=1692706761598&or=Outlook%2DBody&cid=A1FC8818%2DD34C%2D4EA2%2D9093%2D0490B06479C8&ga=1&WSL=1");
+            Set(VarSpinner,false)
         PressedBorderColor: =Self.BorderColor
         PressedColor: =RGBA(255, 255, 255, 1)
         RadiusBottomLeft: =8
@@ -42,7 +44,9 @@
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverFill: =Self.Fill
         OnSelect: |
-            =Navigate(Home_Screen,ScreenTransition.Fade);
+            =UpdateContext({VarSpinner:true});
+            Navigate(Home_Screen,ScreenTransition.Fade);
+            UpdateContext({VarSpinner:false});
         PressedBorderColor: =Self.BorderColor
         PressedFill: =Color.White
         RadiusBottomLeft: =8
@@ -82,4 +86,8 @@
         X: =76
         Y: =516
         ZIndex: =4
+
+    C_Loadingspinner_1 As C_Loadingspinner:
+        Visible: =VarSpinner
+        ZIndex: =5
 

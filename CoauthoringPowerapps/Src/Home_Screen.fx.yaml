@@ -223,7 +223,10 @@ Home_Screen As screen:
         HoverColor: =ColorFade(Self.Color, 30%)
         HoverFill: =RGBA(0, 0, 0, 0)
         Icon: =Icon.Reload
-        OnSelect: =Set(CurrentTime,Now())
+        OnSelect: |-
+            =UpdateContext({varSpinner:true});
+            Set(CurrentTime,Now());
+            UpdateContext({varSpinner:false});
         PressedBorderColor: =RGBA(0, 0, 0, 0)
         PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         PressedFill: =RGBA(0, 0, 0, 0)
@@ -623,8 +626,9 @@ Home_Screen As screen:
             HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             HoverFill: =RGBA(0, 0, 0, 0)
             Icon: =Icon.Reload
-            OnSelect: |-
-                =Switch(
+            OnSelect: |
+                =UpdateContext({VarSpinner: true});
+                Switch(
                     NoRecord,
                     "My Certifications",
                     Refresh(CertificationOrder);
@@ -642,7 +646,8 @@ Home_Screen As screen:
                     Refresh(CertificationOrder),
                     "External Certifications",
                     Refresh(ExternalCertificationList)
-                )
+                );
+                UpdateContext({VarSpinner: false});
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             PressedFill: =RGBA(0, 0, 0, 0)
@@ -665,7 +670,10 @@ Home_Screen As screen:
             Height: =24
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverFill: =Self.Fill
-            OnSelect: =Navigate(Register_Screen)
+            OnSelect: |
+                =UpdateContext({VarSpinner:true});
+                Navigate(Register_Screen);
+                UpdateContext({VarSpinner:false});
             PressedBorderColor: =Self.BorderColor
             PressedFill: =Color.White
             RadiusBottomLeft: =8
@@ -2357,6 +2365,30 @@ Home_Screen As screen:
         Y: =550
         ZIndex: =22
 
+    ico_Filter_2 As icon.ArrowLeft:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        Color: =RGBA(201,47,29,1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(220, 220, 220, 1)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =4
+        Height: =10
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Icon: =Icon.ArrowLeft
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        Width: =14
+        X: =120
+        Y: =301
+        ZIndex: =25
+
+    C_Loadingspinner_2 As C_Loadingspinner:
+        Visible: =VarSpinner
+        ZIndex: =26
+
     Grp_Filter As group:
         Height: =5
         Width: =5
@@ -2575,24 +2607,4 @@ Home_Screen As screen:
             X: =120
             Y: =295
             ZIndex: =24
-
-        ico_Filter_2 As icon.ArrowLeft:
-            BorderColor: =RGBA(166, 166, 166, 1)
-            Color: =RGBA(201,47,29,1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(220, 220, 220, 1)
-            DisabledFill: =RGBA(0, 0, 0, 0)
-            FocusedBorderThickness: =4
-            Height: =10
-            HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-            HoverFill: =RGBA(0, 0, 0, 0)
-            Icon: =Icon.ArrowLeft
-            PressedBorderColor: =RGBA(0, 0, 0, 0)
-            PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-            PressedFill: =RGBA(0, 0, 0, 0)
-            Width: =14
-            X: =120
-            Y: =301
-            ZIndex: =25
 
