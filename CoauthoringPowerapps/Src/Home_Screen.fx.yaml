@@ -2388,6 +2388,10 @@ Home_Screen As screen:
         Y: =301
         ZIndex: =25
 
+    C_Loadingspinner_2 As C_Loadingspinner:
+        Visible: =VarSpinner
+        ZIndex: =26
+
     Grp_Filter As group:
         Height: =5
         Width: =5
@@ -2606,8 +2610,4 @@ Home_Screen As screen:
             X: =120
             Y: =295
             ZIndex: =24
-
-    C_Loadingspinner_2 As C_Loadingspinner:
-        Visible: =VarSpinner
-        ZIndex: =26
 
