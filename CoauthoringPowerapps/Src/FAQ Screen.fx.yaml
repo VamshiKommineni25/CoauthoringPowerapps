@@ -145,7 +145,7 @@
                 PressedBorderColor: =RGBA(154, 154, 154, 1)
                 PressedColor: =RGBA(154, 154, 154, 1)
                 PressedFill: =RGBA(255, 255, 255, 1)
-                Size: =13
+                Size: =10
                 Width: =774
                 X: =446
                 Y: =HT_FAQ_Qns_desc.Y+HT_FAQ_Qns_desc.Height
@@ -182,7 +182,7 @@
                 PressedBorderColor: =RGBA(154, 154, 154, 1)
                 PressedColor: =RGBA(154, 154, 154, 1)
                 PressedFill: =RGBA(255, 255, 255, 1)
-                Size: =13
+                Size: =10
                 Width: =380
                 X: =26
                 Y: =HT_FAQ_Qnsqn.Y+HT_FAQ_Qnsqn.Height
@@ -780,7 +780,7 @@
                 PressedBorderColor: =RGBA(154, 154, 154, 1)
                 PressedColor: =RGBA(154, 154, 154, 1)
                 PressedFill: =RGBA(255, 255, 255, 1)
-                Size: =13
+                Size: =10
                 Width: =1194
                 X: =20
                 Y: =266
@@ -802,13 +802,10 @@
                 PressedBorderColor: =RGBA(185, 29, 11, 1)
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(185, 29, 11, 1)
-                RadiusBottomLeft: =3
-                RadiusBottomRight: =3
-                RadiusTopLeft: =3
-                RadiusTopRight: =3
-                Size: =15
+                Size: =10
                 Text: ="Submit"
-                X: =1040
+                Width: =120
+                X: =1100
                 Y: =450
                 ZIndex: =11
 
@@ -829,13 +826,10 @@
                 PressedBorderColor: =RGBA(185, 29, 11, 1)
                 PressedColor: =RGBA(185, 29, 11, 1)
                 PressedFill: =RGBA(255, 255, 255, 1)
-                RadiusBottomLeft: =3
-                RadiusBottomRight: =3
-                RadiusTopLeft: =3
-                RadiusTopRight: =3
-                Size: =15
+                Size: =10
                 Text: ="Clear"
-                X: =840
+                Width: =120
+                X: =940
                 Y: =450
                 ZIndex: =12
 
