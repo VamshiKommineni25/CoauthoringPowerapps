@@ -3143,6 +3143,7 @@
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(241,246,246, 1)
         Font: =Font.'Segoe UI'
         Height: =27
         HoverDateFill: =RGBA(200, 200, 200, 1)
@@ -3164,6 +3165,7 @@
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(241,246,246, 1)
         Font: =Font.'Segoe UI'
         Height: =27
         HoverDateFill: =RGBA(200, 200, 200, 1)
@@ -3190,11 +3192,12 @@
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(241,246,246, 1)
         Font: =Font.'Segoe UI'
         Height: =27
         HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         HoverColor: =RGBA(51, 51, 51, 1)
-        HoverFill: =RGBA(212, 212, 212, 1)
+        HoverFill: =RGBA(241,246,246, 1)
         Items: =Sort('BU-List',Title,SortOrder.Ascending)
         PaddingBottom: =5
         PaddingLeft: =12
