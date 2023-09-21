@@ -2446,25 +2446,6 @@
             Y: =449
             ZIndex: =11
 
-    "'Glry_Total Cert per BU/Provider' As gallery.galleryHorizontal":
-        BorderColor: =RGBA(166, 166, 166, 1)
-        DelayItemLoading: =true
-        FocusedBorderColor: =RGBA(0,0,0,0)
-        FocusedBorderThickness: =1
-        Height: =55
-        Items: |-
-            =//Table({Name:"My Certifications"},{Name:"Assigned to"})
-            Table({Name:"Total Certifications Per Provider"},{Name:"Total Certifications Per BU"})
-        LoadingSpinner: =LoadingSpinner.Data
-        ShowScrollbar: =false
-        TabIndex: =1
-        TemplatePadding: =10
-        TemplateSize: =264
-        Width: =486
-        X: =180
-        Y: =92
-        ZIndex: =31
-
     Date_FromDate As datepicker:
         BorderColor: =RGBA(166, 166, 166, 1)
         BorderThickness: =0
@@ -3133,6 +3114,53 @@
             X: =122
             Y: =380
             ZIndex: =6
+
+    "'Glry_Total Cert per BU/Provider' As gallery.galleryHorizontal":
+        BorderColor: =RGBA(166, 166, 166, 1)
+        DelayItemLoading: =true
+        FocusedBorderColor: =RGBA(0,0,0,0)
+        FocusedBorderThickness: =1
+        Height: =55
+        Items: |-
+            =//Table({Name:"My Certifications"},{Name:"Assigned to"})
+            Table({Name:"Total Certifications Per Provider"},{Name:"Total Certifications Per BU"})
+        LoadingSpinner: =LoadingSpinner.Data
+        ShowScrollbar: =false
+        TabIndex: =1
+        TemplatePadding: =10
+        TemplateSize: =264
+        Width: =486
+        X: =175
+        Y: =93
+        ZIndex: =39
+
+        "'Radio_Total Cert per BU/Provider' As radio":
+            BorderColor: =RGBA(51, 51, 51, 1)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =If(ThisItem.IsSelected=true,RGBA(51,51,51, 1),RGBA(136, 147, 176, 1))
+            Default: ="Total Certifications Per Provider"
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(241,246,246, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            Height: =34
+            HoverColor: =If(ThisItem.IsSelected=true,RGBA(185, 29, 11, 1),RGBA(136, 147, 176, 1))
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Items: =ThisItem
+            OnChange: =ThisItem.IsSelected
+            OnSelect: =ThisItem.IsSelected
+            PaddingBottom: =5
+            PaddingTop: =8
+            PressedColor: =RGBA(51, 51, 51, 1)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            RadioBorderColor: =RGBA(51, 51, 51, 1)
+            RadioSelectionFill: =If(ThisItem.IsSelected=true,RGBA(185, 29, 11, 1),RGBA(136, 147, 176, 1))
+            RadioSize: =20
+            Size: =10
+            Width: =262
+            ZIndex: =1
 
     Grp_AnalysisFilter As group:
         Height: =5
