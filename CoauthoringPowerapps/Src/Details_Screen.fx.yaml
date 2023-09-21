@@ -34,7 +34,7 @@ Details_Screen As screen:
         Y: =85
         ZIndex: =2
 
-    Container16_3 As groupContainer.manualLayoutContainer:
+    Cntr_OperationBtns As groupContainer.manualLayoutContainer:
         Fill: =RGBA(255, 255, 255, 1)
         Height: =51
         RadiusBottomLeft: =10
@@ -433,7 +433,7 @@ Details_Screen As screen:
         Y: =162
         ZIndex: =3
 
-        Image2_3 As image:
+        Img_Certificate As image:
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
@@ -451,7 +451,7 @@ Details_Screen As screen:
             Y: =17
             ZIndex: =3
 
-        Label14_1 As label:
+        Lbl_CertName As label:
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
@@ -470,7 +470,7 @@ Details_Screen As screen:
             Y: =30
             ZIndex: =5
 
-        Container18_1 As groupContainer.manualLayoutContainer:
+        Cntr_CertDetails As groupContainer.manualLayoutContainer:
             Height: =170
             RadiusBottomLeft: =4
             RadiusBottomRight: =4
@@ -594,7 +594,7 @@ Details_Screen As screen:
             Y: =493
             ZIndex: =8
 
-        Rectangle5_6 As rectangle:
+        Rect_Blueline3 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
@@ -609,7 +609,7 @@ Details_Screen As screen:
             Y: =252
             ZIndex: =13
 
-        Label26_3 As label:
+        Lbl_txtPaymentinfo As label:
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
@@ -627,7 +627,7 @@ Details_Screen As screen:
             Y: =264
             ZIndex: =14
 
-        Label21_15 As label:
+        Lbl_txtPaidBy As label:
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
@@ -680,7 +680,7 @@ Details_Screen As screen:
             Y: =319
             ZIndex: =17
 
-        Label21_16 As label:
+        Lbl_txtPaymentDate As label:
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
@@ -697,7 +697,7 @@ Details_Screen As screen:
             Y: =320
             ZIndex: =18
 
-        Label23_17 As label:
+        Lbl_PaymentDate As label:
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
@@ -714,7 +714,7 @@ Details_Screen As screen:
             Y: =321
             ZIndex: =19
 
-        Rectangle5_7 As rectangle:
+        Rect_Blueline2 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
@@ -729,7 +729,7 @@ Details_Screen As screen:
             Y: =358
             ZIndex: =20
 
-        Label26_4 As label:
+        Lbl_txtDescription As label:
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
@@ -747,7 +747,7 @@ Details_Screen As screen:
             Y: =370
             ZIndex: =21
 
-        Label21_1 As label:
+        Lbl_DetailDecsription As label:
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
@@ -766,7 +766,7 @@ Details_Screen As screen:
             Y: =395
             ZIndex: =22
 
-        Rectangle5_8 As rectangle:
+        Rect_Blueline As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
@@ -781,7 +781,7 @@ Details_Screen As screen:
             Y: =448
             ZIndex: =23
 
-        Label26_5 As label:
+        Lbl_statusInformation As label:
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
@@ -799,7 +799,7 @@ Details_Screen As screen:
             Y: =462
             ZIndex: =24
 
-        Label23_14 As label:
+        Lbl_certStatus As label:
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
@@ -816,7 +816,7 @@ Details_Screen As screen:
             Y: =496
             ZIndex: =25
 
-        Label23_15 As label:
+        Lbl_StatusInfo As label:
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
@@ -833,7 +833,7 @@ Details_Screen As screen:
             Y: =524
             ZIndex: =26
 
-        Label23_16 As label:
+        Lbl_ReimburesedDate As label:
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
@@ -879,11 +879,11 @@ Details_Screen As screen:
             Text: |-
                 ="Price : "&LookUp(Certification,ID=varCertificateDetails.CertificationID.Id).Price&" INR"
             Width: =150
-            X: =Label14_1.X+Label14_1.Width
+            X: =Lbl_CertName.X+Lbl_CertName.Width
             Y: =26
             ZIndex: =28
 
-        Radio1_1 As radio:
+        Rad_PaidBy As radio:
             BorderColor: =RGBA(51, 51, 51, 1)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
@@ -1107,7 +1107,7 @@ Details_Screen As screen:
                 Y: =385
                 ZIndex: =35
 
-    Container16_4 As groupContainer.manualLayoutContainer:
+    Cntr_AttachDocs As groupContainer.manualLayoutContainer:
         Height: =768
         RadiusBottomLeft: =4
         RadiusBottomRight: =4
@@ -2726,7 +2726,7 @@ Details_Screen As screen:
                                             Status: "Proofs Uploaded",
                                             Documents_Link: varProofsLinks,
                                             PaymentMode: If(
-                                                Radio1_1.Selected.Value = "Paid with Voucher",
+                                                Rad_PaidBy.Selected.Value = "Paid with Voucher",
                                                 Inp_voucher.Text & "% Voucher",
                                                 "Cash"
                                             ),
@@ -2806,7 +2806,7 @@ Details_Screen As screen:
                                         Status: "Proofs Uploaded",
                                         Documents_Link: varProofsLinks,
                                         PaymentMode: If(
-                                            Radio1_1.Selected.Value = "Paid with Voucher",
+                                            Rad_PaidBy.Selected.Value = "Paid with Voucher",
                                             Inp_voucher.Text & "% Voucher",
                                             "Cash"
                                         ),
@@ -2900,7 +2900,7 @@ Details_Screen As screen:
                                             Status: "Proofs Uploaded",
                                             Documents_Link: varProofsLinks,
                                             PaymentMode: If(
-                                                Radio1_1.Selected.Value = "Paid with Voucher",
+                                                Rad_PaidBy.Selected.Value = "Paid with Voucher",
                                                 Inp_voucher.Text & "% Voucher",
                                                 "Cash"
                                             ),
@@ -2980,7 +2980,7 @@ Details_Screen As screen:
                                         Status: "Proofs Uploaded",
                                         Documents_Link: varProofsLinks,
                                         PaymentMode: If(
-                                            Radio1_1.Selected.Value = "Paid with Voucher",
+                                            Rad_PaidBy.Selected.Value = "Paid with Voucher",
                                             Inp_voucher.Text & "% Voucher",
                                             "Cash"
                                         ),
@@ -3074,7 +3074,7 @@ Details_Screen As screen:
                                             Status: "Proofs Uploaded",
                                             Documents_Link: varProofsLinks,
                                             PaymentMode: If(
-                                                Radio1_1.Selected.Value = "Paid with Voucher",
+                                                Rad_PaidBy.Selected.Value = "Paid with Voucher",
                                                 Inp_voucher.Text & "% Voucher",
                                                 "Cash"
                                             ),
@@ -3154,7 +3154,7 @@ Details_Screen As screen:
                                         Status: "Proofs Uploaded",
                                         Documents_Link: varProofsLinks,
                                         PaymentMode: If(
-                                            Radio1_1.Selected.Value = "Paid with Voucher",
+                                            Rad_PaidBy.Selected.Value = "Paid with Voucher",
                                             Inp_voucher.Text & "% Voucher",
                                             "Cash"
                                         ),
@@ -3248,7 +3248,7 @@ Details_Screen As screen:
                                             Status: "Proofs Uploaded",
                                             Documents_Link: varProofsLinks,
                                             PaymentMode: If(
-                                                Radio1_1.Selected.Value = "Paid with Voucher",
+                                                Rad_PaidBy.Selected.Value = "Paid with Voucher",
                                                 Inp_voucher.Text & "% Voucher",
                                                 "Cash"
                                             ),
@@ -3328,7 +3328,7 @@ Details_Screen As screen:
                                         Status: "Proofs Uploaded",
                                         Documents_Link: varProofsLinks,
                                         PaymentMode: If(
-                                            Radio1_1.Selected.Value = "Paid with Voucher",
+                                            Rad_PaidBy.Selected.Value = "Paid with Voucher",
                                             Inp_voucher.Text & "% Voucher",
                                             "Cash"
                                         ),
@@ -3423,7 +3423,7 @@ Details_Screen As screen:
                                             Status: "Proofs Uploaded",
                                             Documents_Link: varProofsLinks,
                                             PaymentMode: If(
-                                                Radio1_1.Selected.Value = "Paid with Voucher",
+                                                Rad_PaidBy.Selected.Value = "Paid with Voucher",
                                                 Inp_voucher.Text & "% Voucher",
                                                 "Cash"
                                             ),
@@ -3503,7 +3503,7 @@ Details_Screen As screen:
                                         Status: "Proofs Uploaded",
                                         Documents_Link: varProofsLinks,
                                         PaymentMode: If(
-                                            Radio1_1.Selected.Value = "Paid with Voucher",
+                                            Rad_PaidBy.Selected.Value = "Paid with Voucher",
                                             Inp_voucher.Text & "% Voucher",
                                             "Cash"
                                         ),
@@ -3584,7 +3584,7 @@ Details_Screen As screen:
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =RGBA(186, 202, 226, 1)
         Size: =9
-        Visible: =Radio1_1.Selected.Value="Paid with Voucher" And varPAY1
+        Visible: =Rad_PaidBy.Selected.Value="Paid with Voucher" And varPAY1
         Width: =102
         X: =777
         Y: =453
@@ -3601,7 +3601,7 @@ Details_Screen As screen:
         X: =976
         ZIndex: =10
 
-        Container17_5 As groupContainer.manualLayoutContainer:
+        Cntr_SupportedDocs As groupContainer.manualLayoutContainer:
             DropShadow: =DropShadow.ExtraBold
             Fill: =RGBA(255, 255, 255, 1)
             Height: =768
@@ -3613,7 +3613,7 @@ Details_Screen As screen:
             X: =42
             ZIndex: =1
 
-            Label4_10 As label:
+            Lbl_SupportedDocs As label:
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =2
@@ -3630,7 +3630,7 @@ Details_Screen As screen:
                 Y: =18
                 ZIndex: =1
 
-            Icon16_4 As icon.Cancel:
+            Icn_exit As icon.Cancel:
                 BorderColor: =RGBA(166, 166, 166, 1)
                 Color: =RGBA(116, 116, 116, 1)
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -3653,7 +3653,7 @@ Details_Screen As screen:
                 Y: =26
                 ZIndex: =2
 
-            "Gallery1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+            "Glry_SupprotedDocs As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
                 BorderColor: =RGBA(166, 166, 166, 1)
                 DelayItemLoading: =true
                 Fill: =RGBA(241, 246, 246, 1)
@@ -3684,7 +3684,7 @@ Details_Screen As screen:
                     ZIndex: =1
 
                 Title1 As label:
-                    Color: =RGBA(189, 25, 11, 1)
+                    Color: =RGBA(0, 94, 146, 1)
                     DisabledColor: =RGBA(166, 166, 166, 1)
                     Font: =Font.'Segoe UI'
                     FontWeight: =FontWeight.Semibold
@@ -3697,19 +3697,19 @@ Details_Screen As screen:
                     PaddingTop: =0
                     Size: =10
                     Text: =ThisItem.DisplayName
-                    VerticalAlign: =VerticalAlign.Bottom
-                    Width: =300
-                    X: =34
-                    Y: =28
+                    Width: =281
+                    X: =53
+                    Y: =30
                     ZIndex: =2
 
                 Icon18 As icon.Download:
                     BorderColor: =RGBA(166, 166, 166, 1)
+                    Color: =RGBA(0, 121, 187, 1)
                     DisabledBorderColor: =RGBA(0, 0, 0, 0)
                     DisabledColor: =RGBA(220, 220, 220, 1)
                     DisabledFill: =RGBA(0, 0, 0, 0)
                     FocusedBorderThickness: =4
-                    Height: =24
+                    Height: =18
                     HoverBorderColor: =RGBA(0, 0, 0, 0)
                     HoverColor: =RGBA(0, 0, 0, 1)
                     HoverFill: =RGBA(0, 0, 0, 0)
@@ -3718,9 +3718,9 @@ Details_Screen As screen:
                     PressedBorderColor: =RGBA(0, 0, 0, 0)
                     PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
                     PressedFill: =RGBA(0, 0, 0, 0)
-                    Width: =24
-                    X: =288
-                    Y: =29
+                    Width: =15
+                    X: =27
+                    Y: =30
                     ZIndex: =3
 
     Group8_4 As group:
@@ -3730,14 +3730,14 @@ Details_Screen As screen:
         Y: =-145
         ZIndex: =10
 
-        Label43 As label:
+        "'Lbl*' As label":
             BorderColor: =RGBA(0, 18, 107, 1)
             Color: =RGBA(221, 79, 14, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
             Height: =27
             Size: =13
             Text: ="*"
-            Visible: =Radio1_1.Selected.Value="Paid with Voucher" And varPAY1
+            Visible: =Rad_PaidBy.Selected.Value="Paid with Voucher" And varPAY1
             Width: =14
             X: =755
             Y: =453

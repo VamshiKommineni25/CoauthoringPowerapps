@@ -83,6 +83,7 @@
 
         btn_RS_recentrequest As button:
             BorderColor: =RGBA(185, 29, 11, 1)
+            BorderThickness: =1
             Color: =RGBA(185, 29, 11, 1)
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
             DisabledColor: =RGBA(166, 166, 166, 1)
@@ -528,6 +529,7 @@
 
             btn_RS_NCRclear As button:
                 BorderColor: =RGBA(185, 29, 11, 1)
+                BorderThickness: =1
                 Color: =RGBA(185, 29, 11, 1)
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(166, 166, 166, 1)

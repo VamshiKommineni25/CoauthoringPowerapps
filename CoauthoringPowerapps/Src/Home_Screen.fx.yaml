@@ -175,7 +175,7 @@ Home_Screen As screen:
         FAQOnselect: ='FAQ Screen'
         Height: =100
 
-    Label1 As label:
+    Lbl_Dashboard As label:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
         BorderThickness: =2
@@ -193,7 +193,7 @@ Home_Screen As screen:
         Y: =97
         ZIndex: =2
 
-    Label2 As label:
+    Lbl_date As label:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
         BorderThickness: =2
@@ -553,7 +553,7 @@ Home_Screen As screen:
                 Y: =41
                 ZIndex: =2
 
-        Label7 As label:
+        Lbl_Details As label:
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
@@ -571,7 +571,7 @@ Home_Screen As screen:
             Y: =15
             ZIndex: =2
 
-        Label7_1 As label:
+        Lbl_Refresh1 As label:
             Align: =Align.Center
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
@@ -611,7 +611,7 @@ Home_Screen As screen:
             Y: =15
             ZIndex: =3
 
-        Icon12 As icon.Reload:
+        Icn_Refresh As icon.Reload:
             BorderColor: =RGBA(166, 166, 166, 1)
             Color: =RGBA(0, 120, 212, 1)
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -679,7 +679,7 @@ Home_Screen As screen:
             Y: =15
             ZIndex: =5
 
-        Container15 As groupContainer.manualLayoutContainer:
+        Cntr_Certifications As groupContainer.manualLayoutContainer:
             Height: =271
             RadiusBottomLeft: =4
             RadiusBottomRight: =4
@@ -1157,7 +1157,7 @@ Home_Screen As screen:
                                                 CertificationOrder,
                                                 5000
                                             ),
-                                            Office365Users.ManagerV2(Requestor.Email).displayName = User().FullName || varUserLevel = "SUPER-ADMIN" || varUserLevel = "ADMIN"
+                                            Office365Users.ManagerV2(Requestor.Email).displayName = User().FullName And (varUserLevel = "SUPER-ADMIN" || varUserLevel = "ADMIN")
                                         ),
                                         Created,
                                         SortOrder.Descending
@@ -1534,6 +1534,7 @@ Home_Screen As screen:
                     DisabledBorderColor: =RGBA(0, 0, 0, 0)
                     DisabledColor: =RGBA(220, 220, 220, 1)
                     DisabledFill: =RGBA(0, 0, 0, 0)
+                    FocusedBorderColor: =RGBA(0,0,0,0)
                     FocusedBorderThickness: =4
                     Height: =15
                     HoverBorderColor: =RGBA(0, 0, 0, 0)
@@ -1693,7 +1694,7 @@ Home_Screen As screen:
                 Y: =106
                 ZIndex: =11
 
-        Label18_1 As label:
+        Lbl_noRecords As label:
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
@@ -1884,7 +1885,7 @@ Home_Screen As screen:
         Y: =100
         ZIndex: =18
 
-        Label15 As label:
+        Lbl_textEvents As label:
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
@@ -1900,7 +1901,7 @@ Home_Screen As screen:
             Y: =320
             ZIndex: =1
 
-        "Gallery4 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+        "Glry_ExamEvent As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
             BorderColor: =RGBA(166, 166, 166, 1)
             DelayItemLoading: =true
             FocusedBorderColor: =RGBA(0,0,0,0)
@@ -1991,7 +1992,7 @@ Home_Screen As screen:
                 Width: =4
                 ZIndex: =6
 
-        Label15_1 As label:
+        Lbl_Calendar As label:
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
@@ -2008,7 +2009,7 @@ Home_Screen As screen:
             Y: =16
             ZIndex: =3
 
-        Label15_2 As label:
+        Lbl_today As label:
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
@@ -2025,7 +2026,7 @@ Home_Screen As screen:
             Y: =40
             ZIndex: =4
 
-        Container27_1 As groupContainer.manualLayoutContainer:
+        Cntr_Calendar As groupContainer.manualLayoutContainer:
             Height: =256
             Width: =361
             Y: =59
@@ -2289,7 +2290,7 @@ Home_Screen As screen:
                         Wrap: =false
                         ZIndex: =3
 
-        Label3 As label:
+        lbl_empty As label:
             Align: =Align.Center
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
@@ -2301,7 +2302,7 @@ Home_Screen As screen:
             Font: =Font.'Segoe UI'
             Size: =12
             Text: ="No events on this date"
-            Visible: =If(IsEmpty(Gallery4.AllItems),true,false)
+            Visible: =If(IsEmpty(Glry_ExamEvent.AllItems),true,false)
             Width: =200
             X: =72
             Y: =486
@@ -2340,7 +2341,7 @@ Home_Screen As screen:
         Text: ="No records found"
         Visible: |-
             =If(
-                IsEmpty(Gallery4.AllItems),
+                IsEmpty(Glry_ExamEvent.AllItems),
                 If(
                     Glry_ExternalCertification.Selected.Name = "         External Certifications",
                     If(
@@ -2378,7 +2379,7 @@ Home_Screen As screen:
             Y: =277
             ZIndex: =8
 
-        Label5 As label:
+        Lbl_Filter As label:
             Align: =Align.Center
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
@@ -2426,7 +2427,7 @@ Home_Screen As screen:
             Y: =289
             ZIndex: =10
 
-        Label5_1 As label:
+        Lbl_txtSortbydate As label:
             Align: =Align.Center
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
@@ -2446,7 +2447,7 @@ Home_Screen As screen:
             Y: =289
             ZIndex: =11
 
-        Label5_2 As label:
+        Lbl_statustxt As label:
             Align: =Align.Center
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
