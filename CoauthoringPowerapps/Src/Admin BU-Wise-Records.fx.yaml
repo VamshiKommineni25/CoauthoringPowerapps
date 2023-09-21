@@ -83,7 +83,7 @@
             ChevronHoverBackground: =RGBA(241,246,246, 1)
             ChevronHoverFill: =RGBA(33, 33, 33, 1)
             Color: =RGBA(51, 51, 51, 1)
-            Default: =Office365Users.MyProfile().Department
+            Default: =
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
             DisabledColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
@@ -96,7 +96,7 @@
             HoverBorderColor: =RGBA(241,246,246, 1)
             HoverColor: =RGBA(51, 51, 51, 1)
             HoverFill: =RGBA(241,246,246, 1)
-            Items: =["Cash","Voucher","Advance Payment"]
+            Items: =["All","Cash","Voucher","Advance Payment"]
             OnSelect: =Set(varNewCert,true)
             PaddingBottom: =5
             PaddingLeft: =12
@@ -502,20 +502,37 @@
                          txt_SearchBar.Text in 'Certification:Title'.Value, txt_SearchBar.Text in Status, txt_SearchBar.Text in PaymentMode
                     )*/
                     If(
-                        drp_status.SelectedText.Value = "All",
-                        Filter(
-                            FirstN(
-                                new_col_certorder,
-                                5000
-                            ),
-                            drp_Payment.SelectedText.Value in PaymentMode  && Created >= Date_From.SelectedDate And Created <= Date_To.SelectedDate
+                        drp_status.SelectedText.Value = "All" And drp_Payment.SelectedText.Value = "All",
+                        FirstN(
+                            new_col_certorder,
+                            5000
                         ),
-                        Filter(
-                            FirstN(
-                                new_col_certorder,
-                                5000
+                        If(
+                            drp_status.SelectedText.Value <> "All" And drp_Payment.SelectedText.Value = "All",
+                            Filter(
+                                FirstN(
+                                    new_col_certorder,
+                                    5000
+                                ),
+                                Status = drp_status.SelectedText.Value && Created >= Date_From.SelectedDate And Created <= Date_To.SelectedDate
                             ),
-                             drp_Payment.SelectedText.Value in PaymentMode  && Status = drp_status.SelectedText.Value && Created >= Date_From.SelectedDate And Created <= Date_To.SelectedDate
+                            If(
+                                drp_status.SelectedText.Value = "All" And drp_Payment.SelectedText.Value <> "All",
+                                Filter(
+                                    FirstN(
+                                        new_col_certorder,
+                                        5000
+                                    ),
+                                    drp_Payment.SelectedText.Value in PaymentMode && Created >= Date_From.SelectedDate And Created <= Date_To.SelectedDate
+                                ),
+                                Filter(
+                                    FirstN(
+                                        new_col_certorder,
+                                        5000
+                                    ),
+                                    drp_Payment.SelectedText.Value in PaymentMode && Status = drp_status.SelectedText.Value && Created >= Date_From.SelectedDate And Created <= Date_To.SelectedDate
+                                )
+                            )
                         )
                     ),
                     txt_SearchBar.Text,
