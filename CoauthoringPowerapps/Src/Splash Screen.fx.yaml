@@ -44,9 +44,10 @@
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverFill: =Self.Fill
         OnSelect: |
-            =UpdateContext({VarSpinner:true});
-            Navigate(Home_Screen,ScreenTransition.Fade);
-            UpdateContext({VarSpinner:false});
+            =Navigate(
+                Home_Screen,
+                ScreenTransition.Fade
+            );
         PressedBorderColor: =Self.BorderColor
         PressedFill: =Color.White
         RadiusBottomLeft: =8
@@ -86,8 +87,4 @@
         X: =76
         Y: =516
         ZIndex: =4
-
-    C_Loadingspinner_1 As C_Loadingspinner:
-        Visible: =VarSpinner
-        ZIndex: =5
 

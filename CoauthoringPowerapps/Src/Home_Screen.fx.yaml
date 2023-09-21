@@ -223,10 +223,11 @@ Home_Screen As screen:
         HoverColor: =ColorFade(Self.Color, 30%)
         HoverFill: =RGBA(0, 0, 0, 0)
         Icon: =Icon.Reload
-        OnSelect: |-
-            =UpdateContext({varSpinner:true});
-            Set(CurrentTime,Now());
-            UpdateContext({varSpinner:false});
+        OnSelect: |
+            =Set(
+                CurrentTime,
+                Now()
+            );
         PressedBorderColor: =RGBA(0, 0, 0, 0)
         PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         PressedFill: =RGBA(0, 0, 0, 0)
@@ -586,8 +587,9 @@ Home_Screen As screen:
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
             Height: =20
-            OnSelect: |-
-                =Switch(
+            OnSelect: |
+                =UpdateContext({VarSpinner: true});
+                Switch(
                     NoRecord,
                     "My Certifications",
                     Refresh(CertificationOrder);
@@ -605,7 +607,8 @@ Home_Screen As screen:
                     Refresh(CertificationOrder),
                     "External Certifications",
                     Refresh(ExternalCertificationList)
-                )
+                );
+                UpdateContext({VarSpinner: false});
             Size: =10
             TabIndex: =0
             Text: ="Refresh"
@@ -2385,6 +2388,10 @@ Home_Screen As screen:
         Y: =301
         ZIndex: =25
 
+    C_Loadingspinner_2 As C_Loadingspinner:
+        Visible: =VarSpinner
+        ZIndex: =26
+
     Grp_Filter As group:
         Height: =5
         Width: =5
@@ -2603,8 +2610,4 @@ Home_Screen As screen:
             X: =120
             Y: =295
             ZIndex: =24
-
-    C_Loadingspinner_2 As C_Loadingspinner:
-        Visible: =VarSpinner
-        ZIndex: =26
 

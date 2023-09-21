@@ -3032,6 +3032,25 @@
             Y: =380
             ZIndex: =6
 
+    "'Glry_Total Cert per BU/Provider' As gallery.galleryHorizontal":
+        BorderColor: =RGBA(166, 166, 166, 1)
+        DelayItemLoading: =true
+        FocusedBorderColor: =RGBA(0,0,0,0)
+        FocusedBorderThickness: =1
+        Height: =55
+        Items: |-
+            =//Table({Name:"My Certifications"},{Name:"Assigned to"})
+            Table({Name:"Total Certifications Per Provider"},{Name:"Total Certifications Per BU"})
+        LoadingSpinner: =LoadingSpinner.Data
+        ShowScrollbar: =false
+        TabIndex: =1
+        TemplatePadding: =10
+        TemplateSize: =264
+        Width: =486
+        X: =180
+        Y: =92
+        ZIndex: =39
+
     Grp_AnalysisFilter As group:
         Height: =5
         Width: =5
@@ -3085,25 +3104,6 @@
             X: =1174
             Y: =109
             ZIndex: =36
-
-    "'Glry_Total Cert per BU/Provider' As gallery.galleryHorizontal":
-        BorderColor: =RGBA(166, 166, 166, 1)
-        DelayItemLoading: =true
-        FocusedBorderColor: =RGBA(0,0,0,0)
-        FocusedBorderThickness: =1
-        Height: =55
-        Items: |-
-            =//Table({Name:"My Certifications"},{Name:"Assigned to"})
-            Table({Name:"Total Certifications Per Provider"},{Name:"Total Certifications Per BU"})
-        LoadingSpinner: =LoadingSpinner.Data
-        ShowScrollbar: =false
-        TabIndex: =1
-        TemplatePadding: =10
-        TemplateSize: =264
-        Width: =486
-        X: =180
-        Y: =92
-        ZIndex: =39
 
     Date_FromDate As datepicker:
         BorderColor: =RGBA(166, 166, 166, 1)
