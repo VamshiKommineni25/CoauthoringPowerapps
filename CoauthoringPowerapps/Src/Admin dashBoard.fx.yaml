@@ -118,7 +118,7 @@
         Width: =1256
         X: =93
         Y: =162
-        ZIndex: =10
+        ZIndex: =1
 
         "'PieChart_TotalCertifications per BU' As pieChart":
             AlignInContainer: =AlignInContainer.Center
@@ -341,7 +341,7 @@
         Width: =1256
         X: =93
         Y: =500
-        ZIndex: =16
+        ZIndex: =6
 
         Cntr_TotalCertifications As groupContainer.manualLayoutContainer:
             DropShadow: =DropShadow.Light
@@ -1331,134 +1331,6 @@
                 Y: =5
                 ZIndex: =28
 
-    Grp_Filter_Analysis_1 As group:
-        Height: =5
-        Width: =5
-        X: =-53
-        Y: =40
-        ZIndex: =18
-
-        Rect_Filter_2 As rectangle:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            DisabledFill: =RGBA(166, 166, 166, 1)
-            Fill: =RGBA(255,255,255, 1)
-            FocusedBorderColor: =RGBA(0,0,0,0)
-            FocusedBorderThickness: =1
-            Height: =51
-            HoverFill: =RGBA(255, 255, 255, 1)
-            PressedFill: =RGBA(255, 255, 255, 1)
-            TabIndex: =1
-            Width: =1256
-            X: =93
-            Y: =432
-            ZIndex: =11
-
-        "'Glry_Total Cert/Year Cert' As gallery.galleryHorizontal":
-            BorderColor: =RGBA(166, 166, 166, 1)
-            DelayItemLoading: =true
-            FocusedBorderColor: =RGBA(0,0,0,0)
-            FocusedBorderThickness: =1
-            Height: =55
-            Items: |-
-                =Table({Name:"Total Certifications"},{Name:"Year Certifications"})
-            LoadingSpinner: =LoadingSpinner.Data
-            ShowScrollbar: =false
-            TabIndex: =1
-            TemplatePadding: =10
-            TemplateSize: =264
-            Width: =486
-            X: =175
-            Y: =433
-            ZIndex: =13
-
-            "'Radio_Total Cert /Year Cert' As radio":
-                BorderColor: =RGBA(51, 51, 51, 1)
-                BorderStyle: =BorderStyle.None
-                BorderThickness: =2
-                Color: =If(ThisItem.IsSelected=true,RGBA(51,51,51, 1),RGBA(136, 147, 176, 1))
-                Default: ="Total Certifications"
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                Fill: =RGBA(241,246,246, 1)
-                FocusedBorderThickness: =4
-                Font: =Font.'Segoe UI'
-                Height: =34
-                HoverColor: =If(ThisItem.IsSelected=true,RGBA(185, 29, 11, 1),RGBA(136, 147, 176, 1))
-                HoverFill: =RGBA(0, 0, 0, 0)
-                Items: =ThisItem
-                OnChange: =ThisItem.IsSelected
-                OnSelect: =ThisItem.IsSelected
-                PaddingBottom: =5
-                PaddingTop: =8
-                PressedColor: =RGBA(51, 51, 51, 1)
-                PressedFill: =RGBA(0, 0, 0, 0)
-                RadioBorderColor: =RGBA(51, 51, 51, 1)
-                RadioSelectionFill: =If(ThisItem.IsSelected=true,RGBA(185, 29, 11, 1),RGBA(136, 147, 176, 1))
-                RadioSize: =20
-                Size: =10
-                Width: =262
-                ZIndex: =1
-
-        "'Drp_Location List' As dropdown":
-            BorderColor: =RGBA(166, 166, 166, 1)
-            BorderThickness: =0
-            ChevronBackground: =RGBA(241,246,246, 1)
-            ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
-            ChevronDisabledFill: =RGBA(166, 166, 166, 1)
-            ChevronFill: =RGBA(153, 153, 153, 1)
-            ChevronHoverBackground: =RGBA(241,246,246, 1)
-            ChevronHoverFill: =RGBA(33, 33, 33, 1)
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
-            Fill: =RGBA(241,246,246, 1)
-            FocusedBorderColor: =RGBA(0,0,0,0)
-            FocusedBorderThickness: =1
-            Font: =Font.'Segoe UI'
-            Height: =27
-            HoverBorderColor: =RGBA(241,246,246, 1)
-            HoverColor: =RGBA(51, 51, 51, 1)
-            HoverFill: =RGBA(241,246,246, 1)
-            Items: =Sort('Location List_Certification App',Title,SortOrder.Ascending)
-            PaddingBottom: =5
-            PaddingLeft: =12
-            PaddingRight: =5
-            PaddingTop: =5
-            PressedBorderColor: =RGBA(241,246,246, 1)
-            PressedFill: =RGBA(241,246,246, 1)
-            SelectionFill: =RGBA(153, 177, 195, 1)
-            Size: =10
-            TabIndex: =1
-            Visible: =If('Glry_Total Cert/Year Cert'.Selected.Name="Total Certifications",true,false)
-            Width: =91
-            X: =760
-            Y: =447
-            ZIndex: =14
-
-        Lbl_Location As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            Fill: =RGBA(241, 246, 246, 1)
-            FocusedBorderColor: =RGBA(0,0,0,0)
-            FocusedBorderThickness: =1
-            Font: =Font.'Segoe UI'
-            Height: =26
-            Size: =10
-            TabIndex: =1
-            Text: ="Location"
-            Visible: =If('Glry_Total Cert/Year Cert'.Selected.Name="Total Certifications",true,false)
-            Width: =80
-            X: =670
-            Y: =448
-            ZIndex: =15
-
     "'Cntr_NewReq.Cert' As groupContainer.manualLayoutContainer":
         DropShadow: =DropShadow.ExtraBold
         Fill: =RGBA(255, 255, 255, 1)
@@ -1471,7 +1343,7 @@
         Width: =718
         X: =89
         Y: =85
-        ZIndex: =21
+        ZIndex: =11
 
         Rectangle5_10 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -1802,565 +1674,27 @@
             Y: =392
             ZIndex: =18
 
-    Grp_ExportBtn As group:
-        Height: =5
-        Width: =5
-        X: =-53
-        Y: =40
-        ZIndex: =21
-
-        Btn_Export_TotalCertifications As button:
-            Align: =Align.Right
-            BorderColor: =RGBA(185, 29, 11, 1)
-            BorderThickness: =0.5
-            Color: =RGBA(185, 29, 11, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
-            Fill: =RGBA(255, 255, 255, 1)
-            FocusedBorderColor: =RGBA(0,0,0,0)
-            FocusedBorderThickness: =1
-            Font: =Font.'Segoe UI'
-            Height: =28
-            HoverBorderColor: =RGBA(185, 29, 11, 1)
-            HoverColor: =RGBA(185, 29, 11, 1)
-            HoverFill: =
-            OnSelect: |-
-                =Clear(coldetails1);
-                ForAll(
-                    Glry_TotalCertifications.AllItems,
-                    Collect(
-                        coldetails1,
-                        {
-                            Department: ThisRecord.Title,
-                            Code: ThisRecord.Code,
-                            Total: ThisRecord.Glry_Lbl_Total.Text,
-                            Enroll: ThisRecord.Glry_Lbl_Enrolled.Text,
-                            Inprogress: ThisRecord.Glry_Lbl_Inprogress.Text,
-                            Proofs_Approved: ThisRecord.Glry_Lbl_ProofsApproved.Text,
-                            Reimbursed: ThisRecord.Glry_Lbl_Reimbursed.Text
-                        }
-                    )
-                );
-                
-                Launch(YearCertification_Flow_Excel.Run(JSON(coldetails1,JSONFormat.IncludeBinaryData)).filelink);
-            PressedBorderColor: =RGBA(185, 29, 11, 1)
-            PressedColor: =RGBA(185, 29, 11, 1)
-            PressedFill: =
-            RadiusBottomLeft: =5
-            RadiusBottomRight: =5
-            RadiusTopLeft: =5
-            RadiusTopRight: =5
-            Size: =10
-            TabIndex: =1
-            Text: ="EXPORT IN EXCEL"
-            Visible: |
-                =If('Glry_Total Cert/Year Cert'.Selected.Name="Year Certifications",true,false)
-            Width: =144
-            X: =955
-            Y: =443
-            ZIndex: =17
-
-        Icon_Dwnlod_1 As icon.Download:
-            BorderColor: =RGBA(166, 166, 166, 1)
-            Color: =RGBA(185, 29, 11, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(220, 220, 220, 1)
-            DisabledFill: =RGBA(0, 0, 0, 0)
-            FocusedBorderColor: =RGBA(0,0,0,0)
-            FocusedBorderThickness: =1
-            Height: =15
-            HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverColor: =RGBA(185, 29, 11, 1)
-            HoverFill: =RGBA(0, 0, 0, 0)
-            Icon: =Icon.Download
-            OnSelect: |-
-                =Clear(coldetails1);
-                ForAll(
-                    Glry_TotalCertifications.AllItems,
-                    Collect(
-                        coldetails1,
-                        {
-                            Department: ThisRecord.Title,
-                            Code: ThisRecord.Code,
-                            Total: ThisRecord.Glry_Lbl_Total.Text,
-                            Enroll: ThisRecord.Glry_Lbl_Enrolled.Text,
-                            Inprogress: ThisRecord.Glry_Lbl_Inprogress.Text,
-                            Proofs_Approved: ThisRecord.Glry_Lbl_ProofsApproved.Text,
-                            Reimbursed: ThisRecord.Glry_Lbl_Reimbursed.Text
-                        }
-                    )
-                );
-                
-                Launch(YearCertification_Flow_Excel.Run(JSON(coldetails1,JSONFormat.IncludeBinaryData)).filelink);
-            PressedBorderColor: =RGBA(0, 0, 0, 0)
-            PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-            PressedFill: =RGBA(0, 0, 0, 0)
-            TabIndex: =1
-            Visible: |
-                =If('Glry_Total Cert/Year Cert'.Selected.Name="Year Certifications",true,false)
-            Width: =15
-            X: =967
-            Y: =450
-            ZIndex: =18
-
     c_Header_10 As c_Header:
         CartOnselect: ='EnrollCertificate Screen'
         FAQOnselect: ='FAQ Screen'
         Height: =97
-        ZIndex: =22
+        ZIndex: =12
 
     C_leftPanel_10 As C_leftPanel:
         NavigateTo: =Switch(SideLabelvar,1,Home_Screen,2,Register_Screen,3,'Request Screen',4,'Admin dashBoard')
         Width: =93
         Y: =85
-        ZIndex: =23
+        ZIndex: =13
 
     C_AlertPanel_9 As C_AlertPanel:
         Visible: =varAlert
         X: =976
-        ZIndex: =24
-
-    Grp_AddTargetBtn As group:
-        Height: =5
-        Width: =5
-        X: =-53
-        Y: =40
-        ZIndex: =24
-
-        Btn_AddTargetCertifcations As button:
-            Align: =Align.Right
-            BorderColor: =RGBA(185, 29, 11, 1)
-            BorderThickness: =0.5
-            Color: =RGBA(185, 29, 11, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
-            Fill: =RGBA(255, 255, 255, 1)
-            FocusedBorderColor: =RGBA(0,0,0,0)
-            FocusedBorderThickness: =1
-            Font: =Font.'Segoe UI'
-            Height: =28
-            HoverBorderColor: =RGBA(185, 29, 11, 1)
-            HoverColor: =RGBA(185, 29, 11, 1)
-            HoverFill: =
-            OnSelect: |-
-                =UpdateContext({varaddtargetcertifications:true})
-            PressedBorderColor: =RGBA(185, 29, 11, 1)
-            PressedColor: =RGBA(185, 29, 11, 1)
-            PressedFill: =
-            RadiusBottomLeft: =5
-            RadiusBottomRight: =5
-            RadiusTopLeft: =5
-            RadiusTopRight: =5
-            Size: =10
-            Text: ="ADD TARGET CERTIFICATIONS"
-            Visible: |-
-                =//If('Glry_Total Cert/Year Cert'.Selected.Name="Total Certifications",true,false)
-                true
-            Width: =215
-            X: =1119
-            Y: =443
-            ZIndex: =19
-
-        Icon_Add As icon.Download:
-            BorderColor: =RGBA(166, 166, 166, 1)
-            Color: =RGBA(185, 29, 11, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(220, 220, 220, 1)
-            DisabledFill: =RGBA(0, 0, 0, 0)
-            FocusedBorderColor: =RGBA(0,0,0,0)
-            FocusedBorderThickness: =1
-            Height: =15
-            HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverColor: =RGBA(185, 29, 11, 1)
-            HoverFill: =RGBA(0, 0, 0, 0)
-            Icon: =Icon.Add
-            OnSelect: =
-            PressedBorderColor: =RGBA(0, 0, 0, 0)
-            PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-            PressedFill: =RGBA(0, 0, 0, 0)
-            Visible: |-
-                =//If('Glry_Total Cert/Year Cert'.Selected.Name="Total Certifications",true,false)
-                true
-            Width: =15
-            X: =1129
-            Y: =449
-            ZIndex: =20
+        ZIndex: =14
 
     C_Profile_9 As C_Profile:
         Visible: =varProfileView
         X: =976
-        ZIndex: =25
-
-    Cntr_Recent_Request As groupContainer.manualLayoutContainer:
-        DropShadow: =DropShadow.ExtraBold
-        Fill: =RGBA(255, 255, 255, 1)
-        Height: =768
-        RadiusBottomLeft: =8
-        RadiusBottomRight: =8
-        RadiusTopLeft: =8
-        RadiusTopRight: =8
-        Visible: =varNewCert
-        Width: =400
-        X: =Parent.Width-Self.Width
-        ZIndex: =26
-
-        Lbl_RecentCertReq_1 As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(57, 57, 57, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            Font: ="Poppins"
-            FontWeight: =FontWeight.Bold
-            Size: =12
-            Text: ="Recent Certification Requests"
-            Width: =324
-            X: =23.28
-            Y: =20.29
-            ZIndex: =1
-
-        Icon_Cancel_RecentCertReq_1 As icon.Cancel:
-            BorderColor: =RGBA(166, 166, 166, 1)
-            BorderStyle: =BorderStyle.None
-            Color: =RGBA(70, 70, 70, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(220, 220, 220, 1)
-            DisabledFill: =RGBA(0, 0, 0, 0)
-            FocusedBorderThickness: =4
-            Height: =21.87
-            HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverColor: =RGBA(70, 70, 70, 1)
-            HoverFill: =RGBA(0, 0, 0, 0)
-            Icon: =Icon.Cancel
-            OnSelect: |-
-                =Set(varNewCert,false);
-                UpdateContext({varNewCertVisible:false})
-            PressedBorderColor: =RGBA(0, 0, 0, 0)
-            PressedColor: =RGBA(70, 70, 70, 1)
-            PressedFill: =RGBA(0, 0, 0, 0)
-            TabIndex: =1
-            Width: =21.87
-            X: =Lbl_RecentCertReq_1.X+Lbl_RecentCertReq_1.Width
-            Y: =27
-            ZIndex: =2
-
-        Search_3 As groupContainer.manualLayoutContainer:
-            BorderColor: =RGBA(154, 154, 154, 1)
-            BorderThickness: =1
-            Height: =32
-            LayoutMode: ="manual"
-            RadiusBottomLeft: =5
-            RadiusBottomRight: =5
-            RadiusTopLeft: =5
-            RadiusTopRight: =5
-            Width: =Rectangle5_9.Width
-            X: =23
-            Y: =86
-            ZIndex: =3
-
-            "'Rectangle 1129_3' As groupContainer.manualLayoutContainer":
-                BorderStyle: =BorderStyle.None
-                Height: =32
-                LayoutMode: ="manual"
-                Width: =Parent.Width
-                ZIndex: =15
-
-                Vector_19 As image:
-                    BorderColor: =RGBA(0, 0, 0, 0)
-                    BorderStyle: =BorderStyle.None
-                    BorderThickness: =2
-                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                    DisabledFill: =RGBA(0, 0, 0, 0)
-                    FocusedBorderThickness: =4
-                    Height: =32
-                    HoverBorderColor: =RGBA(0, 0, 0, 0)
-                    HoverFill: =RGBA(0, 0, 0, 0)
-                    Image: =image89183
-                    PressedBorderColor: =RGBA(0, 0, 0, 0)
-                    PressedFill: =RGBA(0, 0, 0, 0)
-                    TabIndex: =1
-                    Width: =Parent.Width
-                    ZIndex: =16
-
-                Txt_SerchRecent As text:
-                    BorderColor: =RGBA(0, 0, 0, 0)
-                    BorderThickness: =0
-                    Color: =RGBA(154, 154, 154, 1)
-                    Default: =
-                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                    DisabledColor: =RGBA(154, 154, 154, 1)
-                    DisabledFill: =RGBA(244, 244, 244, 1)
-                    FocusedBorderColor: =RGBA(0,0,0,0)
-                    FocusedBorderThickness: =2
-                    Font: ="Poppins"
-                    Height: =32
-                    HintText: ="Search anything"
-                    HoverBorderColor: =
-                    HoverColor: =RGBA(154, 154, 154, 1)
-                    HoverFill: =RGBA(0, 0, 0, 0)
-                    PressedBorderColor: =RGBA(0, 0, 0, 0)
-                    PressedColor: =RGBA(154, 154, 154, 1)
-                    PressedFill: =RGBA(0, 0, 0, 0)
-                    RadiusBottomLeft: =0
-                    RadiusBottomRight: =0
-                    RadiusTopLeft: =0
-                    RadiusTopRight: =0
-                    Size: =12
-                    Width: =Parent.Width
-                    ZIndex: =17
-
-            "'Group 5500_3' As groupContainer.manualLayoutContainer":
-                BorderStyle: =BorderStyle.None
-                Height: =28
-                LayoutMode: ="manual"
-                Width: =28
-                X: =Parent.Width-Self.Width
-                Y: =2
-                ZIndex: =18
-
-                "'Rectangle 779_3' As image":
-                    BorderColor: =RGBA(0, 0, 0, 0)
-                    BorderStyle: =BorderStyle.None
-                    BorderThickness: =2
-                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                    DisabledFill: =RGBA(0, 0, 0, 0)
-                    FocusedBorderThickness: =4
-                    Height: =28
-                    HoverBorderColor: =RGBA(0, 0, 0, 0)
-                    HoverFill: =RGBA(0, 0, 0, 0)
-                    Image: =image89186
-                    PressedBorderColor: =RGBA(0, 0, 0, 0)
-                    PressedFill: =RGBA(0, 0, 0, 0)
-                    TabIndex: =1
-                    Width: =28
-                    ZIndex: =19
-
-                Icon_Search As icon.Search:
-                    BorderColor: =RGBA(166, 166, 166, 1)
-                    Color: =RGBA(255, 255, 255, 1)
-                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                    DisabledColor: =RGBA(220, 220, 220, 1)
-                    DisabledFill: =RGBA(0, 0, 0, 0)
-                    FocusedBorderThickness: =4
-                    Height: =16
-                    HoverBorderColor: =RGBA(0, 0, 0, 0)
-                    HoverColor: =Self.Color
-                    HoverFill: =RGBA(0, 0, 0, 0)
-                    Icon: =Icon.Search
-                    PressedBorderColor: =RGBA(0, 0, 0, 0)
-                    PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-                    PressedFill: =RGBA(0, 0, 0, 0)
-                    Width: =16
-                    X: =6
-                    Y: =7
-                    ZIndex: =21
-
-        Rectangle5_9 As rectangle:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            DisabledFill: =RGBA(154, 154, 154, 1)
-            Fill: =RGBA(154, 154, 154, 0.5)
-            FocusedBorderThickness: =4
-            Height: =1
-            HoverFill: =RGBA(154, 154, 154, 1)
-            PressedFill: =RGBA(154, 154, 154, 1)
-            Width: =Lbl_RecentCertReq_1.X+Lbl_RecentCertReq_1.Width
-            X: =24
-            Y: =65
-            ZIndex: =4
-
-        Glry_ViewRequest As gallery.galleryVertical:
-            BorderColor: =RGBA(166, 166, 166, 1)
-            DelayItemLoading: =true
-            Height: =610
-            Items: |-
-                =Search(
-                    Sort(
-                        Cert_Req,
-                        Created,
-                        SortOrder.Descending
-                    ),
-                    Txt_SerchRecent.Text,
-                    "Title"
-                )
-            Layout: =Layout.Vertical
-            LoadingSpinner: =LoadingSpinner.Data
-            TabIndex: =1
-            TemplateSize: =92
-            Width: =Rectangle5_9.Width
-            X: =23
-            Y: =135
-            ZIndex: =5
-
-            Glry_Lbl_Title As label:
-                BorderColor: =RGBA(0, 0, 0, 0)
-                BorderStyle: =BorderStyle.None
-                BorderThickness: =2
-                Color: =RGBA(185, 29, 11, 1)
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                Font: ="Poppins"
-                FontWeight: =FontWeight.Semibold
-                Height: =43
-                OnSelect: =Select(Parent)
-                Overflow: =Overflow.Scroll
-                Size: =10
-                Text: =ThisItem.Title
-                Width: =237
-                X: =8
-                Y: =6
-                ZIndex: =1
-
-            Glry_Lbl_Requestor As label:
-                BorderColor: =RGBA(0, 0, 0, 0)
-                BorderStyle: =BorderStyle.None
-                BorderThickness: =2
-                Color: =RGBA(51, 51, 51, 1)
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                Font: ="Poppins"
-                Height: =25
-                OnSelect: =Select(Parent)
-                Size: =10
-                Text: =ThisItem.Requestor.DisplayName
-                Width: =220
-                X: =8
-                Y: =45
-                ZIndex: =2
-
-            Glry_Lbl_BU As label:
-                BorderColor: =RGBA(0, 0, 0, 0)
-                BorderStyle: =BorderStyle.None
-                BorderThickness: =2
-                Color: =RGBA(51, 51, 51, 1)
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                Font: ="Poppins"
-                Height: =20
-                OnSelect: =Select(Parent)
-                Size: =10
-                Text: |-
-                    = "BU: " & ThisItem.BU.Value
-                X: =8
-                Y: =Glry_Lbl_Requestor.Y+Glry_Lbl_Requestor.Height+4
-                ZIndex: =3
-
-            Rectangle6_2 As rectangle:
-                BorderColor: =RGBA(0, 0, 0, 0)
-                BorderStyle: =BorderStyle.None
-                BorderThickness: =2
-                DisabledFill: =If(ThisItem.Admin_Approval=true,RGBA(92,255,9,1),RGBA(216,106,52,1))
-                DisplayMode: =DisplayMode.View
-                Fill: =If(ThisItem.Admin_Approval=true,RGBA(23,151,49,1),RGBA(216,106,52,1))
-                FocusedBorderThickness: =4
-                Height: =90
-                HoverFill: =If(ThisItem.Admin_Approval=true,RGBA(92,255,9,1),RGBA(255,191,0,0.5))
-                OnSelect: =Select(Parent)
-                PressedFill: =If(ThisItem.Admin_Approval=true,RGBA(92,255,9,1),RGBA(255,191,0,0.5))
-                Width: =1
-                ZIndex: =4
-
-            View_Icon As icon.View:
-                BorderColor: =RGBA(166, 166, 166, 1)
-                BorderStyle: =BorderStyle.None
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(220, 220, 220, 1)
-                DisabledFill: =RGBA(0, 0, 0, 0)
-                FocusedBorderColor: =RGBA(0,0,0,0)
-                FocusedBorderThickness: =
-                Height: =15
-                HoverBorderColor: =RGBA(0, 0, 0, 0)
-                HoverColor: =Color.Black
-                HoverFill: =RGBA(0, 0, 0, 0)
-                Icon: =Icon.View
-                OnSelect: |+
-                    =Set(
-                        vardetails,
-                        ThisItem
-                    );
-                    UpdateContext({varNewCertVisible: true});
-                    
-                PressedBorderColor: =RGBA(0, 0, 0, 0)
-                PressedColor: =Color.Black
-                PressedFill: =RGBA(0, 0, 0, 0)
-                TabIndex: =1
-                Width: =15
-                X: =292
-                Y: =49
-                ZIndex: =5
-
-            "'Btn_Approve/Pending' As button":
-                BorderColor: =RGBA(0, 0, 0, 0)
-                BorderStyle: =BorderStyle.None
-                Color: =If(ThisItem.Admin_Approval=true,RGBA(23,151,49,1),RGBA(216,106,52,1))
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                DisabledFill: =If(ThisItem.Admin_Approval=true,RGBA(23,151,49,0.18),RGBA(216,106,52,0.18))
-                DisplayMode: =DisplayMode.View
-                Fill: =If(ThisItem.Admin_Approval=true,RGBA(23,151,49,0.18),RGBA(216,106,52,0.18))
-                FocusedBorderColor: =ColorFade(Self.Fill, -75%)
-                Font: ="Poppins"
-                Height: =25
-                HoverBorderColor: =RGBA(0, 0, 0, 0)
-                HoverColor: =RGBA(255, 255, 255, 1)
-                HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
-                OnSelect: =
-                PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
-                PressedColor: =RGBA(255, 255, 255, 1)
-                PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-                RadiusBottomLeft: =30
-                RadiusBottomRight: =30
-                RadiusTopLeft: =30
-                RadiusTopRight: =30
-                Size: =8
-                Text: =If(ThisItem.Admin_Approval=true,"Approved","Pending")
-                Width: =85
-                X: =245
-                Y: =18
-                ZIndex: =6
-
-            Dwn_Icon As icon.Download:
-                BorderColor: =RGBA(166, 166, 166, 1)
-                Color: =RGBA(0, 108, 191, 1)
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(220, 220, 220, 1)
-                DisabledFill: =RGBA(0, 0, 0, 0)
-                FocusedBorderThickness: =4
-                Height: =15
-                HoverBorderColor: =RGBA(0, 0, 0, 1)
-                HoverColor: =RGBA(0, 0, 0, 1)
-                HoverFill: =RGBA(255, 255, 255, 1)
-                Icon: =Icon.Download
-                OnSelect: =Launch(First(ThisItem.Attachments).AbsoluteUri)
-                PressedBorderColor: =RGBA(0, 0, 0, 0)
-                PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-                PressedFill: =RGBA(0, 0, 0, 0)
-                TabIndex: =1
-                Width: =15
-                X: =257
-                Y: =49
-                ZIndex: =7
-
-        Label18_5 As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            Font: =Font.'Segoe UI'
-            Size: =13
-            Text: ="No records found"
-            Visible: =If(CountRows(Glry_ViewRequest.AllItems)=0,true,false)
-            X: =122
-            Y: =380
-            ZIndex: =6
+        ZIndex: =15
 
     Cntr_TargetCert As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.ExtraBold
@@ -2373,7 +1707,7 @@
         Visible: =varaddtargetcertifications
         Width: =380
         X: =Parent.Width-Self.Width
-        ZIndex: =27
+        ZIndex: =16
 
         Lbl_AddTargetCert As label:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -2748,7 +2082,7 @@
         Width: =280
         X: =607
         Y: =278
-        ZIndex: =28
+        ZIndex: =17
 
     Label22 As label:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -2799,7 +2133,304 @@
         Width: =226
         X: =580
         Y: =276
-        ZIndex: =29
+        ZIndex: =18
+
+    Grp_Filter_Analysis_1 As group:
+        Height: =5
+        Width: =5
+        X: =-53
+        Y: =40
+        ZIndex: =18
+
+        Rect_Filter_2 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            DisabledFill: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(255,255,255, 1)
+            FocusedBorderColor: =RGBA(0,0,0,0)
+            FocusedBorderThickness: =1
+            Height: =51
+            HoverFill: =RGBA(255, 255, 255, 1)
+            PressedFill: =RGBA(255, 255, 255, 1)
+            TabIndex: =1
+            Width: =1256
+            X: =93
+            Y: =432
+            ZIndex: =2
+
+        "'Glry_Total Cert/Year Cert' As gallery.galleryHorizontal":
+            BorderColor: =RGBA(166, 166, 166, 1)
+            DelayItemLoading: =true
+            FocusedBorderColor: =RGBA(0,0,0,0)
+            FocusedBorderThickness: =1
+            Height: =55
+            Items: |-
+                =Table({Name:"Total Certifications"},{Name:"Year Certifications"})
+            LoadingSpinner: =LoadingSpinner.Data
+            ShowScrollbar: =false
+            TabIndex: =1
+            TemplatePadding: =10
+            TemplateSize: =264
+            Width: =486
+            X: =175
+            Y: =433
+            ZIndex: =3
+
+            "'Radio_Total Cert /Year Cert' As radio":
+                BorderColor: =RGBA(51, 51, 51, 1)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =If(ThisItem.IsSelected=true,RGBA(51,51,51, 1),RGBA(136, 147, 176, 1))
+                Default: ="Total Certifications"
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Fill: =RGBA(241,246,246, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                Height: =34
+                HoverColor: =If(ThisItem.IsSelected=true,RGBA(185, 29, 11, 1),RGBA(136, 147, 176, 1))
+                HoverFill: =RGBA(0, 0, 0, 0)
+                Items: =ThisItem
+                OnChange: =ThisItem.IsSelected
+                OnSelect: =ThisItem.IsSelected
+                PaddingBottom: =5
+                PaddingTop: =8
+                PressedColor: =RGBA(51, 51, 51, 1)
+                PressedFill: =RGBA(0, 0, 0, 0)
+                RadioBorderColor: =RGBA(51, 51, 51, 1)
+                RadioSelectionFill: =If(ThisItem.IsSelected=true,RGBA(185, 29, 11, 1),RGBA(136, 147, 176, 1))
+                RadioSize: =20
+                Size: =10
+                Width: =262
+                ZIndex: =1
+
+        "'Drp_Location List' As dropdown":
+            BorderColor: =RGBA(166, 166, 166, 1)
+            BorderThickness: =0
+            ChevronBackground: =RGBA(241,246,246, 1)
+            ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
+            ChevronDisabledFill: =RGBA(166, 166, 166, 1)
+            ChevronFill: =RGBA(153, 153, 153, 1)
+            ChevronHoverBackground: =RGBA(241,246,246, 1)
+            ChevronHoverFill: =RGBA(33, 33, 33, 1)
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(241,246,246, 1)
+            FocusedBorderColor: =RGBA(0,0,0,0)
+            FocusedBorderThickness: =1
+            Font: =Font.'Segoe UI'
+            Height: =27
+            HoverBorderColor: =RGBA(241,246,246, 1)
+            HoverColor: =RGBA(51, 51, 51, 1)
+            HoverFill: =RGBA(241,246,246, 1)
+            Items: =Sort('Location List_Certification App',Title,SortOrder.Ascending)
+            PaddingBottom: =5
+            PaddingLeft: =12
+            PaddingRight: =5
+            PaddingTop: =5
+            PressedBorderColor: =RGBA(241,246,246, 1)
+            PressedFill: =RGBA(241,246,246, 1)
+            SelectionFill: =RGBA(153, 177, 195, 1)
+            Size: =10
+            TabIndex: =1
+            Visible: =If('Glry_Total Cert/Year Cert'.Selected.Name="Total Certifications",true,false)
+            Width: =91
+            X: =760
+            Y: =447
+            ZIndex: =4
+
+        Lbl_Location As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(241, 246, 246, 1)
+            FocusedBorderColor: =RGBA(0,0,0,0)
+            FocusedBorderThickness: =1
+            Font: =Font.'Segoe UI'
+            Height: =26
+            Size: =10
+            TabIndex: =1
+            Text: ="Location"
+            Visible: =If('Glry_Total Cert/Year Cert'.Selected.Name="Total Certifications",true,false)
+            Width: =80
+            X: =670
+            Y: =448
+            ZIndex: =5
+
+    Grp_ExportBtn As group:
+        Height: =5
+        Width: =5
+        X: =-53
+        Y: =40
+        ZIndex: =21
+
+        Btn_Export_TotalCertifications As button:
+            Align: =Align.Right
+            BorderColor: =RGBA(185, 29, 11, 1)
+            BorderThickness: =0.5
+            Color: =RGBA(185, 29, 11, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderColor: =RGBA(0,0,0,0)
+            FocusedBorderThickness: =1
+            Font: =Font.'Segoe UI'
+            Height: =28
+            HoverBorderColor: =RGBA(185, 29, 11, 1)
+            HoverColor: =RGBA(185, 29, 11, 1)
+            HoverFill: =
+            OnSelect: |-
+                =Clear(coldetails1);
+                ForAll(
+                    Glry_TotalCertifications.AllItems,
+                    Collect(
+                        coldetails1,
+                        {
+                            Department: ThisRecord.Title,
+                            Code: ThisRecord.Code,
+                            Total: ThisRecord.Glry_Lbl_Total.Text,
+                            Enroll: ThisRecord.Glry_Lbl_Enrolled.Text,
+                            Inprogress: ThisRecord.Glry_Lbl_Inprogress.Text,
+                            Proofs_Approved: ThisRecord.Glry_Lbl_ProofsApproved.Text,
+                            Reimbursed: ThisRecord.Glry_Lbl_Reimbursed.Text
+                        }
+                    )
+                );
+                
+                Launch(YearCertification_Flow_Excel.Run(JSON(coldetails1,JSONFormat.IncludeBinaryData)).filelink);
+            PressedBorderColor: =RGBA(185, 29, 11, 1)
+            PressedColor: =RGBA(185, 29, 11, 1)
+            PressedFill: =
+            RadiusBottomLeft: =5
+            RadiusBottomRight: =5
+            RadiusTopLeft: =5
+            RadiusTopRight: =5
+            Size: =10
+            TabIndex: =1
+            Text: ="EXPORT IN EXCEL"
+            Visible: |
+                =If('Glry_Total Cert/Year Cert'.Selected.Name="Year Certifications",true,false)
+            Width: =144
+            X: =955
+            Y: =443
+            ZIndex: =7
+
+        Icon_Dwnlod_1 As icon.Download:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            Color: =RGBA(185, 29, 11, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(220, 220, 220, 1)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            FocusedBorderColor: =RGBA(0,0,0,0)
+            FocusedBorderThickness: =1
+            Height: =15
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(185, 29, 11, 1)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Icon: =Icon.Download
+            OnSelect: |-
+                =Clear(coldetails1);
+                ForAll(
+                    Glry_TotalCertifications.AllItems,
+                    Collect(
+                        coldetails1,
+                        {
+                            Department: ThisRecord.Title,
+                            Code: ThisRecord.Code,
+                            Total: ThisRecord.Glry_Lbl_Total.Text,
+                            Enroll: ThisRecord.Glry_Lbl_Enrolled.Text,
+                            Inprogress: ThisRecord.Glry_Lbl_Inprogress.Text,
+                            Proofs_Approved: ThisRecord.Glry_Lbl_ProofsApproved.Text,
+                            Reimbursed: ThisRecord.Glry_Lbl_Reimbursed.Text
+                        }
+                    )
+                );
+                
+                Launch(YearCertification_Flow_Excel.Run(JSON(coldetails1,JSONFormat.IncludeBinaryData)).filelink);
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            TabIndex: =1
+            Visible: |
+                =If('Glry_Total Cert/Year Cert'.Selected.Name="Year Certifications",true,false)
+            Width: =15
+            X: =967
+            Y: =450
+            ZIndex: =8
+
+    Grp_AddTargetBtn As group:
+        Height: =5
+        Width: =5
+        X: =-53
+        Y: =40
+        ZIndex: =24
+
+        Btn_AddTargetCertifcations As button:
+            Align: =Align.Right
+            BorderColor: =RGBA(185, 29, 11, 1)
+            BorderThickness: =0.5
+            Color: =RGBA(185, 29, 11, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderColor: =RGBA(0,0,0,0)
+            FocusedBorderThickness: =1
+            Font: =Font.'Segoe UI'
+            Height: =28
+            HoverBorderColor: =RGBA(185, 29, 11, 1)
+            HoverColor: =RGBA(185, 29, 11, 1)
+            HoverFill: =
+            OnSelect: |-
+                =UpdateContext({varaddtargetcertifications:true})
+            PressedBorderColor: =RGBA(185, 29, 11, 1)
+            PressedColor: =RGBA(185, 29, 11, 1)
+            PressedFill: =
+            RadiusBottomLeft: =5
+            RadiusBottomRight: =5
+            RadiusTopLeft: =5
+            RadiusTopRight: =5
+            Size: =10
+            Text: ="ADD TARGET CERTIFICATIONS"
+            Visible: |-
+                =//If('Glry_Total Cert/Year Cert'.Selected.Name="Total Certifications",true,false)
+                true
+            Width: =215
+            X: =1119
+            Y: =443
+            ZIndex: =9
+
+        Icon_Add As icon.Download:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            Color: =RGBA(185, 29, 11, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(220, 220, 220, 1)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            FocusedBorderColor: =RGBA(0,0,0,0)
+            FocusedBorderThickness: =1
+            Height: =15
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(185, 29, 11, 1)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Icon: =Icon.Add
+            OnSelect: =
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Visible: |-
+                =//If('Glry_Total Cert/Year Cert'.Selected.Name="Total Certifications",true,false)
+                true
+            Width: =15
+            X: =1129
+            Y: =449
+            ZIndex: =10
 
     "'Grp_Filter Analysis' As group":
         Height: =5
@@ -2826,7 +2457,7 @@
             Width: =69
             X: =106
             Y: =111
-            ZIndex: =30
+            ZIndex: =19
 
         ico_filter1_3 As icon.ArrowRight:
             BorderColor: =RGBA(166, 166, 166, 1)
@@ -2848,7 +2479,7 @@
             Width: =14
             X: =110
             Y: =116
-            ZIndex: =31
+            ZIndex: =21
 
         ico_Filter_3 As icon.ArrowLeft:
             BorderColor: =RGBA(166, 166, 166, 1)
@@ -2868,7 +2499,7 @@
             Width: =14
             X: =110
             Y: =122
-            ZIndex: =32
+            ZIndex: =23
 
     grp_Filter_1 As group:
         Height: =5
@@ -2895,7 +2526,7 @@
             Width: =69
             X: =106
             Y: =443
-            ZIndex: =33
+            ZIndex: =25
 
         ico_filter1_4 As icon.ArrowRight:
             BorderColor: =RGBA(166, 166, 166, 1)
@@ -2917,7 +2548,7 @@
             Width: =14
             X: =106
             Y: =453
-            ZIndex: =34
+            ZIndex: =27
 
         ico_Filter_4 As icon.ArrowLeft:
             BorderColor: =RGBA(166, 166, 166, 1)
@@ -2937,7 +2568,7 @@
             Width: =14
             X: =106
             Y: =459
-            ZIndex: =35
+            ZIndex: =29
 
     RevisePopUp_1 As group:
         Height: =5
@@ -2954,7 +2585,7 @@
             Width: =664
             X: =244
             Y: =261
-            ZIndex: =30
+            ZIndex: =20
 
         rect_BG01_1 As rectangle:
             BorderColor: =RGBA(0, 18, 107, 1)
@@ -2964,7 +2595,7 @@
             Width: =664
             X: =244
             Y: =263
-            ZIndex: =31
+            ZIndex: =22
 
         TextInput4_1 As text:
             AccessibleLabel: ="TextInput4"
@@ -2993,7 +2624,7 @@
             Width: =632
             X: =260
             Y: =348
-            ZIndex: =32
+            ZIndex: =24
 
         Label45_1 As label:
             Align: =Align.Center
@@ -3008,7 +2639,7 @@
             Width: =664
             X: =244
             Y: =261
-            ZIndex: =33
+            ZIndex: =26
 
         Button10_1 As button:
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
@@ -3060,7 +2691,7 @@
             Width: =94
             X: =677
             Y: =565
-            ZIndex: =34
+            ZIndex: =28
 
         Button10_4 As button:
             BorderColor: =RGBA(189, 25, 11, 1)
@@ -3086,7 +2717,376 @@
             Width: =94
             X: =572
             Y: =565
-            ZIndex: =35
+            ZIndex: =30
+
+    Cntr_Recent_Request As groupContainer.manualLayoutContainer:
+        DropShadow: =DropShadow.ExtraBold
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =768
+        RadiusBottomLeft: =8
+        RadiusBottomRight: =8
+        RadiusTopLeft: =8
+        RadiusTopRight: =8
+        Visible: =varNewCert
+        Width: =400
+        X: =Parent.Width-Self.Width
+        ZIndex: =40
+
+        Lbl_RecentCertReq_1 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(57, 57, 57, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: ="Poppins"
+            FontWeight: =FontWeight.Bold
+            Size: =12
+            Text: ="Recent Certification Requests"
+            Width: =324
+            X: =23.28
+            Y: =20.29
+            ZIndex: =1
+
+        Icon_Cancel_RecentCertReq_1 As icon.Cancel:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            BorderStyle: =BorderStyle.None
+            Color: =RGBA(70, 70, 70, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(220, 220, 220, 1)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
+            Height: =21.87
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(70, 70, 70, 1)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Icon: =Icon.Cancel
+            OnSelect: |-
+                =Set(varNewCert,false);
+                UpdateContext({varNewCertVisible:false})
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =RGBA(70, 70, 70, 1)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            TabIndex: =1
+            Width: =21.87
+            X: =Lbl_RecentCertReq_1.X+Lbl_RecentCertReq_1.Width
+            Y: =27
+            ZIndex: =2
+
+        Search_3 As groupContainer.manualLayoutContainer:
+            BorderColor: =RGBA(154, 154, 154, 1)
+            BorderThickness: =1
+            Height: =32
+            LayoutMode: ="manual"
+            RadiusBottomLeft: =5
+            RadiusBottomRight: =5
+            RadiusTopLeft: =5
+            RadiusTopRight: =5
+            Width: =Rectangle5_9.Width
+            X: =23
+            Y: =86
+            ZIndex: =3
+
+            "'Rectangle 1129_3' As groupContainer.manualLayoutContainer":
+                BorderStyle: =BorderStyle.None
+                Height: =32
+                LayoutMode: ="manual"
+                Width: =Parent.Width
+                ZIndex: =15
+
+                Vector_19 As image:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledFill: =RGBA(0, 0, 0, 0)
+                    FocusedBorderThickness: =4
+                    Height: =32
+                    HoverBorderColor: =RGBA(0, 0, 0, 0)
+                    HoverFill: =RGBA(0, 0, 0, 0)
+                    Image: =image89183
+                    PressedBorderColor: =RGBA(0, 0, 0, 0)
+                    PressedFill: =RGBA(0, 0, 0, 0)
+                    TabIndex: =1
+                    Width: =Parent.Width
+                    ZIndex: =16
+
+                Txt_SerchRecent As text:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderThickness: =0
+                    Color: =RGBA(154, 154, 154, 1)
+                    Default: =
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(154, 154, 154, 1)
+                    DisabledFill: =RGBA(244, 244, 244, 1)
+                    FocusedBorderColor: =RGBA(0,0,0,0)
+                    FocusedBorderThickness: =2
+                    Font: ="Poppins"
+                    Height: =32
+                    HintText: ="Search anything"
+                    HoverBorderColor: =
+                    HoverColor: =RGBA(154, 154, 154, 1)
+                    HoverFill: =RGBA(0, 0, 0, 0)
+                    PressedBorderColor: =RGBA(0, 0, 0, 0)
+                    PressedColor: =RGBA(154, 154, 154, 1)
+                    PressedFill: =RGBA(0, 0, 0, 0)
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Size: =12
+                    Width: =Parent.Width
+                    ZIndex: =17
+
+            "'Group 5500_3' As groupContainer.manualLayoutContainer":
+                BorderStyle: =BorderStyle.None
+                Height: =28
+                LayoutMode: ="manual"
+                Width: =28
+                X: =Parent.Width-Self.Width
+                Y: =2
+                ZIndex: =18
+
+                "'Rectangle 779_3' As image":
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledFill: =RGBA(0, 0, 0, 0)
+                    FocusedBorderThickness: =4
+                    Height: =28
+                    HoverBorderColor: =RGBA(0, 0, 0, 0)
+                    HoverFill: =RGBA(0, 0, 0, 0)
+                    Image: =image89186
+                    PressedBorderColor: =RGBA(0, 0, 0, 0)
+                    PressedFill: =RGBA(0, 0, 0, 0)
+                    TabIndex: =1
+                    Width: =28
+                    ZIndex: =19
+
+                Icon_Search As icon.Search:
+                    BorderColor: =RGBA(166, 166, 166, 1)
+                    Color: =RGBA(255, 255, 255, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(220, 220, 220, 1)
+                    DisabledFill: =RGBA(0, 0, 0, 0)
+                    FocusedBorderThickness: =4
+                    Height: =16
+                    HoverBorderColor: =RGBA(0, 0, 0, 0)
+                    HoverColor: =Self.Color
+                    HoverFill: =RGBA(0, 0, 0, 0)
+                    Icon: =Icon.Search
+                    PressedBorderColor: =RGBA(0, 0, 0, 0)
+                    PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                    PressedFill: =RGBA(0, 0, 0, 0)
+                    Width: =16
+                    X: =6
+                    Y: =7
+                    ZIndex: =21
+
+        Rectangle5_9 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            DisabledFill: =RGBA(154, 154, 154, 1)
+            Fill: =RGBA(154, 154, 154, 0.5)
+            FocusedBorderThickness: =4
+            Height: =1
+            HoverFill: =RGBA(154, 154, 154, 1)
+            PressedFill: =RGBA(154, 154, 154, 1)
+            Width: =Lbl_RecentCertReq_1.X+Lbl_RecentCertReq_1.Width
+            X: =24
+            Y: =65
+            ZIndex: =4
+
+        Glry_ViewRequest As gallery.galleryVertical:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            DelayItemLoading: =true
+            Height: =610
+            Items: |-
+                =Search(
+                    Sort(
+                        Cert_Req,
+                        Created,
+                        SortOrder.Descending
+                    ),
+                    Txt_SerchRecent.Text,
+                    "Title"
+                )
+            Layout: =Layout.Vertical
+            LoadingSpinner: =LoadingSpinner.Data
+            TabIndex: =1
+            TemplateSize: =92
+            Width: =Rectangle5_9.Width
+            X: =23
+            Y: =135
+            ZIndex: =5
+
+            Glry_Lbl_Title As label:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(185, 29, 11, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Font: ="Poppins"
+                FontWeight: =FontWeight.Semibold
+                Height: =43
+                OnSelect: =Select(Parent)
+                Overflow: =Overflow.Scroll
+                Size: =10
+                Text: =ThisItem.Title
+                Width: =237
+                X: =8
+                Y: =6
+                ZIndex: =1
+
+            Glry_Lbl_Requestor As label:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Font: ="Poppins"
+                Height: =25
+                OnSelect: =Select(Parent)
+                Size: =10
+                Text: =ThisItem.Requestor.DisplayName
+                Width: =220
+                X: =8
+                Y: =45
+                ZIndex: =2
+
+            Glry_Lbl_BU As label:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Font: ="Poppins"
+                Height: =20
+                OnSelect: =Select(Parent)
+                Size: =10
+                Text: |-
+                    = "BU: " & ThisItem.BU.Value
+                X: =8
+                Y: =Glry_Lbl_Requestor.Y+Glry_Lbl_Requestor.Height+4
+                ZIndex: =3
+
+            Rectangle6_2 As rectangle:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                DisabledFill: =If(ThisItem.Admin_Approval=true,RGBA(92,255,9,1),RGBA(216,106,52,1))
+                DisplayMode: =DisplayMode.View
+                Fill: =If(ThisItem.Admin_Approval=true,RGBA(23,151,49,1),RGBA(216,106,52,1))
+                FocusedBorderThickness: =4
+                Height: =90
+                HoverFill: =If(ThisItem.Admin_Approval=true,RGBA(92,255,9,1),RGBA(255,191,0,0.5))
+                OnSelect: =Select(Parent)
+                PressedFill: =If(ThisItem.Admin_Approval=true,RGBA(92,255,9,1),RGBA(255,191,0,0.5))
+                Width: =1
+                ZIndex: =4
+
+            View_Icon As icon.View:
+                BorderColor: =RGBA(166, 166, 166, 1)
+                BorderStyle: =BorderStyle.None
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(220, 220, 220, 1)
+                DisabledFill: =RGBA(0, 0, 0, 0)
+                FocusedBorderColor: =RGBA(0,0,0,0)
+                FocusedBorderThickness: =
+                Height: =15
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverColor: =Color.Black
+                HoverFill: =RGBA(0, 0, 0, 0)
+                Icon: =Icon.View
+                OnSelect: |+
+                    =Set(
+                        vardetails,
+                        ThisItem
+                    );
+                    UpdateContext({varNewCertVisible: true});
+                    
+                PressedBorderColor: =RGBA(0, 0, 0, 0)
+                PressedColor: =Color.Black
+                PressedFill: =RGBA(0, 0, 0, 0)
+                TabIndex: =1
+                Width: =15
+                X: =292
+                Y: =49
+                ZIndex: =5
+
+            "'Btn_Approve/Pending' As button":
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                Color: =If(ThisItem.Admin_Approval=true,RGBA(23,151,49,1),RGBA(216,106,52,1))
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =If(ThisItem.Admin_Approval=true,RGBA(23,151,49,0.18),RGBA(216,106,52,0.18))
+                DisplayMode: =DisplayMode.View
+                Fill: =If(ThisItem.Admin_Approval=true,RGBA(23,151,49,0.18),RGBA(216,106,52,0.18))
+                FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+                Font: ="Poppins"
+                Height: =25
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+                OnSelect: =
+                PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+                PressedColor: =RGBA(255, 255, 255, 1)
+                PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                RadiusBottomLeft: =30
+                RadiusBottomRight: =30
+                RadiusTopLeft: =30
+                RadiusTopRight: =30
+                Size: =8
+                Text: =If(ThisItem.Admin_Approval=true,"Approved","Pending")
+                Width: =85
+                X: =245
+                Y: =18
+                ZIndex: =6
+
+            Dwn_Icon As icon.Download:
+                BorderColor: =RGBA(166, 166, 166, 1)
+                Color: =RGBA(0, 108, 191, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(220, 220, 220, 1)
+                DisabledFill: =RGBA(0, 0, 0, 0)
+                FocusedBorderThickness: =4
+                Height: =15
+                HoverBorderColor: =RGBA(0, 0, 0, 1)
+                HoverColor: =RGBA(0, 0, 0, 1)
+                HoverFill: =RGBA(255, 255, 255, 1)
+                Icon: =Icon.Download
+                OnSelect: =Launch(First(ThisItem.Attachments).AbsoluteUri)
+                PressedBorderColor: =RGBA(0, 0, 0, 0)
+                PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                PressedFill: =RGBA(0, 0, 0, 0)
+                TabIndex: =1
+                Width: =15
+                X: =257
+                Y: =49
+                ZIndex: =7
+
+        Label18_5 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            Size: =13
+            Text: ="No records found"
+            Visible: =If(CountRows(Glry_ViewRequest.AllItems)=0,true,false)
+            X: =122
+            Y: =380
+            ZIndex: =6
 
     Grp_Filter_Analysis As group:
         Height: =5
@@ -3109,7 +3109,7 @@
             Width: =1256
             X: =96
             Y: =103
-            ZIndex: =36
+            ZIndex: =31
 
         Filter_Lbl As label:
             Align: =Align.Center
@@ -3133,7 +3133,7 @@
             Width: =69
             X: =111
             Y: =117
-            ZIndex: =37
+            ZIndex: =32
 
         "'Glry_Total Cert per BU/Provider' As gallery.galleryHorizontal":
             BorderColor: =RGBA(166, 166, 166, 1)
@@ -3150,7 +3150,7 @@
             Width: =486
             X: =178
             Y: =104
-            ZIndex: =38
+            ZIndex: =33
 
             "'Radio_Total Cert per BU/Provider' As radio":
                 BorderColor: =RGBA(51, 51, 51, 1)
@@ -3205,7 +3205,7 @@
             Width: =113
             X: =673
             Y: =116
-            ZIndex: =39
+            ZIndex: =34
 
         Date_ToDate As datepicker:
             BorderColor: =RGBA(166, 166, 166, 1)
@@ -3231,7 +3231,7 @@
             Width: =113
             X: =793
             Y: =116
-            ZIndex: =40
+            ZIndex: =35
 
         Drp_BUList As dropdown:
             BorderColor: =RGBA(166, 166, 166, 1)
@@ -3267,7 +3267,7 @@
             Width: =91
             X: =925
             Y: =116
-            ZIndex: =41
+            ZIndex: =36
 
         Lbl_Refresh As label:
             Align: =Align.Center
@@ -3287,7 +3287,7 @@
             Width: =77
             X: =1089
             Y: =120
-            ZIndex: =42
+            ZIndex: =37
 
         Icon_Refresh As icon.Reload:
             BorderColor: =RGBA(166, 166, 166, 1)
@@ -3308,7 +3308,7 @@
             Width: =15
             X: =1081
             Y: =122
-            ZIndex: =43
+            ZIndex: =38
 
         "'Btn_View Request' As button":
             BorderColor: =RGBA(185, 29, 11, 1)
@@ -3340,5 +3340,5 @@
             Text: ="VIEW RECENT REQUEST"
             X: =1177
             Y: =117
-            ZIndex: =44
+            ZIndex: =39
 
