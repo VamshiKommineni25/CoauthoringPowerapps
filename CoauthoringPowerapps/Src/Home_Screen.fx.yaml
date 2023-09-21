@@ -1903,6 +1903,8 @@ Home_Screen As screen:
         "Gallery4 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
             BorderColor: =RGBA(166, 166, 166, 1)
             DelayItemLoading: =true
+            FocusedBorderColor: =RGBA(0,0,0,0)
+            FocusedBorderThickness: =2
             Height: =217
             Items: |-
                 =If(

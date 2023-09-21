@@ -439,7 +439,40 @@ c_Header As CanvasComponent:
                 PressedBorderColor: =RGBA(0, 0, 0, 0)
                 PressedFill: =RGBA(0, 0, 0, 0)
                 TabIndex: =1
-                Visible: =If(varNotifyCount>0,true,false)
+                Visible: |-
+                    =If(
+                        CountRows(
+                            Switch(
+                                varUserLevel,
+                                "USER",
+                                Sort(
+                                    col_Notification,
+                                    Created,
+                                    SortOrder.Descending
+                                ),
+                                "ADMIN",
+                                Sort(
+                                    mngr_notify_Col,
+                                    Created,
+                                    SortOrder.Descending
+                                ),
+                                "SUPER-ADMIN",
+                                Sort(
+                                    Filter(
+                                        FirstN(
+                                            NotificationList_CertificationApp,
+                                            2000
+                                        ),
+                                        "has uploaded proofs" in Notification And AdminDeleted = false
+                                    ),
+                                    Created,
+                                    SortOrder.Descending
+                                )
+                            )
+                        ) > 0,
+                        true,
+                        false
+                    )
                 Width: =10
                 X: =1148
                 Y: =20
