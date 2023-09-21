@@ -120,7 +120,7 @@
                 "Name": "Image2",
                 "Parent": "Container4",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 834,
+                "PublishOrderIndex": 841,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -419,7 +419,7 @@
                 "Name": "Label14",
                 "Parent": "Container4",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 835,
+                "PublishOrderIndex": 842,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -778,7 +778,7 @@
                 "Name": "Label14_2",
                 "Parent": "Container4",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 836,
+                "PublishOrderIndex": 844,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -1151,7 +1151,7 @@
                 "Name": "Label16",
                 "Parent": "Container4",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 837,
+                "PublishOrderIndex": 845,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -1466,7 +1466,7 @@
                 "Name": "Rectangle5",
                 "Parent": "Container4",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 838,
+                "PublishOrderIndex": 846,
                 "Rules": [
                   {
                     "Category": "Design",
@@ -1718,7 +1718,7 @@
                 "Name": "Label14_3",
                 "Parent": "Container4",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 839,
+                "PublishOrderIndex": 847,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -2075,7 +2075,7 @@
                 "Name": "Icon16",
                 "Parent": "Container4",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 841,
+                "PublishOrderIndex": 848,
                 "Rules": [
                   {
                     "Category": "Design",
@@ -2312,7 +2312,7 @@
                 "Name": "Rectangle5_2",
                 "Parent": "Container4",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 842,
+                "PublishOrderIndex": 849,
                 "Rules": [
                   {
                     "Category": "Design",
@@ -2587,7 +2587,7 @@
                 "Name": "Button1",
                 "Parent": "Container4",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 843,
+                "PublishOrderIndex": 850,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -2905,7 +2905,7 @@
                 "Name": "Icon11",
                 "Parent": "Container4",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 844,
+                "PublishOrderIndex": 851,
                 "Rules": [
                   {
                     "Category": "Design",
@@ -3095,7 +3095,7 @@
                 "Name": "Grp_Setting",
                 "Parent": "Container4",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 840,
+                "PublishOrderIndex": 843,
                 "Rules": [
                   {
                     "Category": "Design",
@@ -3238,7 +3238,7 @@
             "Name": "Container4",
             "Parent": "Container3",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 833,
+            "PublishOrderIndex": 840,
             "Rules": [
               {
                 "Category": "Design",
@@ -3470,7 +3470,7 @@
         "Name": "Container3",
         "Parent": "C_Profile",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 832,
+        "PublishOrderIndex": 839,
         "Rules": [
           {
             "Category": "Design",
