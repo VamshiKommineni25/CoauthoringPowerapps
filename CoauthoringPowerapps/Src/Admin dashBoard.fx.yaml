@@ -3146,7 +3146,7 @@
         Fill: =RGBA(241,246,246, 1)
         FocusedBorderThickness: =0
         Font: =Font.'Segoe UI'
-        Height: =27
+        Height: =34
         HoverDateFill: =RGBA(200, 200, 200, 1)
         IconBackground: =RGBA(241,246,246, 1)
         IconFill: =RGBA(153, 153, 153, 1)
@@ -3154,8 +3154,8 @@
         SelectedDateFill: =RGBA(0, 120, 212, 1)
         Size: =8
         Width: =113
-        X: =677
-        Y: =107
+        X: =688
+        Y: =102
         ZIndex: =40
 
     Date_ToDate As datepicker:
@@ -3170,7 +3170,7 @@
         FocusedBorderColor: =RGBA(0,0,0,0)
         FocusedBorderThickness: =1
         Font: =Font.'Segoe UI'
-        Height: =27
+        Height: =34
         HoverDateFill: =RGBA(200, 200, 200, 1)
         IconBackground: =RGBA(241,246,246, 1)
         IconFill: =RGBA(153, 153, 153, 1)
@@ -3179,7 +3179,7 @@
         Size: =8
         Width: =113
         X: =828
-        Y: =107
+        Y: =102
         ZIndex: =41
 
     Drp_BUList As dropdown:
@@ -3199,7 +3199,7 @@
         FocusedBorderColor: =RGBA(0,0,0,0)
         FocusedBorderThickness: =0.5
         Font: =Font.'Segoe UI'
-        Height: =27
+        Height: =34
         HoverBorderColor: =RGBA(241,246,246, 1)
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(241,246,246, 1)
@@ -3214,7 +3214,7 @@
         Size: =10
         Width: =91
         X: =957
-        Y: =107
+        Y: =102
         ZIndex: =42
 
     grp_Filter_3 As group:
