@@ -2754,7 +2754,7 @@
             PressedFill: =RGBA(255, 255, 255, 1)
             SelectionColor: =RGBA(0, 0, 0, 1)
             SelectionFill: =RGBA(166, 166, 166, 1)
-            Size: =12
+            Size: =10
             Width: =300
             X: =33
             Y: =144
