@@ -103,7 +103,8 @@
                 CertificationOrder,
                 Location = 'Drp_Location List'.SelectedText.Value
             )
-        )
+        );
+        UpdateContext({varNewCertVisible:false})
 
     "'Cntr_Certifications per Provider/BU' As groupContainer.verticalAutoLayoutContainer":
         DropShadow: =DropShadow.Light
