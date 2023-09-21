@@ -606,8 +606,8 @@ Home_Screen As screen:
             Size: =10
             TabIndex: =0
             Text: ="Refresh"
-            Width: =77
-            X: =508
+            Width: =57
+            X: =515
             Y: =15
             ZIndex: =3
 
@@ -2328,7 +2328,7 @@ Home_Screen As screen:
         X: =976
         ZIndex: =21
 
-    Label18 As label:
+    Lbl_noRecrdNotice As label:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
         BorderThickness: =2
@@ -2362,7 +2362,7 @@ Home_Screen As screen:
         Width: =5
         X: =40
         Y: =40
-        ZIndex: =22
+        ZIndex: =26
 
         Rect_Filter As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -2378,26 +2378,6 @@ Home_Screen As screen:
             X: =99
             Y: =277
             ZIndex: =8
-
-        Lbl_Filter As label:
-            Align: =Align.Center
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(149, 149, 149, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            Fill: =RGBA(241,246,246, 1)
-            FocusedBorderThickness: =4
-            Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Semibold
-            Height: =26
-            Size: =10
-            Text: ="Filter"
-            Width: =69
-            X: =114
-            Y: =289
-            ZIndex: =9
 
         Btn_DwnForm_1 As button:
             BorderColor: =RGBA(201,47,29,1)
@@ -2553,4 +2533,66 @@ Home_Screen As screen:
             X: =445
             Y: =289
             ZIndex: =16
+
+        lbl_filter_3 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(149, 149, 149, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(241,246,246, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =26
+            Size: =10
+            Text: ="Filter"
+            Width: =69
+            X: =119
+            Y: =290
+            ZIndex: =23
+
+        ico_filter1_2 As icon.ArrowRight:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            Color: |-
+                =//RGBA(184, 0, 0, 1)
+                RGBA(201,47,29,1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(220, 220, 220, 1)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
+            Height: =10
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Icon: =Icon.ArrowRight
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Width: =14
+            X: =120
+            Y: =295
+            ZIndex: =24
+
+        ico_Filter_2 As icon.ArrowLeft:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            Color: =RGBA(201,47,29,1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(220, 220, 220, 1)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
+            Height: =10
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Icon: =Icon.ArrowLeft
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Width: =14
+            X: =120
+            Y: =301
+            ZIndex: =25
 
