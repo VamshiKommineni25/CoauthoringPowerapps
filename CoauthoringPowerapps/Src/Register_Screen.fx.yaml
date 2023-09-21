@@ -676,10 +676,27 @@ Register_Screen As screen:
                 DisabledColor: =//RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
                 DisplayMode: |-
-                    =If(IsBlank(First( Filter(
-                                userCertifications,
-                                CertificationID.Id=ThisItem.ID
-                            ))),DisplayMode.Edit,DisplayMode.Disabled)
+                    =If(
+                        IsBlank(
+                            First(
+                                Filter(
+                                    userCertifications,
+                                    CertificationID.Id = ThisItem.ID
+                                )
+                            )
+                        ),
+                        DisplayMode.Edit,
+                        If(
+                            First(
+                                Filter(
+                                    userCertifications,
+                                    CertificationID.Id = ThisItem.ID
+                                )
+                            ).Status = "Rejected",
+                            DisplayMode.Edit,
+                            DisplayMode.Disabled
+                        )
+                    )
                 Fill: =RGBA(247, 222, 218, 1)
                 FocusedBorderColor: =RGBA(0,0,0,0)
                 FocusedBorderThickness: =2
