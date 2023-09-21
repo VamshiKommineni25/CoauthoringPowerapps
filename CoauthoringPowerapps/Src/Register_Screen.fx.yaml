@@ -16,7 +16,7 @@ Register_Screen As screen:
         
 
     con_Filter As groupContainer.manualLayoutContainer:
-        DropShadow: =DropShadow.Light
+        DropShadow: =DropShadow.Semibold
         Fill: =RGBA(255, 255, 255, 1)
         Height: =51
         RadiusBottomLeft: =8
@@ -398,7 +398,7 @@ Register_Screen As screen:
             ZIndex: =17
 
     con_CertificationDetails As groupContainer.manualLayoutContainer:
-        DropShadow: =DropShadow.Light
+        DropShadow: =DropShadow.Semibold
         Fill: =RGBA(255, 255, 255, 1)
         Height: =257
         RadiusBottomLeft: =8
@@ -759,7 +759,7 @@ Register_Screen As screen:
         ZIndex: =3
 
     con_BU_Recommended_Cert_Filter As groupContainer.manualLayoutContainer:
-        DropShadow: =DropShadow.Light
+        DropShadow: =DropShadow.Semibold
         Fill: =RGBA(255, 255, 255, 1)
         Height: =51
         RadiusBottomLeft: =8
@@ -898,7 +898,7 @@ Register_Screen As screen:
             ZIndex: =5
 
     con_BU_Recommended_Cert_Details As groupContainer.manualLayoutContainer:
-        DropShadow: =DropShadow.Light
+        DropShadow: =DropShadow.Semibold
         Fill: =RGBA(255, 255, 255, 1)
         Height: =213
         RadiusBottomLeft: =8

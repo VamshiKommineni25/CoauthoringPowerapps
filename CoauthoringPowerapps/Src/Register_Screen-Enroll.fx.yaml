@@ -17,7 +17,7 @@
             )
 
     con_Buttons As groupContainer.manualLayoutContainer:
-        DropShadow: =DropShadow.Light
+        DropShadow: =DropShadow.Semibold
         Fill: =RGBA(255, 255, 255, 1)
         Height: =51
         RadiusBottomLeft: =8
@@ -31,6 +31,7 @@
 
         btn_ViewCompletionRecord As button:
             BorderColor: =RGBA(201,47,29,1)
+            BorderThickness: =1
             Color: =RGBA(201,47,29,1)
             DisabledBorderColor: =Self.BorderColor
             DisabledColor: =RGBA(166, 166, 166, 1)
@@ -57,10 +58,15 @@
             ZIndex: =1
 
         btn_EnrollNow As button:
-            BorderColor: =RGBA(201,47,29,1)
+            BorderColor: =RGBA(0,0,0,0)
             DisabledBorderColor: =Self.BorderColor
             DisabledColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
+            DisplayMode: |-
+                =If(IsBlank(First( Filter(
+                            userCertifications,
+                            CertificationID.Id=varCertificationData.ID
+                        ))),DisplayMode.Edit,DisplayMode.Disabled)
             Fill: =RGBA(201,47,29,1)
             FocusedBorderThickness: =1
             Font: =Font.'Segoe UI'
@@ -118,6 +124,7 @@
 
         Btn_AskQuest As button:
             BorderColor: =RGBA(201,47,29,1)
+            BorderThickness: =1
             Color: =RGBA(201,47,29,1)
             DisabledBorderColor: =Self.BorderColor
             DisabledColor: =RGBA(166, 166, 166, 1)
@@ -203,7 +210,7 @@
                 ZIndex: =5
 
     con_ParticularCertificationDetails As groupContainer.manualLayoutContainer:
-        DropShadow: =DropShadow.Light
+        DropShadow: =DropShadow.Semibold
         Fill: =RGBA(255, 255, 255, 1)
         Height: =377
         RadiusBottomLeft: =8
