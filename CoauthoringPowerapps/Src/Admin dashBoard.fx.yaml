@@ -3107,8 +3107,8 @@
             Height: =361
             Visible: =varRevise1
             Width: =664
-            X: =290
-            Y: =81
+            X: =244
+            Y: =261
             ZIndex: =30
 
         rect_BG01_1 As rectangle:
@@ -3117,8 +3117,8 @@
             Height: =361
             Visible: =varRevise1
             Width: =664
-            X: =290
-            Y: =83
+            X: =244
+            Y: =263
             ZIndex: =31
 
         TextInput4_1 As text:
@@ -3146,8 +3146,8 @@
             Size: =13
             Visible: =varRevise1
             Width: =632
-            X: =306
-            Y: =168
+            X: =260
+            Y: =348
             ZIndex: =32
 
         Label45_1 As label:
@@ -3161,8 +3161,8 @@
             Text: =If(varMngrReject=true,"Reason for Rejection", "Reason for Certification Proofs Revise")
             Visible: =varRevise1
             Width: =664
-            X: =290
-            Y: =81
+            X: =244
+            Y: =261
             ZIndex: =33
 
         Button10_1 As button:
@@ -3213,8 +3213,8 @@
             Text: ="Submit"
             Visible: =varRevise1
             Width: =94
-            X: =723
-            Y: =385
+            X: =677
+            Y: =565
             ZIndex: =34
 
         Button10_4 As button:
@@ -3239,7 +3239,7 @@
             Text: ="Cancel"
             Visible: =varRevise1
             Width: =94
-            X: =618
-            Y: =385
+            X: =572
+            Y: =565
             ZIndex: =35
 
