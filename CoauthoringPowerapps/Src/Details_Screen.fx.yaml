@@ -971,12 +971,193 @@ Details_Screen As screen:
             Y: =17
             ZIndex: =29
 
-            RevisePopUp As group:
-                Height: =5
-                Width: =5
-                X: =-250
-                Y: =-41
-                ZIndex: =7
+            Lbl_ReviseHead As label:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Bold
+                Height: =41
+                Size: =13
+                Text: ="Reason For Rejection"
+                Width: =267
+                X: =16
+                ZIndex: =1
+
+            TextInput4 As text:
+                BorderColor: =RGBA(166, 166, 166, 1)
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                Default: ="Text input"
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                Height: =246
+                HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                HoverColor: =RGBA(51, 51, 51, 1)
+                HoverFill: =RGBA(255, 255, 255, 1)
+                Mode: =TextMode.MultiLine
+                PressedBorderColor: =RGBA(0, 120, 212, 1)
+                PressedColor: =RGBA(51, 51, 51, 1)
+                PressedFill: =RGBA(255, 255, 255, 1)
+                RadiusBottomLeft: =10
+                RadiusBottomRight: =10
+                RadiusTopLeft: =10
+                RadiusTopRight: =10
+                Size: =13
+                Width: =628
+                X: =16
+                Y: =60
+                ZIndex: =2
+
+            Btn_ReviseCert_1 As button:
+                BorderColor: =RGBA(189, 25, 11, 1)
+                BorderThickness: =1
+                Color: =RGBA(189, 25, 11, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                DisplayMode: |
+                    =If(
+                        (varCertificateDetails.Status = "Enrolled" /* And User().Email = Office365Users.Manager(varCertificateDetails.Requestor.Email).Mail)*/ )|| (varCertificateDetails.Status = "Proofs Uploaded" && varCertificateDetails.'Has attachments' And varUserLevel in [
+                            "SUPER-ADMIN",
+                            "ADMIN"
+                        ]),
+                        DisplayMode.Edit,
+                        DisplayMode.Disabled
+                    )
+                Fill: =RGBA(0, 0, 0, 0)
+                FocusedBorderColor: =RGBA(189, 25, 11, 1)
+                FocusedBorderThickness: =1
+                Font: ="Poppins"
+                FontWeight: =FontWeight.Semibold
+                Height: =26
+                HoverBorderColor: =RGBA(189, 25, 11, 1)
+                HoverColor: =RGBA(189, 25, 11, 1)
+                HoverFill: =ColorFade(RGBA(0, 0, 0, 0), -10%)
+                OnSelect: =Set(varRevise,false)
+                PressedBorderColor: =RGBA(189, 25, 11, 1)
+                PressedColor: =RGBA(189, 25, 11, 1)
+                PressedFill: =RGBA(0, 0, 0, 0)
+                RadiusBottomLeft: =5
+                RadiusBottomRight: =5
+                RadiusTopLeft: =5
+                RadiusTopRight: =5
+                Size: =8
+                Text: ="Cancel"
+                Visible: =If(varApprove,true,false)
+                Width: =84
+                X: =396
+                Y: =324
+                ZIndex: =3
+
+            Btn_ApproveCert_1 As button:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                DisplayMode: |-
+                    =If(
+                        (varCertificateDetails.Status = "Proofs Uploaded" And (varCertificateDetails.PaymentMode <> "Cash") And (varCertificateDetails.PaymentMode <> "Advance Payment") And (varCertificateDetails.PaymentMode <> "Voucher") And varUserLevel in [
+                            "SUPER-ADMIN",
+                            "ADMIN"
+                        ]),
+                        DisplayMode.Edit,
+                        If(
+                            (varCertificateDetails.Status = "Enrolled"/* And User().Email = Office365Users.Manager(varCertificateDetails.Requestor.Email).Mail)*/) || (varCertificateDetails.Status = "Proofs Uploaded" && varCertificateDetails.'Has attachments' And varUserLevel in [
+                                "SUPER-ADMIN",
+                                "ADMIN"
+                            ]),
+                            DisplayMode.Edit,
+                            DisplayMode.Disabled
+                        )
+                    )
+                Fill: =RGBA(23, 151, 49, 1)
+                FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =28
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =Self.Fill
+                OnSelect: |
+                    =If(
+                        IsBlank(TextInput4.Text),
+                        Notify(
+                            "Fill the details",
+                            NotificationType.Error,
+                            3000
+                        ),
+                        If(
+                            Btn_ReviseCert.Text = "Reject",
+                            Set(
+                                varReason,
+                                TextInput4.Text
+                            );
+                            ProofsRevisionMail.Run(
+                                varRequestorEmail,
+                                varTitle,
+                                varTech,
+                                varProvider,
+                                varCost,
+                                varRole,
+                                varTentativeDate,
+                                varReason,
+                                varRequestorName,
+                                varMngrReject 
+                            );
+                            Notify(
+                                "Your Rejection mail has sent to Requestor",
+                                NotificationType.Success,
+                                3000
+                            );
+                            Set(varRevise,false) && Set(varMngrReject,false),
+                    
+                            Set(
+                                varReason,
+                                TextInput4.Text
+                            );
+                            ProofsRevisionMail.Run(
+                                varRequestorEmail,
+                                varTitle,
+                                varTech,
+                                varProvider,
+                                varCost,
+                                varRole,
+                                varTentativeDate,
+                                varReason,
+                                varRequestorName,
+                                varMngrReject 
+                            );
+                            Notify(
+                                "Proof Revision mail has sent to Requestor",
+                                NotificationType.Success,
+                                3000
+                            );
+                             Set(varRevise,false) && Set(varMngrReject,false)
+                        )
+                    );
+                PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+                PressedColor: =RGBA(255, 255, 255, 1)
+                PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                RadiusBottomLeft: =5
+                RadiusBottomRight: =5
+                RadiusTopLeft: =5
+                RadiusTopRight: =5
+                Size: =8
+                Text: ="Submit"
+                VerticalAlign: =VerticalAlign.Top
+                Visible: =If(varApprove,true,false)
+                Width: =If(Btn_ApproveCert_1.Text="Approve Certification",142,130)
+                X: =502
+                Y: =322
+                ZIndex: =4
 
     Cntr_AttachDocs As groupContainer.manualLayoutContainer:
         Height: =768
@@ -3538,7 +3719,7 @@ Details_Screen As screen:
                     Font: =Font.'Segoe UI'
                     FontWeight: =FontWeight.Semibold
                     Height: =26
-                    OnSelect: =Select(Parent)
+                    OnSelect: =Launch(ThisItem.AbsoluteUri)
                     Overflow: =Overflow.Scroll
                     PaddingBottom: =0
                     PaddingLeft: =0
