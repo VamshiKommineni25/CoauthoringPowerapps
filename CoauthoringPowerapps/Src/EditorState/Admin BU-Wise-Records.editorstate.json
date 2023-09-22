@@ -5640,14 +5640,7 @@
         "DisabledBorderColor",
         "PressedBorderColor",
         "HoverBorderColor",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "Self.BorderColor",
-          "InvariantPropertyName": "FocusedBorderColor",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "FocusedBorderColor",
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
