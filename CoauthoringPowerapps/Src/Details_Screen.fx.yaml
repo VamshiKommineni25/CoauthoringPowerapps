@@ -1160,6 +1160,42 @@ Details_Screen As screen:
                 Y: =322
                 ZIndex: =4
 
+        Lbl_ReimburseAmt As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            Height: =54
+            Size: =13
+            Text: |-
+                =Switch(
+                    varCertificateDetails.PaymentMode,
+                    "Cash",
+                    LookUp(
+                        Certification,
+                        ID = varCertificateDetails.CertificationID.Id
+                    ).Price,
+                    "Voucher",
+                    (LookUp(
+                        Certification,
+                        ID = varCertificateDetails.CertificationID.Id
+                    ).Price * (100 - Int(Inp_voucher.Text))) / 100,
+                    "Advance Payment",
+                    LookUp(
+                        Certification,
+                        ID = varCertificateDetails.CertificationID.Id
+                    ).Price
+                )
+            Visible: =false
+            Width: =197
+            X: =516
+            Y: =310
+            ZIndex: =30
+
     Cntr_AttachDocs As groupContainer.manualLayoutContainer:
         Height: =768
         RadiusBottomLeft: =4
@@ -2783,8 +2819,9 @@ Details_Screen As screen:
                                                 Inp_voucher.Text & "% Voucher",
                                                 "Cash"
                                             ),
-                                            'Proofs Uploaded on': Today()
-                                        }
+                                            'Proofs Uploaded on': Today(),
+                                            'Reimburse Amount':Int( Lbl_ReimburseAmt.Text)
+                                                         }
                                     )
                                 );
                                 Refresh(CertificationOrder);
@@ -2863,7 +2900,8 @@ Details_Screen As screen:
                                             Inp_voucher.Text & "% Voucher",
                                             "Cash"
                                         ),
-                                        'Proofs Uploaded on': Today()
+                                        'Proofs Uploaded on': Today(),
+                                        'Reimburse Amount':Int( Lbl_ReimburseAmt.Text)
                                     }
                                 )
                             );
@@ -2957,7 +2995,8 @@ Details_Screen As screen:
                                                 Inp_voucher.Text & "% Voucher",
                                                 "Cash"
                                             ),
-                                            'Proofs Uploaded on': Today()
+                                            'Proofs Uploaded on': Today(),
+                                            'Reimburse Amount':Int( Lbl_ReimburseAmt.Text)
                                         }
                                     )
                                 );
@@ -3037,7 +3076,8 @@ Details_Screen As screen:
                                             Inp_voucher.Text & "% Voucher",
                                             "Cash"
                                         ),
-                                        'Proofs Uploaded on': Today()
+                                        'Proofs Uploaded on': Today(),
+                                        'Reimburse Amount':Int( Lbl_ReimburseAmt.Text)
                                     }
                                 )
                             );
@@ -3131,7 +3171,8 @@ Details_Screen As screen:
                                                 Inp_voucher.Text & "% Voucher",
                                                 "Cash"
                                             ),
-                                            'Proofs Uploaded on': Today()
+                                            'Proofs Uploaded on': Today(),
+                                        'Reimburse Amount':Int( Lbl_ReimburseAmt.Text)
                                         }
                                     )
                                 );
@@ -3211,7 +3252,8 @@ Details_Screen As screen:
                                             Inp_voucher.Text & "% Voucher",
                                             "Cash"
                                         ),
-                                        'Proofs Uploaded on': Today()
+                                        'Proofs Uploaded on': Today(),
+                                        'Reimburse Amount':Int( Lbl_ReimburseAmt.Text)
                                     }
                                 )
                             );
@@ -3305,7 +3347,8 @@ Details_Screen As screen:
                                                 Inp_voucher.Text & "% Voucher",
                                                 "Cash"
                                             ),
-                                            'Proofs Uploaded on': Today()
+                                            'Proofs Uploaded on': Today(),
+                                        'Reimburse Amount':Int( Lbl_ReimburseAmt.Text)
                                         }
                                     )
                                 );
@@ -3385,7 +3428,8 @@ Details_Screen As screen:
                                             Inp_voucher.Text & "% Voucher",
                                             "Cash"
                                         ),
-                                        'Proofs Uploaded on': Today()
+                                        'Proofs Uploaded on': Today(),
+                                        'Reimburse Amount':Int( Lbl_ReimburseAmt.Text)
                                     }
                                 )
                             );
@@ -3480,7 +3524,8 @@ Details_Screen As screen:
                                                 Inp_voucher.Text & "% Voucher",
                                                 "Cash"
                                             ),
-                                            'Proofs Uploaded on': Today()
+                                            'Proofs Uploaded on': Today(),
+                                        'Reimburse Amount':Int( Lbl_ReimburseAmt.Text)
                                         }
                                     )
                                 );
@@ -3560,7 +3605,8 @@ Details_Screen As screen:
                                             Inp_voucher.Text & "% Voucher",
                                             "Cash"
                                         ),
-                                        'Proofs Uploaded on': Today()
+                                        'Proofs Uploaded on': Today(),
+                                        'Reimburse Amount':Int( Lbl_ReimburseAmt.Text)
                                     }
                                 )
                             );
