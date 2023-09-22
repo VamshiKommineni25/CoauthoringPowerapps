@@ -989,28 +989,29 @@ Details_Screen As screen:
                 ZIndex: =1
 
             TextInput4 As text:
-                BorderColor: =RGBA(166, 166, 166, 1)
-                BorderThickness: =2
+                BorderColor: =RGBA(0, 0, 0, 0)
                 Color: =RGBA(51, 51, 51, 1)
-                Default: ="Text input"
+                Default: =""
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
+                FocusedBorderColor: =RGBA(0,0,0,0)
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
                 Height: =246
-                HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                HintText: ="Type Here"
+                HoverBorderColor: =RGBA(0,0,0,0)
                 HoverColor: =RGBA(51, 51, 51, 1)
                 HoverFill: =RGBA(255, 255, 255, 1)
                 Mode: =TextMode.MultiLine
-                PressedBorderColor: =RGBA(0, 120, 212, 1)
+                PressedBorderColor: =RGBA(0,0,0,0)
                 PressedColor: =RGBA(51, 51, 51, 1)
                 PressedFill: =RGBA(255, 255, 255, 1)
                 RadiusBottomLeft: =10
                 RadiusBottomRight: =10
                 RadiusTopLeft: =10
                 RadiusTopRight: =10
-                Size: =13
+                Size: =10
                 Width: =628
                 X: =16
                 Y: =60
