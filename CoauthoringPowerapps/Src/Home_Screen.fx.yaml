@@ -1050,54 +1050,7 @@ Home_Screen As screen:
                                 false
                             )
                         );
-                        If(
-                            ThisItem.PaymentMode = "Cash",
-                            Concurrent(
-                                Set(
-                                    varPAY1,
-                                    false
-                                ),
-                                Set(
-                                    varPAY,
-                                    true
-                                ),
-                                Set(
-                                    varAdvance,
-                                    false
-                                )
-                            ),
-                            If(
-                                ThisItem.PaymentMode = "Advance Payment",
-                                Concurrent(
-                                    Set(
-                                        varAdvance,
-                                        true
-                                    ),
-                                    Set(
-                                        varPAY1,
-                                        false
-                                    ),
-                                    Set(
-                                        varPAY,
-                                        false
-                                    )
-                                ),
-                                Concurrent(
-                                    Set(
-                                        varPAY1,
-                                        true
-                                    ),
-                                    Set(
-                                        varPAY,
-                                        false
-                                    ),
-                                    Set(
-                                        varAdvance,
-                                        false
-                                    )
-                                )
-                            )
-                        );
+                        
                         Set(
                             varAttachpopUp,
                             false
