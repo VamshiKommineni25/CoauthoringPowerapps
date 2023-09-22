@@ -3,6 +3,7 @@
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
     OnVisible: |-
         =Set(SideLabelvar,4);
+        Set(varNewCert,false);
         ClearCollect(ColPiechart,Table(
             {
                 Status: "Enrolled",
@@ -3194,18 +3195,17 @@
             DisabledColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
             Fill: =RGBA(0, 0, 0, 0)
-            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            FocusedBorderThickness: =1
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
             Height: =26
-            HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverColor: =RGBA(255, 255, 255, 1)
-            HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+            HoverBorderColor: =Self.BorderColor
+            HoverFill: =RGBA(0,0,0,0)
             OnSelect: |-
                 =UpdateContext({varNewCert:true})
-            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
-            PressedColor: =RGBA(255, 255, 255, 1)
-            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            PressedBorderColor: =Self.BorderColor
+            PressedColor: =Self.Color
+            PressedFill: =RGBA(0,0,0,0)
             RadiusBottomLeft: =5
             RadiusBottomRight: =5
             RadiusTopLeft: =5
