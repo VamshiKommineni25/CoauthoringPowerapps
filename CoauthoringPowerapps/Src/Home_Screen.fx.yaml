@@ -1111,62 +1111,61 @@ Home_Screen As screen:
                 BorderColor: =RGBA(166, 166, 166, 1)
                 DelayItemLoading: =true
                 Height: =252
-                Items: |
-                    =
-                        Search(
-                            If(
-                                Drp_FilterStatus.SelectedText.Value = "All",
-                                With(
-                                    {
-                                        records: Filter(
-                                            FirstN(
-                                                CertificationOrder,
-                                                5000
-                                            ),
-                                            DateValue(Created) >= DateValue(FromDatePicker.SelectedDate) And DateValue(Created) <= DateValue(ToDatePicker.SelectedDate)
-                                        )
-                                    },
-                                    ForAll(
-                                        Sequence(CountRows(records)),
-                                        Patch(
-                                            Last(
-                                                FirstN(
-                                                    records,
-                                                    Value
-                                                )
-                                            ),
-                                            {Rownumbermyteamcert: Value}
-                                        )
+                Items: |-
+                    =Search(
+                        If(
+                            Drp_FilterStatus.SelectedText.Value = "All",
+                            With(
+                                {
+                                    records: Filter(
+                                        FirstN(
+                                            CertificationOrder,
+                                            5000
+                                        ),
+                                        DateValue(Created) >= DateValue(FromDatePicker.SelectedDate) And DateValue(Created) <= DateValue(ToDatePicker.SelectedDate)
                                     )
-                                ),
-                                With(
-                                    {
-                                        records: Filter(
+                                },
+                                ForAll(
+                                    Sequence(CountRows(records)),
+                                    Patch(
+                                        Last(
                                             FirstN(
-                                                CertificationOrder,
-                                                5000
-                                            ),
-                                            DateValue(Created) >= DateValue(FromDatePicker.SelectedDate) And DateValue(Created) <= DateValue(ToDatePicker.SelectedDate) && Status = Drp_FilterStatus.SelectedText.Value
-                                        )
-                                    },
-                                    ForAll(
-                                        Sequence(CountRows(records)),
-                                        Patch(
-                                            Last(
-                                                FirstN(
-                                                    records,
-                                                    Value
-                                                )
-                                            ),
-                                            {Rownumbermyteamcert: Value}
-                                        )
+                                                records,
+                                                Value
+                                            )
+                                        ),
+                                        {Rownumbermyteamcert: Value}
                                     )
                                 )
                             ),
-                            c_Header_2.TextOut,
-                            "Status",
-                            "Title"
-                        )
+                            With(
+                                {
+                                    records: Filter(
+                                        FirstN(
+                                            CertificationOrder,
+                                            5000
+                                        ),
+                                        DateValue(Created) >= DateValue(FromDatePicker.SelectedDate) And DateValue(Created) <= DateValue(ToDatePicker.SelectedDate) && Status = Drp_FilterStatus.SelectedText.Value
+                                    )
+                                },
+                                ForAll(
+                                    Sequence(CountRows(records)),
+                                    Patch(
+                                        Last(
+                                            FirstN(
+                                                records,
+                                                Value
+                                            )
+                                        ),
+                                        {Rownumbermyteamcert: Value}
+                                    )
+                                )
+                            )
+                        ),
+                        c_Header_2.TextOut,
+                        "Status",
+                        "Title"
+                    )
                 Layout: =Layout.Vertical
                 LoadingSpinner: =LoadingSpinner.Data
                 TabIndex: =0
