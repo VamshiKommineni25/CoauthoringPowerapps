@@ -99,7 +99,11 @@ Details_Screen As screen:
             Visible: |-
                 =If(
                     IsBlank(varApprove) || (varApprove = false And varCertificateDetails.Status <> "Rejected" And varCertificateDetails.Status <> "Enrolled"),
-                    true,
+                    If(
+                        varCertificateDetails.Status = "Manager Approved" And varCertificateDetails.PaymentMode = "Advance Payment",
+                        false,
+                        true
+                    ),
                     If(
                         varCertificateDetails.Status = "Rejected" || varCertificateDetails.Status = "Enrolled",
                         false,
@@ -426,6 +430,44 @@ Details_Screen As screen:
             X: =838
             Y: =13
             ZIndex: =5
+
+        Btn_AddDocs_1 As button:
+            BorderColor: =RGBA(189, 25, 11, 1)
+            BorderThickness: =1
+            Color: =RGBA(189, 25, 11, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(0, 0, 0, 0)
+            FocusedBorderColor: =RGBA(189, 25, 11, 1)
+            FocusedBorderThickness: =1
+            Font: ="Poppins"
+            FontWeight: =FontWeight.Semibold
+            Height: =26
+            HoverBorderColor: =RGBA(189, 25, 11, 1)
+            HoverColor: =RGBA(189, 25, 11, 1)
+            HoverFill: =ColorFade(RGBA(0, 0, 0, 0), -10%)
+            OnSelect: =Set(varMngrEmail,true)
+            PressedBorderColor: =RGBA(189, 25, 11, 1)
+            PressedColor: =RGBA(189, 25, 11, 1)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            RadiusBottomLeft: =5
+            RadiusBottomRight: =5
+            RadiusTopLeft: =5
+            RadiusTopRight: =5
+            Size: =8
+            Text: ="Upload Manager Email "
+            Tooltip: ="Please Upload the Manger Approved Email to proceed further process "
+            Visible: |-
+                =If(
+                    varCertificateDetails.Status = "Manager Approved" And varCertificateDetails.PaymentMode = "Advance Payment",
+                    true,
+                    false
+                )
+            Width: =145
+            X: =1091
+            Y: =14
+            ZIndex: =6
 
     C_leftPanel_6 As C_leftPanel:
         NavigateTo: =Switch(SideLabelvar,1,Home_Screen,2,Register_Screen,3,'Request Screen',4,'Admin dashBoard')
@@ -3799,6 +3841,474 @@ Details_Screen As screen:
                     X: =27
                     Y: =30
                     ZIndex: =3
+
+    Cntr_EmailAttach As groupContainer.manualLayoutContainer:
+        DropShadow: =DropShadow.ExtraBold
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =768
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Visible: =varMngrEmail
+        Width: =348
+        X: =1018
+        ZIndex: =11
+
+        Label4_10 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: ="Poppins"
+            FontWeight: =FontWeight.Bold
+            Height: =32
+            Text: ="Manager Approved Email"
+            Width: =250
+            X: =21.98
+            Y: =18
+            ZIndex: =1
+
+        Icon16_4 As icon.Cancel:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            Color: =RGBA(116, 116, 116, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(220, 220, 220, 1)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
+            Height: =20
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Icon: =Icon.Cancel
+            OnSelect: |
+                =Set(varMngrEmail,false)
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            TabIndex: =1
+            Width: =20
+            X: =315
+            Y: =26
+            ZIndex: =2
+
+        Button3_5 As button:
+            BorderColor: =RGBA(151, 0, 0, 1)
+            BorderThickness: =1
+            Color: =RGBA(151, 0, 0, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(0, 0, 0, 0)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =26
+            HoverBorderColor: =Parent.BorderColor
+            HoverColor: =Parent.BorderColor
+            HoverFill: =Parent.Fill
+            OnSelect: =Reset('Email Attachment')
+            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            RadiusBottomLeft: =5
+            RadiusBottomRight: =5
+            RadiusTopLeft: =5
+            RadiusTopRight: =5
+            Size: =10
+            Text: ="Clear All"
+            Width: =82
+            X: =242
+            Y: =75
+            ZIndex: =3
+
+        Container16_7 As groupContainer.verticalAutoLayoutContainer:
+            Height: =649
+            LayoutAlignItems: =LayoutAlignItems.Stretch
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutGap: =10
+            LayoutJustifyContent: =LayoutJustifyContent.End
+            LayoutMode: =LayoutMode.Auto
+            LayoutOverflowX: =LayoutOverflow.Scroll
+            LayoutOverflowY: =LayoutOverflow.Scroll
+            PaddingBottom: =10
+            PaddingLeft: =10
+            PaddingRight: =10
+            PaddingTop: =10
+            Width: =348
+            Y: =116
+            ZIndex: =4
+
+            Container17_9 As groupContainer.manualLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                Fill: =RGBA(242, 242, 242, 1)
+                LayoutMinHeight: =5
+                LayoutMinWidth: =150
+                RadiusBottomLeft: =10
+                RadiusBottomRight: =10
+                RadiusTopLeft: =10
+                RadiusTopRight: =10
+                Width: =Parent.Width
+                X: =40
+                Y: =40
+                ZIndex: =2
+
+                "'Email Attachment' As attachments":
+                    AccessibleLabel: ="Attachments"
+                    BorderColor: =RGBA(202, 202, 202, 1)
+                    BorderThickness: =0.1
+                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    DisabledFill: =RGBA(244, 244, 244, 1)
+                    DropTargetBorderColor: =RGBA(219, 219, 219, 1)
+                    DropTargetBorderThickness: =0
+                    FocusedBorderThickness: =4
+                    Height: =296
+                    HoverColor: =RGBA(0, 0, 0, 1)
+                    HoverFill: =RGBA(186, 202, 226, 1)
+                    IsInDataCard: =true
+                    ItemColor: =RGBA(255, 255, 255, 1)
+                    ItemFill: =RGBA(56, 96, 178, 1)
+                    ItemHoverColor: =RGBA(0, 0, 0, 1)
+                    ItemHoverFill: =RGBA(186, 202, 226, 1)
+                    Items: =
+                    OnAddFile: |-
+                        =/*Set(
+                            VarAttachmentControl,
+                            JSON(
+                                Image9.Image,
+                                IncludeBinaryData
+                            )
+                        );
+                        Set(
+                            VarBase64Only,
+                            Mid(
+                                VarAttachmentControl,
+                                Find(
+                                    ",",
+                                    VarAttachmentControl
+                                ) + 1,
+                                Len(VarAttachmentControl) - Find(
+                                    ",",
+                                    VarAttachmentControl
+                                ) - 1
+                            )
+                        );
+                        Attachments_1.Run(
+                            varCertificateStatus.ID,
+                            Last(Attachments.Attachments).Name,
+                            VarBase64Only
+                        );
+                        */
+                        Refresh(CertificationOrder)
+                    PressedColor: =RGBA(255, 255, 255, 1)
+                    PressedFill: =RGBA(0, 18, 107, 1)
+                    Size: =8
+                    Tooltip: ="Upload 5 Documents"
+                    Visible: =varattach
+                    Width: =Parent.Width
+                    Y: =71
+                    ZIndex: =1
+
+                "Gallery8_3 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+                    AccessibleLabel: ="Gallery8"
+                    BorderColor: =RGBA(0, 18, 107, 1)
+                    Height: =297
+                    Items: ='Email Attachment'.Attachments
+                    Layout: =Layout.Vertical
+                    ShowScrollbar: =false
+                    TabIndex: =1
+                    TemplatePadding: =0
+                    TemplateSize: =Min(160, Self.Height - 60)
+                    Visible: =false
+                    Width: =Parent.Width
+                    Y: =48
+                    ZIndex: =3
+
+                    Image10_11 As image:
+                        BorderColor: =RGBA(0, 18, 107, 1)
+                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                        DisabledFill: =RGBA(244, 244, 244, 1)
+                        Height: =1
+                        Image: =ThisItem.Value
+                        OnSelect: =Select(Parent)
+                        Width: =1
+                        ZIndex: =1
+
+                    Title6_11 As label:
+                        Color: =RGBA(0, 0, 0, 1)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        FontWeight: =FontWeight.Semibold
+                        Height: =1
+                        OnSelect: =Select(Parent)
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =20
+                        Text: =ThisItem.Name
+                        VerticalAlign: =VerticalAlign.Top
+                        Width: =Parent.TemplateWidth - Image10_11.Width - 104
+                        X: =1
+                        ZIndex: =2
+
+                    Subtitle1_4 As label:
+                        Color: =RGBA(0, 0, 0, 1)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        Height: =1
+                        OnSelect: =Select(Parent)
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =18
+                        Text: =ThisItem.Value
+                        VerticalAlign: =VerticalAlign.Top
+                        Width: =Title6_11.Width
+                        X: =1
+                        ZIndex: =3
+
+                    NextArrow2_11 As icon.ChevronRight:
+                        AccessibleLabel: =Self.Tooltip
+                        BorderColor: =RGBA(0, 18, 107, 1)
+                        Color: =RGBA(0, 18, 107, 1)
+                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                        DisabledColor: =RGBA(244, 244, 244, 1)
+                        Height: =1
+                        Icon: =Icon.ChevronRight
+                        OnSelect: =Select(Parent)
+                        PaddingBottom: =10
+                        PaddingLeft: =10
+                        PaddingRight: =10
+                        PaddingTop: =10
+                        TabIndex: =0
+                        Tooltip: ="View item details"
+                        Width: =1
+                        ZIndex: =4
+
+                    Separator6_11 As rectangle:
+                        BorderColor: =RGBA(0, 18, 107, 1)
+                        Fill: =RGBA(0, 18, 107, 1)
+                        Height: =1
+                        OnSelect: =Select(Parent)
+                        Width: =Parent.TemplateWidth
+                        Y: =Parent.TemplateHeight - 1
+                        ZIndex: =5
+
+                "'Tog_Add_Doc 3_1' As toggleSwitch":
+                    AccessibleLabel: ="Toggle1"
+                    BorderColor: =RGBA(0, 18, 107, 1)
+                    Color: =RGBA(0, 0, 0, 1)
+                    FalseFill: =RGBA(128, 130, 133, 1)
+                    FalseText: ="Add More"
+                    FocusedBorderColor: =RGBA(0,0,0,0)
+                    FocusedBorderThickness: =1
+                    FontWeight: =FontWeight.Bold
+                    HandleFill: =RGBA(255, 255, 255, 1)
+                    Height: =18
+                    OnCheck: |-
+                        =Set(varattach,true);
+                        Set(varattach1,false)
+                    OnUncheck: |-
+                        =Set(varattach,false);
+                        Set(varattach1,true)
+                    Size: =8
+                    Tooltip: |-
+                        ="Upload These 5 proofs correctly
+                        1)Association Screenshot
+                        2)Certification Receipt bill
+                        3)Reimbursement form Filled
+                        4)Copy of Certification
+                        5)Manager Approval E-mail"
+                    TrueFill: =RGBA(0, 0, 189, 1)
+                    TrueText: ="Go to Uploads"
+                    Visible: =LookUp(CertificationOrder,ID=varCertificateDetails.ID).'Has attachments'
+                    Width: =122
+                    X: =195
+                    Y: =10
+                    ZIndex: =5
+
+                "Gallery13_11 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+                    AccessibleLabel: ="Gallery13"
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderThickness: =0.1
+                    Fill: =RGBA(255, 255, 255, 1)
+                    Height: =75
+                    Items: =First(LookUp(CertificationOrder,ID=varCertificateDetails.ID).Attachments)
+                    Layout: =Layout.Vertical
+                    OnSelect: =Launch(ThisItem.AbsoluteUri)
+                    ShowScrollbar: =false
+                    TabIndex: =1
+                    TemplatePadding: =0
+                    TemplateSize: =38
+                    Visible: =varattach1
+                    Width: =Parent.Width
+                    Y: =38
+                    ZIndex: =6
+
+                    Separator9_11 As rectangle:
+                        BorderColor: =RGBA(0, 18, 107, 1)
+                        Fill: =RGBA(179, 179, 179, 1)
+                        Height: =1
+                        OnSelect: =Select(Parent)
+                        Visible: =false
+                        Width: =Parent.TemplateWidth
+                        Y: =Parent.TemplateHeight - 1
+                        ZIndex: =5
+
+                    Label78_11 As label:
+                        BorderColor: =RGBA(0, 18, 107, 1)
+                        Color: =RGBA(0, 0, 0, 1)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        Fill: =RGBA(255, 255, 255, 1)
+                        Height: =38
+                        OnSelect: =Select(Parent)
+                        Size: =8
+                        Text: =ThisItem.DisplayName
+                        Width: =Gallery13_11.Width
+                        ZIndex: =6
+
+                    RemoveAttachment_11 As icon.Cancel:
+                        AccessibleLabel: ="RemoveAttachment"
+                        BorderColor: =RGBA(0, 18, 107, 1)
+                        Color: =RGBA(0, 18, 107, 1)
+                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                        DisabledColor: =RGBA(244, 244, 244, 1)
+                        Height: =17
+                        Icon: =Icon.Cancel
+                        OnSelect: |-
+                            =//Select(Parent);
+                            //'DeleteAttachments-CertificationApp'.Run(varCertificateStatus.ID,varCertificateStatus.ID);
+                            First(LookUp(CertificationOrder,'DeleteAttachments-CertificationApp'.Run(varCertificateDetails.ID,varCertificateDetails.ID)).Attachments);
+                            Set(varattach,true);
+                            
+                            Refresh(CertificationOrder);
+                        TabIndex: =1
+                        Visible: =false
+                        Width: =1
+                        Y: =9
+                        ZIndex: =7
+
+                Label15_5 As label:
+                    Color: =RGBA(0, 0, 0, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =49
+                    Size: =9
+                    Text: ="Approval Email"
+                    Width: =328
+                    Y: =10
+                    ZIndex: =7
+
+        Btn_Upload As button:
+            BorderColor: =RGBA(201,47,29,1)
+            Color: =Color.White
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            DisplayMode: |-
+                =If(
+                    !IsEmpty('Email Attachment'.Attachments),
+                    DisplayMode.Edit,
+                    DisplayMode.Disabled
+                )
+            Fill: =RGBA(201,47,29,1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            FocusedBorderThickness: =1
+            Font: =Font.'Segoe UI'
+            Height: =26
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverFill: =Self.Fill
+            OnSelect: |+
+                =If(varCertificateDetails.PaymentMode="Advance Payment",
+                If(
+                        !IsBlank('Email Attachment'),
+                        ClearCollect(
+                            colfiles,
+                            ShowColumns(
+                                AddColumns(
+                                    Gallery8_3.AllItems,
+                                    "base64",
+                                    With(
+                                        {
+                                            varAttachment: JSON(
+                                                Image10_11.Image,
+                                                JSONFormat.IncludeBinaryData
+                                            )
+                                        },
+                                        Mid(
+                                            varAttachment,
+                                            Find(
+                                                ",",
+                                                varAttachment
+                                            ) + 1,
+                                            Len(varAttachment) - Find(
+                                                ",",
+                                                varAttachment
+                                            ) - 1
+                                        )
+                                    )
+                                ),
+                                "base64",
+                                "Name"
+                            )
+                        );
+                        
+                        Set(
+                            varProofsLinks,
+                            Attachment.Run(
+                                JSON(
+                                    colfiles,
+                                    JSONFormat.IndentFour
+                                ),
+                                varCertificateDetails.ID
+                            ).links
+                        );
+                         If(
+                            varCertificateDetails.Status in [
+                                "Manager Approved",
+                                "Proofs Uploaded"
+                            ],
+                            UpdateIf(
+                                CertificationOrder,
+                                ID = varCertificateDetails.ID,
+                                {
+                                    Status: "Proofs Uploaded"
+                                }
+                            )
+                         );
+                        Refresh(CertificationOrder);
+                        Reset('Email Attachment');
+                        
+                        Notify(
+                            "Proofs Uploaded Successfully",
+                            NotificationType.Success,
+                            2000
+                        );
+                        
+                        Notify(
+                            "No Files Attached",
+                            NotificationType.Error,
+                            1000
+                        )
+                    );
+                ,false);
+                
+            PressedBorderColor: =Self.BorderColor
+            PressedFill: =Color.White
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Size: =10
+            Text: ="Upload"
+            Width: =119
+            X: =21
+            Y: =75
+            ZIndex: =5
 
     Voucherinp_Grp As group:
         Height: =5
