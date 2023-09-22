@@ -6013,6 +6013,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "'Admin BU-Wise-Records'.VarSpinner"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Admin BU-Wise-Records'.VarSpinner",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "VarSpinner",
+                "module": "Admin BU-Wise-Records",
+                "type": "'Admin BU-Wise-Records'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "'Admin dashBoard'"
                 }
               ],
