@@ -805,7 +805,8 @@
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverFill: =Self.Fill
             OnSelect: |
-                =If(
+                =UpdateContext({VarSpinner: true});
+                If(
                     CountRows(glry_Cert_Req_details.AllItems) = 0,
                     Notify(
                         "No records to download",
@@ -862,6 +863,7 @@
                     );
                     
                 );
+                UpdateContext({VarSpinner:false});
             PressedBorderColor: =Self.BorderColor
             PressedFill: =Color.White
             RadiusBottomLeft: =8
@@ -1470,4 +1472,8 @@
             X: =400
             Y: =lbl_BU_Title.Y+lbl_BU_Title.Height+10
             ZIndex: =19
+
+    C_Loadingspinner_1 As C_Loadingspinner:
+        Visible: =VarSpinner
+        ZIndex: =9
 
