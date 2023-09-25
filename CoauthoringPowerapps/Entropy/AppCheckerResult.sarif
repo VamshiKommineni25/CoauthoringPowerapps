@@ -4664,6 +4664,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "Details_Screen.Container17_3.Container1.Lbl_ReviseHead.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Details_Screen.Container17_3.Container1.Lbl_ReviseHead.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Details_Screen",
+                "type": "Details_Screen.Container17_3.Container1.Lbl_ReviseHead"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "Details_Screen.Container17_3.Container1.TextInput4.AccessibleLabel"
                 }
               ],
@@ -5588,36 +5618,6 @@
           },
           "ruleId": "acc-AccessibleLabelNeeded",
           "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Details_Screen.Container17_3.Container1.Lbl_ReviseHead.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Details_Screen.Container17_3.Container1.Lbl_ReviseHead.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Details_Screen",
-                "type": "Details_Screen.Container17_3.Container1.Lbl_ReviseHead"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 3
         },
         {
           "locations": [
