@@ -1026,9 +1026,10 @@ Details_Screen As screen:
                 Font: =Font.'Segoe UI'
                 FontWeight: =FontWeight.Bold
                 Height: =41
+                OnSelect: =If(varMngrReject=true,"Reason for Rejection", "Reason for Certification Proofs Revise")
                 Size: =13
                 Text: ="Reason For Rejection"
-                Width: =267
+                Width: =500
                 X: =16
                 ZIndex: =1
 
