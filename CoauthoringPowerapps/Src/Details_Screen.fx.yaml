@@ -4290,7 +4290,10 @@ Details_Screen As screen:
                             NotificationType.Success,
                             2000
                         );
-                        
+                        Navigate(
+                           Home_Screen,
+                            ScreenTransition.Fade
+                        ),
                         Notify(
                             "No Files Attached",
                             NotificationType.Error,
