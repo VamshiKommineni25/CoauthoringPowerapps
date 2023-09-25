@@ -23,10 +23,10 @@
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 189,
-                  "charOffset": 1172,
+                  "charLength": 183,
+                  "charOffset": 1136,
                   "snippet": {
-                    "text": "Attachment.Run(\r\n                JSON(\r\n                    colfiles,\r\n                    JSONFormat.IndentFour\r\n                ),\r\n                varCertificateDetails.ID\r\n            )"
+                    "text": "Attachment.Run(\n                JSON(\n                    colfiles,\n                    JSONFormat.IndentFour\n                ),\n                varCertificateDetails.ID\n            )"
                   }
                 }
               },
