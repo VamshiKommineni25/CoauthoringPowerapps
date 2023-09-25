@@ -3915,7 +3915,7 @@ Details_Screen As screen:
             OnSelect: =Reset('Email Attachment')
             PressedBorderColor: =RGBA(255, 255, 255, 1)
             PressedColor: =RGBA(151, 0, 0, 1)
-            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            PressedFill: =
             RadiusBottomLeft: =5
             RadiusBottomRight: =5
             RadiusTopLeft: =5
