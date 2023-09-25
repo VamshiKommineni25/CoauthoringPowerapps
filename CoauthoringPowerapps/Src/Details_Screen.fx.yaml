@@ -3909,12 +3909,12 @@ Details_Screen As screen:
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
             Height: =26
-            HoverBorderColor: =Parent.BorderColor
-            HoverColor: =Parent.BorderColor
+            HoverBorderColor: =RGBA(255, 255, 255, 1)
+            HoverColor: =RGBA(151, 0, 0, 1)
             HoverFill: =Parent.Fill
             OnSelect: =Reset('Email Attachment')
-            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
-            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedBorderColor: =RGBA(255, 255, 255, 1)
+            PressedColor: =RGBA(151, 0, 0, 1)
             PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             RadiusBottomLeft: =5
             RadiusBottomRight: =5
@@ -4261,7 +4261,7 @@ Details_Screen As screen:
                         
                         Set(
                             varProofsLinks,
-                            Attachment2.Run(
+                            'Attachment-ProofsUpload'.Run(
                                 JSON(
                                     colfiles,
                                     JSONFormat.IndentFour
