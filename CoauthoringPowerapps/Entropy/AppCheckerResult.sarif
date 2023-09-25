@@ -24,7 +24,7 @@
                 },
                 "region": {
                   "charLength": 183,
-                  "charOffset": 1136,
+                  "charOffset": 1134,
                   "snippet": {
                     "text": "Attachment.Run(\n                JSON(\n                    colfiles,\n                    JSONFormat.IndentFour\n                ),\n                varCertificateDetails.ID\n            )"
                   }
