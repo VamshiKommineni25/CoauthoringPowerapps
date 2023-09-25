@@ -298,77 +298,7 @@ Details_Screen As screen:
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =Self.Fill
-            OnSelect: |-
-                =IfError(
-                    If(
-                        varCertificateDetails.Status = "Enrolled",
-                        UpdateIf(
-                            CertificationOrder,
-                            ID = varCertificateDetails.ID,
-                            {Status: "Manager Approved",'Approved By':User().FullName}
-                        ),
-                        If(
-                            varCertificateDetails.Status = "Proofs Uploaded",
-                            UpdateIf(
-                                CertificationOrder,
-                                ID = varCertificateDetails.ID,
-                                {Status: "Proofs Approved"}
-                            ),
-                            If(
-                                varCertificateDetails.Status = "Proofs Uploaded" And varCertificateDetails.PaymentMode<>"Cash",
-                                UpdateIf(
-                                    CertificationOrder,
-                                    ID = varCertificateDetails.ID,
-                                    {Status: "Completed Using Voucher"}
-                                )
-                            )
-                        )
-                    ),
-                    Notify(
-                        "Action successfully done",
-                        NotificationType.Error
-                    ),
-                    Notify(
-                        "Successfully approved the request",
-                        NotificationType.Success
-                    )
-                );
-                Refresh(CertificationOrder);
-                Navigate(
-                    Home_Screen,
-                    ScreenTransition.Fade
-                );
-                    ClearCollect(
-                        userCertifications,
-                        Filter(
-                            CertificationOrder,
-                            Requestor.Email = User().Email And Created > DateAdd(
-                                Today(),
-                                -365
-                            )
-                        )
-                    );
-                
-                
-                
-                /*To update status in NotificationSharePoint List*/
-                If(
-                    varCertificateDetails.Status = "Enrolled",
-                    Patch(
-                               NotificationList_CertificationApp,
-                                Defaults(NotificationList_CertificationApp),
-                                {
-                                    Title:varCertificateDetails.Requestor.DisplayName,
-                                    Notification:"Your Request for the certification "& varCertificateDetails.'Certification:Title'.Value &" has been approved by your manager " & varMngrname
-                                }),
-                    If( varCertificateDetails.Status = "Proofs Uploaded", Patch(
-                               NotificationList_CertificationApp,
-                                Defaults(NotificationList_CertificationApp),
-                                {
-                                    Title:varCertificateDetails.Requestor.DisplayName,
-                                    Notification:"Your uploaded proofs for the certification "& varCertificateDetails.'Certification:Title'.Value &" has been approved by ILD team"
-                                }),false)
-                )
+            OnSelect: =
             PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
@@ -4223,7 +4153,7 @@ Details_Screen As screen:
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverFill: =Self.Fill
             OnSelect: |-
-                =If(varCertificateDetails.PaymentMode in "Advance Payment",
+                =If(varCertificateDetails.PaymentMode = "Advance Payment",
                 If(
                         !IsBlank('Email Attachment'),
                         ClearCollect(
