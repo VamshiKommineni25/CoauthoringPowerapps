@@ -4261,7 +4261,7 @@ Details_Screen As screen:
                         
                         Set(
                             varProofsLinks,
-                            Attachment.Run(
+                            Attachment2.Run(
                                 JSON(
                                     colfiles,
                                     JSONFormat.IndentFour
