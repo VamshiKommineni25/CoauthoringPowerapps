@@ -5714,36 +5714,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "App.varNewCert"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "App.varNewCert",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "varNewCert",
-                "module": "App",
-                "type": "App"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "App.varAttachpopUp"
                 }
               ],
@@ -6276,6 +6246,36 @@
           },
           "ruleId": "app-ScreenHasManyControls",
           "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Admin dashBoard'.varNewCert"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Admin dashBoard'.varNewCert",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "varNewCert",
+                "module": "Admin dashBoard",
+                "type": "'Admin dashBoard'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 4
         },
         {
           "locations": [
