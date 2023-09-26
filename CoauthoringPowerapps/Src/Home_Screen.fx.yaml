@@ -484,7 +484,7 @@ Home_Screen As screen:
             ZIndex: =3
 
     Cntr_Details As groupContainer.manualLayoutContainer:
-        DropShadow: =DropShadow.Semibold
+        DropShadow: =DropShadow.Bold
         Fill: =RGBA(255, 255, 255, 1)
         Height: =411
         RadiusBottomLeft: =8

@@ -2364,7 +2364,14 @@
         "ContentLanguage",
         "AutoDisableOnSelect",
         "X",
-        "Y",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "Y",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "Width",
         "Height",
         "Visible",
@@ -2407,7 +2414,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "iLink Digital logo@4x 1_1",
-      "ParentIndex": 8,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2972,7 +2979,14 @@
         "DisabledFill",
         "PressedFill",
         "HoverFill",
-        "Font",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "Font",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
@@ -3032,7 +3046,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label4",
-      "ParentIndex": 2,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3903,7 +3917,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Path 8134_1",
-      "ParentIndex": 4,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4201,7 +4215,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Path 8135_1",
-      "ParentIndex": 6,
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4534,7 +4548,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Profile_1",
-      "ParentIndex": 7,
+      "ParentIndex": 8,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -5128,7 +5142,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Rectangle 1155_1",
-      "ParentIndex": 3,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -6856,7 +6870,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Union 1_2",
-      "ParentIndex": 5,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -7743,7 +7757,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Vector_17",
-      "ParentIndex": 1,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

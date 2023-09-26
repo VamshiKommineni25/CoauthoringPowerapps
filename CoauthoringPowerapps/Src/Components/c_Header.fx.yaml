@@ -76,14 +76,13 @@ c_Header As CanvasComponent:
                     DisabledBorderColor: =RGBA(0, 0, 0, 0)
                     DisabledColor: =RGBA(166, 166, 166, 1)
                     FocusedBorderThickness: =4
-                    Font: =Font.'Segoe UI'
+                    Font: =Font.'Dancing Script'
                     FontWeight: =FontWeight.Bold
-                    Height: =63
-                    Size: =20
+                    Height: =64
+                    Size: =25
                     Text: ="Certification ++"
                     Width: =216
-                    X: =235
-                    Y: =1
+                    X: =220
                     ZIndex: =4
 
         Search_1 As groupContainer.manualLayoutContainer:
@@ -228,7 +227,7 @@ c_Header As CanvasComponent:
             TabIndex: =1
             Width: =154
             X: =21
-            Y: =26
+            Y: =22
             ZIndex: =49
 
         FAQ_Grp As group:
