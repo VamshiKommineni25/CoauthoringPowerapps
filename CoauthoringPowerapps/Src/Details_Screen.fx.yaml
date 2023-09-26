@@ -749,7 +749,7 @@ Details_Screen As screen:
             FontWeight: =FontWeight.Semibold
             Height: =20
             Size: =10
-            Text: ="Date"
+            Text: ="Exam Date"
             X: =31
             Y: =320
             ZIndex: =10
@@ -894,7 +894,22 @@ Details_Screen As screen:
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
-            Color: =RGBA(51, 51, 51, 1)
+            Color: |-
+                =If(
+                    varCertificateDetails.Reimbursement,
+                    RGBA(
+                        23,
+                        151,
+                        49,
+                        1
+                    ),
+                    RGBA(
+                        216,
+                        106,
+                        52,
+                        1
+                    )
+                )
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
             DisabledColor: =RGBA(166, 166, 166, 1)
             FocusedBorderThickness: =4
@@ -902,7 +917,7 @@ Details_Screen As screen:
             FontWeight: =FontWeight.Semibold
             Height: =17
             Size: =10
-            Text: =varCertificateDetails.Created
+            Text: =If(varCertificateDetails.Reimbursement,"Done","Not Yet")
             X: =204
             Y: =551
             ZIndex: =19
@@ -4272,14 +4287,13 @@ Details_Screen As screen:
                         );
                          If(
                             varCertificateDetails.Status in [
-                                "Manager Approved",
-                                "Proofs Uploaded"
+                                "Manager Approved"
                             ],
                             UpdateIf(
                                 CertificationOrder,
                                 ID = varCertificateDetails.ID,
                                 {
-                                    Status: "Proofs Uploaded"
+                                    Status: "Advance Payment Requested"
                                 }
                             )
                          );

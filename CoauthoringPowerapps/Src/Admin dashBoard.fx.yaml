@@ -104,7 +104,8 @@
                 Location = 'Drp_Location List'.SelectedText.Value
             )
         );
-        UpdateContext({varNewCertVisible:false})
+        UpdateContext({varNewCertVisible:false});
+        Set(varCert,false);
 
     Rectangle9 As rectangle:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -2755,7 +2756,7 @@
         RadiusBottomRight: =8
         RadiusTopLeft: =8
         RadiusTopRight: =8
-        Visible: =varNewCert
+        Visible: =varCert
         Width: =400
         X: =Parent.Width-Self.Width
         ZIndex: =38
@@ -2791,8 +2792,8 @@
             HoverFill: =RGBA(0, 0, 0, 0)
             Icon: =Icon.Cancel
             OnSelect: |-
-                =UpdateContext({varNewCert:false});
-                UpdateContext({varNewCertVisible:false})
+                =Set(varCert,false);
+                Set(varNewCertVisible,false)
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedColor: =RGBA(70, 70, 70, 1)
             PressedFill: =RGBA(0, 0, 0, 0)
@@ -3200,8 +3201,7 @@
             Height: =26
             HoverBorderColor: =Self.BorderColor
             HoverFill: =RGBA(0,0,0,0)
-            OnSelect: |-
-                =UpdateContext({varNewCert:true})
+            OnSelect: =Set(varCert,true);
             PressedBorderColor: =Self.BorderColor
             PressedColor: =Self.Color
             PressedFill: =RGBA(0,0,0,0)
