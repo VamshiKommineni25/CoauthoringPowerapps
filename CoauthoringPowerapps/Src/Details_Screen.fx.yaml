@@ -920,7 +920,31 @@ Details_Screen As screen:
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
-            Color: =Switch(Self.Text,"Proofs Approved",RGBA(23, 151, 49, 1),"",RGBA(216, 106, 52, 1))
+            Color: |-
+                =Switch(
+                    Self.Text,
+                    "Proofs Approved",
+                    RGBA(
+                        23,
+                        151,
+                        49,
+                        1
+                    ),
+                    "Completed",
+                    RGBA(
+                        23,
+                        151,
+                        49,
+                        1
+                    ),
+                    "Processing with Finance",
+                    RGBA(
+                        216,
+                        106,
+                        52,
+                        1
+                    )
+                )
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
             DisabledColor: =RGBA(166, 166, 166, 1)
             FocusedBorderThickness: =4
@@ -929,6 +953,7 @@ Details_Screen As screen:
             Height: =17
             Size: =10
             Text: =varCertificateDetails.Status
+            Width: =180
             X: =204
             Y: =496
             ZIndex: =17
@@ -977,7 +1002,7 @@ Details_Screen As screen:
             FontWeight: =FontWeight.Semibold
             Height: =17
             Size: =10
-            Text: =If(varCertificateDetails.Reimbursement,"Done","Not Yet")
+            Text: =If(varCertificateDetails.Reimbursement,"Reimbursed","In Complete")
             X: =204
             Y: =551
             ZIndex: =19

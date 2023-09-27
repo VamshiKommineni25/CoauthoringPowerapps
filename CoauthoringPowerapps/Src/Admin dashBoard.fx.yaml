@@ -531,7 +531,7 @@
                     Font: =Font.'Segoe UI'
                     OnSelect: =Select(Parent)
                     Size: =10
-                    Text: =CountRows(Filter(col_filtercert2,BU.Id=ThisItem.ID,Status="Reimbursed",Location='Drp_Location List'.SelectedText.Name))
+                    Text: =CountRows(Filter(col_filtercert2,BU.Id=ThisItem.ID,Status="Completed",Location='Drp_Location List'.SelectedText.Name))
                     Width: =Glry_Lbl_Dept.Width
                     X: =Glry_Lbl_ProofsApproved.X+Glry_Lbl_ProofsApproved.Width+20
                     Y: =Glry_Lbl_Dept.Y

@@ -18,7 +18,7 @@
         FontWeight: =FontWeight.Semibold
         Height: =20
         Size: =10
-        Text: ="Certification"
+        Text: ="Certification Status"
         X: =1
         Y: =2
         ZIndex: =1
@@ -35,7 +35,7 @@
         FontWeight: =FontWeight.Semibold
         Height: =20
         Size: =10
-        Text: ="Proofs Uploaded"
+        Text: ="Proofs Upload"
         X: =1
         Y: =30
         ZIndex: =2

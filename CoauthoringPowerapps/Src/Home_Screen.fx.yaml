@@ -912,7 +912,7 @@ Home_Screen As screen:
                     FocusedBorderThickness: =0.1
                     Height: =15
                     HoverBorderColor: =RGBA(0, 0, 0, 0)
-                    HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                    HoverColor: =Color.Green
                     HoverFill: =RGBA(0, 0, 0, 0)
                     Icon: =Icon.View
                     OnSelect: |-
@@ -1074,7 +1074,7 @@ Home_Screen As screen:
                     FocusedBorderThickness: =4
                     Height: =16
                     HoverBorderColor: =RGBA(0, 0, 0, 0)
-                    HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                    HoverColor: =RGBA(185, 29, 11, 1)
                     HoverFill: =RGBA(0, 0, 0, 0)
                     Icon: =Icon.Trash
                     OnSelect: |-
@@ -2430,7 +2430,7 @@ Home_Screen As screen:
             HoverBorderColor: =RGBA(241,246,246, 1)
             HoverColor: =RGBA(51, 51, 51, 1)
             HoverFill: =RGBA(241,246,246, 1)
-            Items: =["All","Reimbursed","Enrolled","Manager Approved","Processing with Finance","Proofs Approved","Proofs Uploaded","Rejected","Advance Payment Requested"]
+            Items: =["All","Completed","Enrolled","Manager Approved","Processing with Finance","Proofs Approved","Proofs Uploaded","Rejected","Advance Paid"]
             PaddingBottom: =5
             PaddingLeft: =12
             PaddingRight: =5

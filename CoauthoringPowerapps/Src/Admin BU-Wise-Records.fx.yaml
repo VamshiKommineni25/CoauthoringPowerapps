@@ -226,7 +226,7 @@
             HoverBorderColor: =RGBA(241,246,246, 1)
             HoverColor: =RGBA(51, 51, 51, 1)
             HoverFill: =RGBA(241,246,246, 1)
-            Items: =["All","Reimbursed","Enrolled","Manager Approved","Processing with Finance","Proofs Approved","Proofs Uploaded","Advance Payment Requested"]
+            Items: =["All","Completed","Enrolled","Manager Approved","Processing with Finance","Proofs Approved","Proofs Uploaded","Advance Paid"]
             OnSelect: =Set(varNewCert,true)
             PaddingBottom: =5
             PaddingLeft: =12
@@ -1045,6 +1045,9 @@
                             NotificationType.Error
                         )
                     );
+                    Reset(Attachments_3);
+                    
+                    Set(varExcelUpload,false);
                     Navigate(
                         'Admin dashBoard',
                         ScreenTransition.Fade

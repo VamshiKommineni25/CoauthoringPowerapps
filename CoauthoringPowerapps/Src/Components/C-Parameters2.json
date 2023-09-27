@@ -127,7 +127,7 @@
           },
           {
             "Category": "Data",
-            "InvariantScript": "\"Certification\"",
+            "InvariantScript": "\"Certification Status\"",
             "Property": "Text",
             "RuleProviderType": "Unknown"
           },
@@ -838,7 +838,7 @@
           },
           {
             "Category": "Data",
-            "InvariantScript": "\"Proofs Uploaded\"",
+            "InvariantScript": "\"Proofs Upload\"",
             "Property": "Text",
             "RuleProviderType": "Unknown"
           },
@@ -2153,7 +2153,7 @@
       "Y",
       "ZIndex"
     ],
-    "LastModifiedTimestamp": "638313853790180333",
+    "LastModifiedTimestamp": "638314080805349782",
     "Name": "C-Parameters2",
     "Rules": [
       {
@@ -2212,7 +2212,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638313853790180333",
+  "LastModifiedTimestamp": "638314080805349782",
   "Name": "0f9ea40a362f475287dd517cf25804c0",
   "OverridableProperties": {},
   "Version": "638284743973899557"
