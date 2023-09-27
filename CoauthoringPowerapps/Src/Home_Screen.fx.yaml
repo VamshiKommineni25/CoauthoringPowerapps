@@ -904,12 +904,12 @@ Home_Screen As screen:
 
                 Icon13 As icon.View:
                     BorderColor: =RGBA(166, 166, 166, 1)
-                    Color: =RGBA(149, 149, 149, 1)
+                    Color: =RGBA(128, 128, 128, 1)
                     DisabledBorderColor: =RGBA(0, 0, 0, 0)
                     DisabledColor: =RGBA(220, 220, 220, 1)
                     DisabledFill: =RGBA(0, 0, 0, 0)
                     FocusedBorderColor: =RGBA(0,0,0,0)
-                    FocusedBorderThickness: =4
+                    FocusedBorderThickness: =0.1
                     Height: =15
                     HoverBorderColor: =RGBA(0, 0, 0, 0)
                     HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
@@ -1057,11 +1057,11 @@ Home_Screen As screen:
                         );
                         UpdateContext({locShowSpinner1: false});
                     PressedBorderColor: =RGBA(0, 0, 0, 0)
-                    PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                    PressedColor: =RGBA(128, 128, 128, 1)
                     PressedFill: =RGBA(0, 0, 0, 0)
                     TabIndex: =0
                     Width: =15
-                    X: =715
+                    X: =710
                     Y: =13
                     ZIndex: =10
 
@@ -1566,7 +1566,7 @@ Home_Screen As screen:
                 FontWeight: =FontWeight.Bold
                 Height: =17
                 Size: =8
-                Text: ="Created On"
+                Text: ="Registered On"
                 Visible: =If(Glry_CertType.Selected.lbl_CertName.Text="My Certifications" || Glry_CertType.Selected.lbl_CertName.Text="My Team Certifications",true,false)
                 Width: =95
                 X: =250

@@ -553,6 +553,7 @@
             ZIndex: =1
 
             glry_lbl_requester As label:
+                Align: =Align.Center
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =2
@@ -614,7 +615,7 @@
                 Text: |-
                     =ThisItem.'Certification:Title'.Value
                 Width: =206
-                X: =452
+                X: =459
                 ZIndex: =4
 
             glry_lbl_PayMode As label:
@@ -629,7 +630,7 @@
                 OnSelect: =Select(Parent)
                 Size: =10
                 Text: =ThisItem.PaymentMode
-                X: =724
+                X: =705
                 ZIndex: =5
 
             glry_lbl_Status As label:
@@ -701,7 +702,7 @@
             Font: ="Poppins"
             FontWeight: =FontWeight.Bold
             Size: =13
-            Text: ="Created"
+            Text: ="Registered"
             X: =170
             Y: =12
             ZIndex: =3

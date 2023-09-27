@@ -4903,7 +4903,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Cont_NCR_popup",
-      "ParentIndex": 2,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -6306,7 +6306,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Cont_RS_NCR",
-      "ParentIndex": 1,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

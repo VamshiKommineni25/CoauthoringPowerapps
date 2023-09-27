@@ -298,8 +298,9 @@ Details_Screen As screen:
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =Self.Fill
-            OnSelect: |-
-                =IfError(
+            OnSelect: |
+                =/*
+                IfError(
                     If(
                         varCertificateDetails.Status = "Enrolled",
                         UpdateIf(
@@ -348,12 +349,8 @@ Details_Screen As screen:
                             )
                         )
                     );
-                
-                
-                
-                
-                
                 /*To update status in NotificationSharePoint List*/
+                /*
                 If(
                     varCertificateDetails.Status = "Enrolled",
                     Patch(
@@ -371,6 +368,69 @@ Details_Screen As screen:
                                     Notification:"Your uploaded proofs for the certification "& varCertificateDetails.'Certification:Title'.Value &" has been approved by ILD team"
                                 }),false)
                 )
+                */
+                IfError(
+                    Switch(
+                        varCertificateDetails.Status,
+                        "Enrolled",
+                        UpdateIf(
+                            CertificationOrder,
+                            ID = varCertificateDetails.ID,
+                            {
+                                Status: "Manager Approved",
+                                'Approved By': User().FullName
+                            }
+                        );
+                        Refresh(CertificationOrder);
+                        Patch(
+                            NotificationList_CertificationApp,
+                            Defaults(NotificationList_CertificationApp),
+                            {
+                                Title: varCertificateDetails.Requestor.DisplayName,
+                                Notification: "Your Request for the certification " & varCertificateDetails.'Certification:Title'.Value & " has been approved by your manager " & varMngrname
+                            }
+                        ),
+                        "Proofs Uploaded",
+                        If(
+                            varCertificateDetails.PaymentMode = "Cash",
+                            UpdateIf(
+                                CertificationOrder,
+                                ID = varCertificateDetails.ID,
+                                {Status: "Proofs Approved"}
+                            ),
+                            If(
+                                varCertificateDetails.Reimbursement = false,
+                                UpdateIf(
+                                    CertificationOrder,
+                                    ID = varCertificateDetails.ID,
+                                    {Status: "Proofs Approved"}
+                                ),
+                                UpdateIf(
+                                    CertificationOrder,
+                                    ID = varCertificateDetails.ID,
+                                    {Status: "Reimbursed"}
+                                )
+                            )
+                        );
+                        Refresh(CertificationOrder);
+                        Patch(
+                            NotificationList_CertificationApp,
+                            Defaults(NotificationList_CertificationApp),
+                            {
+                                Title: varCertificateDetails.Requestor.DisplayName,
+                                Notification: "Your uploaded proofs for the certification " & varCertificateDetails.'Certification:Title'.Value & " has been approved by ILD team"
+                            }
+                        )
+                    ),
+                    Notify(
+                        "Action successfully done",
+                        NotificationType.Error
+                    ),
+                    Notify(
+                        "Successfully approved the request",
+                        NotificationType.Success
+                    )
+                );
             PressedBorderColor: =RGBA(23, 151, 49, 1)
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =RGBA(23, 151, 49, 1)
@@ -1046,6 +1106,7 @@ Details_Screen As screen:
                 Text: ="Reason For Rejection"
                 Width: =500
                 X: =16
+                Y: =8
                 ZIndex: =1
 
             TextInput4 As text:
@@ -2983,14 +3044,6 @@ Details_Screen As screen:
                             )
                         )
                     );
-                    Patch(
-                        NotificationList_CertificationApp,
-                        Defaults(NotificationList_CertificationApp),
-                        {
-                            Title: varCertificateDetails.Requestor.DisplayName,
-                            Notification: varCertificateDetails.Requestor.DisplayName & " has uploaded proofs for the certification " & varCertificateDetails.'Certification:Title'.Value
-                        }
-                    );
                     If(
                         varCertificateDetails.PaymentMode <> "Cash",
                         If(
@@ -3159,14 +3212,7 @@ Details_Screen As screen:
                             )
                         )
                     );
-                    Patch(
-                        NotificationList_CertificationApp,
-                        Defaults(NotificationList_CertificationApp),
-                        {
-                            Title: varCertificateDetails.Requestor.DisplayName,
-                            Notification: varCertificateDetails.Requestor.DisplayName & " has uploaded proofs for the certification " & varCertificateDetails.'Certification:Title'.Value
-                        }
-                    );
+                    
                     If(
                         varCertificateDetails.PaymentMode <> "Cash",
                         If(
@@ -3334,14 +3380,6 @@ Details_Screen As screen:
                                 1000
                             )
                         )
-                    );
-                    Patch(
-                        NotificationList_CertificationApp,
-                        Defaults(NotificationList_CertificationApp),
-                        {
-                            Title: varCertificateDetails.Requestor.DisplayName,
-                            Notification: varCertificateDetails.Requestor.DisplayName & " has uploaded proofs for the certification " & varCertificateDetails.'Certification:Title'.Value
-                        }
                     );
                     If(
                         varCertificateDetails.PaymentMode <> "Cash",
@@ -3511,14 +3549,7 @@ Details_Screen As screen:
                             )
                         )
                     );
-                    Patch(
-                        NotificationList_CertificationApp,
-                        Defaults(NotificationList_CertificationApp),
-                        {
-                            Title: varCertificateDetails.Requestor.DisplayName,
-                            Notification: varCertificateDetails.Requestor.DisplayName & " has uploaded proofs for the certification " & varCertificateDetails.'Certification:Title'.Value
-                        }
-                    );
+                    
                     If(
                         varCertificateDetails.PaymentMode <> "Cash",
                         If(
@@ -3699,6 +3730,28 @@ Details_Screen As screen:
                     Set(
                         varAttachpopUp,
                         false
+                    );
+                    Refresh(CertificationOrder);
+                    Refresh(NotificationList_CertificationApp);
+                    ClearCollect(
+                        userCertifications,
+                        Filter(
+                            CertificationOrder,
+                            Requestor.Email = User().Email And Created > DateAdd(
+                                Today(),
+                                -365
+                            )
+                        )
+                    );
+                    ClearCollect(
+                        col_Notification,
+                        Filter(
+                            LastN(
+                                NotificationList_CertificationApp,
+                                5000
+                            ),
+                            (Title = Office365Users.MyProfile().DisplayName && "been approved by your manager " & varMngrname in Notification) || ("has requested for" in Notification && Manager = User().FullName) || (Title = Office365Users.MyProfile().DisplayName && "been approved by ILD" in Notification) || (UserDeleted = false And Title = Office365Users.MyProfile().DisplayName)
+                        )
                     );
                     Reset(Inp_voucher);
                 PressedBorderColor: =Self.BorderColor
@@ -4240,9 +4293,10 @@ Details_Screen As screen:
             Height: =26
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverFill: =Self.Fill
-            OnSelect: |-
-                =If(varCertificateDetails.PaymentMode = "Advance Payment",
-                If(
+            OnSelect: |
+                =If(
+                    varCertificateDetails.PaymentMode = "Advance Payment",
+                    If(
                         !IsBlank('Email Attachment'),
                         ClearCollect(
                             colfiles,
@@ -4274,7 +4328,6 @@ Details_Screen As screen:
                                 "Name"
                             )
                         );
-                        
                         Set(
                             varProofsLinks,
                             'Attachment-ProofsUpload'.Run(
@@ -4285,28 +4338,31 @@ Details_Screen As screen:
                                 varCertificateDetails.ID
                             ).links
                         );
-                         If(
-                            varCertificateDetails.Status in [
-                                "Manager Approved"
-                            ],
+                        If(
+                            varCertificateDetails.Status in ["Manager Approved"],
                             UpdateIf(
                                 CertificationOrder,
                                 ID = varCertificateDetails.ID,
-                                {
-                                    Status: "Advance Payment Requested"
-                                }
+                                {Status: "Advance Payment Requested"}
                             )
-                         );
+                        );
                         Refresh(CertificationOrder);
                         Reset('Email Attachment');
-                        
                         Notify(
                             "Proofs Uploaded Successfully",
                             NotificationType.Success,
                             2000
                         );
+                        Patch(
+                            NotificationList_CertificationApp,
+                            Defaults(NotificationList_CertificationApp),
+                            {
+                                Title: varCertificateDetails.Requestor.DisplayName,
+                                Notification: varCertificateDetails.Requestor.DisplayName & " has uploaded the Acknowledge Email to Manager For Advance Payment Request" & varCertificateDetails.'Certification:Title'.Value
+                            }
+                        );
                         Navigate(
-                           Home_Screen,
+                            Home_Screen,
                             ScreenTransition.Fade
                         ),
                         Notify(
@@ -4315,7 +4371,20 @@ Details_Screen As screen:
                             1000
                         )
                     );
-                ,false);
+                    ,
+                    false
+                );
+                Refresh(NotificationList_CertificationApp);
+                ClearCollect(
+                    col_Notification,
+                    Filter(
+                        LastN(
+                            NotificationList_CertificationApp,
+                            5000
+                        ),
+                        (Title = Office365Users.MyProfile().DisplayName && "been approved by your manager " & varMngrname in Notification) || ("has requested for" in Notification && Manager = User().FullName) || (Title = Office365Users.MyProfile().DisplayName && "been approved by ILD" in Notification) || (UserDeleted = false And Title = Office365Users.MyProfile().DisplayName)
+                    )
+                );
             PressedBorderColor: =Self.BorderColor
             PressedFill: =Color.White
             RadiusBottomLeft: =8

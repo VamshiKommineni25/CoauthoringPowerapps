@@ -194,6 +194,66 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "c_Header.Header_1.'iLink Digital logo@4x 1_1'.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "c_Header.Header_1.'iLink Digital logo@4x 1_1'.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "c_Header",
+                "type": "c_Header.Header_1.'iLink Digital logo@4x 1_1'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "c_Header.Header_1.'iLink Digital logo@4x 1_1'.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "c_Header.Header_1.'iLink Digital logo@4x 1_1'.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "c_Header",
+                "type": "c_Header.Header_1.'iLink Digital logo@4x 1_1'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Low"
+          },
+          "ruleId": "acc-TabOrderShouldBeChecked",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "c_Header.Header_1.'Rectangle 1155_1'.AccessibleLabel"
                 }
               ],
@@ -477,66 +537,6 @@
                 "member": "TabIndex",
                 "module": "c_Header",
                 "type": "c_Header.Header_1.Profile_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Low"
-          },
-          "ruleId": "acc-TabOrderShouldBeChecked",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "c_Header.Header_1.'iLink Digital logo@4x 1_1'.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "c_Header.Header_1.'iLink Digital logo@4x 1_1'.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "c_Header",
-                "type": "c_Header.Header_1.'iLink Digital logo@4x 1_1'"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "c_Header.Header_1.'iLink Digital logo@4x 1_1'.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "c_Header.Header_1.'iLink Digital logo@4x 1_1'.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "c_Header",
-                "type": "c_Header.Header_1.'iLink Digital logo@4x 1_1'"
               }
             }
           ],
