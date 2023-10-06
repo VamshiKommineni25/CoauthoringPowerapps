@@ -477,7 +477,7 @@
                 HoverBorderColor: =RGBA(185, 29, 11, 1)
                 HoverColor: =RGBA(255, 255, 255, 1)
                 HoverFill: =RGBA(185, 29, 11, 1)
-                OnSelect: |
+                OnSelect: |-
                     =/*
                     Patch(CertificationRequest,Defaults(CertificationRequest),{
                         Description: txtinp_RS_NCRdesc.Text,
@@ -487,28 +487,31 @@
                         Provider:txtinp_RS_NCRprovider.Text
                     })
                     */
-                    
                     If(
                         IsBlank(txtinp_RS_NCRdesc.Text) || IsBlank(txtinp_RS_NCRtitle.Text) || IsBlank(txtinp_RS_NCRURL.Text) || IsBlank(txtinp_RS_NCRcost.Text) || IsBlank(txtinp_RS_NCRprovider.Text) || IsBlank(drpdwn_RS_NCRBU.SelectedText) || IsBlank(txtinp_RS_NCRexamcode.Text) || IsEmpty(Cmb_RS_NCRrequestor.SelectedItems),
                         Notify(
                             "Please Fill the Required Fields",
                             NotificationType.Error
-                        ),
+                        );
                         IfError(
                             SubmitForm(Form2),
                             Notify("error")
+                        ),
+                        Notify(
+                            "You have submitted form Successfully",
+                            NotificationType.Success
+                        );
+                        ResetForm(Form2);
+                        Concurrent(
+                            Reset(txtinp_RS_NCRdesc),
+                            Reset(txtinp_RS_NCRtitle),
+                            Reset(txtinp_RS_NCRURL),
+                            Reset(txtinp_RS_NCRcost),
+                            Reset(txtinp_RS_NCRprovider),
+                            Reset(drpdwn_RS_NCRBU),
+                            Reset(txtinp_RS_NCRexamcode),
+                            Reset(Cmb_RS_NCRrequestor)
                         )
-                    );
-                    ResetForm(Form2);
-                    Concurrent(
-                        Reset(txtinp_RS_NCRdesc),
-                        Reset(txtinp_RS_NCRtitle),
-                        Reset(txtinp_RS_NCRURL),
-                        Reset(txtinp_RS_NCRcost),
-                        Reset(txtinp_RS_NCRprovider),
-                        Reset(drpdwn_RS_NCRBU),
-                        Reset(txtinp_RS_NCRexamcode),
-                        Reset(Cmb_RS_NCRrequestor)
                     );
                     ClearCollect(
                         Cert_Req,
