@@ -814,6 +814,44 @@
                 HoverBorderColor: =RGBA(185, 29, 11, 1)
                 HoverColor: =RGBA(255, 255, 255, 1)
                 HoverFill: =RGBA(185, 29, 11, 1)
+                OnSelect: |+
+                    =//Refresh(AnswerList);
+                    ClearCollect(Answers,{AnswerColumn:txtinp_answer_enter.Text,QnID:varSelectedQn.ID});
+                    
+                    If(IsBlank(txtinp_answer_enter.Text),Notify("Answer should not blank",NotificationType.Warning,2000),
+                        ForAll(
+                        Answers,
+                        Patch(
+                            AnswerList,
+                            Defaults(AnswerList),
+                            {
+                                Title: AnswerColumn,
+                                Question: {
+                                    '@odata.type': "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+                                    Id: Value(QnID),
+                                    Value: QnID
+                                }, 
+                                Technology: {
+                                    '@odata.type': "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+                                    Id:varCertificationData.CertificationID,
+                                    Value: varCertificationName
+                                    },
+                                      
+                                
+                                AnswerBy: {
+                                    '@odata.type': "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",
+                                    DisplayName: User().FullName,
+                                    Claims: "i:0#.f|membership|" & Lower(User().Email),
+                                    Department: "",
+                                    Email: User().Email,
+                                    JobTitle: "",
+                                    Picture: ""
+                                }
+                            }
+                        )
+                    ));
+                    Reset(txtinp_answer_enter)
+                    
                 PressedBorderColor: =RGBA(185, 29, 11, 1)
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(185, 29, 11, 1)
@@ -1380,7 +1418,8 @@
                     =UpdateContext({varrecentQnsans:true});
                     UpdateContext({varrecentQns:false});
                     UpdateContext({varQndata:ThisItem});
-                    ClearCollect(col_Answerlist,Filter(FirstN(AnswerList,5000),Question.Id=varQndata.ID))
+                    ClearCollect(col_Answerlist,Filter(FirstN(AnswerList,5000),Question.Id=varQndata.ID));
+                    Set(varSelectedQn,ThisItem);
                 PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
                 PressedColor: =RGBA(57, 57, 57, 1)
                 PressedFill: =RGBA(245, 223, 220, 1)
@@ -1591,6 +1630,8 @@
             Items: =Search(Sort(col_Answerlist,Created,SortOrder.Descending),txtinp_recentans_textbox.Text,"Answers","Title")
             Layout: =Layout.Vertical
             LoadingSpinner: =LoadingSpinner.Data
+            ShowNavigation: =true
+            ShowScrollbar: =false
             TabIndex: =0
             TemplateSize: =212
             Width: =367
