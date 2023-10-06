@@ -1692,6 +1692,22 @@
             HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             HoverFill: =RGBA(0, 0, 0, 0)
             Icon: =Icon.Reload
+            OnSelect: |-
+                =Concurrent(
+                    Refresh(Certifications),
+                    Refresh('BU-CertificationList'),
+                    Refresh(CertificationRequest),
+                    Refresh('BU-List'),
+                    Refresh(CertificationOrder),
+                    Refresh(AnswerList),
+                    Refresh('CertificationApp-Security'),
+                    Refresh(NotificationList_CertificationApp),
+                    Refresh(QuestionList_Admin),
+                    Refresh(AnswersList_Admin);
+                    Refresh('Location List_Certification App'),
+                    Refresh('Target List'),
+                    Refresh(QuestionList)
+                );
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             PressedFill: =RGBA(0, 0, 0, 0)
