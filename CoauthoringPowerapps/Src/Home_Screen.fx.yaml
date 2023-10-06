@@ -294,7 +294,7 @@ Home_Screen As screen:
                         CountRows(Glry_ExternalCertification.AllItems)
                     )
                 )*/
-                CountRows(Filter(userCertifications,Status="Reimbursed"))
+                CountRows(Filter(userCertifications,Status="Completed"))
             Width: =48
             X: =18
             Y: =26
