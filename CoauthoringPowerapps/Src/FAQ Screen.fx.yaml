@@ -2,8 +2,21 @@
     Fill: =RGBA(241, 246, 246, 1)
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
     OnVisible: |-
-        =Set(varProfileView,false);
-        Set(SideLabelvar,0);
+        =Set(
+            varProfileView,
+            false
+        );
+        Set(
+            SideLabelvar,
+            0
+        );
+        ClearCollect(
+            questiondetails,
+            Filter(
+                QuestionList,
+                CertificationName.Value = varCertificationName
+            )
+        )
 
     cont_FAQheader As groupContainer.manualLayoutContainer:
         Fill: =RGBA(255, 255, 255, 1)
@@ -213,7 +226,7 @@
                 Font: ="Poppins"
                 FontWeight: =FontWeight.Bold
                 Height: =42
-                Text: ="Top Questions & Answers"
+                Text: ="Top Question and Answers of " & varCertificationName
                 Width: =482
                 X: =26
                 Y: =252

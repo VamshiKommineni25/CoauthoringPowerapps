@@ -136,8 +136,9 @@
             Height: =26
             HoverBorderColor: =Self.BorderColor
             HoverFill: =Self.Fill
-            OnSelect: |-
-                =Navigate('FAQ Screen',ScreenTransition.Fade,{varCertificationData:varCertificationData})
+            OnSelect: |
+                =Navigate('FAQ Screen',ScreenTransition.Fade,{varCertificationData:varCertificationData});
+                Set(varCertificationName,varCertificationData.'Certification Name')
             PressedBorderColor: =Self.BorderColor
             PressedColor: =RGBA(255, 255, 255, 1)
             RadiusBottomLeft: =3
