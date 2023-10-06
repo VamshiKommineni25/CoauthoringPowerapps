@@ -5804,6 +5804,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "'Request Screen'.Cont_RS_NCR.glry_RS_NCRRCR.FocusedBorderThickness"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Request Screen'.Cont_RS_NCR.glry_RS_NCRRCR.FocusedBorderThickness",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "FocusedBorderThickness",
+                "module": "Request Screen",
+                "type": "'Request Screen'.Cont_RS_NCR.glry_RS_NCRRCR"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-FocusBorderShouldBeVisible",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App.varNotifyCount"
                 }
               ],

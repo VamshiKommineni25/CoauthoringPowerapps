@@ -1519,6 +1519,7 @@
             BorderColor: =RGBA(166, 166, 166, 1)
             BorderStyle: =BorderStyle.None
             DelayItemLoading: =true
+            FocusedBorderThickness: =0
             Height: =610
             Items: |-
                 =Search(
@@ -1532,6 +1533,8 @@
                 )
             Layout: =Layout.Vertical
             LoadingSpinner: =LoadingSpinner.Data
+            ShowNavigation: =true
+            ShowScrollbar: =false
             TabIndex: =0
             TemplateSize: =112
             Width: =360
