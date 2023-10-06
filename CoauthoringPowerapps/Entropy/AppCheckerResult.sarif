@@ -5624,19 +5624,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Request Screen'.Cont_RS_NCR.Icon12.AccessibleLabel"
+                  "fullyQualifiedName": "'Request Screen'.Cont_RS_NCR.Reload.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Request Screen'.Cont_RS_NCR.Icon12.AccessibleLabel",
+                  "fullyQualifiedName": "'Request Screen'.Cont_RS_NCR.Reload.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Request Screen",
-                "type": "'Request Screen'.Cont_RS_NCR.Icon12"
+                "type": "'Request Screen'.Cont_RS_NCR.Reload"
               }
             }
           ],
@@ -5654,19 +5654,109 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Request Screen'.Cont_RS_NCR.Icon12.TabIndex"
+                  "fullyQualifiedName": "'Request Screen'.Cont_RS_NCR.Reload.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Request Screen'.Cont_RS_NCR.Icon12.TabIndex",
+                  "fullyQualifiedName": "'Request Screen'.Cont_RS_NCR.Reload.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "Request Screen",
-                "type": "'Request Screen'.Cont_RS_NCR.Icon12"
+                "type": "'Request Screen'.Cont_RS_NCR.Reload"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Admin dashBoard'.Cntr_Recent_Request.Reload_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Admin dashBoard'.Cntr_Recent_Request.Reload_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Admin dashBoard",
+                "type": "'Admin dashBoard'.Cntr_Recent_Request.Reload_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Admin dashBoard'.Cntr_Recent_Request.Reload_1.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Admin dashBoard'.Cntr_Recent_Request.Reload_1.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Admin dashBoard",
+                "type": "'Admin dashBoard'.Cntr_Recent_Request.Reload_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Admin dashBoard'.Label1.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Admin dashBoard'.Label1.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Admin dashBoard",
+                "type": "'Admin dashBoard'.Label1"
               }
             }
           ],
@@ -6635,6 +6725,96 @@
           },
           "ruleId": "app-UnusedVariables",
           "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Admin dashBoard'.Cntr_Recent_Request.Reload_1.Y"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Admin dashBoard'.Cntr_Recent_Request.Reload_1.Y",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Y",
+                "module": "Admin dashBoard",
+                "type": "'Admin dashBoard'.Cntr_Recent_Request.Reload_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 8
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Admin dashBoard'.Cntr_Recent_Request.Reload_1.Width"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Admin dashBoard'.Cntr_Recent_Request.Reload_1.Width",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Width",
+                "module": "Admin dashBoard",
+                "type": "'Admin dashBoard'.Cntr_Recent_Request.Reload_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 8
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Admin dashBoard'.Cntr_Recent_Request.Reload_1.Height"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Admin dashBoard'.Cntr_Recent_Request.Reload_1.Height",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Height",
+                "module": "Admin dashBoard",
+                "type": "'Admin dashBoard'.Cntr_Recent_Request.Reload_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 8
         }
       ],
       "tool": {
@@ -6779,7 +6959,24 @@
                 ],
                 "level": "Medium",
                 "primaryCategory": "performance",
-                "whyFix": "Each control consumes resources, and an app may become slow or unresponsive if a screen has too many controls. The estimated complexity of \"Admin dashBoard\" is 308, which exceeds the maximum threshold recommended (300)."
+                "whyFix": "Each control consumes resources, and an app may become slow or unresponsive if a screen has too many controls. The estimated complexity of \"Admin dashBoard\" is 309, which exceeds the maximum threshold recommended (300)."
+              }
+            },
+            {
+              "id": "app-InefficientDelayLoading",
+              "messageStrings": {
+                "issue": {
+                  "text": "Inefficient delay loading"
+                }
+              },
+              "properties": {
+                "componentType": "app",
+                "howToFix": [
+                  "Use variables, collections, and navigation context to share state across screens instead."
+                ],
+                "level": "Medium",
+                "primaryCategory": "performance",
+                "whyFix": "Controls that reference controls on other screens can slow down app loading and navigation. Doing this may force the app to load the other screens immediately, rather than waiting until the user navigates to that screen."
               }
             }
           ],

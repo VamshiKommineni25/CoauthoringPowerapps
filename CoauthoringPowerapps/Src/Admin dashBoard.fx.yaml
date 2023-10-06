@@ -2195,7 +2195,7 @@
             Size: =12
             Text: ="Recent Certification Requests"
             Width: =324
-            X: =23.28
+            X: =4
             Y: =20.29
             ZIndex: =1
 
@@ -2536,6 +2536,41 @@
             X: =122
             Y: =380
             ZIndex: =6
+
+        Reload_1 As icon.Reload:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(220, 220, 220, 1)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
+            Height: =icon_NCR_cancelrcert.Height
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Icon: =Icon.Reload
+            OnSelect: |-
+                =Concurrent(
+                    Refresh(Certifications),
+                    Refresh('BU-CertificationList'),
+                    Refresh(CertificationRequest),
+                    Refresh('BU-List'),
+                    Refresh(CertificationOrder),
+                    Refresh(AnswerList),
+                    Refresh('CertificationApp-Security'),
+                    Refresh(NotificationList_CertificationApp),
+                    Refresh(QuestionList_Admin),
+                    Refresh(AnswersList_Admin);
+                    Refresh('Location List_Certification App'),
+                    Refresh('Target List'),
+                    Refresh(QuestionList)
+                );
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Width: =icon_NCR_cancelrcert.Width
+            X: =320
+            Y: =icon_NCR_cancelrcert.Y
+            ZIndex: =7
 
     "'Glry_Total Cert per BU/Provider' As gallery.galleryHorizontal":
         BorderColor: =RGBA(166, 166, 166, 1)
@@ -3180,6 +3215,22 @@
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             Height: =19
+            OnSelect: |-
+                =Concurrent(
+                    Refresh(Certifications),
+                    Refresh('BU-CertificationList'),
+                    Refresh(CertificationRequest),
+                    Refresh('BU-List'),
+                    Refresh(CertificationOrder),
+                    Refresh(AnswerList),
+                    Refresh('CertificationApp-Security'),
+                    Refresh(NotificationList_CertificationApp),
+                    Refresh(QuestionList_Admin),
+                    Refresh(AnswersList_Admin);
+                    Refresh('Location List_Certification App'),
+                    Refresh('Target List'),
+                    Refresh(QuestionList)
+                );
             Size: =13
             Text: ="Refresh"
             Width: =77
