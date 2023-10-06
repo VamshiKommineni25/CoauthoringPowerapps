@@ -1356,8 +1356,8 @@
             Size: =13
             Text: ="Recent Certification Requests"
             Width: =324
-            X: =23.28
-            Y: =20.29
+            X: =4
+            Y: =17
             ZIndex: =1
 
         icon_NCR_cancelrcert As icon.Cancel:
@@ -1381,7 +1381,7 @@
             PressedFill: =RGBA(0, 0, 0, 0)
             TabIndex: =
             Width: =21.87
-            X: =lbl_NCR_recentheader.X+lbl_NCR_recentheader.Width
+            X: =lbl_NCR_recentheader.X+lbl_NCR_recentheader.Width+40
             Y: =27
             ZIndex: =2
 
@@ -1679,6 +1679,27 @@
                 X: =250
                 Y: =46
                 ZIndex: =7
+
+        Icon12 As icon.Reload:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            Color: =RGBA(0, 120, 212, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(220, 220, 220, 1)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
+            Height: =icon_NCR_cancelrcert.Height
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Icon: =Icon.Reload
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Width: =icon_NCR_cancelrcert.Width
+            X: |
+                =320
+            Y: =icon_NCR_cancelrcert.Y
+            ZIndex: =6
 
     Form2 As form:
         BorderColor: =RGBA(166, 166, 166, 1)
