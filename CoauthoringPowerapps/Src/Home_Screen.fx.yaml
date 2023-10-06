@@ -1864,6 +1864,8 @@ Home_Screen As screen:
                   
             Layout: =Layout.Vertical
             LoadingSpinner: =LoadingSpinner.Data
+            ShowNavigation: =true
+            ShowScrollbar: =false
             TabIndex: =
             TemplatePadding: =0
             TemplateSize: =104
