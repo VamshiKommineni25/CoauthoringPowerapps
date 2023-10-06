@@ -2353,7 +2353,7 @@
         Glry_ViewRequest As gallery.galleryVertical:
             BorderColor: =RGBA(166, 166, 166, 1)
             DelayItemLoading: =true
-            Height: =610
+            Height: =630
             Items: |-
                 =Search(
                     Sort(
@@ -2366,9 +2366,11 @@
                 )
             Layout: =Layout.Vertical
             LoadingSpinner: =LoadingSpinner.Data
+            ShowNavigation: =true
+            ShowScrollbar: =false
             TabIndex: =1
             TemplateSize: =92
-            Width: =Rectangle5_9.Width
+            Width: =347
             X: =23
             Y: =135
             ZIndex: =5
