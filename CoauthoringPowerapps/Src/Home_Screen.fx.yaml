@@ -342,11 +342,14 @@ Home_Screen As screen:
             DisabledColor: =RGBA(166, 166, 166, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
-            Height: =20
+            Height: =30
             Size: =10
-            Text: ="External Certification"
-            Width: =134
-            X: =18
+            Text: |-
+                =If(varUserLevel="SUPER-ADMIN",
+                "External Certification Requests",
+                "External Certifications")
+            Width: =178
+            X: =3
             Y: =6
             ZIndex: =1
 
@@ -364,10 +367,13 @@ Home_Screen As screen:
             Height: =51
             Size: =20
             Text: |-
-                =CountRows(Filter( FirstN(
+                =/*
+                CountRows(Filter( FirstN(
                                             ExternalCertificationList,
                                             5000
                             ),Title=User().FullName))
+                */
+                Glry_ExternalCertification.AllItemsCount            
             Width: =48
             X: =18
             Y: =26
@@ -1334,33 +1340,90 @@ Home_Screen As screen:
                 Height: =267
                 Items: |-
                     =Search(
-                        With(
-                            {
-                                records: Sort(
-                                    Filter(
-                                        FirstN(
-                                            ExternalCertificationList,
-                                            5000
+                        Switch(
+                            varUserLevel,
+                            "ADMIN",
+                            With(
+                                {
+                                    records: Sort(
+                                        Filter(
+                                            FirstN(
+                                                ExternalCertificationList,
+                                                5000
+                                            ),
+                                            Office365Users.ManagerV2('Created By'.Email).displayName = User().FullName || varUserLevel = "SUPER-ADMIN" || varUserLevel = "ADMIN"
                                         ),
-                                        Office365Users.ManagerV2('Created By'.Email).displayName = User().FullName || varUserLevel = "SUPER-ADMIN" || varUserLevel = "ADMIN"
-                                    ),
-                                    Created,
-                                    SortOrder.Descending
+                                        Created,
+                                        SortOrder.Descending
+                                    )
+                                },
+                                ForAll(
+                                    Sequence(CountRows(records)),
+                                    Patch(
+                                        Last(
+                                            FirstN(
+                                                records,
+                                                Value
+                                            )
+                                        ),
+                                        {Rownumber: Value}
+                                    )
                                 )
-                            },
-                            ForAll(
-                                Sequence(CountRows(records)),
-                                Patch(
-                                    Last(
-                                        FirstN(
-                                            records,
-                                            Value
-                                        )
-                                    ),
-                                    {Rownumber: Value}
+                            ),
+                            "USER",
+                            With(
+                                {
+                                    records: Sort(
+                                        Filter(
+                                            FirstN(
+                                                ExternalCertificationList,
+                                                5000
+                                            ),
+                                            'Created By'.Email = User().Email
+                                        ),
+                                        Created,
+                                        SortOrder.Descending
+                                    )
+                                },
+                                ForAll(
+                                    Sequence(CountRows(records)),
+                                    Patch(
+                                        Last(
+                                            FirstN(
+                                                records,
+                                                Value
+                                            )
+                                        ),
+                                        {Rownumber: Value}
+                                    )
                                 )
                             )
-                        ),
+                        ,"SUPER-ADMIN",
+                        With(
+                                {
+                                    records: Sort(
+                                            FirstN(
+                                                ExternalCertificationList,
+                                                5000
+                                            
+                                        ),
+                                        Created,
+                                        SortOrder.Descending
+                                    )
+                                },
+                                ForAll(
+                                    Sequence(CountRows(records)),
+                                    Patch(
+                                        Last(
+                                            FirstN(
+                                                records,
+                                                Value
+                                            )
+                                        ),
+                                        {Rownumber: Value}
+                                    )
+                                )
+                            )),
                         c_Header_2.TextOut,
                         "Title",
                         "ProviderName",

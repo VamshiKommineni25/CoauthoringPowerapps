@@ -537,6 +537,7 @@
                 RadiusTopRight: =3
                 Size: =10
                 Text: ="Enroll"
+                Visible: =If(IsEmpty(EnrollList),false,true)
                 Width: =100
                 X: =1062
                 Y: =405
@@ -567,10 +568,30 @@
                 RadiusTopRight: =3
                 Size: =10
                 Text: ="Clear"
+                Visible: =If(IsEmpty(EnrollList),false,true)
                 Width: =100
                 X: =925
                 Y: =405
                 ZIndex: =5
+
+            Label2 As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(151, 0, 0, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                Height: =46
+                Size: =13
+                Text: ="Your cart is empty"
+                Visible: =If(IsEmpty(EnrollList),true,false)
+                Width: =463
+                X: =355
+                Y: =205
+                ZIndex: =6
 
     C_AlertPanel_7 As C_AlertPanel:
         Visible: =varAlert
