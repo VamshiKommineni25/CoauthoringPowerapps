@@ -298,7 +298,7 @@
                 ChevronHoverBackground: =RGBA(212, 212, 212, 1)
                 ChevronHoverFill: =RGBA(33, 33, 33, 1)
                 Color: =RGBA(154, 154, 154, 1)
-                Default: =""
+                Default: =
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
@@ -477,7 +477,7 @@
                 HoverBorderColor: =RGBA(185, 29, 11, 1)
                 HoverColor: =RGBA(255, 255, 255, 1)
                 HoverFill: =RGBA(185, 29, 11, 1)
-                OnSelect: |-
+                OnSelect: |
                     =/*
                     Patch(CertificationRequest,Defaults(CertificationRequest),{
                         Description: txtinp_RS_NCRdesc.Text,
@@ -487,12 +487,13 @@
                         Provider:txtinp_RS_NCRprovider.Text
                     })
                     */
+                    
                     If(
                         IsBlank(txtinp_RS_NCRdesc.Text) || IsBlank(txtinp_RS_NCRtitle.Text) || IsBlank(txtinp_RS_NCRURL.Text) || IsBlank(txtinp_RS_NCRcost.Text) || IsBlank(txtinp_RS_NCRprovider.Text) || IsBlank(drpdwn_RS_NCRBU.SelectedText) || IsBlank(txtinp_RS_NCRexamcode.Text) || IsEmpty(Cmb_RS_NCRrequestor.SelectedItems),
                         Notify(
                             "Please Fill the Required Fields",
                             NotificationType.Error
-                        );
+                        ),
                         IfError(
                             SubmitForm(Form2),
                             Notify("error")
@@ -513,6 +514,7 @@
                             Reset(Cmb_RS_NCRrequestor)
                         )
                     );
+                    Refresh(CertificationRequest);
                     ClearCollect(
                         Cert_Req,
                         CertificationRequest
@@ -1611,11 +1613,12 @@
                 AccessibleLabel: ="icon_NCR_certview"
                 BorderColor: =RGBA(166, 166, 166, 1)
                 BorderStyle: =BorderStyle.None
+                Color: =RGBA(0, 108, 191, 1)
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(220, 220, 220, 1)
                 DisabledFill: =RGBA(0, 0, 0, 0)
                 FocusedBorderThickness: =
-                Height: =24
+                Height: =15
                 HoverBorderColor: =RGBA(0, 0, 0, 0)
                 HoverColor: =Color.Black
                 HoverFill: =RGBA(0, 0, 0, 0)
@@ -1627,9 +1630,9 @@
                 PressedColor: =Color.Black
                 PressedFill: =RGBA(0, 0, 0, 0)
                 TabIndex: =0
-                Width: =24
-                X: =282
-                Y: =46
+                Width: =15
+                X: =280
+                Y: =50
                 ZIndex: =5
 
             btn_NCR_status As button:
@@ -1662,26 +1665,6 @@
                 X: =245
                 Y: =6
                 ZIndex: =6
-
-            Icon17 As icon.Download:
-                BorderColor: =RGBA(166, 166, 166, 1)
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(220, 220, 220, 1)
-                DisabledFill: =RGBA(0, 0, 0, 0)
-                FocusedBorderThickness: =4
-                Height: =24
-                HoverBorderColor: =RGBA(0, 0, 0, 0)
-                HoverColor: =RGBA(0, 0, 0, 1)
-                HoverFill: =RGBA(0, 0, 0, 0)
-                Icon: =Icon.Download
-                OnSelect: =Select(Parent)
-                PressedBorderColor: =RGBA(0, 0, 0, 0)
-                PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-                PressedFill: =RGBA(0, 0, 0, 0)
-                Width: =24
-                X: =250
-                Y: =46
-                ZIndex: =7
 
         Reload As icon.Reload:
             BorderColor: =RGBA(166, 166, 166, 1)
@@ -1805,6 +1788,7 @@
                 ChevronHoverBackground: =RGBA(212, 212, 212, 1)
                 ChevronHoverFill: =RGBA(33, 33, 33, 1)
                 Color: =RGBA(51, 51, 51, 1)
+                Default: =Cmb_RS_NCRrequestor.Selected
                 DefaultSelectedItems: =Cmb_RS_NCRrequestor.SelectedItems
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -1905,6 +1889,7 @@
                 ChevronHoverBackground: =RGBA(212, 212, 212, 1)
                 ChevronHoverFill: =RGBA(33, 33, 33, 1)
                 Color: =RGBA(51, 51, 51, 1)
+                Default: =drpdwn_RS_NCRBU.Selected
                 DefaultSelectedItems: =drpdwn_RS_NCRBU.Selected
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -2493,6 +2478,7 @@
                 PressedFill: =
                 Size: =12
                 Text: ="Revise"
+                Visible: =If(varUserLevel="SUPER-ADMIN",true,false)
                 Width: =102
                 X: =470
                 Y: =380
@@ -2543,7 +2529,7 @@
                 PressedFill: =
                 Size: =12
                 Text: =If(VarviewselectedCertdata.Admin_Approval=false,"Approve","Approved")
-                Visible: =If(varUserLevel="ADMIN" ||varUserLevel="SUPER-ADMIN",true,false)
+                Visible: =If(varUserLevel="SUPER-ADMIN",true,false)
                 Width: =102
                 X: |
                     =Btn_Revise.X+Btn_Revise.Width+ 40
