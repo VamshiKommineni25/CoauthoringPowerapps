@@ -488,21 +488,6 @@
                             SubmitForm(Form2),
                             Notify("error")
                         ),
-                        Patch(
-                            CertificationRequest,
-                            Defaults(CertificationRequest),
-                            {
-                                Description: txtinp_RS_NCRdesc.Text,
-                                Title: txtinp_RS_NCRtitle.Text,
-                                URL: txtinp_RS_NCRURL.Text,
-                                Cost: txtinp_RS_NCRcost.Text,
-                                Provider: txtinp_RS_NCRprovider.Text,
-                                ExamCode: txtinp_RS_NCRexamcode.Text,
-                                BU: drpdwn_RS_NCRBU.SelectedText,
-                                Requestor: Cmb_RS_NCRrequestor.Selected
-                            }
-                        ),
-                        Form2.Updates;
                         Notify(
                             "You have submitted form Successfully",
                             NotificationType.Success
