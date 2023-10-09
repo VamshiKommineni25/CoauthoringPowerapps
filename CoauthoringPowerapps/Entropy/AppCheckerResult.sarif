@@ -14,6 +14,126 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "C_Profile.Container3.Container4.Label14_3.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "C_Profile.Container3.Container4.Label14_3.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "C_Profile",
+                "type": "C_Profile.Container3.Container4.Label14_3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Low"
+          },
+          "ruleId": "acc-TabOrderShouldBeChecked",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "C_Profile.Container3.Container4.Icon16.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "C_Profile.Container3.Container4.Icon16.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "C_Profile",
+                "type": "C_Profile.Container3.Container4.Icon16"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "C_Profile.Container3.Container4.Icon16.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "C_Profile.Container3.Container4.Icon16.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "C_Profile",
+                "type": "C_Profile.Container3.Container4.Icon16"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Low"
+          },
+          "ruleId": "acc-TabOrderShouldBeChecked",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "C_AlertPanel.Container16_1.Container17_1.icn_notify_exit.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "C_AlertPanel.Container16_1.Container17_1.icn_notify_exit.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "C_AlertPanel",
+                "type": "C_AlertPanel.Container16_1.Container17_1.icn_notify_exit"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Low"
+          },
+          "ruleId": "acc-TabOrderShouldBeChecked",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "c_Header.Header_1.Search_1.'Rectangle 1129_1'.Vector_16.TabIndex"
                 }
               ],
@@ -764,126 +884,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "C_AlertPanel.Container16_1.Container17_1.icn_notify_exit.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "C_AlertPanel.Container16_1.Container17_1.icn_notify_exit.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "C_AlertPanel",
-                "type": "C_AlertPanel.Container16_1.Container17_1.icn_notify_exit"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Low"
-          },
-          "ruleId": "acc-TabOrderShouldBeChecked",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "C_Profile.Container3.Container4.Label14_3.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "C_Profile.Container3.Container4.Label14_3.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "C_Profile",
-                "type": "C_Profile.Container3.Container4.Label14_3"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Low"
-          },
-          "ruleId": "acc-TabOrderShouldBeChecked",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "C_Profile.Container3.Container4.Icon16.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "C_Profile.Container3.Container4.Icon16.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "C_Profile",
-                "type": "C_Profile.Container3.Container4.Icon16"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "C_Profile.Container3.Container4.Icon16.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "C_Profile.Container3.Container4.Icon16.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "C_Profile",
-                "type": "C_Profile.Container3.Container4.Icon16"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Low"
-          },
-          "ruleId": "acc-TabOrderShouldBeChecked",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "C_leftPanel.Group_3.'Group 5772_1'.Rectangle1.AccessibleLabel"
                 }
               ],
@@ -1364,6 +1364,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "'Request Screen'.Cont_NCR_popup.cont_NCR_mainpopup.Lbl_ViewCertification.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Request Screen'.Cont_NCR_popup.cont_NCR_mainpopup.Lbl_ViewCertification.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Request Screen",
+                "type": "'Request Screen'.Cont_NCR_popup.cont_NCR_mainpopup.Lbl_ViewCertification"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Low"
+          },
+          "ruleId": "acc-TabOrderShouldBeChecked",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "'Request Screen'.Cont_RS_NCR.Reload.AccessibleLabel"
                 }
               ],
@@ -1448,36 +1478,6 @@
           },
           "ruleId": "acc-FocusBorderShouldBeVisible",
           "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Request Screen'.Cont_NCR_popup.cont_NCR_mainpopup.Lbl_ViewCertification.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Request Screen'.Cont_NCR_popup.cont_NCR_mainpopup.Lbl_ViewCertification.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Request Screen",
-                "type": "'Request Screen'.Cont_NCR_popup.cont_NCR_mainpopup.Lbl_ViewCertification"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Low"
-          },
-          "ruleId": "acc-TabOrderShouldBeChecked",
-          "ruleIndex": 0
         },
         {
           "locations": [
@@ -6463,6 +6463,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "c_Header.Header_1.Search_1.'Rectangle 1129_1'.txtSearch.DelayOutput"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "c_Header.Header_1.Search_1.'Rectangle 1129_1'.txtSearch.DelayOutput",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "DelayOutput",
+                "module": "c_Header",
+                "type": "c_Header.Header_1.Search_1.'Rectangle 1129_1'.txtSearch"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-TextInputIsNotDelayOutput",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "'Admin BU-Wise-Records'.VarSpinner"
                 }
               ],
@@ -6515,7 +6545,7 @@
             "level": "Medium"
           },
           "ruleId": "app-ScreenHasManyControls",
-          "ruleIndex": 7
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -6545,7 +6575,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 8
+          "ruleIndex": 9
         },
         {
           "locations": [
@@ -6575,7 +6605,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 8
+          "ruleIndex": 9
         },
         {
           "locations": [
@@ -6605,7 +6635,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 8
+          "ruleIndex": 9
         },
         {
           "locations": [
@@ -6634,7 +6664,7 @@
             "level": "Medium"
           },
           "ruleId": "app-ScreenHasManyControls",
-          "ruleIndex": 7
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -6999,6 +7029,23 @@
                 "level": "Medium",
                 "primaryCategory": "performance",
                 "whyFix": "A 'data row limit' more than 500 may result in a slower app when running non-delegable queries, because the app will have to process every row itself, rather than running the query on the server."
+              }
+            },
+            {
+              "id": "app-TextInputIsNotDelayOutput",
+              "messageStrings": {
+                "issue": {
+                  "text": "Inefficient text input"
+                }
+              },
+              "properties": {
+                "componentType": "app",
+                "howToFix": [
+                  "Enable the DelayOutput property of the text input control."
+                ],
+                "level": "Medium",
+                "primaryCategory": "performance",
+                "whyFix": "When a text input control has many controls that depend on its value, typing into that input can slow down the app. Setting DelayOutput to true prevents this problem by only updating dependent controls when typing stops."
               }
             },
             {

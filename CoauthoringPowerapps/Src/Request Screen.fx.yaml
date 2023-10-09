@@ -477,19 +477,8 @@
                 HoverBorderColor: =RGBA(185, 29, 11, 1)
                 HoverColor: =RGBA(255, 255, 255, 1)
                 HoverFill: =RGBA(185, 29, 11, 1)
-                OnSelect: |
-                    =
-                    Patch(CertificationRequest,Defaults(CertificationRequest),{
-                        Description: txtinp_RS_NCRdesc.Text,
-                        Title:txtinp_RS_NCRtitle.Text,
-                        URL:txtinp_RS_NCRURL.Text,
-                        Cost:txtinp_RS_NCRcost.Text,
-                        Provider:txtinp_RS_NCRprovider.Text,
-                        ExamCode:txtinp_RS_NCRexamcode.Text,
-                        BU:drpdwn_RS_NCRBU.SelectedText
-                    });
-                    
-                    If(
+                OnSelect: |-
+                    =If(
                         IsBlank(txtinp_RS_NCRdesc.Text) || IsBlank(txtinp_RS_NCRtitle.Text) || IsBlank(txtinp_RS_NCRURL.Text) || IsBlank(txtinp_RS_NCRcost.Text) || IsBlank(txtinp_RS_NCRprovider.Text) || IsBlank(drpdwn_RS_NCRBU.SelectedText) || IsBlank(txtinp_RS_NCRexamcode.Text) || IsEmpty(Cmb_RS_NCRrequestor.SelectedItems),
                         Notify(
                             "Please Fill the Required Fields",
@@ -499,6 +488,21 @@
                             SubmitForm(Form2),
                             Notify("error")
                         ),
+                        Patch(
+                            CertificationRequest,
+                            Defaults(CertificationRequest),
+                            {
+                                Description: txtinp_RS_NCRdesc.Text,
+                                Title: txtinp_RS_NCRtitle.Text,
+                                URL: txtinp_RS_NCRURL.Text,
+                                Cost: txtinp_RS_NCRcost.Text,
+                                Provider: txtinp_RS_NCRprovider.Text,
+                                ExamCode: txtinp_RS_NCRexamcode.Text,
+                                BU: drpdwn_RS_NCRBU.SelectedText,
+                                Requestor: Cmb_RS_NCRrequestor.Selected
+                            }
+                        ),
+                        Form2.Updates;
                         Notify(
                             "You have submitted form Successfully",
                             NotificationType.Success
