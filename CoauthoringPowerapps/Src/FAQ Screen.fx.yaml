@@ -816,44 +816,58 @@
                 HoverBorderColor: =RGBA(185, 29, 11, 1)
                 HoverColor: =RGBA(255, 255, 255, 1)
                 HoverFill: =RGBA(185, 29, 11, 1)
-                OnSelect: |+
+                OnSelect: |-
                     =//Refresh(AnswerList);
-                    ClearCollect(Answers,{AnswerColumn:txtinp_answer_enter.Text,QnID:varSelectedQn.ID});
-                    
-                    If(IsBlank(txtinp_answer_enter.Text),Notify("Answer should not blank",NotificationType.Warning,2000),
-                        ForAll(
+                    ClearCollect(
                         Answers,
-                        Patch(
-                            AnswerList,
-                            Defaults(AnswerList),
-                            {
-                                Title: AnswerColumn,
-                                Question: {
-                                    '@odata.type': "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
-                                    Id: Value(QnID),
-                                    Value: QnID
-                                }, 
-                                Technology: {
-                                    '@odata.type': "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
-                                    Id:varCertificationData.CertificationID,
-                                    Value: varCertificationName
+                        {
+                            AnswerColumn: txtinp_answer_enter.Text,
+                            QnID: varSelectedQn.ID
+                        }
+                    );
+                    If(
+                        IsBlank(txtinp_answer_enter.Text),
+                        Notify(
+                            "Answer should not blank",
+                            NotificationType.Warning,
+                            2000
+                        ),
+                        ForAll(
+                            Answers,
+                            Patch(
+                                AnswerList,
+                                Defaults(AnswerList),
+                                {
+                                    Title: AnswerColumn,
+                                    Question: {
+                                        '@odata.type': "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+                                        Id: Value(QnID),
+                                        Value: QnID
                                     },
-                                      
-                                
-                                AnswerBy: {
-                                    '@odata.type': "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",
-                                    DisplayName: User().FullName,
-                                    Claims: "i:0#.f|membership|" & Lower(User().Email),
-                                    Department: "",
-                                    Email: User().Email,
-                                    JobTitle: "",
-                                    Picture: ""
+                                    Technology: {
+                                        '@odata.type': "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+                                        Id: varCertificationData.CertificationID,
+                                        Value: varCertificationName
+                                    },
+                                    AnswerBy: {
+                                        '@odata.type': "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",
+                                        DisplayName: User().FullName,
+                                        Claims: "i:0#.f|membership|" & Lower(User().Email),
+                                        Department: "",
+                                        Email: User().Email,
+                                        JobTitle: "",
+                                        Picture: ""
+                                    }
                                 }
-                            }
+                            )
+                        );
+                        Notify(
+                            "Submitted successfully",
+                            NotificationType.Success,
+                            2000
                         )
-                    ));
+                    );
                     Reset(txtinp_answer_enter)
-                    
                 PressedBorderColor: =RGBA(185, 29, 11, 1)
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(185, 29, 11, 1)
@@ -1791,6 +1805,7 @@
             HoverBorderColor: =RGBA(185, 29, 11, 1)
             HoverColor: =RGBA(185, 29, 11, 1)
             HoverFill: =RGBA(255, 255, 255, 1)
+            OnSelect: =ClearCollect(col_Answerlist,Filter(FirstN(AnswerList,5000),Question.Id=varQndata.ID));
             PaddingLeft: =10
             PressedBorderColor: =RGBA(185, 29, 11, 1)
             PressedColor: =RGBA(185, 29, 11, 1)
@@ -1817,6 +1832,7 @@
             HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             HoverFill: =RGBA(0, 0, 0, 0)
             Icon: =Icon.Reload
+            OnSelect: =ClearCollect(col_Answerlist,Filter(FirstN(AnswerList,5000),Question.Id=varQndata.ID));
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             PressedFill: =RGBA(0, 0, 0, 0)

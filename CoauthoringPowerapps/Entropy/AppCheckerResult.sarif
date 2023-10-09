@@ -5834,6 +5834,66 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "'FAQ Screen'.cont_viewrecentans.icon_refresh_recentans.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'FAQ Screen'.cont_viewrecentans.icon_refresh_recentans.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "FAQ Screen",
+                "type": "'FAQ Screen'.cont_viewrecentans.icon_refresh_recentans"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'FAQ Screen'.cont_viewrecentans.icon_refresh_recentans.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'FAQ Screen'.cont_viewrecentans.icon_refresh_recentans.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "FAQ Screen",
+                "type": "'FAQ Screen'.cont_viewrecentans.icon_refresh_recentans"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App.varNotifyCount"
                 }
               ],
