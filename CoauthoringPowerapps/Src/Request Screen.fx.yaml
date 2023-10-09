@@ -541,16 +541,16 @@
                 HoverFill: =RGBA(255, 255, 255, 1)
                 OnSelect: |-
                     =ResetForm(Form2);
-                        Concurrent(
-                            Reset(txtinp_RS_NCRdesc),
-                            Reset(txtinp_RS_NCRtitle),
-                            Reset(txtinp_RS_NCRURL),
-                            Reset(txtinp_RS_NCRcost),
-                            Reset(txtinp_RS_NCRprovider),
-                            Reset(drpdwn_RS_NCRBU),
-                            Reset(txtinp_RS_NCRexamcode),
-                            Reset(Cmb_RS_NCRrequestor)
-                        )
+                    Concurrent(
+                        Reset(txtinp_RS_NCRdesc),
+                        Reset(txtinp_RS_NCRtitle),
+                        Reset(txtinp_RS_NCRURL),
+                        Reset(txtinp_RS_NCRcost),
+                        Reset(txtinp_RS_NCRprovider),
+                        Reset(drpdwn_RS_NCRBU),
+                        Reset(txtinp_RS_NCRexamcode),
+                        Reset(Cmb_RS_NCRrequestor)
+                    )
                 PressedBorderColor: =RGBA(185, 29, 11, 1)
                 PressedColor: =RGBA(185, 29, 11, 1)
                 PressedFill: =RGBA(255, 255, 255, 1)
