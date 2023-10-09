@@ -356,7 +356,7 @@
                 BorderStyle: =BorderStyle.None
                 DelayItemLoading: =true
                 Height: =240
-                Items: =Filter(AnswerList,Technology.Value=varCertificationData.'Certification Name')
+                Items: =Search(Filter(FirstN(AnswerList,5000),Technology.Value=varCertificationData.'Certification Name'),c_Header_3.TextOut,"Answers")
                 Layout: =Layout.Vertical
                 LoadingSpinner: =LoadingSpinner.Data
                 ShowNavigation: =true
@@ -1451,6 +1451,20 @@
                 Y: =lbl_recentqns.Y+lbl_recentqns.Height+10
                 ZIndex: =10
 
+            Rectangle12 As rectangle:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                DisabledFill: =RGBA(166, 166, 166, 1)
+                Fill: =RGBA(154, 154, 154, 1)
+                FocusedBorderThickness: =4
+                Height: =1
+                HoverFill: =RGBA(0, 120, 212, 1)
+                PressedFill: =RGBA(0, 120, 212, 1)
+                Width: =glry_viewrecentqns.Width
+                Y: =211
+                ZIndex: =11
+
     cont_viewrecentans As groupContainer.manualLayoutContainer:
         BorderColor: =RGBA(154, 154, 154, 1)
         BorderStyle: =BorderStyle.None
@@ -1788,6 +1802,21 @@
                 X: =img_recentans_requestor.X+img_recentans_requestor.Width
                 Y: =lbl_recentans_requestorrole.Y+lbl_recentans_requestorrole.Height
                 ZIndex: =10
+
+            Rectangle11 As rectangle:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                DisabledFill: =RGBA(166, 166, 166, 1)
+                Fill: =RGBA(154, 154, 154, 1)
+                FocusedBorderThickness: =4
+                Height: =1
+                HoverFill: =RGBA(0, 120, 212, 1)
+                OnSelect: =Select(Parent)
+                PressedFill: =RGBA(0, 120, 212, 1)
+                Width: =glry_viewrecentans.Width
+                Y: =205
+                ZIndex: =11
 
         btn_refresh_recentans As button:
             Align: =Align.Left

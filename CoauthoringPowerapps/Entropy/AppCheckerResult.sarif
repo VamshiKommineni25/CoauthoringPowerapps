@@ -6731,6 +6731,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "'FAQ Screen'.Cont_FAQ_main.cont_FAQ_Qnscontent.glry_FAQ_Qnstop.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'FAQ Screen'.Cont_FAQ_main.cont_FAQ_Qnscontent.glry_FAQ_Qnstop.Items",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "FAQ Screen",
+                "type": "'FAQ Screen'.Cont_FAQ_main.cont_FAQ_Qnscontent.glry_FAQ_Qnstop"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "Home_Screen.VarSpinner"
                 }
               ],
