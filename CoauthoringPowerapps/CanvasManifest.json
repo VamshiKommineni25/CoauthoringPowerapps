@@ -111,11 +111,11 @@
     "DocumentType": "App",
     "EnableInstrumentation": false,
     "FileID": "678a0dc6-9c60-4d33-8324-1fda1435216d",
-    "Id": "9c358881-057c-40a7-8c43-e5c45493ea52",
+    "Id": "a176f0ff-6e42-4323-a821-042d3ec963e7",
     "InstrumentationKey": "",
     "LocalDatabaseReferences": "{}",
     "ManualOfflineProfileId": "",
-    "Name": "Certification App V2",
+    "Name": "Certification%2BApp%2BV2.msapp",
     "OriginatingVersion": "1.326",
     "ParserErrorCount": 0,
     "ShowStatusBar": false
