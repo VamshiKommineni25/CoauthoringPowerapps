@@ -356,7 +356,7 @@
                 BorderStyle: =BorderStyle.None
                 DelayItemLoading: =true
                 Height: =240
-                Items: =Search(Filter(FirstN(AnswerList,5000),Technology.Value=varCertificationData.'Certification Name'),c_Header_3.TextOut,"Answers","Title")
+                Items: =Search(Filter(FirstN(AnswerList,5000),Technology.Value=varCertificationData.'Certification Name'),c_Header_3.TextOut,"Title")
                 Layout: =Layout.Vertical
                 LoadingSpinner: =LoadingSpinner.Data
                 ShowNavigation: =true
