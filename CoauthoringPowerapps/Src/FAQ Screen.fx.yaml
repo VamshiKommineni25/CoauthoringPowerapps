@@ -359,6 +359,8 @@
                 Items: =Filter(AnswerList,Technology.Value=varCertificationData.'Certification Name')
                 Layout: =Layout.Vertical
                 LoadingSpinner: =LoadingSpinner.Data
+                ShowNavigation: =true
+                ShowScrollbar: =false
                 TabIndex: =0
                 TemplateSize: =260
                 Width: =1190
@@ -1277,6 +1279,8 @@
                 )
             Layout: =Layout.Vertical
             LoadingSpinner: =LoadingSpinner.Data
+            ShowNavigation: =true
+            ShowScrollbar: =false
             TabIndex: =0
             TemplateSize: =212
             Width: =367
@@ -1650,9 +1654,9 @@
                 Font: ="Poppins"
                 Height: =35
                 OnSelect: =Select(Parent)
-                Size: =12
+                Size: =10
                 Text: =ThisItem.AnswerBy.DisplayName
-                Width: =162
+                Width: =307
                 X: =img_recentans_requestor.X+img_recentans_requestor.Width
                 Y: =5
                 ZIndex: =1
@@ -1668,7 +1672,7 @@
                 Font: ="Poppins"
                 Height: =30
                 OnSelect: =Select(Parent)
-                Size: =12
+                Size: =10
                 Text: =ThisItem.AnswerBy.JobTitle
                 Width: =300
                 X: =img_recentans_requestor.X+img_recentans_requestor.Width
@@ -1706,7 +1710,7 @@
                 Height: =77
                 OnSelect: =Select(Parent)
                 Overflow: =Overflow.Scroll
-                Size: =12
+                Size: =10
                 Text: =ThisItem.Title
                 Width: =Parent.Width-25
                 Y: =lbl_recentans_ansheader.Y+lbl_recentans_ansheader.Height+3
@@ -1745,11 +1749,11 @@
                 Font: ="Poppins"
                 Height: =35
                 OnSelect: =Select(Parent)
-                Size: =12
+                Size: =10
                 Text: =ThisItem.Created
                 Width: =152
-                X: =202
-                Y: =5
+                X: =205
+                Y: =40
                 ZIndex: =9
 
             lbl_recentans_dept As label:
@@ -1763,7 +1767,7 @@
                 Font: ="Poppins"
                 Height: =30
                 OnSelect: =Select(Parent)
-                Size: =12
+                Size: =10
                 Text: |-
                     ="BU : "&ThisItem.AnswerBy.Department
                 Width: =300
