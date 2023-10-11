@@ -3,17 +3,24 @@
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
     OnVisible: |-
         =If(
-                    CountRows(
-                        Filter(
-                            FirstN(
-                                'CertificationApp-Security',
-                                100
-                            ),
-                            Title = "Certification-Admin"
-                        )
-                    ) = 1,
-                    Set(varNavigateScrn,1)
+            CountRows(
+                Filter(
+                    FirstN(
+                        'CertificationApp-Security',
+                        100
+                    ),
+                    Title = "Certification-Admin"
                 )
+            ) = 1,
+            Set(
+                varNavigateScrn,
+                1
+            ),
+            Set(
+                varNavigateScrn,
+                2
+            )
+        )
 
     Btn_ChkPolicy As button:
         BorderColor: =RGBA(201,47,29,1)
@@ -107,15 +114,18 @@
         DisabledBorderColor: =RGBA(244, 244, 244, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
-        Duration: =5000
+        Duration: =If(varNavigateScrn,1,5000,20000)
         Fill: =RGBA(0, 120, 212, 1)
         Font: =Font.'Segoe UI'
         HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -10%)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+        OnTimerEnd: =If(varNavigateScrn=1,Navigate('Admin dashBoard'),Navigate(Home_Screen))
         PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        Start: =true
+        Visible: =false
         X: =670
         Y: =650
         ZIndex: =5
