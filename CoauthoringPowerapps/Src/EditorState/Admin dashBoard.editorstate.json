@@ -3398,7 +3398,7 @@
       },
       "MetaDataIDKey": "",
       "Name": "C_AlertPanel_9",
-      "ParentIndex": 2,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3744,7 +3744,7 @@
       },
       "MetaDataIDKey": "",
       "Name": "C_Profile_9",
-      "ParentIndex": 3,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4576,7 +4576,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Cntr_TargetCert",
-      "ParentIndex": 4,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

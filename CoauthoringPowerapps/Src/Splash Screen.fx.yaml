@@ -3,15 +3,9 @@
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
     OnVisible: |-
         =If(
-            varUserLevel="SUPER-ADMIN",
-            Set(
-                varNavigateScrn,
-                1
-            ),
-            Set(
-                varNavigateScrn,
-                2
-            )
+            varUserLevel = "SUPER-ADMIN",
+            UpdateContext({varNavigateScrn: 1}),
+            UpdateContext({varNavigateScrn: 2})
         )
 
     Btn_ChkPolicy As button:
