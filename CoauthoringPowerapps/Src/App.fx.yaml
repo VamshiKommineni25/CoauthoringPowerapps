@@ -1,6 +1,6 @@
 App As appinfo:
     BackEnabled: =false
-    OnStart: |
+    OnStart: |+
         =ClearCollect(COL_CertificationSecurity,FirstN('CertificationApp-Security',100));
         Set(
             varUserLevel,
@@ -187,12 +187,8 @@ App As appinfo:
         );
         Set(NoRecord,"My Certifications");
         
-        If(
-            varUserLevel = "SUPER-ADMIN",
-            Set(varNavigateScrn,1),
-            Set(varNavigateScrn,2)
-        );
-        Set(timer,true)
+        
+        
     StartScreen: |-
         =If (
             !IsBlank(Param("View")),
