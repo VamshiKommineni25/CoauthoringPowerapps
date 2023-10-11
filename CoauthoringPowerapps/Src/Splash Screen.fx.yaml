@@ -1,13 +1,7 @@
 "'Splash Screen' As screen":
     BackgroundImage: ='Splash Screen_Certification App'
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
-    OnVisible: |-
-        =If(
-            varUserLevel = "SUPER-ADMIN",
-            UpdateContext({varNavigateScrn: 1}),
-            UpdateContext({varNavigateScrn: 2})
-        );
-        Set(timer,true)
+    OnVisible: =
 
     Btn_ChkPolicy As button:
         BorderColor: =RGBA(201,47,29,1)
