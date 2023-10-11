@@ -51,7 +51,7 @@
         "Name": "Image7",
         "Parent": "C_Loadingspinner",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 971,
+        "PublishOrderIndex": 972,
         "Rules": [
           {
             "Category": "Data",

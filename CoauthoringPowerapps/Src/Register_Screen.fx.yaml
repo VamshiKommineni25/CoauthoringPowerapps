@@ -495,7 +495,7 @@ Register_Screen As screen:
                 Search(
                     Switch(
                         Cmb_Sorting.Selected.Value,
-                        "Alphabets",
+                /*        "Alphabets",
                         SortByColumns(
                             Switch(
                                 glry_certificationsTypes.Selected.lbl_CertificationName.Text,
@@ -532,8 +532,8 @@ Register_Screen As screen:
                             ),
                             "Title",
                             SortOrder.Ascending
-                        ),
-                        "Newest",
+                        ),*/
+                        "Oldest",
                         SortByColumns(
                             Switch(
                                 glry_certificationsTypes.Selected.lbl_CertificationName.Text,
@@ -571,7 +571,7 @@ Register_Screen As screen:
                             "CertificationID",
                             SortOrder.Ascending
                         ),
-                        "Oldest",
+                        "Newest",
                         SortByColumns(
                             Switch(
                                 glry_certificationsTypes.Selected.lbl_CertificationName.Text,

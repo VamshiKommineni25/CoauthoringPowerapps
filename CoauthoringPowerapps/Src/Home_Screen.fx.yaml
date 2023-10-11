@@ -521,7 +521,8 @@ Home_Screen As screen:
                             {Name: "My Team Certifications"},
                             {Name: "External Certifications"}
                         ),
-                        Table({Name: "My Certifications"})
+                        Table({Name: "My Certifications"},
+                        {Name: "External Certifications"})
                     )
                 )
             TabIndex: =0
@@ -711,6 +712,7 @@ Home_Screen As screen:
             "Glry_UserCertification As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
                 BorderColor: =RGBA(166, 166, 166, 1)
                 DelayItemLoading: =true
+                FocusedBorderColor: =RGBA(0,0,0,0)
                 Height: =267
                 Items: |-
                     =If(
@@ -1119,6 +1121,7 @@ Home_Screen As screen:
             "Glry_MyTeamCert As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
                 BorderColor: =RGBA(166, 166, 166, 1)
                 DelayItemLoading: =true
+                FocusedBorderColor: =RGBA(0,0,0,0)
                 Height: =252
                 Items: |-
                     =Search(
@@ -1340,6 +1343,7 @@ Home_Screen As screen:
             "Glry_ExternalCertification As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
                 BorderColor: =RGBA(166, 166, 166, 1)
                 DelayItemLoading: =true
+                FocusedBorderColor: =RGBA(0,0,0,0)
                 Height: =267
                 Items: |-
                     =Search(
@@ -2126,7 +2130,7 @@ Home_Screen As screen:
 
                 WeekdayGallery1_2 As gallery.WeekdayGallery:
                     AccessibleLabel: ="Days of the week"
-                    BorderColor: =RGBA(0, 18, 107, 1)
+                    BorderColor: =RGBA(0,0,0,0)
                     Height: =26
                     Items: =Calendar.WeekdaysShort()
                     ShowScrollbar: =false
@@ -2152,7 +2156,7 @@ Home_Screen As screen:
 
                 MonthDayGallery1_2 As gallery.MonthDayGallery:
                     AccessibleLabel: ="Days of selected month"
-                    BorderColor: =RGBA(0, 18, 107, 1)
+                    BorderColor: =RGBA(0,0,0,0)
                     Height: =198
                     Items: =[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19, 20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41]
                     Layout: =Layout.Vertical

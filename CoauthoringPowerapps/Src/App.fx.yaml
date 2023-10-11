@@ -195,19 +195,7 @@ App As appinfo:
             If(
                 Param("ScreenName"),
                 'FAQ Screen',
-                If(
-                    CountRows(
-                        Filter(
-                            FirstN(
-                                'CertificationApp-Security',
-                                100
-                            ),
-                            Title = "Certification-Admin"
-                        )
-                    ) = 1,
-                    'Admin dashBoard',
-                    'Splash Screen'
-                )
+                'Splash Screen'
             )
         )
     Theme: =PowerAppsTheme
