@@ -6,7 +6,8 @@
             varUserLevel = "SUPER-ADMIN",
             UpdateContext({varNavigateScrn: 1}),
             UpdateContext({varNavigateScrn: 2})
-        )
+        );
+        Set(timer,true)
 
     Btn_ChkPolicy As button:
         BorderColor: =RGBA(201,47,29,1)
@@ -111,7 +112,7 @@
         PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        Start: =true
+        Start: =timer
         Visible: =false
         X: =670
         Y: =650
