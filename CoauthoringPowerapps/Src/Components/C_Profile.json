@@ -778,7 +778,7 @@
                 "Name": "Label14_2",
                 "Parent": "Container4",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 892,
+                "PublishOrderIndex": 893,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -1151,7 +1151,7 @@
                 "Name": "Label16",
                 "Parent": "Container4",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 893,
+                "PublishOrderIndex": 894,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -1466,7 +1466,7 @@
                 "Name": "Rectangle5",
                 "Parent": "Container4",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 894,
+                "PublishOrderIndex": 895,
                 "Rules": [
                   {
                     "Category": "Design",
@@ -1718,7 +1718,7 @@
                 "Name": "Label14_3",
                 "Parent": "Container4",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 895,
+                "PublishOrderIndex": 896,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -3095,7 +3095,7 @@
                 "Name": "Grp_Setting",
                 "Parent": "Container4",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 896,
+                "PublishOrderIndex": 892,
                 "Rules": [
                   {
                     "Category": "Design",

@@ -383,9 +383,11 @@ Register_Screen As screen:
             InputTextPlaceholder: ="Select Type"
             Items: =["Newest", "Oldest", "Alphabets"]
             MultiValueDelimiter: =
+            NoSelectionText: ="Must contain value"
             OnChange: =
             PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             PressedFill: =RGBA(241,246,246,1)
+            Reset: =true
             SearchFields: =["Value"]
             SearchItems: =Search(["Newest", "Oldest", "Alphabets"],Cmb_Sorting.SearchText,"Value")
             SelectionFill: =RGBA(153,177,195,1)
@@ -491,22 +493,13 @@ Register_Screen As screen:
                     )
                 )*/
                 Search(
-                Switch(
-                    Cmb_Sorting.Selected.Value,
-                    "Alphabets",
-                    SortByColumns(
-                        Switch(
-                            glry_certificationsTypes.Selected.lbl_CertificationName.Text,
-                            "All Certifications",
-                            Filter(
-                                Certification,
-                                IsBlank(cmbRole.Selected.Value) || cmbRole.Selected.Value in Role.Value,
-                                IsBlank(cmbTechnology.Selected.Value) || cmbTechnology.Selected.Value in Technology.Value,
-                                (Price > 0) && rad_FreePaid.Selected.Value = "Paid" || (Price = 0) && rad_FreePaid.Selected.Value = "Free",
-                                IsBlank(radSkill.Selected.Value) || ('Exam Level' = "Intermediate") && radSkill.Selected.Value = "Intermediate" || ('Exam Level' = "Beginner") && radSkill.Selected.Value = "Beginner" || ('Exam Level' = "Advanced") && radSkill.Selected.Value = "Advanced"
-                            ),
-                            "Microsoft Provided",
-                            Filter(
+                    Switch(
+                        Cmb_Sorting.Selected.Value,
+                        "Alphabets",
+                        SortByColumns(
+                            Switch(
+                                glry_certificationsTypes.Selected.lbl_CertificationName.Text,
+                                "All Certifications",
                                 Filter(
                                     Certification,
                                     IsBlank(cmbRole.Selected.Value) || cmbRole.Selected.Value in Role.Value,
@@ -514,100 +507,149 @@ Register_Screen As screen:
                                     (Price > 0) && rad_FreePaid.Selected.Value = "Paid" || (Price = 0) && rad_FreePaid.Selected.Value = "Free",
                                     IsBlank(radSkill.Selected.Value) || ('Exam Level' = "Intermediate") && radSkill.Selected.Value = "Intermediate" || ('Exam Level' = "Beginner") && radSkill.Selected.Value = "Beginner" || ('Exam Level' = "Advanced") && radSkill.Selected.Value = "Advanced"
                                 ),
-                                'Provider Name' = "Microsoft"
-                            ),
-                            "Amazon Provided",
-                            Filter(
+                                "Microsoft Provided",
                                 Filter(
-                                    Certification,
-                                    IsBlank(cmbRole.Selected.Value) || cmbRole.Selected.Value in Role.Value,
-                                    IsBlank(cmbTechnology.Selected.Value) || cmbTechnology.Selected.Value in Technology.Value,
-                                    (Price > 0) && rad_FreePaid.Selected.Value = "Paid" || (Price = 0) && rad_FreePaid.Selected.Value = "Free",
-                                    IsBlank(radSkill.Selected.Value) || ('Exam Level' = "Intermediate") && radSkill.Selected.Value = "Intermediate" || ('Exam Level' = "Beginner") && radSkill.Selected.Value = "Beginner" || ('Exam Level' = "Advanced") && radSkill.Selected.Value = "Advanced"
+                                    Filter(
+                                        Certification,
+                                        IsBlank(cmbRole.Selected.Value) || cmbRole.Selected.Value in Role.Value,
+                                        IsBlank(cmbTechnology.Selected.Value) || cmbTechnology.Selected.Value in Technology.Value,
+                                        (Price > 0) && rad_FreePaid.Selected.Value = "Paid" || (Price = 0) && rad_FreePaid.Selected.Value = "Free",
+                                        IsBlank(radSkill.Selected.Value) || ('Exam Level' = "Intermediate") && radSkill.Selected.Value = "Intermediate" || ('Exam Level' = "Beginner") && radSkill.Selected.Value = "Beginner" || ('Exam Level' = "Advanced") && radSkill.Selected.Value = "Advanced"
+                                    ),
+                                    'Provider Name' = "Microsoft"
                                 ),
-                                'Provider Name' = "Amazon"
-                            )
+                                "Amazon Provided",
+                                Filter(
+                                    Filter(
+                                        Certification,
+                                        IsBlank(cmbRole.Selected.Value) || cmbRole.Selected.Value in Role.Value,
+                                        IsBlank(cmbTechnology.Selected.Value) || cmbTechnology.Selected.Value in Technology.Value,
+                                        (Price > 0) && rad_FreePaid.Selected.Value = "Paid" || (Price = 0) && rad_FreePaid.Selected.Value = "Free",
+                                        IsBlank(radSkill.Selected.Value) || ('Exam Level' = "Intermediate") && radSkill.Selected.Value = "Intermediate" || ('Exam Level' = "Beginner") && radSkill.Selected.Value = "Beginner" || ('Exam Level' = "Advanced") && radSkill.Selected.Value = "Advanced"
+                                    ),
+                                    'Provider Name' = "Amazon"
+                                )
+                            ),
+                            "Title",
+                            SortOrder.Ascending
                         ),
-                        "Title",
-                        SortOrder.Ascending
+                        "Newest",
+                        SortByColumns(
+                            Switch(
+                                glry_certificationsTypes.Selected.lbl_CertificationName.Text,
+                                "All Certifications",
+                                Filter(
+                                    Certification,
+                                    IsBlank(cmbRole.Selected.Value) || cmbRole.Selected.Value in Role.Value,
+                                    IsBlank(cmbTechnology.Selected.Value) || cmbTechnology.Selected.Value in Technology.Value,
+                                    (Price > 0) && rad_FreePaid.Selected.Value = "Paid" || (Price = 0) && rad_FreePaid.Selected.Value = "Free",
+                                    IsBlank(radSkill.Selected.Value) || ('Exam Level' = "Intermediate") && radSkill.Selected.Value = "Intermediate" || ('Exam Level' = "Beginner") && radSkill.Selected.Value = "Beginner" || ('Exam Level' = "Advanced") && radSkill.Selected.Value = "Advanced"
+                                ),
+                                "Microsoft Provided",
+                                Filter(
+                                    Filter(
+                                        Certification,
+                                        IsBlank(cmbRole.Selected.Value) || cmbRole.Selected.Value in Role.Value,
+                                        IsBlank(cmbTechnology.Selected.Value) || cmbTechnology.Selected.Value in Technology.Value,
+                                        (Price > 0) && rad_FreePaid.Selected.Value = "Paid" || (Price = 0) && rad_FreePaid.Selected.Value = "Free",
+                                        IsBlank(radSkill.Selected.Value) || ('Exam Level' = "Intermediate") && radSkill.Selected.Value = "Intermediate" || ('Exam Level' = "Beginner") && radSkill.Selected.Value = "Beginner" || ('Exam Level' = "Advanced") && radSkill.Selected.Value = "Advanced"
+                                    ),
+                                    'Provider Name' = "Microsoft"
+                                ),
+                                "Amazon Provided",
+                                Filter(
+                                    Filter(
+                                        Certification,
+                                        IsBlank(cmbRole.Selected.Value) || cmbRole.Selected.Value in Role.Value,
+                                        IsBlank(cmbTechnology.Selected.Value) || cmbTechnology.Selected.Value in Technology.Value,
+                                        (Price > 0) && rad_FreePaid.Selected.Value = "Paid" || (Price = 0) && rad_FreePaid.Selected.Value = "Free",
+                                        IsBlank(radSkill.Selected.Value) || ('Exam Level' = "Intermediate") && radSkill.Selected.Value = "Intermediate" || ('Exam Level' = "Beginner") && radSkill.Selected.Value = "Beginner" || ('Exam Level' = "Advanced") && radSkill.Selected.Value = "Advanced"
+                                    ),
+                                    'Provider Name' = "Amazon"
+                                )
+                            ),
+                            "CertificationID",
+                            SortOrder.Ascending
+                        ),
+                        "Oldest",
+                        SortByColumns(
+                            Switch(
+                                glry_certificationsTypes.Selected.lbl_CertificationName.Text,
+                                "All Certifications",
+                                Filter(
+                                    Certification,
+                                    IsBlank(cmbRole.Selected.Value) || cmbRole.Selected.Value in Role.Value,
+                                    IsBlank(cmbTechnology.Selected.Value) || cmbTechnology.Selected.Value in Technology.Value,
+                                    (Price > 0) && rad_FreePaid.Selected.Value = "Paid" || (Price = 0) && rad_FreePaid.Selected.Value = "Free",
+                                    IsBlank(radSkill.Selected.Value) || ('Exam Level' = "Intermediate") && radSkill.Selected.Value = "Intermediate" || ('Exam Level' = "Beginner") && radSkill.Selected.Value = "Beginner" || ('Exam Level' = "Advanced") && radSkill.Selected.Value = "Advanced"
+                                ),
+                                "Microsoft Provided",
+                                Filter(
+                                    Filter(
+                                        Certification,
+                                        IsBlank(cmbRole.Selected.Value) || cmbRole.Selected.Value in Role.Value,
+                                        IsBlank(cmbTechnology.Selected.Value) || cmbTechnology.Selected.Value in Technology.Value,
+                                        (Price > 0) && rad_FreePaid.Selected.Value = "Paid" || (Price = 0) && rad_FreePaid.Selected.Value = "Free",
+                                        IsBlank(radSkill.Selected.Value) || ('Exam Level' = "Intermediate") && radSkill.Selected.Value = "Intermediate" || ('Exam Level' = "Beginner") && radSkill.Selected.Value = "Beginner" || ('Exam Level' = "Advanced") && radSkill.Selected.Value = "Advanced"
+                                    ),
+                                    'Provider Name' = "Microsoft"
+                                ),
+                                "Amazon Provided",
+                                Filter(
+                                    Filter(
+                                        Certification,
+                                        IsBlank(cmbRole.Selected.Value) || cmbRole.Selected.Value in Role.Value,
+                                        IsBlank(cmbTechnology.Selected.Value) || cmbTechnology.Selected.Value in Technology.Value,
+                                        (Price > 0) && rad_FreePaid.Selected.Value = "Paid" || (Price = 0) && rad_FreePaid.Selected.Value = "Free",
+                                        IsBlank(radSkill.Selected.Value) || ('Exam Level' = "Intermediate") && radSkill.Selected.Value = "Intermediate" || ('Exam Level' = "Beginner") && radSkill.Selected.Value = "Beginner" || ('Exam Level' = "Advanced") && radSkill.Selected.Value = "Advanced"
+                                    ),
+                                    'Provider Name' = "Amazon"
+                                )
+                            ),
+                            "CertificationID",
+                            SortOrder.Descending
+                        ),
+                        SortByColumns(
+                            Switch(
+                                glry_certificationsTypes.Selected.lbl_CertificationName.Text,
+                                "All Certifications",
+                                Filter(
+                                    Certification,
+                                    IsBlank(cmbRole.Selected.Value) || cmbRole.Selected.Value in Role.Value,
+                                    IsBlank(cmbTechnology.Selected.Value) || cmbTechnology.Selected.Value in Technology.Value,
+                                    (Price > 0) && rad_FreePaid.Selected.Value = "Paid" || (Price = 0) && rad_FreePaid.Selected.Value = "Free",
+                                    IsBlank(radSkill.Selected.Value) || ('Exam Level' = "Intermediate") && radSkill.Selected.Value = "Intermediate" || ('Exam Level' = "Beginner") && radSkill.Selected.Value = "Beginner" || ('Exam Level' = "Advanced") && radSkill.Selected.Value = "Advanced"
+                                ),
+                                "Microsoft Provided",
+                                Filter(
+                                    Filter(
+                                        Certification,
+                                        IsBlank(cmbRole.Selected.Value) || cmbRole.Selected.Value in Role.Value,
+                                        IsBlank(cmbTechnology.Selected.Value) || cmbTechnology.Selected.Value in Technology.Value,
+                                        (Price > 0) && rad_FreePaid.Selected.Value = "Paid" || (Price = 0) && rad_FreePaid.Selected.Value = "Free",
+                                        IsBlank(radSkill.Selected.Value) || ('Exam Level' = "Intermediate") && radSkill.Selected.Value = "Intermediate" || ('Exam Level' = "Beginner") && radSkill.Selected.Value = "Beginner" || ('Exam Level' = "Advanced") && radSkill.Selected.Value = "Advanced"
+                                    ),
+                                    'Provider Name' = "Microsoft"
+                                ),
+                                "Amazon Provided",
+                                Filter(
+                                    Filter(
+                                        Certification,
+                                        IsBlank(cmbRole.Selected.Value) || cmbRole.Selected.Value in Role.Value,
+                                        IsBlank(cmbTechnology.Selected.Value) || cmbTechnology.Selected.Value in Technology.Value,
+                                        (Price > 0) && rad_FreePaid.Selected.Value = "Paid" || (Price = 0) && rad_FreePaid.Selected.Value = "Free",
+                                        IsBlank(radSkill.Selected.Value) || ('Exam Level' = "Intermediate") && radSkill.Selected.Value = "Intermediate" || ('Exam Level' = "Beginner") && radSkill.Selected.Value = "Beginner" || ('Exam Level' = "Advanced") && radSkill.Selected.Value = "Advanced"
+                                    ),
+                                    'Provider Name' = "Amazon"
+                                )
+                            ),
+                            "Title",
+                            SortOrder.Ascending
+                        )
                     ),
-                    "Newest",
-                    SortByColumns(
-                        Switch(
-                            glry_certificationsTypes.Selected.lbl_CertificationName.Text,
-                            "All Certifications",
-                            Filter(
-                                Certification,
-                                IsBlank(cmbRole.Selected.Value) || cmbRole.Selected.Value in Role.Value,
-                                IsBlank(cmbTechnology.Selected.Value) || cmbTechnology.Selected.Value in Technology.Value,
-                                (Price > 0) && rad_FreePaid.Selected.Value = "Paid" || (Price = 0) && rad_FreePaid.Selected.Value = "Free",
-                                IsBlank(radSkill.Selected.Value) || ('Exam Level' = "Intermediate") && radSkill.Selected.Value = "Intermediate" || ('Exam Level' = "Beginner") && radSkill.Selected.Value = "Beginner" || ('Exam Level' = "Advanced") && radSkill.Selected.Value = "Advanced"
-                            ),
-                            "Microsoft Provided",
-                            Filter(
-                                Filter(
-                                    Certification,
-                                    IsBlank(cmbRole.Selected.Value) || cmbRole.Selected.Value in Role.Value,
-                                    IsBlank(cmbTechnology.Selected.Value) || cmbTechnology.Selected.Value in Technology.Value,
-                                    (Price > 0) && rad_FreePaid.Selected.Value = "Paid" || (Price = 0) && rad_FreePaid.Selected.Value = "Free",
-                                    IsBlank(radSkill.Selected.Value) || ('Exam Level' = "Intermediate") && radSkill.Selected.Value = "Intermediate" || ('Exam Level' = "Beginner") && radSkill.Selected.Value = "Beginner" || ('Exam Level' = "Advanced") && radSkill.Selected.Value = "Advanced"
-                                ),
-                                'Provider Name' = "Microsoft"
-                            ),
-                            "Amazon Provided",
-                            Filter(
-                                Filter(
-                                    Certification,
-                                    IsBlank(cmbRole.Selected.Value) || cmbRole.Selected.Value in Role.Value,
-                                    IsBlank(cmbTechnology.Selected.Value) || cmbTechnology.Selected.Value in Technology.Value,
-                                    (Price > 0) && rad_FreePaid.Selected.Value = "Paid" || (Price = 0) && rad_FreePaid.Selected.Value = "Free",
-                                    IsBlank(radSkill.Selected.Value) || ('Exam Level' = "Intermediate") && radSkill.Selected.Value = "Intermediate" || ('Exam Level' = "Beginner") && radSkill.Selected.Value = "Beginner" || ('Exam Level' = "Advanced") && radSkill.Selected.Value = "Advanced"
-                                ),
-                                'Provider Name' = "Amazon"
-                            )
-                        ),
-                        "CertificationID",
-                        SortOrder.Ascending
-                    ),
-                    "Oldest",
-                    SortByColumns(
-                        Switch(
-                            glry_certificationsTypes.Selected.lbl_CertificationName.Text,
-                            "All Certifications",
-                            Filter(
-                                Certification,
-                                IsBlank(cmbRole.Selected.Value) || cmbRole.Selected.Value in Role.Value,
-                                IsBlank(cmbTechnology.Selected.Value) || cmbTechnology.Selected.Value in Technology.Value,
-                                (Price > 0) && rad_FreePaid.Selected.Value = "Paid" || (Price = 0) && rad_FreePaid.Selected.Value = "Free",
-                                IsBlank(radSkill.Selected.Value) || ('Exam Level' = "Intermediate") && radSkill.Selected.Value = "Intermediate" || ('Exam Level' = "Beginner") && radSkill.Selected.Value = "Beginner" || ('Exam Level' = "Advanced") && radSkill.Selected.Value = "Advanced"
-                            ),
-                            "Microsoft Provided",
-                            Filter(
-                                Filter(
-                                    Certification,
-                                    IsBlank(cmbRole.Selected.Value) || cmbRole.Selected.Value in Role.Value,
-                                    IsBlank(cmbTechnology.Selected.Value) || cmbTechnology.Selected.Value in Technology.Value,
-                                    (Price > 0) && rad_FreePaid.Selected.Value = "Paid" || (Price = 0) && rad_FreePaid.Selected.Value = "Free",
-                                    IsBlank(radSkill.Selected.Value) || ('Exam Level' = "Intermediate") && radSkill.Selected.Value = "Intermediate" || ('Exam Level' = "Beginner") && radSkill.Selected.Value = "Beginner" || ('Exam Level' = "Advanced") && radSkill.Selected.Value = "Advanced"
-                                ),
-                                'Provider Name' = "Microsoft"
-                            ),
-                            "Amazon Provided",
-                            Filter(
-                                Filter(
-                                    Certification,
-                                    IsBlank(cmbRole.Selected.Value) || cmbRole.Selected.Value in Role.Value,
-                                    IsBlank(cmbTechnology.Selected.Value) || cmbTechnology.Selected.Value in Technology.Value,
-                                    (Price > 0) && rad_FreePaid.Selected.Value = "Paid" || (Price = 0) && rad_FreePaid.Selected.Value = "Free",
-                                    IsBlank(radSkill.Selected.Value) || ('Exam Level' = "Intermediate") && radSkill.Selected.Value = "Intermediate" || ('Exam Level' = "Beginner") && radSkill.Selected.Value = "Beginner" || ('Exam Level' = "Advanced") && radSkill.Selected.Value = "Advanced"
-                                ),
-                                'Provider Name' = "Amazon"
-                            )
-                        ),
-                        "CertificationID",
-                        SortOrder.Descending
-                    )
-                ),c_Header_3.TextOut,"Title")
+                    c_Header_3.TextOut,
+                    "Title"
+                )
             LoadingSpinner: =LoadingSpinner.Data
             NavigationStep: =5
             ShowNavigation: =true
