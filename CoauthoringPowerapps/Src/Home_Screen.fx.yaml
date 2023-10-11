@@ -721,7 +721,10 @@ Home_Screen As screen:
                                 {
                                     records: Sort(
                                         AddColumns(
-                                            userCertifications,
+                                            Filter(
+                                        userCertifications,
+                                        DateValue(Created) >= DateValue(FromDatePicker.SelectedDate) And DateValue(Created) <= DateValue(ToDatePicker.SelectedDate)
+                                    ),
                                             "CertificationName",
                                             'Certification:Title'.Value
                                         ),
