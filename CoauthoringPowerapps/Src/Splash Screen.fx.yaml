@@ -3,15 +3,7 @@
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
     OnVisible: |-
         =If(
-            CountRows(
-                Filter(
-                    FirstN(
-                        'CertificationApp-Security',
-                        100
-                    ),
-                    Title = "Certification-Admin"
-                )
-            ) = 1,
+            varUserLevel="SUPER-ADMIN",
             Set(
                 varNavigateScrn,
                 1
@@ -109,6 +101,7 @@
         ZIndex: =4
 
     Timer1 As timer:
+        AutoStart: =true
         BorderColor: =RGBA(0, 120, 212, 1)
         BorderStyle: =BorderStyle.None
         DisabledBorderColor: =RGBA(244, 244, 244, 1)
