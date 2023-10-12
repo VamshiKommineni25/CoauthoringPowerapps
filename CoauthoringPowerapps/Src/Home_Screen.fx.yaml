@@ -407,6 +407,7 @@ Home_Screen As screen:
         RadiusBottomRight: =10
         RadiusTopLeft: =10
         RadiusTopRight: =10
+        Visible: =If((varUserLevel="ADMIN") Or (varUserLevel="SUPER-ADMIN"),true,false)
         Width: =195
         X: =529
         Y: =169
