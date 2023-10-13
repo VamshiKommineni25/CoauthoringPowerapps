@@ -4,6 +4,7 @@
     OnVisible: |-
         =UpdateContext({varNewCert: false});
         
+        UpdateContext({VarviewselectedCert:false});
         ClearCollect(
             Cert_Req,
             CertificationRequest
@@ -1628,7 +1629,6 @@
                 AccessibleLabel: ="icon_NCR_certview"
                 BorderColor: =RGBA(166, 166, 166, 1)
                 BorderStyle: =BorderStyle.None
-                Color: =RGBA(0, 108, 191, 1)
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(220, 220, 220, 1)
                 DisabledFill: =RGBA(0, 0, 0, 0)
@@ -1680,6 +1680,26 @@
                 X: =245
                 Y: =6
                 ZIndex: =6
+
+            Icon12 As icon.Download:
+                BorderColor: =RGBA(166, 166, 166, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(220, 220, 220, 1)
+                DisabledFill: =RGBA(0, 0, 0, 0)
+                FocusedBorderThickness: =4
+                Height: =icon_NCR_certview.Height
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                HoverFill: =RGBA(0, 0, 0, 0)
+                Icon: =Icon.Download
+                OnSelect: =Launch(First(ThisItem.Attachments).AbsoluteUri)
+                PressedBorderColor: =RGBA(0, 0, 0, 0)
+                PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                PressedFill: =RGBA(0, 0, 0, 0)
+                Width: =icon_NCR_certview.Width
+                X: =icon_NCR_certview.X-30
+                Y: =icon_NCR_certview.Y
+                ZIndex: =7
 
         Reload As icon.Reload:
             BorderColor: =RGBA(166, 166, 166, 1)
@@ -2192,17 +2212,17 @@
                 ZIndex: =4
 
     cont_NCR_mainpopup As groupContainer.manualLayoutContainer:
-        DropShadow: =DropShadow.Light
+        DropShadow: =DropShadow.ExtraBold
         Fill: =RGBA(255, 255, 255, 1)
         Height: =441
-        RadiusBottomLeft: =20
-        RadiusBottomRight: =20
-        RadiusTopLeft: =20
-        RadiusTopRight: =20
+        RadiusBottomLeft: =50
+        RadiusBottomRight: =50
+        RadiusTopLeft: =50
+        RadiusTopRight: =50
         Visible: =VarviewselectedCert
-        Width: =877
-        X: =20
-        Y: =20
+        Width: =718
+        X: =208
+        Y: =233
         ZIndex: =10
 
         rect_NCR_certdetails As rectangle:
@@ -2232,7 +2252,7 @@
             FontWeight: =FontWeight.Bold
             Size: =12
             Text: ="New Certification Request Details"
-            Width: =800
+            Width: =668
             X: =21
             Y: =28
             ZIndex: =2
@@ -2295,7 +2315,7 @@
             TabIndex: =1
             Text: ="Visit This Certification Page"
             Underline: =true
-            Width: =500
+            Width: =444
             X: |
                 =Lbl_URL.X+Lbl_URL.Width
             Y: =Lbl_URL.Y
@@ -2322,7 +2342,7 @@
             Size: =10
             Text: |-
                 ="CERTIFICATION NAME                             :    "& VarviewselectedCertdata.Title
-            Width: =845
+            Width: =694
             X: =20
             Y: =146
             ZIndex: =7
@@ -2383,12 +2403,12 @@
             BorderColor: =RGBA(0, 18, 107, 1)
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
-            Height: =30
+            Height: =36
             Overflow: =Overflow.Scroll
             Size: =10
             Text: |-
                 ="DECRITPION                                              :   "& VarviewselectedCertdata.Description
-            Width: =845
+            Width: =698
             X: =20
             Y: =296
             ZIndex: =12
@@ -2421,7 +2441,7 @@
             Height: =30
             Size: =12
             Text: ="Status Information"
-            Width: =800
+            Width: =698
             X: =20
             Y: =332
             ZIndex: =14

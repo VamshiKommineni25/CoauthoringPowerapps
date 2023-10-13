@@ -668,7 +668,7 @@
         "Gallery2 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
             BorderColor: =RGBA(166, 166, 166, 1)
             DelayItemLoading: =true
-            Height: =546
+            Height: =631
             Items: |
                 =Search(CertDetails,txt_SearchEmpCertCompl.Text,"Title")
             Layout: =Layout.Vertical
@@ -679,7 +679,7 @@
             TemplatePadding: =0
             TemplateSize: =109
             Width: =348
-            Y: =168
+            Y: =137
             ZIndex: =8
 
             Image4 As image:
@@ -701,12 +701,13 @@
                 RadiusTopLeft: =40
                 RadiusTopRight: =40
                 Width: =53
-                X: =10
+                X: =32
+                Y: =11
                 ZIndex: =1
 
             Title2 As label:
                 Align: =Align.Center
-                Color: =RGBA(50, 49, 48, 1)
+                Color: =RGBA(201,47,29,1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 Font: =Font.'Segoe UI'
                 FontWeight: =If(ThisItem.IsSelected, FontWeight.Bold, FontWeight.Semibold)
@@ -773,4 +774,20 @@
                 X: =63
                 Y: =31
                 ZIndex: =7
+
+            Rectangle13 As rectangle:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                DisabledFill: =RGBA(166, 166, 166, 1)
+                Fill: =RGBA(201,47,29,1)
+                FocusedBorderThickness: =4
+                Height: =90
+                HoverFill: =RGBA(0, 120, 212, 1)
+                OnSelect: =Select(Parent)
+                PressedFill: =RGBA(0, 120, 212, 1)
+                Width: =1
+                X: =3
+                Y: =3
+                ZIndex: =8
 
