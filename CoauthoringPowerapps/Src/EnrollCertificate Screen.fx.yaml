@@ -434,7 +434,7 @@
                         Notify(
                             "Please Fill Required Fields",
                             NotificationType.Error,
-                            1000
+                            5000
                         ),
                         If(
                             IsBlankOrError(
@@ -499,7 +499,7 @@
                             Clear([@EnrollList]);
                             Notify(
                                 "Successfully submitted ",
-                                NotificationType.Success
+                                NotificationType.Success,5000
                             );
                             Navigate(
                                 Register_Screen,
