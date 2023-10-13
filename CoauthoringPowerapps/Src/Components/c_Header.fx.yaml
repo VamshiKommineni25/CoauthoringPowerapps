@@ -371,7 +371,7 @@ c_Header As CanvasComponent:
                 Text: ="Cart"
                 VerticalAlign: =VerticalAlign.Top
                 Width: =30
-                X: =1094
+                X: =1088
                 Y: =30
                 ZIndex: =55
 
@@ -497,7 +497,7 @@ c_Header As CanvasComponent:
                 Text: ="Alerts"
                 VerticalAlign: =VerticalAlign.Top
                 Width: =37
-                X: =1177
+                X: =1160
                 Y: =27
                 ZIndex: =59
 
