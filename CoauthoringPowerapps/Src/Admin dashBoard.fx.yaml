@@ -2441,8 +2441,8 @@
             Size: =12
             Text: ="*"
             Width: =30
-            X: =175
-            Y: =216
+            X: =172
+            Y: =195
             ZIndex: =8
 
         TxtInp_TargetCert As text:
