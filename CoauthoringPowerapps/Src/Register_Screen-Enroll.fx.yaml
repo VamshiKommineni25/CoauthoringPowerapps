@@ -731,9 +731,9 @@
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 Font: =Font.'Segoe UI'
                 FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-                Height: =39
+                Height: =30
                 OnSelect: =Select(Parent)
-                PaddingBottom: =0
+                PaddingBottom: =10
                 PaddingLeft: =0
                 PaddingRight: =0
                 PaddingTop: =0
@@ -742,7 +742,8 @@
                     =ThisItem.'Certification:Title'.Value
                 VerticalAlign: =VerticalAlign.Top
                 Width: =324
-                Y: =63
+                X: =9
+                Y: =67
                 ZIndex: =3
 
             Rectangle7 As rectangle:
