@@ -336,6 +336,10 @@
                 HoverBorderColor: =RGBA(185, 29, 11, 1)
                 HoverColor: =RGBA(185, 29, 11, 1)
                 HoverFill: =RGBA(255, 255, 255, 1)
+                OnSelect: |+
+                    =Reset(txtinp_FAQ_Qnsqn);
+                    Reset(txtinp_FAQ_Qns_desc)
+                    
                 PressedBorderColor: =RGBA(185, 29, 11, 1)
                 PressedColor: =RGBA(185, 29, 11, 1)
                 PressedFill: =RGBA(255, 255, 255, 1)
