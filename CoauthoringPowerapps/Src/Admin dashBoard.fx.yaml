@@ -2455,6 +2455,7 @@
             FocusedBorderThickness: =2
             Font: =Font.'Segoe UI'
             Height: =46
+            HintText: ="Enter numeric values"
             HoverBorderColor: =RGBA(166, 166, 166, 1)
             HoverColor: =RGBA(51, 51, 51, 1)
             HoverFill: =RGBA(255, 255, 255, 1)
