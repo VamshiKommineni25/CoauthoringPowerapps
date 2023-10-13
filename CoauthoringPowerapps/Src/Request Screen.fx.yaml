@@ -1716,7 +1716,7 @@
                 FocusedBorderThickness: =4
                 Height: =icon_NCR_certview.Height
                 HoverBorderColor: =RGBA(0, 0, 0, 0)
-                HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                HoverColor: =RGBA(0, 0, 0, 1)
                 HoverFill: =RGBA(0, 0, 0, 0)
                 Icon: =Icon.Download
                 OnSelect: =Launch(First(ThisItem.Attachments).AbsoluteUri)
@@ -2590,4 +2590,25 @@
                 =Btn_Revise.X+Btn_Revise.Width+ 40
             Y: =Btn_Revise.Y
             ZIndex: =18
+
+        Icon17 As icon.Cancel:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(220, 220, 220, 1)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
+            Height: =30
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(0, 0, 0, 1)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Icon: =Icon.Cancel
+            OnSelect: |-
+                =UpdateContext({VarviewselectedCert:false});
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Width: =30
+            X: =659
+            Y: =24
+            ZIndex: =19
 
