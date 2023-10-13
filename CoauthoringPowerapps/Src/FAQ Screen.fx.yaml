@@ -1202,7 +1202,7 @@
                     FocusedBorderThickness: =1
                     Font: ="Poppins"
                     Height: =32
-                    HintText: ="Search anything"
+                    HintText: ="Search by Question"
                     HoverBorderColor: =
                     HoverColor: =RGBA(154, 154, 154, 1)
                     HoverFill: =RGBA(0, 0, 0, 0)
