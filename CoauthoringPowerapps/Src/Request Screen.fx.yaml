@@ -485,10 +485,16 @@
                             "Please Fill the Required Fields",
                             NotificationType.Error
                         ),
-                        IfError(
-                            SubmitForm(Form2),
-                            Notify("error")
-                        ),
+                        Patch(
+                            CertificationRequest,
+                            Defaults(CertificationRequest),
+                            {
+                                Title: txtinp_RS_NCRtitle.Text,
+                                Description:txtinp_RS_NCRdesc.Text,
+                                URL:txtinp_RS_NCRURL.Text,
+                                BU:drpdwn_RS_NCRBU.SelectedText.Value
+                            }
+                        );
                         Notify(
                             "You have submitted form Successfully",
                             NotificationType.Success
