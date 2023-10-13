@@ -492,7 +492,9 @@
                                 Title: txtinp_RS_NCRtitle.Text,
                                 Description:txtinp_RS_NCRdesc.Text,
                                 URL:txtinp_RS_NCRURL.Text,
-                                BU:drpdwn_RS_NCRBU.SelectedText.Value
+                                Provider:txtinp_RS_NCRprovider.Text,
+                                ExamCode:txtinp_RS_NCRexamcode.Text,
+                                Cost:txtinp_RS_NCRcost.Text
                             }
                         );
                         Notify(
