@@ -792,7 +792,7 @@
                                 )
                             )
                         )
-                    Width: =Glry_Lbl_Dept_1.Width
+                    Width: =Glry_Lbl_Dept_1.Width-18
                     X: =Glry_Lbl_InProgress_Year.X+Glry_Lbl_InProgress_Year.Width+20
                     Y: =Glry_Lbl_Dept_1.Y
                     ZIndex: =8
