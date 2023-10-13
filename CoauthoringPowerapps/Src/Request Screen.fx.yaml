@@ -1454,7 +1454,7 @@
                     FocusedBorderThickness: =1
                     Font: ="Poppins"
                     Height: =32
-                    HintText: ="Search anything"
+                    HintText: ="Search by Request Title"
                     HoverBorderColor: =
                     HoverColor: =RGBA(154, 154, 154, 1)
                     HoverFill: =RGBA(0, 0, 0, 0)
@@ -2493,7 +2493,9 @@
                 PressedFill: =
                 Size: =12
                 Text: ="Revise"
-                Visible: =If(varUserLevel="SUPER-ADMIN",true,false)
+                Visible: |-
+                    =//If(varUserLevel="SUPER-ADMIN",true,false)
+                    false
                 Width: =102
                 X: =470
                 Y: =380
@@ -2544,7 +2546,9 @@
                 PressedFill: =
                 Size: =12
                 Text: =If(VarviewselectedCertdata.Admin_Approval=false,"Approve","Approved")
-                Visible: =If(varUserLevel="SUPER-ADMIN",true,false)
+                Visible: |-
+                    =//If(varUserLevel="SUPER-ADMIN",true,false)
+                    false
                 Width: =102
                 X: |
                     =Btn_Revise.X+Btn_Revise.Width+ 40
