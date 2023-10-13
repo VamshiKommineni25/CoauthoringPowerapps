@@ -494,7 +494,15 @@
                                 URL:txtinp_RS_NCRURL.Text,
                                 Provider:txtinp_RS_NCRprovider.Text,
                                 ExamCode:txtinp_RS_NCRexamcode.Text,
-                                Cost:txtinp_RS_NCRcost.Text
+                                Cost:txtinp_RS_NCRcost.Text,
+                                Requestor:{'@odata.type': "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",
+                                                Claims: "i:0#.f|membership|" & Cmb_RS_NCRrequestor.Selected.Email,
+                                                Department: "",
+                                                DisplayName: Cmb_RS_NCRrequestor.Selected.DisplayName,
+                                                Email: Cmb_RS_NCRrequestor.Selected.Email,
+                                                JobTitle: "",
+                                                Picture: ""
+                                            }
                             }
                         );
                         Notify(
