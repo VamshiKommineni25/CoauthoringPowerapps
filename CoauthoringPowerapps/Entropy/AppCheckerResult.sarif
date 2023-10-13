@@ -1454,19 +1454,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Request Screen'.Cont_NCR_popup.cont_NCR_mainpopup.Lbl_ViewCertification.TabIndex"
+                  "fullyQualifiedName": "'Request Screen'.cont_NCR_mainpopup.Lbl_ViewCertification.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Request Screen'.Cont_NCR_popup.cont_NCR_mainpopup.Lbl_ViewCertification.TabIndex",
+                  "fullyQualifiedName": "'Request Screen'.cont_NCR_mainpopup.Lbl_ViewCertification.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "Request Screen",
-                "type": "'Request Screen'.Cont_NCR_popup.cont_NCR_mainpopup.Lbl_ViewCertification"
+                "type": "'Request Screen'.cont_NCR_mainpopup.Lbl_ViewCertification"
               }
             }
           ],
