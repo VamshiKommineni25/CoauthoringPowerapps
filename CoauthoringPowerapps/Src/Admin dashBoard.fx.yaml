@@ -2483,7 +2483,10 @@
             HoverFill: =
             OnSelect: |
                 =If(
-                    IsBlank(TxtInp_TargetCert.Text),
+                    IsBlank(TxtInp_TargetCert.Text) Or (!IsMatch(
+                               TxtInp_TargetCert.Text,
+                                "^[0-9]"
+                            )),
                     Notify(
                         "Please enter number of targets for certifiction",
                         NotificationType.Error
