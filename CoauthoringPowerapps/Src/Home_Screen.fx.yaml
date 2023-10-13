@@ -346,7 +346,7 @@ Home_Screen As screen:
             Size: =10
             Text: |-
                 =If(varUserLevel="SUPER-ADMIN",
-                "External Certification Request",
+                "External Certifications",
                 "External Certifications")
             Width: =178
             X: =If(cert_lbl_1.Text="External Certification Request",3,18)
