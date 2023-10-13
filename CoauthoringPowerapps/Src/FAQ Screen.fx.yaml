@@ -896,6 +896,7 @@
                 HoverBorderColor: =RGBA(185, 29, 11, 1)
                 HoverColor: =RGBA(185, 29, 11, 1)
                 HoverFill: =RGBA(255, 255, 255, 1)
+                OnSelect: =Reset(txtinp_answer_enter)
                 PressedBorderColor: =RGBA(185, 29, 11, 1)
                 PressedColor: =RGBA(185, 29, 11, 1)
                 PressedFill: =RGBA(255, 255, 255, 1)
