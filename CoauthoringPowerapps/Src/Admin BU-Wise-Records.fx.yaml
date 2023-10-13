@@ -1174,7 +1174,7 @@
             Height: =24
             Size: =10
             Text: |-
-                ="BU                                        :              " & varViewThisItem.BU.Value
+                ="BU                                        :             " & varViewThisItem.BU.Value
             Width: =lbl_ReqName.Width
             X: =188
             Y: =104
@@ -1210,7 +1210,7 @@
             Height: =24
             Size: =10
             Text: |-
-                ="Examination Date                :              " & varViewThisItem.'Examination Date'
+                ="Examination Date                :             " & varViewThisItem.'Examination Date'
             Width: =lbl_recordCreated.Width
             X: =188
             Y: =lbl_recordCreated.Y+lbl_recordCreated.Height+10
@@ -1246,7 +1246,7 @@
             Height: =24
             Size: =10
             Text: |-
-                ="Payment Mode                    :              " & varViewThisItem.PaymentMode
+                ="Payment Mode                    :             " & varViewThisItem.PaymentMode
             Width: =lbl_CertPract.Width
             X: =188
             Y: =lbl_CertPract.Y+lbl_CertPract.Height+10
@@ -1264,7 +1264,7 @@
             Height: =24
             Size: =10
             Text: |-
-                ="Manager                              :              " & "Vedarethina Sozhan M"
+                ="Manager                              :             " & "Vedarethina Sozhan M"
             Width: =lbl_PayMentMode.Width
             X: =188
             Y: =lbl_PayMentMode.Y+lbl_PayMentMode.Height+10
@@ -1282,7 +1282,7 @@
             Height: =24
             Size: =10
             Text: |-
-                ="Record Created                   :              " & varViewThisItem.Created
+                ="Record Created                   :             "& varViewThisItem.Created
             Width: =lbl_Manager.Width
             X: =188
             Y: =lbl_Manager.Y+lbl_Manager.Height+10
@@ -1300,7 +1300,7 @@
             Height: =24
             Size: =10
             Text: |-
-                ="Proofs Uploaded                 :              " & varViewThisItem.'Proofs Uploaded on'
+                ="Proofs Uploaded                 :             " & varViewThisItem.'Proofs Uploaded on'
             Width: =lbl_ExamDate.Width
             X: =188
             Y: =lbl_ExamDate.Y+lbl_ExamDate.Height+10
@@ -1395,7 +1395,7 @@
                         )
                     )
                 )
-            X: =410
+            X: =399
             Y: |
                 =lbl_docLink.Y+lbl_docLink.Height+10
             ZIndex: =15
@@ -1429,7 +1429,7 @@
             OnSelect: =Launch(varViewThisItem.Documents_Link)
             Size: =10
             Visible: =!IsBlank(varViewThisItem.Documents_Link)
-            X: =410
+            X: =399
             Y: =lbl_docLink.Y
             ZIndex: =17
 
@@ -1473,7 +1473,7 @@
             Text: |-
                 =varViewThisItem.'Certification:Title'.Value
             Width: =350
-            X: =400
+            X: =399
             Y: =lbl_BU_Title.Y+lbl_BU_Title.Height+10
             ZIndex: =19
 
