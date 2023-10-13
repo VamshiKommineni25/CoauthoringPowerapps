@@ -502,6 +502,17 @@
                                                 Email: Cmb_RS_NCRrequestor.Selected.Email,
                                                 JobTitle: "",
                                                 Picture: ""
+                                            },
+                                BU:{
+                                                '@odata.type': "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+                                                Id: LookUp(
+                                                    BUList,
+                                                    Code =drpdwn_RS_NCRBU.SelectedText.Value
+                                                ).ID,
+                                                Value: LookUp(
+                                                    BUList,
+                                                    Code = drpdwn_RS_NCRBU.SelectedText.Value
+                                                ).Code
                                             }
                             }
                         );
