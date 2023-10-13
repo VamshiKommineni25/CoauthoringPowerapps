@@ -669,7 +669,8 @@
             BorderColor: =RGBA(166, 166, 166, 1)
             DelayItemLoading: =true
             Height: =546
-            Items: =CertDetails
+            Items: |
+                =Search(CertDetails,txt_SearchEmpCertCompl.Text,"Title")
             Layout: =Layout.Vertical
             LoadingSpinner: =LoadingSpinner.Data
             ShowNavigation: =true
