@@ -12,7 +12,7 @@
                         100000
                     ),
                     CertificationID.Id = varCertificationData.ID,
-                    Status = "Reimbursed"
+                    Status = "Completed"
                 )
             )
 
@@ -672,9 +672,11 @@
             Items: =CertDetails
             Layout: =Layout.Vertical
             LoadingSpinner: =LoadingSpinner.Data
+            ShowNavigation: =true
+            ShowScrollbar: =false
             TabIndex: =0
             TemplatePadding: =0
-            TemplateSize: =104
+            TemplateSize: =109
             Width: =348
             Y: =168
             ZIndex: =8
@@ -686,74 +688,88 @@
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledFill: =RGBA(0, 0, 0, 0)
                 FocusedBorderThickness: =4
-                Height: =72
+                Height: =52
                 HoverBorderColor: =RGBA(0, 0, 0, 0)
                 HoverFill: =RGBA(0, 0, 0, 0)
-                Image: =ThisItem.Documents_Link
+                Image: =ThisItem.'Created By'.Picture
                 OnSelect: =Select(Parent)
                 PressedBorderColor: =RGBA(0, 0, 0, 0)
                 PressedFill: =RGBA(0, 0, 0, 0)
-                RadiusBottomLeft: =8
-                RadiusBottomRight: =8
-                RadiusTopLeft: =8
-                RadiusTopRight: =8
-                Width: =72
-                X: =16
-                Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+                RadiusBottomLeft: =40
+                RadiusBottomRight: =40
+                RadiusTopLeft: =40
+                RadiusTopRight: =40
+                Width: =53
+                X: =10
                 ZIndex: =1
 
             Title2 As label:
+                Align: =Align.Center
                 Color: =RGBA(50, 49, 48, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 Font: =Font.'Segoe UI'
-                FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-                Height: =Self.Size * 1.8
+                FontWeight: =If(ThisItem.IsSelected, FontWeight.Bold, FontWeight.Semibold)
+                Height: =25
                 OnSelect: =Select(Parent)
                 PaddingBottom: =0
                 PaddingLeft: =0
                 PaddingRight: =0
                 PaddingTop: =0
+                Size: =9
                 Text: =ThisItem.'Created By'.DisplayName
                 VerticalAlign: =VerticalAlign.Top
-                Width: =Parent.TemplateWidth - 173
-                X: =103
-                Y: =(Parent.TemplateHeight - (Self.Size * 1.8 + Subtitle1.Size * 1.8)) / 2
+                Width: =255
+                X: =69
+                Y: =6
                 ZIndex: =2
 
             Subtitle1 As label:
+                Align: =Align.Center
                 Color: =RGBA(51, 51, 51, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 Font: =Font.'Segoe UI'
                 FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-                Height: =Self.Size * 1.8
+                Height: =39
                 OnSelect: =Select(Parent)
                 PaddingBottom: =0
                 PaddingLeft: =0
                 PaddingRight: =0
                 PaddingTop: =0
-                Size: =12
-                Text: =ThisItem.'Compliance Asset Id'
+                Size: =9
+                Text: |-
+                    =ThisItem.'Certification:Title'.Value
                 VerticalAlign: =VerticalAlign.Top
-                Width: =Title2.Width
-                X: =Title2.X
-                Y: =Title2.Y + Title2.Height
+                Width: =324
+                Y: =63
                 ZIndex: =3
-
-            Separator3 As rectangle:
-                BorderColor: =RGBA(0, 0, 0, 0)
-                Fill: =RGBA(255, 255, 255, 1)
-                Height: =8
-                OnSelect: =Select(Parent)
-                Width: =Parent.TemplateWidth
-                Y: =Parent.TemplateHeight - Self.Height
-                ZIndex: =5
 
             Rectangle7 As rectangle:
                 BorderColor: =RGBA(0, 0, 0, 0)
-                Fill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-                Height: =Parent.TemplateHeight - Separator3.Height
+                Fill: =RGBA(230, 230, 230, 1)
+                Height: =1
                 OnSelect: =Select(Parent)
                 Visible: =ThisItem.IsSelected
-                Width: =4
+                Width: =324
+                Y: =101
                 ZIndex: =6
+
+            Label5 As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(102, 174, 229, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                Height: =21
+                OnSelect: =Select(Parent)
+                Size: =9
+                Text: |-
+                    ="Completed on :  " & ThisItem.Modified
+                Width: =270
+                X: =63
+                Y: =31
+                ZIndex: =7
 
