@@ -342,13 +342,15 @@ Home_Screen As screen:
             DisabledColor: =RGBA(166, 166, 166, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
-            Height: =30
+            Height: =If(cert_lbl_1.Text="External Certification Request",30,20)
             Size: =10
             Text: |-
                 =If(varUserLevel="SUPER-ADMIN",
-                "External Certifications",
+                "External Certification Request",
                 "External Certifications")
-            Width: =178
+            Width: |-
+                =//178
+                If(cert_lbl_1.Text="External Certification Request",178,160)
             X: =If(cert_lbl_1.Text="External Certification Request",3,18)
             Y: =6
             ZIndex: =1
