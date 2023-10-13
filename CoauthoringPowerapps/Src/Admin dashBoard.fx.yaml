@@ -2484,40 +2484,47 @@
             HoverFill: =
             OnSelect: |
                 =If(
-                    IsBlank(TxtInp_TargetCert.Text) Or (!IsMatch(
-                               TxtInp_TargetCert.Text,
-                                "^[0-9]"
-                            )),
+                    IsBlank(TxtInp_TargetCert.Text),
                     Notify(
                         "Please enter number of targets for certifiction",
                         NotificationType.Error
                     ),
                     If(
-                        LookUp(
-                            'Target List',
-                            Title = Drp_BUList_AddTargetCert.SelectedText.Value,
-                            true
+                        !IsMatch(
+                            TxtInp_TargetCert.Text,
+                            "^[0-9]"
                         ),
-                        UpdateIf(
-                            'Target List',
-                            Title = Drp_BUList_AddTargetCert.SelectedText.Value,
-                            {
-                                Title: Drp_BUList_AddTargetCert.SelectedText.Value,
-                                TargetNumber: TxtInp_TargetCert.Text
-                            }
+                        Notify(
+                            "Please enter numberic value",
+                            NotificationType.Error
                         ),
-                        Patch(
-                            'Target List',
-                            Defaults('Target List'),
-                            {
-                                Title: Drp_BUList_AddTargetCert.SelectedText.Value,
-                                TargetNumber: TxtInp_TargetCert.Text
-                            }
+                        If(
+                            LookUp(
+                                'Target List',
+                                Title = Drp_BUList_AddTargetCert.SelectedText.Value,
+                                true
+                            ),
+                            UpdateIf(
+                                'Target List',
+                                Title = Drp_BUList_AddTargetCert.SelectedText.Value,
+                                {
+                                    Title: Drp_BUList_AddTargetCert.SelectedText.Value,
+                                    TargetNumber: TxtInp_TargetCert.Text
+                                }
+                            ),
+                            Patch(
+                                'Target List',
+                                Defaults('Target List'),
+                                {
+                                    Title: Drp_BUList_AddTargetCert.SelectedText.Value,
+                                    TargetNumber: TxtInp_TargetCert.Text
+                                }
+                            )
+                        );
+                        Notify(
+                            "Submitted Successfully",
+                            NotificationType.Success
                         )
-                    );
-                    Notify(
-                        "Submitted Successfully",
-                        NotificationType.Success
                     )
                 );
                 Reset(Drp_BUList_AddTargetCert);
