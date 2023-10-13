@@ -567,7 +567,7 @@
                 RadiusTopLeft: =3
                 RadiusTopRight: =3
                 Size: =10
-                Text: ="Clear"
+                Text: ="Clear All"
                 Visible: =If(IsEmpty(EnrollList),false,true)
                 Width: =100
                 X: =925
