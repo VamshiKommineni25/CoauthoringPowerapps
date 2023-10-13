@@ -1,7 +1,7 @@
 Home_Screen As screen:
     Fill: =RGBA(241, 246, 246, 1)
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
-    OnVisible: |+
+    OnVisible: |
         =Set(SideLabelvar,1);
         If(concVar=Boolean(1),Concurrent(
         ClearCollect(
@@ -168,7 +168,8 @@ Home_Screen As screen:
         );
         Set(varProfileView,false);
         Set(CurrentTime,Now());
-        
+        Reset(ToDatePicker);
+        Reset(Drp_FilterStatus)
 
     c_Header_2 As c_Header:
         CartOnselect: ='EnrollCertificate Screen'
