@@ -514,7 +514,7 @@
                                                     Code = drpdwn_RS_NCRBU.SelectedText.Value
                                                 ).Code
                                             }
-                            }
+                            },Form2.Updates
                         );
                         Notify(
                             "You have submitted form Successfully",
