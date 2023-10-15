@@ -935,7 +935,7 @@
                 HoverFill: =RGBA(185, 29, 11, 1)
                 OnSelect: |
                     =If(
-                        IsBlank(txtinp_RS_ECRname.Text) || IsBlank(txtinp_RS_ECRCname.Text) || IsBlank(txtinp_RS_ECRPname.Text) || IsBlank(drpdwn_RS_ECRBU.SelectedText) || IsBlank(txtinp_RS_ECRExamcode.Text) || IsBlank(txtinp_RS_ECRtech.Text) || IsBlank(txtinp_RS_ECRCV.Text) || IsBlank(drpdwn_RS_ECRexamlevel.SelectedText) || IsBlank(drpdwn_RS_ECRrs.SelectedText.Value) || IsBlank(DatePicker_RS_ECRcmpdate.SelectedDate) || IsBlank(radio_RS_ECRprovider.SelectedText.Value) || IsEmpty(attach_RS_ECR.Attachments) || IsBlank(txtinp_RS_ECRrole.Text),
+                        IsBlank(txtinp_RS_ECRname.Text) || IsBlank(txtinp_RS_ECRCname.Text) || IsBlank(txtinp_RS_ECRPname.Text) || IsBlank(drpdwn_RS_ECRBU.SelectedText) || IsBlank(txtinp_RS_ECRExamcode.Text) || IsBlank(txtinp_RS_ECRtech.Text) || IsBlank(txtinp_RS_ECRCV.Text) || IsBlank(drpdwn_RS_ECRexamlevel.SelectedText) || IsBlank(drpdwn_RS_ECRrs.SelectedText.Value) || IsBlank(DatePicker_RS_ECRcmpdate.SelectedDate) || IsBlank(radio_RS_ECRprovider.SelectedText.Value) || IsEmpty(attach_RS_ECR.Attachments) || IsBlank(txtinp_RS_ECRrole.Text) || IsBlank(txtinp_RS_ECRprice.Text),
                         Notify(
                             "Please fill all the entries",
                             NotificationType.Error
@@ -955,52 +955,82 @@
                                     "[a-zA-Z\s]+"
                                 ),
                                 Notify(
-                                    "Please provide text in Name",
+                                    "Please provide text in Certification Name",
                                     NotificationType.Error
                                 ),
-                                Patch(
-                                    ExternalCertificationList,
-                                    Defaults(ExternalCertificationList),
-                                    {
-                                        Title: txtinp_RS_ECRname.Text,
-                                        ExamCode: txtinp_RS_ECRExamcode.Text,
-                                        ExamLevel: drpdwn_RS_ECRexamlevel.SelectedText.Value,
-                                        CertificationName: txtinp_RS_ECRCname.Text,
-                                        CompletionDate: DatePicker_RS_ECRcmpdate.SelectedDate,
-                                        Price: drpdwn_RS_ECRrs.SelectedText.Value & txtinp_RS_ECRprice.Text,
-                                        ProviderName: txtinp_RS_ECRPname.Text,
-                                        Technology: txtinp_RS_ECRtech.Text,
-                                        Role: txtinp_RS_ECRrole.Text,
-                                        ReimbursementStatus: btn_RS_ECRsubmit.Text,
-                                        BU: drpdwn_RS_ECRBU.SelectedText.Value
-                                    }
-                                );
-                                Certification_Attachments_External_Flow.Run(
-                                    Last(attach_RS_ECR.Attachments).Name,
-                                    varBase64Only,
-                                    Last(
-                                        Filter(
-                                            ExternalCertificationList,
-                                            Boolean(1)
+                                If(
+                                    !IsMatch(
+                                        txtinp_RS_ECRPname.Text,
+                                        "[a-zA-Z\s]+"
+                                    ),
+                                    Notify(
+                                        "Please provide text in Provider",
+                                        NotificationType.Error
+                                    ),
+                                    If(
+                                        !IsMatch(
+                                            txtinp_RS_ECRtech.Text,
+                                            "[a-zA-Z\s]+"
+                                        ),
+                                        Notify(
+                                            "Please provide text in Technology",
+                                            NotificationType.Error
+                                        ),
+                                        If(
+                                            !IsMatch(
+                                                txtinp_RS_ECRrole.Text,
+                                                "[a-zA-Z\s]+"
+                                            ),
+                                            Notify(
+                                                "Please provide text in Role",
+                                                NotificationType.Error
+                                            ),
+                                            Patch(
+                                                ExternalCertificationList,
+                                                Defaults(ExternalCertificationList),
+                                                {
+                                                    Title: txtinp_RS_ECRname.Text,
+                                                    ExamCode: txtinp_RS_ECRExamcode.Text,
+                                                    ExamLevel: drpdwn_RS_ECRexamlevel.SelectedText.Value,
+                                                    CertificationName: txtinp_RS_ECRCname.Text,
+                                                    CompletionDate: DatePicker_RS_ECRcmpdate.SelectedDate,
+                                                    Price: drpdwn_RS_ECRrs.SelectedText.Value & txtinp_RS_ECRprice.Text,
+                                                    ProviderName: txtinp_RS_ECRPname.Text,
+                                                    Technology: txtinp_RS_ECRtech.Text,
+                                                    Role: txtinp_RS_ECRrole.Text,
+                                                    ReimbursementStatus: btn_RS_ECRsubmit.Text,
+                                                    BU: drpdwn_RS_ECRBU.SelectedText.Value
+                                                }
+                                            );
+                                            Certification_Attachments_External_Flow.Run(
+                                                Last(attach_RS_ECR.Attachments).Name,
+                                                varBase64Only,
+                                                Last(
+                                                    Filter(
+                                                        ExternalCertificationList,
+                                                        Boolean(1)
+                                                    )
+                                                ).ID
+                                            ).result;
+                                            Notify(
+                                                "You have submitted form Successfully",
+                                                NotificationType.Success
+                                            );
+                                            Reset(txtinp_RS_ECRname);
+                                            Reset(txtinp_RS_ECRCname);
+                                            Reset(txtinp_RS_ECRPname);
+                                            Reset(txtinp_RS_ECRExamcode);
+                                            Reset(txtinp_RS_ECRtech);
+                                            Reset(txtinp_RS_ECRCV);
+                                            Reset(txtinp_RS_ECRrole);
+                                            Reset(drpdwn_RS_ECRBU);
+                                            Reset(radio_RS_ECRprovider);
+                                            Reset(attach_RS_ECR);
+                                            Reset(drpdwn_RS_ECRexamlevel);
+                                            Reset(drpdwn_RS_ECRrs);
                                         )
-                                    ).ID
-                                ).result;
-                                Notify(
-                                    "You have submitted form Successfully",
-                                    NotificationType.Success
-                                );
-                                Reset(txtinp_RS_ECRname);
-                                Reset(txtinp_RS_ECRCname);
-                                Reset(txtinp_RS_ECRPname);
-                                Reset(txtinp_RS_ECRExamcode);
-                                Reset(txtinp_RS_ECRtech);
-                                Reset(txtinp_RS_ECRCV);
-                                Reset(txtinp_RS_ECRrole);
-                                Reset(drpdwn_RS_ECRBU);
-                                Reset(radio_RS_ECRprovider);
-                                Reset(attach_RS_ECR);
-                                Reset(drpdwn_RS_ECRexamlevel);
-                                Reset(drpdwn_RS_ECRrs);
+                                    )
+                                )
                             )
                         )
                     );
