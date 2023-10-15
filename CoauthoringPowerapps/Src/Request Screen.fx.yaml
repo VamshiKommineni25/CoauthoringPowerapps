@@ -493,63 +493,75 @@
                             Notify(
                                 "Please provide text in Title",
                                 NotificationType.Error
-                            ),If(
-                            !IsMatch(
-                                txtinp_RS_NCRprovider.Text,
-                                "[a-zA-Z\s]+"
                             ),
-                            Notify(
-                                "Please provide text in Provide",
-                                NotificationType.Error
-                            ),
-                            Patch(
-                                CertificationRequest,
-                                Defaults(CertificationRequest),
-                                {
-                                    Title: txtinp_RS_NCRtitle.Text,
-                                    Description: txtinp_RS_NCRdesc.Text,
-                                    URL: txtinp_RS_NCRURL.Text,
-                                    Provider: txtinp_RS_NCRprovider.Text,
-                                    ExamCode: txtinp_RS_NCRexamcode.Text,
-                                    Cost: txtinp_RS_NCRcost.Text,
-                                    Requestor: {
-                                        '@odata.type': "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",
-                                        Claims: "i:0#.f|membership|" & Cmb_RS_NCRrequestor.Selected.Email,
-                                        Department: "",
-                                        DisplayName: Cmb_RS_NCRrequestor.Selected.DisplayName,
-                                        Email: Cmb_RS_NCRrequestor.Selected.Email,
-                                        JobTitle: "",
-                                        Picture: ""
-                                    },
-                                    BU: {
-                                        '@odata.type': "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
-                                        Id: LookUp(
-                                            BUList,
-                                            Code = drpdwn_RS_NCRBU.SelectedText.Value
-                                        ).ID,
-                                        Value: LookUp(
-                                            BUList,
-                                            Code = drpdwn_RS_NCRBU.SelectedText.Value
-                                        ).Code
-                                    }
-                                },
-                                Form2.Updates
-                            );
-                            Notify(
-                                "You have submitted form Successfully",
-                                NotificationType.Success
-                            );
-                            ResetForm(Form2);
-                            Concurrent(
-                                Reset(txtinp_RS_NCRdesc),
-                                Reset(txtinp_RS_NCRtitle),
-                                Reset(txtinp_RS_NCRURL),
-                                Reset(txtinp_RS_NCRcost),
-                                Reset(txtinp_RS_NCRprovider),
-                                Reset(drpdwn_RS_NCRBU),
-                                Reset(txtinp_RS_NCRexamcode),
-                                Reset(Cmb_RS_NCRrequestor)
-                            ))
+                            If(
+                                !IsMatch(
+                                    txtinp_RS_NCRprovider.Text,
+                                    "[a-zA-Z\s]+"
+                                ),
+                                Notify(
+                                    "Please provide text in Provide",
+                                    NotificationType.Error
+                                ),
+                                If(
+                                    !IsMatch(
+                                        txtinp_RS_NCRcost.Text,
+                                        "^[0-9]*$"
+                                    ),
+                                    Notify(
+                                        "Please enter numberic value in Cost",
+                                        NotificationType.Error
+                                    ),
+                                    Patch(
+                                        CertificationRequest,
+                                        Defaults(CertificationRequest),
+                                        {
+                                            Title: txtinp_RS_NCRtitle.Text,
+                                            Description: txtinp_RS_NCRdesc.Text,
+                                            URL: txtinp_RS_NCRURL.Text,
+                                            Provider: txtinp_RS_NCRprovider.Text,
+                                            ExamCode: txtinp_RS_NCRexamcode.Text,
+                                            Cost: txtinp_RS_NCRcost.Text,
+                                            Requestor: {
+                                                '@odata.type': "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",
+                                                Claims: "i:0#.f|membership|" & Cmb_RS_NCRrequestor.Selected.Email,
+                                                Department: "",
+                                                DisplayName: Cmb_RS_NCRrequestor.Selected.DisplayName,
+                                                Email: Cmb_RS_NCRrequestor.Selected.Email,
+                                                JobTitle: "",
+                                                Picture: ""
+                                            },
+                                            BU: {
+                                                '@odata.type': "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+                                                Id: LookUp(
+                                                    BUList,
+                                                    Code = drpdwn_RS_NCRBU.SelectedText.Value
+                                                ).ID,
+                                                Value: LookUp(
+                                                    BUList,
+                                                    Code = drpdwn_RS_NCRBU.SelectedText.Value
+                                                ).Code
+                                            }
+                                        },
+                                        Form2.Updates
+                                    );
+                                    Notify(
+                                        "You have submitted form Successfully",
+                                        NotificationType.Success
+                                    );
+                                    ResetForm(Form2);
+                                    Concurrent(
+                                        Reset(txtinp_RS_NCRdesc),
+                                        Reset(txtinp_RS_NCRtitle),
+                                        Reset(txtinp_RS_NCRURL),
+                                        Reset(txtinp_RS_NCRcost),
+                                        Reset(txtinp_RS_NCRprovider),
+                                        Reset(drpdwn_RS_NCRBU),
+                                        Reset(txtinp_RS_NCRexamcode),
+                                        Reset(Cmb_RS_NCRrequestor)
+                                    )
+                                )
+                            )
                         )
                     );
                     Refresh(CertificationRequest);
