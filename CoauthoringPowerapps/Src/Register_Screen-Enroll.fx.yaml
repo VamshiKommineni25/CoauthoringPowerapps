@@ -606,7 +606,7 @@
                 =//Font.'Segoe UI'
                 "Poppins"
             Height: =32
-            HintText: ="Search Anything"
+            HintText: ="Search by Name"
             HoverBorderColor: =
             HoverColor: =RGBA(0, 0, 0, 1)
             HoverFill: =RGBA(0, 0, 0, 0)
