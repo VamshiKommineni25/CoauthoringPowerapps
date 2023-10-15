@@ -827,7 +827,7 @@
                 FocusedBorderThickness: =1
                 Font: ="Poppins"
                 Height: =46
-                HintText: ="Enter"
+                HintText: ="Enter text"
                 HoverBorderColor: =RGBA(154, 154, 154, 1)
                 HoverColor: =RGBA(154, 154, 154, 1)
                 HoverFill: =RGBA(255, 255, 255, 1)
@@ -896,7 +896,7 @@
                 FocusedBorderThickness: =1
                 Font: ="Poppins"
                 Height: =46
-                HintText: ="Enter"
+                HintText: ="Enter text"
                 HoverBorderColor: =RGBA(154, 154, 154, 1)
                 HoverColor: =RGBA(154, 154, 154, 1)
                 HoverFill: =RGBA(255, 255, 255, 1)
@@ -1246,7 +1246,7 @@
                 FocusedBorderThickness: =1
                 Font: ="Poppins"
                 Height: =46
-                HintText: ="Enter"
+                HintText: ="Enter text"
                 HoverBorderColor: =RGBA(154, 154, 154, 1)
                 HoverColor: =RGBA(154, 154, 154, 1)
                 HoverFill: =RGBA(255, 255, 255, 1)
