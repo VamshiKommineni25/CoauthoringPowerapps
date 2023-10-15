@@ -1,20 +1,30 @@
 "'Register_Screen-Enroll' As screen":
     Fill: =RGBA(241, 246, 246, 1)
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
-    OnVisible: |-
-        =Set(varProfileView,false);
-        Set(SideLabelvar,0);
+    OnVisible: |
+        =Set(
+            varProfileView,
+            false
+        );
+        Set(
+            SideLabelvar,
+            0
+        );
         ClearCollect(
-                CertDetails,
-                Filter(
-                    FirstN(
-                        CertificationOrder,
-                        100000
-                    ),
-                    CertificationID.Id = varCertificationData.ID,
-                    Status = "Completed"
-                )
+            CertDetails,
+            Filter(
+                FirstN(
+                    CertificationOrder,
+                    100000
+                ),
+                CertificationID.Id = varCertificationData.ID,
+                Status = "Completed"
             )
+        );
+        ClearCollect(
+            Certification,
+            Certifications
+        );
 
     con_Buttons As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Semibold
@@ -670,7 +680,8 @@
             DelayItemLoading: =true
             Height: =631
             Items: |
-                =Search(CertDetails,txt_SearchEmpCertCompl.Text,"Title")
+                =//Search(CertDetails,txt_SearchEmpCertCompl.Text,"Title")
+                Filter(CertDetails,CertificationID.Value in Search(Certifications,txt_SearchEmpCertCompl.Text,"Title").ID)
             Layout: =Layout.Vertical
             LoadingSpinner: =LoadingSpinner.Data
             ShowNavigation: =true
@@ -738,8 +749,7 @@
                 PaddingRight: =0
                 PaddingTop: =0
                 Size: =9
-                Text: |-
-                    =ThisItem.'Certification:Title'.Value
+                Text: =LookUp(Certification,CertificationID in ThisItem.CertificationID.Value,Name)
                 VerticalAlign: =VerticalAlign.Top
                 Width: =324
                 X: =9
