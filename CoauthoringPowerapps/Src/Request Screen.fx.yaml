@@ -718,7 +718,7 @@
                 FocusedBorderThickness: =1
                 Font: ="Poppins"
                 Height: =46
-                HintText: ="Enter text"
+                HintText: ="Enter NAme"
                 HoverBorderColor: =RGBA(154, 154, 154, 1)
                 HoverColor: =RGBA(154, 154, 154, 1)
                 HoverFill: =RGBA(255, 255, 255, 1)
@@ -827,7 +827,7 @@
                 FocusedBorderThickness: =1
                 Font: ="Poppins"
                 Height: =46
-                HintText: ="Enter text"
+                HintText: ="Enter Provider"
                 HoverBorderColor: =RGBA(154, 154, 154, 1)
                 HoverColor: =RGBA(154, 154, 154, 1)
                 HoverFill: =RGBA(255, 255, 255, 1)
@@ -896,7 +896,7 @@
                 FocusedBorderThickness: =1
                 Font: ="Poppins"
                 Height: =46
-                HintText: ="Enter text"
+                HintText: ="Enter Role"
                 HoverBorderColor: =RGBA(154, 154, 154, 1)
                 HoverColor: =RGBA(154, 154, 154, 1)
                 HoverFill: =RGBA(255, 255, 255, 1)
@@ -991,7 +991,7 @@
                                                     "^[0-9]*$"
                                                 ),
                                                 Notify(
-                                                    "Please enter numberic value",
+                                                    "Please enter numberic value in Price of certification",
                                                     NotificationType.Error
                                                 ),
                                                 Patch(
@@ -1112,7 +1112,7 @@
                 FocusedBorderThickness: =1
                 Font: ="Poppins"
                 Height: =46
-                HintText: ="Enter text"
+                HintText: ="Enter Certification Name"
                 HoverBorderColor: =RGBA(154, 154, 154, 1)
                 HoverColor: =RGBA(154, 154, 154, 1)
                 HoverFill: =RGBA(255, 255, 255, 1)
@@ -1256,7 +1256,7 @@
                 FocusedBorderThickness: =1
                 Font: ="Poppins"
                 Height: =46
-                HintText: ="Enter text"
+                HintText: ="Enter Technology"
                 HoverBorderColor: =RGBA(154, 154, 154, 1)
                 HoverColor: =RGBA(154, 154, 154, 1)
                 HoverFill: =RGBA(255, 255, 255, 1)
