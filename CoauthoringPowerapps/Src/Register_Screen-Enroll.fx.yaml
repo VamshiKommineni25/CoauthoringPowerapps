@@ -680,8 +680,8 @@
             DelayItemLoading: =true
             Height: =631
             Items: |
-                =//Search(CertDetails,txt_SearchEmpCertCompl.Text,"Title")
-                Filter(CertDetails,CertificationID.Value in Search(Certifications,txt_SearchEmpCertCompl.Text,"Title").ID)
+                =Search(CertDetails,txt_SearchEmpCertCompl.Text,"Title")
+                //Filter(CertificationOrder,CertificationID.Value in Search(Certifications,txt_SearchEmpCertCompl.Text,"Title").ID)
             Layout: =Layout.Vertical
             LoadingSpinner: =LoadingSpinner.Data
             ShowNavigation: =true
@@ -749,7 +749,8 @@
                 PaddingRight: =0
                 PaddingTop: =0
                 Size: =9
-                Text: =LookUp(Certification,CertificationID in ThisItem.CertificationID.Value,Name)
+                Text: |-
+                    =ThisItem.'Certification:Title'.Value
                 VerticalAlign: =VerticalAlign.Top
                 Width: =324
                 X: =9
