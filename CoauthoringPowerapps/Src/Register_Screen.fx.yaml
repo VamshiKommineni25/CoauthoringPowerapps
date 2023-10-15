@@ -1,7 +1,7 @@
 Register_Screen As screen:
     Fill: =RGBA(241, 246, 246, 1)
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
-    OnVisible: |
+    OnVisible: |-
         =Set(
             varProfileView,
             false
@@ -15,6 +15,8 @@ Register_Screen As screen:
         Set(NoRecord,"All Certifications");
         Reset(Cmb_Sorting);
         Reset(cmbRole);
+        Reset(cmbTechnology);
+        Reset(radSkill)
 
     con_Filter As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Semibold
