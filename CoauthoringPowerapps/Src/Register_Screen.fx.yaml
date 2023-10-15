@@ -13,6 +13,7 @@ Register_Screen As screen:
         );
         
         Set(NoRecord,"All Certifications");
+        Reset(Cmb_Sorting);
         
 
     con_Filter As groupContainer.manualLayoutContainer:
