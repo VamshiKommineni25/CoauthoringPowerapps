@@ -169,7 +169,7 @@ Home_Screen As screen:
         Set(varProfileView,false);
         Set(CurrentTime,Now());
         Reset(ToDatePicker);
-        Reset(Drp_FilterStatus);
+        Reset(FromDatePicker);
         Reset(Drp_FilterStatus);
 
     c_Header_2 As c_Header:
