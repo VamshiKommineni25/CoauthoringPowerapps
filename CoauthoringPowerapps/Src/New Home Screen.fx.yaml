@@ -3389,7 +3389,7 @@
                             MeetingStartRange_4.SelectedText.Value,
                             MeetingEndRange_4.SelectedText.Value,
                             TimeUnit.Minutes
-                        ) >= 0,
+                        ) <= 0,
                         Notify(
                             "Please select End date and time greater than start date and time ",
                             NotificationType.Error
