@@ -1035,7 +1035,7 @@ Details_Screen As screen:
             RadiusTopRight: =5
             Size: =10
             Text: |
-                =If('Location.Text' in "USA","Price : "&Text(Value(LookUp(Certification,ID=varCertificateDetails.CertificationID.Id).Price)/83.22, "[$-en-US]0.00")&" $","Price : "&LookUp(Certification,ID=varCertificateDetails.CertificationID.Id).Price&" INR")
+                =If('Location.Text'.Text=  "USA","Price : "&Text(Value(LookUp(Certification,ID=varCertificateDetails.CertificationID.Id).Price)/83.22, "[$-en-US]0.00")&" $","Price : "&LookUp(Certification,ID=varCertificateDetails.CertificationID.Id).Price&" INR")
             Width: =150
             X: =Lbl_CertName.X+Lbl_CertName.Width
             Y: =26
