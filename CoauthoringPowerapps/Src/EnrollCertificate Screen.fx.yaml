@@ -401,7 +401,7 @@
                     RadiusTopRight: =4
                     Size: =12
                     Text: |-
-                        =If(drpdwn_EC_location.SelectedText.Value="INDIA","INR : "&ThisItem.Price & "/-","$ : "&(ThisItem.Price)/83.22)
+                        =If(drpdwn_EC_location.SelectedText.Value="USA","$ : "&(ThisItem.Price)/83.22,"INR : "&ThisItem.Price & "/-")
                     Width: =130
                     X: =728
                     Y: =7
