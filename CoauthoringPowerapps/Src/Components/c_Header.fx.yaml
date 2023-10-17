@@ -325,6 +325,7 @@ c_Header As CanvasComponent:
                 PressedBorderColor: =RGBA(0, 0, 0, 0)
                 PressedFill: =RGBA(0, 0, 0, 0)
                 TabIndex: =1
+                Visible: =If(CountRows(EnrollList)>0,false,true)
                 Width: =23.7480163574219
                 X: =1054
                 Y: =26
@@ -500,6 +501,24 @@ c_Header As CanvasComponent:
                 X: =1160
                 Y: =27
                 ZIndex: =59
+
+        CartImage As image:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
+            Height: ='Path 6778_1'.Height
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Visible: =If(CountRows(EnrollList)>0,true,false)
+            Width: ='Path 6778_1'.Width
+            X: ='Path 6778_1'.X
+            Y: ='Path 6778_1'.Y
+            ZIndex: =62
 
         Profile_Grp As group:
             Height: =5

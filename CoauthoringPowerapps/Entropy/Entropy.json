@@ -145,6 +145,7 @@
     "C_Profile_9": 429,
     "Cart_1": 44,
     "Cart_Grp": 47,
+    "CartImage": 997,
     "cert_lbl": 878,
     "cert_lbl_1": 882,
     "cert_lbl_2": 886,
@@ -1008,7 +1009,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "10/17/2023 09:53:41",
+  "HeaderLastSavedDateTimeUTC": "10/17/2023 09:57:22",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "097e9fa4-7ace-42a6-961b-6fdbaf8177e9": "\"/providers/microsoft.powerapps/apis/shared_office365/connections/a7ae32bc1ce54aa1acd44c4b9c272caa\"",
@@ -1042,6 +1043,7 @@
     "image89208": "0009.png",
     "image89212": "0010.png",
     "image89214": "0011.png",
+    "MicrosoftTeams-image (31)": "9db9c148-8e07-47bf-884e-17b46296d86b.png",
     "Spinner-1s-65px (1)": "0012.gif",
     "Splash Screen_Certification App": "0013.jpg"
   },
@@ -1057,10 +1059,11 @@
     "image89208": "https://docserverpwaprodeus.blob.core.windows.net/56db9f84-101a-45b3-8879-97fd0134b287-1/resource/Assets0Images00009.png?skoid=58690ece-ec83-4ce2-9ce8-883d4d6a54ee&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2023-10-17T09%3A53%3A06Z&ske=2023-10-18T10%3A08%3A06Z&sks=b&skv=2021-08-06&sv=2021-08-06&spr=https&se=2023-10-18T10%3A08%3A06Z&sr=b&sp=r&sig=lFlpDmdDLs1AJ%2B7RzX9kVsK1BbDjqmuXw8J39GtK3TY%3D",
     "image89212": "https://docserverpwaprodeus.blob.core.windows.net/56db9f84-101a-45b3-8879-97fd0134b287-1/resource/Assets0Images00010.png?skoid=58690ece-ec83-4ce2-9ce8-883d4d6a54ee&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2023-10-17T09%3A53%3A06Z&ske=2023-10-18T10%3A08%3A06Z&sks=b&skv=2021-08-06&sv=2021-08-06&spr=https&se=2023-10-18T10%3A08%3A06Z&sr=b&sp=r&sig=FGecDY0pSyI6tB4V5664%2B%2FlpZIypga70oU0%2BKhCw%2BtE%3D",
     "image89214": "https://docserverpwaprodeus.blob.core.windows.net/56db9f84-101a-45b3-8879-97fd0134b287-1/resource/Assets0Images00011.png?skoid=58690ece-ec83-4ce2-9ce8-883d4d6a54ee&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2023-10-17T09%3A53%3A06Z&ske=2023-10-18T10%3A08%3A06Z&sks=b&skv=2021-08-06&sv=2021-08-06&spr=https&se=2023-10-18T10%3A08%3A06Z&sr=b&sp=r&sig=wkIvIE%2FtY7WKiiO5rK8SIyfqhtv0IcgVvjpGjq%2BQN8Q%3D",
+    "MicrosoftTeams-image (31)": "https://docserverpwaprodeus.blob.core.windows.net/56db9f84-101a-45b3-8879-97fd0134b287-1/resource/13b29b17-2012-4f7e-b714-62de564a4e23.png?skoid=58690ece-ec83-4ce2-9ce8-883d4d6a54ee&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2023-10-17T09%3A54%3A35Z&ske=2023-10-18T10%3A09%3A35Z&sks=b&skv=2021-08-06&sv=2021-08-06&spr=https&se=2023-10-18T10%3A09%3A35Z&sr=b&sp=r&sig=8X7%2B2rajo%2BaGFzMsUwYnYmBoILlRGAzzfVtL7bfUrWk%3D",
     "Spinner-1s-65px (1)": "https://docserverpwaprodeus.blob.core.windows.net/56db9f84-101a-45b3-8879-97fd0134b287-1/resource/Assets0Images00012.gif?skoid=58690ece-ec83-4ce2-9ce8-883d4d6a54ee&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2023-10-17T09%3A53%3A06Z&ske=2023-10-18T10%3A08%3A06Z&sks=b&skv=2021-08-06&sv=2021-08-06&spr=https&se=2023-10-18T10%3A08%3A06Z&sr=b&sp=r&sig=vEUfjKQwE8G5XsPjGBGgRCgv5O3MXW8YsuaVvOtIJg0%3D",
     "Splash Screen_Certification App": "https://docserverpwaprodeus.blob.core.windows.net/56db9f84-101a-45b3-8879-97fd0134b287-1/resource/Assets0Images00013.jpg?skoid=58690ece-ec83-4ce2-9ce8-883d4d6a54ee&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2023-10-17T09%3A53%3A06Z&ske=2023-10-18T10%3A08%3A06Z&sks=b&skv=2021-08-06&sv=2021-08-06&spr=https&se=2023-10-18T10%3A08%3A06Z&sr=b&sp=r&sig=P3TmxWfkV52i0GJCJZ7QGFRto2ppf7YY8D%2FUsLq881M%3D"
   },
-  "OldLogoFileName": "logo.jpg",
+  "OldLogoFileName": "5ockyyxl.jpg",
   "OrderComponentMetadata": {
     "0f9ea40a362f475287dd517cf25804c0": 4,
     "470e83d2489f46a58e9ba807156b5c3a": 6,
@@ -1474,6 +1477,7 @@
     "C_Profile_9": {},
     "Cart_1": {},
     "Cart_Grp": {},
+    "CartImage": {},
     "cert_lbl": {},
     "cert_lbl_1": {},
     "cert_lbl_2": {},
@@ -2473,6 +2477,7 @@
     "C_Profile_9": 759,
     "Cart_1": 948,
     "Cart_Grp": 951,
+    "CartImage": 0,
     "cert_lbl": 38,
     "cert_lbl_1": 42,
     "cert_lbl_2": 46,
@@ -3346,6 +3351,7 @@
     "Image-image89208": 9,
     "Image-image89212": 10,
     "Image-image89214": 11,
+    "Image-MicrosoftTeams-image (31)": 14,
     "Image-SampleImage": 0,
     "Image-Spinner-1s-65px (1)": 12,
     "Image-Splash Screen_Certification App": 13
