@@ -303,78 +303,6 @@ c_Header As CanvasComponent:
                 Y: =27
                 ZIndex: =52
 
-        Cart_Grp As group:
-            Height: =5
-            Width: =5
-            X: =100
-            Y: =80
-            ZIndex: =56
-
-            "'Path 6778_1' As image":
-                BorderColor: =RGBA(0, 0, 0, 0)
-                BorderStyle: =BorderStyle.None
-                BorderThickness: =2
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledFill: =RGBA(0, 0, 0, 0)
-                FocusedBorderThickness: =4
-                Height: =23.75
-                HoverBorderColor: =RGBA(0, 0, 0, 0)
-                HoverFill: =RGBA(0, 0, 0, 0)
-                Image: =image89212
-                OnSelect: =Navigate(c_Header.CartOnselect)
-                PressedBorderColor: =RGBA(0, 0, 0, 0)
-                PressedFill: =RGBA(0, 0, 0, 0)
-                TabIndex: =1
-                Width: =23.7480163574219
-                X: =1054
-                Y: =26
-                ZIndex: =53
-
-            "'Rectangle 1155_1' As image":
-                BorderColor: =RGBA(0, 0, 0, 0)
-                BorderStyle: =BorderStyle.None
-                BorderThickness: =2
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledFill: =RGBA(0, 0, 0, 0)
-                FocusedBorderThickness: =4
-                Height: =10
-                HoverBorderColor: =RGBA(0, 0, 0, 0)
-                HoverFill: =RGBA(0, 0, 0, 0)
-                Image: =image89214
-                OnSelect: =Navigate(c_Header.CartOnselect)
-                PressedBorderColor: =RGBA(0, 0, 0, 0)
-                PressedFill: =RGBA(0, 0, 0, 0)
-                TabIndex: =1
-                Visible: =If(CountRows(EnrollList)>0,true,false)
-                Width: =10
-                X: =1070
-                Y: =22
-                ZIndex: =54
-
-            Cart_1 As label:
-                BorderColor: =RGBA(0, 0, 0, 0)
-                BorderStyle: =BorderStyle.None
-                Color: =RGBA(44, 43, 67, 1)
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                FocusedBorderThickness: =4
-                FontWeight: =FontWeight.Lighter
-                Height: =18
-                LineHeight: =1.5
-                OnSelect: =Navigate(c_Header.CartOnselect)
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Size: =9
-                TabIndex: =1
-                Text: ="Cart"
-                VerticalAlign: =VerticalAlign.Top
-                Width: =30
-                X: =1088
-                Y: =30
-                ZIndex: =55
-
         Group6 As group:
             Height: =5
             Width: =5
@@ -551,4 +479,95 @@ c_Header As CanvasComponent:
                 X: =1280
                 Y: =24
                 ZIndex: =61
+
+        Cart_Grp As group:
+            Height: =5
+            Width: =5
+            X: =40
+            Y: =40
+            ZIndex: =63
+
+            "'Path 6778_1' As image":
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledFill: =RGBA(0, 0, 0, 0)
+                FocusedBorderThickness: =4
+                Height: =23.75
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverFill: =RGBA(0, 0, 0, 0)
+                Image: =image89212
+                OnSelect: =Navigate(c_Header.CartOnselect)
+                PressedBorderColor: =RGBA(0, 0, 0, 0)
+                PressedFill: =RGBA(0, 0, 0, 0)
+                TabIndex: =1
+                Width: =23.7480163574219
+                X: =1054
+                Y: =26
+                ZIndex: =53
+
+            "'Rectangle 1155_1' As image":
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledFill: =RGBA(0, 0, 0, 0)
+                FocusedBorderThickness: =4
+                Height: =10
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverFill: =RGBA(0, 0, 0, 0)
+                Image: =image89214
+                OnSelect: =Navigate(c_Header.CartOnselect)
+                PressedBorderColor: =RGBA(0, 0, 0, 0)
+                PressedFill: =RGBA(0, 0, 0, 0)
+                TabIndex: =1
+                Visible: =If(CountRows(EnrollList)>0,true,false)
+                Width: =10
+                X: =1070
+                Y: =22
+                ZIndex: =54
+
+            Cart_1 As label:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                Color: =RGBA(44, 43, 67, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                FontWeight: =FontWeight.Lighter
+                Height: =18
+                LineHeight: =1.5
+                OnSelect: =Navigate(c_Header.CartOnselect)
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =9
+                TabIndex: =1
+                Text: ="Cart"
+                VerticalAlign: =VerticalAlign.Top
+                Width: =30
+                X: =1088
+                Y: =30
+                ZIndex: =55
+
+            CartImg As image:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledFill: =RGBA(0, 0, 0, 0)
+                FocusedBorderThickness: =4
+                Height: ='Path 6778_1'.Height
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverFill: =RGBA(0, 0, 0, 0)
+                OnSelect: =Navigate(c_Header.CartOnselect)
+                PressedBorderColor: =RGBA(0, 0, 0, 0)
+                PressedFill: =RGBA(0, 0, 0, 0)
+                Visible: =If(CountRows(EnrollList)>0,true,false)
+                Width: ='Path 6778_1'.Width
+                X: ='Path 6778_1'.X
+                Y: ='Path 6778_1'.Y
+                ZIndex: =62
 
