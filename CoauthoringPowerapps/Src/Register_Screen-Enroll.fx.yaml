@@ -328,7 +328,7 @@
                 RadiusTopRight: =5
                 Size: =10
                 Text: |-
-                    ="Price: " & ThisItem.Price & " INR"
+                    =If(drpdwn_EC_location_1.SelectedText.Value="USA","$ : "&Text(Value(ThisItem.Price)/83.22,"[$-en-US]0.00"),"INR : "&ThisItem.Price & "/-" )
                 VerticalAlign: =VerticalAlign.Top
                 Width: =150
                 X: =lbl_certName.X+lbl_certName.Width
@@ -495,6 +495,42 @@
                 X: =21
                 Y: =315
                 ZIndex: =14
+
+            drpdwn_EC_location_1 As dropdown:
+                AccessibleLabel: ="drpdwn_EC_location"
+                BorderColor: =RGBA(154, 154, 154, 1)
+                ChevronBackground: =RGBA(255, 255, 255, 1)
+                ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
+                ChevronDisabledFill: =RGBA(166, 166, 166, 1)
+                ChevronFill: =RGBA(154, 154, 154, 1)
+                ChevronHoverBackground: =RGBA(212, 212, 212, 1)
+                ChevronHoverFill: =RGBA(33, 33, 33, 1)
+                Color: =RGBA(154, 154, 154, 1)
+                Default: =""
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                FocusedBorderColor: =RGBA(154, 154, 154, 1)
+                FocusedBorderThickness: =2
+                Font: ="Poppins"
+                Height: =btn_Price.Height
+                HoverBorderColor: =RGBA(154, 154, 154, 1)
+                HoverColor: =RGBA(51, 51, 51, 1)
+                HoverFill: =RGBA(154, 154, 154, 0.5)
+                Items: ='Location List_Certification App'
+                PaddingBottom: =5
+                PaddingLeft: =12
+                PaddingRight: =5
+                PaddingTop: =5
+                PressedBorderColor: =RGBA(154, 154, 154, 1)
+                PressedColor: =RGBA(255, 255, 255, 1)
+                PressedFill: =RGBA(154, 154, 154, 0.5)
+                SelectionFill: =RGBA(154, 154, 154, 1)
+                Size: =10
+                Width: =btn_Price.Width
+                X: =543
+                Y: =btn_Price.Y
+                ZIndex: =15
 
         lbl_description As label:
             BorderColor: =RGBA(0, 0, 0, 0)
