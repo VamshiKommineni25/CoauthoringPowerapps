@@ -6799,7 +6799,14 @@
               "Y",
               "Width",
               "Height",
-              "Visible",
+              {
+                "AFDDataSourceName": "",
+                "AutoRuleBindingEnabled": false,
+                "AutoRuleBindingString": "true",
+                "InvariantPropertyName": "Visible",
+                "IsLockable": false,
+                "NameMapSourceSchema": "?"
+              },
               "Fill",
               "DisabledFill",
               "PressedFill",
@@ -6943,7 +6950,7 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "true",
+                "InvariantScript": "If(CountRows(EnrollList)>0,false,true)",
                 "Property": "Visible",
                 "RuleProviderType": "Unknown"
               },
@@ -9902,7 +9909,7 @@
         "NameMapSourceSchema": "?"
       }
     ],
-    "LastModifiedTimestamp": "638331264447887081",
+    "LastModifiedTimestamp": "638331264987568769",
     "Name": "c_Header",
     "Rules": [
       {
@@ -10048,7 +10055,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638331264447887081",
+  "LastModifiedTimestamp": "638331264987568769",
   "Name": "4e347dfcdde94913bd34c97cc0728f3c",
   "OverridableProperties": {},
   "Version": "638282056663502263"

@@ -502,6 +502,7 @@ c_Header As CanvasComponent:
                 PressedBorderColor: =RGBA(0, 0, 0, 0)
                 PressedFill: =RGBA(0, 0, 0, 0)
                 TabIndex: =1
+                Visible: =If(CountRows(EnrollList)>0,false,true)
                 Width: =23.7480163574219
                 X: =1054
                 Y: =26
