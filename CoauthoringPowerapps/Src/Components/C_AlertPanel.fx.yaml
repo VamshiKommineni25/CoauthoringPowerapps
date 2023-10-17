@@ -1,0 +1,295 @@
+C_AlertPanel As CanvasComponent:
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =762
+    VisibilityOff: =varAlert
+    Width: =390
+    X: =
+    Y: =0
+    ZIndex: =1
+
+    Container16_1 As groupContainer.manualLayoutContainer:
+        Height: =762
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Width: =390
+        ZIndex: =1
+
+        Container17_1 As groupContainer.manualLayoutContainer:
+            DropShadow: =DropShadow.ExtraBold
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =762
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            Width: =348
+            X: =42
+            ZIndex: =1
+
+            Label4_1 As label:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Bold
+                Height: =32
+                Size: =20
+                Text: ="Alerts"
+                Width: =88
+                X: =21.98
+                Y: =18
+                ZIndex: =1
+
+            icn_notify_exit As icon.Cancel:
+                AccessibleLabel: ="exit notification"
+                BorderColor: =RGBA(166, 166, 166, 1)
+                Color: =RGBA(116, 116, 116, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(220, 220, 220, 1)
+                DisabledFill: =RGBA(0, 0, 0, 0)
+                FocusedBorderThickness: =4
+                Height: =20
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                HoverFill: =RGBA(0, 0, 0, 0)
+                Icon: =Icon.Cancel
+                OnSelect: |
+                    =Set(varAlert,false);
+                PressedBorderColor: =RGBA(0, 0, 0, 0)
+                PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                PressedFill: =RGBA(0, 0, 0, 0)
+                TabIndex: =1
+                Width: =20
+                X: =315
+                Y: =26
+                ZIndex: =2
+
+            Button3_1 As button:
+                BorderColor: =RGBA(151, 0, 0, 1)
+                BorderThickness: =1
+                Color: =RGBA(151, 0, 0, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Fill: =RGBA(0, 0, 0, 0)
+                FocusedBorderColor: =RGBA(185, 29, 11, 1)
+                FocusedBorderThickness: =2
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =26
+                HoverBorderColor: =RGBA(151, 0, 0, 1)
+                HoverColor: =RGBA(151, 0, 0, 1)
+                HoverFill: =RGBA(0, 0, 0, 0)
+                OnSelect: |
+                    =Switch(
+                        varUserLevel,
+                        "USER",
+                        ForAll(
+                            Notify_gal.AllItems As MyPatch,
+                            Patch(
+                                NotificationList_CertificationApp,
+                                {ID: MyPatch.ID},
+                                {
+                                    Title: MyPatch.Title,
+                                    UserDeleted: true
+                                }
+                            )
+                        ),
+                        "ADMIN",
+                        ForAll(
+                            Notify_gal.AllItems As MyPatch,
+                            Patch(
+                                NotificationList_CertificationApp,
+                                {ID: MyPatch.ID},
+                                {
+                                    Title: MyPatch.Title,
+                                    ManagerDeleted:true
+                                }
+                            )
+                        ),
+                        "SUPER-ADMIN",
+                        ForAll(
+                            Notify_gal.AllItems As MyPatch,
+                            Patch(
+                                NotificationList_CertificationApp,
+                                {ID: MyPatch.ID},
+                                {
+                                    Title: MyPatch.Title,
+                                    AdminDeleted: true
+                                }
+                            )
+                        )
+                    );
+                    Clear(col_Notification);
+                    Clear(mngr_notify_Col);
+                PressedBorderColor: =ColorFade(RGBA(185, 29, 11, 1), -50%)
+                PressedColor: =RGBA(185, 29, 11, 1)
+                PressedFill: =RGBA(0, 0, 0, 0)
+                RadiusBottomLeft: =5
+                RadiusBottomRight: =5
+                RadiusTopLeft: =5
+                RadiusTopRight: =5
+                Size: =10
+                Text: ="Clear All"
+                Width: =82
+                X: =242
+                Y: =75
+                ZIndex: =3
+
+            "Notify_gal As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+                AccessibleLabel: ="Nofitication Gallery"
+                BorderColor: =RGBA(166, 166, 166, 1)
+                DelayItemLoading: =true
+                Items: |-
+                    =Switch(
+                        varUserLevel ,
+                         "USER",
+                        Sort(
+                            col_Notification,
+                            Created,
+                            SortOrder.Descending
+                        ),
+                         "ADMIN",
+                        Sort(
+                            mngr_notify_Col,
+                            Created,
+                            SortOrder.Descending
+                        ),
+                         "SUPER-ADMIN",
+                        Sort(
+                            Filter(
+                                FirstN(
+                                    NotificationList_CertificationApp,
+                                    2000
+                                ),
+                                "has uploaded proofs" in Notification And AdminDeleted = false
+                            ),
+                            Created,
+                            SortOrder.Descending
+                        )
+                    )
+                Layout: =Layout.Vertical
+                LoadingSpinner: =LoadingSpinner.Data
+                TabIndex: =
+                TemplatePadding: =0
+                TemplateSize: =104
+                Width: =348
+                Y: =135
+                ZIndex: =6
+
+                Label6 As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(51, 51, 51, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    Height: =86
+                    OnSelect: =Select(Parent)
+                    Size: =10
+                    Text: =ThisItem.Notification
+                    Width: =290
+                    ZIndex: =1
+
+                Separator1_3 As rectangle:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    Fill: =RGBA(255, 255, 255, 1)
+                    Height: =8
+                    OnSelect: =Select(Parent)
+                    Width: =Parent.TemplateWidth
+                    Y: =Parent.TemplateHeight - Self.Height
+                    ZIndex: =3
+
+                icn_exit As icon.Cancel:
+                    AccessibleLabel: ="exit"
+                    BorderColor: =RGBA(166, 166, 166, 1)
+                    Color: =RGBA(151, 0, 0, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(220, 220, 220, 1)
+                    DisabledFill: =RGBA(0, 0, 0, 0)
+                    FocusedBorderThickness: =4
+                    Height: =20
+                    HoverBorderColor: =RGBA(0, 0, 0, 0)
+                    HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                    HoverFill: =RGBA(0, 0, 0, 0)
+                    Icon: =Icon.Cancel
+                    OnSelect: |
+                        =UpdateIf(
+                            NotificationList_CertificationApp,
+                            ID = ThisItem.ID,
+                            {AdminDeleted: Boolean(1)}
+                        );
+                        ClearCollect(
+                            col_Notification,
+                            Filter(
+                                LastN(
+                                    NotificationList_CertificationApp,
+                                    5000
+                                ),
+                                (Title = Office365Users.MyProfile().DisplayName && "been approved by your manager " & varMngrname in Notification) || ("has requested for" in Notification && Manager = User().FullName) || (Title = Office365Users.MyProfile().DisplayName && "been approved by ILD" in Notification) || (UserDeleted = false And Title = Office365Users.MyProfile().DisplayName)
+                            )
+                        );
+                        ClearCollect(
+                            mngr_notify_Col,
+                            Filter(
+                                LastN(
+                                    NotificationList_CertificationApp,
+                                    5000
+                                ),
+                                Title = User().FullName && ("been approved by your manager " & varMngrname in Notification || "been approved by ILD" in Notification) && ManagerDeleted = false
+                            )
+                        );
+                        
+                        Switch(
+                            varUserLevel ,
+                             "USER",
+                            Set(varNotifyCount,CountRows(col_Notification)),
+                             "ADMIN",
+                            Set(varNotifyCount,CountRows(mngr_notify_Col)),
+                             "SUPER-ADMIN",
+                                CountRows(Filter(
+                                    FirstN(
+                                        NotificationList_CertificationApp,
+                                        2000
+                                    ),
+                                    "has uploaded proofs" in Notification And AdminDeleted = false
+                                ))
+                        )
+                    PressedBorderColor: =RGBA(0, 0, 0, 0)
+                    PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                    PressedFill: =RGBA(0, 0, 0, 0)
+                    TabIndex: =0
+                    Width: =20
+                    X: =303
+                    Y: =21
+                    ZIndex: =4
+
+            Label20 As label:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                Size: =13
+                Text: ="No Notifications"
+                Visible: |-
+                    =If(
+                        CountRows(Notify_gal.AllItems) = 0,
+                        true,
+                        false
+                    )
+                X: =99
+                Y: =343
+                ZIndex: =7
+
