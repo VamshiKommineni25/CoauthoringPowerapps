@@ -27,20 +27,6 @@
     "OverridableProperties": {},
     "Version": "2.3.0"
   },
-  "barChart": {
-    "CustomGroupControlTemplateName": "",
-    "FirstParty": true,
-    "Id": "http://microsoft.com/appmagic/barChart",
-    "IsComponentTemplate": false,
-    "IsCustomGroupControlTemplate": false,
-    "IsPcfControl": false,
-    "IsPremiumPcfControl": false,
-    "IsWidgetTemplate": true,
-    "LastModifiedTimestamp": "0",
-    "Name": "barChart",
-    "OverridableProperties": {},
-    "Version": "2.3.0"
-  },
   "button": {
     "CustomGroupControlTemplateName": "",
     "FirstParty": true,
@@ -54,6 +40,34 @@
     "Name": "button",
     "OverridableProperties": {},
     "Version": "2.2.0"
+  },
+  "camera": {
+    "CustomGroupControlTemplateName": "",
+    "FirstParty": true,
+    "Id": "http://microsoft.com/appmagic/camera",
+    "IsComponentTemplate": false,
+    "IsCustomGroupControlTemplate": false,
+    "IsPcfControl": false,
+    "IsPremiumPcfControl": false,
+    "IsWidgetTemplate": true,
+    "LastModifiedTimestamp": "0",
+    "Name": "camera",
+    "OverridableProperties": {},
+    "Version": "2.4.0"
+  },
+  "checkbox": {
+    "CustomGroupControlTemplateName": "",
+    "FirstParty": true,
+    "Id": "http://microsoft.com/appmagic/checkbox",
+    "IsComponentTemplate": false,
+    "IsCustomGroupControlTemplate": false,
+    "IsPcfControl": false,
+    "IsPremiumPcfControl": false,
+    "IsWidgetTemplate": true,
+    "LastModifiedTimestamp": "0",
+    "Name": "checkbox",
+    "OverridableProperties": {},
+    "Version": "2.1.0"
   },
   "circle": {
     "CustomGroupControlTemplateName": "",
@@ -83,6 +97,34 @@
     "OverridableProperties": {},
     "Version": "2.4.0"
   },
+  "dataTable": {
+    "CustomGroupControlTemplateName": "",
+    "FirstParty": true,
+    "Id": "http://microsoft.com/appmagic/dataTable",
+    "IsComponentTemplate": false,
+    "IsCustomGroupControlTemplate": false,
+    "IsPcfControl": false,
+    "IsPremiumPcfControl": false,
+    "IsWidgetTemplate": false,
+    "LastModifiedTimestamp": "0",
+    "Name": "dataTable",
+    "OverridableProperties": {},
+    "Version": "1.0.2"
+  },
+  "dataTableColumn": {
+    "CustomGroupControlTemplateName": "",
+    "FirstParty": true,
+    "Id": "http://microsoft.com/appmagic/dataTableColumn",
+    "IsComponentTemplate": false,
+    "IsCustomGroupControlTemplate": false,
+    "IsPcfControl": false,
+    "IsPremiumPcfControl": false,
+    "IsWidgetTemplate": false,
+    "LastModifiedTimestamp": "0",
+    "Name": "dataTableColumn",
+    "OverridableProperties": {},
+    "Version": "1.0.1"
+  },
   "datepicker": {
     "CustomGroupControlTemplateName": "",
     "FirstParty": true,
@@ -110,20 +152,6 @@
     "Name": "dropdown",
     "OverridableProperties": {},
     "Version": "2.3.1"
-  },
-  "form": {
-    "CustomGroupControlTemplateName": "",
-    "FirstParty": true,
-    "Id": "http://microsoft.com/appmagic/form",
-    "IsComponentTemplate": false,
-    "IsCustomGroupControlTemplate": false,
-    "IsPcfControl": false,
-    "IsPremiumPcfControl": false,
-    "IsWidgetTemplate": true,
-    "LastModifiedTimestamp": "0",
-    "Name": "form",
-    "OverridableProperties": {},
-    "Version": "2.4.0"
   },
   "gallery": {
     "CustomGroupControlTemplateName": "",
@@ -238,6 +266,20 @@
     "OverridableProperties": {},
     "Version": "2.2.2"
   },
+  "inkControl": {
+    "CustomGroupControlTemplateName": "",
+    "FirstParty": true,
+    "Id": "http://microsoft.com/appmagic/inkControl",
+    "IsComponentTemplate": false,
+    "IsCustomGroupControlTemplate": false,
+    "IsPcfControl": false,
+    "IsPremiumPcfControl": false,
+    "IsWidgetTemplate": true,
+    "LastModifiedTimestamp": "0",
+    "Name": "inkControl",
+    "OverridableProperties": {},
+    "Version": "2.2.0"
+  },
   "label": {
     "CustomGroupControlTemplateName": "",
     "FirstParty": true,
@@ -251,20 +293,6 @@
     "Name": "label",
     "OverridableProperties": {},
     "Version": "2.5.1"
-  },
-  "pieChart": {
-    "CustomGroupControlTemplateName": "",
-    "FirstParty": true,
-    "Id": "http://microsoft.com/appmagic/pieChart",
-    "IsComponentTemplate": false,
-    "IsCustomGroupControlTemplate": false,
-    "IsPcfControl": false,
-    "IsPremiumPcfControl": false,
-    "IsWidgetTemplate": true,
-    "LastModifiedTimestamp": "0",
-    "Name": "pieChart",
-    "OverridableProperties": {},
-    "Version": "2.2.0"
   },
   "radio": {
     "CustomGroupControlTemplateName": "",
@@ -293,6 +321,20 @@
     "Name": "rectangle",
     "OverridableProperties": {},
     "Version": "2.3.0"
+  },
+  "richTextEditor": {
+    "CustomGroupControlTemplateName": "",
+    "FirstParty": true,
+    "Id": "http://microsoft.com/appmagic/richTextEditorControl",
+    "IsComponentTemplate": false,
+    "IsCustomGroupControlTemplate": false,
+    "IsPcfControl": false,
+    "IsPremiumPcfControl": false,
+    "IsWidgetTemplate": true,
+    "LastModifiedTimestamp": "0",
+    "Name": "richTextEditor",
+    "OverridableProperties": {},
+    "Version": "2.6.0"
   },
   "screen": {
     "CustomGroupControlTemplateName": "",
@@ -349,19 +391,5 @@
     "Name": "toggleSwitch",
     "OverridableProperties": {},
     "Version": "2.1.0"
-  },
-  "typedDataCard": {
-    "CustomGroupControlTemplateName": "",
-    "FirstParty": true,
-    "Id": "http://microsoft.com/appmagic/card",
-    "IsComponentTemplate": false,
-    "IsCustomGroupControlTemplate": false,
-    "IsPcfControl": false,
-    "IsPremiumPcfControl": false,
-    "IsWidgetTemplate": false,
-    "LastModifiedTimestamp": "0",
-    "Name": "typedDataCard",
-    "OverridableProperties": {},
-    "Version": "1.0.6"
   }
 }

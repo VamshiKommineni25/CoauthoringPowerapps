@@ -1,5 +1,5 @@
 {
-  "CurrentTheme": "officeBlueTheme",
+  "CurrentTheme": "defaultTheme",
   "CustomThemes": [
     {
       "name": "defaultTheme",
@@ -7,57 +7,57 @@
         {
           "name": "ScreenBkgColor",
           "type": "c",
-          "value": "Color.White"
+          "value": "RGBA(255,255,255,1)"
         },
         {
           "name": "InvertedBkgColor",
           "type": "c",
-          "value": "RGBA(56, 96, 178, 1)"
+          "value": "RGBA(62,96,170,1)"
         },
         {
           "name": "PrimaryColor1",
           "type": "c",
-          "value": "RGBA(56, 96, 178, 1)"
+          "value": "RGBA(62,96,170,1)"
         },
         {
           "name": "PrimaryColor2",
           "type": "c",
-          "value": "RGBA(0, 18, 107, 1)"
+          "value": "RGBA(101,128,187,1)"
         },
         {
           "name": "PrimaryColor3",
           "type": "c",
-          "value": "RGBA(186, 202, 226, 1)"
+          "value": "RGBA(190,202,226,1)"
         },
         {
           "name": "PrimaryColor1Light",
           "type": "c",
-          "value": "RGBA(56, 96, 178, .2)"
+          "value": "RGBA(62,96,170,.2)"
         },
         {
           "name": "PrimaryColor2Light",
           "type": "c",
-          "value": "RGBA(0, 18, 107, .2)"
+          "value": "RGBA(101,128,187,.2)"
         },
         {
           "name": "PrimaryColor3Light",
           "type": "c",
-          "value": "RGBA(186, 202, 226, .2)"
+          "value": "RGBA(190,202,226,.2)"
         },
         {
           "name": "PrimaryColor3Fade",
           "type": "c",
-          "value": "ColorFade(RGBA(186, 202, 226, 1), 70%)"
+          "value": "ColorFade(RGBA(190,202,226,1), 70%)"
         },
         {
           "name": "TextMainColor",
           "type": "c",
-          "value": "RGBA(0, 0, 0, 1)"
+          "value": "RGBA(47,41,43,1)"
         },
         {
           "name": "TextMainColorInverted",
           "type": "c",
-          "value": "RGBA(255, 255, 255, 1)"
+          "value": "RGBA(255,255,255,1)"
         },
         {
           "name": "TextLinkColor",
@@ -67,7 +67,7 @@
         {
           "name": "TextFooterFontColor",
           "type": "c",
-          "value": "RGBA(117, 117, 117, 1)"
+          "value": "RGBA(132, 132, 132, 1)"
         },
         {
           "name": "InputBkgColor",
@@ -77,12 +77,12 @@
         {
           "name": "InputTextColor",
           "type": "c",
-          "value": "RGBA(0, 0, 0, 1)"
+          "value": "RGBA(47, 41, 43, 1)"
         },
         {
           "name": "InputBorderColor",
           "type": "c",
-          "value": "RGBA(0, 18, 107, 1)"
+          "value": "RGBA(101, 128, 187, 1)"
         },
         {
           "name": "RailBkgColor",
@@ -97,32 +97,32 @@
         {
           "name": "InnerCircleBkgColor",
           "type": "c",
-          "value": "RGBA(255, 255, 255, 1)"
+          "value": "ColorFade(RGBA(255,255,255,1), -5%)"
         },
         {
           "name": "DisabledBorderColor",
           "type": "c",
-          "value": "RGBA(166, 166, 166, 1)"
+          "value": "RGBA(159, 167, 165, 1)"
         },
         {
           "name": "DisabledTextMainColor",
           "type": "c",
-          "value": "RGBA(166, 166, 166, 1)"
+          "value": "ColorFade(RGBA(47, 41, 43, 1), 70%)"
         },
         {
           "name": "DisabledInputBkgColor",
           "type": "c",
-          "value": "RGBA(244, 244, 244, 1)"
+          "value": "ColorFade(RGBA(159, 167, 165, 1), 50%)"
         },
         {
           "name": "DisabledButtonBkgColor",
           "type": "c",
-          "value": "RGBA(244, 244, 244, 1)"
+          "value": "RGBA(193, 193, 193, 0.95)"
         },
         {
           "name": "HoverButtonBkgColor",
           "type": "c",
-          "value": "ColorFade(RGBA(56, 96, 178, 1), -20%)"
+          "value": "ColorFade(RGBA(101, 128, 187, 1), 30%)"
         },
         {
           "name": "HoverCancelButtonBkgColor",
@@ -132,7 +132,7 @@
         {
           "name": "HoverInputBkgColor",
           "type": "c",
-          "value": "RGBA(186, 202, 226, 1)"
+          "value": "ColorFade(RGBA(190, 202, 226, 1), 30%)"
         },
         {
           "name": "OverlayBkgColor",
@@ -162,7 +162,7 @@
         {
           "name": "ReservedCriticalErrorColor",
           "type": "c",
-          "value": "RGBA(168, 0, 0, 1)"
+          "value": "RGBA(237, 28, 36, 1)"
         },
         {
           "name": "ReservedDisabledStatusColor",
@@ -173,16 +173,6 @@
           "name": "ReservedWhiteColor",
           "type": "c",
           "value": "RGBA(255, 255, 255, 1)"
-        },
-        {
-          "name": "ReservedGrayColor",
-          "type": "c",
-          "value": "RGBA(240, 240, 240, 1)"
-        },
-        {
-          "name": "ReservedBlackColor",
-          "type": "c",
-          "value": "RGBA(47, 41, 43, 1)"
         },
         {
           "name": "ReservedChartColorSet",
@@ -236,31 +226,6 @@
           "value": "16"
         },
         {
-          "name": "TextTitleFontSize_galleryLayouts_ver5",
-          "type": "n",
-          "value": "16"
-        },
-        {
-          "name": "TextSubtitleFontSize_galleryLayouts_ver5",
-          "type": "n",
-          "value": "13"
-        },
-        {
-          "name": "TextContentFontSize_galleryLayouts_ver5",
-          "type": "n",
-          "value": "12"
-        },
-        {
-          "name": "DividerColor2020",
-          "type": "c",
-          "value": "RGBA(166, 166, 166, 1)"
-        },
-        {
-          "name": "TextHeaderFontSize2020",
-          "type": "n",
-          "value": "16"
-        },
-        {
           "name": "TextEmphasisFontSize",
           "phoneValue": "24",
           "type": "n",
@@ -293,53 +258,6 @@
           "name": "IconPressedFillColorInverted",
           "type": "c",
           "value": "RGBA(255, 255, 255, 0.3)"
-        },
-        {
-          "name": "DatePickerSelectedColor",
-          "type": "c",
-          "value": "RGBA(37, 70, 148, 1)"
-        },
-        {
-          "name": "DatePickerHeaderColor",
-          "type": "c",
-          "value": "RGBA(68, 97, 165, 1)"
-        },
-        {
-          "name": "NoAttachmentPaddingLeft",
-          "phoneValue": "20",
-          "type": "n",
-          "value": "12"
-        },
-        {
-          "name": "DefaultSize",
-          "phoneValue": "24",
-          "type": "n",
-          "value": "14"
-        },
-        {
-          "name": "DefaultSize2",
-          "type": "n",
-          "value": "13"
-        },
-        {
-          "name": "DropTargetBorderColor",
-          "type": "c",
-          "value": "RGBA(0, 0, 0, 1)"
-        },
-        {
-          "name": "DropTargetBackgroundColor",
-          "type": "c",
-          "value": "RGBA(255, 255, 255, 0.8)"
-        },
-        {
-          "name": "DropTargetTextColor",
-          "type": "c",
-          "value": "RGBA(0, 0, 0, 1)"
-        },
-        {
-          "name": "DropTargetBorderThickness",
-          "type": "n",
-          "value": "2"
         }
       ],
       "styles": [
@@ -350,10 +268,6 @@
             {
               "property": "Fill",
               "value": "%Palette.ScreenBkgColor%"
-            },
-            {
-              "property": "LoadingSpinnerColor",
-              "value": "%Palette.PrimaryColor1%"
             }
           ]
         },
@@ -384,70 +298,6 @@
             {
               "property": "Size",
               "value": "%Palette.TextBodyFontSize%"
-            },
-            {
-              "property": "LineHeight",
-              "value": "1.2"
-            },
-            {
-              "property": "Overflow",
-              "value": "%Overflow.RESERVED%.Hidden"
-            },
-            {
-              "property": "DisabledBorderColor",
-              "value": "RGBA(56, 56, 56, 1)"
-            },
-            {
-              "property": "BorderStyle",
-              "value": "%BorderStyle.RESERVED%.Solid"
-            },
-            {
-              "property": "BorderThickness",
-              "value": "0"
-            },
-            {
-              "property": "FocusedBorderThickness",
-              "value": "0"
-            },
-            {
-              "property": "Fill",
-              "value": "RGBA(0, 0, 0, 0)"
-            },
-            {
-              "property": "DisabledFill",
-              "value": "RGBA(0, 0, 0, 0)"
-            },
-            {
-              "property": "Italic",
-              "value": "false"
-            },
-            {
-              "property": "Underline",
-              "value": "false"
-            },
-            {
-              "property": "Strikethrough",
-              "value": "false"
-            },
-            {
-              "property": "PaddingTop",
-              "value": "5"
-            },
-            {
-              "property": "PaddingRight",
-              "value": "5"
-            },
-            {
-              "property": "PaddingBottom",
-              "value": "5"
-            },
-            {
-              "property": "PaddingLeft",
-              "value": "5"
-            },
-            {
-              "property": "VerticalAlign",
-              "value": "%VerticalAlign.RESERVED%.Middle"
             }
           ]
         },
@@ -497,20 +347,6 @@
         },
         {
           "controlTemplateName": "label",
-          "name": "basicNoSizeWeightColorLabelStyle",
-          "propertyValuesMap": [
-            {
-              "property": "DisabledColor",
-              "value": "%Palette.DisabledTextMainColor%"
-            },
-            {
-              "property": "Font",
-              "value": "%Palette.TextBodyFontFace%"
-            }
-          ]
-        },
-        {
-          "controlTemplateName": "label",
           "name": "invertedBkgHeaderLabelStyle",
           "propertyValuesMap": [
             {
@@ -532,98 +368,6 @@
             {
               "property": "Size",
               "value": "%Palette.TextHeaderFontSize%"
-            }
-          ]
-        },
-        {
-          "controlTemplateName": "label",
-          "name": "invertedBkgHeaderLabelStyle2020",
-          "propertyValuesMap": [
-            {
-              "property": "Color",
-              "value": "%Palette.TextMainColorInverted%"
-            },
-            {
-              "property": "DisabledColor",
-              "value": "%Palette.DisabledTextMainColor%"
-            },
-            {
-              "property": "Font",
-              "value": "%Palette.TextBodyFontFace%"
-            },
-            {
-              "property": "FontWeight",
-              "value": "%Palette.TextBodyFontWeight%"
-            },
-            {
-              "property": "Size",
-              "value": "%Palette.TextHeaderFontSize2020%"
-            }
-          ]
-        },
-        {
-          "controlTemplateName": "text",
-          "name": "searchTextStyle2020",
-          "propertyValuesMap": [
-            {
-              "property": "Color",
-              "value": "%Palette.InputTextColor%"
-            },
-            {
-              "property": "BorderColor",
-              "value": "%Palette.InputBorderColor%"
-            },
-            {
-              "property": "BorderStyle",
-              "value": "%BorderStyle.RESERVED%.Solid"
-            },
-            {
-              "property": "BorderThickness",
-              "value": "%Palette.InputBorderThickness%"
-            },
-            {
-              "property": "FocusedBorderThickness",
-              "value": "%Palette.InputFocusedBorderThickness%"
-            },
-            {
-              "property": "HoverBorderColor",
-              "value": "%Palette.InputBorderColor%"
-            },
-            {
-              "property": "HoverColor",
-              "value": "%Palette.InputTextColor%"
-            },
-            {
-              "property": "HoverFill",
-              "value": "%Palette.HoverInputBkgColor%"
-            },
-            {
-              "property": "Fill",
-              "value": "%Palette.InputBkgColor%"
-            },
-            {
-              "property": "Font",
-              "value": "%Palette.TextBodyFontFace%"
-            },
-            {
-              "property": "FontWeight",
-              "value": "%Palette.TextBodyFontWeight%"
-            },
-            {
-              "property": "DisabledBorderColor",
-              "value": "%Palette.DisabledBorderColor%"
-            },
-            {
-              "property": "DisabledColor",
-              "value": "%Palette.DisabledTextMainColor%"
-            },
-            {
-              "property": "DisabledFill",
-              "value": "%Palette.DisabledInputBkgColor%"
-            },
-            {
-              "property": "Size",
-              "value": "%Palette.TextBodyFontSize%"
             }
           ]
         },
@@ -859,86 +603,6 @@
         },
         {
           "controlTemplateName": "label",
-          "name": "titleLabelStyle_galleryLayouts_ver5",
-          "propertyValuesMap": [
-            {
-              "property": "Color",
-              "value": "%Palette.TextMainColor%"
-            },
-            {
-              "property": "DisabledColor",
-              "value": "%Palette.DisabledTextMainColor%"
-            },
-            {
-              "property": "Font",
-              "value": "%Palette.TextBodyFontFace%"
-            },
-            {
-              "property": "Size",
-              "value": "%Palette.TextTitleFontSize_galleryLayouts_ver5%"
-            }
-          ]
-        },
-        {
-          "controlTemplateName": "label",
-          "name": "subtitleLabelStyle_galleryLayouts_ver5",
-          "propertyValuesMap": [
-            {
-              "property": "Color",
-              "value": "%Palette.TextMainColor%"
-            },
-            {
-              "property": "DisabledColor",
-              "value": "%Palette.DisabledTextMainColor%"
-            },
-            {
-              "property": "Font",
-              "value": "%Palette.TextBodyFontFace%"
-            },
-            {
-              "property": "Size",
-              "value": "%Palette.TextSubtitleFontSize_galleryLayouts_ver5%"
-            }
-          ]
-        },
-        {
-          "controlTemplateName": "label",
-          "name": "contentLabelStyle_galleryLayouts_ver5",
-          "propertyValuesMap": [
-            {
-              "property": "Color",
-              "value": "%Palette.TextMainColor%"
-            },
-            {
-              "property": "DisabledColor",
-              "value": "%Palette.DisabledTextMainColor%"
-            },
-            {
-              "property": "Font",
-              "value": "%Palette.TextBodyFontFace%"
-            },
-            {
-              "property": "Size",
-              "value": "%Palette.TextContentFontSize_galleryLayouts_ver5%"
-            }
-          ]
-        },
-        {
-          "controlTemplateName": "rectangle",
-          "name": "dividerStyle2020",
-          "propertyValuesMap": [
-            {
-              "property": "Fill",
-              "value": "%Palette.DividerColor2020%"
-            },
-            {
-              "property": "BorderColor",
-              "value": "%Palette.InputBorderColor%"
-            }
-          ]
-        },
-        {
-          "controlTemplateName": "label",
           "name": "accentLabelStyle",
           "propertyValuesMap": [
             {
@@ -960,74 +624,6 @@
             {
               "property": "Size",
               "value": "%Palette.TextBodyFontSize%"
-            },
-            {
-              "property": "LineHeight",
-              "value": "1.2"
-            },
-            {
-              "property": "Overflow",
-              "value": "%Overflow.RESERVED%.Hidden"
-            },
-            {
-              "property": "DisabledBorderColor",
-              "value": "RGBA(56, 56, 56, 1)"
-            },
-            {
-              "property": "BorderColor",
-              "value": "RGBA(0, 0, 0, 1)"
-            },
-            {
-              "property": "BorderStyle",
-              "value": "%BorderStyle.RESERVED%.Solid"
-            },
-            {
-              "property": "BorderThickness",
-              "value": "0"
-            },
-            {
-              "property": "FocusedBorderThickness",
-              "value": "0"
-            },
-            {
-              "property": "Fill",
-              "value": "RGBA(0, 0, 0, 0)"
-            },
-            {
-              "property": "DisabledFill",
-              "value": "RGBA(0, 0, 0, 0)"
-            },
-            {
-              "property": "Italic",
-              "value": "false"
-            },
-            {
-              "property": "Underline",
-              "value": "false"
-            },
-            {
-              "property": "Strikethrough",
-              "value": "false"
-            },
-            {
-              "property": "PaddingTop",
-              "value": "5"
-            },
-            {
-              "property": "PaddingRight",
-              "value": "5"
-            },
-            {
-              "property": "PaddingBottom",
-              "value": "5"
-            },
-            {
-              "property": "PaddingLeft",
-              "value": "5"
-            },
-            {
-              "property": "VerticalAlign",
-              "value": "%VerticalAlign.RESERVED%.Middle"
             }
           ]
         },
@@ -1158,74 +754,6 @@
             {
               "property": "Size",
               "value": "%Palette.TextFooterFontSize%"
-            },
-            {
-              "property": "BorderColor",
-              "value": "RGBA(0, 0, 0, 1)"
-            },
-            {
-              "property": "LineHeight",
-              "value": "1.2"
-            },
-            {
-              "property": "Overflow",
-              "value": "%Overflow.RESERVED%.Hidden"
-            },
-            {
-              "property": "DisabledBorderColor",
-              "value": "RGBA(56, 56, 56, 1)"
-            },
-            {
-              "property": "BorderStyle",
-              "value": "%BorderStyle.RESERVED%.Solid"
-            },
-            {
-              "property": "BorderThickness",
-              "value": "0"
-            },
-            {
-              "property": "FocusedBorderThickness",
-              "value": "0"
-            },
-            {
-              "property": "Fill",
-              "value": "RGBA(0, 0, 0, 0)"
-            },
-            {
-              "property": "DisabledFill",
-              "value": "RGBA(0, 0, 0, 0)"
-            },
-            {
-              "property": "Italic",
-              "value": "false"
-            },
-            {
-              "property": "Underline",
-              "value": "false"
-            },
-            {
-              "property": "Strikethrough",
-              "value": "false"
-            },
-            {
-              "property": "PaddingTop",
-              "value": "5"
-            },
-            {
-              "property": "PaddingRight",
-              "value": "5"
-            },
-            {
-              "property": "PaddingBottom",
-              "value": "5"
-            },
-            {
-              "property": "PaddingLeft",
-              "value": "5"
-            },
-            {
-              "property": "VerticalAlign",
-              "value": "%VerticalAlign.RESERVED%.Middle"
             }
           ]
         },
@@ -1410,62 +938,6 @@
             {
               "property": "FontWeight",
               "value": "%Palette.TextEmphasisFontWeight%"
-            },
-            {
-              "property": "LineHeight",
-              "value": "1.2"
-            },
-            {
-              "property": "BorderColor",
-              "value": "RGBA(0, 0, 0, 1)"
-            },
-            {
-              "property": "Overflow",
-              "value": "%Overflow.RESERVED%.Hidden"
-            },
-            {
-              "property": "DisabledBorderColor",
-              "value": "RGBA(56, 56, 56, 1)"
-            },
-            {
-              "property": "BorderStyle",
-              "value": "%BorderStyle.RESERVED%.Solid"
-            },
-            {
-              "property": "BorderThickness",
-              "value": "0"
-            },
-            {
-              "property": "FocusedBorderThickness",
-              "value": "0"
-            },
-            {
-              "property": "Fill",
-              "value": "RGBA(0, 0, 0, 0)"
-            },
-            {
-              "property": "DisabledFill",
-              "value": "RGBA(0, 0, 0, 0)"
-            },
-            {
-              "property": "Italic",
-              "value": "false"
-            },
-            {
-              "property": "Underline",
-              "value": "false"
-            },
-            {
-              "property": "Strikethrough",
-              "value": "false"
-            },
-            {
-              "property": "VerticalAlign",
-              "value": "%VerticalAlign.RESERVED%.Middle"
-            },
-            {
-              "property": "Size",
-              "value": "%Palette.DefaultSize%"
             }
           ]
         },
@@ -1508,34 +980,6 @@
             {
               "property": "TrueFill",
               "value": "%Palette.PrimaryColor1%"
-            },
-            {
-              "property": "FalseHoverFill",
-              "value": "ColorFade(Self.FalseFill, 15%)"
-            },
-            {
-              "property": "TrueHoverFill",
-              "value": "ColorFade(Self.TrueFill, 15%)"
-            },
-            {
-              "property": "DisabledBorderColor",
-              "value": "RGBA(56, 56, 56, 1)"
-            },
-            {
-              "property": "PressedBorderColor",
-              "value": "ColorFade(Self.BorderColor, -15%)"
-            },
-            {
-              "property": "HoverBorderColor",
-              "value": "ColorFade(Self.BorderColor, 15%)"
-            },
-            {
-              "property": "BorderThickness",
-              "value": "0"
-            },
-            {
-              "property": "FocusedBorderThickness",
-              "value": "2"
             }
           ]
         },
@@ -1549,27 +993,11 @@
             },
             {
               "property": "RatingFill",
-              "value": "%Palette.PrimaryColor2%"
+              "value": "%Palette.PrimaryColor1%"
             },
             {
               "property": "DisabledBorderColor",
               "value": "%Palette.DisabledBorderColor%"
-            },
-            {
-              "property": "Fill",
-              "value": "RGBA(0, 0, 0, 0)"
-            },
-            {
-              "property": "BorderStyle",
-              "value": "%BorderStyle.RESERVED%.Solid"
-            },
-            {
-              "property": "BorderThickness",
-              "value": "0"
-            },
-            {
-              "property": "FocusedBorderThickness",
-              "value": "2"
             }
           ]
         },
@@ -1595,11 +1023,11 @@
             },
             {
               "property": "CheckmarkFill",
-              "value": "%Palette.InputTextColor%"
+              "value": "%Palette.PrimaryColor1%"
             },
             {
               "property": "HoverColor",
-              "value": "%Palette.PrimaryColor2%"
+              "value": "%Palette.PrimaryColor1%"
             },
             {
               "property": "Font",
@@ -1612,86 +1040,6 @@
             {
               "property": "Size",
               "value": "%Palette.TextBodyFontSize%"
-            },
-            {
-              "property": "DisabledBorderColor",
-              "value": "RGBA(56, 56, 56, 1)"
-            },
-            {
-              "property": "BorderStyle",
-              "value": "%BorderStyle.RESERVED%.Solid"
-            },
-            {
-              "property": "BorderThickness",
-              "value": "0"
-            },
-            {
-              "property": "FocusedBorderThickness",
-              "value": "2"
-            },
-            {
-              "property": "PressedBorderColor",
-              "value": "ColorFade(Self.BorderColor, -30%)"
-            },
-            {
-              "property": "HoverBorderColor",
-              "value": "ColorFade(Self.BorderColor, 30%)"
-            },
-            {
-              "property": "DisabledColor",
-              "value": "RGBA(186, 186, 186, 1)"
-            },
-            {
-              "property": "Fill",
-              "value": "RGBA(0, 0, 0, 0)"
-            },
-            {
-              "property": "DisabledFill",
-              "value": "RGBA(0, 0, 0, 0)"
-            },
-            {
-              "property": "PressedColor",
-              "value": "RGBA(70, 68, 64, 1)"
-            },
-            {
-              "property": "PressedFill",
-              "value": "ColorFade(Self.Fill, -30%)"
-            },
-            {
-              "property": "HoverFill",
-              "value": "ColorFade(Self.Fill, 30%)"
-            },
-            {
-              "property": "Italic",
-              "value": "false"
-            },
-            {
-              "property": "Underline",
-              "value": "false"
-            },
-            {
-              "property": "Strikethrough",
-              "value": "false"
-            },
-            {
-              "property": "PaddingTop",
-              "value": "0"
-            },
-            {
-              "property": "PaddingRight",
-              "value": "0"
-            },
-            {
-              "property": "PaddingBottom",
-              "value": "0"
-            },
-            {
-              "property": "PaddingLeft",
-              "value": "0"
-            },
-            {
-              "property": "VerticalAlign",
-              "value": "%VerticalAlign.RESERVED%.Middle"
             }
           ]
         },
@@ -1713,7 +1061,7 @@
             },
             {
               "property": "HoverColor",
-              "value": "%Palette.PrimaryColor2%"
+              "value": "%Palette.PrimaryColor1%"
             },
             {
               "property": "BorderColor",
@@ -1729,83 +1077,11 @@
             },
             {
               "property": "RadioSelectionFill",
-              "value": "%Palette.InputTextColor%"
+              "value": "%Palette.PrimaryColor1%"
             },
             {
               "property": "Size",
               "value": "%Palette.TextBodyFontSize%"
-            },
-            {
-              "property": "DisabledBorderColor",
-              "value": "RGBA(56, 56, 56, 1)"
-            },
-            {
-              "property": "BorderStyle",
-              "value": "%BorderStyle.RESERVED%.Solid"
-            },
-            {
-              "property": "BorderThickness",
-              "value": "0"
-            },
-            {
-              "property": "FocusedBorderThickness",
-              "value": "2"
-            },
-            {
-              "property": "DisabledColor",
-              "value": "RGBA(186, 186, 186, 1)"
-            },
-            {
-              "property": "Fill",
-              "value": "RGBA(0, 0, 0, 0)"
-            },
-            {
-              "property": "DisabledFill",
-              "value": "RGBA(0, 0, 0, 0)"
-            },
-            {
-              "property": "Italic",
-              "value": "false"
-            },
-            {
-              "property": "Underline",
-              "value": "false"
-            },
-            {
-              "property": "Strikethrough",
-              "value": "false"
-            },
-            {
-              "property": "PaddingTop",
-              "value": "10"
-            },
-            {
-              "property": "PaddingRight",
-              "value": "0"
-            },
-            {
-              "property": "PaddingBottom",
-              "value": "10"
-            },
-            {
-              "property": "PaddingLeft",
-              "value": "0"
-            },
-            {
-              "property": "Align",
-              "value": "%Align.RESERVED%.Left"
-            },
-            {
-              "property": "PressedColor",
-              "value": "Self.Color"
-            },
-            {
-              "property": "HoverFill",
-              "value": "Self.Fill"
-            },
-            {
-              "property": "PressedFill",
-              "value": "Self.Fill"
             }
           ]
         },
@@ -1884,38 +1160,6 @@
             {
               "property": "Size",
               "value": "%Palette.TextBodyFontSize%"
-            },
-            {
-              "property": "DisabledColor",
-              "value": "RGBA(186, 186, 186, 1)"
-            },
-            {
-              "property": "DisabledFill",
-              "value": "RGBA(242, 242, 242, 1)"
-            },
-            {
-              "property": "PressedBorderColor",
-              "value": "Self.HoverBorderColor"
-            },
-            {
-              "property": "HoverBorderColor",
-              "value": "ColorFade(Self.BorderColor, 15%)"
-            },
-            {
-              "property": "PaddingTop",
-              "value": "0"
-            },
-            {
-              "property": "PaddingRight",
-              "value": "0"
-            },
-            {
-              "property": "PaddingBottom",
-              "value": "0"
-            },
-            {
-              "property": "PaddingLeft",
-              "value": "0"
             }
           ]
         },
@@ -1949,15 +1193,15 @@
             },
             {
               "property": "ChevronFill",
-              "value": "%Palette.TextMainColorInverted%"
+              "value": "%Palette.InnerCircleBkgColor%"
             },
             {
               "property": "ChevronHoverBackground",
-              "value": "%Palette.HoverButtonBkgColor%"
+              "value": "%Palette.PrimaryColor2%"
             },
             {
               "property": "ChevronHoverFill",
-              "value": "%Palette.TextMainColorInverted%"
+              "value": "%Palette.InnerCircleBkgColor%"
             },
             {
               "property": "ChevronDisabledBackground",
@@ -1965,7 +1209,7 @@
             },
             {
               "property": "ChevronDisabledFill",
-              "value": "%Palette.DisabledInputBkgColor%"
+              "value": "%Palette.DisabledTextMainColor%"
             },
             {
               "property": "DisabledBorderColor",
@@ -2018,42 +1262,6 @@
             {
               "property": "SelectionFill",
               "value": "%Palette.PrimaryColor1%"
-            },
-            {
-              "property": "HoverBorderColor",
-              "value": "ColorFade(Self.BorderColor, 15%)"
-            },
-            {
-              "property": "PressedBorderColor",
-              "value": "Self.HoverBorderColor"
-            },
-            {
-              "property": "Italic",
-              "value": "false"
-            },
-            {
-              "property": "Underline",
-              "value": "false"
-            },
-            {
-              "property": "Strikethrough",
-              "value": "false"
-            },
-            {
-              "property": "PaddingTop",
-              "value": "10"
-            },
-            {
-              "property": "PaddingRight",
-              "value": "10"
-            },
-            {
-              "property": "PaddingBottom",
-              "value": "10"
-            },
-            {
-              "property": "PaddingLeft",
-              "value": "10"
             }
           ]
         },
@@ -2087,15 +1295,15 @@
             },
             {
               "property": "ChevronFill",
-              "value": "%Palette.TextMainColorInverted%"
+              "value": "%Palette.InnerCircleBkgColor%"
             },
             {
               "property": "ChevronHoverBackground",
-              "value": "%Palette.HoverButtonBkgColor%"
+              "value": "%Palette.PrimaryColor2%"
             },
             {
               "property": "ChevronHoverFill",
-              "value": "%Palette.TextMainColorInverted%"
+              "value": "%Palette.InnerCircleBkgColor%"
             },
             {
               "property": "ChevronDisabledBackground",
@@ -2103,7 +1311,7 @@
             },
             {
               "property": "ChevronDisabledFill",
-              "value": "%Palette.DisabledInputBkgColor%"
+              "value": "%Palette.DisabledTextMainColor%"
             },
             {
               "property": "DisabledBorderColor",
@@ -2156,18 +1364,6 @@
             {
               "property": "SelectionFill",
               "value": "%Palette.PrimaryColor1%"
-            },
-            {
-              "property": "HoverBorderColor",
-              "value": "ColorFade(Self.BorderColor, 15%)"
-            },
-            {
-              "property": "PressedBorderColor",
-              "value": "Self.HoverBorderColor"
-            },
-            {
-              "property": "MoreItemsButtonColor",
-              "value": "Self.ChevronBackground"
             }
           ]
         },
@@ -2254,38 +1450,6 @@
             {
               "property": "ItemHoverFill",
               "value": "%Palette.HoverInputBkgColor%"
-            },
-            {
-              "property": "ItemSpacing",
-              "value": "0"
-            },
-            {
-              "property": "NoAttachmentsColor",
-              "value": "Self.Color"
-            },
-            {
-              "property": "NoAttachmentsPaddingLeft",
-              "value": "%Palette.NoAttachmentPaddingLeft%"
-            },
-            {
-              "property": "DropTargetBorderThickness",
-              "value": "%Palette.DropTargetBorderThickness%"
-            },
-            {
-              "property": "DropTargetBorderStyle",
-              "value": "%BorderStyle.RESERVED%.Dotted"
-            },
-            {
-              "property": "DropTargetBorderColor",
-              "value": "%Palette.DropTargetBorderColor%"
-            },
-            {
-              "property": "DropTargetBackgroundColor",
-              "value": "%Palette.DropTargetBackgroundColor%"
-            },
-            {
-              "property": "DropTargetTextColor",
-              "value": "%Palette.DropTargetTextColor%"
             }
           ]
         },
@@ -2339,11 +1503,7 @@
             },
             {
               "property": "IconFill",
-              "value": "%Palette.TextMainColorInverted%"
-            },
-            {
-              "property": "IconBackground",
-              "value": "%Palette.PrimaryColor1%"
+              "value": "%Palette.InnerCircleBkgColor%"
             },
             {
               "property": "SelectedDateFill",
@@ -2355,31 +1515,7 @@
             },
             {
               "property": "CalendarHeaderFill",
-              "value": "%Palette.PrimaryColor1%"
-            },
-            {
-              "property": "Size",
-              "value": "%Palette.DefaultSize%"
-            },
-            {
-              "property": "Italic",
-              "value": "false"
-            },
-            {
-              "property": "PaddingTop",
-              "value": "0"
-            },
-            {
-              "property": "PaddingRight",
-              "value": "5"
-            },
-            {
-              "property": "PaddingBottom",
-              "value": "5"
-            },
-            {
-              "property": "PaddingLeft",
-              "value": "12"
+              "value": "%Palette.PrimaryColor2%"
             }
           ]
         },
@@ -2413,15 +1549,15 @@
             },
             {
               "property": "ChevronFill",
-              "value": "%Palette.TextMainColorInverted%"
+              "value": "%Palette.InnerCircleBkgColor%"
             },
             {
               "property": "ChevronHoverBackground",
-              "value": "%Palette.HoverButtonBkgColor%"
+              "value": "%Palette.PrimaryColor2%"
             },
             {
               "property": "ChevronHoverFill",
-              "value": "%Palette.TextMainColorInverted%"
+              "value": "%Palette.InnerCircleBkgColor%"
             },
             {
               "property": "ChevronDisabledBackground",
@@ -2429,7 +1565,7 @@
             },
             {
               "property": "ChevronDisabledFill",
-              "value": "%Palette.DisabledInputBkgColor%"
+              "value": "%Palette.DisabledTextMainColor%"
             },
             {
               "property": "DisabledBorderColor",
@@ -2482,46 +1618,6 @@
             {
               "property": "SelectionFill",
               "value": "%Palette.PrimaryColor1%"
-            },
-            {
-              "property": "HoverBorderColor",
-              "value": "ColorFade(Self.BorderColor, 15%)"
-            },
-            {
-              "property": "PressedBorderColor",
-              "value": "Self.HoverBorderColor"
-            },
-            {
-              "property": "Italic",
-              "value": "false"
-            },
-            {
-              "property": "Underline",
-              "value": "false"
-            },
-            {
-              "property": "Strikethrough",
-              "value": "false"
-            },
-            {
-              "property": "PaddingTop",
-              "value": "10"
-            },
-            {
-              "property": "PaddingRight",
-              "value": "10"
-            },
-            {
-              "property": "PaddingBottom",
-              "value": "10"
-            },
-            {
-              "property": "PaddingLeft",
-              "value": "10"
-            },
-            {
-              "property": "FooterSize",
-              "value": "Self.Size - 3"
             }
           ]
         },
@@ -2588,50 +1684,6 @@
             {
               "property": "Size",
               "value": "%Palette.TextBodyFontSize%"
-            },
-            {
-              "property": "RadiusTopLeft",
-              "value": "5"
-            },
-            {
-              "property": "RadiusBottomRight",
-              "value": "5"
-            },
-            {
-              "property": "RadiusTopRight",
-              "value": "5"
-            },
-            {
-              "property": "RadiusBottomLeft",
-              "value": "5"
-            },
-            {
-              "property": "PressedBorderColor",
-              "value": "Self.HoverBorderColor"
-            },
-            {
-              "property": "PressedColor",
-              "value": "Self.Color"
-            },
-            {
-              "property": "PressedFill",
-              "value": "Self.Fill"
-            },
-            {
-              "property": "Italic",
-              "value": "false"
-            },
-            {
-              "property": "Underline",
-              "value": "false"
-            },
-            {
-              "property": "Strikethrough",
-              "value": "false"
-            },
-            {
-              "property": "Align",
-              "value": "%Align.RESERVED%.Left"
             }
           ]
         },
@@ -2727,39 +1779,7 @@
             },
             {
               "property": "ValueFill",
-              "value": "%Palette.PrimaryColor2%"
-            },
-            {
-              "property": "HandleHoverFill",
-              "value": "Self.HandleFill"
-            },
-            {
-              "property": "HandleActiveFill",
-              "value": "Self.HandleFill"
-            },
-            {
-              "property": "RailHoverFill",
-              "value": "ColorFade(Self.RailFill, 15%)"
-            },
-            {
-              "property": "ValueHoverFill",
-              "value": "ColorFade(Self.ValueFill, 15%)"
-            },
-            {
-              "property": "PressedBorderColor",
-              "value": "ColorFade(Self.BorderColor, -30%)"
-            },
-            {
-              "property": "HoverBorderColor",
-              "value": "ColorFade(Self.BorderColor, 30%)"
-            },
-            {
-              "property": "BorderThickness",
-              "value": "0"
-            },
-            {
-              "property": "FocusedBorderThickness",
-              "value": "2"
+              "value": "%Palette.PrimaryColor1%"
             }
           ]
         },
@@ -2784,10 +1804,6 @@
               "value": "%Palette.TextEmphasisFontWeight%"
             },
             {
-              "property": "DisabledBorderColor",
-              "value": "%Palette.DisabledBorderColor%"
-            },
-            {
               "property": "DisabledColor",
               "value": "%Palette.DisabledTextMainColor%"
             },
@@ -2798,82 +1814,6 @@
             {
               "property": "Size",
               "value": "%Palette.TextEmphasisFontSize%"
-            },
-            {
-              "property": "HoverColor",
-              "value": "%Palette.TextMainColorInverted%"
-            },
-            {
-              "property": "HoverFill",
-              "value": "%Palette.HoverButtonBkgColor%"
-            },
-            {
-              "property": "BorderColor",
-              "value": "ColorFade(Self.Fill, -15%)"
-            },
-            {
-              "property": "RadiusTopLeft",
-              "value": "10"
-            },
-            {
-              "property": "RadiusBottomRight",
-              "value": "10"
-            },
-            {
-              "property": "RadiusTopRight",
-              "value": "10"
-            },
-            {
-              "property": "RadiusBottomLeft",
-              "value": "10"
-            },
-            {
-              "property": "PressedBorderColor",
-              "value": "Self.Fill"
-            },
-            {
-              "property": "HoverBorderColor",
-              "value": "ColorFade(Self.BorderColor, 20%)"
-            },
-            {
-              "property": "BorderStyle",
-              "value": "%BorderStyle.RESERVED%.Solid"
-            },
-            {
-              "property": "BorderThickness",
-              "value": "2"
-            },
-            {
-              "property": "FocusedBorderThickness",
-              "value": "4"
-            },
-            {
-              "property": "PressedColor",
-              "value": "Self.Fill"
-            },
-            {
-              "property": "PressedFill",
-              "value": "Self.Color"
-            },
-            {
-              "property": "Italic",
-              "value": "false"
-            },
-            {
-              "property": "Underline",
-              "value": "false"
-            },
-            {
-              "property": "Strikethrough",
-              "value": "false"
-            },
-            {
-              "property": "Align",
-              "value": "%Align.RESERVED%.Center"
-            },
-            {
-              "property": "VerticalAlign",
-              "value": "%VerticalAlign.RESERVED%.Middle"
             }
           ]
         },
@@ -2994,34 +1934,6 @@
             {
               "property": "Color",
               "value": "%Palette.TextMainColor%"
-            },
-            {
-              "property": "BorderColor",
-              "value": "RGBA(0, 0, 0, 1)"
-            },
-            {
-              "property": "PressedBorderColor",
-              "value": "ColorFade(Self.BorderColor, -30%)"
-            },
-            {
-              "property": "HoverBorderColor",
-              "value": "ColorFade(Self.BorderColor, 30%)"
-            },
-            {
-              "property": "BorderStyle",
-              "value": "%BorderStyle.RESERVED%.Solid"
-            },
-            {
-              "property": "BorderThickness",
-              "value": "0"
-            },
-            {
-              "property": "Font",
-              "value": "%Font.RESERVED%.'Open Sans"
-            },
-            {
-              "property": "Size",
-              "value": "11"
             }
           ]
         },
@@ -3058,34 +1970,6 @@
             {
               "property": "Color",
               "value": "%Palette.TextMainColor%"
-            },
-            {
-              "property": "BorderColor",
-              "value": "RGBA(0, 0, 0, 1)"
-            },
-            {
-              "property": "PressedBorderColor",
-              "value": "ColorFade(Self.BorderColor, -30%)"
-            },
-            {
-              "property": "HoverBorderColor",
-              "value": "ColorFade(Self.BorderColor, 30%)"
-            },
-            {
-              "property": "BorderStyle",
-              "value": "%BorderStyle.RESERVED%.Solid"
-            },
-            {
-              "property": "BorderThickness",
-              "value": "0"
-            },
-            {
-              "property": "Font",
-              "value": "%Font.RESERVED%.'Open Sans'"
-            },
-            {
-              "property": "Size",
-              "value": "10"
             }
           ]
         },
@@ -3122,34 +2006,6 @@
             {
               "property": "Color",
               "value": "%Palette.TextMainColor%"
-            },
-            {
-              "property": "BorderColor",
-              "value": "RGBA(0, 0, 0, 1)"
-            },
-            {
-              "property": "PressedBorderColor",
-              "value": "ColorFade(Self.BorderColor, -30%)"
-            },
-            {
-              "property": "HoverBorderColor",
-              "value": "ColorFade(Self.BorderColor, 30%)"
-            },
-            {
-              "property": "Size",
-              "value": "10"
-            },
-            {
-              "property": "BorderStyle",
-              "value": "%BorderStyle.RESERVED%.Solid"
-            },
-            {
-              "property": "BorderThickness",
-              "value": "0"
-            },
-            {
-              "property": "Font",
-              "value": "%Font.RESERVED%.'Open Sans'"
             }
           ]
         },
@@ -3194,38 +2050,6 @@
             {
               "property": "Size",
               "value": "%Palette.TextFooterFontSize%"
-            },
-            {
-              "property": "BorderColor",
-              "value": "RGBA(0, 0, 0, 1)"
-            },
-            {
-              "property": "DisabledBorderColor",
-              "value": "RGBA(56, 56, 56, 1)"
-            },
-            {
-              "property": "PressedBorderColor",
-              "value": "Self.BorderColor"
-            },
-            {
-              "property": "HoverBorderColor",
-              "value": "Self.BorderColor"
-            },
-            {
-              "property": "BorderStyle",
-              "value": "%BorderStyle.RESERVED%.Solid"
-            },
-            {
-              "property": "BorderThickness",
-              "value": "0"
-            },
-            {
-              "property": "DisabledFill",
-              "value": "RGBA(0, 0, 0, 0)"
-            },
-            {
-              "property": "Italic",
-              "value": "false"
             }
           ]
         },
@@ -3250,18 +2074,6 @@
             {
               "property": "Fill",
               "value": "%Palette.PrimaryColor1%"
-            },
-            {
-              "property": "BorderColor",
-              "value": "%Palette.InputBorderColor%"
-            },
-            {
-              "property": "BorderStyle",
-              "value": "%BorderStyle.RESERVED%.Solid"
-            },
-            {
-              "property": "BorderThickness",
-              "value": "0"
             }
           ]
         },
@@ -3282,64 +2094,8 @@
               "value": "%Palette.TextBodyFontFace%"
             },
             {
-              "property": "HoverFill",
-              "value": "%Palette.HoverButtonBkgColor%"
-            },
-            {
-              "property": "HoverColor",
-              "value": "%Palette.TextMainColorInverted%"
-            },
-            {
               "property": "FontWeight",
               "value": "%Palette.TextBodyFontWeight%"
-            },
-            {
-              "property": "BorderColor",
-              "value": "ColorFade(Self.Fill, -15%)"
-            },
-            {
-              "property": "DisabledBorderColor",
-              "value": "ColorFade(Self.BorderColor, 70%)"
-            },
-            {
-              "property": "PressedBorderColor",
-              "value": "Self.Fill"
-            },
-            {
-              "property": "HoverBorderColor",
-              "value": "ColorFade(Self.BorderColor, 20%)"
-            },
-            {
-              "property": "BorderStyle",
-              "value": "%BorderStyle.RESERVED%.Solid"
-            },
-            {
-              "property": "BorderThickness",
-              "value": "2"
-            },
-            {
-              "property": "FocusedBorderThickness",
-              "value": "4"
-            },
-            {
-              "property": "DisabledColor",
-              "value": "ColorFade(Self.Fill, 90%)"
-            },
-            {
-              "property": "PressedColor",
-              "value": "Self.Fill"
-            },
-            {
-              "property": "DisabledFill",
-              "value": "ColorFade(Self.Fill, 70%)"
-            },
-            {
-              "property": "PressedFill",
-              "value": "Self.Color"
-            },
-            {
-              "property": "Size",
-              "value": "%Palette.DefaultSize2%"
             }
           ]
         },
@@ -3354,30 +2110,6 @@
             {
               "property": "BorderColor",
               "value": "%Palette.InputBorderColor%"
-            },
-            {
-              "property": "DisabledFill",
-              "value": "Self.Fill"
-            },
-            {
-              "property": "PressedFill",
-              "value": "Self.Fill"
-            },
-            {
-              "property": "HoverFill",
-              "value": "Self.Fill"
-            },
-            {
-              "property": "BorderStyle",
-              "value": "%BorderStyle.RESERVED%.Solid"
-            },
-            {
-              "property": "BorderThickness",
-              "value": "0"
-            },
-            {
-              "property": "FocusedBorderThickness",
-              "value": "2"
             }
           ]
         },
@@ -3406,30 +2138,6 @@
             {
               "property": "BorderColor",
               "value": "%Palette.InputBorderColor%"
-            },
-            {
-              "property": "DisabledFill",
-              "value": "Self.Fill"
-            },
-            {
-              "property": "PressedFill",
-              "value": "Self.Fill"
-            },
-            {
-              "property": "HoverFill",
-              "value": "Self.Fill"
-            },
-            {
-              "property": "BorderStyle",
-              "value": "%BorderStyle.RESERVED%.Solid"
-            },
-            {
-              "property": "BorderThickness",
-              "value": "0"
-            },
-            {
-              "property": "FocusedBorderThickness",
-              "value": "2"
             }
           ]
         },
@@ -3458,30 +2166,6 @@
             {
               "property": "BorderColor",
               "value": "%Palette.InputBorderColor%"
-            },
-            {
-              "property": "DisabledFill",
-              "value": "Self.Fill"
-            },
-            {
-              "property": "PressedFill",
-              "value": "Self.Fill"
-            },
-            {
-              "property": "HoverFill",
-              "value": "Self.Fill"
-            },
-            {
-              "property": "BorderStyle",
-              "value": "%BorderStyle.RESERVED%.Solid"
-            },
-            {
-              "property": "BorderThickness",
-              "value": "0"
-            },
-            {
-              "property": "FocusedBorderThickness",
-              "value": "2"
             }
           ]
         },
@@ -3496,30 +2180,6 @@
             {
               "property": "BorderColor",
               "value": "%Palette.InputBorderColor%"
-            },
-            {
-              "property": "DisabledFill",
-              "value": "Self.Fill"
-            },
-            {
-              "property": "PressedFill",
-              "value": "Self.Fill"
-            },
-            {
-              "property": "HoverFill",
-              "value": "Self.Fill"
-            },
-            {
-              "property": "BorderStyle",
-              "value": "%BorderStyle.RESERVED%.Solid"
-            },
-            {
-              "property": "BorderThickness",
-              "value": "0"
-            },
-            {
-              "property": "FocusedBorderThickness",
-              "value": "2"
             }
           ]
         },
@@ -3590,26 +2250,6 @@
             {
               "property": "BorderColor",
               "value": "%Palette.InputBorderColor%"
-            },
-            {
-              "property": "DisabledFill",
-              "value": "Self.Fill"
-            },
-            {
-              "property": "PressedFill",
-              "value": "Self.Fill"
-            },
-            {
-              "property": "HoverFill",
-              "value": "Self.Fill"
-            },
-            {
-              "property": "BorderStyle",
-              "value": "%BorderStyle.RESERVED%.Solid"
-            },
-            {
-              "property": "BorderThickness",
-              "value": "0"
             }
           ]
         },
@@ -3692,50 +2332,6 @@
             {
               "property": "DisabledBorderColor",
               "value": "%Palette.DisabledBorderColor%"
-            },
-            {
-              "property": "PressedColor",
-              "value": "ColorFade(Self.Color, -20%)"
-            },
-            {
-              "property": "HoverColor",
-              "value": "ColorFade(Self.Color, 20%)"
-            },
-            {
-              "property": "Fill",
-              "value": "RGBA(0, 0, 0, 0)"
-            },
-            {
-              "property": "DisabledFill",
-              "value": "Self.Fill"
-            },
-            {
-              "property": "PressedFill",
-              "value": "Self.Fill"
-            },
-            {
-              "property": "HoverFill",
-              "value": "Self.Fill"
-            },
-            {
-              "property": "BorderStyle",
-              "value": "%BorderStyle.RESERVED%.Solid"
-            },
-            {
-              "property": "PressedBorderColor",
-              "value": "ColorFade(Self.BorderColor, -20%)"
-            },
-            {
-              "property": "HoverBorderColor",
-              "value": "ColorFade(Self.BorderColor, 20%)"
-            },
-            {
-              "property": "BorderThickness",
-              "value": "0"
-            },
-            {
-              "property": "FocusedBorderThickness",
-              "value": "2"
             }
           ]
         },
@@ -3815,193 +2411,11 @@
           "propertyValuesMap": [
             {
               "property": "Color",
-              "value": "%Palette.TextMainColorInverted%"
+              "value": "%Palette.PrimaryColor3%"
             },
             {
               "property": "Fill",
               "value": "%Palette.PrimaryColor1%"
-            },
-            {
-              "property": "HoverFill",
-              "value": "%Palette.HoverButtonBkgColor%"
-            },
-            {
-              "property": "HoverColor",
-              "value": "%Palette.TextMainColorInverted%"
-            },
-            {
-              "property": "BorderColor",
-              "value": "%Palette.InputBorderColor%"
-            },
-            {
-              "property": "DisabledColor",
-              "value": "RGBA(186, 186, 186, 1)"
-            },
-            {
-              "property": "PressedColor",
-              "value": "Self.Color"
-            },
-            {
-              "property": "DisabledBorderColor",
-              "value": "RGBA(56, 56, 56, 1)"
-            },
-            {
-              "property": "PressedBorderColor",
-              "value": "ColorFade(Self.BorderColor, -15%)"
-            },
-            {
-              "property": "HoverBorderColor",
-              "value": "ColorFade(Self.BorderColor, 15%)"
-            },
-            {
-              "property": "BorderStyle",
-              "value": "%BorderStyle.RESERVED%.Solid"
-            },
-            {
-              "property": "BorderThickness",
-              "value": "0"
-            },
-            {
-              "property": "DisabledFill",
-              "value": "RGBA(119, 119, 119, 1)"
-            },
-            {
-              "property": "PressedFill",
-              "value": "ColorFade(Self.Fill, -15%)"
-            }
-          ]
-        },
-        {
-          "controlTemplateName": "barcode",
-          "name": "defaultBarcodeStyle",
-          "propertyValuesMap": [
-            {
-              "property": "BorderColor",
-              "value": "%Palette.InputBorderColor%"
-            }
-          ]
-        },
-        {
-          "controlTemplateName": "barcodeScanner",
-          "name": "defaultBarcodeScannerStyle",
-          "propertyValuesMap": [
-            {
-              "property": "Color",
-              "value": "%Palette.TextMainColorInverted%"
-            },
-            {
-              "property": "Fill",
-              "value": "%Palette.PrimaryColor1%"
-            },
-            {
-              "property": "Font",
-              "value": "%Palette.TextBodyFontFace%"
-            },
-            {
-              "property": "FontWeight",
-              "value": "%Palette.TextEmphasisFontWeight%"
-            },
-            {
-              "property": "DisabledBorderColor",
-              "value": "%Palette.DisabledBorderColor%"
-            },
-            {
-              "property": "DisabledColor",
-              "value": "%Palette.DisabledTextMainColor%"
-            },
-            {
-              "property": "DisabledFill",
-              "value": "%Palette.DisabledInputBkgColor%"
-            },
-            {
-              "property": "Size",
-              "value": "%Palette.TextEmphasisFontSize%"
-            },
-            {
-              "property": "HoverColor",
-              "value": "%Palette.TextMainColorInverted%"
-            },
-            {
-              "property": "HoverFill",
-              "value": "%Palette.HoverButtonBkgColor%"
-            },
-            {
-              "property": "BorderColor",
-              "value": "ColorFade(Self.Fill, -15%)"
-            },
-            {
-              "property": "RadiusTopLeft",
-              "value": "10"
-            },
-            {
-              "property": "RadiusBottomRight",
-              "value": "10"
-            },
-            {
-              "property": "RadiusTopRight",
-              "value": "10"
-            },
-            {
-              "property": "RadiusBottomLeft",
-              "value": "10"
-            },
-            {
-              "property": "PressedBorderColor",
-              "value": "Self.Fill"
-            },
-            {
-              "property": "HoverBorderColor",
-              "value": "ColorFade(Self.BorderColor, 20%)"
-            },
-            {
-              "property": "BorderStyle",
-              "value": "%BorderStyle.RESERVED%.Solid"
-            },
-            {
-              "property": "BorderThickness",
-              "value": "2"
-            },
-            {
-              "property": "FocusedBorderThickness",
-              "value": "4"
-            },
-            {
-              "property": "PressedColor",
-              "value": "Self.Fill"
-            },
-            {
-              "property": "PressedFill",
-              "value": "Self.Color"
-            },
-            {
-              "property": "Italic",
-              "value": "false"
-            },
-            {
-              "property": "Underline",
-              "value": "false"
-            },
-            {
-              "property": "Strikethrough",
-              "value": "false"
-            },
-            {
-              "property": "Align",
-              "value": "%Align.RESERVED%.Center"
-            },
-            {
-              "property": "VerticalAlign",
-              "value": "%VerticalAlign.RESERVED%.Middle"
-            }
-          ]
-        },
-        {
-          "controlTemplateName": "camera",
-          "name": "defaultCameraStyle",
-          "propertyValuesMap": [
-            {
-              "property": "BorderColor",
-              "value": "%Palette.InputBorderColor%"
             }
           ]
         },
@@ -4016,22 +2430,6 @@
             {
               "property": "BorderColor",
               "value": "%Palette.InputBorderColor%"
-            },
-            {
-              "property": "Size",
-              "value": "2"
-            },
-            {
-              "property": "Fill",
-              "value": "RGBA(0, 0, 0, 0)"
-            },
-            {
-              "property": "BorderStyle",
-              "value": "%BorderStyle.RESERVED%.Solid"
-            },
-            {
-              "property": "BorderThickness",
-              "value": "2"
             }
           ]
         },
@@ -4064,68 +2462,8 @@
               "value": "%Palette.DisabledInputBkgColor%"
             },
             {
-              "property": "HoverFill",
-              "value": "%Palette.HoverButtonBkgColor%"
-            },
-            {
-              "property": "HoverColor",
-              "value": "%Palette.TextMainColorInverted%"
-            },
-            {
               "property": "Size",
               "value": "%Palette.TextEmphasisFontSize%"
-            },
-            {
-              "property": "RadiusTopLeft",
-              "value": "10"
-            },
-            {
-              "property": "RadiusTopRight",
-              "value": "10"
-            },
-            {
-              "property": "RadiusBottomLeft",
-              "value": "10"
-            },
-            {
-              "property": "RadiusBottomRight",
-              "value": "10"
-            },
-            {
-              "property": "BorderColor",
-              "value": "ColorFade(Self.Fill, -15%)"
-            },
-            {
-              "property": "DisabledBorderColor",
-              "value": "RGBA(56, 56, 56, 1)"
-            },
-            {
-              "property": "PressedBorderColor",
-              "value": "ColorFade(Self.BorderColor, -20%)"
-            },
-            {
-              "property": "HoverBorderColor",
-              "value": "ColorFade(Self.BorderColor, 20%)"
-            },
-            {
-              "property": "BorderStyle",
-              "value": "%BorderStyle.RESERVED%.Solid"
-            },
-            {
-              "property": "BorderThickness",
-              "value": "2"
-            },
-            {
-              "property": "FocusedBorderThickness",
-              "value": "4"
-            },
-            {
-              "property": "PressedColor",
-              "value": "Self.Color"
-            },
-            {
-              "property": "PressedFill",
-              "value": "ColorFade(Self.Fill, -20%)"
             }
           ]
         },
@@ -4144,70 +2482,6 @@
             {
               "property": "DisabledFill",
               "value": "%Palette.DisabledButtonBkgColor%"
-            },
-            {
-              "property": "Fill",
-              "value": "RGBA(0, 0, 0, 0)"
-            },
-            {
-              "property": "PressedFill",
-              "value": "ColorFade(Self.Fill, -20%)"
-            },
-            {
-              "property": "HoverFill",
-              "value": "ColorFade(Self.Fill, 20%)"
-            },
-            {
-              "property": "RadiusTopLeft",
-              "value": "0"
-            },
-            {
-              "property": "RadiusTopRight",
-              "value": "0"
-            },
-            {
-              "property": "RadiusBottomLeft",
-              "value": "0"
-            },
-            {
-              "property": "RadiusBottomRight",
-              "value": "0"
-            },
-            {
-              "property": "PressedBorderColor",
-              "value": "ColorFade(Self.BorderColor, -20%)"
-            },
-            {
-              "property": "HoverBorderColor",
-              "value": "ColorFade(Self.BorderColor, 20%)"
-            },
-            {
-              "property": "BorderThickness",
-              "value": "0"
-            },
-            {
-              "property": "FocusedBorderThickness",
-              "value": "2"
-            },
-            {
-              "property": "BorderStyle",
-              "value": "%BorderStyle.RESERVED%.Solid"
-            },
-            {
-              "property": "PaddingTop",
-              "value": "0"
-            },
-            {
-              "property": "PaddingRight",
-              "value": "0"
-            },
-            {
-              "property": "PaddingBottom",
-              "value": "0"
-            },
-            {
-              "property": "PaddingLeft",
-              "value": "0"
             }
           ]
         },
@@ -4280,68 +2554,8 @@
               "value": "%Palette.DisabledInputBkgColor%"
             },
             {
-              "property": "HoverFill",
-              "value": "%Palette.HoverButtonBkgColor%"
-            },
-            {
-              "property": "HoverColor",
-              "value": "%Palette.TextMainColorInverted%"
-            },
-            {
               "property": "Size",
               "value": "%Palette.TextEmphasisFontSize%"
-            },
-            {
-              "property": "RadiusTopLeft",
-              "value": "10"
-            },
-            {
-              "property": "RadiusTopRight",
-              "value": "10"
-            },
-            {
-              "property": "RadiusBottomLeft",
-              "value": "10"
-            },
-            {
-              "property": "RadiusBottomRight",
-              "value": "10"
-            },
-            {
-              "property": "BorderColor",
-              "value": "ColorFade(Self.Fill, -15%)"
-            },
-            {
-              "property": "DisabledBorderColor",
-              "value": "RGBA(56, 56, 56, 1)"
-            },
-            {
-              "property": "PressedBorderColor",
-              "value": "ColorFade(Self.BorderColor, -20%)"
-            },
-            {
-              "property": "HoverBorderColor",
-              "value": "ColorFade(Self.BorderColor, 20%)"
-            },
-            {
-              "property": "BorderStyle",
-              "value": "%BorderStyle.RESERVED%.Solid"
-            },
-            {
-              "property": "BorderThickness",
-              "value": "2"
-            },
-            {
-              "property": "FocusedBorderThickness",
-              "value": "4"
-            },
-            {
-              "property": "PressedColor",
-              "value": "Self.Color"
-            },
-            {
-              "property": "PressedFill",
-              "value": "ColorFade(Self.Fill, -20%)"
             }
           ]
         },
@@ -4356,90 +2570,6 @@
             {
               "property": "Fill",
               "value": "%Palette.InputBkgColor%"
-            },
-            {
-              "property": "BorderColor",
-              "value": "%Palette.InputBorderColor%"
-            },
-            {
-              "property": "BorderStyle",
-              "value": "%BorderStyle.RESERVED%.Solid"
-            },
-            {
-              "property": "BorderThickness",
-              "value": "0"
-            },
-            {
-              "property": "FocusedBorderThickness",
-              "value": "2"
-            },
-            {
-              "property": "Font",
-              "value": "%Font.RESERVED%.'Open Sans'"
-            },
-            {
-              "property": "Size",
-              "value": "11"
-            },
-            {
-              "property": "Italic",
-              "value": "false"
-            },
-            {
-              "property": "Underline",
-              "value": "false"
-            },
-            {
-              "property": "Strikethrough",
-              "value": "false"
-            },
-            {
-              "property": "DisabledBorderColor",
-              "value": "RGBA(56, 56, 56, 1)"
-            },
-            {
-              "property": "PressedBorderColor",
-              "value": "ColorFade(Self.BorderColor, -20%)"
-            },
-            {
-              "property": "HoverBorderColor",
-              "value": "ColorFade(Self.BorderColor, 20%)"
-            },
-            {
-              "property": "DisabledColor",
-              "value": "RGBA(186, 186, 186, 1)"
-            },
-            {
-              "property": "PressedColor",
-              "value": "Self.Color"
-            },
-            {
-              "property": "HoverColor",
-              "value": "Self.Color"
-            },
-            {
-              "property": "DisabledFill",
-              "value": "RGBA(119, 119, 119, 1)"
-            },
-            {
-              "property": "PressedFill",
-              "value": "ColorFade(Self.Fill, -20%)"
-            },
-            {
-              "property": "HoverFill",
-              "value": "ColorFade(Self.Fill, 20%)"
-            },
-            {
-              "property": "FontWeight",
-              "value": "%FontWeight.RESERVED%.Semibold"
-            },
-            {
-              "property": "Align",
-              "value": "%Align.RESERVED%.Center"
-            },
-            {
-              "property": "VerticalAlign",
-              "value": "%VerticalAlign.RESERVED%.Middle"
             }
           ]
         },
@@ -4450,18 +2580,6 @@
             {
               "property": "Fill",
               "value": "%Palette.PrimaryColor1%"
-            },
-            {
-              "property": "BorderColor",
-              "value": "%Palette.InputBorderColor%"
-            },
-            {
-              "property": "BorderStyle",
-              "value": "%BorderStyle.RESERVED%.Solid"
-            },
-            {
-              "property": "BorderThickness",
-              "value": "0"
             }
           ]
         },
@@ -4476,30 +2594,6 @@
             {
               "property": "BorderColor",
               "value": "%Palette.InputBorderColor%"
-            },
-            {
-              "property": "DisabledFill",
-              "value": "Self.Fill"
-            },
-            {
-              "property": "PressedFill",
-              "value": "Self.Fill"
-            },
-            {
-              "property": "HoverFill",
-              "value": "Self.Fill"
-            },
-            {
-              "property": "BorderStyle",
-              "value": "%BorderStyle.RESERVED%.Solid"
-            },
-            {
-              "property": "BorderThickness",
-              "value": "0"
-            },
-            {
-              "property": "FocusedBorderThickness",
-              "value": "2"
             }
           ]
         },
@@ -4538,20 +2632,6 @@
             {
               "property": "Fill",
               "value": "%Palette.PrimaryColor3Fade%"
-            },
-            {
-              "property": "BorderColor",
-              "value": "%Palette.InputBorderColor%"
-            }
-          ]
-        },
-        {
-          "controlTemplateName": "rectangle",
-          "name": "grayRectangleStyle",
-          "propertyValuesMap": [
-            {
-              "property": "Fill",
-              "value": "%Palette.ReservedGrayColor%"
             },
             {
               "property": "BorderColor",
@@ -4632,22 +2712,6 @@
             {
               "property": "InputBackgroundColor",
               "value": "%Palette.InputBkgColor%"
-            },
-            {
-              "property": "BorderStyle",
-              "value": "%BorderStyle.RESERVED%.Solid"
-            },
-            {
-              "property": "BorderThickness",
-              "value": "0"
-            },
-            {
-              "property": "Font",
-              "value": "%Font.RESERVED%.'Open Sans'"
-            },
-            {
-              "property": "FontWeight",
-              "value": "%FontWeight.RESERVED%.Normal"
             }
           ]
         },
@@ -4685,7 +2749,7 @@
             },
             {
               "property": "SelectedFill",
-              "value": "%Palette.PrimaryColor1Light%"
+              "value": "%Palette.PrimaryColor2Light%"
             },
             {
               "property": "SelectedColor",
@@ -4752,32 +2816,6 @@
           ]
         },
         {
-          "controlTemplateName": "microsoftStreamPlayback",
-          "name": "defaultMicrosoftStreamPlaybackStyle",
-          "propertyValuesMap": [
-            {
-              "property": "BorderColor",
-              "value": "%Palette.InputBorderColor%"
-            },
-            {
-              "property": "BorderStyle",
-              "value": "%BorderStyle.RESERVED%.Solid"
-            },
-            {
-              "property": "BorderThickness",
-              "value": "0"
-            },
-            {
-              "property": "Color",
-              "value": "%Palette.TextMainColor%"
-            },
-            {
-              "property": "Fill",
-              "value": "%Palette.ScreenBkgColor%"
-            }
-          ]
-        },
-        {
           "controlTemplateName": "form",
           "name": "defaultFormStyle",
           "propertyValuesMap": [
@@ -4818,106 +2856,6 @@
             {
               "property": "BorderColor",
               "value": "%Palette.InputBorderColor%"
-            }
-          ]
-        },
-        {
-          "controlTemplateName": "richTextEditor",
-          "name": "defaultRichTextEditorStyle",
-          "propertyValuesMap": [
-            {
-              "property": "BorderColor",
-              "value": "%Palette.InputBorderColor%"
-            }
-          ]
-        },
-        {
-          "controlTemplateName": "dataTable",
-          "name": "defaultDataTableStyle",
-          "propertyValuesMap": [
-            {
-              "property": "LinkColor",
-              "value": "%Palette.TextLinkColor%"
-            },
-            {
-              "property": "PrimaryColor1",
-              "value": "%Palette.PrimaryColor1%"
-            },
-            {
-              "property": "PrimaryColor2",
-              "value": "%Palette.PrimaryColor2%"
-            },
-            {
-              "property": "PrimaryColor3",
-              "value": "%Palette.PrimaryColor3%"
-            },
-            {
-              "property": "Color",
-              "value": "%Palette.TextMainColor%"
-            },
-            {
-              "property": "InvertedColor",
-              "value": "%Palette.TextMainColorInverted%"
-            },
-            {
-              "property": "DisabledColor",
-              "value": "%Palette.DisabledTextMainColor%"
-            },
-            {
-              "property": "SelectedFill",
-              "value": "%Palette.PrimaryColor1Light%"
-            },
-            {
-              "property": "SelectedColor",
-              "value": "%Palette.TextMainColor%"
-            },
-            {
-              "property": "HoverFill",
-              "value": "%Palette.PrimaryColor3Light%"
-            },
-            {
-              "property": "HoverColor",
-              "value": "%Palette.TextMainColor%"
-            },
-            {
-              "property": "BorderColor",
-              "value": "%Palette.InputBorderColor%"
-            },
-            {
-              "property": "InputFill",
-              "value": "%Palette.InputBkgColor%"
-            },
-            {
-              "property": "Font",
-              "value": "%Palette.TextBodyFontFace%"
-            },
-            {
-              "property": "FontWeight",
-              "value": "%Palette.TextBodyFontWeight%"
-            },
-            {
-              "property": "Size",
-              "value": "%Palette.TextBodyFontSize%"
-            },
-            {
-              "property": "HeadingFont",
-              "value": "%Palette.TextBodyFontFace%"
-            },
-            {
-              "property": "HeadingFontWeight",
-              "value": "%Palette.TextBodyFontWeight%"
-            },
-            {
-              "property": "HeadingSize",
-              "value": "%Palette.TextBodyFontSize%"
-            },
-            {
-              "property": "HeadingColor",
-              "value": "%Palette.TextMainColorInverted%"
-            },
-            {
-              "property": "HeadingFill",
-              "value": "%Palette.PrimaryColor1%"
             }
           ]
         }
