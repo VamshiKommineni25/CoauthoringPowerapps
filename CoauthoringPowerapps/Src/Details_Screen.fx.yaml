@@ -876,7 +876,9 @@ Details_Screen As screen:
             Font: ="Poppins"
             Overflow: =Overflow.Scroll
             Size: =10
-            Text: =LookUp(Certifications,ID=varCertificateDetails.CertificationID.Id).Description
+            Text: |-
+                =//If(IsBank(LookUp(Certifications,ID=varCertificateDetails.CertificationID.Id).Description,
+                If(IsBlank(LookUp(Certifications,ID=varCertificateDetails.CertificationID.Id).Description),"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.",LookUp(Certifications,ID=varCertificateDetails.CertificationID.Id).Description)
             VerticalAlign: =VerticalAlign.Top
             Width: =1157
             X: =36

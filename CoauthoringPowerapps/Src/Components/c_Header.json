@@ -9356,7 +9356,7 @@
             "Name": "Cart_Grp",
             "Parent": "Header_1",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 0,
+            "PublishOrderIndex": 937,
             "Rules": [
               {
                 "Category": "Design",
