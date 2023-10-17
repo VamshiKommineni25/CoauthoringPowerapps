@@ -7142,7 +7142,14 @@
             "AllowAccessToGlobals": true,
             "Children": [],
             "ControlPropertyState": [
-              "Image",
+              {
+                "AFDDataSourceName": "",
+                "AutoRuleBindingEnabled": false,
+                "AutoRuleBindingString": "",
+                "InvariantPropertyName": "Image",
+                "IsLockable": false,
+                "NameMapSourceSchema": "?"
+              },
               "ImagePosition",
               "ImageRotation",
               {
@@ -7233,7 +7240,7 @@
             "Rules": [
               {
                 "Category": "Data",
-                "InvariantScript": "SampleImage",
+                "InvariantScript": "'MicrosoftTeams-image (31)'",
                 "Property": "Image",
                 "RuleProviderType": "Unknown"
               },
@@ -9895,7 +9902,7 @@
         "NameMapSourceSchema": "?"
       }
     ],
-    "LastModifiedTimestamp": "638331263877336586",
+    "LastModifiedTimestamp": "638331264447887081",
     "Name": "c_Header",
     "Rules": [
       {
@@ -10041,7 +10048,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638331263877336586",
+  "LastModifiedTimestamp": "638331264447887081",
   "Name": "4e347dfcdde94913bd34c97cc0728f3c",
   "OverridableProperties": {},
   "Version": "638282056663502263"

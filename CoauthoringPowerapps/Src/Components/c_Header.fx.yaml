@@ -562,6 +562,7 @@ c_Header As CanvasComponent:
                 Height: ='Path 6778_1'.Height
                 HoverBorderColor: =RGBA(0, 0, 0, 0)
                 HoverFill: =RGBA(0, 0, 0, 0)
+                Image: ='MicrosoftTeams-image (31)'
                 OnSelect: =Navigate(c_Header.CartOnselect)
                 PressedBorderColor: =RGBA(0, 0, 0, 0)
                 PressedFill: =RGBA(0, 0, 0, 0)
