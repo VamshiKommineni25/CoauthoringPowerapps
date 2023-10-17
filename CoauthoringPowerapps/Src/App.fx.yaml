@@ -1,103 +1,47 @@
 App As appinfo:
     BackEnabled: =false
-    OnStart: |+
-        =ClearCollect(COL_CertificationSecurity,FirstN('CertificationApp-Security',100));
+    OnStart: |
+        =Set(varLoadingSpinner,false);
+        //Set(DaysCount,LookUp('Config List',Key="Days Count").'No. of days');
         Set(
-            varUserLevel,
-            If(
-                CountRows(
-                    FirstN(
-                        Filter(
-                            COL_CertificationSecurity,
-                            Title = "Certification-User"
-                        ),
-                        50
-                    )
-                ) = 1,
-                "USER",
-                varUserLevel
+            varUpcomingDaysCount,
+            LookUp(
+                'Config List',
+                Key = "Upcoming Days Count"
+            ).'No. of days'
+        );
+        Set(VarPastDaysCount,LookUp('Config List',Key="Past Days Count").'No. of days');
+        ClearCollect(ColMeetingList,Sort(MeetingList,ID,SortOrder.Descending));
+        Set(
+            varAgendaTab,
+            true
+        );
+        Set(
+            varUpcomingTab,
+            UpcomingGallery.Selected.Start
+        );
+        Set(
+            varShowUpcomingMeeting,
+            true
+        );
+        Set(
+            varMeetingDetails,
+            true
+        );
+        Set(
+            varResources,
+            true
+        );
+        If(
+            IsBlank(Gallery8_1),
+            Set(
+                varNoResources,
+                true
+            ),
+            Set(
+                varNoResources,
+                false
             )
-        );
-        ClearCollect(
-            myReports,
-            Office365Users.DirectReports(Office365Users.MyProfile().Id)
-        );
-        
-        Set(
-            varUserLevel,
-            If(
-                CountRows(
-                    FirstN(
-                        Filter(
-                            COL_CertificationSecurity,
-                            Title = "Certification-Admin"
-                        ),
-                        50
-                    )
-                ) = 1 || CountRows(myReports)>0,
-                "ADMIN",
-                varUserLevel
-            )
-        );
-        Set(
-            varUserLevel,
-            If(
-                CountRows(
-                    FirstN(
-                        Filter(
-                            COL_CertificationSecurity,
-                            Title = "Certification-SuperAdmin"
-                        ),
-                        50
-                    )
-                ) = 1,
-                "SUPER-ADMIN",
-                varUserLevel
-            )
-        );
-        
-        //Set(varUserLevel,"USER");
-        
-        Set(
-            MyProfile,
-            Office365Users.MyProfile()
-        );
-        Set(
-            varMngrname,
-            Office365Users.ManagerV2(Office365Users.MyProfile().Mail).displayName
-        );
-        Set(
-            MyUserId,
-            MyProfile.Id
-        );
-        ClearCollect(
-            userCertifications,
-            Filter(
-                CertificationOrder,
-                Requestor.Email = User().Email And Created > DateAdd(
-                    Today(),
-                    -365
-                )
-            )
-        );
-        ClearCollect(
-            Certification,
-            Certifications
-        );
-        ClearCollect(
-            col_filtercert2,
-            Filter(
-                CertificationOrder,
-                Location = 'Drp_Location List'.SelectedText.Value
-            )
-        );
-        ClearCollect(
-            Cert_Req,
-            CertificationRequest
-        );
-        ClearCollect(
-            BUList,
-           FirstN('BU-List',200)
         );
         Collect(
             CalendarLocalizedLabel,
@@ -149,56 +93,487 @@ App As appinfo:
             {Value: "日历"},
             {Value: "క్యాలెండర్"}
         );
-        ClearCollect(
-            col_Notification,
-            Filter(
-                LastN(
-                    NotificationList_CertificationApp,
-                    5000
-                ),
-                (Title = Office365Users.MyProfile().DisplayName && "been approved by your manager " & varMngrname in Notification) || ("has requested for" in Notification && Manager = User().FullName) || (Title = Office365Users.MyProfile().DisplayName && "been approved by ILD" in Notification) || (UserDeleted = false And Title = Office365Users.MyProfile().DisplayName)
+        Set(
+            _dateSelected,
+            Today()
+        );
+        Set(
+            _firstDayOfMonth,
+            DateAdd(
+                Today(),
+                1 - Day(Today()),
+                TimeUnit.Days
             )
         );
-        ClearCollect(
-            mngr_notify_Col,
-            Filter(
-                LastN(
-                    NotificationList_CertificationApp,
-                    5000
-                ),
-                Title = User().FullName && ("been approved by your manager " & varMngrname in Notification || "been approved by ILD" in Notification) && ManagerDeleted = false
+        Set(
+            _firstDayInView,
+            DateAdd(
+                _firstDayOfMonth,
+                -(Weekday(_firstDayOfMonth) - 2 + 1),
+                TimeUnit.Days
             )
         );
-        
-        Switch(
-            varUserLevel ,
-             "USER",
-            Set(varNotifyCount,CountRows(col_Notification)),
-             "ADMIN",
-            Set(varNotifyCount,CountRows(mngr_notify_Col)),
-             "SUPER-ADMIN",
-                CountRows(Filter(
-                    FirstN(
-                        NotificationList_CertificationApp,
-                        2000
+        Set(
+            _lastDayOfMonth,
+            DateAdd(
+                DateAdd(
+                    _firstDayOfMonth,
+                    1,
+                    TimeUnit.Months
+                ),
+                -1,
+                TimeUnit.Days
+            )
+        );
+        Set(
+            _calendarVisible,
+            false
+        );
+        //UpdateContext({_showLoading: true});
+        Set(
+            MyCalendarID,
+            LookUp(
+                Office365Outlook.CalendarGetTables().value,
+                DisplayName = LookUp(
+                    CalendarLocalizedLabel,
+                    Value = DisplayName
+                ).Value
+            ).Name
+        );
+        Set(
+            _minDate,
+            DateAdd(
+                _firstDayOfMonth,
+                -(Weekday(_firstDayOfMonth) - 2 + 1),
+                TimeUnit.Days
+            )
+        );
+        Set(
+            _maxDate,
+            DateAdd(
+                DateAdd(
+                    _firstDayOfMonth,
+                    -(Weekday(_firstDayOfMonth) - 2 + 1),
+                    TimeUnit.Days
+                ),
+                40,
+                TimeUnit.Days
+            )
+        );
+        Set(
+            varProfileView,
+            false
+        );
+        Set(
+            CurrentTime,
+            Now()
+        );
+        Concurrent(
+            Set(
+                MyCalendarID,
+                LookUp(
+                    Office365Outlook.CalendarGetTables().value,
+                    DisplayName = LookUp(
+                        CalendarLocalizedLabel,
+                        Value = DisplayName
+                    ).Value
+                ).Name
+            );
+            ClearCollect(
+                AllFutureEvents,
+                Office365Outlook.GetEventsCalendarView(
+                    MyCalendarID,
+                    Text(
+                        Now(),
+                        DateTimeFormat.UTC
                     ),
-                    "has uploaded proofs" in Notification And AdminDeleted = false
-                ))
-        );
-        Set(NoRecord,"My Certifications");
-        
-        
-        
-    StartScreen: |-
-        =If (
-            !IsBlank(Param("View")),
-            Details_Screen,
-            If(
-                Param("ScreenName"),
-                'FAQ Screen',
-                'Splash Screen'
+                    Text(
+                        DateAdd(
+                            Today(),
+                            varUpcomingDaysCount,
+                            TimeUnit.Days
+                        ),
+                        DateTimeFormat.UTC
+                    )
+                ).Values
+            );
+            Remove(
+                AllFutureEvents,
+                Filter(
+                    AllFutureEvents,
+                    StartsWith(
+                        Subject,
+                        "Canceled:"
+                    )
+                )
+            );
+            ClearCollect(
+                AllPastEvents,
+                Office365Outlook.GetEventsCalendarView(
+                    MyCalendarID,
+                    Text(
+                        DateAdd(
+                            Today(),
+                            -VarPastDaysCount,
+                            TimeUnit.Days
+                        ),
+                        DateTimeFormat.UTC
+                    ),
+                    Text(
+                        DateAdd(
+                            Now(),
+                            0,
+                            TimeUnit.Days
+                        ),
+                        DateTimeFormat.UTC
+                    )
+                ). Values
+            );
+            Remove(
+                AllPastEvents,
+                Filter(
+                    AllPastEvents,
+                    StartsWith(
+                        Subject,
+                        "Canceled:"
+                    )
+                )
+            );
+            ClearCollect(
+                AllPastEvents,
+                Filter(
+                    AllPastEvents,
+                    Not(Id in AllFutureEvents.Id)
+                )
+            );
+            Set(
+                varShowUpcomingMeeting,
+                true
+            );
+            ,
+            Set(
+                MyUserProfile,
+                Office365Users.MyProfile().Id
+            ),
+            Set(
+                MyDomain,
+                Last(
+                    ForAll(
+                        Split(
+                            User().Email,
+                            "@"
+                        ),
+                        {Result: ThisRecord.Value}
+                    )
+                ).Result
+            ),
+            Set(
+                HomeTimerStart,
+                Now()
             )
-        )
+        );
+        /*Meetings are defined to be calendar events less than 6 hours in length*/
+        ClearCollect(
+            MeetingsOnly,
+            Filter(
+                AddColumns(
+                    AllFutureEvents,
+                    "isCurrent",
+                    DateDiff(
+                        Start,
+                        Now(),
+                        TimeUnit.Seconds
+                    ) > 0 && DateDiff(
+                        Now(),
+                        End,
+                        TimeUnit.Seconds
+                    ) > 0
+                ),
+                DateDiff(
+                    Start,
+                    End,
+                    TimeUnit.Hours
+                ) < 6
+            )
+        );
+        Set(
+            NumberOfCurrentMeetings,
+            CountRows(
+                Filter(
+                    MeetingsOnly,
+                    isCurrent
+                )
+            )
+        );
+        /*If a single meeting is happening now, autoselect it*/
+        If(
+            NumberOfCurrentMeetings = 3,
+            Set(
+                AutoSelectMeeting,
+                true
+            );
+            Set(
+                SelectedMeeting,
+                LookUp(
+                    MeetingsOnly,
+                    isCurrent
+                )
+            )
+        );
+        ClearCollect(
+            HoursList,
+            {
+                Name: "12:00 am",
+                Minutes: 0
+            },
+            {
+                Name: "12:30 am",
+                Minutes: 30
+            },
+            {
+                Name: "01:00 am",
+                Minutes: 60
+            },
+            {
+                Name: "01:30 am",
+                Minutes: 90
+            },
+            {
+                Name: "02:00 am",
+                Minutes: 120
+            },
+            {
+                Name: "02:30 am",
+                Minutes: 150
+            },
+            {
+                Name: "03:00 am",
+                Minutes: 180
+            },
+            {
+                Name: "03:30 am",
+                Minutes: 210
+            },
+            {
+                Name: "04:00 am",
+                Minutes: 240,
+                Short: "4 am"
+            },
+            {
+                Name: "04:30 am",
+                Minutes: 270
+            },
+            {
+                Name: "05:00 am",
+                Minutes: 300
+            },
+            {
+                Name: "05:30 am",
+                Minutes: 330
+            },
+            {
+                Name: "06:00 am",
+                Minutes: 360
+            },
+            {
+                Name: "06:30 am",
+                Minutes: 390
+            },
+            {
+                Name: "07:00 am",
+                Minutes: 420
+            },
+            {
+                Name: "07:30 am",
+                Minutes: 450
+            },
+            {
+                Name: "08:00 am",
+                Minutes: 480,
+                Short: "8 am"
+            },
+            {
+                Name: "08:30 am",
+                Minutes: 510
+            },
+            {
+                Name: "09:00 am",
+                Minutes: 540
+            },
+            {
+                Name: "09:30 am",
+                Minutes: 570
+            },
+            {
+                Name: "10:00 am",
+                Minutes: 600
+            },
+            {
+                Name: "10:30 am",
+                Minutes: 630
+            },
+            {
+                Name: "11:00 am",
+                Minutes: 660
+            },
+            {
+                Name: "11:30 am",
+                Minutes: 690
+            },
+            {
+                Name: "12:00 pm",
+                Minutes: 720,
+                Short: "12 pm"
+            },
+            {
+                Name: "12:30 pm",
+                Minutes: 750
+            },
+            {
+                Name: "01:00 pm",
+                Minutes: 780
+            },
+            {
+                Name: "01:30 pm",
+                Minutes: 810
+            },
+            {
+                Name: "02:00 pm",
+                Minutes: 840
+            },
+            {
+                Name: "02:30 pm",
+                Minutes: 870
+            },
+            {
+                Name: "03:00 pm",
+                Minutes: 900
+            },
+            {
+                Name: "03:30 pm",
+                Minutes: 930
+            },
+            {
+                Name: "04:00 pm",
+                Minutes: 960,
+                Short: "4 pm"
+            },
+            {
+                Name: "04:30 pm",
+                Minutes: 990
+            },
+            {
+                Name: "05:00 pm",
+                Minutes: 1020
+            },
+            {
+                Name: "05:30 pm",
+                Minutes: 1050
+            },
+            {
+                Name: "06:00 pm",
+                Minutes: 1080
+            },
+            {
+                Name: "06:30 pm",
+                Minutes: 1110
+            },
+            {
+                Name: "07:00 pm",
+                Minutes: 1140
+            },
+            {
+                Name: "07:30 pm",
+                Minutes: 1170
+            },
+            {
+                Name: "08:00 pm",
+                Minutes: 1200,
+                Short: "8 pm"
+            },
+            {
+                Name: "08:30 pm",
+                Minutes: 1230
+            },
+            {
+                Name: "09:00 pm",
+                Minutes: 1260
+            },
+            {
+                Name: "09:30 pm",
+                Minutes: 1290
+            },
+            {
+                Name: "10:00 pm",
+                Minutes: 1320
+            },
+            {
+                Name: "10:30 pm",
+                Minutes: 1350
+            },
+            {
+                Name: "11:00 pm",
+                Minutes: 1380
+            },
+            {
+                Name: "11:30 pm",
+                Minutes: 1410
+            }
+        );
+        ClearCollect(
+            MinutesList,
+            ForAll(
+                Sequence(
+                    Text(
+                        1440,
+                        "#.00#"
+                    ),
+                    Text(
+                        00,
+                        "#.00#"
+                    ),
+                    Text(
+                        05,
+                        "#.00#"
+                    )
+                ),
+                {
+                    Name: Concatenate(
+                        Text(
+                            RoundDown(
+                                Value / 60,
+                                00
+                            ),
+                            "[$-en-US]00"
+                        ),
+                        ":",
+                        Text(
+                            Mod(
+                                Value,
+                                60
+                            ),
+                            "[$-en-US]00"
+                        ),
+                        If(
+                            (Value < 720),
+                            "am",
+                            "pm"
+                        )
+                    ),
+                    Minutes: Value
+                }
+            )
+        );
+        /*Set(arrUiparamList, First(Filter(MeetingAgendaSettingList, true)));
+        Set(
+            arrUIParameters,
+            {
+                TitleFont: arrUiparamList.FontFamily,
+                TitleFontSize:arrUiparamList.TitleFontSize,
+                SubTitleFontSize: arrUiparamList.SubtitleFontSize
+            }
+        );*/
+    StartScreen: ='Splash Screen'
     Theme: =PowerAppsTheme
 
     Host As hostControl.DefaultHostControlVariant:

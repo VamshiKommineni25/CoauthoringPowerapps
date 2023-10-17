@@ -1,0 +1,4215 @@
+"'New Home Screen_1' As screen":
+    Fill: =RGBA(247,248,250,1)
+    OnVisible: |
+        =Set(varCreateMeeting,true);
+        ClearCollect(
+            SelectedDateEvents,
+            Filter(
+                Office365Outlook.GetEventsCalendarView(
+                    MyCalendarID,
+                    Text(
+                        _dateSelected,
+                        "yyyy-mm-dd"
+                    ) & "T00:00:00Z",
+                    Text(
+                        _dateSelected,
+                        "yyyy-mm-dd"
+                    ) & "T23:59:59Z"
+                ).Values,
+                Start >= DateTimeValue(
+                    Text(
+                        _dateSelected,
+                        "yyyy-mm-dd"
+                    ) & "T00:00:00Z"
+                ) && End <= DateTimeValue(
+                    Text(
+                        _dateSelected,
+                        "yyyy-mm-dd"
+                    ) & "T23:59:59Z"
+                )
+            )
+        );
+
+    Label38 As label:
+        FontWeight: =FontWeight.Bold
+        Height: =50
+        Size: =28
+        Text: ="Meeting Dashboard"
+        Width: =400
+        X: =62
+        Y: =11
+        ZIndex: =1
+
+    "'Group vertical_menu_6' As group":
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =7
+
+        bg_16 As rectangle:
+            AccessibleLabel: ="bg_15"
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =768
+            TabIndex: =0
+            Width: =61
+            ZIndex: =2
+
+        iconHamburger_9 As icon.Hamburger:
+            AccessibleLabel: ="iconHamburger_8"
+            Height: =24
+            Icon: =Icon.Hamburger
+            OnSelect: =Navigate('MeetingDetails Screen', ScreenTransition.Fade)
+            TabIndex: =0
+            Tooltip: ="MeetingDetails"
+            Width: =24
+            X: =18
+            Y: =168
+            ZIndex: =3
+
+        "'Home Icon_12' As icon.Home":
+            AccessibleLabel: ="Home Icon_8"
+            Height: =24
+            Icon: =Icon.Home
+            OnSelect: =Navigate('New Home Screen',BorderStyle.None)
+            TabIndex: =0
+            Tooltip: ="Home Page"
+            Width: =24
+            X: =21
+            Y: =106
+            ZIndex: =4
+
+        iconResourceAdd_9 As icon.Add:
+            AccessibleLabel: ="iconResourceAdd_8"
+            Height: =24
+            Icon: =Icon.Add
+            OnSelect: =Navigate(ResourceScreen, ScreenTransition.Fade)
+            TabIndex: =0
+            Tooltip: ="Resource"
+            Width: =24
+            X: =18
+            Y: =229
+            ZIndex: =5
+
+    Label39 As label:
+        Color: =RGBA(163,166,174,1)
+        FontWeight: =FontWeight.Bold
+        Size: =14
+        Text: ="Welcome back!"
+        Width: =350
+        X: =74
+        Y: =73
+        ZIndex: =9
+
+    Label40 As label:
+        FontWeight: =FontWeight.Bold
+        Size: =12
+        Text: ="Today is"
+        X: =74
+        Y: =109
+        ZIndex: =10
+
+    Button10 As button:
+        Color: =
+        Fill: =RGBA(234,243,252,1)
+        PaddingLeft: =0
+        RadiusBottomLeft: =20
+        RadiusBottomRight: =20
+        RadiusTopLeft: =20
+        RadiusTopRight: =20
+        Size: =12
+        Text: =""
+        Width: =1264
+        X: =62
+        Y: =151
+        ZIndex: =11
+
+    Label41 As label:
+        Color: =RGBA(47, 55, 120, 1)
+        FontWeight: =FontWeight.Bold
+        Size: =12
+        Text: |
+            =Text(Today(), "mmmm dd, yyyy")
+        Width: =250
+        X: =90
+        Y: =151
+        ZIndex: =12
+
+    Button11 As button:
+        Color: =RGBA(255, 255, 255, 1)
+        Fill: =RGBA(47, 55, 120, 1)
+        Height: =25
+        RadiusBottomLeft: =20
+        RadiusBottomRight: =20
+        RadiusTopLeft: =20
+        RadiusTopRight: =20
+        Size: =0
+        Text: ="Button"
+        Width: =80
+        X: =1240
+        Y: =157
+        ZIndex: =13
+
+    Label42 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =25
+        Size: =12
+        Text: ="Day"
+        Width: =80
+        X: =1240
+        Y: =158
+        ZIndex: =14
+
+    Glry_Calendar As gallery.galleryHorizontal:
+        DelayItemLoading: =true
+        Fill: =RGBA(255, 255, 255, 1)
+        FocusedBorderThickness: =0
+        Height: =101
+        Items: =[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19, 20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41]
+        LoadingSpinner: =LoadingSpinner.Data
+        OnSelect: |
+            =ClearCollect(
+                SelectedDateEvents,
+                Filter(
+                    Office365Outlook.GetEventsCalendarView(
+                        MyCalendarID,
+                        Text(
+                            _dateSelected,
+                            "yyyy-mm-dd"
+                        ) & "T00:00:00Z",
+                        Text(
+                            _dateSelected,
+                            "yyyy-mm-dd"
+                        ) & "T23:59:59Z"
+                    ).Values,
+                    Start >= DateTimeValue(
+                        Text(
+                            _dateSelected,
+                            "yyyy-mm-dd"
+                        ) & "T00:00:00Z"
+                    ) && End <= DateTimeValue(
+                        Text(
+                            _dateSelected,
+                            "yyyy-mm-dd"
+                        ) & "T23:59:59Z"
+                    )
+                )
+            );
+        ShowNavigation: =true
+        ShowScrollbar: =false
+        TemplateSize: =90
+        Width: =1264
+        X: =62
+        Y: =215
+        ZIndex: =15
+
+        Container5 As groupContainer.manualLayoutContainer:
+            BorderColor: =RGBA(247, 248, 250, 1)
+            BorderThickness: =1
+            DropShadow: =DropShadow.Semibold
+            Height: =91
+            RadiusBottomLeft: =10
+            RadiusBottomRight: =10
+            RadiusTopLeft: =10
+            RadiusTopRight: =10
+            Width: =90
+            ZIndex: =4
+
+            Rectangle8_1 As rectangle:
+                Fill: =RGBA(47, 55, 120, 1)
+                Height: =91
+                Visible: =And(DateAdd(_firstDayInView, ThisItem.Value) = _dateSelected, Label43.Visible)
+                Width: =90
+                ZIndex: =1
+
+            Label43 As label:
+                Align: =Align.Center
+                Color: =If(DateAdd(_firstDayInView, ThisItem.Value) = _dateSelected, RGBA(255, 255, 255, 1), DateAdd(_firstDayInView, ThisItem.Value) = Today(), RGBA(0, 0, 0, 1))
+                Height: =50
+                OnSelect: |
+                    =Set(_dateSelected, DateAdd(_firstDayInView, ThisItem.Value, TimeUnit.Days));
+                    ClearCollect(
+                        SelectedDateEvents,
+                        Filter(
+                            Office365Outlook.GetEventsCalendarView(
+                                MyCalendarID,
+                                Text(
+                                    _dateSelected,
+                                    "yyyy-mm-dd"
+                                ) & "T00:00:00Z",
+                                Text(
+                                    _dateSelected,
+                                    "yyyy-mm-dd"
+                                ) & "T23:59:59Z"
+                            ).Values,
+                            Start >= DateTimeValue(
+                                Text(
+                                    _dateSelected,
+                                    "yyyy-mm-dd"
+                                ) & "T00:00:00Z"
+                            ) && End <= DateTimeValue(
+                                Text(
+                                    _dateSelected,
+                                    "yyyy-mm-dd"
+                                ) & "T23:59:59Z"
+                            )
+                        )
+                    );
+                Text: =Day(DateAdd(_firstDayInView,ThisItem.Value,TimeUnit.Days))
+                Visible: |-
+                    =/*This item is in a row containing no days of the visible month. It is in the row after the row where the last day of the month occurs*/ 
+                     !(DateAdd(_firstDayInView,ThisItem.Value,TimeUnit.Days) - Weekday(DateAdd(_firstDayInView,ThisItem.Value,TimeUnit.Days)) + 1 > _lastDayOfMonth)
+                Width: =72
+                Y: =41
+                ZIndex: =2
+
+            Label35 As label:
+                Align: =Align.Center
+                Color: =If(DateAdd(_firstDayInView, ThisItem.Value) = _dateSelected, RGBA(255, 255, 255, 1), DateAdd(_firstDayInView, ThisItem.Value) = Today(), RGBA(163,166,174,1),RGBA(163,166,174,1))
+                FontWeight: =FontWeight.Bold
+                OnSelect: |
+                    =Set(_dateSelected, DateAdd(_firstDayInView, ThisItem.Value, TimeUnit.Days));
+                    ClearCollect(
+                        SelectedDateEvents,
+                        Filter(
+                            Office365Outlook.GetEventsCalendarView(
+                                MyCalendarID,
+                                Text(
+                                    _dateSelected,
+                                    "yyyy-mm-dd"
+                                ) & "T00:00:00Z",
+                                Text(
+                                    _dateSelected,
+                                    "yyyy-mm-dd"
+                                ) & "T23:59:59Z"
+                            ).Values,
+                            Start >= DateTimeValue(
+                                Text(
+                                    _dateSelected,
+                                    "yyyy-mm-dd"
+                                ) & "T00:00:00Z"
+                            ) && End <= DateTimeValue(
+                                Text(
+                                    _dateSelected,
+                                    "yyyy-mm-dd"
+                                ) & "T23:59:59Z"
+                            )
+                        )
+                    );
+                Size: =12
+                Text: |
+                    =Switch(
+                        Weekday(DateAdd(_firstDayInView,ThisItem.Value,TimeUnit.Days)), // Get the weekday number (1 for Sunday, 2 for Monday, etc.)
+                        1, "Sun",
+                        2, "Mon",
+                        3, "Tue",
+                        4, "Wed",
+                        5, "Thu",
+                        6, "Fri",
+                        7, "Sat",
+                        "Unknown" // Default value if the weekday number is not 1-7
+                    )
+                Width: =90
+                Y: =1
+                ZIndex: =3
+
+    Glry_MeetingType As gallery.galleryHorizontal:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        Height: =58
+        Items: |-
+            =//Table({Name:"My Certifications"},{Name:"Assigned to"})
+                Table(
+                    {Name: "All Meetings"},
+                    {Name: "Canceled Meetings"},
+                    {Name: "Organised by me"}
+                )
+        ShowScrollbar: =false
+        TabIndex: =0
+        TemplateSize: =210
+        Width: =727
+        X: =76
+        Y: =320
+        ZIndex: =16
+
+        lbl_CertName As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            Color: =If(ThisItem.IsSelected,RGBA(0, 0, 0, 1),RGBA(163,166,174,1))
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderColor: =RGBA(0,0,0,0)
+            FocusedBorderThickness: =2
+            Font: ="Montserrat"
+            FontWeight: =FontWeight.Bold
+            Height: =30
+            HoverBorderColor: =
+            HoverColor: =RGBA(0, 0, 0, 1)
+            HoverFill: =
+            OnSelect: |
+                =Set(NoRecord,ThisItem.Name);
+            Size: =12
+            TabIndex: =0
+            Text: =ThisItem.Name
+            VerticalAlign: =VerticalAlign.Bottom
+            Width: =210
+            ZIndex: =1
+
+        Rectangle11_1 As rectangle:
+            BorderColor: =RGBA(251, 175, 81, 1)
+            BorderThickness: =3
+            Fill: =RGBA(251, 175, 81, 1)
+            Height: =1
+            OnSelect: =Select(Parent)
+            Visible: =ThisItem.IsSelected
+            Width: =140
+            Y: =40
+            ZIndex: =2
+
+    "'Glry_All Meetings' As gallery.galleryVertical":
+        DelayItemLoading: =true
+        FocusedBorderThickness: |
+            =0
+        Height: =400
+        Items: |-
+            =Search(
+                Sort(
+                    SelectedDateEvents,
+                    Start
+                ),
+                inputSearchText_1.Text,
+                "Subject",
+                "Body"
+            )
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        ShowNavigation: =true
+        ShowScrollbar: =false
+        TemplatePadding: =20
+        TemplateSize: =176
+        Visible: =If(Glry_MeetingType.Selected.lbl_CertName.Text="All Meetings",true,false)
+        Width: =1284
+        WrapCount: =3
+        X: =76
+        Y: =368
+        ZIndex: =17
+
+        Container3 As groupContainer.manualLayoutContainer:
+            DropShadow: =DropShadow.Semibold
+            Fill: |-
+                =If(
+                    ThisItem.Start <= Now() && ThisItem.End >= Now(),
+                    RGBA(
+                         48,
+                        55,
+                        120,
+                        1
+                    ),
+                    RGBA(
+                        255,
+                        255,
+                        255,
+                        1
+                    )
+                )
+            Height: =172
+            RadiusBottomLeft: =20
+            RadiusBottomRight: =20
+            RadiusTopLeft: =20
+            RadiusTopRight: =20
+            Width: =401.3333333333333
+            ZIndex: =1
+
+            Label44 As label:
+                Color: |-
+                    =If(
+                        ThisItem.Start <= Now() && ThisItem.End >= Now(),
+                        RGBA(
+                            255,
+                            255,
+                            255,
+                            1
+                        ),
+                        RGBA(
+                            47,
+                            41,
+                            43,
+                            1
+                        )
+                    )
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Bold
+                Height: =30
+                Overflow: =Overflow.Scroll
+                Size: =12
+                Text: =ThisItem.Subject
+                Width: =300
+                Y: =9
+                ZIndex: =1
+
+            lbl_currentMeetingLabel_4 As label:
+                Align: =Align.Center
+                Color: |-
+                    =/*If(
+                        ThisItem.Id = SelectedMeeting.Id,
+                       RGBA(
+                            48,
+                            55,
+                            120,
+                            1
+                        ),
+                        RGBA(
+                            255,255,255,1
+                        )
+                    )*/
+                    If(
+                        ThisItem.Start <= Now() && ThisItem.End >= Now(),
+                        RGBA(
+                            255,
+                            255,
+                            255,
+                            1
+                        ),
+                        RGBA(
+                            47,
+                            41,
+                            43,
+                            1
+                        )
+                    )
+                Font: =Font.Lato
+                FontWeight: =FontWeight.Semibold
+                Height: =30
+                OnSelect: =
+                Size: =9
+                Text: ="Current Meeting"
+                Visible: =(AutoSelectMeeting = true || (ThisItem.End > Now() && ThisItem.Start < Now()))
+                Width: =132
+                X: =269.3333333333333
+                Y: =9
+                ZIndex: =4
+
+            "'Organaizer Group_7' As group":
+                Height: =5
+                Width: =5
+                X: =-56
+                Y: =-20
+                ZIndex: =4
+
+                Organaizer_8 As label:
+                    Color: |-
+                        =If(
+                            ThisItem.Start <= Now() && ThisItem.End >= Now(),
+                            RGBA(
+                                255,
+                                255,
+                                255,
+                                1
+                            ),
+                            RGBA(
+                                163,
+                                166,
+                                174,
+                                1
+                            )
+                        )
+                    Font: =Font.Lato
+                    Height: =25
+                    OnSelect: =
+                    PaddingLeft: =0
+                    Size: =10
+                    Text: |-
+                        =//Office365Users.UserProfile(ThisItem.Organizer).DisplayName
+                        //If(!IsBlank(ThisItem.Organizer), Office365Users.UserProfile(ThisItem.Organizer).DisplayName,false)
+                        If(
+                            !IsBlank(ThisItem.Organizer) /* && "@ilink-systems.com"  ThisItem.Organizer */ && !IsEmpty(
+                                Office365Users.SearchUser(
+                                    {
+                                        searchTerm: ThisItem.Organizer,
+                                        top: 999
+                                    }
+                                )
+                            ),
+                            Office365Users.UserProfile(ThisItem.Organizer).DisplayName,
+                            ThisItem.Organizer
+                        )
+                    Width: =302
+                    X: =78
+                    Y: =39
+                    ZIndex: =2
+
+                Organaizer_14 As label:
+                    Color: |-
+                        =If(
+                            ThisItem.Start <= Now() && ThisItem.End >= Now(),
+                            RGBA(
+                                255,
+                                255,
+                                255,
+                                1
+                            ),
+                            RGBA(
+                                163,
+                                166,
+                                174,
+                                1
+                            )
+                        )
+                    Font: =Font.Lato
+                    Height: =25
+                    OnSelect: =
+                    PaddingLeft: =0
+                    Size: =10
+                    Text: |-
+                        ="Organizer :"
+                    Width: =90
+                    X: =9.333333333333314
+                    Y: =39
+                    ZIndex: =3
+
+            "'Resources Group_7' As group":
+                Height: =5
+                Width: =5
+                X: =10
+                Y: =6
+                ZIndex: =12
+
+                Resources_9 As label:
+                    Color: |-
+                        =If(
+                            ThisItem.Start <= Now() && ThisItem.End >= Now(),
+                            RGBA(
+                                255,
+                                255,
+                                255,
+                                1
+                            ),
+                            RGBA(
+                                163,
+                                166,
+                                174,
+                                1
+                            )
+                        )
+                    Font: =Font.Lato
+                    FontWeight: =FontWeight.Semibold
+                    Height: =14
+                    OnSelect: =
+                    Size: =10
+                    Text: ="Resources"
+                    Width: =90
+                    X: =253
+                    Y: =77
+                    ZIndex: =9
+
+                ResourcesCount_9 As label:
+                    Color: |-
+                        =If(
+                            ThisItem.Start <= Now() && ThisItem.End >= Now(),
+                            RGBA(
+                                255,
+                                255,
+                                255,
+                                1
+                            ),
+                            RGBA(
+                                0,
+                                0,
+                                0,
+                                1
+                            )
+                        )
+                    Font: =Font.Lato
+                    FontWeight: =FontWeight.Bold
+                    Height: =14
+                    OnSelect: =
+                    Size: =10
+                    Text: |-
+                        =/*CountRows(
+                            Filter(
+                                MeetingAgendaLists,
+                                MeetingID = variCalUID.icaluid
+                            )
+                        )
+                        + 
+                        CountRows(
+                            First(Filter(
+                                MeetingList,
+                                MeetingID = variCalUID.icaluid
+                            )).'{Attachments}'
+                        )*/
+                        //"0"
+                        /*CountRows(
+                            Filter(
+                                AllFutureEvents,
+                                Id = ThisItem.Id
+                            ).RequiredAttendees
+                        ) 
+                        + 
+                        CountRows(
+                            Filter(
+                                AllFutureEvents,
+                                Id = ThisItem.Id
+                            ).OptionalAttendees
+                        )*/
+                        If(IsBlank(
+                            
+                                First(Filter(
+                                    MeetingList,
+                                //MeetingID = variCalUID.icaluid && ThisItem.IsSelected
+                             Title=ThisItem.Subject
+                                )
+                            ).'{Attachments}'
+                        ),"0",CountRows(
+                            
+                                First(Filter(
+                                    MeetingList,
+                                //MeetingID = variCalUID.icaluid && ThisItem.IsSelected
+                             Title=ThisItem.Subject
+                                )
+                            ).'{Attachments}'
+                        ))
+                    Width: =90
+                    X: =253
+                    Y: =96
+                    ZIndex: =10
+
+            AttendeeGroup_7 As group:
+                Height: =5
+                Width: =5
+                X: =10
+                Y: =6
+                ZIndex: =15
+
+                Attendees_10 As label:
+                    Color: |-
+                        =If(
+                            ThisItem.Start <= Now() && ThisItem.End >= Now(),
+                            RGBA(
+                                255,
+                                255,
+                                255,
+                                1
+                            ),
+                             RGBA(
+                                163,
+                                166,
+                                174,
+                                1
+                            )
+                        )
+                    Font: =Font.Lato
+                    FontWeight: =FontWeight.Semibold
+                    Height: =14
+                    OnSelect: =
+                    Size: =10
+                    Text: ="Attendees"
+                    Width: =90
+                    X: =126
+                    Y: =77
+                    ZIndex: =13
+
+                AttendeesCount_9 As label:
+                    Color: |-
+                        =If(
+                            ThisItem.Start <= Now() && ThisItem.End >= Now(),
+                            RGBA(
+                                255,
+                                255,
+                                255,
+                                1
+                            ),
+                            RGBA(
+                                47,
+                                41,
+                                43,
+                                1
+                            )
+                        )
+                    Font: =Font.Lato
+                    FontWeight: =FontWeight.Bold
+                    Height: =14
+                    OnSelect: =
+                    Size: =10
+                    Text: |-
+                        =CountA(
+                            ForAll(Split(
+                                Concatenate(
+                                    ThisItem.RequiredAttendees,
+                                    ThisItem.OptionalAttendees
+                                ),
+                                ";"
+                            ), {Result: ThisRecord.Value})
+                        )-1
+                    Width: =90
+                    X: =126
+                    Y: =96
+                    ZIndex: =14
+
+            Rectangle12 As rectangle:
+                Fill: =RGBA(163,166,174,1)
+                Height: =1
+                Width: =401.3333333333333
+                Y: =115
+                ZIndex: =16
+
+            TimeGrp As group:
+                Height: =5
+                Width: =5
+                X: =40
+                Y: =40
+                ZIndex: =16
+
+                Time_10 As label:
+                    Color: |-
+                        =If(
+                            ThisItem.Start <= Now() && ThisItem.End >= Now(),
+                            RGBA(
+                                255,
+                                255,
+                                255,
+                                1
+                            ),
+                            RGBA(
+                                47,
+                                41,
+                                43,
+                                1
+                            )
+                        )
+                    Font: =Font.Lato
+                    FontWeight: =FontWeight.Bold
+                    Height: =24
+                    OnSelect: =
+                    Size: =10
+                    Text: |-
+                        =Text(ThisItem.Start, "HH:mm:AM/PM")
+                    Width: =122
+                    X: =26
+                    Y: =91
+                    ZIndex: =6
+
+                "'Clock Icon_10' As icon.Alarm":
+                    Color: |-
+                        =If(
+                            ThisItem.Start <= Now() && ThisItem.End >= Now(),
+                            RGBA(
+                                255,
+                                255,
+                                255,
+                                1
+                            ),
+                            RGBA(
+                                153,
+                                153,
+                                153,
+                                1
+                            )
+                        )
+                    Height: =24
+                    Icon: =Icon.Alarm
+                    OnSelect: =
+                    Width: =16
+                    X: =12
+                    Y: =91
+                    ZIndex: =7
+
+                Time As label:
+                    Color: |-
+                        =If(
+                            ThisItem.Start <= Now() && ThisItem.End >= Now(),
+                            RGBA(
+                                255,
+                                255,
+                                255,
+                                1
+                            ),
+                             RGBA(
+                                163,
+                                166,
+                                174,
+                                1
+                            )
+                        )
+                    FontWeight: =FontWeight.Semibold
+                    Height: =14
+                    Size: =10
+                    Text: ="Time"
+                    Width: =90
+                    X: =5
+                    Y: =77
+                    ZIndex: =15
+
+            ViewButton_7 As button:
+                BorderColor: |-
+                    =If(
+                        ThisItem.Start <= Now() && ThisItem.End >= Now(),
+                        RGBA(
+                            101,
+                            128,
+                            187,
+                            1
+                        ),
+                        RGBA(
+                            48,
+                            55,
+                            120,
+                            1
+                        )
+                    )
+                BorderThickness: =1
+                Color: |-
+                    =If(
+                        ThisItem.Start <= Now() && ThisItem.End >= Now(),
+                        RGBA(
+                            255,
+                            255,
+                            255,
+                            1
+                        ),
+                        RGBA(
+                            48,
+                            55,
+                            120,
+                            1
+                        )
+                    )
+                DisabledBorderColor: =RGBA(255, 255, 255, 1)
+                DisabledFill: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(0, 0, 0, 0)
+                FocusedBorderThickness: =0
+                Font: =Font.Lato
+                Height: =30
+                HoverBorderColor: =
+                HoverColor: |-
+                    =If(
+                        ThisItem.Start <= Now() && ThisItem.End >= Now(),
+                        RGBA(
+                            255,
+                            255,
+                            255,
+                            1
+                        ),
+                        RGBA(
+                            48,
+                            55,
+                            120,
+                            1
+                        )
+                    )
+                HoverFill: =RGBA(0, 0, 0, 0)
+                OnSelect: |
+                    =/*Set(varMeetingID, ThisItem.Id);*/
+                    Concurrent(Set(varLoadingSpinner,true),Set(
+                        Loading,
+                        true
+                    ),
+                    Set(
+                        SelectedMeeting,
+                        ThisItem
+                    ),
+                    ClearCollect(
+                        CombinedEvents,
+                        AllPastEvents,
+                        AllFutureEvents
+                    ));
+                    
+                    Concurrent(
+                    Set(
+                        varOrganizerName,
+                        SelectedMeeting.Organizer
+                    ),
+                    Set(
+                        VarUserEmail,
+                        User().Email
+                    ),
+                    If(
+                        CountRows(
+                            Filter(
+                                ColMeetingList,
+                                SelectedMeeting.Id exactin MeetingID 
+                            )
+                        ) = 0,
+                        IfError(
+                            Patch(
+                                MeetingList,
+                                Defaults(MeetingList),
+                                {
+                                    Title: SelectedMeeting.Subject,
+                                    MeetingID: SelectedMeeting.Id,
+                                    AllowAttendeesToCreateAgenda: 1
+                                }
+                            ),
+                            Notify(
+                                "No details available for this meeting",
+                                NotificationType.Error
+                            ),
+                            false
+                        )
+                    ),
+                    ClearCollect(
+                        MeetingAttendeeEmails,
+                        Filter(
+                            ForAll(
+                                Split(
+                                    Concatenate(
+                                        SelectedMeeting.RequiredAttendees,
+                                        SelectedMeeting.OptionalAttendees
+                                    ),
+                                    ";"
+                                ),
+                                {Result: ThisRecord.Value}
+                            ),
+                            Result <> ""
+                        )
+                    ));
+                    /*Set(
+                        varSelectedMeetingSpItem,
+                        Filter(
+                            MeetingList,
+                            MeetingID = SelectedMeeting.Id
+                        )
+                    );*/
+                    /*ClearCollect(
+                        MeetingAttendeesTemp,
+                        ForAll(
+                            MeetingAttendeeEmails,
+                            If(Not(IsBlank(Result)) ,
+                         If(
+                                IsError(
+                                      Office365Users.UserProfileV2(Result)
+                                    ),
+                                    {
+                                    displayName: Result,
+                                    id: "",
+                                    image: Blank(),
+                                    jobTitle: "",
+                                    userPrincipalName: Result,
+                                    Mail: Result
+                                },
+                                Office365Users.UserProfileV2(Result)
+                             ),
+                           {
+                                    displayName: Result,
+                                    id: "",
+                                    image: Blank(),
+                                    jobTitle: "",
+                                    userPrincipalName: Result,
+                                    Mail: Result
+                                }
+                    )
+                        )
+                    );*/
+                    ClearCollect(
+                        MeetingAttendeesTemp,
+                        ForAll(
+                            MeetingAttendeeEmails,
+                            If(
+                                Not(IsBlank(Result)) && MyDomain in Result,
+                                //Office365Users.UserProfileV2(Result),
+                                If(
+                                    !IsEmpty(
+                                        Office365Users.SearchUser(
+                                            {
+                                                searchTerm: Result,
+                                                top: 999
+                                            }
+                                        )
+                                    ),
+                                    Office365Users.UserProfileV2(Result),
+                                    {
+                                        displayName: Result,
+                                        id: "",
+                                        image: Blank(),
+                                        jobTitle: "",
+                                        userPrincipalName: Result,
+                                        Mail: Result
+                                    }
+                                ),
+                                {
+                                    displayName: Result,
+                                    id: "",
+                                    image: Blank(),
+                                    jobTitle: "",
+                                    userPrincipalName: Result,
+                                    Mail: Result
+                                }
+                            )
+                        )
+                    );
+                    ClearCollect(
+                        MeetingAttendees,
+                        RenameColumns(
+                            MeetingAttendeesTemp,
+                            "id",
+                            "Id",
+                            "jobTitle",
+                            "JobTitle",
+                            "displayName",
+                            "DisplayName",
+                            "userPrincipalName",
+                            "Mail"
+                        )
+                    );
+                    /*
+                    Set(
+                        arrMeetingSeries,
+                        Filter(
+                            AllFutureEvents,
+                            SeriesMasterId = SelectedMeeting.SeriesMasterId
+                        )
+                    );
+                    Set(
+                        LastStartDateTime,
+                        (Last(arrMeetingSeries).Start)
+                    );
+                    Set(
+                        FirstStartDateTime,
+                        (First(arrMeetingSeries).Start)
+                    );
+                    Set(
+                        SelectedStartDatetime,
+                        SelectedMeeting.Start
+                    );
+                    */
+                    /*
+                    Set(
+                        varG_SelectedMeetingSPData,
+                        LookUp(
+                            MeetingList,
+                            MeetingID = SelectedMeeting.Id
+                        )
+                    );*/
+                    Set(
+                        arrMeetingSeries,
+                        Filter(
+                            CombinedEvents,
+                            SeriesMasterId = SelectedMeeting.SeriesMasterId
+                        )
+                    );
+                    Concurrent(ClearCollect(ColAttendees,AddColumns(
+                        MeetingAttendees,
+                        "UserPhoto",
+                            // check if the the user has an email and a profile picture
+                        If(
+                            Not(IsBlank(Id)) && Office365Users.UserPhotoMetadata(Id).HasPhoto,
+                            Office365Users.UserPhotoV2(Id)
+                        ),
+                        "Initials",
+                        With(
+                            {
+                                // get the user record
+                                varRecordUser: If(
+                                    !IsBlank(Id) && "@ilink-systems.com" in Mail,
+                                    Office365Users.UserProfileV2(Id),
+                                    {
+                                    displayName: Mail,
+                                    surname: Mail
+                                }
+                                )
+                            },
+                            // find the user initials
+                            Concatenate(
+                                Left(
+                                    varRecordUser.displayName,
+                                    1
+                                ),
+                                Left(
+                                    varRecordUser.surname,
+                                    1
+                                )
+                            )
+                        )
+                    )
+                    ),
+                    Set(
+                        LastStartDateTime,
+                        (Last(arrMeetingSeries).Start)
+                    ),
+                    Set(
+                        FirstStartDateTime,
+                        (First(arrMeetingSeries).Start)
+                    ),
+                    Set(
+                        SelectedStartDatetime,
+                        SelectedMeeting.Start
+                    ));
+                    Set(varSelectedMeetingId,SelectedMeeting.Id);
+                    Set(varSelectedSeriesMasterId,SelectedMeeting.SeriesMasterId);
+                    /*
+                    Set(
+                        varAgendaTab,
+                        false
+                    );
+                    Set(
+                        varNoAgenda,
+                        false
+                    );
+                    
+                    If(
+                        IsBlank(PlannerGallery_1),
+                        Set(
+                            varNoPlanner,
+                            true
+                        ),
+                        Set(
+                            varNoPlanner,
+                            false
+                        )
+                    );
+                    Set(
+                        varAgendaTab,
+                        true
+                    );
+                    Set(
+                        varNoPlanner,
+                        false
+                    );
+                    If(
+                        IsBlank(AgendaGallery_2),
+                        Set(
+                            varNoAgenda,
+                            true
+                        ),
+                        Set(
+                            varNoAgenda,
+                            false
+                        )
+                    );
+                    Set(
+                        varResources,
+                        true
+                    );
+                    Set(
+                        varPollPopup,
+                        false
+                    );
+                    If(
+                        IsBlank(Gallery8_1),
+                        Set(
+                            varNoResources,
+                            true
+                        ),
+                        Set(
+                            varNoResources,
+                            false
+                        )
+                    );
+                    */
+                    
+                    Set(
+                        variCalUID,
+                        GetCalenderIDForMeeting.Run(
+                            MyCalendarID,
+                            varSelectedMeetingId
+                        )
+                    );
+                    If(
+                        !IsBlank(SelectedMeeting.SeriesMasterId),
+                        Set(
+                            ICalRecurrenceId,
+                            GetCalenderIDForMeeting.Run(
+                                MyCalendarID,
+                                varSelectedSeriesMasterId
+                            )
+                        ),
+                        false
+                    );
+                    Concurrent(
+                    If(
+                        CountRows(
+                            Filter(
+                                ColMeetingList,
+                                 variCalUID.icaluid in MeetingID 
+                            )
+                        ) = 0,
+                        IfError(
+                            Patch(
+                                MeetingList,
+                                Defaults(MeetingList),
+                                {
+                                    Title: SelectedMeeting.Subject,
+                                    MeetingID: variCalUID.icaluid,
+                                    AllowAttendeesToCreateAgenda: 0,
+                                    RequiredAgendaApproval: 0
+                                }
+                            ),
+                            Notify(
+                                "No details available for this meeting",
+                                NotificationType.Error
+                            ),
+                            false
+                        )
+                    ),
+                    Set(
+                        varradio1,
+                        LookUp(
+                            MeetingList,
+                            MeetingID = variCalUID.icaluid
+                        ).AllowAttendeesToCreateAgenda
+                    ),
+                    Set(
+                        vartoggle,
+                        LookUp(
+                            MeetingList,
+                            MeetingID = variCalUID.icaluid
+                        ).RequiredAgendaApproval
+                    ),
+                    Set(
+                        varmeetingattendee,
+                        Filter(
+                            PollResult,
+                            Question_x003a__x0020_MeetingID.Value = variCalUID.icaluid
+                        )
+                    ),
+                    Set(
+                        IsShow,
+                        false
+                    ));
+                    ClearCollect(ColMeetingList,Sort(MeetingList,ID,SortOrder.Descending));
+                    Navigate(
+                        'MeetingDetails Screen',
+                        BorderStyle.None
+                    );
+                    Set(varLoadingSpinner,false);
+                PressedBorderColor: =
+                PressedColor: |-
+                    =If(
+                        ThisItem.Start <= Now() && ThisItem.End >= Now(),
+                        RGBA(
+                            255,
+                            255,
+                            255,
+                            1
+                        ),
+                        RGBA(
+                            48,
+                            55,
+                            120,
+                            1
+                        )
+                    )
+                PressedFill: =RGBA(255, 255, 255, 1)
+                Size: =10
+                Text: ="View More"
+                Tooltip: ="Shows Meeting Details"
+                Width: =100
+                X: =37
+                Y: =128
+                ZIndex: =17
+
+    Glry_CanceledMeetings As gallery.galleryVertical:
+        DelayItemLoading: =true
+        Height: =400
+        Items: |-
+            =Search(
+                Sort(
+                    Filter(
+                        SelectedDateEvents,
+                        StartsWith(
+                            Subject,
+                            "Canceled:"
+                        )
+                    ),
+                    Start
+                ),
+                inputSearchText_1.Text,
+                "Subject",
+                "Body"
+            )
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        ShowNavigation: =true
+        ShowScrollbar: =false
+        TemplatePadding: =20
+        TemplateSize: =176
+        Visible: =If(Glry_MeetingType.Selected.lbl_CertName.Text="Canceled Meetings",true,false)
+        Width: =1284
+        WrapCount: =3
+        X: =76
+        Y: =368
+        ZIndex: =18
+
+        Container3_1 As groupContainer.manualLayoutContainer:
+            DropShadow: =DropShadow.Semibold
+            Fill: |-
+                =If(
+                    ThisItem.Start <= Now() && ThisItem.End >= Now(),
+                    RGBA(
+                         48,
+                        55,
+                        120,
+                        1
+                    ),
+                    RGBA(
+                        255,
+                        255,
+                        255,
+                        1
+                    )
+                )
+            Height: =172
+            RadiusBottomLeft: =20
+            RadiusBottomRight: =20
+            RadiusTopLeft: =20
+            RadiusTopRight: =20
+            Width: =401.3333333333333
+            ZIndex: =1
+
+            Label44_1 As label:
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Bold
+                Height: =30
+                Overflow: =Overflow.Scroll
+                Size: =12
+                Text: =ThisItem.Subject
+                Width: =401.3333333333333
+                Y: =9
+                ZIndex: =1
+
+            lbl_currentMeetingLabel_5 As label:
+                Align: =Align.Center
+                Color: |-
+                    =/*If(
+                        ThisItem.Id = SelectedMeeting.Id,
+                       RGBA(
+                            48,
+                            55,
+                            120,
+                            1
+                        ),
+                        RGBA(
+                            255,255,255,1
+                        )
+                    )*/
+                    If(
+                        ThisItem.Start <= Now() && ThisItem.End >= Now(),
+                        RGBA(
+                            255,
+                            255,
+                            255,
+                            1
+                        ),
+                        RGBA(
+                            47,
+                            41,
+                            43,
+                            1
+                        )
+                    )
+                Font: =Font.Lato
+                FontWeight: =FontWeight.Semibold
+                Height: =30
+                OnSelect: =
+                Size: =9
+                Text: ="**Current Meeting**"
+                Visible: =(AutoSelectMeeting = true || (ThisItem.End > Now() && ThisItem.Start < Now()))
+                Width: =172
+                X: =184
+                Y: =9
+                ZIndex: =4
+
+            "'Organaizer Group_8' As group":
+                Height: =5
+                Width: =5
+                X: =-56
+                Y: =-20
+                ZIndex: =4
+
+                Organaizer_15 As label:
+                    Color: |-
+                        =If(
+                            ThisItem.Start <= Now() && ThisItem.End >= Now(),
+                            RGBA(
+                                255,
+                                255,
+                                255,
+                                1
+                            ),
+                            RGBA(
+                                163,
+                                166,
+                                174,
+                                1
+                            )
+                        )
+                    Font: =Font.Lato
+                    Height: =25
+                    OnSelect: =
+                    PaddingLeft: =0
+                    Size: =10
+                    Text: |-
+                        =//Office365Users.UserProfile(ThisItem.Organizer).DisplayName
+                        //If(!IsBlank(ThisItem.Organizer), Office365Users.UserProfile(ThisItem.Organizer).DisplayName,false)
+                        If(
+                            !IsBlank(ThisItem.Organizer) /* && "@ilink-systems.com"  ThisItem.Organizer */ && !IsEmpty(
+                                Office365Users.SearchUser(
+                                    {
+                                        searchTerm: ThisItem.Organizer,
+                                        top: 999
+                                    }
+                                )
+                            ),
+                            Office365Users.UserProfile(ThisItem.Organizer).DisplayName,
+                            ThisItem.Organizer
+                        )
+                    Width: =302
+                    X: =9.333333333333314
+                    Y: =39
+                    ZIndex: =2
+
+                Organaizer_16 As label:
+                    Color: |-
+                        =If(
+                            ThisItem.Start <= Now() && ThisItem.End >= Now(),
+                            RGBA(
+                                255,
+                                255,
+                                255,
+                                1
+                            ),
+                            RGBA(
+                                163,
+                                166,
+                                174,
+                                1
+                            )
+                        )
+                    Font: =Font.Lato
+                    Height: =25
+                    OnSelect: =
+                    PaddingLeft: =0
+                    Size: =10
+                    Text: |-
+                        ="Organizer :"
+                    Width: =90
+                    X: =9.333333333333314
+                    Y: =39
+                    ZIndex: =3
+
+            "'Resources Group_8' As group":
+                Height: =5
+                Width: =5
+                X: =10
+                Y: =6
+                ZIndex: =12
+
+                Resources_10 As label:
+                    Color: |-
+                        =If(
+                            ThisItem.Start <= Now() && ThisItem.End >= Now(),
+                            RGBA(
+                                255,
+                                255,
+                                255,
+                                1
+                            ),
+                            RGBA(
+                                163,
+                                166,
+                                174,
+                                1
+                            )
+                        )
+                    Font: =Font.Lato
+                    FontWeight: =FontWeight.Semibold
+                    Height: =14
+                    OnSelect: =
+                    Size: =10
+                    Text: ="Resources"
+                    Width: =90
+                    X: =253
+                    Y: =77
+                    ZIndex: =9
+
+                ResourcesCount_10 As label:
+                    Color: |-
+                        =If(
+                            ThisItem.Start <= Now() && ThisItem.End >= Now(),
+                            RGBA(
+                                255,
+                                255,
+                                255,
+                                1
+                            ),
+                            RGBA(
+                                0,
+                                0,
+                                0,
+                                1
+                            )
+                        )
+                    Font: =Font.Lato
+                    FontWeight: =FontWeight.Bold
+                    Height: =14
+                    OnSelect: =
+                    Size: =10
+                    Text: |-
+                        =/*CountRows(
+                            Filter(
+                                MeetingAgendaLists,
+                                MeetingID = variCalUID.icaluid
+                            )
+                        )
+                        + 
+                        CountRows(
+                            First(Filter(
+                                MeetingList,
+                                MeetingID = variCalUID.icaluid
+                            )).'{Attachments}'
+                        )*/
+                        //"0"
+                        /*CountRows(
+                            Filter(
+                                AllFutureEvents,
+                                Id = ThisItem.Id
+                            ).RequiredAttendees
+                        ) 
+                        + 
+                        CountRows(
+                            Filter(
+                                AllFutureEvents,
+                                Id = ThisItem.Id
+                            ).OptionalAttendees
+                        )*/
+                        If(IsBlank(
+                            
+                                First(Filter(
+                                    MeetingList,
+                                //MeetingID = variCalUID.icaluid && ThisItem.IsSelected
+                             Title=ThisItem.Subject
+                                )
+                            ).'{Attachments}'
+                        ),"0",CountRows(
+                            
+                                First(Filter(
+                                    MeetingList,
+                                //MeetingID = variCalUID.icaluid && ThisItem.IsSelected
+                             Title=ThisItem.Subject
+                                )
+                            ).'{Attachments}'
+                        ))
+                    Width: =90
+                    X: =253
+                    Y: =96
+                    ZIndex: =10
+
+            AttendeeGroup_8 As group:
+                Height: =5
+                Width: =5
+                X: =10
+                Y: =6
+                ZIndex: =15
+
+                Attendees_11 As label:
+                    Color: |-
+                        =If(
+                            ThisItem.Start <= Now() && ThisItem.End >= Now(),
+                            RGBA(
+                                255,
+                                255,
+                                255,
+                                1
+                            ),
+                             RGBA(
+                                163,
+                                166,
+                                174,
+                                1
+                            )
+                        )
+                    Font: =Font.Lato
+                    FontWeight: =FontWeight.Semibold
+                    Height: =14
+                    OnSelect: =
+                    Size: =10
+                    Text: ="Attendees"
+                    Width: =90
+                    X: =126
+                    Y: =77
+                    ZIndex: =13
+
+                AttendeesCount_10 As label:
+                    Color: |-
+                        =If(
+                            ThisItem.Start <= Now() && ThisItem.End >= Now(),
+                            RGBA(
+                                255,
+                                255,
+                                255,
+                                1
+                            ),
+                            RGBA(
+                                47,
+                                41,
+                                43,
+                                1
+                            )
+                        )
+                    Font: =Font.Lato
+                    FontWeight: =FontWeight.Bold
+                    Height: =14
+                    OnSelect: =
+                    Size: =10
+                    Text: |-
+                        =CountA(
+                            ForAll(Split(
+                                Concatenate(
+                                    ThisItem.RequiredAttendees,
+                                    ThisItem.OptionalAttendees
+                                ),
+                                ";"
+                            ), {Result: ThisRecord.Value})
+                        )-1
+                    Width: =90
+                    X: =126
+                    Y: =96
+                    ZIndex: =14
+
+            Rectangle12_1 As rectangle:
+                Fill: =RGBA(163,166,174,1)
+                Height: =1
+                Width: =401.3333333333333
+                Y: =115
+                ZIndex: =16
+
+            TimeGrp_1 As group:
+                Height: =5
+                Width: =5
+                X: =40
+                Y: =40
+                ZIndex: =16
+
+                Time_11 As label:
+                    Color: |-
+                        =If(
+                            ThisItem.Start <= Now() && ThisItem.End >= Now(),
+                            RGBA(
+                                255,
+                                255,
+                                255,
+                                1
+                            ),
+                            RGBA(
+                                47,
+                                41,
+                                43,
+                                1
+                            )
+                        )
+                    Font: =Font.Lato
+                    FontWeight: =FontWeight.Bold
+                    Height: =24
+                    OnSelect: =
+                    Size: =10
+                    Text: |-
+                        =Text(ThisItem.Start, "HH:mm:AM/PM")
+                    Width: =122
+                    X: =26
+                    Y: =91
+                    ZIndex: =6
+
+                "'Clock Icon_11' As icon.Alarm":
+                    Color: |-
+                        =If(
+                            ThisItem.Start <= Now() && ThisItem.End >= Now(),
+                            RGBA(
+                                255,
+                                255,
+                                255,
+                                1
+                            ),
+                            RGBA(
+                                153,
+                                153,
+                                153,
+                                1
+                            )
+                        )
+                    Height: =24
+                    Icon: =Icon.Alarm
+                    OnSelect: =
+                    Width: =16
+                    X: =12
+                    Y: =91
+                    ZIndex: =7
+
+                Time_1 As label:
+                    Color: |-
+                        =If(
+                            ThisItem.Start <= Now() && ThisItem.End >= Now(),
+                            RGBA(
+                                255,
+                                255,
+                                255,
+                                1
+                            ),
+                             RGBA(
+                                163,
+                                166,
+                                174,
+                                1
+                            )
+                        )
+                    FontWeight: =FontWeight.Semibold
+                    Height: =14
+                    Size: =10
+                    Text: ="Time"
+                    Width: =90
+                    X: =5
+                    Y: =77
+                    ZIndex: =15
+
+            ViewButton_8 As button:
+                BorderColor: |-
+                    =If(
+                        ThisItem.Start <= Now() && ThisItem.End >= Now(),
+                        RGBA(
+                            101,
+                            128,
+                            187,
+                            1
+                        ),
+                        RGBA(
+                            48,
+                            55,
+                            120,
+                            1
+                        )
+                    )
+                BorderThickness: =1
+                Color: |-
+                    =If(
+                        ThisItem.Start <= Now() && ThisItem.End >= Now(),
+                        RGBA(
+                            255,
+                            255,
+                            255,
+                            1
+                        ),
+                        RGBA(
+                            48,
+                            55,
+                            120,
+                            1
+                        )
+                    )
+                Fill: =RGBA(0, 0, 0, 0)
+                Font: =Font.Lato
+                Height: =30
+                OnSelect: |
+                    =/*Set(varMeetingID, ThisItem.Id);*/
+                    Concurrent(Set(varLoadingSpinner,true),Set(
+                        Loading,
+                        true
+                    ),
+                    Set(
+                        SelectedMeeting,
+                        ThisItem
+                    ),
+                    ClearCollect(
+                        CombinedEvents,
+                        AllPastEvents,
+                        AllFutureEvents
+                    ));
+                    
+                    Concurrent(
+                    Set(
+                        varOrganizerName,
+                        SelectedMeeting.Organizer
+                    ),
+                    Set(
+                        VarUserEmail,
+                        User().Email
+                    ),
+                    If(
+                        CountRows(
+                            Filter(
+                                ColMeetingList,
+                                SelectedMeeting.Id exactin MeetingID 
+                            )
+                        ) = 0,
+                        IfError(
+                            Patch(
+                                MeetingList,
+                                Defaults(MeetingList),
+                                {
+                                    Title: SelectedMeeting.Subject,
+                                    MeetingID: SelectedMeeting.Id,
+                                    AllowAttendeesToCreateAgenda: 1
+                                }
+                            ),
+                            Notify(
+                                "No details available for this meeting",
+                                NotificationType.Error
+                            ),
+                            false
+                        )
+                    ),
+                    ClearCollect(
+                        MeetingAttendeeEmails,
+                        Filter(
+                            ForAll(
+                                Split(
+                                    Concatenate(
+                                        SelectedMeeting.RequiredAttendees,
+                                        SelectedMeeting.OptionalAttendees
+                                    ),
+                                    ";"
+                                ),
+                                {Result: ThisRecord.Value}
+                            ),
+                            Result <> ""
+                        )
+                    ));
+                    /*Set(
+                        varSelectedMeetingSpItem,
+                        Filter(
+                            MeetingList,
+                            MeetingID = SelectedMeeting.Id
+                        )
+                    );*/
+                    /*ClearCollect(
+                        MeetingAttendeesTemp,
+                        ForAll(
+                            MeetingAttendeeEmails,
+                            If(Not(IsBlank(Result)) ,
+                         If(
+                                IsError(
+                                      Office365Users.UserProfileV2(Result)
+                                    ),
+                                    {
+                                    displayName: Result,
+                                    id: "",
+                                    image: Blank(),
+                                    jobTitle: "",
+                                    userPrincipalName: Result,
+                                    Mail: Result
+                                },
+                                Office365Users.UserProfileV2(Result)
+                             ),
+                           {
+                                    displayName: Result,
+                                    id: "",
+                                    image: Blank(),
+                                    jobTitle: "",
+                                    userPrincipalName: Result,
+                                    Mail: Result
+                                }
+                    )
+                        )
+                    );*/
+                    ClearCollect(
+                        MeetingAttendeesTemp,
+                        ForAll(
+                            MeetingAttendeeEmails,
+                            If(
+                                Not(IsBlank(Result)) && MyDomain in Result,
+                                //Office365Users.UserProfileV2(Result),
+                                If(
+                                    !IsEmpty(
+                                        Office365Users.SearchUser(
+                                            {
+                                                searchTerm: Result,
+                                                top: 999
+                                            }
+                                        )
+                                    ),
+                                    Office365Users.UserProfileV2(Result),
+                                    {
+                                        displayName: Result,
+                                        id: "",
+                                        image: Blank(),
+                                        jobTitle: "",
+                                        userPrincipalName: Result,
+                                        Mail: Result
+                                    }
+                                ),
+                                {
+                                    displayName: Result,
+                                    id: "",
+                                    image: Blank(),
+                                    jobTitle: "",
+                                    userPrincipalName: Result,
+                                    Mail: Result
+                                }
+                            )
+                        )
+                    );
+                    ClearCollect(
+                        MeetingAttendees,
+                        RenameColumns(
+                            MeetingAttendeesTemp,
+                            "id",
+                            "Id",
+                            "jobTitle",
+                            "JobTitle",
+                            "displayName",
+                            "DisplayName",
+                            "userPrincipalName",
+                            "Mail"
+                        )
+                    );
+                    /*
+                    Set(
+                        arrMeetingSeries,
+                        Filter(
+                            AllFutureEvents,
+                            SeriesMasterId = SelectedMeeting.SeriesMasterId
+                        )
+                    );
+                    Set(
+                        LastStartDateTime,
+                        (Last(arrMeetingSeries).Start)
+                    );
+                    Set(
+                        FirstStartDateTime,
+                        (First(arrMeetingSeries).Start)
+                    );
+                    Set(
+                        SelectedStartDatetime,
+                        SelectedMeeting.Start
+                    );
+                    */
+                    /*
+                    Set(
+                        varG_SelectedMeetingSPData,
+                        LookUp(
+                            MeetingList,
+                            MeetingID = SelectedMeeting.Id
+                        )
+                    );*/
+                    Set(
+                        arrMeetingSeries,
+                        Filter(
+                            CombinedEvents,
+                            SeriesMasterId = SelectedMeeting.SeriesMasterId
+                        )
+                    );
+                    Concurrent(ClearCollect(ColAttendees,AddColumns(
+                        MeetingAttendees,
+                        "UserPhoto",
+                            // check if the the user has an email and a profile picture
+                        If(
+                            Not(IsBlank(Id)) && Office365Users.UserPhotoMetadata(Id).HasPhoto,
+                            Office365Users.UserPhotoV2(Id)
+                        ),
+                        "Initials",
+                        With(
+                            {
+                                // get the user record
+                                varRecordUser: If(
+                                    !IsBlank(Id) && "@ilink-systems.com" in Mail,
+                                    Office365Users.UserProfileV2(Id),
+                                    {
+                                    displayName: Mail,
+                                    surname: Mail
+                                }
+                                )
+                            },
+                            // find the user initials
+                            Concatenate(
+                                Left(
+                                    varRecordUser.displayName,
+                                    1
+                                ),
+                                Left(
+                                    varRecordUser.surname,
+                                    1
+                                )
+                            )
+                        )
+                    )
+                    ),
+                    Set(
+                        LastStartDateTime,
+                        (Last(arrMeetingSeries).Start)
+                    ),
+                    Set(
+                        FirstStartDateTime,
+                        (First(arrMeetingSeries).Start)
+                    ),
+                    Set(
+                        SelectedStartDatetime,
+                        SelectedMeeting.Start
+                    ));
+                    Set(varSelectedMeetingId,SelectedMeeting.Id);
+                    Set(varSelectedSeriesMasterId,SelectedMeeting.SeriesMasterId);
+                    /*
+                    Set(
+                        varAgendaTab,
+                        false
+                    );
+                    Set(
+                        varNoAgenda,
+                        false
+                    );
+                    
+                    If(
+                        IsBlank(PlannerGallery_1),
+                        Set(
+                            varNoPlanner,
+                            true
+                        ),
+                        Set(
+                            varNoPlanner,
+                            false
+                        )
+                    );
+                    Set(
+                        varAgendaTab,
+                        true
+                    );
+                    Set(
+                        varNoPlanner,
+                        false
+                    );
+                    If(
+                        IsBlank(AgendaGallery_2),
+                        Set(
+                            varNoAgenda,
+                            true
+                        ),
+                        Set(
+                            varNoAgenda,
+                            false
+                        )
+                    );
+                    Set(
+                        varResources,
+                        true
+                    );
+                    Set(
+                        varPollPopup,
+                        false
+                    );
+                    If(
+                        IsBlank(Gallery8_1),
+                        Set(
+                            varNoResources,
+                            true
+                        ),
+                        Set(
+                            varNoResources,
+                            false
+                        )
+                    );
+                    */
+                    
+                    Set(
+                        variCalUID,
+                        GetCalenderIDForMeeting.Run(
+                            MyCalendarID,
+                            varSelectedMeetingId
+                        )
+                    );
+                    If(
+                        !IsBlank(SelectedMeeting.SeriesMasterId),
+                        Set(
+                            ICalRecurrenceId,
+                            GetCalenderIDForMeeting.Run(
+                                MyCalendarID,
+                                varSelectedSeriesMasterId
+                            )
+                        ),
+                        false
+                    );
+                    Concurrent(
+                    If(
+                        CountRows(
+                            Filter(
+                                ColMeetingList,
+                                 variCalUID.icaluid in MeetingID 
+                            )
+                        ) = 0,
+                        IfError(
+                            Patch(
+                                MeetingList,
+                                Defaults(MeetingList),
+                                {
+                                    Title: SelectedMeeting.Subject,
+                                    MeetingID: variCalUID.icaluid,
+                                    AllowAttendeesToCreateAgenda: 0,
+                                    RequiredAgendaApproval: 0
+                                }
+                            ),
+                            Notify(
+                                "No details available for this meeting",
+                                NotificationType.Error
+                            ),
+                            false
+                        )
+                    ),
+                    Set(
+                        varradio1,
+                        LookUp(
+                            MeetingList,
+                            MeetingID = variCalUID.icaluid
+                        ).AllowAttendeesToCreateAgenda
+                    ),
+                    Set(
+                        vartoggle,
+                        LookUp(
+                            MeetingList,
+                            MeetingID = variCalUID.icaluid
+                        ).RequiredAgendaApproval
+                    ),
+                    Set(
+                        varmeetingattendee,
+                        Filter(
+                            PollResult,
+                            Question_x003a__x0020_MeetingID.Value = variCalUID.icaluid
+                        )
+                    ),
+                    Set(
+                        IsShow,
+                        false
+                    ));
+                    ClearCollect(ColMeetingList,Sort(MeetingList,ID,SortOrder.Descending));
+                    Navigate(
+                        'MeetingDetails Screen',
+                        BorderStyle.None
+                    );
+                    Set(varLoadingSpinner,false);
+                Size: =10
+                Text: ="View More"
+                Tooltip: ="Shows Meeting Details"
+                Width: =100
+                X: =37
+                Y: =128
+                ZIndex: =17
+
+    "'Glry_Organised by me' As gallery.galleryVertical":
+        DelayItemLoading: =true
+        Height: =400
+        Items: |-
+            =If(
+                Glry_MeetingType.Selected.lbl_CertName.Text="Organised by me",
+                Search(
+                    Sort(
+                        Filter(
+                            SelectedDateEvents,
+                            Organizer = User().Email
+                        ),
+                        Start
+                    ),
+                    inputSearchText_1.Text,
+                    "Subject",
+                    "Body"
+                )
+            )
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        ShowNavigation: =true
+        ShowScrollbar: =false
+        TemplatePadding: =20
+        TemplateSize: =176
+        Visible: =If(Glry_MeetingType.Selected.lbl_CertName.Text="Organised by me",true,false)
+        Width: =1284
+        WrapCount: =3
+        X: =76
+        Y: =368
+        ZIndex: =19
+
+        Container3_2 As groupContainer.manualLayoutContainer:
+            DropShadow: =DropShadow.Semibold
+            Fill: |-
+                =If(
+                    ThisItem.Start <= Now() && ThisItem.End >= Now(),
+                    RGBA(
+                         48,
+                        55,
+                        120,
+                        1
+                    ),
+                    RGBA(
+                        255,
+                        255,
+                        255,
+                        1
+                    )
+                )
+            Height: =172
+            RadiusBottomLeft: =20
+            RadiusBottomRight: =20
+            RadiusTopLeft: =20
+            RadiusTopRight: =20
+            Width: =401.3333333333333
+            ZIndex: =1
+
+            Label44_2 As label:
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Bold
+                Height: =30
+                Overflow: =Overflow.Scroll
+                Size: =12
+                Text: =ThisItem.Subject
+                Width: =401.3333333333333
+                Y: =9
+                ZIndex: =1
+
+            lbl_currentMeetingLabel_6 As label:
+                Align: =Align.Center
+                Color: |-
+                    =/*If(
+                        ThisItem.Id = SelectedMeeting.Id,
+                       RGBA(
+                            48,
+                            55,
+                            120,
+                            1
+                        ),
+                        RGBA(
+                            255,255,255,1
+                        )
+                    )*/
+                    If(
+                        ThisItem.Start <= Now() && ThisItem.End >= Now(),
+                        RGBA(
+                            255,
+                            255,
+                            255,
+                            1
+                        ),
+                        RGBA(
+                            47,
+                            41,
+                            43,
+                            1
+                        )
+                    )
+                Font: =Font.Lato
+                FontWeight: =FontWeight.Semibold
+                Height: =30
+                OnSelect: =
+                Size: =9
+                Text: ="**Current Meeting**"
+                Visible: =(AutoSelectMeeting = true || (ThisItem.End > Now() && ThisItem.Start < Now()))
+                Width: =172
+                X: =184
+                Y: =9
+                ZIndex: =4
+
+            "'Organaizer Group_9' As group":
+                Height: =5
+                Width: =5
+                X: =-56
+                Y: =-20
+                ZIndex: =4
+
+                Organaizer_17 As label:
+                    Color: |-
+                        =If(
+                            ThisItem.Start <= Now() && ThisItem.End >= Now(),
+                            RGBA(
+                                255,
+                                255,
+                                255,
+                                1
+                            ),
+                            RGBA(
+                                163,
+                                166,
+                                174,
+                                1
+                            )
+                        )
+                    Font: =Font.Lato
+                    Height: =25
+                    OnSelect: =
+                    PaddingLeft: =0
+                    Size: =10
+                    Text: |-
+                        =//Office365Users.UserProfile(ThisItem.Organizer).DisplayName
+                        //If(!IsBlank(ThisItem.Organizer), Office365Users.UserProfile(ThisItem.Organizer).DisplayName,false)
+                        If(
+                            !IsBlank(ThisItem.Organizer) /* && "@ilink-systems.com"  ThisItem.Organizer */ && !IsEmpty(
+                                Office365Users.SearchUser(
+                                    {
+                                        searchTerm: ThisItem.Organizer,
+                                        top: 999
+                                    }
+                                )
+                            ),
+                            Office365Users.UserProfile(ThisItem.Organizer).DisplayName,
+                            ThisItem.Organizer
+                        )
+                    Width: =302
+                    X: =9.333333333333314
+                    Y: =39
+                    ZIndex: =2
+
+                Organaizer_18 As label:
+                    Color: |-
+                        =If(
+                            ThisItem.Start <= Now() && ThisItem.End >= Now(),
+                            RGBA(
+                                255,
+                                255,
+                                255,
+                                1
+                            ),
+                            RGBA(
+                                163,
+                                166,
+                                174,
+                                1
+                            )
+                        )
+                    Font: =Font.Lato
+                    Height: =25
+                    OnSelect: =
+                    PaddingLeft: =0
+                    Size: =10
+                    Text: |-
+                        ="Organizer :"
+                    Width: =90
+                    X: =9.333333333333314
+                    Y: =39
+                    ZIndex: =3
+
+            "'Resources Group_9' As group":
+                Height: =5
+                Width: =5
+                X: =10
+                Y: =6
+                ZIndex: =12
+
+                Resources_11 As label:
+                    Color: |-
+                        =If(
+                            ThisItem.Start <= Now() && ThisItem.End >= Now(),
+                            RGBA(
+                                255,
+                                255,
+                                255,
+                                1
+                            ),
+                            RGBA(
+                                163,
+                                166,
+                                174,
+                                1
+                            )
+                        )
+                    Font: =Font.Lato
+                    FontWeight: =FontWeight.Semibold
+                    Height: =14
+                    OnSelect: =
+                    Size: =10
+                    Text: ="Resources"
+                    Width: =90
+                    X: =253
+                    Y: =77
+                    ZIndex: =9
+
+                ResourcesCount_11 As label:
+                    Color: |-
+                        =If(
+                            ThisItem.Start <= Now() && ThisItem.End >= Now(),
+                            RGBA(
+                                255,
+                                255,
+                                255,
+                                1
+                            ),
+                            RGBA(
+                                0,
+                                0,
+                                0,
+                                1
+                            )
+                        )
+                    Font: =Font.Lato
+                    FontWeight: =FontWeight.Bold
+                    Height: =14
+                    OnSelect: =
+                    Size: =10
+                    Text: |-
+                        =/*CountRows(
+                            Filter(
+                                MeetingAgendaLists,
+                                MeetingID = variCalUID.icaluid
+                            )
+                        )
+                        + 
+                        CountRows(
+                            First(Filter(
+                                MeetingList,
+                                MeetingID = variCalUID.icaluid
+                            )).'{Attachments}'
+                        )*/
+                        //"0"
+                        /*CountRows(
+                            Filter(
+                                AllFutureEvents,
+                                Id = ThisItem.Id
+                            ).RequiredAttendees
+                        ) 
+                        + 
+                        CountRows(
+                            Filter(
+                                AllFutureEvents,
+                                Id = ThisItem.Id
+                            ).OptionalAttendees
+                        )*/
+                        If(IsBlank(
+                            
+                                First(Filter(
+                                    MeetingList,
+                                //MeetingID = variCalUID.icaluid && ThisItem.IsSelected
+                             Title=ThisItem.Subject
+                                )
+                            ).'{Attachments}'
+                        ),"0",CountRows(
+                            
+                                First(Filter(
+                                    MeetingList,
+                                //MeetingID = variCalUID.icaluid && ThisItem.IsSelected
+                             Title=ThisItem.Subject
+                                )
+                            ).'{Attachments}'
+                        ))
+                    Width: =90
+                    X: =253
+                    Y: =96
+                    ZIndex: =10
+
+            AttendeeGroup_9 As group:
+                Height: =5
+                Width: =5
+                X: =10
+                Y: =6
+                ZIndex: =15
+
+                Attendees_12 As label:
+                    Color: |-
+                        =If(
+                            ThisItem.Start <= Now() && ThisItem.End >= Now(),
+                            RGBA(
+                                255,
+                                255,
+                                255,
+                                1
+                            ),
+                             RGBA(
+                                163,
+                                166,
+                                174,
+                                1
+                            )
+                        )
+                    Font: =Font.Lato
+                    FontWeight: =FontWeight.Semibold
+                    Height: =14
+                    OnSelect: =
+                    Size: =10
+                    Text: ="Attendees"
+                    Width: =90
+                    X: =126
+                    Y: =77
+                    ZIndex: =13
+
+                AttendeesCount_11 As label:
+                    Color: |-
+                        =If(
+                            ThisItem.Start <= Now() && ThisItem.End >= Now(),
+                            RGBA(
+                                255,
+                                255,
+                                255,
+                                1
+                            ),
+                            RGBA(
+                                47,
+                                41,
+                                43,
+                                1
+                            )
+                        )
+                    Font: =Font.Lato
+                    FontWeight: =FontWeight.Bold
+                    Height: =14
+                    OnSelect: =
+                    Size: =10
+                    Text: |-
+                        =CountA(
+                            ForAll(Split(
+                                Concatenate(
+                                    ThisItem.RequiredAttendees,
+                                    ThisItem.OptionalAttendees
+                                ),
+                                ";"
+                            ), {Result: ThisRecord.Value})
+                        )-1
+                    Width: =90
+                    X: =126
+                    Y: =96
+                    ZIndex: =14
+
+            Rectangle12_2 As rectangle:
+                Fill: =RGBA(163,166,174,1)
+                Height: =1
+                Width: =401.3333333333333
+                Y: =115
+                ZIndex: =16
+
+            TimeGrp_2 As group:
+                Height: =5
+                Width: =5
+                X: =40
+                Y: =40
+                ZIndex: =16
+
+                Time_12 As label:
+                    Color: |-
+                        =If(
+                            ThisItem.Start <= Now() && ThisItem.End >= Now(),
+                            RGBA(
+                                255,
+                                255,
+                                255,
+                                1
+                            ),
+                            RGBA(
+                                47,
+                                41,
+                                43,
+                                1
+                            )
+                        )
+                    Font: =Font.Lato
+                    FontWeight: =FontWeight.Bold
+                    Height: =24
+                    OnSelect: =
+                    Size: =10
+                    Text: |-
+                        =Text(ThisItem.Start, "HH:mm:AM/PM")
+                    Width: =122
+                    X: =26
+                    Y: =91
+                    ZIndex: =6
+
+                "'Clock Icon_12' As icon.Alarm":
+                    Color: |-
+                        =If(
+                            ThisItem.Start <= Now() && ThisItem.End >= Now(),
+                            RGBA(
+                                255,
+                                255,
+                                255,
+                                1
+                            ),
+                            RGBA(
+                                153,
+                                153,
+                                153,
+                                1
+                            )
+                        )
+                    Height: =24
+                    Icon: =Icon.Alarm
+                    OnSelect: =
+                    Width: =16
+                    X: =12
+                    Y: =91
+                    ZIndex: =7
+
+                Time_2 As label:
+                    Color: |-
+                        =If(
+                            ThisItem.Start <= Now() && ThisItem.End >= Now(),
+                            RGBA(
+                                255,
+                                255,
+                                255,
+                                1
+                            ),
+                             RGBA(
+                                163,
+                                166,
+                                174,
+                                1
+                            )
+                        )
+                    FontWeight: =FontWeight.Semibold
+                    Height: =14
+                    Size: =10
+                    Text: ="Time"
+                    Width: =90
+                    X: =5
+                    Y: =77
+                    ZIndex: =15
+
+            ViewButton_9 As button:
+                BorderColor: |-
+                    =If(
+                        ThisItem.Start <= Now() && ThisItem.End >= Now(),
+                        RGBA(
+                            101,
+                            128,
+                            187,
+                            1
+                        ),
+                        RGBA(
+                            48,
+                            55,
+                            120,
+                            1
+                        )
+                    )
+                BorderThickness: =1
+                Color: |-
+                    =If(
+                        ThisItem.Start <= Now() && ThisItem.End >= Now(),
+                        RGBA(
+                            255,
+                            255,
+                            255,
+                            1
+                        ),
+                        RGBA(
+                            48,
+                            55,
+                            120,
+                            1
+                        )
+                    )
+                Fill: =RGBA(0, 0, 0, 0)
+                Font: =Font.Lato
+                Height: =30
+                OnSelect: |
+                    =/*Set(varMeetingID, ThisItem.Id);*/
+                    Concurrent(Set(varLoadingSpinner,true),Set(
+                        Loading,
+                        true
+                    ),
+                    Set(
+                        SelectedMeeting,
+                        ThisItem
+                    ),
+                    ClearCollect(
+                        CombinedEvents,
+                        AllPastEvents,
+                        AllFutureEvents
+                    ));
+                    
+                    Concurrent(
+                    Set(
+                        varOrganizerName,
+                        SelectedMeeting.Organizer
+                    ),
+                    Set(
+                        VarUserEmail,
+                        User().Email
+                    ),
+                    If(
+                        CountRows(
+                            Filter(
+                                ColMeetingList,
+                                SelectedMeeting.Id exactin MeetingID 
+                            )
+                        ) = 0,
+                        IfError(
+                            Patch(
+                                MeetingList,
+                                Defaults(MeetingList),
+                                {
+                                    Title: SelectedMeeting.Subject,
+                                    MeetingID: SelectedMeeting.Id,
+                                    AllowAttendeesToCreateAgenda: 1
+                                }
+                            ),
+                            Notify(
+                                "No details available for this meeting",
+                                NotificationType.Error
+                            ),
+                            false
+                        )
+                    ),
+                    ClearCollect(
+                        MeetingAttendeeEmails,
+                        Filter(
+                            ForAll(
+                                Split(
+                                    Concatenate(
+                                        SelectedMeeting.RequiredAttendees,
+                                        SelectedMeeting.OptionalAttendees
+                                    ),
+                                    ";"
+                                ),
+                                {Result: ThisRecord.Value}
+                            ),
+                            Result <> ""
+                        )
+                    ));
+                    /*Set(
+                        varSelectedMeetingSpItem,
+                        Filter(
+                            MeetingList,
+                            MeetingID = SelectedMeeting.Id
+                        )
+                    );*/
+                    /*ClearCollect(
+                        MeetingAttendeesTemp,
+                        ForAll(
+                            MeetingAttendeeEmails,
+                            If(Not(IsBlank(Result)) ,
+                         If(
+                                IsError(
+                                      Office365Users.UserProfileV2(Result)
+                                    ),
+                                    {
+                                    displayName: Result,
+                                    id: "",
+                                    image: Blank(),
+                                    jobTitle: "",
+                                    userPrincipalName: Result,
+                                    Mail: Result
+                                },
+                                Office365Users.UserProfileV2(Result)
+                             ),
+                           {
+                                    displayName: Result,
+                                    id: "",
+                                    image: Blank(),
+                                    jobTitle: "",
+                                    userPrincipalName: Result,
+                                    Mail: Result
+                                }
+                    )
+                        )
+                    );*/
+                    ClearCollect(
+                        MeetingAttendeesTemp,
+                        ForAll(
+                            MeetingAttendeeEmails,
+                            If(
+                                Not(IsBlank(Result)) && MyDomain in Result,
+                                //Office365Users.UserProfileV2(Result),
+                                If(
+                                    !IsEmpty(
+                                        Office365Users.SearchUser(
+                                            {
+                                                searchTerm: Result,
+                                                top: 999
+                                            }
+                                        )
+                                    ),
+                                    Office365Users.UserProfileV2(Result),
+                                    {
+                                        displayName: Result,
+                                        id: "",
+                                        image: Blank(),
+                                        jobTitle: "",
+                                        userPrincipalName: Result,
+                                        Mail: Result
+                                    }
+                                ),
+                                {
+                                    displayName: Result,
+                                    id: "",
+                                    image: Blank(),
+                                    jobTitle: "",
+                                    userPrincipalName: Result,
+                                    Mail: Result
+                                }
+                            )
+                        )
+                    );
+                    ClearCollect(
+                        MeetingAttendees,
+                        RenameColumns(
+                            MeetingAttendeesTemp,
+                            "id",
+                            "Id",
+                            "jobTitle",
+                            "JobTitle",
+                            "displayName",
+                            "DisplayName",
+                            "userPrincipalName",
+                            "Mail"
+                        )
+                    );
+                    /*
+                    Set(
+                        arrMeetingSeries,
+                        Filter(
+                            AllFutureEvents,
+                            SeriesMasterId = SelectedMeeting.SeriesMasterId
+                        )
+                    );
+                    Set(
+                        LastStartDateTime,
+                        (Last(arrMeetingSeries).Start)
+                    );
+                    Set(
+                        FirstStartDateTime,
+                        (First(arrMeetingSeries).Start)
+                    );
+                    Set(
+                        SelectedStartDatetime,
+                        SelectedMeeting.Start
+                    );
+                    */
+                    /*
+                    Set(
+                        varG_SelectedMeetingSPData,
+                        LookUp(
+                            MeetingList,
+                            MeetingID = SelectedMeeting.Id
+                        )
+                    );*/
+                    Set(
+                        arrMeetingSeries,
+                        Filter(
+                            CombinedEvents,
+                            SeriesMasterId = SelectedMeeting.SeriesMasterId
+                        )
+                    );
+                    Concurrent(ClearCollect(ColAttendees,AddColumns(
+                        MeetingAttendees,
+                        "UserPhoto",
+                            // check if the the user has an email and a profile picture
+                        If(
+                            Not(IsBlank(Id)) && Office365Users.UserPhotoMetadata(Id).HasPhoto,
+                            Office365Users.UserPhotoV2(Id)
+                        ),
+                        "Initials",
+                        With(
+                            {
+                                // get the user record
+                                varRecordUser: If(
+                                    !IsBlank(Id) && "@ilink-systems.com" in Mail,
+                                    Office365Users.UserProfileV2(Id),
+                                    {
+                                    displayName: Mail,
+                                    surname: Mail
+                                }
+                                )
+                            },
+                            // find the user initials
+                            Concatenate(
+                                Left(
+                                    varRecordUser.displayName,
+                                    1
+                                ),
+                                Left(
+                                    varRecordUser.surname,
+                                    1
+                                )
+                            )
+                        )
+                    )
+                    ),
+                    Set(
+                        LastStartDateTime,
+                        (Last(arrMeetingSeries).Start)
+                    ),
+                    Set(
+                        FirstStartDateTime,
+                        (First(arrMeetingSeries).Start)
+                    ),
+                    Set(
+                        SelectedStartDatetime,
+                        SelectedMeeting.Start
+                    ));
+                    Set(varSelectedMeetingId,SelectedMeeting.Id);
+                    Set(varSelectedSeriesMasterId,SelectedMeeting.SeriesMasterId);
+                    /*
+                    Set(
+                        varAgendaTab,
+                        false
+                    );
+                    Set(
+                        varNoAgenda,
+                        false
+                    );
+                    
+                    If(
+                        IsBlank(PlannerGallery_1),
+                        Set(
+                            varNoPlanner,
+                            true
+                        ),
+                        Set(
+                            varNoPlanner,
+                            false
+                        )
+                    );
+                    Set(
+                        varAgendaTab,
+                        true
+                    );
+                    Set(
+                        varNoPlanner,
+                        false
+                    );
+                    If(
+                        IsBlank(AgendaGallery_2),
+                        Set(
+                            varNoAgenda,
+                            true
+                        ),
+                        Set(
+                            varNoAgenda,
+                            false
+                        )
+                    );
+                    Set(
+                        varResources,
+                        true
+                    );
+                    Set(
+                        varPollPopup,
+                        false
+                    );
+                    If(
+                        IsBlank(Gallery8_1),
+                        Set(
+                            varNoResources,
+                            true
+                        ),
+                        Set(
+                            varNoResources,
+                            false
+                        )
+                    );
+                    */
+                    
+                    Set(
+                        variCalUID,
+                        GetCalenderIDForMeeting.Run(
+                            MyCalendarID,
+                            varSelectedMeetingId
+                        )
+                    );
+                    If(
+                        !IsBlank(SelectedMeeting.SeriesMasterId),
+                        Set(
+                            ICalRecurrenceId,
+                            GetCalenderIDForMeeting.Run(
+                                MyCalendarID,
+                                varSelectedSeriesMasterId
+                            )
+                        ),
+                        false
+                    );
+                    Concurrent(
+                    If(
+                        CountRows(
+                            Filter(
+                                ColMeetingList,
+                                 variCalUID.icaluid in MeetingID 
+                            )
+                        ) = 0,
+                        IfError(
+                            Patch(
+                                MeetingList,
+                                Defaults(MeetingList),
+                                {
+                                    Title: SelectedMeeting.Subject,
+                                    MeetingID: variCalUID.icaluid,
+                                    AllowAttendeesToCreateAgenda: 0,
+                                    RequiredAgendaApproval: 0
+                                }
+                            ),
+                            Notify(
+                                "No details available for this meeting",
+                                NotificationType.Error
+                            ),
+                            false
+                        )
+                    ),
+                    Set(
+                        varradio1,
+                        LookUp(
+                            MeetingList,
+                            MeetingID = variCalUID.icaluid
+                        ).AllowAttendeesToCreateAgenda
+                    ),
+                    Set(
+                        vartoggle,
+                        LookUp(
+                            MeetingList,
+                            MeetingID = variCalUID.icaluid
+                        ).RequiredAgendaApproval
+                    ),
+                    Set(
+                        varmeetingattendee,
+                        Filter(
+                            PollResult,
+                            Question_x003a__x0020_MeetingID.Value = variCalUID.icaluid
+                        )
+                    ),
+                    Set(
+                        IsShow,
+                        false
+                    ));
+                    ClearCollect(ColMeetingList,Sort(MeetingList,ID,SortOrder.Descending));
+                    Navigate(
+                        'MeetingDetails Screen',
+                        BorderStyle.None
+                    );
+                    Set(varLoadingSpinner,false);
+                Size: =10
+                Text: ="View More"
+                Tooltip: ="Shows Meeting Details"
+                Width: =100
+                X: =37
+                Y: =128
+                ZIndex: =17
+
+    imageLogo_1 As image:
+        AccessibleLabel: ="imageLogo"
+        Height: =54
+        Image: =logo
+        ImagePosition: =ImagePosition.Fill
+        TabIndex: =0
+        Width: =60
+        ZIndex: =20
+
+    Container4 As groupContainer.manualLayoutContainer:
+        DropShadow: =DropShadow.Semibold
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =768
+        Visible: =varCreateMeeting
+        Width: =386
+        X: =982
+        ZIndex: =23
+
+        lblCreateMeeting_4 As label:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Bold
+            Size: =12
+            Text: ="Create Meeting"
+            Width: =214
+            X: =20
+            Y: =10
+            ZIndex: =1
+
+        lblTeamEvent_4 As label:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(163,166,174,1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.Lato
+            Height: =18
+            Size: =10
+            Text: ="Let's create a new team event"
+            Width: =308
+            X: =20
+            Y: =57
+            ZIndex: =2
+
+        lblTitle_8 As label:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(0, 0, 0, 0.84)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Semibold
+            Height: =30
+            Size: =10
+            Text: ="Required Agenda Approval"
+            Width: =208
+            X: =4
+            Y: =128
+            ZIndex: =3
+
+        AddTitle_1 As text:
+            AccessibleLabel: ="AddTitle"
+            BorderColor: =RGBA(0, 18, 107, 1)
+            BorderStyle: =BorderStyle.None
+            Color: =RGBA(0, 0, 0, 1)
+            Default: =""
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(247, 248, 250, 1)
+            Font: =Font.Lato
+            Height: =30
+            HintText: ="Add Title"
+            HoverBorderColor: =Self.BorderColor
+            HoverColor: =Self.Color
+            HoverFill: =Self.Fill
+            PaddingLeft: =5
+            PaddingRight: =35
+            Size: =10
+            Width: =382
+            X: =4
+            Y: =194
+            ZIndex: =4
+
+        lblAttendees_4 As label:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(0, 0, 0, 0.84)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Semibold
+            Height: =30
+            Size: =10
+            Text: ="Attendees"
+            X: =4
+            Y: =382
+            ZIndex: =5
+
+        lblDateFrom_4 As label:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(0, 0, 0, 0.84)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Semibold
+            Height: =30
+            Size: =10
+            Text: ="Date From"
+            X: =4
+            Y: =235
+            ZIndex: =6
+
+        StartTime_1 As datepicker:
+            AccessibleLabel: ="StartTime"
+            BorderColor: =RGBA(247, 248, 250, 1)
+            BorderStyle: =BorderStyle.None
+            CalendarHeaderFill: =RGBA(56, 96, 178, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(247, 248, 250, 1)
+            Font: =Font.Lato
+            Height: =30
+            HoverDateFill: =RGBA(186, 202, 226, 1)
+            IconBackground: =RGBA(255, 255, 255, 1)
+            IconFill: =RGBA(48,55,120,255)
+            OnChange: =Select(btn_RefreshMeetingAvail_1)
+            PaddingBottom: =2
+            PaddingLeft: =2
+            PaddingTop: =2
+            SelectedDateFill: =RGBA(56, 96, 178, 1)
+            Size: =10
+            Width: =166
+            X: =4
+            Y: =270
+            ZIndex: =7
+
+        lblDateTo_4 As label:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(0, 0, 0, 0.84)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Semibold
+            Height: =30
+            Size: =10
+            Text: ="Date To"
+            X: =4
+            Y: =311
+            ZIndex: =8
+
+        EndTime_1 As datepicker:
+            AccessibleLabel: ="EndTime"
+            BorderColor: =RGBA(0, 18, 107, 1)
+            BorderStyle: =BorderStyle.None
+            CalendarHeaderFill: =RGBA(56, 96, 178, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DefaultDate: =StartTime_1.SelectedDate
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(247, 248, 250, 1)
+            Font: =Font.Lato
+            Height: =32
+            HoverDateFill: =RGBA(186, 202, 226, 1)
+            IconBackground: =RGBA(255, 255, 255, 1)
+            IconFill: =RGBA(48,55,120,255)
+            OnChange: =Select(btn_RefreshMeetingAvail_1)
+            PaddingBottom: =2
+            PaddingLeft: =2
+            PaddingRight: =2
+            PaddingTop: =2
+            SelectedDateFill: =RGBA(56, 96, 178, 1)
+            Size: =10
+            Width: =166
+            X: =4
+            Y: =340
+            ZIndex: =9
+
+        lblLocation_4 As label:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(0, 0, 0, 0.84)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Semibold
+            Height: =30
+            Size: =10
+            Text: ="Location"
+            X: =4
+            Y: =531
+            ZIndex: =10
+
+        lblDescription_4 As label:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(0, 0, 0, 0.84)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Semibold
+            Height: =30
+            Size: =10
+            Text: ="Meeting Details"
+            X: =4
+            Y: =598
+            ZIndex: =11
+
+        Body_1 As text:
+            AccessibleLabel: ="Body"
+            BorderColor: =RGBA(0, 18, 107, 1)
+            BorderStyle: =BorderStyle.None
+            Color: =RGBA(0, 0, 0, 1)
+            Default: =""
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(247, 248, 250, 1)
+            Font: =Font.Lato
+            Height: =78
+            HintText: ="Meeting details..."
+            HoverBorderColor: |
+                =Self.BorderColor
+            HoverColor: =Self.Color
+            HoverFill: =Self.Fill
+            Mode: =TextMode.MultiLine
+            PaddingRight: =35
+            Size: =10
+            Width: =350
+            X: =4
+            Y: =634
+            ZIndex: =12
+
+        AttendeesList_1 As combobox:
+            AccessibleLabel: ="AttendeesList"
+            BorderColor: =RGBA(0, 18, 107, 1)
+            BorderThickness: =0
+            ChevronBackground: =RGBA(0, 0, 0, 0)
+            ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
+            ChevronDisabledFill: =RGBA(244, 244, 244, 1)
+            ChevronFill: =RGBA(48, 55, 120, 1)
+            ChevronHoverBackground: =ColorFade(RGBA(56, 96, 178, 1), -20%)
+            ChevronHoverFill: =RGBA(255, 255, 255, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            DisplayFields: =["DisplayName"]
+            Fill: =RGBA(247, 248, 250, 1)
+            FocusedBorderThickness: |
+                =0
+            Font: =Font.Lato
+            Height: =32
+            HoverColor: =RGBA(0, 0, 0, 1)
+            HoverFill: =RGBA(186, 202, 226, 1)
+            InputTextPlaceholder: ="Add Attendees"
+            Items: |-
+                =//Office365Users.SearchUser({searchTerm:AttendeesList.SearchText,top:999})
+                
+                Filter(
+                    Office365Users.SearchUser(
+                        {
+                            searchTerm: AttendeesList_1.SearchText,
+                            top: 999
+                        }
+                    ),
+                    AccountEnabled = true && Not(User().Email in Mail)
+                )
+            OnChange: =Select(btn_RefreshMeetingAvail_1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =RGBA(0, 18, 107, 1)
+            SearchFields: =["DisplayName"]
+            SearchItems: |-
+                =Search(//Office365Users.SearchUser({searchTerm:AttendeesList.SearchText,top:999})
+                
+                Filter(
+                    Office365Users.SearchUser(
+                        {
+                            searchTerm: AttendeesList_1.SearchText,
+                            top: 999
+                        }
+                    ),
+                    AccountEnabled = true && Not(User().Email in Mail)
+                ),AttendeesList_1.SearchText,"DisplayName")
+            SelectionColor: =RGBA(255, 255, 255, 1)
+            SelectionFill: =RGBA(56, 96, 178, 1)
+            Size: =10
+            Width: =350
+            X: =4
+            Y: =410
+            ZIndex: =13
+
+        Radio2_3 As radio:
+            AccessibleLabel: ="Radio"
+            BorderColor: =RGBA(0, 0, 0, 0)
+            Color: =RGBA(59, 59, 59, 1)
+            Default: ="Organizer"
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Bold
+            Height: =25
+            HoverColor: =RGBA(0, 18, 107, 1)
+            Items: =["Organizer","Attendees"]
+            Layout: =Layout.Horizontal
+            PaddingRight: =2
+            PaddingTop: =2
+            RadioBackgroundFill: =RGBA(255, 255, 255, 1)
+            RadioBorderColor: =RGBA(0, 18, 107, 1)
+            RadioSelectionFill: =RGBA(0, 0, 0, 1)
+            RadioSize: =16
+            Size: =10
+            Width: =274
+            X: =112
+            Y: =92
+            ZIndex: =14
+
+        Toggle1_3 As toggleSwitch:
+            AccessibleLabel: ="Toggle"
+            BorderColor: =RGBA(0, 0, 0, 0)
+            Color: =RGBA(0, 0, 0, 1)
+            Default: =If(Radio2_3.Selected.Value="Organizer",false,true)
+            DisplayMode: |+
+                =If(Radio2_3.Selected.Value="Organizer",DisplayMode.Disabled,DisplayMode.Edit)
+                
+            FalseText: =true
+            Height: =20
+            ShowLabel: =false
+            TrueFill: =RGBA(56, 96, 178, 1)
+            TrueText: =true
+            Width: =80
+            X: =196
+            Y: =130
+            ZIndex: =15
+
+        lblTitle_9 As label:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(0, 0, 0, 0.84)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Semibold
+            Height: =30
+            Size: =10
+            Text: ="Meeting Title"
+            X: =4
+            Y: =162
+            ZIndex: =16
+
+        lblTitle_10 As label:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(0, 0, 0, 0.84)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Semibold
+            Height: =30
+            Size: =10
+            Text: ="Agenda Creator"
+            X: =4
+            Y: =87
+            ZIndex: =17
+
+        IconTitle_4 As icon.ColorPicker:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            BorderStyle: =BorderStyle.Dashed
+            Color: =RGBA(48, 55, 120, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            Height: =32
+            Icon: =Icon.Edit
+            Visible: |
+                =true
+            Width: =24
+            X: =354
+            Y: =194
+            ZIndex: =18
+
+        IconDescription_4 As icon.Text:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(48, 55, 120, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            Height: =24
+            Icon: =Icon.AddUser
+            Width: =24
+            X: =355
+            Y: =639
+            ZIndex: =19
+
+        btnsave_6 As button:
+            BorderColor: =RGBA(48, 55, 120, 1)
+            Color: =RGBA(48, 55, 120, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(230, 229, 229, 1)
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Normal
+            Height: =30
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(56, 96, 178, 1), -20%)
+            OnSelect: |-
+                =Set(varShowCreateMeeting,false);
+                Reset(Radio2_3);
+                Reset(Toggle1_3);
+                Reset(AddTitle_1);
+                Reset(StartTime_1);
+                Reset(EndTime_1);
+                Reset(MeetingStartRange_3);
+                Reset(MeetingEndRange_3);
+                Reset(AttendeesList_1);
+                Reset(AMLocation_1);
+                Reset(Body_1);
+            Size: =10
+            Text: ="Cancel"
+            Width: =110
+            X: =267
+            Y: =720
+            ZIndex: =20
+
+        btnsave_7 As button:
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(21, 52, 112, 1)
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Normal
+            Height: =30
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(56, 96, 178, 1), -20%)
+            OnSelect: |
+                =
+                If(
+                    IsBlank(AttendeesList_1.SelectedItems) || IsBlank(AddTitle_1.Text),
+                    Notify(
+                        "Please enter value for Meeting Title and Attendees Name",
+                        NotificationType.Error
+                    ),Set(varLoadingSpinner,true);
+                    Set(
+                        varAddMeeting,
+                        'AddMeetingFlow-MeetingAgendaApp'.Run(
+                            AddTitle_1.Text,
+                            Body_1.Text,
+                            Text(
+                                DateAdd(
+                                    StartTime_1.SelectedDate,
+                                    MeetingStartRange_3.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BMinutes',
+                                    TimeUnit.Minutes
+                                ),
+                                DateTimeFormat.UTC
+                            ),
+                            Text(
+                                DateAdd(
+                                    EndTime_1.SelectedDate,
+                                    MeetingEndRange_3.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BMinutes',
+                                    TimeUnit.Minutes
+                                ),
+                                DateTimeFormat.UTC
+                            ),
+                            Concat(
+                                AttendeesList_1.SelectedItems,
+                                Mail & ";"
+                            ) & User().Email,
+                            User().FullName,
+                            Radio2_3.SelectedText.Value,
+                            Toggle1_3.Value,
+                            AMLocation_1.SelectedText.Value,
+                            MyCalendarID
+                        )
+                    );
+                    If(
+                        varAddMeeting.status = "success",
+                        Notify(
+                            "Meeting created successfully",
+                            NotificationType.Success
+                        );
+                        ClearCollect(
+                            AllFutureEvents,
+                            Office365Outlook.GetEventsCalendarView(
+                                MyCalendarID,
+                                Text(
+                                    Today(),
+                                    DateTimeFormat.UTC
+                                ),
+                                Text(
+                                    DateAdd(
+                                        Today(),
+                                        5,
+                                        TimeUnit.Days
+                                    ),
+                                    DateTimeFormat.UTC
+                                )
+                            ).Values
+                        );
+                        Set(
+                            SelectedMeeting,
+                            First(
+                                Filter(
+                                    AllFutureEvents,
+                                    Id = varAddMeeting.meetingid
+                                )
+                            )
+                        );
+                        Set(
+                            varShowCreateMeeting,
+                            false
+                        );
+                        Reset(Radio2_3);
+                        Reset(Toggle1_3);
+                        Reset(AddTitle_1);
+                        Reset(StartTime_1);
+                        Reset(EndTime_1);
+                        Reset(MeetingStartRange_3);
+                        Reset(MeetingEndRange_3);
+                        Reset(AttendeesList_1);
+                        Reset(AMLocation_1);
+                        Reset(Body_1);
+                    //Navigate('MeetingDetails Screen', None)
+                ,
+                        Notify(
+                            "Error while meeting creation",
+                            NotificationType.Error
+                        )
+                    )
+                );
+                Refresh(MeetingList);
+                //Select(icon_RefreshMeeting);
+                Set(varLoadingSpinner,false);
+                /*Set(
+                    varAddMeeting,
+                    UpdateContext(
+                        {
+                            requiredAttendees: Concat(
+                                AttendeesList.SelectedItems,
+                                UserPrincipalName & ";"
+                            )
+                        }
+                    );
+                    UpdateContext(
+                        {
+                            requiredAttendees: Left(
+                                requiredAttendees,
+                                Len(requiredAttendees) - 1
+                            )
+                        }
+                    );
+                    Office365Outlook.V4CalendarPostItem(
+                        MyCalendarID,
+                        AddTitle.Text,
+                        Text(
+                            DateAdd(
+                                StartTime.SelectedDate,
+                                MeetingStartRange_1.SelectedText.Minutes,
+                                Minutes
+                            ),
+                            UTC
+                        ),
+                        Text(
+                            DateAdd(
+                                EndTime.SelectedDate,
+                                MeetingEndRange_1.SelectedText.Minutes,
+                                Minutes
+                            ),
+                            UTC
+                        ),
+                        "UTC",
+                        {
+                            body: Body.Text,
+                            showAs: "busy",
+                            requiredAttendees: requiredAttendees
+                        }
+                    )
+                );
+                ClearCollect(
+                    AllFutureEvents,
+                    Office365Outlook.GetEventsCalendarView(
+                        MyCalendarID,
+                        Text(
+                            Today(),
+                            UTC
+                        ),
+                        Text(
+                            DateAdd(
+                                Today(),
+                                5,
+                                Days
+                            ),
+                            UTC
+                        )
+                    ).Values
+                );
+                Set(
+                    SelectedMeeting,
+                    First(
+                        Filter(
+                            AllFutureEvents,
+                            Id = varAddMeeting.id
+                        )
+                    )
+                );
+                ForAll(
+                    AllFutureEvents,
+                    Patch(
+                        MeetingList,
+                        Defaults(MeetingList),
+                        {
+                            Title: Subject,
+                            MeetingID: Id,
+                            AllowAttendeesToCreateAgenda: If(
+                                Radio2_2.Selected.Value = "Organizer",
+                                true
+                            ),
+                            RequiredAgendaApproval: Toggle1_2.Value
+                        }
+                    )
+                );
+                If(
+                    varShowCreateMeeting,
+                    Notify(
+                        "Meeting Created Successfully",
+                        NotificationType.Success,
+                        0
+                    ),
+                    Notify(
+                        "Error While Meeting Creation",
+                        NotificationType.Error,
+                        0
+                    )
+                );*/
+            Size: =10
+            Text: ="Create"
+            Width: =110
+            X: =140
+            Y: =720
+            ZIndex: =21
+
+        Icon10_2 As icon.CancelBadge:
+            AccessibleLabel: ="Icon"
+            Color: =RGBA(48, 55, 120, 1)
+            Height: =32
+            Icon: =Icon.CancelBadge
+            OnSelect: =Set(varShowCreateMeeting,false)
+            TabIndex: =0
+            Visible: =false
+            Width: =32
+            X: =345
+            Y: =18
+            ZIndex: =22
+
+        "Gallery4_7 As gallery.'BrowseLayout_Horizontal_TwoTextOneImageVariant_ver4.0'":
+            AccessibleLabel: ="gallery"
+            BorderColor: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(247, 248, 250, 1)
+            Height: =70
+            Items: |-
+                =//varAvailCreate
+                AddColumns(
+                    varAvailCreate,
+                    "UserPhoto",
+                        // check if the the user has an email and a profile picture
+                    If(
+                        Not(IsBlank(Attendee.EmailAddress.Address)) && Office365Users.UserPhotoMetadata(Attendee.EmailAddress.Address).HasPhoto,
+                        Office365Users.UserPhotoV2(Attendee.EmailAddress.Address)
+                    ),
+                    "Initials",
+                    With(
+                        {
+                            // get the user record
+                            varRecordUser: If(
+                                !IsBlank(Attendee.EmailAddress.Address),
+                                Office365Users.UserProfileV2(Attendee.EmailAddress.Address)
+                            )
+                        },
+                        // find the user initials
+                        Concatenate(
+                            Left(
+                                varRecordUser.displayName,
+                                1
+                            ),
+                            Left(
+                                varRecordUser.surname,
+                                1
+                            )
+                        )
+                    )
+                )
+            OnSelect: =
+            TabIndex: =0
+            TemplatePadding: =0
+            TemplateSize: =149
+            Width: =351
+            X: =4
+            Y: =450
+            ZIndex: =23
+
+            btnRect_6 As button:
+                BorderColor: =Color.Transparent
+                DisplayMode: =DisplayMode.View
+                Fill: =RGBA(255, 255, 255, 1)
+                Height: =30
+                OnSelect: =Select(Parent)
+                RadiusBottomLeft: =20
+                RadiusBottomRight: =20
+                RadiusTopLeft: =20
+                RadiusTopRight: =20
+                Text: =""
+                Width: =149
+                Y: =21
+                ZIndex: =1
+
+            Image6_8 As image:
+                BorderColor: =RGBA(0, 18, 107, 1)
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Height: =22
+                Image: |-
+                    =/*If(Not(IsBlank(First(Filter(AttendeesList.SelectedItems, Mail = ThisItem.Attendee.EmailAddress.Address)).Id)) && Office365Users.UserPhotoMetadata(First(Filter(AttendeesList.SelectedItems, Mail = ThisItem.Attendee.EmailAddress.Address)).Id).HasPhoto,Office365Users.UserPhoto(First(Filter(AttendeesList.SelectedItems, Mail = ThisItem.Attendee.EmailAddress.Address)).Id),'default-profile')*/
+                    
+                    ThisItem.UserPhoto
+                OnSelect: =Select(Parent)
+                RadiusBottomLeft: =10
+                RadiusBottomRight: =10
+                RadiusTopLeft: =10
+                RadiusTopRight: =10
+                Width: =22
+                X: =4
+                Y: =25
+                ZIndex: =2
+
+            Title3_8 As label:
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Font: =Font.Lato
+                FontWeight: =FontWeight.Normal
+                Height: =15
+                OnSelect: =Select(Parent)
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =8
+                Text: =First(Filter(AttendeesList_1.SelectedItems, Mail = ThisItem.Attendee.EmailAddress.Address)).DisplayName
+                VerticalAlign: =VerticalAlign.Top
+                Width: =101
+                X: =32
+                Y: =22
+                ZIndex: =3
+
+            Icon1_6 As icon.Cancel:
+                AccessibleLabel: ="Icon"
+                BorderColor: =RGBA(0, 18, 107, 1)
+                Color: =RGBA(0, 18, 107, 1)
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(244, 244, 244, 1)
+                Height: =14
+                Icon: =Icon.Cancel
+                OnSelect: |+
+                    =//Remove(varAvailCreate,ThisItem)
+                    
+                    
+                PaddingBottom: =2
+                PaddingLeft: =2
+                PaddingRight: =2
+                PaddingTop: =2
+                TabIndex: =0
+                Width: =14
+                X: =134
+                Y: =29
+                ZIndex: =4
+
+            Subtitle3_4 As label:
+                Color: =If(ThisItem.Availability="Free",Color.Green,If(ThisItem.Availability="Busy",Color.LightPink,Color.Blue))
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Font: =Font.Lato
+                Height: =10
+                LineHeight: =1
+                OnSelect: =Select(Parent)
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =8
+                Text: =ThisItem.Availability
+                Width: =60
+                X: =32
+                Y: =37
+                ZIndex: =5
+
+            btn_initials_2 As button:
+                DisplayMode: =DisplayMode.View
+                Font: =Font.Lato
+                Height: =22
+                OnSelect: =Select(Parent)
+                Size: =6
+                Text: =ThisItem.Initials
+                Visible: =IsBlank(Image6_8)
+                Width: =22
+                X: =4
+                Y: =25
+                ZIndex: =6
+
+        MeetingEndRange_3 As dropdown:
+            AccessibleLabel: ="MeetingEndRange"
+            BorderColor: =RGBA(0, 18, 107, 1)
+            BorderThickness: =0
+            ChevronBackground: =RGBA(0, 0, 0, 0)
+            ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
+            ChevronDisabledFill: =RGBA(244, 244, 244, 1)
+            ChevronFill: =RGBA(48, 55, 120, 1)
+            ChevronHoverBackground: =ColorFade(RGBA(56, 96, 178, 1), -20%)
+            ChevronHoverFill: =RGBA(255, 255, 255, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            Default: |
+                =//LookUp(HoursList,Minutes = 540).Name
+                LookUp(HoursList,Minutes =Value(MeetingStartRange_3.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BMinutes')+30).Name
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(247, 248, 250, 1)
+            Font: =Font.Lato
+            Height: =30
+            HoverColor: =RGBA(0, 0, 0, 1)
+            HoverFill: =RGBA(186, 202, 226, 1)
+            Items: =HoursList
+            OnChange: =Select(btn_RefreshMeetingAvail_1)
+            PaddingBottom: =2
+            PaddingLeft: =2
+            PaddingRight: =2
+            PaddingTop: =2
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =RGBA(0, 18, 107, 1)
+            SelectionColor: =RGBA(255, 255, 255, 1)
+            SelectionFill: =RGBA(56, 96, 178, 1)
+            Size: =10
+            Width: =168
+            X: =182
+            Y: =340
+            ZIndex: =24
+
+        MeetingStartRange_3 As dropdown:
+            AccessibleLabel: ="MeetingStartRange"
+            BorderColor: =RGBA(0, 18, 107, 1)
+            BorderThickness: =0
+            ChevronBackground: =RGBA(0, 0, 0, 0)
+            ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
+            ChevronDisabledFill: =RGBA(244, 244, 244, 1)
+            ChevronFill: =RGBA(48, 55, 120, 1)
+            ChevronHoverBackground: =ColorFade(RGBA(56, 96, 178, 1), -20%)
+            ChevronHoverFill: =RGBA(255, 255, 255, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            Default: |-
+                =LookUp(HoursList,Minutes = 480).Name
+                //LookUp(HoursList,Minutes =Value(MeetingEndRange_1.SelectedText.Minutes)-30).Name
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(247, 248, 250, 1)
+            Font: =Font.Lato
+            Height: =30
+            HoverColor: =RGBA(0, 0, 0, 1)
+            HoverFill: =RGBA(186, 202, 226, 1)
+            Items: =HoursList
+            OnChange: =Select(btn_RefreshMeetingAvail_1)
+            PaddingBottom: =2
+            PaddingLeft: =2
+            PaddingRight: =2
+            PaddingTop: =2
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =RGBA(0, 18, 107, 1)
+            SelectionColor: =RGBA(255, 255, 255, 1)
+            SelectionFill: =RGBA(56, 96, 178, 1)
+            Size: =10
+            Width: =168
+            X: =182
+            Y: =270
+            ZIndex: =25
+
+        btn_RefreshMeetingAvail_1 As button:
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(21, 52, 112, 1)
+            Font: =Font.Arial
+            FontWeight: =FontWeight.Normal
+            Height: =34
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(56, 96, 178, 1), -20%)
+            OnSelect: |-
+                =If(
+                    !IsBlank(Label5.Text),
+                Set(
+                    Loading,
+                    true
+                );
+                /*
+                Collects available meeting times for attendees based on user determined data from this page. Adds 'StartTime' and 'EndTime' columns to the collection as a means of simplifying the MeetingTimeSlot column
+                */
+                If(
+                    DateDiff(
+                        MeetingStartRange_3.SelectedText.Value,
+                        MeetingEndRange_3.SelectedText.Value,
+                        TimeUnit.Minutes
+                    ) > 0 &&  EndTime_1.SelectedDate >= StartTime_1.SelectedDate  ,
+                    ClearCollect(
+                        MeetingTimes,
+                        AddColumns(
+                            Office365Outlook.FindMeetingTimes(
+                                {
+                                    ActivityDomain: "Unrestricted",
+                                    MaxCandidates: 100,
+                                    MinimumAttendeePercentage: 1,
+                                    //IsOrganizerOptional:true || false,
+                                    MeetingDuration: DateDiff(
+                                        MeetingStartRange_3.SelectedText.Value,
+                                        MeetingEndRange_3.SelectedText.Value,
+                                        TimeUnit.Minutes
+                                    ),
+                                    IsOrganizerOptional: true,
+                                    Start: Text(
+                                        DateAdd(
+                                            StartTime_1.SelectedDate,
+                                            MeetingStartRange_3.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BMinutes',
+                                            TimeUnit.Minutes
+                                        ),
+                                        DateTimeFormat.UTC
+                                    ),
+                                    End: Text(
+                                        DateAdd(
+                                            EndTime_1.SelectedDate,
+                                            MeetingEndRange_3.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BMinutes',
+                                            TimeUnit.Minutes
+                                        ),
+                                        DateTimeFormat.UTC
+                                    ),
+                                    RequiredAttendees: With(
+                                        {
+                                            wString: Concat(
+                                                AttendeesList_1.SelectedItems.Mail,
+                                                Mail,
+                                                ";"
+                                            )
+                                        },
+                                        If(
+                                            Right(
+                                                wString,
+                                                1
+                                            ) = ";",
+                                            Left(
+                                                wString,
+                                                Len(wString) - 1
+                                            ),
+                                            wString
+                                        )
+                                    )
+                                }
+                            ).MeetingTimeSuggestions,
+                            "StartTime",
+                            MeetingTimeSlot.Start.DateTime,
+                            "EndTime",
+                            MeetingTimeSlot.End.DateTime
+                        )
+                    ),
+                    Notify("1.Please select End date and time greater than start date and time ",NotificationType.Error)
+                );
+                Set(
+                    ShowMeetingTimes,
+                    true
+                );
+                Set(
+                    Loading,
+                    false
+                );
+                Clear(varAvailCreate);
+                ForAll(
+                    MeetingTimes,
+                    Collect(
+                        varAvailCreate,
+                        AttendeeAvailability
+                    )
+                ),
+                
+                    Clear(MeetingTimes);
+                    Clear(varAvailCreate)
+                )
+            RadiusBottomLeft: =2
+            RadiusBottomRight: =2
+            RadiusTopLeft: =
+            RadiusTopRight: =
+            Size: =10
+            Text: ="Availability"
+            Visible: =false
+            Width: =110
+            X: =24
+            Y: =718
+            ZIndex: =26
+
+        AMLocation_1 As dropdown:
+            AccessibleLabel: ="AMLocation"
+            BorderColor: =RGBA(255,255,255, 1)
+            ChevronBackground: =RGBA(255,255,255,1)
+            ChevronFill: =RGBA(48, 55, 120,1)
+            ChevronHoverBackground: =ColorFade(RGBA(56, 96, 178, 1), -20%)
+            Color: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(247, 248, 250, 1)
+            Font: =Font.Lato
+            Height: =32
+            Items: =["Microsoft Teams Meeting","2nd Floor Conference Room Chennai","Chennai Training Room","Conference Room 1","Pune-Bal Gangadhar Tilak Room","Pune-Jijabai Room","Pune-Savitribai Phule Room"]
+            Size: =10
+            Width: =350
+            X: =4
+            Y: =561
+            ZIndex: =27
+
+        "'lbl_create mee title *_1' As label":
+            Color: =RGBA(255, 0, 0, 1)
+            Height: =32
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: ="*"
+            VerticalAlign: =VerticalAlign.Top
+            Width: =15
+            X: =95
+            Y: =158
+            ZIndex: =28
+
+        "'lbl_create mee attendees *_3' As label":
+            Color: =RGBA(255, 0, 0, 1)
+            Height: =32
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: ="*"
+            VerticalAlign: =VerticalAlign.Top
+            Width: =15
+            X: =76
+            Y: =380
+            ZIndex: =29
+
+    Icon13 As icon.NextArrow:
+        Color: =RGBA(255, 255, 255, 1)
+        Fill: =RGBA(47, 55, 120, 1)
+        FocusedBorderThickness: =0
+        Height: =30
+        Icon: =Icon.NextArrow
+        OnSelect: =Set(varCreateMeeting,false)
+        Visible: =varCreateMeeting
+        Width: =30
+        X: =964
+        Y: =28
+        ZIndex: =24
+
+    grpAddMeeting_2 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =25
+
+        Button5_3 As button:
+            BorderThickness: =0
+            Fill: =RGBA(48, 55, 120, 1)
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Normal
+            Height: =32
+            OnSelect: =Set(varCreateMeeting,true)
+            Size: =10
+            TabIndex: =
+            Text: ="Create Meeting"
+            Tooltip: ="Create New Meeting"
+            Width: =150
+            X: =1196
+            Y: =11
+            ZIndex: =21
+
+        Icon10_3 As icon.Add:
+            AccessibleLabel: ="Icon"
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =18
+            Icon: =Icon.Add
+            OnSelect: =Set(varCreateMeeting,true)
+            TabIndex: =
+            Tooltip: ="Create New Meeting"
+            Width: =18
+            X: =1204
+            Y: =18
+            ZIndex: =22
+
+    Group2 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =25
+
+        Circle2_1 As circle:
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =40
+            Width: =40
+            X: =642
+            Y: =28
+            ZIndex: =6
+
+        Icon8 As icon.Reload:
+            Color: =RGBA(80, 86, 141, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderThickness: =0
+            Height: =20
+            Icon: =Icon.Reload
+            Rotation: =100
+            Width: =20
+            X: =652
+            Y: =36
+            ZIndex: =8
+
+    groupSearchButton_1 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =27
+
+        inputSearchText_1 As text:
+            AccessibleLabel: ="inputSearchText"
+            BorderThickness: =0
+            Color: |
+                =RGBA(163,166,174,1)
+            Default: =""
+            FocusedBorderThickness: =0
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Bold
+            Height: =30
+            HintText: ="Search.."
+            HoverFill: =RGBA(255, 255, 255, 1)
+            PaddingLeft: =5
+            PaddingRight: =35
+            RadiusBottomLeft: =20
+            RadiusBottomRight: =20
+            RadiusTopLeft: =20
+            RadiusTopRight: =20
+            Size: =10
+            Tooltip: ="Search Subject,body"
+            Width: =250
+            X: =695
+            Y: =33
+            ZIndex: =25
+
+        Icon2_3 As icon.Search:
+            AccessibleLabel: ="Icon"
+            Color: |
+                =RGBA(163,166,174,1)
+            FocusedBorderThickness: =0
+            Height: =24
+            Icon: =Icon.Search
+            TabIndex: =0
+            Tooltip: ="Search Subject,body"
+            Width: =28
+            X: =899
+            Y: =36
+            ZIndex: =26
+
