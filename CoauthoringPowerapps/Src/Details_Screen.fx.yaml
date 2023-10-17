@@ -615,8 +615,9 @@ Details_Screen As screen:
                 FontWeight: =FontWeight.Semibold
                 Height: =17
                 Size: =10
-                Text: |
+                Text: |+
                     =varCertificateDetails.'Provider Type'
+                    
                 Width: =200
                 X: =173
                 Y: =2
