@@ -564,6 +564,7 @@ c_Header As CanvasComponent:
                 HoverBorderColor: =RGBA(0, 0, 0, 0)
                 HoverFill: =RGBA(0, 0, 0, 0)
                 Image: ='MicrosoftTeams-image (31)'
+                OnSelect: =Navigate(c_Header.CartOnselect)
                 PressedBorderColor: =RGBA(0, 0, 0, 0)
                 PressedFill: =RGBA(0, 0, 0, 0)
                 Visible: =If(CountRows(EnrollList)>0,true,false)

@@ -7220,6 +7220,14 @@
                 "InvariantPropertyName": "Visible",
                 "IsLockable": false,
                 "NameMapSourceSchema": "?"
+              },
+              {
+                "AFDDataSourceName": "",
+                "AutoRuleBindingEnabled": false,
+                "AutoRuleBindingString": "false",
+                "InvariantPropertyName": "OnSelect",
+                "IsLockable": false,
+                "NameMapSourceSchema": "?"
               }
             ],
             "ControlUniqueId": "27",
@@ -7415,6 +7423,12 @@
                 "Category": "Design",
                 "InvariantScript": "If(CountRows(EnrollList)>0,true,false)",
                 "Property": "Visible",
+                "RuleProviderType": "Unknown"
+              },
+              {
+                "Category": "Behavior",
+                "InvariantScript": "Navigate(c_Header.CartOnselect)",
+                "Property": "OnSelect",
                 "RuleProviderType": "Unknown"
               }
             ],
@@ -9895,7 +9909,7 @@
         "NameMapSourceSchema": "?"
       }
     ],
-    "LastModifiedTimestamp": "638331342579941240",
+    "LastModifiedTimestamp": "638331346387490267",
     "Name": "c_Header",
     "Rules": [
       {
@@ -10041,7 +10055,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638331342579941240",
+  "LastModifiedTimestamp": "638331346387490267",
   "Name": "4e347dfcdde94913bd34c97cc0728f3c",
   "OverridableProperties": {},
   "Version": "638282056663502263"
