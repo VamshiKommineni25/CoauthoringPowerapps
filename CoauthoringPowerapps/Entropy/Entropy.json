@@ -1009,7 +1009,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "10/17/2023 08:01:41",
+  "HeaderLastSavedDateTimeUTC": "10/17/2023 08:02:33",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "097e9fa4-7ace-42a6-961b-6fdbaf8177e9": "\"/providers/microsoft.powerapps/apis/shared_office365/connections/a7ae32bc1ce54aa1acd44c4b9c272caa\"",
@@ -1063,7 +1063,7 @@
     "Spinner-1s-65px (1)": "https://docserverpwaprodwus.blob.core.windows.net/66c2d892-6bf9-4ba9-ba9a-2b630a553869-1/resource/Assets0Images00012.gif?skoid=58690ece-ec83-4ce2-9ce8-883d4d6a54ee&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2023-10-17T07%3A55%3A22Z&ske=2023-10-18T08%3A10%3A22Z&sks=b&skv=2021-08-06&sv=2021-08-06&spr=https&se=2023-10-18T08%3A10%3A22Z&sr=b&sp=r&sig=qM2fw2NfOpVrt0woGSzPbTGMyXUZBjAT6nosD765BO8%3D",
     "Splash Screen_Certification App": "https://docserverpwaprodwus.blob.core.windows.net/66c2d892-6bf9-4ba9-ba9a-2b630a553869-1/resource/Assets0Images00013.jpg?skoid=58690ece-ec83-4ce2-9ce8-883d4d6a54ee&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2023-10-17T07%3A55%3A22Z&ske=2023-10-18T08%3A10%3A22Z&sks=b&skv=2021-08-06&sv=2021-08-06&spr=https&se=2023-10-18T08%3A10%3A22Z&sr=b&sp=r&sig=BvpinitFpRogNfARkmTG%2F0nGE%2BWfd7vMEDM84nubEW4%3D"
   },
-  "OldLogoFileName": "logo.jpg",
+  "OldLogoFileName": "5m11w2nr.jpg",
   "OrderComponentMetadata": {
     "0f9ea40a362f475287dd517cf25804c0": 4,
     "470e83d2489f46a58e9ba807156b5c3a": 6,

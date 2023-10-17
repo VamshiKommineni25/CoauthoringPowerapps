@@ -122,9 +122,9 @@
   },
   "PublishInfo": {
     "AppName": "Certification App V2",
-    "BackgroundColor": "RGBA(54,176,75,1)",
+    "BackgroundColor": "rgba(255, 255, 255, 1)",
     "IconColor": "RGBA(255,255,255,1)",
-    "IconName": "FavoriteStarFill",
+    "IconName": "",
     "LogoFileName": "logo.jpg",
     "PublishDataLocally": false,
     "PublishResourcesLocally": false,
