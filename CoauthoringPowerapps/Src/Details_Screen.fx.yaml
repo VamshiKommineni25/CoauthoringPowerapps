@@ -1036,7 +1036,7 @@ Details_Screen As screen:
             RadiusTopRight: =5
             Size: =10
             Text: |-
-                ="Price : "&LookUp(Certification,ID=varCertificateDetails.CertificationID.Id).Price&" INR"
+                =If(Location_Txt.Text="USA","Price : "&Text(Value(LookUp(Certification,ID=varCertificateDetails.CertificationID.Id).Price/83.22),"[$-en-US]0.00")&"$","Price : "&LookUp(Certification,ID=varCertificateDetails.CertificationID.Id).Price&" INR")
             Width: =150
             X: =Lbl_CertName.X+Lbl_CertName.Width
             Y: =26
@@ -1343,6 +1343,24 @@ Details_Screen As screen:
             X: =516
             Y: =310
             ZIndex: =30
+
+        Location_Txt As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            Height: =25
+            Size: =8
+            Text: =varCertificateDetails.Location
+            Visible: =false
+            Width: =92
+            X: =1071
+            Y: =69
+            ZIndex: =31
 
     Cntr_AttachDocs As groupContainer.manualLayoutContainer:
         Height: =768
